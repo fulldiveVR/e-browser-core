@@ -36,19 +36,19 @@ class SearchQuickEnginesViewController: UITableViewController {
   }
 
   private var searchEngines: SearchEngines
-  private let profile: Profile
+  private let profile: LegacyBrowserProfile
   private let isPrivateBrowsing: Bool
   weak var delegate: SearchQuickEnginesViewControllerDelegate?
 
   lazy var addButton = UIBarButtonItem(
-    image: UIImage(systemName: "plus"),
+    image: UIImage(braveSystemNamed: "leo.plus.add"),
     style: .plain,
     target: self,
     action: #selector(onAddButton)
   )
 
   lazy var editButton = UIBarButtonItem(
-    image: UIImage(systemName: "slider.horizontal.3"),
+    image: UIImage(braveSystemNamed: "leo.tune"),
     style: .plain,
     target: self,
     action: #selector(onEditButton)
@@ -56,7 +56,7 @@ class SearchQuickEnginesViewController: UITableViewController {
 
   // MARK: Lifecycle
 
-  init(profile: Profile, isPrivateBrowsing: Bool) {
+  init(profile: LegacyBrowserProfile, isPrivateBrowsing: Bool) {
     self.profile = profile
     self.isPrivateBrowsing = isPrivateBrowsing
     self.searchEngines = profile.searchEngines
@@ -232,7 +232,7 @@ extension SearchQuickEnginesViewController {
 
   @objc func onEditButton() {
     setEditing(!isEditing, animated: true)
-    editButton.image = isEditing ? nil : UIImage(systemName: "slider.horizontal.3")
+    editButton.image = isEditing ? nil : UIImage(braveSystemNamed: "leo.tune")
     editButton.title = isEditing ? Strings.done : nil
     editButton.accessibilityLabel =
       isEditing ? Strings.done : Strings.editQuickSearchEnginesAccessibilityTitle

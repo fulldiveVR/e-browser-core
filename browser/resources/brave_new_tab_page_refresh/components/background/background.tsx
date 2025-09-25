@@ -8,6 +8,10 @@ import * as React from 'react'
 import { NewTabPageAdEventType, SponsoredImageBackground } from '../../state/background_state'
 import { openLink } from '../common/link'
 import { loadImage } from '../../lib/image_loader'
+import { useWidgetLayoutReady } from '../app_layout_ready'
+import { debounce } from '$web-common/debounce'
+import { useSearchState, useSearchActions } from '../../context/search_context'
+import { AutocompleteMatch } from '../../state/search_state'
 
 import {
   useBackgroundState,
@@ -89,45 +93,156 @@ function SponsoredRichMediaBackground(
   const actions = useBackgroundActions()
   const sponsoredRichMediaBaseUrl =
     useBackgroundState((s) => s.sponsoredRichMediaBaseUrl)
+  const [frameHandle, setFrameHandle] = React.useState<IframeBackgroundHandle>()
+
+  useSafeAreaReporter(frameHandle)
+
+  // TODO(https://github.com/brave/brave-browser/issues/49471): [NTP Next]
+  // Refactor rich media background components.
+  const searchActions = useSearchActions()
+  const searchMatches = useSearchState((s) => s.searchMatches)
+  const shouldMatchSearches =
+    useSearchMatchesReporter(frameHandle, searchMatches)
 
   return (
     <IframeBackground
       url={props.background.imageUrl}
       expectedOrigin={new URL(sponsoredRichMediaBaseUrl).origin}
-      onMessage={(data) => {
-        const eventType = getRichMediaEventType(data)
-        if (eventType) {
-          actions.notifySponsoredRichMediaEvent(eventType)
+      onReady={setFrameHandle}
+      onMessage={(data: any) => {
+        if (!data ||
+          typeof data !== 'object' ||
+          typeof data.type !== 'string') {
+          return
         }
-        if (eventType === NewTabPageAdEventType.kClicked) {
-          const url = props.background.logo?.destinationUrl
-          if (url) {
-            openLink(url)
+
+        switch (data.type) {
+          case 'richMediaEvent': {
+            const value = String(data.value ?? '')
+            const eventType = getRichMediaEventType(value)
+            if (eventType) {
+              actions.notifySponsoredRichMediaEvent(eventType)
+              if (eventType === NewTabPageAdEventType.kClicked) {
+                const url = props.background.logo?.destinationUrl
+                if (url) {
+                  openLink(url)
+                }
+              }
+            }
+            break
           }
+          case 'richMediaQueryBraveSearchAutocomplete': {
+            const value = String(data.value ?? '')
+            if (value) {
+              shouldMatchSearches()
+              searchActions.queryAutocomplete(value, 'search.brave.com')
+            }
+            break
+          }
+          case 'richMediaOpenBraveSearchWithQuery': {
+            const value = String(data.value ?? '')
+            if (value) {
+              // Opening Brave Search from rich media is treated as an ad click
+              // for reporting purposes.
+              actions.notifySponsoredRichMediaEvent(
+                NewTabPageAdEventType.kClicked)
+              openLink(`https://search.brave.com/${value}`)
+            }
+            break
+          }
+          default:
+            break
         }
       }}
     />
   )
 }
 
-function getRichMediaEventType(data: any): NewTabPageAdEventType | null {
-  if (!data || data.type !== 'richMediaEvent') {
-    return null
-  }
-  const value = String(data.value || '')
+// Posts a message to the rich media background iframe containing a rectangle
+// that is empty of content and can be used to display interactive elements.
+function useSafeAreaReporter(frameHandle?: IframeBackgroundHandle) {
+  const widgetLayoutReady = useWidgetLayoutReady()
+
+  React.useEffect(() => {
+    if (!widgetLayoutReady || !frameHandle) {
+      return
+    }
+
+    const selector = '.sponsored-background-safe-area'
+    const safeArea = document.querySelector<HTMLDivElement>(selector)
+    if (!safeArea) {
+      return
+    }
+
+    const postSafeArea = debounce(() => {
+      if (!safeArea) {
+        return
+      }
+      const rect = safeArea.getBoundingClientRect()
+      frameHandle.postMessage({
+        type: 'richMediaSafeRect',
+        value: {
+          x: rect.x + window.scrollX,
+          y: rect.y + window.scrollY,
+          width: rect.width,
+          height: rect.height
+        }
+      })
+    }, 120)
+
+    postSafeArea()
+
+    const resizeObserver = new ResizeObserver(postSafeArea)
+    resizeObserver.observe(safeArea)
+    return () => { resizeObserver.disconnect() }
+  }, [widgetLayoutReady, frameHandle])
+}
+
+function getRichMediaEventType(value: string): NewTabPageAdEventType | null {
   switch (value) {
     case 'click': return NewTabPageAdEventType.kClicked
     case 'interaction': return NewTabPageAdEventType.kInteraction
     case 'mediaPlay': return NewTabPageAdEventType.kMediaPlay
     case 'media25': return NewTabPageAdEventType.kMedia25
     case 'media100': return NewTabPageAdEventType.kMedia100
+    default: return null
   }
-  return null
+}
+
+// Posts a message to the rich media background iframe containing the current
+// list of search matches.
+function useSearchMatchesReporter(
+  frameHandle?: IframeBackgroundHandle,
+  searchMatches?: AutocompleteMatch[]
+) {
+  const [shouldReport, setShouldReport] = React.useState(false)
+
+  React.useEffect(() => {
+    if (!frameHandle || !shouldReport) {
+      return
+    }
+
+    const postSearchMatches = debounce(() => {
+      frameHandle.postMessage({
+        type: 'richMediaSearchMatches',
+        value: searchMatches ?? []
+      })
+    }, 120)
+
+    postSearchMatches()
+  }, [frameHandle, searchMatches, shouldReport])
+
+  return () => setShouldReport(true)
+}
+
+interface IframeBackgroundHandle {
+  postMessage: (data: unknown) => void
 }
 
 interface IframeBackgroundProps {
   url: string
   expectedOrigin: string
+  onReady: (handle: IframeBackgroundHandle) => void
   onMessage: (data: unknown) => void
 }
 
@@ -150,8 +265,21 @@ function IframeBackground(props: IframeBackgroundProps) {
     return () => { window.removeEventListener('message', listener) }
   }, [props.expectedOrigin, props.onMessage])
 
+  React.useEffect(() => {
+    if (!props.onReady || !contentLoaded) {
+      return
+    }
+    props.onReady({
+      postMessage: (data) => {
+        const window = iframeRef.current?.contentWindow
+        window?.postMessage(data, props.expectedOrigin)
+      }
+    })
+  }, [props.onReady, props.expectedOrigin, contentLoaded])
+
   return (
     <iframe
+      ref={iframeRef}
       className={contentLoaded ? '' : 'loading'}
       src={props.url}
       sandbox='allow-scripts allow-same-origin'

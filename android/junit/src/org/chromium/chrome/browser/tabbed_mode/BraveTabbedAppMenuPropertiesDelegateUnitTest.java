@@ -80,7 +80,6 @@ import org.chromium.chrome.browser.translate.TranslateBridgeJni;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuDelegate;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuHandler;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuItemProperties;
-import org.chromium.chrome.browser.ui.extensions.ExtensionService;
 import org.chromium.chrome.browser.ui.messages.snackbar.SnackbarManager;
 import org.chromium.chrome.browser.ui.native_page.NativePage;
 import org.chromium.components.browser_ui.accessibility.PageZoomCoordinator;
@@ -89,10 +88,11 @@ import org.chromium.components.browser_ui.site_settings.WebsitePreferenceBridgeJ
 import org.chromium.components.commerce.core.CommerceFeatureUtils;
 import org.chromium.components.commerce.core.CommerceFeatureUtilsJni;
 import org.chromium.components.commerce.core.ShoppingService;
-import org.chromium.components.content_settings.ContentSettingValues;
+import org.chromium.components.content_settings.ContentSetting;
 import org.chromium.components.dom_distiller.core.DomDistillerFeatures;
 import org.chromium.components.power_bookmarks.PowerBookmarkMeta;
 import org.chromium.components.prefs.PrefService;
+import org.chromium.components.signin.identitymanager.ConsentLevel;
 import org.chromium.components.signin.identitymanager.IdentityManager;
 import org.chromium.components.sync.SyncService;
 import org.chromium.components.user_prefs.UserPrefs;
@@ -101,6 +101,8 @@ import org.chromium.components.webapps.AppBannerManager;
 import org.chromium.components.webapps.AppBannerManagerJni;
 import org.chromium.content_public.browser.NavigationController;
 import org.chromium.content_public.browser.WebContents;
+import org.chromium.google_apis.gaia.GoogleServiceAuthError;
+import org.chromium.google_apis.gaia.GoogleServiceAuthErrorState;
 import org.chromium.ui.accessibility.AccessibilityState;
 import org.chromium.ui.modaldialog.ModalDialogManager;
 import org.chromium.ui.modelutil.MVCListAdapter;
@@ -114,6 +116,7 @@ import java.util.List;
 @DisableFeatures({
     BraveFeatureList.BRAVE_PLAYLIST,
     ChromeFeatureList.ADAPTIVE_BUTTON_IN_TOP_TOOLBAR_PAGE_SUMMARY,
+    ChromeFeatureList.FEED_AUDIO_OVERVIEWS,
     ChromeFeatureList.NEW_TAB_PAGE_CUSTOMIZATION,
     ChromeFeatureList.PROPAGATE_DEVICE_CONTENT_FILTERS_TO_SUPERVISED_USER,
     DomDistillerFeatures.READER_MODE_IMPROVEMENTS,
@@ -145,7 +148,6 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
     @Mock private WebFeedSnackbarController.FeedLauncher mFeedLauncher;
     @Mock private ModalDialogManager mDialogManager;
     @Mock private SnackbarManager mSnackbarManager;
-    @Mock private ExtensionService mExtensionService;
     @Mock private OfflinePageUtils.Internal mOfflinePageUtils;
     @Mock private SigninManager mSigninManager;
     @Mock private IdentityManager mIdentityManager;
@@ -163,7 +165,6 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
     @Mock private PrefService mPrefService;
     @Mock private SyncService mSyncService;
     @Mock private WebFeedBridge.Natives mWebFeedBridgeJniMock;
-    @Mock private AppMenuHandler mAppMenuHandler;
     @Mock private TranslateBridge.Natives mTranslateBridgeJniMock;
 
     private ShadowPackageManager mShadowPackageManager;
@@ -223,6 +224,9 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
         when(mIdentityService.getSigninManager(any(Profile.class))).thenReturn(mSigninManager);
         when(mSigninManager.getIdentityManager()).thenReturn(mIdentityManager);
         IdentityServicesProvider.setInstanceForTests(mIdentityService);
+        when(mIdentityService.getIdentityManager(any(Profile.class))).thenReturn(mIdentityManager);
+        when(mIdentityManager.hasPrimaryAccount(ConsentLevel.SIGNIN)).thenReturn(true);
+
         PageZoomCoordinator.setShouldShowMenuItemForTesting(false);
         FeedFeatures.setFakePrefsForTest(mPrefService);
         AppBannerManagerJni.setInstanceForTesting(mAppBannerManagerJniMock);
@@ -233,7 +237,14 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
         UserPrefsJni.setInstanceForTesting(mUserPrefsNatives);
         when(mUserPrefsNatives.get(mProfile)).thenReturn(mPrefService);
 
-        when(mSyncService.isSyncFeatureEnabled()).thenReturn(true);
+        when(mSyncService.getAuthError())
+                .thenReturn(new GoogleServiceAuthError(GoogleServiceAuthErrorState.NONE));
+        when(mSyncService.hasUnrecoverableError()).thenReturn(false);
+        when(mSyncService.isEngineInitialized()).thenReturn(true);
+        when(mSyncService.isPassphraseRequiredForPreferredDataTypes()).thenReturn(false);
+        when(mSyncService.isTrustedVaultKeyRequiredForPreferredDataTypes()).thenReturn(false);
+        when(mSyncService.isTrustedVaultRecoverabilityDegraded()).thenReturn(false);
+
         SyncServiceFactory.setInstanceForTesting(mSyncService);
 
         IncognitoUtilsJni.setInstanceForTesting(mIncognitoUtilsJniMock);
@@ -258,7 +269,6 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
                         mFeedLauncher,
                         mDialogManager,
                         mSnackbarManager,
-                        mExtensionService,
                         mIncognitoReauthControllerSupplier,
                         mReadAloudControllerSupplier);
         delegate.setIsJunitTesting(true);
@@ -316,6 +326,7 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
         Integer[] expectedItems = {
             R.id.new_tab_menu_id,
             R.id.new_incognito_tab_menu_id,
+            R.id.add_to_group_menu_id,
             R.id.divider_line_id,
             R.id.open_history_menu_id,
             R.id.downloads_menu_id,
@@ -327,6 +338,7 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
             R.id.preferences_id,
             R.id.set_default_browser,
             R.id.brave_news_id,
+            R.id.brave_customize_menu_id,
             R.id.exit_id,
         };
         assertMenuItemsAreEqual(modelList, expectedItems);
@@ -349,6 +361,7 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
 
         expectedItems.add(R.id.new_tab_menu_id);
         expectedItems.add(R.id.new_incognito_tab_menu_id);
+        expectedItems.add(R.id.add_to_group_menu_id);
         expectedItems.add(R.id.divider_line_id);
         expectedItems.add(R.id.open_history_menu_id);
         expectedItems.add(R.id.downloads_menu_id);
@@ -366,6 +379,7 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
         expectedItems.add(R.id.set_default_browser);
         expectedItems.add(R.id.preferences_id);
         expectedItems.add(R.id.brave_news_id);
+        expectedItems.add(R.id.brave_customize_menu_id);
         expectedItems.add(R.id.exit_id);
 
         assertMenuItemsAreEqual(modelList, expectedItems.toArray(new Integer[0]));
@@ -392,6 +406,9 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
         doReturn(false)
                 .when(mTabbedAppMenuPropertiesDelegate)
                 .shouldShowAutoDarkItem(any(Tab.class), eq(true));
+        doReturn(false)
+                .when(mTabbedAppMenuPropertiesDelegate)
+                .shouldShowContentFilterHelpCenterMenuItem(any(Tab.class));
 
         setUpIncognitoMocks();
     }
@@ -419,6 +436,9 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
     }
 
     /** Options for tests that control how Menu is being rendered. */
+    // Suppressed warnings for withShowUpdate / withShowPaintPreview / withNativePage /
+    // withShowReaderModePrefs as we may want to use it when will expand the tests
+    @SuppressWarnings("UnusedMethod")
     private static class MenuOptions {
         private boolean mIsNativePage;
         private boolean mShowTranslate;
@@ -506,7 +526,7 @@ public class BraveTabbedAppMenuPropertiesDelegateUnitTest {
         when(mWebsitePreferenceBridgeJniMock.getContentSetting(any(), anyInt(), any(), any()))
                 .thenReturn(
                         options.isAutoDarkEnabled()
-                                ? ContentSettingValues.DEFAULT
-                                : ContentSettingValues.BLOCK);
+                                ? ContentSetting.DEFAULT
+                                : ContentSetting.BLOCK);
     }
 }

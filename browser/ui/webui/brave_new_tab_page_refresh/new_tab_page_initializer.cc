@@ -28,6 +28,7 @@
 #include "chrome/browser/ui/webui/favicon_source.h"
 #include "chrome/browser/ui/webui/plural_string_handler.h"
 #include "chrome/browser/ui/webui/sanitized_image_source.h"
+#include "chrome/browser/ui/webui/theme_source.h"
 #include "chrome/common/pref_names.h"
 #include "chrome/common/webui_url_constants.h"
 #include "components/favicon_base/favicon_url_parser.h"
@@ -99,9 +100,13 @@ void NewTabPageInitializer::Initialize() {
   AddFaviconDataSource();
   AddCustomImageDataSource();
   AddSanitizedImageDataSource();
+  MaybeMigrateHideAllWidgetsPref();
 
   web_ui_->AddRequestableScheme(content::kChromeUIUntrustedScheme);
   web_ui_->OverrideTitle(l10n_util::GetStringUTF16(IDS_NEW_TAB_TITLE));
+
+  content::URLDataSource::Add(GetProfile(),
+                              std::make_unique<ThemeSource>(GetProfile()));
 }
 
 Profile* NewTabPageInitializer::GetProfile() {
@@ -182,9 +187,17 @@ void NewTabPageInitializer::AddStrings() {
       {"enabledSearchEnginesLabel", IDS_NEW_TAB_ENABLED_SEARCH_ENGINES_LABEL},
       {"gradientBackgroundLabel", IDS_NEW_TAB_GRADIENT_BACKGROUND_LABEL},
       {"gradientBackgroundTitle", IDS_NEW_TAB_GRADIENT_BACKGROUND_LABEL},
+      {"hideRewardsWidgetLabel", IDS_NEW_TAB_HIDE_REWARDS_WIDGET_LABEL},
+      {"hideStatsWidgetLabel", IDS_NEW_TAB_HIDE_STATS_WIDGET_LABEL},
+      {"hideTalkWidgetLabel", IDS_NEW_TAB_HIDE_TALK_WIDGET_LABEL},
+      {"hideTopSitesLabel", IDS_NEW_TAB_HIDE_TOP_SITES_LABEL},
+      {"hideVpnWidgetLabel", IDS_NEW_TAB_HIDE_VPN_WIDGET_LABEL},
+      {"newsCustomizeButtonLabel", IDS_NEW_TAB_NEWS_CUSTOMIZE_BUTTON_LABEL},
+      {"newsDisableButtonLabel", IDS_NEW_TAB_NEWS_DISABLE_BUTTON_LABEL},
       {"hideTopSitesLabel", IDS_NEW_TAB_HIDE_TOP_SITES_LABEL},
       {"newsEnableButtonLabel", IDS_BRAVE_NEWS_OPT_IN_ACTION_LABEL},
       {"newsEnableText", IDS_BRAVE_NEWS_INTRO_TITLE},
+      {"newsHideButtonLabel", IDS_NEW_TAB_NEWS_HIDE_BUTTON_LABEL},
       {"newsSettingsTitle", IDS_BRAVE_NEWS_SETTINGS_TITLE},
       {"newsWidgetTitle", IDS_NEW_TAB_NEWS_WIDGET_TITLE},
       {"photoCreditsText", IDS_NEW_TAB_PHOTO_CREDITS_TEXT},
@@ -203,6 +216,12 @@ void NewTabPageInitializer::AddStrings() {
       {"rewardsOnboardingButtonLabel",
        IDS_NEW_TAB_REWARDS_ONBOARDING_BUTTON_LABEL},
       {"rewardsOnboardingLink", IDS_NEW_TAB_REWARDS_ONBOARDING_LINK},
+      {"rewardsPayoutCompletedText", IDS_REWARDS_PAYMENT_COMPLETED},
+      {"rewardsPayoutDetailsLink", IDS_NEW_TAB_REWARDS_PAYOUT_DETAILS_LINK},
+      {"rewardsPayoutProcessingText", IDS_REWARDS_PAYMENT_PROCESSING},
+      {"rewardsTosUpdateButtonLabel", IDS_REWARDS_TOS_UPDATE_NTP_BUTTON_LABEL},
+      {"rewardsTosUpdateText", IDS_REWARDS_TOS_UPDATE_NTP_TEXT},
+      {"rewardsTosUpdateTitle", IDS_REWARDS_TOS_UPDATE_HEADING},
       {"rewardsWidgetTitle", IDS_NEW_TAB_REWARDS_WIDGET_TITLE},
       {"saveChangesButtonLabel", IDS_NEW_TAB_SAVE_CHANGES_BUTTON_LABEL},
       {"searchAskLeoDescription", IDS_OMNIBOX_ASK_LEO_DESCRIPTION},
@@ -238,12 +257,12 @@ void NewTabPageInitializer::AddStrings() {
       {"statsBandwidthSavedText", IDS_NEW_TAB_STATS_BANDWIDTH_SAVED_TEXT},
       {"statsTimeSavedText", IDS_NEW_TAB_STATS_TIME_SAVED_TEXT},
       {"statsTitle", IDS_NEW_TAB_STATS_TITLE},
+      {"talkAboutDataLink", IDS_NEW_TAB_TALK_ABOUT_DATA_LINK},
       {"talkDescriptionText", IDS_NEW_TAB_TALK_DESCRIPTION_TEXT},
       {"talkDescriptionTitle", IDS_NEW_TAB_TALK_DESCRIPTION_TITLE},
       {"talkStartCallLabel", IDS_NEW_TAB_TALK_START_CALL_LABEL},
       {"talkWidgetTitle", IDS_NEW_TAB_TALK_WIDGET_TITLE},
       {"topSiteRemovedText", IDS_NEW_TAB_TOP_SITE_REMOVED_TEXT},
-      {"topSiteRemovedTitle", IDS_NEW_TAB_TOP_SITE_REMOVED_TITLE},
       {"topSitesCustomOptionText", IDS_NEW_TAB_TOP_SITES_CUSTOM_OPTION_TEXT},
       {"topSitesCustomOptionTitle", IDS_NEW_TAB_TOP_SITES_CUSTOM_OPTION_TITLE},
       {"topSitesMostVisitedOptionText",
@@ -311,6 +330,25 @@ void NewTabPageInitializer::AddSanitizedImageDataSource() {
   auto* profile = GetProfile();
   content::URLDataSource::Add(profile,
                               std::make_unique<SanitizedImageSource>(profile));
+}
+
+void NewTabPageInitializer::MaybeMigrateHideAllWidgetsPref() {
+  // The "hide all widgets" toggle does not exist on this version of the NTP.
+  // If the user has enabled this pref, hide the individual widgets affected by
+  // that pref.
+  // TODO(https://github.com/brave/brave-browser/issues/49544): Deprecate the
+  // `kNewTabPageHideAllWidgets` pref and perform the migration in
+  // `MigrateObsoleteProfilePrefs`.
+  auto* prefs = GetProfile()->GetPrefs();
+  if (prefs->GetBoolean(kNewTabPageHideAllWidgets)) {
+    prefs->SetBoolean(kNewTabPageHideAllWidgets, false);
+
+    prefs->SetBoolean(kNewTabPageShowRewards, false);
+    prefs->SetBoolean(kNewTabPageShowBraveTalk, false);
+#if BUILDFLAG(ENABLE_BRAVE_VPN)
+    prefs->SetBoolean(kNewTabPageShowBraveVPN, false);
+#endif
+  }
 }
 
 }  // namespace brave_new_tab_page_refresh

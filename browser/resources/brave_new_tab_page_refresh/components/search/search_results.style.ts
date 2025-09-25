@@ -3,18 +3,14 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-import { color, effect, font, gradient } from '@brave/leo/tokens/css/variables'
+import { color, font, gradient } from '@brave/leo/tokens/css/variables'
 import { scoped } from '../../lib/scoped_css'
 
 export const style = scoped.css`
 
   & {
-    border-radius: 16px;
-    background: ${color.container.background};
     display: flex;
     flex-direction: column;
-    overflow: clip;
-    box-shadow: ${effect.elevation['01']};
   }
 
   .result-options {
@@ -72,10 +68,17 @@ export const style = scoped.css`
     height: 32px;
     border-radius: 8px;
     padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &.brave-leo-icon {
       --leo-icon-color: #fff;
       background: ${gradient.iconsActive};
+    }
+
+    &.search-icon {
+      --leo-icon-size: 16px;
     }
   }
 

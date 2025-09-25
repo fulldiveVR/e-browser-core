@@ -11,6 +11,7 @@
 #include "brave/browser/ui/views/frame/brave_browser_view.h"
 #include "brave/browser/ui/views/side_panel/brave_side_panel.h"
 #include "build/build_config.h"
+#include "ui/base/cursor/cursor.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/views/controls/resize_area.h"
 #include "ui/views/layout/fill_layout.h"
@@ -112,9 +113,9 @@ void SidePanelResizeWidget::OnViewBoundsChanged(views::View* observed_view) {
   widget_->SetBounds(rect);
 }
 
-void SidePanelResizeWidget::OnViewVisibilityChanged(
-    views::View* observed_view,
-    views::View* starting_view) {
+void SidePanelResizeWidget::OnViewVisibilityChanged(views::View* observed_view,
+                                                    views::View* starting_view,
+                                                    bool visible) {
   // As this widget is for resizing side panel,
   // show only this when panel is visible.
   if (panel_ != observed_view) {

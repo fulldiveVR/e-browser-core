@@ -86,7 +86,7 @@ extension Preferences {
     /// Controls whether or not youtube videos should play with the highest quality by default
     static let youtubeHighQuality = Option<String>(
       key: "general.youtube-high-quality",
-      default: "wifi"
+      default: YoutubeHighQualityPreference.off.rawValue
     )
     /// Controls whether or not to show the last visited bookmarks folder
     static let showLastVisitedBookmarksFolder = Option<Bool>(
@@ -131,6 +131,20 @@ extension Preferences {
     /// The last time the app opened and handed a http or https url
     static let lastHTTPURLOpenedDate = Option<Date?>(
       key: "general.last-url-opened-date",
+      default: nil
+    )
+
+    /// Cache for Apple's isDefault API results (14-day validity)
+    static let isDefaultAPILastResult = Option<Bool?>(
+      key: "general.isdefault-api-last-result",
+      default: nil
+    )
+    static let isDefaultAPILastCheckDate = Option<Date?>(
+      key: "general.isdefault-api-last-check-date",
+      default: nil
+    )
+    static let isDefaultAPILastResultDate = Option<Date?>(
+      key: "general.isdefault-api-last-result-date",
       default: nil
     )
   }

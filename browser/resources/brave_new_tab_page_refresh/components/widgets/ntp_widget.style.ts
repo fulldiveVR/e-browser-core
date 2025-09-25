@@ -8,9 +8,10 @@ import { scoped } from '../../lib/scoped_css'
 
 export const style = scoped.css`
   & {
+    position: relative;
     color: ${color.text.primary};
     border-radius: 16px;
-    background: rgba(0, 0, 0, 0.50);
+    background: ${color.material.thin};
     backdrop-filter: blur(50px);
     display: flex;
     align-items: stretch;

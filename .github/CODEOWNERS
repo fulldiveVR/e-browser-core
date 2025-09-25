@@ -7,11 +7,11 @@ script/uplift.py @bsclifton
 /README.md @bsclifton
 script/deps.py @brave/deps-reviewers
 package*.json @brave/js-deps-reviewers
-rewrite/ @bridiver @cdesouza-chromium
+rewrite/ @brave/brave-core-owners
 
 # Views
 # Do not add to BRAVE_VIEW_OWNED_BY_CLIENT_PASS_KEY
-chromium_src/ui/views/view.h @bridiver @cdesouza-chromium
+chromium_src/ui/views/view.h @brave/brave-core-owners
 
 # brave/browser/ui/BUILD.gn should not have new source files added to it. see
 # https://github.com/brave/brave-core/blob/master/docs/gni_sources.md#circular-dependencies-circular-dependencies
@@ -20,7 +20,7 @@ browser/ui/BUILD.gn @bridiver
 # BraveBrowserProcess public interface
 # Global services should use GlobalDesktopFeatures
 # https://chromium.googlesource.com/chromium/src/+/main/docs/chrome_browser_design_principles.md#structure_modularity
-browser/brave_browser_process.h @bridiver @goodov
+browser/brave_browser_process.h @brave/brave-core-owners
 
 # Deprecated - do not use
 BraveNewsUtils.java @bridiver
@@ -31,6 +31,8 @@ browser/ui/webui/brave_web_uicontroller_factory.cc @bridiver @petemill
 # BraveComponent is deprecated
 components/brave_component_updater/browser/brave_component.h @bridiver @antonok-edm
 components/brave_component_updater/browser/local_data_files_observer.h @bridiver @antonok-edm
+components/brave_component_updater/browser/local_data_files_service.h @bridiver @antonok-edm
+components/brave_component_updater/browser/BUILD.gn @bridiver
 
 # BravePrefServiceBridge is deprecated
 browser/android/preferences/brave_pref_service_bridge.cc @bridiver
@@ -76,7 +78,7 @@ brave/components/brave_ads/core/internal/security/**/*.mm @brave/ads-client
 brave/components/l10n/ @tmancey @bridiver
 
 # Network
-browser/net/ @iefremov
+browser/net/ @brave/brave-core-owners
 chromium_src/chrome/browser/net/profile_network_context_service.cc @brave/sec-team
 chromium_src/net/tools/transport_security_state_generator/input_file_parsers.cc @brave/sec-team
 
@@ -144,17 +146,13 @@ components/sync/service/ @brave/sync-reviewers
 components/sync_device_info/ @brave/sync-reviewers
 ios/browser/api/sync/brave_sync_worker.* @brave/sync-reviewers
 
-# Speedreader
-browser/speedreader/ @iefremov
-components/speedreader/* @iefremov
-
 # P3A
 browser/p3a/ @brave/p3a-reviewers
 components/p3a/ @brave/p3a-reviewers
 components/time_period_storage/ @brave/p3a-reviewers
 
 # Perf predictor
-components/brave_perf_predictor/ @iefremov
+components/brave_perf_predictor/ @brave/adblock-team
 
 # Permissions
 browser/permissions/**/*expiration* @goodov
@@ -206,6 +204,8 @@ android/java/org/chromium/chrome/browser/preferences/BravePrefServiceBridge.java
 
 # Deprecated android util directory
 android/java/org/chromium/chrome/browser/util @bridiver
+# This file should be removed once our UI is adjusted to Dynamic Colors
+android/java/org/chromium/chrome/browser/util/BraveDynamicColors.java @brave/Android
 
 # These rules are last to take precedence over directory rules.Do not add any
 # new rules below this line without checking with @bridiver
@@ -258,8 +258,18 @@ script/lib/l10n/requirements.txt @brave/sec-team
 components/skus/common/skus_utils.h @brave/sec-team
 
 # for brave_exec_script_allowlist
-build/dotfile_settings.gni @bridiver @goodov
+build/dotfile_settings.gni @brave/brave-core-owners
 
 docs/gni_sources.md @bridiver
+docs/keyed_services.md @bridiver
 
 build/commands/lib/branding.js @bridiver
+
+# deprecated
+/components/constants @bridiver
+
+# changes to upstream content settings should be done as patches
+content_settings_registry.cc @brave/content-settings-reviewers
+
+# new content settings need review
+content_settings_types.mojom @brave/content-settings-reviewers

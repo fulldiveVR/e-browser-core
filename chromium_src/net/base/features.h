@@ -26,6 +26,7 @@ NET_EXPORT extern const base::FeatureParam<DohFallbackEndpointType>
 NET_EXPORT BASE_DECLARE_FEATURE(kBravePartitionHSTS);
 NET_EXPORT BASE_DECLARE_FEATURE(kBraveTorWindowsHttpsOnly);
 NET_EXPORT BASE_DECLARE_FEATURE(kBraveForgetFirstPartyStorage);
+NET_EXPORT BASE_DECLARE_FEATURE(kBraveProvisionalTLDEphemeralLifetime);
 NET_EXPORT extern const base::FeatureParam<int>
     kBraveForgetFirstPartyStorageStartupCleanupDelayInSeconds;
 NET_EXPORT extern const base::FeatureParam<bool>
@@ -34,6 +35,6 @@ NET_EXPORT extern const base::FeatureParam<bool>
 }  // namespace features
 }  // namespace net
 
-#include "src/net/base/features.h"  // IWYU pragma: export
+#include <net/base/features.h>  // IWYU pragma: export
 
 #endif  // BRAVE_CHROMIUM_SRC_NET_BASE_FEATURES_H_

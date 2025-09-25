@@ -9,10 +9,12 @@
 #include <string>
 
 #include "base/feature_list.h"
+#include "base/supports_user_data.h"
+#include "brave/browser/android/youtube_script_injector/brave_youtube_script_injector_native_helper.h"
 #include "brave/browser/android/youtube_script_injector/features.h"
 #include "brave/components/brave_shields/content/browser/brave_shields_util.h"
 #include "brave/components/constants/pref_names.h"
-#include "brave/components/script_injector/common/mojom/script_injector.mojom.h"
+#include "brave/content/public/browser/fullscreen_page_data.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/common/chrome_isolated_world_ids.h"
 #include "components/prefs/pref_service.h"
@@ -20,31 +22,12 @@
 #include "content/public/browser/navigation_entry.h"
 #include "content/public/browser/navigation_handle.h"
 #include "content/public/browser/web_contents.h"
-#include "mojo/public/cpp/bindings/associated_remote.h"
 #include "net/base/registry_controlled_domains/registry_controlled_domain.h"
 #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"
 #include "url/gurl.h"
 #include "url/url_util.h"
 
 namespace {
-
-constexpr char kYouTubeFullscreenPageDataKey[] = "youtube_fullscreen_page_data";
-
-// PageUserData to track fullscreen state for each page load
-struct YouTubeFullscreenPageData : public base::SupportsUserData::Data {
- public:
-  explicit YouTubeFullscreenPageData(bool fullscreen_requested = false)
-      : fullscreen_requested_(fullscreen_requested) {}
-
-  bool fullscreen_requested() const { return fullscreen_requested_; }
-  void set_fullscreen_requested(bool requested) {
-    fullscreen_requested_ = requested;
-  }
-
- private:
-  bool fullscreen_requested_;
-};
-
 constexpr char16_t kYoutubeBackgroundPlayback[] =
     uR"(
 (function() {
@@ -111,37 +94,32 @@ constexpr char16_t kYoutubeFullscreen[] =
 (function() {
   return new Promise((resolve) => {
     const videoPlaySelector = "video.html5-main-video";
-    const fullscreenButtonSelector = "button.fullscreen-icon";
-
+    const fullscreenSelector = "button.fullscreen-icon";
     function triggerFullscreen() {
-      // Always play video before entering fullscreen mode.
-      document.querySelector(videoPlaySelector)?.play();
-
       // Check if the video is not in fullscreen mode already.
       if (!document.fullscreenElement) {
-        let observerTimeout;
-        // Create a MutationObserver to watch for changes in the DOM.
-        const observer = new MutationObserver((_mutationsList, observer) => {
-          var fullscreenBtn = document.querySelector(fullscreenButtonSelector);
-          var videoPlayer = document.querySelector(videoPlaySelector);
-          if (fullscreenBtn && videoPlayer) {
-            clearTimeout(observerTimeout);
-            observer.disconnect()
-            delayedPlayAndClick(fullscreenBtn, videoPlayer, resolve);
-          }
-        });
-
-        var fullscreenBtn = document.querySelector(fullscreenButtonSelector);
+        var fullscreenBtn = document.querySelector(fullscreenSelector);
         var videoPlayer = document.querySelector(videoPlaySelector);
         // Check if fullscreen button and video are available.
         if (fullscreenBtn && videoPlayer) {
-         delayedPlayAndClick(fullscreenBtn, videoPlayer, resolve);
+         requestFullscreen(fullscreenBtn, resolve, videoPlayer);
         } else {
           // When fullscreen button is not available
           // clicking the movie player resume the UI.
-          var moviePlayer = document.getElementById("movie_player");
           var playerContainer = document.getElementById("player-container-id");
-          if (moviePlayer && playerContainer) {
+          if (videoPlayer && playerContainer) {
+            let observerTimeout;
+            // Create a MutationObserver to watch for changes in the DOM.
+            const observer = new MutationObserver(
+            (_mutationsList, observer) => {
+              var fullscreenBtn = document.querySelector(fullscreenSelector);
+              var videoPlayer = document.querySelector(videoPlaySelector);
+              if (fullscreenBtn && videoPlayer) {
+                clearTimeout(observerTimeout);
+                observer.disconnect()
+                requestFullscreen(fullscreenBtn, resolve, videoPlayer);
+              }
+            });
             // Auto-disconnect the observer after 30 seconds,
             // a reasonable duration picked after some testing.
             observerTimeout = setTimeout(() => {
@@ -153,7 +131,7 @@ constexpr char16_t kYoutubeFullscreen[] =
               childList: true, subtree: true
             });
             // Make sure the player is in focus or responsive.
-            moviePlayer.click();
+            videoPlayer.click();
           } else {
             // No fullscreen elements found, resolve immediately
             resolve('no_elements');
@@ -164,29 +142,32 @@ constexpr char16_t kYoutubeFullscreen[] =
         resolve('already_fullscreen');
       }
     }
-
-    // Click the fullscreen button and play the video and after a delay
-    // to ensure the video is ready.
-    // This is necessary because sometimes (rarely) when switching to fullscreen
-    // mode a video might be paused automatically from the backend if the buffer
-    // was not ready.
-    // The delay allows the video to load properly before attempting to play it.
-    // This is especially important for high quality videos, which may require
-    // some time to buffer before they can be played.
-    // The delay is set to 500 milliseconds, which is a reasonable delay for
-    // the videos to be ready for playback.
-    function delayedPlayAndClick(fullscreenBtn, videoPlayer, resolve) {
-      setTimeout(() => {
-        videoPlayer.play();
-      }, 500);
-      fullscreenBtn.click();
-      // Resolve after clicking fullscreen button
-      resolve('fullscreen_triggered');
+    // Attempts to request fullscreen mode for the given movie player element.
+    // Resolves with 'fullscreen_triggered' if successful, or
+    // 'requestFullscreen_failed' if the request fails.
+    function requestFullscreen(fullscreenBtn, resolve, videoPlayer) {
+      if (videoPlayer.readyState >= 3) {
+        videoPlayer.click();
+        clickFullscreenButton(fullscreenBtn, resolve);
+      } else {
+        videoPlayer.addEventListener("canplay", () => {
+          videoPlayer.click();
+          clickFullscreenButton(fullscreenBtn, resolve);
+        }, { once: true });
+      }
     }
-
+    function clickFullscreenButton(fullscreenBtn, resolve) {
+      if (fullscreenBtn && !document.hidden) {
+        fullscreenBtn.click();
+        resolve('fullscreen_triggered');
+      } else {
+        resolve('requestFullscreen_failed');
+      }
+    }
     if (document.readyState === "loading") {
       // Loading hasn't finished yet.
-      document.addEventListener("DOMContentLoaded", triggerFullscreen);
+      document.addEventListener("DOMContentLoaded",
+      triggerFullscreen, { once: true });
     } else {
       // `DOMContentLoaded` has already fired.
       triggerFullscreen();
@@ -213,10 +194,34 @@ YouTubeScriptInjectorTabHelper::YouTubeScriptInjectorTabHelper(
 
 YouTubeScriptInjectorTabHelper::~YouTubeScriptInjectorTabHelper() {}
 
+void YouTubeScriptInjectorTabHelper::PrimaryPageChanged(content::Page& page) {
+  script_injector_remote_.reset();
+  bound_rfh_id_ = {};
+  SetFullscreenRequested(false);
+}
+
+void YouTubeScriptInjectorTabHelper::RenderFrameDeleted(
+    content::RenderFrameHost* rfh) {
+  if (rfh->GetGlobalId() == bound_rfh_id_) {
+    script_injector_remote_.reset();
+    bound_rfh_id_ = {};
+    SetFullscreenRequested(false);
+  }
+}
+
+void YouTubeScriptInjectorTabHelper::DidFinishNavigation(
+    content::NavigationHandle* navigation_handle) {
+  if (navigation_handle->IsSameDocument() &&
+      navigation_handle->IsInMainFrame() && navigation_handle->HasCommitted()) {
+    SetFullscreenRequested(false);
+  }
+}
+
 void YouTubeScriptInjectorTabHelper::PrimaryMainDocumentElementAvailable() {
+  SetFullscreenRequested(false);
   content::WebContents* contents = web_contents();
   // Filter only YouTube videos.
-  if (!IsYouTubeVideo()) {
+  if (!IsYouTubeDomain()) {
     return;
   }
   content::RenderFrameHost::AllowInjectingJavaScript();
@@ -231,30 +236,27 @@ void YouTubeScriptInjectorTabHelper::PrimaryMainDocumentElementAvailable() {
   }
 }
 
-void YouTubeScriptInjectorTabHelper::DidToggleFullscreenModeForTab(
-    bool entered_fullscreen,
-    bool will_cause_resize) {
-  // Reset fullscreen state when toggling fullscreen mode.
-  // This ensures that the next time fullscreen is requested, it will be
-  // processed.
-  SetFullscreenRequested(false);
+void YouTubeScriptInjectorTabHelper::MediaEffectivelyFullscreenChanged(
+    bool is_fullscreen) {
+  if (is_fullscreen && HasFullscreenBeenRequested()) {
+    SetFullscreenRequested(false);
+    if (web_contents()->GetVisibility() == content::Visibility::VISIBLE) {
+      ::youtube_script_injector::EnterPictureInPicture(web_contents());
+    }
+  }
 }
 
 void YouTubeScriptInjectorTabHelper::MaybeSetFullscreen() {
-  // Check if fullscreen has already been requested for this page
-  if (HasFullscreenBeenRequested()) {
+  content::RenderFrameHost* rfh = web_contents()->GetPrimaryMainFrame();
+  // Check if fullscreen has already been requested for this page.
+  if (!rfh || !rfh->IsRenderFrameLive() || HasFullscreenBeenRequested()) {
     return;
   }
 
   // Mark fullscreen as requested for this page
   SetFullscreenRequested(true);
-
-  content::RenderFrameHost* rfh = web_contents()->GetPrimaryMainFrame();
-  mojo::AssociatedRemote<script_injector::mojom::ScriptInjector>
-      script_injector_remote;
-  rfh->GetRemoteAssociatedInterfaces()->GetInterface(&script_injector_remote);
-
-  script_injector_remote->RequestAsyncExecuteScript(
+  EnsureBound(rfh);
+  script_injector_remote_->RequestAsyncExecuteScript(
       ISOLATED_WORLD_ID_BRAVE_INTERNAL, kYoutubeFullscreen,
       blink::mojom::UserActivationOption::kActivate,
       blink::mojom::PromiseResultOption::kAwait,
@@ -263,7 +265,7 @@ void YouTubeScriptInjectorTabHelper::MaybeSetFullscreen() {
           weak_factory_.GetWeakPtr(), rfh->GetGlobalFrameToken()));
 }
 
-bool YouTubeScriptInjectorTabHelper::IsYouTubeVideo(bool mobileOnly) const {
+bool YouTubeScriptInjectorTabHelper::IsYouTubeDomain(bool mobileOnly) const {
   const GURL& url = web_contents()->GetLastCommittedURL();
   if (!url.is_valid() || url.is_empty()) {
     return false;
@@ -284,6 +286,16 @@ bool YouTubeScriptInjectorTabHelper::IsYouTubeVideo(bool mobileOnly) const {
       return false;
     }
   }
+
+  return true;
+}
+
+bool YouTubeScriptInjectorTabHelper::IsYouTubeVideo(bool mobileOnly) const {
+  if (!IsYouTubeDomain(mobileOnly)) {
+    return false;
+  }
+
+  const GURL& url = web_contents()->GetLastCommittedURL();
 
   // Check if path is exactly "/watch" (case sensitive).
   const auto path = url.path_piece();
@@ -321,8 +333,8 @@ bool YouTubeScriptInjectorTabHelper::HasFullscreenBeenRequested() const {
     return false;
   }
 
-  auto* data = static_cast<YouTubeFullscreenPageData*>(
-      entry->GetUserData(kYouTubeFullscreenPageDataKey));
+  auto* data = static_cast<content::FullscreenPageData*>(
+      entry->GetUserData(content::kFullscreenPageDataKey));
   return data && data->fullscreen_requested();
 }
 
@@ -333,23 +345,31 @@ void YouTubeScriptInjectorTabHelper::SetFullscreenRequested(bool requested) {
     return;
   }
 
-  auto* data = static_cast<YouTubeFullscreenPageData*>(
-      entry->GetUserData(kYouTubeFullscreenPageDataKey));
+  auto* data = static_cast<content::FullscreenPageData*>(
+      entry->GetUserData(content::kFullscreenPageDataKey));
   if (data) {
     data->set_fullscreen_requested(requested);
   } else {
-    entry->SetUserData(kYouTubeFullscreenPageDataKey,
-                       std::make_unique<YouTubeFullscreenPageData>(requested));
+    entry->SetUserData(
+        content::kFullscreenPageDataKey,
+        std::make_unique<content::FullscreenPageData>(requested));
   }
 }
 
 void YouTubeScriptInjectorTabHelper::OnFullscreenScriptComplete(
     content::GlobalRenderFrameHostToken token,
     base::Value value) {
-  if (token == web_contents()->GetPrimaryMainFrame()->GetGlobalFrameToken()) {
-    // Reset fullscreen state when the script completes
-    SetFullscreenRequested(false);
+  // If the tab is visible, the script result indicates fullscreen was
+  // triggered, and the callback is for the current main frame, return early
+  // without resetting the fullscreen state. This prevents unnecessary state
+  // changes when fullscreen was successfully entered.
+  if (web_contents()->GetVisibility() == content::Visibility::VISIBLE &&
+      value.is_string() && value.GetString() == "fullscreen_triggered" &&
+      token == web_contents()->GetPrimaryMainFrame()->GetGlobalFrameToken()) {
+    return;
   }
+
+  SetFullscreenRequested(false);
 }
 
 bool YouTubeScriptInjectorTabHelper::IsPictureInPictureAvailable() const {
@@ -357,6 +377,22 @@ bool YouTubeScriptInjectorTabHelper::IsPictureInPictureAvailable() const {
              preferences::features::kBravePictureInPictureForYouTubeVideos) &&
          IsYouTubeVideo(true) && web_contents() &&
          web_contents()->IsDocumentOnLoadCompletedInPrimaryMainFrame();
+}
+
+void YouTubeScriptInjectorTabHelper::EnsureBound(
+    content::RenderFrameHost* rfh) {
+  DCHECK(rfh);
+  DCHECK(rfh->IsRenderFrameLive());
+
+  if (!script_injector_remote_.is_bound() ||
+      !script_injector_remote_.is_connected() ||
+      bound_rfh_id_ != rfh->GetGlobalId()) {
+    script_injector_remote_.reset();
+    bound_rfh_id_ = rfh->GetGlobalId();
+    rfh->GetRemoteAssociatedInterfaces()->GetInterface(
+        &script_injector_remote_);
+    script_injector_remote_.reset_on_disconnect();
+  }
 }
 
 WEB_CONTENTS_USER_DATA_KEY_IMPL(YouTubeScriptInjectorTabHelper);

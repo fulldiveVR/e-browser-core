@@ -229,9 +229,7 @@ void BraveStatsUpdater::OnServerPingTimerFired() {
   if (base::CompareCaseInsensitiveASCII(today_ymd, last_check_ymd) == 0)
     return;
 
-  const bool reporting_enabled =
-      pref_service_->GetBoolean(kStatsReportingEnabled);
-  if (!reporting_enabled) {
+  if (!pref_service_->GetBoolean(kStatsReportingEnabled)) {
     if (g_testing_stats_updated_callback)
       g_testing_stats_updated_callback->Run(GURL(kInvalidUrl));
     return;

@@ -12,6 +12,7 @@
 #include <utility>
 #include <vector>
 
+#include "base/callback_list.h"
 #include "base/containers/circular_deque.h"
 #include "base/gtest_prod_util.h"
 #include "base/memory/raw_ptr.h"
@@ -22,6 +23,7 @@
 #include "brave/components/brave_wallet/browser/brave_wallet_p3a.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_service_delegate.h"
 #include "brave/components/brave_wallet/browser/cardano/cardano_wallet_service.h"
+#include "brave/components/brave_wallet/browser/polkadot/polkadot_wallet_service.h"
 #include "brave/components/brave_wallet/browser/simple_hash_client.h"
 #include "brave/components/brave_wallet/browser/zcash/zcash_wallet_service.h"
 #include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
@@ -47,6 +49,7 @@ class KeyringService;
 class NetworkManager;
 class TxService;
 class AccountDiscoveryManager;
+struct PendingSignMessageRequest;
 struct PendingDecryptRequest;
 struct PendingGetEncryptPublicKeyRequest;
 
@@ -64,6 +67,9 @@ class BraveWalletService : public KeyedService,
       base::OnceCallback<void(bool,
                               std::vector<mojom::SolanaSignaturePtr>,
                               const std::optional<std::string>&)>;
+  using SignCardanoTransactionRequestCallback =
+      base::OnceCallback<void(bool, const std::optional<std::string>&)>;
+
   using AddSuggestTokenCallback =
       base::OnceCallback<void(bool, mojom::ProviderError, const std::string&)>;
 
@@ -191,15 +197,27 @@ class BraveWalletService : public KeyedService,
   mojom::OriginInfoPtr GetActiveOriginSync();
   void GetPendingSignMessageRequests(
       GetPendingSignMessageRequestsCallback callback) override;
+  std::vector<mojom::SignMessageRequestPtr> GetPendingSignMessageRequestsSync();
+
   void GetPendingSignMessageErrors(
       GetPendingSignMessageErrorsCallback callback) override;
   void GetPendingSignSolTransactionsRequests(
       GetPendingSignSolTransactionsRequestsCallback callback) override;
+  void GetPendingSignCardanoTransactionRequests(
+      GetPendingSignCardanoTransactionRequestsCallback callback) override;
+  const base::circular_deque<mojom::SignCardanoTransactionRequestPtr>&
+  GetPendingSignCardanoTransactionRequestsSync() const;
+
   void NotifySignSolTransactionsRequestProcessed(
       bool approved,
       int id,
       std::vector<mojom::SolanaSignaturePtr> hw_signatures,
       const std::optional<std::string>& error) override;
+  void NotifySignCardanoTransactionRequestProcessed(
+      bool approved,
+      int id,
+      const std::optional<std::string>& error) override;
+
   void NotifySignMessageRequestProcessed(
       bool approved,
       int id,
@@ -266,6 +284,8 @@ class BraveWalletService : public KeyedService,
   void SetTransactionSimulationOptInStatus(
       mojom::BlowfishOptInStatus status) override;
 
+  void WriteToClipboard(const std::string& text, bool is_sensitive) override;
+
   // BraveWalletServiceDelegate::Observer:
   void OnActiveOriginChanged(const mojom::OriginInfoPtr& origin_info) override;
 
@@ -301,8 +321,14 @@ class BraveWalletService : public KeyedService,
   void AddSignSolTransactionsRequest(
       mojom::SignSolTransactionsRequestPtr request,
       SignSolTransactionsRequestCallback callback);
+  void AddSignCardanoTransactionRequest(
+      mojom::SignCardanoTransactionRequestPtr request,
+      SignCardanoTransactionRequestCallback callback);
+
   mojom::SignSolTransactionsRequestPtr GetPendingSignSolTransactionsRequest(
       int32_t id);
+  mojom::SignCardanoTransactionRequestPtr
+  GetPendingSingCardanoTransactionRequest(int32_t id);
 
   void RemovePrefListenersForTests();
 
@@ -317,6 +343,11 @@ class BraveWalletService : public KeyedService,
     return delegate_.get();
   }
 
+  base::CallbackListSubscription RegisterSignMessageRequestAddedCallback(
+      base::RepeatingClosure cb);
+  base::CallbackListSubscription RegisterSignTransactionRequestAddedCallback(
+      base::RepeatingClosure cb);
+
   NetworkManager* network_manager() { return network_manager_.get(); }
   JsonRpcService* json_rpc_service() { return json_rpc_service_.get(); }
   KeyringService* keyring_service() { return keyring_service_.get(); }
@@ -324,6 +355,8 @@ class BraveWalletService : public KeyedService,
   TxService* tx_service() { return tx_service_.get(); }
   // Might return nullptr.
   BitcoinWalletService* GetBitcoinWalletService();
+  // Might return nullptr.
+  PolkadotWalletService* GetPolkadotWalletService();
   // Might return nullptr.
   ZCashWalletService* GetZcashWalletService();
   // Might return nullptr.
@@ -396,18 +429,28 @@ class BraveWalletService : public KeyedService,
   void OnGetNftsForCompressedMigration(
       std::vector<mojom::BlockchainTokenPtr> nfts);
 
+  // For testing
   base::OnceClosure sign_tx_request_added_cb_for_testing_;
   base::OnceClosure sign_sol_txs_request_added_cb_for_testing_;
+  base::RepeatingClosureList sign_message_added_callback_list_for_testing_;
+  base::RepeatingClosureList sign_transaction_added_callback_list_for_testing_;
 
   int sign_message_id_ = 0;
   int sign_sol_transactions_id_ = 0;
-  base::circular_deque<mojom::SignMessageRequestPtr> sign_message_requests_;
-  base::circular_deque<SignMessageRequestCallback> sign_message_callbacks_;
+  int sign_cardano_transactions_id_ = 0;
+
+  base::circular_deque<PendingSignMessageRequest> sign_message_requests_;
   base::circular_deque<mojom::SignMessageErrorPtr> sign_message_errors_;
   base::circular_deque<mojom::SignSolTransactionsRequestPtr>
       sign_sol_transactions_requests_;
   base::circular_deque<SignSolTransactionsRequestCallback>
       sign_sol_transactions_callbacks_;
+
+  base::circular_deque<mojom::SignCardanoTransactionRequestPtr>
+      sign_cardano_transaction_requests_;
+  base::circular_deque<SignCardanoTransactionRequestCallback>
+      sign_cardano_transaction_callbacks_;
+
   base::flat_map<std::string, mojom::EthereumProvider::RequestCallback>
       add_suggest_token_callbacks_;
   base::flat_map<std::string, base::Value> add_suggest_token_ids_;
@@ -423,6 +466,7 @@ class BraveWalletService : public KeyedService,
   std::unique_ptr<JsonRpcService> json_rpc_service_;
   std::unique_ptr<KeyringService> keyring_service_;
   std::unique_ptr<BitcoinWalletService> bitcoin_wallet_service_;
+  std::unique_ptr<PolkadotWalletService> polkadot_wallet_service_;
   std::unique_ptr<ZCashWalletService> zcash_wallet_service_;
   std::unique_ptr<CardanoWalletService> cardano_wallet_service_;
   std::unique_ptr<TxService> tx_service_;

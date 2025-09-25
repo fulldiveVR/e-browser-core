@@ -24,13 +24,21 @@ import java.util.concurrent.Callable;
 public class BraveIntentHandler {
     private static final String TAG = "BraveIntentHandler";
 
+    /** An extra to indicate that the intent was triggered from an app widget Leo button. */
+    public static final String EXTRA_INVOKED_FROM_APP_WIDGET_LEO =
+            "com.android.brave.invoked_from_app_widget_leo";
+
+    /** An extra to indicate that the Leo voice prompt was executed from the app widget. */
+    public static final String EXTRA_LEO_VOICE_PROMPT_INVOKED =
+            "com.android.brave.leo_voice_prompt_invoked";
+
     public static final String CONNECTION_INFO_HELP_URL =
             "https://support.google.com/chrome?p=android_connection_info";
     public static final String BRAVE_CONNECTION_INFO_HELP_URL =
-            "https://support.brave.com/hc/en-us/articles/360018185871-How-do-I-check-if-a-site-s-connection-is-secure-";
+            "https://support.brave.app/hc/en-us/articles/360018185871-How-do-I-check-if-a-site-s-connection-is-secure-";
     public static final String FALLBACK_SUPPORT_URL =
             "https://support.google.com/chrome/topic/6069782";
-    public static final String BRAVE_FALLBACK_SUPPORT_URL = "https://support.brave.com/hc/en-us";
+    public static final String BRAVE_FALLBACK_SUPPORT_URL = "https://support.brave.app/hc/en-us";
 
     /**
      * Helper method to extract the raw URL from the intent, without further processing. The URL may

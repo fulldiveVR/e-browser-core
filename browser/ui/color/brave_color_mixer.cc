@@ -36,6 +36,11 @@
 #include "brave/components/playlist/common/features.h"
 #endif
 
+#if defined(TOOLKIT_VIEWS)
+#include "brave/browser/ui/darker_theme/darker_theme_color_transform_factory.h"
+#include "brave/browser/ui/darker_theme/features.h"
+#endif  // defined(TOOLKIT_VIEWS)
+
 namespace {
 
 // Copied from //chrome/browser/ui/omnibox//omnibox_theme.h
@@ -140,6 +145,18 @@ void AddBraveVpnColorMixer(ui::ColorProvider* provider,
   }
 
   mixer[kColorBraveVpnButtonBackgroundNormal] = {kColorToolbar};
+
+#if defined(TOOLKIT_VIEWS)
+  if (!base::FeatureList::IsEnabled(
+          darker_theme::features::kBraveDarkerTheme) ||
+      key.scheme_variant != ui::ColorProviderKey::SchemeVariant::kDarker) {
+    return;
+  }
+
+  auto& postprocessing_mixer = provider->AddPostprocessingMixer();
+  postprocessing_mixer[kColorBraveVpnButtonBackgroundNormal] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral5);
+#endif  // defined(TOOLKIT_VIEWS)
 }
 #endif
 
@@ -517,6 +534,23 @@ void AddBraveDarkThemeColorMixer(ui::ColorProvider* provider,
       SkColorSetA(SK_ColorBLACK, 0.25 * 255)};
 
   mixer[kColorBraveAppMenuAccentColor] = {SkColorSetRGB(0x37, 0x2C, 0xBF)};
+
+#if defined(TOOLKIT_VIEWS)
+  if (!base::FeatureList::IsEnabled(
+          darker_theme::features::kBraveDarkerTheme) ||
+      key.scheme_variant != ui::ColorProviderKey::SchemeVariant::kDarker) {
+    return;
+  }
+
+  auto& postprocessing_mixer = provider->AddPostprocessingMixer();
+  postprocessing_mixer[kColorForTest] = {kDarkerColorForTest};
+  postprocessing_mixer[ui::kColorFrameActive] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral0);
+  postprocessing_mixer[ui::kColorFrameInactive] = {
+      postprocessing_mixer.GetResultColor(ui::kColorFrameActive)};
+  postprocessing_mixer[kColorToolbar] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral5);
+#endif  // defined(TOOLKIT_VIEWS)
 }
 
 // Handling dark or light theme on normal profile.
@@ -545,7 +579,6 @@ void AddBraveThemeColorMixer(ui::ColorProvider* provider,
   mixer[kColorSidebarPanelHeaderButton] = {nala::kColorIconDefault};
   mixer[kColorSidebarPanelHeaderButtonHovered] = {nala::kColorNeutral60};
   mixer[kColorSidebarAddBubbleBackground] = {nala::kColorContainerBackground};
-  mixer[kColorDownloadShelfButtonText] = {nala::kColorTextPrimary};
 
   if (!HasCustomToolbarColor(key)) {
     mixer[kColorToolbarButtonActivated] = {nala::kColorIconInteractive};
@@ -720,6 +753,52 @@ void AddBraveOmniboxColorMixer(ui::ColorProvider* provider,
 
   // We don't use bg color for location icon view.
   mixer[kColorOmniboxIconBackground] = {SK_ColorTRANSPARENT};
+
+#if defined(TOOLKIT_VIEWS)
+  if (!base::FeatureList::IsEnabled(
+          darker_theme::features::kBraveDarkerTheme) ||
+      key.scheme_variant != ui::ColorProviderKey::SchemeVariant::kDarker) {
+    return;
+  }
+
+  auto& postprocessing_mixer = provider->AddPostprocessingMixer();
+  // Location bar
+  postprocessing_mixer[kColorLocationBarBackground] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral10);
+  postprocessing_mixer[kColorLocationBarBackgroundHovered] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral10);
+
+  // Omnibox
+  postprocessing_mixer[kColorOmniboxResultsBackground] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral10);
+  postprocessing_mixer[kColorOmniboxResultsBackgroundHovered] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral20);
+  postprocessing_mixer[kColorOmniboxResultsBackgroundSelected] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral20);
+  postprocessing_mixer[kColorBraveOmniboxResultViewSeparator] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral20);
+
+  // Toolbar
+  postprocessing_mixer[kColorToolbarButtonIcon] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral40);
+  postprocessing_mixer[kColorToolbarButtonIconHovered] =
+      darker_theme::ApplyDarknessFromColor(nala::kColorPrimitiveNeutral50);
+  postprocessing_mixer[kColorToolbarButtonActivated] = {
+      nala::kColorPrimitivePrimary50};
+  postprocessing_mixer[kColorToolbarInkDrop] = {nala::kColorPrimitiveNeutral10};
+  postprocessing_mixer[kColorToolbarInkDropHover] = {
+      nala::kColorPrimitiveNeutral10};
+  postprocessing_mixer[kColorToolbarInkDropRipple] = {
+      nala::kColorPrimitiveNeutral20};
+
+  // Sidebar button
+  postprocessing_mixer[kColorSidebarButtonBase] = {
+      postprocessing_mixer.GetResultColor(kColorToolbarButtonIcon)};
+  if (!HasCustomToolbarColor(key)) {
+    mixer[kColorSidebarButtonPressed] = {
+        postprocessing_mixer.GetResultColor(kColorToolbarButtonActivated)};
+  }
+#endif  // defined(TOOLKIT_VIEWS)
 }
 
 void AddBravifiedTabStripColorMixer(ui::ColorProvider* provider,
@@ -739,10 +818,5 @@ void AddBravifiedTabStripColorMixer(ui::ColorProvider* provider,
                      {kColorTabBackgroundInactiveFrameActive}, 0.75 * 0xff);
   mixer[kColorTabDividerFrameInactive] = {kColorTabDividerFrameActive};
 
-  if (key.color_mode == ui::ColorProviderKey::ColorMode::kDark) {
-    mixer[kColorTabBackgroundActiveFrameActive] = {
-        nala::kColorDesktopbrowserTabbarActiveTabHorizontal};
-    mixer[kColorTabBackgroundInactiveHoverFrameActive] = {
-        nala::kColorDesktopbrowserTabbarHoverTabHorizontal};
-  }
+  // Other tab colors are handled in brave_tab_color_mixer.cc
 }

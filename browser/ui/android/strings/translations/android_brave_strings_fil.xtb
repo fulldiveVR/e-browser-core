@@ -196,6 +196,9 @@
 <translation id="5987838417172370108">Tulungang mapabuti ang estabilidad ng produkto ng Brave\u2019s sa pamamagitan ng kusang pagpapadala ng mga ulat ng diagnostic kapag nagkaproblema o tumigil ang Brave Browser.</translation>
 <translation id="7977176350719484850">Tinatantyang Natipid na\nData</translation>
 <translation id="9008534313521214777">Tinatantyang Oras na\nNatipid</translation>
+<translation id="8347743943525229984">Payagan ang mga survey ng Brave</translation>
+<translation id="6022939994702081659">Binibigyang-daan ang Brave na magpakita ng mga link sa mga pribadong survey sa page ng bagong tab. Tinutulungan kami ng mga survey na bumuo ng mas magagandang feature at sukatin ang pagiging epektibo ng mga ad campaign na nakabatay sa browser.</translation>
+<translation id="7746496306508543965">Alamin pa ang tungkol sa mga survey ng Brave</translation>
 <translation id="410351446219883937">I-autoplay</translation>
 <translation id="7445411102860286510">Payagan ang mga site na awtomatikong mag-play ng mga naka-mute na video (inirerekomenda)</translation>
 <translation id="7837721118676387834">Payagan ang pag-autoplay ng mga naka-mute na video para sa isang partikular na site.</translation>
@@ -418,8 +421,8 @@ Sigurado ka bang gusto mo itong gawin?</translation>
 <translation id="8748471354357836070">Alamin ang higit pa / mga opsyon sa pag-opt out</translation>
 <translation id="3171669670217312786">Mga larawan sa background</translation>
 <translation id="8522669544471808198">Ipakita ang Mga Larawan sa Background</translation>
-<translation id="3870475560794762985">Ipakita ang Mga Naka-sponsor na Larawan</translation>
-<translation id="6937724381960478525">Alamin ang higit pa tungkol sa Mga Naka-sponsor na Larawan</translation>
+<translation id="6258554626602400736">Ipakita ang Mga Ad sa Page ng Bagong Tab</translation>
+<translation id="9001530744369687550">Alamin pa ang tungkol sa mga ad sa page ng bagong tab</translation>
 <translation id="8793108040181436796">Mga Widget</translation>
 <translation id="8643377320501056697">Ipakita ang Mga Nangungunang Site</translation>
 <translation id="7275773481201277457">Ipakita ang Mga Istatistika ng Brave</translation>
@@ -497,6 +500,8 @@ Sigurado ka bang gusto mo itong gawin?</translation>
 <translation id="7616645803364270729">Email, Twitter, atbp.</translation>
 <translation id="5299848999918506028">Salamat!</translation>
 <translation id="76550953340008122">Salamat sa pagbibigay-alam sa mga developer ng Brave na may problema sa site na ito. Gagawin namin ang buong makakaya namin para ayusin ito!</translation>
+<translation id="3037432377946455872">Ano ang pangunahing isyu na nararanasan mo?</translation>
+<translation id="8731661215617360873">Pumili ng isang opsyon</translation>
 <translation id="650318023204990401">Mga advanced na kontrol</translation>
 <translation id="7205939464631857223">I-clear ang lahat ng mga naka-block na element</translation>
 <translation id="5370478469168390143">Mag-save ng Data Online</translation>
@@ -632,7 +637,6 @@ Sigurado ka bang gusto mo itong gawin?</translation>
 <translation id="3961126209136843111">Mag-import ng umiiral na wallet</translation>
 <translation id="4811736040444856406">Ipakita ang parirala sa pag-recover</translation>
 <translation id="4359319875297001084">Mag-import mula sa mga legacy na wallet ng cryptocurrency ng Brave?</translation>
-<translation id="3157931365184549694">Ipanumbalik</translation>
 <translation id="5844138175312846408">Mayroon na bang wallet?</translation>
 <translation id="2502258949541727762">Bago tayo magsimula</translation>
 <translation id="4303748097351941030">Mga sinusuportahang network</translation>
@@ -1222,4 +1226,41 @@ Kung hindi mo tatanggapin ang kahilingang ito, hindi kokonekta ulit ang VPN at h
 <translation id="2735247450315842119">Payagan ang mga screenshot sa mga private tab</translation>
 <translation id="8420414929552321089">Kung papayagan, makikita rin ang mga private tab kapag nakabukas ang maraming app.</translation>
 <translation id="7956713633345437162">Mga bookmark sa Mobile</translation>
+<translation id="1943432128510653496">I-save ang mga password</translation>
+<translation id="2100273922101894616">Awtomatikong Mag-sign in</translation>
+<translation id="363596933471559332">Awtomatikong mag-sign in sa mga website gamit ang mga naka-store na kredensyal. Kapag naka-off ang feature, hihilingin sa iyong mag-verify sa tuwing magsa-sign in ka sa isang website.</translation>
+<translation id="8562452229998620586">Lalabas dito ang mga naka-save na password.</translation>
+<translation id="1303339473099049190">Hindi mahanap ang password na iyon. Tingnan ang iyong spelling at subukan ulit.</translation>
+<translation id="2259659629660284697">I-export ang mga password…</translation>
+<translation id="133012818630824069">Mag-export ng mga password na naka-store sa Brave</translation>
+<translation id="2321086116217818302">Inihahanda ang mga password…</translation>
+<translation id="5139940364318403933">Alamin kung paano gamitin ang Google Drive</translation>
+<translation id="729975465115245577">Walang app sa iyong device upang ma-store ang file ng mga password.</translation>
+<translation id="1129510026454351943">Mga Detalye: <ph name="ERROR_DESCRIPTION"/></translation>
+<translation id="6221633008163990886">I-unlock upang i-export ang iyong mga password</translation>
+<translation id="5245792669563792664">mga Password</translation>
+<translation id="10614374240317010">Hindi kailanman nag-save</translation>
+<translation id="1571304935088121812">Kopyahin ang username</translation>
+<translation id="5005498671520578047">Kopyahin password</translation>
+<translation id="2435457462613246316">Ipakita ang password</translation>
+<translation id="1513858653616922153">I-delete ang password</translation>
+<translation id="543338862236136125">I-edit ang password</translation>
+<translation id="4565377596337484307">Itago ang password</translation>
+<translation id="8523928698583292556">I-delete ang naka-store na password</translation>
+<translation id="5433691172869980887">Nakopya ang username</translation>
+<translation id="2625189173221582860">Nakopya ang password</translation>
+<translation id="8084114998886531721">Naka-save na password</translation>
+<translation id="6590680911007613645">Tiyaking tumutugma ang password na sine-save mo sa iyong password para sa <ph name="SITE"/></translation>
+<translation id="1492417797159476138">Na-save mo na ang username na ito para sa site na ito</translation>
+<translation id="5454166040603940656">sa <ph name="PROVIDER"/></translation>
+<translation id="686366188661646310">I-delete ang password?</translation>
+<translation id="7808889146555843082">Kapag na-delete ang password na ito, hindi ide-delete ang iyong account sa <ph name="SITE"/>. Palitan ang iyong password o i-delete ang account mo sa <ph name="SITE"/> para mapanatili itong ligtas mula sa iba.</translation>
+<translation id="2870560284913253234">Site</translation>
+<translation id="8503813439785031346">Username</translation>
+<translation id="2278052315791335171">Kapag na-delete ang password na ito, hindi ide-delete ang iyong account sa <ph name="SITE"/></translation>
+<translation id="6891726759199484455">I-unlock upang kopyahin ang iyong password</translation>
+<translation id="5515439363601853141">I-unlock upang tingnan ang iyong password</translation>
+<translation id="1724977129262658800">I-unlock para i-edit ang iyong password</translation>
+<translation id="5780792035410621042">Para kopyahin ang mga password, magtakda muna ng lock ng screen sa iyong device</translation>
+<translation id="7986497153528221272">Para tingnan ang mga password, magtakda muna ng lock ng screen sa iyong device</translation>
 </translationbundle>

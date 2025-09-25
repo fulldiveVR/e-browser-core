@@ -31,6 +31,7 @@
 #include "brave/browser/ui/webui/settings/brave_sync_handler.h"
 #include "brave/browser/ui/webui/settings/brave_wallet_handler.h"
 #include "brave/browser/ui/webui/settings/default_brave_shields_handler.h"
+#include "brave/components/ai_chat/core/browser/customization_settings_handler.h"
 #include "brave/components/ai_chat/core/browser/utils.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/brave_account/features.h"
@@ -47,12 +48,16 @@
 #include "brave/components/ntp_background_images/browser/features.h"
 #include "brave/components/ntp_background_images/browser/view_counter_service.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
+#include "brave/components/search_engines/brave_prepopulated_engines.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/version_info/version_info.h"
 #include "build/build_config.h"
 #include "chrome/browser/profiles/profile.h"
+#include "chrome/browser/regional_capabilities/regional_capabilities_service_factory.h"
 #include "chrome/browser/ui/webui/settings/metrics_reporting_handler.h"
+#include "components/regional_capabilities/regional_capabilities_country_id.h"
+#include "components/regional_capabilities/regional_capabilities_service.h"
 #include "components/sync/base/command_line_switches.h"
 #include "components/user_prefs/user_prefs.h"
 #include "content/public/browser/web_contents.h"
@@ -69,6 +74,7 @@
 #if BUILDFLAG(ENABLE_SPEEDREADER)
 #include "brave/components/speedreader/common/features.h"
 #include "brave/components/speedreader/speedreader_pref_names.h"
+#include "brave/components/speedreader/speedreader_service.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
@@ -89,11 +95,13 @@
 #endif
 
 #if BUILDFLAG(ENABLE_EXTENSIONS)
+#include "brave/browser/extensions/manifest_v2/features.h"
 #include "brave/browser/ui/webui/settings/brave_extensions_manifest_v2_handler.h"
 #include "brave/browser/ui/webui/settings/brave_tor_snowflake_extension_handler.h"
 #endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
+#include "brave/components/playlist/browser/pref_names.h"
 #include "brave/components/playlist/common/features.h"
 #endif
 
@@ -101,6 +109,20 @@
 #include "brave/components/containers/core/browser/containers_settings_handler.h"
 #include "brave/components/containers/core/common/features.h"
 #endif
+
+namespace {
+
+bool IsLocaleJapan(Profile* profile) {
+  if (auto* regional_capabilities = regional_capabilities::
+          RegionalCapabilitiesServiceFactory::GetForProfile(profile)) {
+    return regional_capabilities->GetCountryId() ==
+           regional_capabilities::CountryIdHolder(
+               country_codes::CountryId("JP"));
+  }
+  return false;
+}
+
+}  // namespace
 
 using ntp_background_images::ViewCounterServiceFactory;
 
@@ -123,7 +145,8 @@ BraveSettingsUI::BraveSettingsUI(content::WebUI* web_ui) : SettingsUI(web_ui) {
 #if BUILDFLAG(ENABLE_EXTENSIONS)
   web_ui->AddMessageHandler(
       std::make_unique<BraveTorSnowflakeExtensionHandler>());
-  if (base::FeatureList::IsEnabled(kExtensionsManifestV2)) {
+  if (base::FeatureList::IsEnabled(
+          extensions_mv2::features::kExtensionsManifestV2)) {
     web_ui->AddMessageHandler(
         std::make_unique<BraveExtensionsManifestV2Handler>());
   }
@@ -169,16 +192,11 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
 #endif  // BUILDFLAG(ENABLE_BRAVE_VPN)
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   html_source->AddBoolean(
-      "isSpeedreaderFeatureEnabled",
-      base::FeatureList::IsEnabled(speedreader::kSpeedreaderFeature));
-  html_source->AddBoolean("isSpeedreaderDisabledByPolicy",
-                          profile->GetPrefs()->GetBoolean(
-                              speedreader::kSpeedreaderDisabledByPolicy));
-#endif
-#if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
-  html_source->AddBoolean(
-      "braveWaybackMachineDisabledByPolicy",
-      profile->GetPrefs()->GetBoolean(kBraveWaybackMachineDisabledByPolicy));
+      "isSpeedreaderAllowed",
+      base::FeatureList::IsEnabled(speedreader::kSpeedreaderFeature) &&
+          (speedreader::IsSpeedreaderFeatureEnabled(profile->GetPrefs()) ||
+           !profile->GetPrefs()->IsManagedPreference(
+               speedreader::kSpeedreaderPrefFeatureEnabled)));
 #endif
   html_source->AddBoolean(
       "isNativeBraveWalletFeatureEnabled",
@@ -203,7 +221,8 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
   html_source->AddBoolean("enable_extensions", BUILDFLAG(ENABLE_EXTENSIONS));
 
   html_source->AddBoolean("extensionsManifestV2Feature",
-                          base::FeatureList::IsEnabled(kExtensionsManifestV2));
+                          base::FeatureList::IsEnabled(
+                              extensions_mv2::features::kExtensionsManifestV2));
 
   html_source->AddBoolean("isLeoAssistantAllowed",
                           ai_chat::IsAIChatEnabled(profile->GetPrefs()));
@@ -214,11 +233,11 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
                           base::FeatureList::IsEnabled(
                               ntp_background_images::features::
                                   kBraveNTPBrandedWallpaperSurveyPanelist));
-
 #if BUILDFLAG(ENABLE_PLAYLIST)
   html_source->AddBoolean(
       "isPlaylistAllowed",
-      base::FeatureList::IsEnabled(playlist::features::kPlaylist));
+      base::FeatureList::IsEnabled(playlist::features::kPlaylist) &&
+          profile->GetPrefs()->GetBoolean(playlist::kPlaylistEnabledPref));
 #else
   html_source->AddBoolean("isPlaylistAllowed", false);
 #endif
@@ -241,6 +260,12 @@ void BraveSettingsUI::AddResources(content::WebUIDataSource* html_source,
   html_source->AddBoolean(
       "isTreeTabsFlagEnabled",
       base::FeatureList::IsEnabled(tabs::features::kBraveTreeTab));
+  html_source->AddString("braveSearchEngineName",
+                         TemplateURLPrepopulateData::brave_search.name);
+  html_source->AddBoolean("isLocaleJapan", IsLocaleJapan(profile));
+  html_source->AddBoolean("isHideVerticalTabCompletelyFlagEnabled",
+                          base::FeatureList::IsEnabled(
+                              tabs::features::kBraveVerticalTabHideCompletely));
 }
 
 // static
@@ -262,6 +287,15 @@ void BraveSettingsUI::BindInterface(
   auto helper = std::make_unique<ai_chat::AIChatSettingsHelper>(
       web_ui()->GetWebContents()->GetBrowserContext());
   mojo::MakeSelfOwnedReceiver(std::move(helper), std::move(pending_receiver));
+}
+
+void BraveSettingsUI::BindInterface(
+    mojo::PendingReceiver<ai_chat::mojom::CustomizationSettingsHandler>
+        pending_receiver) {
+  auto handler = std::make_unique<ai_chat::CustomizationSettingsHandler>(
+      user_prefs::UserPrefs::Get(
+          web_ui()->GetWebContents()->GetBrowserContext()));
+  mojo::MakeSelfOwnedReceiver(std::move(handler), std::move(pending_receiver));
 }
 
 void BraveSettingsUI::BindInterface(

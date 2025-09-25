@@ -196,6 +196,9 @@
 <translation id="5987838417172370108">עזור לשפר את יציבות המוצר של Brave על ידי שליחת דוחות אבחון אוטומטית כאשר הדפדפן האמיץ קורס או קופא.</translation>
 <translation id="7977176350719484850">הערכת נתונים/n שנשמרו</translation>
 <translation id="9008534313521214777">זמן מוערך\n שנשמר</translation>
+<translation id="8347743943525229984">הפעלת סקרי Brave</translation>
+<translation id="6022939994702081659">מאפשר ל-Brave להציג לינקים לסקרים פרטיים בדף הכרטיסייה החדשה. סקרים עוזרים לנו לבנות פיצ׳רים טובים יותר ולמדוד את היעילות של קמפיינים פרסומיים בדפדפן.</translation>
+<translation id="7746496306508543965">למידע נוסף על סקרי Brave</translation>
 <translation id="410351446219883937">הפעלה אוטומטית</translation>
 <translation id="7445411102860286510">אתרים יוכלו להפעיל באופן אוטומטי סרטונים מושתקים (מומלץ)</translation>
 <translation id="7837721118676387834">אפשר הפעלה אוטומטית של סרטונים מושתקים באתר ספציפי.</translation>
@@ -419,8 +422,8 @@
 <translation id="8748471354357836070">למידע נוסף / אפשרויות ביטול</translation>
 <translation id="3171669670217312786">תמונות רקע</translation>
 <translation id="8522669544471808198">הצג תמונות רקע</translation>
-<translation id="3870475560794762985">הצג תמונות ממומנות</translation>
-<translation id="6937724381960478525">למידע נוסף על תמונות ממומנות</translation>
+<translation id="6258554626602400736">הצגת מודעות בדף הכרטיסייה החדשה</translation>
+<translation id="9001530744369687550">מידע נוסף על מודעות בדף הכרטיסיה החדשה</translation>
 <translation id="8793108040181436796">ווידג'טים</translation>
 <translation id="8643377320501056697">הצג אתרים מובילים</translation>
 <translation id="7275773481201277457">הצג סטטיסטיקות Brave</translation>
@@ -498,6 +501,8 @@
 <translation id="7616645803364270729">דואר אלקטרוני, טוויטר וכו'.</translation>
 <translation id="5299848999918506028">תודה!</translation>
 <translation id="76550953340008122">תודה שהודעת למפתחים של Brave שמשהו לא תקין באתר זה. אנו נעשה כמיטב יכולתנו לתקן זאת!</translation>
+<translation id="3037432377946455872">מה הבעיה העיקרית?</translation>
+<translation id="8731661215617360873">יש לבחור אפשרות אחת</translation>
 <translation id="650318023204990401">בקרות מתקדמות</translation>
 <translation id="7205939464631857223">ניקוי כל האלמנטים החסומים</translation>
 <translation id="5370478469168390143">שמור נתונים באופן מקוון</translation>
@@ -633,7 +638,6 @@
 <translation id="3961126209136843111">ייבוא ארנק קיים</translation>
 <translation id="4811736040444856406">הצג ביטוי שחזור</translation>
 <translation id="4359319875297001084">לייבא מארנקי קריפטו Brave מדור קודם?</translation>
-<translation id="3157931365184549694">שחזר</translation>
 <translation id="5844138175312846408">כבר יש ברשותך ארנק?</translation>
 <translation id="2502258949541727762">לפני שנתחיל</translation>
 <translation id="4303748097351941030">רשתות נתמכות</translation>
@@ -1223,4 +1227,41 @@
 <translation id="2735247450315842119">לאפשר צילומי מסך בכרטיסיות פרטיות</translation>
 <translation id="8420414929552321089">כשאפשרות זו מופעלת, כרטיסיות פרטיות גם יהיו גלויות בזמן שמספר אפליקציות פתוחות.</translation>
 <translation id="7956713633345437162">סימניות לנייד</translation>
+<translation id="1943432128510653496">שמירת סיסמאות</translation>
+<translation id="2100273922101894616">כניסה אוטומטית</translation>
+<translation id="363596933471559332">כניסה אוטומטית לאתרים באמצעות פרטי כניסה מאוחסנים. כשתכונה זו כבויה, יהיה עליך לבצע אימות לפני כל כניסה לאתר.</translation>
+<translation id="8562452229998620586">הסיסמאות השמורות יופיעו כאן.</translation>
+<translation id="1303339473099049190">לא ניתן למצוא את הסיסמה. יש לבדוק את האיות ולנסות שוב.</translation>
+<translation id="2259659629660284697">ייצוא סיסמאות…</translation>
+<translation id="133012818630824069">‏ייצוא סיסמאות המאוחסנות ב-Brave</translation>
+<translation id="2321086116217818302">המערכת מכינה את הסיסמאות…</translation>
+<translation id="5139940364318403933">‏איך משתמשים ב-Google Drive</translation>
+<translation id="729975465115245577">אין במכשיר אפליקציה לאחסון קובץ הסיסמאות.</translation>
+<translation id="1129510026454351943">פרטים: <ph name="ERROR_DESCRIPTION"/></translation>
+<translation id="6221633008163990886">יש לבטל את הנעילה כדי לייצא סיסמאות</translation>
+<translation id="5245792669563792664">סיסמאות</translation>
+<translation id="10614374240317010">פריטים שאף פעם לא יישמרו</translation>
+<translation id="1571304935088121812">העתקת שם משתמש</translation>
+<translation id="5005498671520578047">העתקת הסיסמה</translation>
+<translation id="2435457462613246316">הצגת סיסמה</translation>
+<translation id="1513858653616922153">מחיקת סיסמה</translation>
+<translation id="543338862236136125">עריכת סיסמה</translation>
+<translation id="4565377596337484307">הסתרת סיסמה</translation>
+<translation id="8523928698583292556">מחיקת הסיסמה השמורה</translation>
+<translation id="5433691172869980887">שם המשתמש הועתק</translation>
+<translation id="2625189173221582860">הסיסמה הועתקה</translation>
+<translation id="8084114998886531721">סיסמה שמורה</translation>
+<translation id="6590680911007613645">יש לוודא שהסיסמה שנשמרת זהה לסיסמה שלך עבור <ph name="SITE"/></translation>
+<translation id="1492417797159476138">שם המשתמש הזה כבר נשמר לאתר זה</translation>
+<translation id="5454166040603940656">עם <ph name="PROVIDER"/></translation>
+<translation id="686366188661646310">למחוק את הסיסמה?</translation>
+<translation id="7808889146555843082">מחיקת הסיסמה הזו לא תגרום למחיקת החשבון שלך באתר <ph name="SITE"/>. כדי למנוע את החשיפה של הסיסמה, כדאי לשנות אותה או למחוק את החשבון שלך ב-<ph name="SITE"/>.</translation>
+<translation id="2870560284913253234">אתר</translation>
+<translation id="8503813439785031346">שם משתמש</translation>
+<translation id="2278052315791335171">מחיקת הסיסמה הזו לא תגרום למחיקת החשבון שלך באתר <ph name="SITE"/>.</translation>
+<translation id="6891726759199484455">ביטול הנעילה יאפשר להעתיק את הסיסמה</translation>
+<translation id="5515439363601853141">ביטול הנעילה יציג את הסיסמה</translation>
+<translation id="1724977129262658800">יש לבטל את הנעילה כדי לערוך את הסיסמה</translation>
+<translation id="5780792035410621042">כדי להעתיק סיסמאות, תחילה יש להגדיר נעילת מסך במכשיר</translation>
+<translation id="7986497153528221272">כדי להציג סיסמאות, תחילה יש להגדיר נעילת מסך במכשיר</translation>
 </translationbundle>

@@ -83,10 +83,16 @@ static_library("browser") {
     "brave_wallet_service_delegate.cc",
     "brave_wallet_service_delegate.h",
     "brave_wallet_service_observer_base.h",
+    "cardano/cardano_api_impl.cc",
+    "cardano/cardano_api_impl.h",
     "cardano/cardano_block_tracker.cc",
     "cardano/cardano_block_tracker.h",
+    "cardano/cardano_cip30_serializer.cc",
+    "cardano/cardano_cip30_serializer.h",
     "cardano/cardano_create_transaction_task.cc",
     "cardano/cardano_create_transaction_task.h",
+    "cardano/cardano_dapp_utils.cc",
+    "cardano/cardano_dapp_utils.h",
     "cardano/cardano_get_utxos_task.cc",
     "cardano/cardano_get_utxos_task.h",
     "cardano/cardano_knapsack_solver.cc",
@@ -99,10 +105,10 @@ static_library("browser") {
     "cardano/cardano_rpc.h",
     "cardano/cardano_rpc_schema.cc",
     "cardano/cardano_rpc_schema.h",
-    "cardano/cardano_serializer.cc",
-    "cardano/cardano_serializer.h",
     "cardano/cardano_transaction.cc",
     "cardano/cardano_transaction.h",
+    "cardano/cardano_transaction_serializer.cc",
+    "cardano/cardano_transaction_serializer.h",
     "cardano/cardano_tx_manager.cc",
     "cardano/cardano_tx_manager.h",
     "cardano/cardano_tx_meta.cc",
@@ -184,6 +190,10 @@ static_library("browser") {
     "nonce_tracker.h",
     "password_encryptor.cc",
     "password_encryptor.h",
+    "polkadot/polkadot_substrate_rpc.cc",
+    "polkadot/polkadot_substrate_rpc.h",
+    "polkadot/polkadot_wallet_service.cc",
+    "polkadot/polkadot_wallet_service.h",
     "scoped_txs_update.cc",
     "scoped_txs_update.h",
     "simple_hash_client.cc",
@@ -303,7 +313,7 @@ static_library("browser") {
     ":transaction",
     ":utils",
     "//base",
-    "//brave/components/brave_component_updater/browser",
+    "//brave/components/brave_component_updater/browser:public",
     "//brave/components/brave_stats/browser",
     "//brave/components/brave_wallet/api",
     "//brave/components/brave_wallet/browser/bitcoin:generated_bitcoin_rpc_responses",
@@ -341,7 +351,8 @@ static_library("browser") {
     "//third_party/boringssl",
     "//third_party/re2",
     "//tools/json_schema_compiler:generated_api_util",
-    "//ui/base:base",
+    "//ui/base",
+    "//ui/base/clipboard",
     "//url",
   ]
 
@@ -369,7 +380,7 @@ static_library("browser") {
 
     deps += [
       "//brave/components/brave_wallet/browser/internal:orchard_bundle",
-      "//brave/components/brave_wallet/browser/internal/orchard_storage:orchard_storage",
+      "//brave/components/brave_wallet/browser/internal/orchard_storage",
       "//sql",
     ]
   }
@@ -408,7 +419,7 @@ source_set("constants") {
     "//base",
     "//brave/components/brave_wallet/common:mojom",
     "//brave/components/resources:strings_grit",
-    "//ui/base:base",
+    "//ui/base",
   ]
 
   public_deps = [ "//brave/components/brave_wallet/common" ]
@@ -448,7 +459,7 @@ source_set("utils") {
     # TODO(https://github.com/brave/brave-browser/issues/46940): Remove this
     # dependency to version_info once crash dumps have been collected for
     # MakeChainIdLowerCase.
-    "//base/version_info:version_info",
+    "//base/version_info",
   ]
 
   public_deps = [ "//brave/components/brave_wallet/common" ]
@@ -470,6 +481,8 @@ source_set("hd_keyring") {
     "ethereum_keyring.h",
     "filecoin_keyring.cc",
     "filecoin_keyring.h",
+    "polkadot/polkadot_keyring.cc",
+    "polkadot/polkadot_keyring.h",
     "secp256k1_hd_keyring.cc",
     "secp256k1_hd_keyring.h",
     "solana_keyring.cc",
@@ -646,15 +659,18 @@ source_set("unit_tests") {
     "brave_wallet_p3a_unittest.cc",
     "brave_wallet_prefs_unittest.cc",
     "brave_wallet_utils_unittest.cc",
+    "cardano/cardano_api_impl_unittest.cc",
     "cardano/cardano_block_tracker_unittest.cc",
+    "cardano/cardano_cip30_serializer_unittest.cc",
     "cardano/cardano_create_transaction_task_unittest.cc",
     "cardano/cardano_get_utxos_task_unittest.cc",
     "cardano/cardano_hd_keyring_unittest.cc",
     "cardano/cardano_knapsack_solver_unittest.cc",
     "cardano/cardano_max_send_solver_unittest.cc",
+    "cardano/cardano_provider_impl_unittest.cc",
     "cardano/cardano_rpc_schema_unittest.cc",
     "cardano/cardano_rpc_unittest.cc",
-    "cardano/cardano_serializer_unittest.cc",
+    "cardano/cardano_transaction_serializer_unittest.cc",
     "cardano/cardano_transaction_unittest.cc",
     "cardano/cardano_tx_manager_unittest.cc",
     "cardano/cardano_tx_meta_unittest.cc",
@@ -688,6 +704,7 @@ source_set("unit_tests") {
     "internal/hd_key_common_unittest.cc",
     "internal/hd_key_ed25519_slip23_unittest.cc",
     "internal/hd_key_ed25519_unittest.cc",
+    "internal/hd_key_sr25519_unittest.cc",
     "internal/hd_key_unittest.cc",
     "internal/secp256k1_signature_unittest.cc",
     "json_keystore_parser_unittest.cc",
@@ -703,6 +720,8 @@ source_set("unit_tests") {
     "network_manager_unittest.cc",
     "nft_metadata_fetcher_unittest.cc",
     "password_encryptor_unittest.cc",
+    "polkadot/polkadot_keyring_unittest.cc",
+    "polkadot/polkadot_wallet_service_unittest.cc",
     "rlp_decode_unittest.cc",
     "rlp_encode_unittest.cc",
     "simple_hash_client_unittest.cc",
@@ -758,7 +777,6 @@ source_set("unit_tests") {
     ":transaction",
     ":utils",
     "//base/test:test_support",
-    "//brave/components/brave_component_updater/browser",
     "//brave/components/brave_component_updater/browser:test_support",
     "//brave/components/brave_wallet/browser/bitcoin:generated_bitcoin_rpc_responses",
     "//brave/components/brave_wallet/browser/cardano:generated_cardano_rpc_blockfrost_api",
@@ -785,7 +803,7 @@ source_set("unit_tests") {
     "//services/data_decoder/public/cpp:test_support",
     "//services/network:test_support",
     "//testing/gtest",
-    "//ui/base:base",
+    "//ui/base",
     "//url",
   ]
 
@@ -822,6 +840,9 @@ source_set("unit_tests") {
   }
 
   data = [
+    "//brave/components/test/data/brave_wallet",
+    "//brave/components/test/data/brave_wallet/cardano/cardano_sdk_cip30/test_vectors.json",
+
     # Test vectors for
     # BitcoinSerializer.AddressToScriptPubkey_BitcoinCoreTestVectors test.
     "//brave/third_party/bitcoin-core/src/src/test/data/key_io_valid.json",

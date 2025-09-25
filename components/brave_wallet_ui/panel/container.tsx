@@ -23,7 +23,7 @@ import {
 } from '../components/extension/connect-hardware-wallet-panel/index'
 import {
   AddSuggestedTokenPanel, //
-} from '../components/extension/add-suggested-token-panel/index'
+} from '../components/extension/add_suggested_token_panel/add_suggested_token_panel'
 import {
   ProvidePubKeyPanel,
   DecryptRequestPanel,
@@ -53,6 +53,7 @@ import {
   useGetPendingSignMessageRequestsQuery,
   useGetPendingSwitchChainRequestQuery,
   useGetPendingSignSolTransactionsRequestsQuery,
+  useGetPendingSignCardanoTransactionRequestsQuery,
   useGetPendingTokenSuggestionRequestsQuery,
 } from '../common/slices/api.slice'
 import { useAccountsQuery } from '../common/slices/api.slice.extra'
@@ -67,8 +68,11 @@ import {
   PendingTransactionPanel, //
 } from '../components/extension/pending_transaction_panel/pending_transaction_panel'
 import {
-  PendingSignatureRequestsPanel, //
-} from '../components/extension/pending_signature_requests_panel/pending_signature_requests_panel'
+  PendingSignSolanaTransactionsRequestsPanel, //
+} from '../components/extension/pending_sign_solana_txs_requests_panel/pending_sign_solana_txs_requests_panel'
+import {
+  PendingSignCardanoTransactionRequestsPanel, //
+} from '../components/extension/pending_sign_cardano_tx_requests_panel/pending_sign_cardano_tx_requests_panel'
 
 // Allow BigInts to be stringified
 ;(BigInt.prototype as any).toJSON = function () {
@@ -111,6 +115,10 @@ function Container() {
     data: signSolTransactionsRequests,
     isLoading: isLoadingSignSolTransactionsRequests,
   } = useGetPendingSignSolTransactionsRequestsQuery()
+  const {
+    data: signCardanoTransactionRequests,
+    isLoading: isLoadingSignCardanoTransactionRequests,
+  } = useGetPendingSignCardanoTransactionRequestsQuery()
   const { data: signMessageData, isLoading: isLoadingSignMessageData } =
     useGetPendingSignMessageRequestsQuery()
   const {
@@ -129,6 +137,7 @@ function Container() {
     isLoadingPendingTransactions
     || isLoadingPendingPublicKeyRequest
     || isLoadingSignSolTransactionsRequests
+    || isLoadingSignCardanoTransactionRequests
     || isLoadingSignMessageData
     || isLoadingSignMessageErrorData
     || isLoadingAddTokenRequests
@@ -272,10 +281,11 @@ function Container() {
 
   if (addTokenRequests.length) {
     return (
-      <PanelWrapper isLonger={false}>
-        <StyledExtensionWrapper>
-          <AddSuggestedTokenPanel />
-        </StyledExtensionWrapper>
+      <PanelWrapper
+        width={390}
+        height={650}
+      >
+        <AddSuggestedTokenPanel />
       </PanelWrapper>
     )
   }
@@ -299,11 +309,9 @@ function Container() {
         width={390}
         height={650}
       >
-        <LongWrapper padding='0px'>
-          <PendingTransactionPanel
-            selectedPendingTransaction={selectedPendingTransaction}
-          />
-        </LongWrapper>
+        <PendingTransactionPanel
+          selectedPendingTransaction={selectedPendingTransaction}
+        />
       </PanelWrapper>
     )
   }
@@ -312,7 +320,17 @@ function Container() {
     return (
       <PanelWrapper isLonger={true}>
         <LongWrapper padding='0px'>
-          <PendingSignatureRequestsPanel />
+          <PendingSignSolanaTransactionsRequestsPanel />
+        </LongWrapper>
+      </PanelWrapper>
+    )
+  }
+
+  if (signCardanoTransactionRequests?.length) {
+    return (
+      <PanelWrapper isLonger={true}>
+        <LongWrapper padding='0px'>
+          <PendingSignCardanoTransactionRequestsPanel />
         </LongWrapper>
       </PanelWrapper>
     )

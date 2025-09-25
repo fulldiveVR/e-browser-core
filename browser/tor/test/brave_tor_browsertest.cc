@@ -162,6 +162,11 @@ class BraveTorBrowserTest : public InProcessBrowserTest {
     DownloadTorComponent(tor::kTorPluggableTransportComponentId);
   }
 
+  void SetUpDefaultCommandLine(base::CommandLine* command_line) override {
+    InProcessBrowserTest::SetUpDefaultCommandLine(command_line);
+    command_line->RemoveSwitch(switches::kDisableComponentUpdate);
+  }
+
   Profile* OpenTorWindow() {
     Browser* tor_browser =
         TorProfileManager::SwitchToTorProfile(browser()->profile());
@@ -352,7 +357,7 @@ IN_PROC_BROWSER_TEST_F(BraveTorWithCustomProfileBrowserTest, Incognito) {
     return EvalJs(web_contents,
                   base::StrCat({"!window.testing.torSubpage.getElementById('",
                                 id, "').disabled"}))
-        .value.GetBool();
+        .ExtractBool();
   };
 
   // Disable incognito mode for this profile.

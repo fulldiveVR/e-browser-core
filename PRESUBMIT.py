@@ -102,9 +102,7 @@ def CheckWebDevStyle(input_api, output_api):
 
 
 def CheckChangeLintsClean(input_api, output_api):
-    return input_api.canned_checks.CheckChangeLintsClean(input_api,
-                                                         output_api,
-                                                         lint_filters=[])
+    return input_api.canned_checks.CheckChangeLintsClean(input_api, output_api)
 
 
 def CheckPylint(input_api, output_api):
@@ -229,7 +227,18 @@ def CheckLicense(input_api, output_api):
 
 def CheckNewThemeFilesForUpstreamOverride(input_api, output_api):
     """Checks newly added theme resources to ensure there is a corresponding
-       file in upstream """
+       file in upstream, unless they are channel-specific assets """
+
+    CHANNEL_DIRS = {'beta', 'dev', 'development', 'nightly'}
+
+    def is_channelized_path(path, input_api):
+        # Example: app/theme/chromium/mac/beta/Assets.car
+        parts = path.split('/')
+        # Example: app/theme/chromium/linux/product_logo_24_beta.png
+        parts.extend(
+            input_api.os_path.splitext(
+                input_api.os_path.basename(path))[0].split('_'))
+        return any(part in CHANNEL_DIRS for part in parts)
 
     source_file_filter = lambda f: input_api.FilterSourceFile(
         f,
@@ -240,13 +249,16 @@ def CheckNewThemeFilesForUpstreamOverride(input_api, output_api):
     for f in input_api.AffectedSourceFiles(source_file_filter):
         if f.Action() != 'A':
             continue
-        new_sources.append(f.LocalPath())
+        new_sources.append(f.UnixLocalPath())
 
     problems = []
     for f in new_sources:
-        path = brave_chromium_utils.to_wspath(f)
+        if is_channelized_path(f, input_api):
+            continue  # Skip checking upstream for channelized files
+        upstream_file = f.replace('/brave/', '/chromium/')
+        path = brave_chromium_utils.wspath(f'//chrome/{upstream_file}')
         if not os.path.exists(path):
-            problems.append(f)
+            problems.append(upstream_file)
 
     if problems:
         return [
@@ -254,7 +266,8 @@ def CheckNewThemeFilesForUpstreamOverride(input_api, output_api):
                 'Missing upstream theme file to override',
                 items=sorted(problems),
                 long_text='app/theme should only be used for overrides of '
-                'upstream theme files in chrome/app/theme')
+                'upstream theme files in chrome/app/theme. Channel-specific '
+                'theme assets (e.g., dev/beta/nightly) are exempt.')
         ]
     return []
 
@@ -392,6 +405,16 @@ _BANNED_CPP_FUNCTIONS += (
          'case that the exclusion for the inclusion line has in the C++ source '
          'has a mismatch with what is being included/excluded in the gn file.',
          ),
+        treat_as_error=False,
+    ),
+    BanRule(
+        'base::StringPrintf',
+        explanation=('Please use `absl::StrFormat` rather.', ),
+        treat_as_error=False,
+    ),
+    BanRule(
+        'base::StringAppendF',
+        explanation=('Please use `absl::StrAppendFormat` rather.', ),
         treat_as_error=False,
     ),
 )
@@ -554,14 +577,14 @@ def CheckTodoBugReferences(_original_check, input_api, output_api):
                                           files_to_skip=files_to_skip)
 
     # Check for bug link in TODO comments.
-    pattern = input_api.re.compile(r'.*\bTODO\([^\)0-9]*([0-9]+)\).*')
+    pattern = input_api.re.compile(r'.*\bTODO\((.+)\).*')
     problems = []
     for f in input_api.AffectedSourceFiles(_FilterFile):
         for line_number, line in f.ChangedContents():
             match = pattern.match(line)
-            if match and 'https://github.com/brave/brave-browser/issues' not in match.group(
-                    0):
-                problems.append(f"{f.LocalPath()}: {line_number}\n    {line}")
+            if match and 'https://github.com/brave/brave-browser/issues/' not in match.group(
+                    1):
+                problems.append(f"{f.LocalPath()}:{line_number}\n    {line}")
 
     if problems:
         return [

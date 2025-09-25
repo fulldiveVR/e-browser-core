@@ -368,7 +368,7 @@ extension BrowserViewController: TopToolbarDelegate {
       "ads-internals",
       "credits",
       "sync-internals",
-      "account",
+      "policy",
     ]
     guard let host = url.host, supportedPages.contains(host) else {
       return false
@@ -520,9 +520,11 @@ extension BrowserViewController: TopToolbarDelegate {
           tabManager: self.tabManager,
           feedDataSource: self.feedDataSource,
           debounceService: DebounceServiceFactory.get(privateMode: false),
+          braveShieldsSettings: BraveShieldsSettingsFactory.create(for: profileController.profile),
           braveCore: profileController,
           p3aUtils: braveCore.p3aUtils,
           rewards: rewards,
+          braveStats: profileController.braveStats,
           webcompatReporterHandler: WebcompatReporter.ServiceFactory.get(privateMode: false),
           clearDataCallback: { [weak self] isLoading, isHistoryCleared in
             guard let self else { return }
@@ -749,8 +751,11 @@ extension BrowserViewController: TopToolbarDelegate {
     if searchController != nil { return }
 
     // Setting up data source for SearchSuggestions
+    let isPrivate = tabManager.selectedTab?.isPrivate ?? false
     let searchDataSource = SearchSuggestionDataSource(
-      isPrivate: tabManager.selectedTab?.isPrivate ?? false,
+      isPrivate: isPrivate,
+      isAIChatAvailable: !isPrivate && Preferences.AIChat.leoInQuickSearchBarEnabled.value
+        && AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs),
       searchEngines: profile.searchEngines
     )
 
@@ -1189,14 +1194,14 @@ extension BrowserViewController: UIContextMenuInteractionDelegate {
     let children: [UIAction] = [
       UIAction(
         title: Strings.copyLinkActionTitle,
-        image: UIImage(systemName: "doc.on.doc"),
+        image: UIImage(braveSystemNamed: "leo.copy"),
         handler: UIAction.deferredActionHandler { _ in
           UIPasteboard.general.url = url as URL
         }
       ),
       UIAction(
         title: Strings.copyCleanLink,
-        image: UIImage(braveSystemNamed: "leo.broom"),
+        image: UIImage(braveSystemNamed: "leo.copy.clean"),
         handler: UIAction.deferredActionHandler { _ in
           let service = URLSanitizerServiceFactory.get(privateMode: tab?.isPrivate ?? true)
           let cleanedURL = service?.sanitizeURL(url) ?? url

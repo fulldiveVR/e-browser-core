@@ -15,6 +15,7 @@ import {BaseMixin} from '../base_mixin.js';
 import {loadTimeData} from '../i18n_setup.js'
 import {routes} from '../route.js';
 import {Router} from '../router.js';
+import {SettingsViewMixin, SettingsViewMixinInterface} from '../settings_page/settings_view_mixin.js';
 
 import {AppearanceBrowserProxy, AppearanceBrowserProxyImpl} from '../appearance_page/appearance_browser_proxy.js';
 import {getTemplate} from './content.html.js'
@@ -33,7 +34,7 @@ export interface SettingsBraveContentContentElement {
 }
 
 const SettingsBraveAppearanceContentElementBase =
-    I18nMixin(PrefsMixin(BaseMixin(PolymerElement)));
+    I18nMixin(PrefsMixin(BaseMixin(SettingsViewMixin(PolymerElement))));
 
 export class SettingsBraveContentContentElement extends SettingsBraveAppearanceContentElementBase {
   static get is() {
@@ -72,15 +73,13 @@ export class SettingsBraveContentContentElement extends SettingsBraveAppearanceC
        */
       pageZoomLevels_: Array,
 
-      /**
-       * Whether wayback machine is disabled by policy.
-       */
-      isWaybackMachineDisabledByPolicy_: {
+      showSplitViewDragAndDropSetting_: {
         type: Boolean,
         value() {
-          return loadTimeData.getBoolean('braveWaybackMachineDisabledByPolicy');
+          return loadTimeData.getBoolean('showSplitViewDragAndDropSetting');
         },
       },
+
     }
   }
 
@@ -93,7 +92,7 @@ export class SettingsBraveContentContentElement extends SettingsBraveAppearanceC
   private declare fontSizeOptions_: DropdownMenuOptionList
   private declare pageZoomLevels_: number[]
   private declare defaultZoom_: number;
-  private declare isWaybackMachineDisabledByPolicy_: boolean;
+  private declare showSplitViewDragAndDropSetting_: boolean;
   private appearanceBrowserProxy_: AppearanceBrowserProxy =
       AppearanceBrowserProxyImpl.getInstance();
 
@@ -109,8 +108,23 @@ export class SettingsBraveContentContentElement extends SettingsBraveAppearanceC
         JSON.parse(loadTimeData.getString('presetZoomFactors'));
   }
 
+  override getAssociatedControlFor(childViewId: string): HTMLElement {
+    switch (childViewId) {
+      case 'fonts':
+        return this.shadowRoot!.querySelector('#customize-fonts-subpage-trigger')!;
+      default:
+        throw new Error(`Unknown child view id: ${childViewId}`)
+    }
+  }
+
   private onCustomizeFontsClick_() {
     Router.getInstance().navigateTo(routes.FONTS);
+  }
+
+  private isWaybackMachineManaged_(
+      pref: chrome.settingsPrivate.PrefObject): boolean {
+    return pref &&
+        pref.enforcement === chrome.settingsPrivate.Enforcement.ENFORCED;
   }
 
   /**

@@ -59,6 +59,10 @@ std::string NewAccName(mojom::KeyringId keyring_id, uint32_t index) {
         return "Cardano Mainnet Account";
       case mojom::KeyringId::kCardanoTestnet:
         return "Cardano Testnet Account";
+      case mojom::KeyringId::kPolkadotMainnet:
+        return "Polkadot Mainnet Account";
+      case mojom::KeyringId::kPolkadotTestnet:
+        return "Polkadot Testnet Account";
     }
     NOTREACHED() << keyring_id;
   };
@@ -539,6 +543,58 @@ std::optional<std::string> AccountResolverDelegateForTest::ResolveAddress(
     }
   }
   return std::nullopt;
+}
+
+// Sign message waiter.
+SignMessageRequestWaiter::SignMessageRequestWaiter(
+    BraveWalletService* brave_wallet_service)
+    : brave_wallet_service_(brave_wallet_service) {
+  subscription_ =
+      brave_wallet_service_->RegisterSignMessageRequestAddedCallback(
+          base::BindRepeating(
+              &SignMessageRequestWaiter::OnSignMessageRequestAdded,
+              base::Unretained(this)));
+}
+SignMessageRequestWaiter::~SignMessageRequestWaiter() = default;
+
+void SignMessageRequestWaiter::OnSignMessageRequestAdded() {
+  future_.SetValue(
+      brave_wallet_service_->GetPendingSignMessageRequestsSync().back()->id);
+}
+
+void SignMessageRequestWaiter::WaitAndProcess(bool approved) {
+  auto id = future_.Get();
+  brave_wallet_service_->NotifySignMessageRequestProcessed(
+      approved, id, nullptr, std::nullopt);
+}
+
+// Sign transaction waiter.
+SignCardanoTransactionRequestWaiter::SignCardanoTransactionRequestWaiter(
+    BraveWalletService* brave_wallet_service)
+    : brave_wallet_service_(brave_wallet_service) {
+  subscription_ =
+      brave_wallet_service_->RegisterSignTransactionRequestAddedCallback(
+          base::BindRepeating(&SignCardanoTransactionRequestWaiter::
+                                  OnSignTransactionRequestAdded,
+                              base::Unretained(this)));
+}
+SignCardanoTransactionRequestWaiter::~SignCardanoTransactionRequestWaiter() =
+    default;
+
+void SignCardanoTransactionRequestWaiter::OnSignTransactionRequestAdded() {
+  future_.SetValue(
+      brave_wallet_service_->GetPendingSignCardanoTransactionRequestsSync()
+          .back()
+          .Clone());
+}
+
+mojom::SignCardanoTransactionRequestPtr
+SignCardanoTransactionRequestWaiter::WaitAndProcess(bool approved) {
+  mojom::SignCardanoTransactionRequestPtr request = future_.Get().Clone();
+  auto id = request->id;
+  brave_wallet_service_->NotifySignCardanoTransactionRequestProcessed(
+      approved, id, std::nullopt);
+  return request;
 }
 
 }  // namespace brave_wallet

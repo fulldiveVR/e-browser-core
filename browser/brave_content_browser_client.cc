@@ -19,6 +19,7 @@
 #include "base/strings/string_number_conversions.h"
 #include "base/system/sys_info.h"
 #include "brave/browser/ai_chat/ai_chat_service_factory.h"
+#include "brave/browser/brave_account/brave_account_navigation_throttle.h"
 #include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/brave_browser_features.h"
 #include "brave/browser/brave_browser_main_extra_parts.h"
@@ -54,12 +55,14 @@
 #include "brave/components/ai_chat/core/browser/utils.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
+#include "brave/components/ai_chat/core/common/mojom/customization_settings.mojom.h"
 #include "brave/components/ai_chat/core/common/mojom/settings_helper.mojom.h"
 #include "brave/components/ai_chat/core/common/mojom/tab_tracker.mojom.h"
 #include "brave/components/ai_chat/core/common/mojom/untrusted_frame.mojom.h"
 #include "brave/components/ai_rewriter/common/buildflags/buildflags.h"
 #include "brave/components/body_sniffer/body_sniffer_throttle.h"
 #include "brave/components/brave_account/features.h"
+#include "brave/components/brave_account/mojom/brave_account.mojom.h"
 #include "brave/components/brave_education/buildflags.h"
 #include "brave/components/brave_rewards/content/rewards_protocol_navigation_throttle.h"
 #include "brave/components/brave_search/browser/backup_results_service.h"
@@ -200,7 +203,7 @@ using extensions::ChromeContentBrowserClientExtensionsPart;
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
 #include "brave/browser/speedreader/speedreader_service_factory.h"
-#include "brave/browser/speedreader/speedreader_tab_helper.h"
+#include "brave/browser/ui/speedreader/speedreader_tab_helper.h"
 #include "brave/components/speedreader/speedreader_body_distiller.h"
 #include "brave/components/speedreader/speedreader_distilled_page_producer.h"
 #include "brave/components/speedreader/speedreader_util.h"
@@ -234,7 +237,6 @@ using extensions::ChromeContentBrowserClientExtensionsPart;
 #include "brave/browser/ui/webui/brave_news_internals/brave_news_internals_ui.h"
 #include "brave/browser/ui/webui/brave_rewards/rewards_page_top_ui.h"
 #include "brave/browser/ui/webui/brave_settings_ui.h"
-#include "brave/browser/ui/webui/brave_shields/cookie_list_opt_in_ui.h"
 #include "brave/browser/ui/webui/brave_shields/shields_panel_ui.h"
 #include "brave/browser/ui/webui/brave_wallet/wallet_page_ui.h"
 #include "brave/browser/ui/webui/brave_wallet/wallet_panel_ui.h"
@@ -246,10 +248,9 @@ using extensions::ChromeContentBrowserClientExtensionsPart;
 #include "brave/components/brave_news/common/features.h"
 #include "brave/components/brave_private_new_tab_ui/common/brave_private_new_tab.mojom.h"
 #include "brave/components/brave_shields/core/common/brave_shields_panel.mojom.h"
-#include "brave/components/brave_shields/core/common/cookie_list_opt_in.mojom.h"
 #include "brave/components/commands/common/commands.mojom.h"
 #include "brave/components/commands/common/features.h"
-#include "ui/webui/resources/cr_components/searchbox/searchbox.mojom.h"
+#include "components/omnibox/browser/searchbox.mojom.h"
 #endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
@@ -611,6 +612,14 @@ void BraveContentBrowserClient::RegisterWebUIInterfaceBrokers(
       .Add<brave_rewards::mojom::RewardsPageHandler>();
 
 #if !BUILDFLAG(IS_ANDROID)
+  registry.ForWebUI<WalletPageUI>()
+      .Add<brave_wallet::mojom::PageHandlerFactory>()
+      .Add<brave_rewards::mojom::RewardsPageHandler>();
+
+  registry.ForWebUI<WalletPanelUI>()
+      .Add<brave_wallet::mojom::PanelHandlerFactory>()
+      .Add<brave_rewards::mojom::RewardsPageHandler>();
+
   auto ntp_refresh_registration =
       registry.ForWebUI<BraveNewTabPageUI>()
           .Add<brave_new_tab_page_refresh::mojom::NewTabPageHandler>()
@@ -649,6 +658,7 @@ void BraveContentBrowserClient::RegisterWebUIInterfaceBrokers(
 
   if (brave_account::features::IsBraveAccountEnabled()) {
     registry.ForWebUI<BraveAccountUI>()
+        .Add<brave_account::mojom::Authentication>()
         .Add<password_strength_meter::mojom::PasswordStrengthMeter>();
   }
 }
@@ -827,19 +837,9 @@ void BraveContentBrowserClient::RegisterBrowserInterfaceBindersForFrame(
 
 #if !BUILDFLAG(IS_ANDROID)
   content::RegisterWebUIControllerInterfaceBinder<
-      brave_wallet::mojom::PageHandlerFactory, WalletPageUI>(map);
-  content::RegisterWebUIControllerInterfaceBinder<
-      brave_wallet::mojom::PanelHandlerFactory, WalletPanelUI>(map);
-  content::RegisterWebUIControllerInterfaceBinder<
       brave_private_new_tab::mojom::PageHandler, BravePrivateNewTabUI>(map);
   content::RegisterWebUIControllerInterfaceBinder<
       brave_shields::mojom::PanelHandlerFactory, ShieldsPanelUI>(map);
-  if (base::FeatureList::IsEnabled(
-          brave_shields::features::kBraveAdblockCookieListOptIn)) {
-    content::RegisterWebUIControllerInterfaceBinder<
-        brave_shields::mojom::CookieListOptInPageHandlerFactory,
-        CookieListOptInUI>(map);
-  }
   content::RegisterWebUIControllerInterfaceBinder<
       brave_rewards::mojom::RewardsPageHandler,
       brave_rewards::RewardsPageTopUI>(map);
@@ -870,6 +870,8 @@ void BraveContentBrowserClient::RegisterBrowserInterfaceBindersForFrame(
 #if !BUILDFLAG(IS_ANDROID)
     content::RegisterWebUIControllerInterfaceBinder<
         ai_chat::mojom::AIChatSettingsHelper, BraveSettingsUI>(map);
+    content::RegisterWebUIControllerInterfaceBinder<
+        ai_chat::mojom::CustomizationSettingsHandler, BraveSettingsUI>(map);
 #endif
   }
 #if BUILDFLAG(IS_ANDROID)
@@ -1179,6 +1181,9 @@ void BraveContentBrowserClient::CreateThrottlesForNavigation(
   content::NavigationHandle& navigation_handle = registry.GetNavigationHandle();
   content::BrowserContext* context =
       navigation_handle.GetWebContents()->GetBrowserContext();
+
+  BraveAccountNavigationThrottle::MaybeCreateAndAdd(registry);
+
 #if !BUILDFLAG(IS_ANDROID)
   NewTabShowsNavigationThrottle::MaybeCreateAndAdd(registry);
 #endif
@@ -1307,9 +1312,6 @@ void BraveContentBrowserClient::OverrideWebPreferences(
   ChromeContentBrowserClient::OverrideWebPreferences(
       web_contents, main_frame_site, web_prefs);
   PreventDarkModeFingerprinting(web_contents, main_frame_site, web_prefs);
-  // This will stop NavigatorPlugins from returning fixed plugins data and will
-  // allow us to return our farbled data
-  web_prefs->allow_non_empty_navigator_plugins = true;
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
   if (playlist::PlaylistBackgroundWebContentsHelper::FromWebContents(

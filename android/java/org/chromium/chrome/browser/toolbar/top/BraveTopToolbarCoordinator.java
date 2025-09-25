@@ -14,7 +14,6 @@ import androidx.annotation.ColorInt;
 import org.chromium.base.BraveReflectionUtil;
 import org.chromium.base.supplier.ObservableSupplier;
 import org.chromium.base.supplier.OneshotSupplier;
-import org.chromium.base.supplier.Supplier;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.browser_controls.BrowserStateBrowserControlsVisibilityDelegate;
@@ -22,11 +21,14 @@ import org.chromium.chrome.browser.fullscreen.FullscreenManager;
 import org.chromium.chrome.browser.layouts.LayoutStateProvider;
 import org.chromium.chrome.browser.tab.Tab;
 import org.chromium.chrome.browser.tab.TabObscuringHandler;
+import org.chromium.chrome.browser.tabmodel.IncognitoStateProvider;
 import org.chromium.chrome.browser.theme.ThemeColorProvider;
 import org.chromium.chrome.browser.toolbar.ToolbarDataProvider;
 import org.chromium.chrome.browser.toolbar.ToolbarProgressBar;
 import org.chromium.chrome.browser.toolbar.ToolbarTabController;
 import org.chromium.chrome.browser.toolbar.back_button.BackButtonCoordinator;
+import org.chromium.chrome.browser.toolbar.extensions.ExtensionToolbarCoordinator;
+import org.chromium.chrome.browser.toolbar.forward_button.ForwardButtonCoordinator;
 import org.chromium.chrome.browser.toolbar.menu_button.MenuButton;
 import org.chromium.chrome.browser.toolbar.menu_button.MenuButtonCoordinator;
 import org.chromium.chrome.browser.toolbar.optional_button.ButtonDataProvider;
@@ -39,6 +41,7 @@ import org.chromium.ui.resources.ResourceManager;
 import org.chromium.ui.util.ColorUtils;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 public class BraveTopToolbarCoordinator extends TopToolbarCoordinator {
     // To delete in bytecode. Variables from the parent class will be used instead.
@@ -61,6 +64,7 @@ public class BraveTopToolbarCoordinator extends TopToolbarCoordinator {
             List<ButtonDataProvider> buttonDataProviders,
             OneshotSupplier<LayoutStateProvider> layoutStateProviderSupplier,
             ThemeColorProvider normalThemeColorProvider,
+            IncognitoStateProvider incognitoStateProvider,
             MenuButtonCoordinator browsingModeMenuButtonCoordinator,
             ObservableSupplier<AppMenuButtonHelper> appMenuButtonHelperSupplier,
             ToggleTabStackButtonCoordinator tabSwitcherButtonCoordinator,
@@ -83,7 +87,9 @@ public class BraveTopToolbarCoordinator extends TopToolbarCoordinator {
             ObservableSupplier<@Nullable Tab> tabSupplier,
             ObservableSupplier<Boolean> toolbarNavControlsEnabledSupplier,
             @Nullable BackButtonCoordinator backButtonCoordinator,
-            HomeButtonDisplay homeButtonDisplay) {
+            @Nullable ForwardButtonCoordinator forwardButtonCoordinator,
+            @Nullable HomeButtonDisplay homeButtonDisplay,
+            @Nullable ExtensionToolbarCoordinator extensionToolbarCoordinator) {
         super(
                 controlContainer,
                 toolbarLayout,
@@ -93,6 +99,7 @@ public class BraveTopToolbarCoordinator extends TopToolbarCoordinator {
                 buttonDataProviders,
                 layoutStateProviderSupplier,
                 normalThemeColorProvider,
+                incognitoStateProvider,
                 browsingModeMenuButtonCoordinator,
                 appMenuButtonHelperSupplier,
                 tabSwitcherButtonCoordinator,
@@ -114,7 +121,9 @@ public class BraveTopToolbarCoordinator extends TopToolbarCoordinator {
                 tabSupplier,
                 toolbarNavControlsEnabledSupplier,
                 backButtonCoordinator,
-                homeButtonDisplay);
+                forwardButtonCoordinator,
+                homeButtonDisplay,
+                extensionToolbarCoordinator);
 
         mBraveToolbarLayout = toolbarLayout;
         mBraveMenuButtonCoordinator = browsingModeMenuButtonCoordinator;
@@ -172,7 +181,9 @@ public class BraveTopToolbarCoordinator extends TopToolbarCoordinator {
             ((BraveToolbarLayoutImpl) mBraveToolbarLayout)
                     .onBottomControlsVisibilityChanged(isVisible);
         }
-        mOptionalButtonController.updateButtonVisibility();
+        if (mOptionalButtonController != null) {
+            mOptionalButtonController.updateButtonVisibility();
+        }
     }
 
     public boolean isToolbarPhone() {

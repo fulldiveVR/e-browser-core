@@ -9,7 +9,7 @@
 
 #define BlobURLStoreImpl BlobURLStoreImpl_ChromiumImpl
 
-#include "src/storage/browser/blob/blob_url_store_impl.cc"
+#include <storage/browser/blob/blob_url_store_impl.cc>
 
 #undef BlobURLStoreImpl
 
@@ -17,30 +17,26 @@ namespace storage {
 
 void BlobURLStoreImpl::ResolveAsURLLoaderFactory(
     const GURL& url,
-    mojo::PendingReceiver<network::mojom::URLLoaderFactory> receiver,
-    ResolveAsURLLoaderFactoryCallback callback) {
+    mojo::PendingReceiver<network::mojom::URLLoaderFactory> receiver) {
   if (!IsBlobResolvable(url)) {
     BlobURLLoaderFactory::Create(mojo::NullRemote(), url, std::move(receiver));
-    std::move(callback).Run(std::nullopt, std::nullopt);
     return;
   }
 
-  BlobURLStoreImpl_ChromiumImpl::ResolveAsURLLoaderFactory(
-      url, std::move(receiver), std::move(callback));
+  BlobURLStoreImpl_ChromiumImpl::ResolveAsURLLoaderFactory(url,
+                                                           std::move(receiver));
 }
 
 void BlobURLStoreImpl::ResolveAsBlobURLToken(
     const GURL& url,
     mojo::PendingReceiver<blink::mojom::BlobURLToken> token,
-    bool is_top_level_navigation,
-    ResolveAsBlobURLTokenCallback callback) {
+    bool is_top_level_navigation) {
   if (!IsBlobResolvable(url)) {
-    std::move(callback).Run(std::nullopt);
     return;
   }
 
-  BlobURLStoreImpl_ChromiumImpl::ResolveAsBlobURLToken(
-      url, std::move(token), is_top_level_navigation, std::move(callback));
+  BlobURLStoreImpl_ChromiumImpl::ResolveAsBlobURLToken(url, std::move(token),
+                                                       is_top_level_navigation);
 }
 
 bool BlobURLStoreImpl::IsBlobResolvable(const GURL& url) const {

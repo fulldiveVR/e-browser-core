@@ -7,6 +7,7 @@ import AIChat
 import Brave
 import BraveCore
 import BraveNews
+import BraveShared
 import Data
 import Foundation
 import Growth
@@ -33,7 +34,8 @@ public class AppState {
 
   public let braveCore: BraveCoreMain
   public let migration: Migration
-  public let profile: Profile
+  public let localStateMigration: BraveLocalStateMigration
+  public let profile: LegacyBrowserProfile
   public let newsFeedDataSource: FeedDataSource
   public let uptimeMonitor = UptimeMonitor()
   private var didBecomeActive = false
@@ -42,6 +44,9 @@ public class AppState {
     didSet {
       switch state {
       case .launching(_, let isActive):
+        // Always initialize reachability
+        _ = Reachability.shared
+
         if didBecomeActive {
           assertionFailure("Cannot set launching state twice!")
         }
@@ -69,10 +74,6 @@ public class AppState {
 
           Preferences.Chromium.lastWebViewsFlagState.value = useChromiumWebViews
         }
-
-        if !AppConstants.isOfficialBuild || Preferences.Debug.developerOptionsEnabled.value {
-          NetworkMonitor.shared.start()
-        }
         break
       case .active:
         break
@@ -94,13 +95,15 @@ public class AppState {
     }
 
     // Setup Profile
-    profile = BrowserProfile()
+    profile = LegacyBrowserProfile()
 
     // Setup Migrations
     migration = Migration()
+    localStateMigration = BraveLocalStateMigration(localState: braveCore.localState)
 
     // Perform Migrations
     migration.launchMigrations(keyPrefix: "profile")
+    localStateMigration.launchMigrations()
 
     newsFeedDataSource = FeedDataSource()
 
@@ -126,25 +129,6 @@ public class AppState {
       if message.isEmpty {
         // Nothing to print
         return true
-      }
-
-      if severity == .fatal {
-        let filename = URL(fileURLWithPath: file).lastPathComponent
-        #if DEBUG
-        // Prints a special runtime warning instead of crashing.
-        os_log(
-          .fault,
-          dso: os_rw.dso,
-          log: os_rw.log(category: "BraveCore"),
-          "[%@:%ld] > %@",
-          filename,
-          line,
-          message
-        )
-        return true
-        #else
-        fatalError("Fatal BraveCore Error at \(filename):\(line).\n\(message)")
-        #endif
       }
 
       let isLoggingAccessible =

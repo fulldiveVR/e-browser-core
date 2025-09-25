@@ -14,7 +14,6 @@
 #include "base/feature_list.h"
 #include "base/functional/bind.h"
 #include "base/metrics/histogram_macros.h"
-#include "base/strings/stringprintf.h"
 #include "brave/browser/net/brave_request_handler.h"
 #include "brave/components/brave_shields/content/browser/adblock_stub_response.h"
 #include "brave/components/brave_shields/core/common/features.h"
@@ -34,6 +33,7 @@
 #include "services/network/public/cpp/parsed_headers.h"
 #include "services/network/public/cpp/url_loader_factory_builder.h"
 #include "services/network/public/mojom/early_hints.mojom.h"
+#include "third_party/abseil-cpp/absl/strings/str_format.h"
 #include "url/origin.h"
 
 namespace {
@@ -78,8 +78,9 @@ net::RedirectInfo CreateRedirectInfo(
           ? net::RedirectInfo::FirstPartyURLPolicy::UPDATE_URL_ON_REDIRECT
           : net::RedirectInfo::FirstPartyURLPolicy::NEVER_CHANGE_URL,
       original_request.referrer_policy, original_request.referrer.spec(),
-      response_code, new_url, referrer_policy_header,
-      false /* insecure_scheme_was_upgraded */, false /* copy_fragment */,
+      original_request.request_initiator, response_code, new_url,
+      referrer_policy_header, false /* insecure_scheme_was_upgraded */,
+      false /* copy_fragment */,
       false /* is_signed_exchange_fallback_redirect */);
 }
 
@@ -142,7 +143,7 @@ void BraveProxyingURLLoaderFactory::InProgressRequest::UpdateRequestInfo() {
 
 void BraveProxyingURLLoaderFactory::InProgressRequest::RestartInternal() {
   request_completed_ = false;
-  start_time_ = base::TimeTicks::Now();
+  elapsed_timer_ = {};
 
   base::RepeatingCallback<void(int)> continuation =
       base::BindRepeating(&InProgressRequest::ContinueToBeforeSendHeaders,
@@ -253,7 +254,7 @@ void BraveProxyingURLLoaderFactory::InProgressRequest::OnTransferSizeUpdated(
 void BraveProxyingURLLoaderFactory::InProgressRequest::OnComplete(
     const network::URLLoaderCompletionStatus& status) {
   UMA_HISTOGRAM_TIMES("Brave.ProxyingURLLoader.TotalRequestTime",
-                      base::TimeTicks::Now() - start_time_);
+                      elapsed_timer_.Elapsed());
   if (status.error_code != net::OK) {
     OnRequestError(status);
     return;
@@ -286,11 +287,11 @@ void BraveProxyingURLLoaderFactory::InProgressRequest::
 
   network::mojom::URLResponseHeadPtr head =
       network::mojom::URLResponseHead::New();
-  std::string headers = base::StringPrintf(
+  std::string headers = absl::StrFormat(
       "HTTP/1.1 %i Internal Redirect\n"
       "Location: %s\n"
       "Non-Authoritative-Reason: WebRequest API\n\n",
-      kInternalRedirectStatusCode, redirect_url_.spec().c_str());
+      kInternalRedirectStatusCode, redirect_url_.spec());
 
   // Cross-origin requests need to modify the Origin header to 'null'. Since
   // CorsURLLoader sets |request_initiator| to the Origin request header in

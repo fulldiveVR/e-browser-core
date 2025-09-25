@@ -1,5 +1,5 @@
 diff --git a/ui/color/BUILD.gn b/ui/color/BUILD.gn
-index 7d9a7d263c19e400e90df9024e6334b246ab00be..3516160cc7855deadffe0303cef888556cc70591 100644
+index 64a92227eaa5f9c59df0060e0251c3eaf29eced6..08d8d373cca7eff08959d697e13d1443c99e1400 100644
 --- a/ui/color/BUILD.gn
 +++ b/ui/color/BUILD.gn
 @@ -87,6 +87,7 @@ component("color") {
@@ -10,7 +10,7 @@ index 7d9a7d263c19e400e90df9024e6334b246ab00be..3516160cc7855deadffe0303cef88855
  }
  
  source_set("test_support") {
-@@ -196,6 +197,7 @@ component("mixers") {
+@@ -199,6 +200,7 @@ component("mixers") {
      ]
      deps += [ ":accent_color_observer" ]
    }

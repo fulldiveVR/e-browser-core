@@ -15,10 +15,11 @@ import {loadTimeData} from '../i18n_setup.js'
 import {BraveSearchEnginesPageBrowserProxyImpl} from './brave_search_engines_page_browser_proxy.js'
 import {getTemplate} from './brave_search_engines_page.html.js'
 import type {CrToastElement} from 'chrome://resources/cr_elements/cr_toast/cr_toast.js'
-import type {SearchEngine} from '../search_engines_page/search_engines_browser_proxy.js'
+import type {SearchEngine} from '../search_page/search_engines_browser_proxy.js'
+import {PrefsMixin} from '/shared/settings/prefs/prefs_mixin.js'
 
 const BraveSearchEnginesPageBase =
-  WebUiListenerMixin(I18nMixin(RouteObserverMixin(PolymerElement)))
+  WebUiListenerMixin(PrefsMixin(I18nMixin(RouteObserverMixin(PolymerElement))))
 
 class BraveSearchEnginesPage extends BraveSearchEnginesPageBase {
   static get is() {
@@ -48,7 +49,7 @@ class BraveSearchEnginesPage extends BraveSearchEnginesPageBase {
 
       // The label of the confirmation toast that is displayed when the user
       // chooses a default private search engine.
-      confirmationToastLabel_: String
+      confirmationToastLabel_: String,
     }
   }
 
@@ -101,17 +102,15 @@ class BraveSearchEnginesPage extends BraveSearchEnginesPageBase {
     // When default search engine is enforced, configured provider is not used.
     // If we install search provider extension, that extension will be used on normal and
     // private(tor) window. So, just hide this option.
-    return !loadTimeData.getBoolean('isGuest') && !this.isDefaultSearchEngineEnforced_(prefs)
+    return !loadTimeData.getBoolean('isGuest') && !this.isPrefManaged_(prefs)
+  }
+
+  private isPrefManaged_(pref: chrome.settingsPrivate.PrefObject) {
+    return pref.enforcement === chrome.settingsPrivate.Enforcement.ENFORCED
   }
 
   private isWebDiscoveryNativeEnabled_() {
     return loadTimeData.getBoolean('isWebDiscoveryNativeEnabled');
-  }
-
-  private isDefaultSearchEngineEnforced_(
-    prefs: chrome.settingsPrivate.PrefObject)
-  {
-    return prefs.enforcement === chrome.settingsPrivate.Enforcement.ENFORCED
   }
 
   private computeDefaultPrivateSearchEngine_() {

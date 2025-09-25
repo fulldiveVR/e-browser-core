@@ -252,6 +252,19 @@ class MockBraveWalletService: BraveWalletBraveWalletService {
     error: String?
   ) {
   }
+  
+  func pendingSignCardanoTransactionRequests(
+    completion: @escaping ([BraveWallet.SignCardanoTransactionRequest]) -> Void
+  ) {
+    completion([])
+  }
+
+  func notifySignCardanoTransactionRequestProcessed(
+    approved: Bool,
+    id: Int32,
+    error: String?
+  ) {
+  }
 
   func base58Encode(addresses: [[NSNumber]], completion: @escaping ([String]) -> Void) {
     completion([])
@@ -399,6 +412,9 @@ class MockBraveWalletService: BraveWalletBraveWalletService {
   }
 
   func discoverAssetsOnAllSupportedChains(bypassRateLimit: Bool) {
+  }
+
+  func writeToClipboard(text: String, isSensitive: Bool) {
   }
 
   func transactionSimulationOptInStatus(

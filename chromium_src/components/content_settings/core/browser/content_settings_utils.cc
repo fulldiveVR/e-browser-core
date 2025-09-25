@@ -12,29 +12,13 @@
 #define GetRendererContentSettingRules \
   GetRendererContentSettingRules_ChromiumImpl
 
-// Brave's ContentSettingsType::BRAVE_COSMETIC_FILTERING,
-// ContentSettingsType::BRAVE_SPEEDREADER,  and
-// ContentSettingsType::BRAVE_COOKIES types use
-// CONTENT_SETTING_DEFAULT as the initial default value, which is not a valid
-// initial default value according to CanTrackLastVisit and
-// ParseContentSettingValue: Note that |CONTENT_SETTING_DEFAULT| is encoded as a
-// NULL value, so it is not allowed as an integer value. Also, see
-// https://github.com/brave/brave-browser/issues/25733
-#define BRAVE_CAN_TRACK_LAST_VISIT                             \
-  if (type == ContentSettingsType::BRAVE_COOKIES ||            \
-      type == ContentSettingsType::BRAVE_COSMETIC_FILTERING || \
-      type == ContentSettingsType::BRAVE_SPEEDREADER) {        \
-    return false;                                              \
-  }
-
 #define GetTypesWithTemporaryGrants GetTypesWithTemporaryGrants_ChromiumImpl
 #define GetTypesWithTemporaryGrantsInHcsm \
   GetTypesWithTemporaryGrantsInHcsm_ChromiumImpl
 
-#include "src/components/content_settings/core/browser/content_settings_utils.cc"
+#include <components/content_settings/core/browser/content_settings_utils.cc>
 #undef GetTypesWithTemporaryGrantsInHcsm
 #undef GetTypesWithTemporaryGrants
-#undef BRAVE_CAN_TRACK_LAST_VISIT
 #undef GetRendererContentSettingRules
 
 namespace content_settings {

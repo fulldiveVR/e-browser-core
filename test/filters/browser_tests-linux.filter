@@ -52,6 +52,10 @@
 # signin::ConsentLevel::kSignin
 -All/AvatarToolbarButtonEnterpriseBadgingWithSyncPromoParamsBrowserTest.*
 
+# This test fails because we override RegionalCapabilitiesServiceClientLinux::
+# FetchCountryId to get locale from device instead of the variations service.
+-RegionalCapabilitiesServiceFactoryBrowserTestForVariationsCountry.GetCountryId/FR
+
 # Tests below this point have not been diagnosed or had issues created yet.
 -AccessCodeCastHandlerBrowserTest.*
 -AdsPageLoadMetricsObserverBrowserTest.*
@@ -81,6 +85,7 @@
 -PrefetchProxyBrowserTest.*
 -PrefetchProxyWithDecoyRequestsBrowserTest.*
 -PrefetchProxyWithNSPBrowserTest.*
+-PrefHashBrowserTestAccountValueUntrustedAddition.AccountValueUntrustedAddition
 -PrintBrowserTest.*
 -ProfileMainNetworkContext/NetworkContextConfigurationBrowserTest.Hsts/*
 -ProbingAndNSPEnabledPrefetchProxyBrowserTest.*

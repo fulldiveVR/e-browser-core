@@ -22,6 +22,7 @@
 #include "mojo/public/cpp/bindings/pending_remote.h"
 #include "mojo/public/cpp/bindings/receiver.h"
 #include "mojo/public/cpp/bindings/remote.h"
+#include "services/data_decoder/public/cpp/data_decoder.h"
 
 namespace content {
 class WebContents;
@@ -49,7 +50,9 @@ class AIChatUIPageHandler : public mojom::AIChatUIHandler,
 
   // mojom::AIChatUIHandler
   void OpenAIChatSettings() override;
+  void OpenMemorySettings() override;
   void OpenConversationFullPage(const std::string& conversation_uuid) override;
+  void OpenAIChatAgentProfile() override;
   void OpenURL(const GURL& url) override;
   void OpenStorageSupportUrl() override;
   void OpenModelSupportUrl() override;
@@ -58,8 +61,10 @@ class AIChatUIPageHandler : public mojom::AIChatUIHandler,
   void ManagePremium() override;
   void HandleVoiceRecognition(const std::string& conversation_uuid) override;
   void ShowSoftKeyboard() override;
-  void UploadImage(bool use_media_capture,
-                   UploadImageCallback callback) override;
+  void UploadFile(bool use_media_capture, UploadFileCallback callback) override;
+  void ProcessImageFile(const std::vector<uint8_t>& file_data,
+                        const std::string& filename,
+                        ProcessImageFileCallback callback) override;
   void GetPluralString(const std::string& key,
                        int32_t count,
                        GetPluralStringCallback callback) override;
@@ -98,12 +103,16 @@ class AIChatUIPageHandler : public mojom::AIChatUIHandler,
   void HandleWebContentsDestroyed();
 
   // AssociatedContentDelegate::Observer
-  void OnNavigated(AssociatedContentDelegate* delegate) override;
+  void OnRequestArchive(AssociatedContentDelegate* delegate) override;
 
   // UploadFileHelper::Observer
   void OnFilesSelected() override;
 
   raw_ptr<AIChatTabHelper> active_chat_tab_helper_ = nullptr;
+  // TODO(https://github.com/brave/brave-browser/issues/48524): We probably
+  // want to reference the TabStripModel so that we can offer the user to
+  // attach the current active tab or start a new conversation on active tab
+  // change or navigation.
   raw_ptr<content::WebContents> owner_web_contents_ = nullptr;
   raw_ptr<Profile> profile_ = nullptr;
   raw_ptr<AIChatMetrics> ai_chat_metrics_;
@@ -117,8 +126,15 @@ class AIChatUIPageHandler : public mojom::AIChatUIHandler,
   base::ScopedObservation<UploadFileHelper, UploadFileHelper::Observer>
       upload_file_helper_observation_{this};
 
+  // DataDecoder instance for processing image data
+  data_decoder::DataDecoder data_decoder_;
+
   mojo::Receiver<ai_chat::mojom::AIChatUIHandler> receiver_;
   mojo::Remote<ai_chat::mojom::ChatUI> chat_ui_;
+
+  // Conversations are not content associated either in standalone mode or in
+  // global side panel mode, to the owner_web_contents_.
+  bool conversations_are_content_associated_ = false;
 
   base::WeakPtrFactory<AIChatUIPageHandler> weak_ptr_factory_{this};
 };

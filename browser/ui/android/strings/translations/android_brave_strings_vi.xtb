@@ -196,6 +196,9 @@
 <translation id="5987838417172370108">Giúp cải thiện độ ổn định của sản phẩm Brave bằng cách tự động gửi báo cáo chẩn đoán khi Trình duyệt Brave gặp sự cố hoặc đóng băng.</translation>
 <translation id="7977176350719484850">Dữ liệu ước tính\ntiết kiệm được</translation>
 <translation id="9008534313521214777">Thời gian tiết kiệm được\nước tính</translation>
+<translation id="8347743943525229984">Cho phép Brave thực hiện khảo sát</translation>
+<translation id="6022939994702081659">Cho phép Brave hiển thị liên kết đến các khảo sát riêng tư trên trang thẻ mới của bạn. Khảo sát giúp chúng tôi phát triển các tính năng tốt hơn và đo lường hiệu quả của các chiến dịch quảng cáo trên trình duyệt.</translation>
+<translation id="7746496306508543965">Tìm hiểu thêm về khảo sát của Brave</translation>
 <translation id="410351446219883937">Tự động phát</translation>
 <translation id="7445411102860286510">Cho phép trang web tự động phát video tắt tiếng (được đề xuất)</translation>
 <translation id="7837721118676387834">Cho phép tự động phát video bị tắt tiếng cho trang web cụ thể.</translation>
@@ -418,8 +421,8 @@ Bạn có chắc chắn muốn thực hiện điều này không?</translation>
 <translation id="8748471354357836070">Tìm hiểu thêm / lựa chọn từ chối</translation>
 <translation id="3171669670217312786">Ảnh nền</translation>
 <translation id="8522669544471808198">Hiển thị Hình Nền</translation>
-<translation id="3870475560794762985">Hiển thị Hình được Tài trợ</translation>
-<translation id="6937724381960478525">Tìm hiểu thêm về Hình ảnh được tài trợ</translation>
+<translation id="6258554626602400736">Hiển thị quảng cáo trên trang thẻ mới</translation>
+<translation id="9001530744369687550">Tìm hiểu thêm về quảng cáo trên trang thẻ mới</translation>
 <translation id="8793108040181436796">Tiện ích</translation>
 <translation id="8643377320501056697">Hiển thị Các trang Hàng đầu</translation>
 <translation id="7275773481201277457">Hiển thị Số liệu thống kê Brave</translation>
@@ -497,6 +500,8 @@ Bạn có chắc chắn muốn thực hiện điều này không?</translation>
 <translation id="7616645803364270729">Email, Twitter, v.v.</translation>
 <translation id="5299848999918506028">Cảm ơn bạn!</translation>
 <translation id="76550953340008122">Cảm ơn bạn đã thông báo cho các nhà phát triển của Brave biết rằng đã xảy ra sự cố với trang web này. Chúng tôi sẽ cố gắng hết sức để khắc phục sự cố này!</translation>
+<translation id="3037432377946455872">Vấn đề chính bạn gặp phải là gì?</translation>
+<translation id="8731661215617360873">Chọn một tùy chọn</translation>
 <translation id="650318023204990401">Kiểm soát nâng cao</translation>
 <translation id="7205939464631857223">Xóa tất cả thành phần bị chặn</translation>
 <translation id="5370478469168390143">Lưu Dữ liệu Trực tuyến</translation>
@@ -632,7 +637,6 @@ Bạn có chắc chắn muốn thực hiện điều này không?</translation>
 <translation id="3961126209136843111">Nhập một ví hiện hành</translation>
 <translation id="4811736040444856406">Hiển thị cụm từ khôi phục</translation>
 <translation id="4359319875297001084">Nhập từ ví tiền mã hóa Brave cũ?</translation>
-<translation id="3157931365184549694">Restore</translation>
 <translation id="5844138175312846408">Đã có ví?</translation>
 <translation id="2502258949541727762">Trước khi chúng tôi bắt đầu</translation>
 <translation id="4303748097351941030">Mạng được hỗ trợ</translation>
@@ -1225,4 +1229,41 @@ Leo AI. Hành động này không thể được hoàn tác.</translation>
 <translation id="2735247450315842119">Cho phép ảnh chụp màn hình trong thẻ riêng tư</translation>
 <translation id="8420414929552321089">Nếu được phép, các thẻ riêng tư cũng sẽ hiển thị khi nhiều ứng dụng được mở.</translation>
 <translation id="7956713633345437162">Dấu trang trên thiết bị di động</translation>
+<translation id="1943432128510653496">Lưu mật khẩu</translation>
+<translation id="2100273922101894616">Tự động đăng nhập</translation>
+<translation id="363596933471559332">Tự động đăng nhập vào các trang web bằng thông tin đăng nhập được lưu trữ. Khi tính năng này tắt, bạn sẽ luôn được yêu cầu xác minh trước khi đăng nhập vào trang web.</translation>
+<translation id="8562452229998620586">Mật khẩu đã lưu của bạn sẽ xuất hiện tại đây.</translation>
+<translation id="1303339473099049190">Không tìm thấy mật khẩu đó. Hãy kiểm tra chính tả rồi thử lại.</translation>
+<translation id="2259659629660284697">Xuất mật khẩu...</translation>
+<translation id="133012818630824069">Xuất mật khẩu đã lưu trữ với Brave</translation>
+<translation id="2321086116217818302">Đang chuẩn bị mật khẩu…</translation>
+<translation id="5139940364318403933">Tìm hiểu cách sử dụng Google Drive</translation>
+<translation id="729975465115245577">Thiết bị của bạn không có ứng dụng để lưu trữ tệp mật khẩu.</translation>
+<translation id="1129510026454351943">Chi tiết: <ph name="ERROR_DESCRIPTION"/></translation>
+<translation id="6221633008163990886">Mở khóa để xuất mật khẩu của bạn</translation>
+<translation id="5245792669563792664">mật khẩu</translation>
+<translation id="10614374240317010">Không bao giờ lưu</translation>
+<translation id="1571304935088121812">Sao chép tên người dùng</translation>
+<translation id="5005498671520578047">Sao chép mật khẩu</translation>
+<translation id="2435457462613246316">Hiện mật khẩu</translation>
+<translation id="1513858653616922153">Xóa mật khẩu</translation>
+<translation id="543338862236136125">Chỉnh sửa mật khẩu</translation>
+<translation id="4565377596337484307">Ẩn mật khẩu</translation>
+<translation id="8523928698583292556">Xóa mật khẩu đã lưu trữ</translation>
+<translation id="5433691172869980887">Đã sao chép tên người dùng</translation>
+<translation id="2625189173221582860">Đã sao chép mật khẩu</translation>
+<translation id="8084114998886531721">Mật khẩu đã lưu</translation>
+<translation id="6590680911007613645">Đảm bảo mật khẩu bạn đang lưu khớp với mật khẩu dùng cho <ph name="SITE"/></translation>
+<translation id="1492417797159476138">Bạn đã lưu tên người dùng này cho trang web này</translation>
+<translation id="5454166040603940656">với <ph name="PROVIDER"/></translation>
+<translation id="686366188661646310">Xóa mật khẩu?</translation>
+<translation id="7808889146555843082">Thao tác xóa mật khẩu này sẽ không xóa tài khoản của bạn trên <ph name="SITE"/>. Hãy đổi mật khẩu hoặc xóa tài khoản của bạn trên <ph name="SITE"/> để giữ an toàn cho tài khoản của bạn.</translation>
+<translation id="2870560284913253234">Trang web</translation>
+<translation id="8503813439785031346">Tên người dùng</translation>
+<translation id="2278052315791335171">Thao tác xóa mật khẩu này sẽ không xóa tài khoản của bạn trên <ph name="SITE"/></translation>
+<translation id="6891726759199484455">Mở khóa để sao chép mật khẩu của bạn</translation>
+<translation id="5515439363601853141">Mở khóa để xem mật khẩu của bạn</translation>
+<translation id="1724977129262658800">Mở khóa để chỉnh sửa mật khẩu của bạn</translation>
+<translation id="5780792035410621042">Để sao chép mật khẩu, trước tiên, hãy thiết lập một phương thức khóa màn hình trên thiết bị của bạn</translation>
+<translation id="7986497153528221272">Để xem mật khẩu, trước tiên, hãy đặt phương thức khóa màn hình trên thiết bị của bạn</translation>
 </translationbundle>

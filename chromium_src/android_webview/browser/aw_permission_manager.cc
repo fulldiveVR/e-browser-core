@@ -10,7 +10,6 @@
 
 #define NUM                                             \
   BRAVE_ADS:                                            \
-  case PermissionType::BRAVE_COSMETIC_FILTERING:        \
   case PermissionType::BRAVE_TRACKERS:                  \
   case PermissionType::BRAVE_HTTP_UPGRADABLE_RESOURCES: \
   case PermissionType::BRAVE_FINGERPRINTING_V2:         \
@@ -43,7 +42,7 @@ void AwPermissionManager::SetOriginCanReadEnumerateDevicesVideoLabels(
 #define SetOriginCanReadEnumerateDevicesVideoLabels \
   SetOriginCanReadEnumerateDevicesVideoLabels_ChromiumImpl
 
-#include "src/android_webview/browser/aw_permission_manager.cc"
+#include <android_webview/browser/aw_permission_manager.cc>
 
 #undef SetOriginCanReadEnumerateDevicesAudioLabels
 #undef SetOriginCanReadEnumerateDevicesVideoLabels

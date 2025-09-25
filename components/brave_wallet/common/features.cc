@@ -33,12 +33,11 @@ BASE_FEATURE(kBraveWalletBitcoinLedgerFeature,
 
 BASE_FEATURE(kBraveWalletZCashFeature,
              "BraveWalletZCash",
-#if BUILDFLAG(ENABLE_ZCASH_BY_DEFAULT)
-             base::FEATURE_ENABLED_BY_DEFAULT
-#else
-             base::FEATURE_DISABLED_BY_DEFAULT
-#endif
-);
+             base::FEATURE_ENABLED_BY_DEFAULT);
+
+BASE_FEATURE(kBraveWalletPolkadotFeature,
+             "BraveWalletPolkadot",
+             base::FEATURE_DISABLED_BY_DEFAULT);
 
 BASE_FEATURE(kBraveWalletCardanoFeature,
              "BraveWalletCardano",

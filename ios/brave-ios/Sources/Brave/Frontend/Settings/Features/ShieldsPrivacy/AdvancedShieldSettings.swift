@@ -43,6 +43,17 @@ import os
       )
     }
   }
+  var isP3AManaged: Bool {
+    p3aUtilities.isP3APreferenceManaged
+  }
+  var isStatsReportingManaged: Bool {
+    braveStats.isStatsReportingManaged
+  }
+  @Published var isStatsReportingEnabled: Bool {
+    didSet {
+      braveStats.isStatsReportingEnabled = isStatsReportingEnabled
+    }
+  }
   @Published var isP3AEnabled: Bool {
     didSet {
       p3aUtilities.isP3AEnabled = isP3AEnabled
@@ -65,7 +76,33 @@ import os
   }
   @Published var adBlockAndTrackingPreventionLevel: ShieldLevel {
     didSet {
+      guard oldValue != adBlockAndTrackingPreventionLevel else { return }
+      if FeatureList.kBraveShieldsContentSettings.enabled {
+        braveShieldsSettings.defaultAdBlockMode = adBlockAndTrackingPreventionLevel.adBlockMode
+      }
+      // Also assign to existing pref until deprecated so reverse migration is not required
       ShieldPreferences.blockAdsAndTrackingLevel = adBlockAndTrackingPreventionLevel
+    }
+  }
+  @Published var isBlockScriptsEnabled: Bool {
+    didSet {
+      guard oldValue != isBlockScriptsEnabled else { return }
+      if FeatureList.kBraveShieldsContentSettings.enabled {
+        braveShieldsSettings.isBlockScriptsEnabledByDefault = isBlockScriptsEnabled
+      }
+      // Also assign to existing pref until deprecated so reverse migration is not required
+      Preferences.Shields.blockScripts.value = isBlockScriptsEnabled
+    }
+  }
+  @Published var isBlockFingerprintingEnabled: Bool {
+    didSet {
+      guard oldValue != isBlockFingerprintingEnabled else { return }
+      if FeatureList.kBraveShieldsContentSettings.enabled {
+        braveShieldsSettings.defaultFingerprintMode =
+          isBlockFingerprintingEnabled ? .standardMode : .allowMode
+      }
+      // Also assign to existing pref until deprecated so reverse migration is not required
+      Preferences.Shields.fingerprintingProtection.value = isBlockFingerprintingEnabled
     }
   }
   @Published var httpsUpgradeLevel: HTTPSUpgradeLevel {
@@ -79,6 +116,7 @@ import os
   }
   @Published var shredLevel: SiteShredLevel {
     didSet {
+      // TODO: Support AutoShred via content settings brave-browser#47753
       ShieldPreferences.shredLevel = shredLevel
     }
   }
@@ -106,34 +144,51 @@ import os
   private var subscriptions: [AnyCancellable] = []
   private let p3aUtilities: BraveP3AUtils
   private let deAmpPrefs: DeAmpPrefs
-  private let debounceService: DebounceService?
+  private let debounceService: (any DebounceService)?
+  private let braveShieldsSettings: any BraveShieldsSettings
   private let rewards: BraveRewards?
   private let clearDataCallback: ClearDataCallback
+  private let braveStats: BraveStats
   private let webcompatReporterHandler: WebcompatReporterWebcompatReporterHandler?
   let tabManager: TabManager
 
   init(
-    profile: Profile,
+    profile: LegacyBrowserProfile,
     tabManager: TabManager,
     feedDataSource: FeedDataSource,
-    debounceService: DebounceService?,
+    debounceService: (any DebounceService)?,
+    braveShieldsSettings: any BraveShieldsSettings,
     braveCore: BraveProfileController,
     p3aUtils: BraveP3AUtils,
     rewards: BraveRewards?,
+    braveStats: BraveStats,
     webcompatReporterHandler: WebcompatReporterWebcompatReporterHandler?,
     clearDataCallback: @escaping ClearDataCallback
   ) {
     self.p3aUtilities = p3aUtils
     self.deAmpPrefs = braveCore.deAmpPrefs
     self.debounceService = debounceService
+    self.braveShieldsSettings = braveShieldsSettings
     self.tabManager = tabManager
     self.isP3AEnabled = p3aUtilities.isP3AEnabled
+    self.isStatsReportingEnabled = braveStats.isStatsReportingEnabled
     self.rewards = rewards
     self.clearDataCallback = clearDataCallback
-    self.adBlockAndTrackingPreventionLevel = ShieldPreferences.blockAdsAndTrackingLevel
+    self.braveStats = braveStats
+    if FeatureList.kBraveShieldsContentSettings.enabled {
+      self.adBlockAndTrackingPreventionLevel = braveShieldsSettings.defaultAdBlockMode.shieldLevel
+      self.isBlockScriptsEnabled = braveShieldsSettings.isBlockScriptsEnabledByDefault
+      self.isBlockFingerprintingEnabled =
+        braveShieldsSettings.defaultFingerprintMode == .standardMode
+    } else {
+      self.adBlockAndTrackingPreventionLevel = ShieldPreferences.blockAdsAndTrackingLevel
+      self.isBlockScriptsEnabled = Preferences.Shields.blockScripts.value
+      self.isBlockFingerprintingEnabled = Preferences.Shields.fingerprintingProtection.value
+    }
     self.httpsUpgradeLevel = ShieldPreferences.httpsUpgradeLevel
     self.isDeAmpEnabled = deAmpPrefs.isDeAmpEnabled
     self.isDebounceEnabled = debounceService?.isEnabled ?? false
+    // TODO: Support AutoShred via content settings brave-browser#47753
     self.shredLevel = ShieldPreferences.shredLevel
     self.webcompatReporterHandler = webcompatReporterHandler
     self.isSurveyPanelistEnabled = rewards?.ads.isSurveyPanelistEnabled ?? false
@@ -167,12 +222,16 @@ import os
         isEnabled: true
       ),
       ClearableSetting(id: .downloads, clearable: DownloadsClearable(), isEnabled: true),
-      ClearableSetting(
-        id: .braveNews,
-        clearable: BraveNewsClearable(feedDataSource: feedDataSource),
-        isEnabled: true
-      ),
     ]
+    if braveCore.profile.prefs.isBraveNewsAvailable {
+      clearableSettings.append(
+        ClearableSetting(
+          id: .braveNews,
+          clearable: BraveNewsClearable(feedDataSource: feedDataSource),
+          isEnabled: true
+        )
+      )
+    }
 
     // Enable clearing of Brave Ads data only if:
     // - Brave Ads is running

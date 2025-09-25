@@ -7,7 +7,10 @@
 
 #include "base/check.h"
 #include "base/task/sequenced_task_runner.h"
+#include "content/public/browser/browser_context.h"
+#include "content/public/browser/navigation_controller.h"
 #include "content/public/browser/navigation_handle.h"
+#include "third_party/blink/public/common/web_preferences/web_preferences.h"
 
 namespace tor {
 
@@ -18,11 +21,22 @@ TorTabHelper::TorTabHelper(content::WebContents* web_contents)
 TorTabHelper::~TorTabHelper() = default;
 
 // static
-void TorTabHelper::MaybeCreateForWebContents(content::WebContents* web_contents,
-                                             bool is_tor_profile) {
-  if (!is_tor_profile)
+void TorTabHelper::MaybeCreateForWebContents(
+    content::WebContents* web_contents) {
+  if (!web_contents->GetBrowserContext()->IsTor()) {
     return;
+  }
   TorTabHelper::CreateForWebContents(web_contents);
+}
+
+void TorTabHelper::ReadyToCommitNavigation(
+    content::NavigationHandle* navigation_handle) {
+  blink::web_pref::WebPreferences prefs =
+      web_contents()->GetOrCreateWebPreferences();
+  if (!prefs.is_tor_window) {
+    prefs.is_tor_window = true;
+    web_contents()->SetWebPreferences(prefs);
+  }
 }
 
 void TorTabHelper::DidFinishNavigation(
@@ -30,8 +44,10 @@ void TorTabHelper::DidFinishNavigation(
   // We will keep retrying every second if we can't establish connection to tor
   // process. This is possible when tor is launched but not yet ready to accept
   // new connection or some fatal errors within tor process
-  if (navigation_handle->GetNetErrorCode() != net::ERR_PROXY_CONNECTION_FAILED)
+  if (navigation_handle->GetNetErrorCode() !=
+      net::ERR_PROXY_CONNECTION_FAILED) {
     return;
+  }
   base::SequencedTaskRunner::GetCurrentDefault()->PostDelayedTask(
       FROM_HERE,
       base::BindOnce(&TorTabHelper::ReloadTab, weak_ptr_factory_.GetWeakPtr(),

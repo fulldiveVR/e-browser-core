@@ -53,7 +53,7 @@ void EnableAdblockCookieList(base::WeakPtr<Profile> profile) {
 
 namespace perf {
 
-void MaybeEnableBraveFeatureForPerfTesting(Profile* profile) {
+void MaybeEnableBraveFeaturesPrefsForPerfTesting(Profile* profile) {
   auto* cmd = base::CommandLine::ForCurrentProcess();
   if (!cmd->HasSwitch(switches::kEnableBraveFeaturesForPerfTesting) ||
       !cmd->HasSwitch(::switches::kUserDataDir)) {
@@ -64,25 +64,37 @@ void MaybeEnableBraveFeatureForPerfTesting(Profile* profile) {
   profile->GetPrefs()->SetBoolean(brave_ads::prefs::kOptedInToNotificationAds,
                                   true);
 
-  // Rewards
-  auto* rewards_service =
-      brave_rewards::RewardsServiceFactory::GetForProfile(profile);
-  rewards_service->CreateRewardsWallet("US", base::BindOnce(&FakeCallback));
-
   // Brave news
   profile->GetPrefs()->SetBoolean(brave_news::prefs::kNewTabPageShowToday,
                                   true);
   profile->GetPrefs()->SetBoolean(brave_news::prefs::kBraveNewsOptedIn, true);
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
-  // Speedreader
-  profile->GetPrefs()->SetBoolean(speedreader::kSpeedreaderPrefEnabled, true);
+  // Speedreader - enable both the feature toggle and all-sites setting
+  profile->GetPrefs()->SetBoolean(speedreader::kSpeedreaderPrefFeatureEnabled,
+                                  true);
+  profile->GetPrefs()->SetBoolean(
+      speedreader::kSpeedreaderPrefEnabledForAllSites, true);
 #endif
 
   profile->GetPrefs()->SetTime(ai_chat::prefs::kLastAcceptedDisclaimer,
                                base::Time::Now());
   profile->GetPrefs()->SetBoolean(
       ai_chat::prefs::kBraveChatAutocompleteProviderEnabled, true);
+}
+
+void MaybeEnableBraveFeaturesServicesAndComponentsForPerfTesting(
+    Profile* profile) {
+  auto* cmd = base::CommandLine::ForCurrentProcess();
+  if (!cmd->HasSwitch(switches::kEnableBraveFeaturesForPerfTesting) ||
+      !cmd->HasSwitch(::switches::kUserDataDir)) {
+    return;
+  }
+
+  // Rewards
+  auto* rewards_service =
+      brave_rewards::RewardsServiceFactory::GetForProfile(profile);
+  rewards_service->CreateRewardsWallet("US", base::BindOnce(&FakeCallback));
 
   // Adblock
   EnableAdblockCookieList(profile->GetWeakPtr());

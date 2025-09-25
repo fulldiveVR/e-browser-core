@@ -6,13 +6,17 @@
 #include "brave/components/brave_shields/core/common/brave_shield_utils.h"
 
 #include <map>
-#include <set>
-#include <string>
 
+#include "base/containers/map_util.h"
+#include "base/feature_list.h"
 #include "base/no_destructor.h"
+#include "brave/components/brave_shields/core/common/brave_shields_settings_values.h"
+#include "brave/components/brave_shields/core/common/features.h"
+#include "brave/components/brave_shields/core/common/pref_names.h"
 #include "brave/components/webcompat/core/common/features.h"
 #include "components/content_settings/core/common/content_settings.h"
 #include "components/content_settings/core/common/content_settings_pattern.h"
+#include "components/prefs/pref_service.h"
 #include "url/gurl.h"
 
 namespace brave_shields {
@@ -44,11 +48,11 @@ ContentSetting GetBraveWebcompatContentSettingFromRules(
           webcompat::features::kBraveWebcompatExceptionsService)) {
     return CONTENT_SETTING_DEFAULT;
   }
-  const auto& item = webcompat_rules.find(content_settings_type);
-  if (item == webcompat_rules.end()) {
+  const auto* rules = base::FindOrNull(webcompat_rules, content_settings_type);
+  if (!rules) {
     return CONTENT_SETTING_DEFAULT;
   }
-  for (const auto& rule : item->second) {
+  for (const auto& rule : *rules) {
     if (rule.primary_pattern.Matches(primary_url)) {
       return rule.GetContentSetting();
     }
@@ -56,7 +60,7 @@ ContentSetting GetBraveWebcompatContentSettingFromRules(
   return CONTENT_SETTING_DEFAULT;
 }
 
-ShieldsSettingCounts GetFPSettingCountFromRules(
+ShieldsSettingCounts GetSettingCountFromRules(
     const ContentSettingsForOneType& fp_rules) {
   ShieldsSettingCounts result = {};
 
@@ -76,39 +80,42 @@ ShieldsSettingCounts GetFPSettingCountFromRules(
   return result;
 }
 
-ShieldsSettingCounts GetAdsSettingCountFromRules(
-    const ContentSettingsForOneType& ads_rules) {
+ShieldsSettingCounts GetSettingCountFromCosmeticFilteringRules(
+    const ContentSettingsForOneType& fp_rules) {
   ShieldsSettingCounts result = {};
 
-  std::set<std::string> block_set;
-  // Look at primary rules
-  for (const auto& rule : ads_rules) {
-    if (rule.primary_pattern.MatchesAllHosts() ||
-        !rule.secondary_pattern.MatchesAllHosts()) {
+  for (const auto& rule : fp_rules) {
+    if (rule.primary_pattern.MatchesAllHosts()) {
       continue;
     }
-    if (rule.GetContentSetting() == CONTENT_SETTING_ALLOW) {
-      result.allow++;
-    } else {
-      block_set.insert(rule.primary_pattern.ToString());
-    }
-  }
-
-  // And then look at "first party" rules
-  for (const auto& rule : ads_rules) {
-    if (rule.primary_pattern.MatchesAllHosts() ||
-        rule.secondary_pattern.MatchesAllHosts() ||
-        block_set.find(rule.primary_pattern.ToString()) == block_set.end()) {
-      continue;
-    }
-    if (rule.GetContentSetting() == CONTENT_SETTING_BLOCK) {
-      result.aggressive++;
-    } else {
-      result.standard++;
+    switch (CosmeticFilteringSetting::FromValue(rule.setting_value)) {
+      case ControlType::ALLOW:
+        ++result.allow;
+        break;
+      case ControlType::BLOCK:
+        ++result.aggressive;
+        break;
+      default:
+        ++result.standard;
     }
   }
 
   return result;
+}
+
+bool IsAdblockOnlyModeFeatureEnabled() {
+  return base::FeatureList::IsEnabled(features::kAdblockOnlyMode);
+}
+
+bool IsBraveShieldsAdBlockOnlyModeEnabled(PrefService* local_state) {
+  CHECK(local_state);
+  return local_state->GetBoolean(prefs::kAdBlockOnlyModeEnabled);
+}
+
+void SetBraveShieldsAdBlockOnlyModeEnabled(PrefService* local_state,
+                                           bool enabled) {
+  CHECK(local_state);
+  local_state->SetBoolean(prefs::kAdBlockOnlyModeEnabled, enabled);
 }
 
 }  // namespace brave_shields

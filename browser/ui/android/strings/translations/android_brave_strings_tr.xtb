@@ -196,6 +196,9 @@
 <translation id="5987838417172370108">Brave Tarayıcı çöktüğünde veya donduğunda tanı raporlarını otomatik olarak göndererek, Brave'in ürün stabilitesini iyileştirmeye yardımcı olun.</translation>
 <translation id="7977176350719484850">Tahmini Veri\nTasarrufu</translation>
 <translation id="9008534313521214777">Tahmini Zaman\nTasarruf edildi</translation>
+<translation id="8347743943525229984">Brave anketlerine izin ver</translation>
+<translation id="6022939994702081659">Brave'in yeni sekme sayfasında özel anketlere bağlantılar göstermesine izin verir. Anketler, daha iyi özellikler oluşturmamıza ve tarayıcı tabanlı reklam kampanyalarının etkinliğini ölçmemize yardımcı olur.</translation>
+<translation id="7746496306508543965">Brave anketleri hakkında daha fazla bilgi edinin</translation>
 <translation id="410351446219883937">Otomatik oynatma</translation>
 <translation id="7445411102860286510">Sitelerin, sesi kapatılmış videoları otomatik olarak oynatmasına izin ver (önerilen)</translation>
 <translation id="7837721118676387834">Belirli bir sitenin, sesi kapatılmış videoları otomatik olarak oynatmasına izin verin.</translation>
@@ -419,8 +422,8 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="8748471354357836070">Daha fazla bilgi edinin / tercihleri devre dışı bırakın</translation>
 <translation id="3171669670217312786">Arka Plan Resimleri</translation>
 <translation id="8522669544471808198">Arka Plan Resimlerini Göster</translation>
-<translation id="3870475560794762985">Sponsorlu Resimleri Göster</translation>
-<translation id="6937724381960478525">Sponsorlu görseller hakkında daha fazla bilgi edinin</translation>
+<translation id="6258554626602400736">Yeni Sekme Sayfası Reklamlarını Göster</translation>
+<translation id="9001530744369687550">Yeni sekme sayfası reklamları hakkında daha fazla bilgi edinin</translation>
 <translation id="8793108040181436796">Widget'lar</translation>
 <translation id="8643377320501056697">En Popüler Siteleri Göster</translation>
 <translation id="7275773481201277457">Brave İstatistiklerini Göster</translation>
@@ -498,6 +501,8 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="7616645803364270729">E-posta, Twitter, vb.</translation>
 <translation id="5299848999918506028">Teşekkür ederiz!</translation>
 <translation id="76550953340008122">Bu sitede yanlış bir şeyler olduğunu Brave geliştiricilerine bildirdiğiniz için teşekkür ederiz. Düzeltmek için elimizden geleni yapacağız!</translation>
+<translation id="3037432377946455872">Karşılaştığınız ana sorun nedir?</translation>
+<translation id="8731661215617360873">Bir seçenek seçin</translation>
 <translation id="650318023204990401">Gelişmiş kontroller</translation>
 <translation id="7205939464631857223">Engellenen tüm öğeleri temizle</translation>
 <translation id="5370478469168390143">Çevrimiçi Verileri Kaydet</translation>
@@ -633,7 +638,6 @@ Bunu yapmak istediğinizden emin misiniz?</translation>
 <translation id="3961126209136843111">Mevcut bir cüzdanı içe aktarın</translation>
 <translation id="4811736040444856406">Kurtarma ifadesini göster</translation>
 <translation id="4359319875297001084">Eski Brave kripto cüzdanlarından içe aktarılsın mı?</translation>
-<translation id="3157931365184549694">Geri yükle</translation>
 <translation id="5844138175312846408">Zaten bir cüzdanınız var mı?</translation>
 <translation id="2502258949541727762">Başlamadan önce</translation>
 <translation id="4303748097351941030">Desteklenen ağlar</translation>
@@ -1223,4 +1227,41 @@ Bu talebi kabul etmezseniz VPN yeniden bağlanmaz ve internet bağlantınız gü
 <translation id="2735247450315842119">Gizli sekmelerde ekran görüntülerine izin ver</translation>
 <translation id="8420414929552321089">İzin verilirse, gizli sekmeler birden fazla uygulama açıkken de görünür olacaktır.</translation>
 <translation id="7956713633345437162">Mobil yer işaretleri</translation>
+<translation id="1943432128510653496">Şifreleri kaydet</translation>
+<translation id="2100273922101894616">Otomatik Oturum Aç</translation>
+<translation id="363596933471559332">Depolanmış kimlik bilgileriyle web sitelerinde otomatik olarak oturum açın. Bu özellik kapatıldığında, bir web sitesinde oturum açmadan önce her defasında doğrulama yapmanız istenir.</translation>
+<translation id="8562452229998620586">Kayıtlı şifreleriniz burada görünür.</translation>
+<translation id="1303339473099049190">Şifre bulunamıyor. Adresi doğru yazıp yazmadığınızı kontrol edip tekrar deneyin.</translation>
+<translation id="2259659629660284697">Şifreleri dışa aktar…</translation>
+<translation id="133012818630824069">Brave'da depolanan şifreleri dışa aktarın</translation>
+<translation id="2321086116217818302">Şifreler hazırlanıyor…</translation>
+<translation id="5139940364318403933">Google Drive'ın nasıl kullanılacağını öğrenin</translation>
+<translation id="729975465115245577">Cihazınızda şifreler dosyasını depolayacak bir uygulama yok.</translation>
+<translation id="1129510026454351943">Ayrıntılar: <ph name="ERROR_DESCRIPTION"/></translation>
+<translation id="6221633008163990886">Şifrelerinizi dışa aktarmak için kilit açılamadı</translation>
+<translation id="5245792669563792664">şifreler</translation>
+<translation id="10614374240317010">Hiç kaydedilmeyecekler</translation>
+<translation id="1571304935088121812">Kullanıcı adını kopyala</translation>
+<translation id="5005498671520578047">Şifreyi kopyalayın</translation>
+<translation id="2435457462613246316">Şifreyi göster</translation>
+<translation id="1513858653616922153">Şifreyi sil</translation>
+<translation id="543338862236136125">Şifreyi düzenle</translation>
+<translation id="4565377596337484307">Şifreyi gizle</translation>
+<translation id="8523928698583292556">Kayıtlı şifreyi sil</translation>
+<translation id="5433691172869980887">Kullanıcı adı kopyalandı</translation>
+<translation id="2625189173221582860">Şifre kopyalandı</translation>
+<translation id="8084114998886531721">Kayıtlı şifre</translation>
+<translation id="6590680911007613645">Kaydettiğiniz şifrenin <ph name="SITE"/> için kullandığınız şifreyle eşleştiğinden emin olun</translation>
+<translation id="1492417797159476138">Bu site için bu kullanıcı adını zaten kaydettiniz</translation>
+<translation id="5454166040603940656"><ph name="PROVIDER"/> ile</translation>
+<translation id="686366188661646310">Şifre silinsin mi?</translation>
+<translation id="7808889146555843082">Bu şifre kaldırıldığında <ph name="SITE"/> üzerindeki hesabınız silinmez. <ph name="SITE"/> üzerindeki hesabınıza başka kişilerin ulaşmaması için şifrenizi değiştirin veya hesabı silin.</translation>
+<translation id="2870560284913253234">Site</translation>
+<translation id="8503813439785031346">Kullanıcı adı</translation>
+<translation id="2278052315791335171">Bu şifre silindiğinde <ph name="SITE"/> üzerindeki hesabınız silinmez</translation>
+<translation id="6891726759199484455">Şifrenizi kopyalamak için kilidi açın</translation>
+<translation id="5515439363601853141">Şifrenizi görüntülemek için kilidi açın</translation>
+<translation id="1724977129262658800">Şifrenizi düzenlemek için kilidi açın</translation>
+<translation id="5780792035410621042">Şifreleri kopyalamak için önce cihazınızda ekran kilidi ayarlayın</translation>
+<translation id="7986497153528221272">Şifreleri görüntülemek için önce cihazınızda ekran kilidi ayarlayın</translation>
 </translationbundle>

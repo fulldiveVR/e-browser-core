@@ -13,10 +13,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
-import androidx.annotation.Nullable;
-
 import org.chromium.base.BravePreferenceKeys;
 import org.chromium.base.ContextUtils;
+import org.chromium.chrome.browser.toolbar.settings.AddressBarPreference;
 
 /**
  * Brave's extension for {@link HubToolbarView}. Here we control what elements should be visible in
@@ -39,6 +38,14 @@ public class BraveHubToolbarView extends HubToolbarView {
     }
 
     @Override
+    void setPaneSwitcherIndex(int index) {
+        super.setPaneSwitcherIndex(index);
+
+        // Update visibility of action and menu buttons based on the switching panes.
+        updateButtonsVisibility();
+    }
+
+    @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         Context context = getContext();
@@ -56,17 +63,9 @@ public class BraveHubToolbarView extends HubToolbarView {
         updateButtonsVisibility();
     }
 
-    @Override
-    void setActionButton(@Nullable FullButtonData buttonData) {
-        super.setActionButton(buttonData);
-
-        updateButtonsVisibility();
-    }
-
     private void updateButtonsVisibility() {
         boolean shouldHideButtons =
-                ContextUtils.getAppSharedPreferences()
-                                .getBoolean(BravePreferenceKeys.BRAVE_TOOLBAR_TOP_ANCHORED, true)
+                AddressBarPreference.isToolbarConfiguredToShowOnTop()
                         && ContextUtils.getAppSharedPreferences()
                                 .getBoolean(BravePreferenceKeys.BRAVE_IS_MENU_FROM_BOTTOM, true);
 

@@ -25,6 +25,7 @@
 #include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/brave_wallet/common/brave_wallet_types.h"
 #include "brave/components/brave_wallet/common/buildflags.h"
+#include "brave/components/brave_wallet/common/cardano_address.h"
 #include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/brave_wallet/common/eth_address.h"
 #include "brave/components/brave_wallet/common/hex_utils.h"
@@ -43,18 +44,6 @@
 namespace brave_wallet {
 
 namespace {
-
-const base::flat_map<std::string_view, std::string_view>
-    kUnstoppableDomainsProxyReaderContractAddressMap = {
-        // https://github.com/unstoppabledomains/uns/blob/abd9e12409094dd6ea8611ebffdade8db49c4b56/uns-config.json#L76
-        {brave_wallet::mojom::kMainnetChainId,
-         "0x578853aa776Eef10CeE6c4dd2B5862bdcE767A8B"},
-        // https://github.com/unstoppabledomains/uns/blob/abd9e12409094dd6ea8611ebffdade8db49c4b56/uns-config.json#L221
-        {brave_wallet::mojom::kPolygonMainnetChainId,
-         "0x91EDd8708062bd4233f4Dd0FCE15A7cb4d500091"},
-        // https://github.com/unstoppabledomains/uns/blob/abd9e12409094dd6ea8611ebffdade8db49c4b56/uns-config.json#L545
-        {brave_wallet::mojom::kBaseMainnetChainId,
-         "0x78c4b414e1abdf0de267deda01dffd4cd0817a16"}};
 
 constexpr const char kEnsRegistryContractAddress[] =
     "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e";
@@ -457,16 +446,6 @@ std::string GetDefaultBaseCryptocurrency(PrefService* prefs) {
   return prefs->GetString(kDefaultBaseCryptocurrency);
 }
 
-std::string_view GetUnstoppableDomainsProxyReaderContractAddress(
-    std::string_view chain_id) {
-  std::string chain_id_lower = base::ToLowerASCII(chain_id);
-  if (kUnstoppableDomainsProxyReaderContractAddressMap.contains(
-          chain_id_lower)) {
-    return kUnstoppableDomainsProxyReaderContractAddressMap.at(chain_id_lower);
-  }
-  return "";
-}
-
 std::string GetEnsRegistryContractAddress(std::string_view chain_id) {
   std::string chain_id_lower = base::ToLowerASCII(chain_id);
   DCHECK_EQ(chain_id_lower, mojom::kMainnetChainId);
@@ -738,6 +717,8 @@ std::string GetPrefKeyForCoinType(mojom::CoinType coin) {
       return kSolanaPrefKey;
     case mojom::CoinType::ADA:
       return kCardanoPrefKey;
+    case mojom::CoinType::DOT:
+      return kPolkadotPrefKey;
   }
   NOTREACHED() << coin;
 }
@@ -791,6 +772,10 @@ std::string WalletParsingErrorMessage() {
 
 std::string WalletInsufficientBalanceErrorMessage() {
   return l10n_util::GetStringUTF8(IDS_BRAVE_WALLET_INSUFFICIENT_BALANCE);
+}
+
+std::string WalletUserRejectedRequestErrorMessage() {
+  return l10n_util::GetStringUTF8(IDS_WALLET_USER_REJECTED_REQUEST);
 }
 
 mojom::BlockchainTokenPtr GetBitcoinNativeToken(std::string_view chain_id) {
@@ -891,6 +876,26 @@ const std::string& GetAccountPermissionIdentifier(
 bool IsBraveWalletOrigin(const url::Origin& origin) {
   return origin == url::Origin::Create(GURL(kBraveUIWalletPanelURL)) ||
          origin == url::Origin::Create(GURL(kBraveUIWalletPageURL));
+}
+
+std::optional<std::map<CardanoAddress, mojom::CardanoKeyIdPtr>>
+GetCardanoAddressesWithKeyIds(
+    const std::vector<mojom::CardanoAddressPtr>& addresses) {
+  if (addresses.empty()) {
+    return std::nullopt;
+  }
+
+  std::map<CardanoAddress, mojom::CardanoKeyIdPtr> address_map;
+  for (const auto& addr : addresses) {
+    auto cardano_address = CardanoAddress::FromString(addr->address_string);
+    if (!cardano_address) {
+      continue;
+    }
+    address_map.emplace(std::move(*cardano_address),
+                        std::move(addr->payment_key_id));
+  }
+
+  return address_map;
 }
 
 }  // namespace brave_wallet

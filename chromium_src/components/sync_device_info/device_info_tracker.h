@@ -18,10 +18,10 @@ class BraveDeviceInfo;
   DeleteDeviceInfo(const std::string& client_id, base::OnceClosure callback) { \
   }                                                                            \
   virtual std::vector<std::unique_ptr<BraveDeviceInfo>>                        \
-  GetAllBraveDeviceInfo() const = 0;                                           \
+  GetAllBraveDeviceInfo() const;                                               \
   virtual void ForcePulseForTest
 
-#include "src/components/sync_device_info/device_info_tracker.h"  // IWYU pragma: export
+#include <components/sync_device_info/device_info_tracker.h>  // IWYU pragma: export
 
 #undef ForcePulseForTest
 

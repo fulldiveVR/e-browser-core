@@ -10,18 +10,28 @@ import { getLocale } from '$web-common/locale'
 import useLongPress from '$web-common/useLongPress'
 import * as Mojom from '../../../common/mojom'
 import ActionTypeLabel from '../../../common/components/action_type_label'
-import {  AttachmentImageItem, AttachmentPageItem  } from '../../../page/components/attachment_item'
+import {
+  AttachmentPageItem,
+  AttachmentUploadItems,
+} from '../../../page/components/attachment_item'
 import { useUntrustedConversationContext } from '../../untrusted_conversation_context'
 import AssistantReasoning from '../assistant_reasoning'
 import ContextActionsAssistant from '../context_actions_assistant'
 import ContextMenuHuman from '../context_menu_human'
 import Quote from '../quote'
-import LongPageInfo from '../page_context_message/long_page_info'
+import {
+  LongPageContentWarning,
+  LongTextContentWarning,
+  LongVisualContentWarning,
+} from '../page_context_message/long_page_info'
 import AssistantResponse from '../assistant_response'
 import EditInput from '../edit_input'
 import EditIndicator from '../edit_indicator'
-import { getReasoningText } from './conversation_entries_utils'
-import { getImageFiles } from '../../../common/conversation_history_utils'
+import {
+  getReasoningText,
+  groupConversationEntries,
+} from './conversation_entries_utils'
+import useConversationEventClipboardCopyHandler from './use_conversation_event_clipboard_copy_handler'
 import styles from './style.module.scss'
 
 function ConversationEntries() {
@@ -30,11 +40,6 @@ function ConversationEntries() {
   const [hoverMenuButtonId, setHoverMenuButtonId] = React.useState<number>()
   const [activeMenuId, setActiveMenuId] = React.useState<number>()
   const [editInputId, setEditInputId] = React.useState<number>()
-
-  const handleEditSubmit = (index: number, text: string) => {
-    conversationContext.conversationHandler?.modifyConversation(index, text)
-    setEditInputId(undefined)
-  }
 
   const showHumanMenu = (id: number) => {
     setActiveMenuId(id)
@@ -51,7 +56,7 @@ function ConversationEntries() {
       if (id === null) return
       showHumanMenu(parseInt(id))
     },
-    onTouchMove: () => setActiveMenuId(undefined)
+    onTouchMove: () => setActiveMenuId(undefined),
   })
 
   const getCompletion = (turn: Mojom.ConversationTurn) => {
@@ -59,77 +64,84 @@ function ConversationEntries() {
     return event?.completionEvent?.completion ?? ''
   }
 
+  // Render events from consecutive assistant entries in the same parent element for both
+  // semantic and style purposes. The user should see them as a single entry since
+  // the back and forth could be considered an implementation detail when
+  // conceptually it's more like a continuation of a response without human interaction
+  // in-between.
+  const groupedEntries = React.useMemo<Mojom.ConversationTurn[][]>(
+    () => groupConversationEntries(conversationContext.conversationHistory),
+    [conversationContext.conversationHistory],
+  )
+
+  const handleEditSubmit = (index: number, text: string) => {
+    const entryUuid = conversationContext.conversationHistory[index]?.uuid
+    if (!entryUuid) return
+    conversationContext.conversationHandler?.modifyConversation(entryUuid, text)
+    setEditInputId(undefined)
+  }
+
   return (
     <>
       <div>
-        {conversationContext.conversationHistory.map((turn, index) => {
-          const isLastEntry =
-            (index === conversationContext.conversationHistory.length - 1)
+        {groupedEntries.map((group, index) => {
+          // TODO(petemill): Split assistant and human entries to separate components
+          // to make this more readable.
+          const isLastGroup = index === groupedEntries.length - 1
+          const firstEntry = group[0]
+          const firstEntryEdit = firstEntry.edits?.at(-1) ?? group[0]
+          const lastEditedTime = firstEntryEdit.createdTime
           const isAIAssistant =
-            turn.characterType === Mojom.CharacterType.ASSISTANT
-          const isEntryInProgress =
-            isLastEntry && isAIAssistant && conversationContext.isGenerating
-          const isHuman = turn.characterType === Mojom.CharacterType.HUMAN
+            firstEntryEdit.characterType === Mojom.CharacterType.ASSISTANT
+          const isEntryInProgressButGroup =
+            isLastGroup && isAIAssistant && conversationContext.isGenerating
+          const isHuman =
+            firstEntryEdit.characterType === Mojom.CharacterType.HUMAN
           const isGeneratingResponse =
-            isHuman && isLastEntry && conversationContext.isGenerating
+            isHuman && isLastGroup && conversationContext.isGenerating
           const showLongPageContentInfo =
-            index === 1 &&
-            isAIAssistant &&
-            ((conversationContext.contentUsedPercentage ?? 100) < 100 ||
-              (conversationContext.trimmedTokens > 0 && conversationContext.totalTokens > 0))
-          const showEditInput = editInputId === index
-          const showEditIndicator = !showEditInput && !!turn.edits?.length
-          const latestEdit = turn.edits?.at(-1)
-          const latestTurn = latestEdit ?? turn
-          const allowedLinksForTurn: string[] =
-            latestTurn.events?.flatMap(event =>
-              event.sourcesEvent?.sources?.map(
-                source => source.url.url
-              ) || []
-            ) || []
-          const latestTurnText = isAIAssistant
-            ? getCompletion(latestTurn)
-            : latestTurn.text
-          const lastEditedTime = latestTurn.createdTime
-          const hasReasoning = latestTurnText.includes('<think>')
+            index === 1
+            && isAIAssistant
+            && ((conversationContext.contentUsedPercentage ?? 100) < 100
+              || (conversationContext.trimmedTokens > 0
+                && conversationContext.totalTokens > 0)
+              || (conversationContext.visualContentUsedPercentage ?? 100) < 100)
 
-          const turnModelKey = turn.modelKey
-            ? conversationContext.allModels
-                .find(m => m.key === turn.modelKey)
-                ?.key ?? undefined
-            : undefined;
+          const showEditInput = editInputId === index
+          const showEditIndicator = !showEditInput && !!group[0].edits?.length
+
+          // Can't edit complicated structured content (for now)
+          const canEditEntry =
+            group.length === 1
+            && !firstEntryEdit.events?.some((event) => !!event.toolUseEvent)
+
+          const turnModelKey = firstEntryEdit.modelKey
+            ? (conversationContext.allModels.find(
+                (m) => m.key === firstEntryEdit.modelKey,
+              )?.key ?? undefined)
+            : undefined
 
           const turnContainer = classnames({
-            [styles.turnContainerMobile]: conversationContext.isMobile
+            [styles.turnContainerMobile]: conversationContext.isMobile,
           })
 
           const turnClass = classnames({
             [styles.turn]: true,
-            [styles.turnAI]: isAIAssistant
+            [styles.turnAI]: isAIAssistant,
           })
 
-          const handleCopyText = () => {
-            if (isAIAssistant) {
-              const event = latestTurn.events?.find(
-                (event) => event.completionEvent
-              )
-              if (!event?.completionEvent) return
-              navigator.clipboard.writeText(event.completionEvent.completion)
-            } else {
-              navigator.clipboard.writeText(latestTurnText)
-            }
-          }
+          const handleCopyText =
+            useConversationEventClipboardCopyHandler(firstEntryEdit)
 
-          const imageFiles =
-            getImageFiles(latestTurn.uploadedFiles) || []
-
-          const hasImageAttachments = imageFiles.length > 0
-          const hasTabAttachments = index === 0 && conversationContext.associatedContent.length > 0
-          const hasAttachments = hasImageAttachments || hasTabAttachments
+          const tabAttachments = conversationContext.associatedContent.filter(
+            (c) => c.conversationTurnUuid === firstEntryEdit.uuid,
+          )
+          const hasAttachments =
+            !!firstEntryEdit.uploadedFiles?.length || tabAttachments.length > 0
 
           return (
             <div
-              key={index}
+              key={firstEntryEdit.uuid || index}
               className={turnContainer}
             >
               <div
@@ -150,97 +162,182 @@ function ConversationEntries() {
                     isAIAssistant ? styles.message : styles.humanMessage
                   }
                 >
-                  {isAIAssistant && hasReasoning && (
-                    <AssistantReasoning
-                      text={getReasoningText(latestTurnText)}
-                      isReasoning={
-                        isEntryInProgress &&
-                        !latestTurnText.includes('</think>')
-                      }
-                    />
-                  )}
-                  {isAIAssistant && !showEditInput && (
-                    <AssistantResponse
-                      entry={latestTurn}
-                      isEntryInProgress={isEntryInProgress}
-                      allowedLinks={allowedLinksForTurn}
-                      isLeoModel={conversationContext.isLeoModel}
-                    />
-                  )}
-                  {isHuman && !turn.selectedText && !showEditInput && (
-                    <>
-                      {hoverMenuButtonId === index ? (
-                        <ContextMenuHuman
-                          isOpen={activeMenuId === index}
-                          onClick={() => showHumanMenu(index)}
-                          onClose={hideHumanMenu}
-                          onEditQuestionClicked={() => setEditInputId(index)}
-                          onCopyQuestionClicked={handleCopyText}
-                        />
-                      ) : (
-                        <div className={styles.divToKeepGap} />
-                      )}
-                      <div className={styles.humanMessageBubble}>
-                        <div className={styles.humanTextRow}>
-                          {latestTurnText}
-                          {latestEdit && (
-                            <div className={styles.editLabel}>
-                              <span className={styles.editLabelText}>
-                                {getLocale(S.CHAT_UI_EDITED_LABEL)}
-                              </span>
-                            </div>
-                          )}
-                        </div>
-                        {hasAttachments &&
-                          <div className={styles.attachmentsContainer}>
-                          {conversationContext.associatedContent.map(c => <AttachmentPageItem
-                            key={c.contentId}
-                            url={c.url.url}
-                            title={c.title}
-                          />)}
-                            {imageFiles.map((img) => (
-                              <AttachmentImageItem
-                                key={img.filename}
-                                uploadedImage={img}
+                  {group.map((entry, i) => {
+                    const isEntryInProgress =
+                      isEntryInProgressButGroup && i === group.length - 1
+                    const isLastEntryInLastGroup =
+                      isLastGroup && i === group.length - 1
+                    const currentEntryEdit = entry.edits?.at(-1) ?? entry
+                    const allowedLinksForEntry: string[] =
+                      currentEntryEdit.events?.flatMap(
+                        (event) =>
+                          event.sourcesEvent?.sources?.map(
+                            (source) => source.url.url,
+                          ) || [],
+                      ) || []
+                    const entryText = getCompletion(currentEntryEdit)
+                    const hasReasoning = entryText.includes('<think>')
+
+                    return (
+                      <React.Fragment key={entry.uuid || i}>
+                        {isAIAssistant && !showEditInput && (
+                          <>
+                            {hasReasoning && (
+                              <AssistantReasoning
+                                text={getReasoningText(entryText)}
+                                isReasoning={
+                                  isEntryInProgressButGroup
+                                  && !entryText.includes('</think>')
+                                }
                               />
-                            ))}
-                          </div>
-                        }
-                      </div>
-                    </>
-                  )}
-                  {showEditInput && (
-                    <EditInput
-                      text={latestTurnText}
-                      onSubmit={(text) => handleEditSubmit(index, text)}
-                      onCancel={() => setEditInputId(undefined)}
-                      isSubmitDisabled={
-                        !conversationContext.canSubmitUserEntries
-                      }
-                    />
-                  )}
-                  {turn.selectedText && (
-                    <ActionTypeLabel actionType={turn.actionType} />
-                  )}
-                  {turn.selectedText && <Quote text={turn.selectedText} />}
-                  {showLongPageContentInfo && <LongPageInfo />}
+                            )}
+                            <AssistantResponse
+                              key={entry.uuid || i}
+                              events={
+                                currentEntryEdit.events?.filter(Boolean) ?? []
+                              }
+                              isEntryInteractivityAllowed={
+                                isLastEntryInLastGroup
+                              }
+                              isEntryInProgress={isEntryInProgress}
+                              allowedLinks={allowedLinksForEntry}
+                              isLeoModel={conversationContext.isLeoModel}
+                            />
+                          </>
+                        )}
+                        {isHuman
+                          && !firstEntryEdit.selectedText
+                          && !showEditInput && (
+                            <>
+                              {hoverMenuButtonId === index ? (
+                                <ContextMenuHuman
+                                  isOpen={activeMenuId === index}
+                                  onClick={() => showHumanMenu(index)}
+                                  onClose={hideHumanMenu}
+                                  onEditQuestionClicked={() =>
+                                    setEditInputId(index)
+                                  }
+                                  onCopyQuestionClicked={handleCopyText}
+                                />
+                              ) : (
+                                <div className={styles.divToKeepGap} />
+                              )}
+                              <div className={styles.humanMessageBubble}>
+                                <div className={styles.humanTextRow}>
+                                  {currentEntryEdit.text}
+                                  {!!entry.edits?.length && (
+                                    <div className={styles.editLabel}>
+                                      <span className={styles.editLabelText}>
+                                        {getLocale(S.CHAT_UI_EDITED_LABEL)}
+                                      </span>
+                                    </div>
+                                  )}
+                                </div>
+                                {hasAttachments && (
+                                  <div className={styles.attachmentsContainer}>
+                                    {tabAttachments.map((c) => (
+                                      <AttachmentPageItem
+                                        key={c.contentId}
+                                        url={c.url.url}
+                                        title={c.title}
+                                      />
+                                    ))}
+                                    <AttachmentUploadItems
+                                      uploadedFiles={
+                                        firstEntryEdit.uploadedFiles || []
+                                      }
+                                    />
+                                  </div>
+                                )}
+                              </div>
+                            </>
+                          )}
+
+                        {showEditInput && (
+                          <EditInput
+                            text={firstEntryEdit.text}
+                            onSubmit={(text) => handleEditSubmit(index, text)}
+                            onCancel={() => setEditInputId(undefined)}
+                            isSubmitDisabled={
+                              !conversationContext.canSubmitUserEntries
+                            }
+                          />
+                        )}
+                        {firstEntryEdit.selectedText && (
+                          <ActionTypeLabel
+                            actionType={firstEntryEdit.actionType}
+                          />
+                        )}
+                        {firstEntryEdit.selectedText && (
+                          <Quote text={firstEntryEdit.selectedText} />
+                        )}
+                        {showLongPageContentInfo
+                          && (() => {
+                            if (
+                              conversationContext.trimmedTokens > 0
+                              && conversationContext.totalTokens > 0
+                            ) {
+                              const percentage =
+                                100
+                                - Math.floor(
+                                  (Number(conversationContext.trimmedTokens)
+                                    / Number(conversationContext.totalTokens))
+                                    * 100,
+                                )
+                              return (
+                                <LongTextContentWarning
+                                  percentageUsed={percentage}
+                                />
+                              )
+                            } else if (
+                              (conversationContext.visualContentUsedPercentage
+                                ?? 100) < 100
+                            ) {
+                              return (
+                                <LongVisualContentWarning
+                                  visualContentUsedPercentage={
+                                    conversationContext.visualContentUsedPercentage!
+                                  }
+                                />
+                              )
+                            } else if (
+                              (conversationContext.contentUsedPercentage ?? 100)
+                              < 100
+                            ) {
+                              return (
+                                <LongPageContentWarning
+                                  contentUsedPercentage={
+                                    conversationContext.contentUsedPercentage!
+                                  }
+                                />
+                              )
+                            }
+                            return null
+                          })()}
+                      </React.Fragment>
+                    )
+                  })}
                 </div>
                 {isAIAssistant && showEditIndicator && (
                   <EditIndicator time={lastEditedTime} />
                 )}
-                {isAIAssistant &&
-                  conversationContext.isLeoModel &&
-                  !turn.selectedText &&
-                  !showEditInput && (
+                {isAIAssistant
+                  && conversationContext.isLeoModel
+                  && !firstEntryEdit.selectedText
+                  && !showEditInput && (
                     <ContextActionsAssistant
-                      turnUuid={turn.uuid}
+                      turnUuid={firstEntryEdit.uuid}
                       turnModelKey={turnModelKey}
-                      onEditAnswerClicked={() => setEditInputId(index)}
+                      onEditAnswerClicked={
+                        canEditEntry ? () => setEditInputId(index) : undefined
+                      }
                       onCopyTextClicked={handleCopyText}
                     />
                   )}
                 {isGeneratingResponse && (
-                  <div className={styles.loading}><ProgressRing /></div>
+                  <div className={styles.loading}>
+                    <ProgressRing />
+                  </div>
                 )}
               </div>
             </div>

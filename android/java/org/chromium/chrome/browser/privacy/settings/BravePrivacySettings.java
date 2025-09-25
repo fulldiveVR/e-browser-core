@@ -22,7 +22,6 @@ import org.chromium.brave_shields.mojom.FilterListConstants;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.R;
-import org.chromium.chrome.browser.BraveConfig;
 import org.chromium.chrome.browser.BraveFeatureUtil;
 import org.chromium.chrome.browser.BraveLocalState;
 import org.chromium.chrome.browser.BraveRelaunchUtils;
@@ -60,7 +59,7 @@ public class BravePrivacySettings extends PrivacySettings {
     private static final String BLOCK_ALL_COOKIES_LEARN_MORE_LINK =
             "https://github.com/brave/brave-browser/wiki/Block-all-cookies-global-Shields-setting";
     private static final String SURVEY_PANELIST_LEARN_MORE_LINK =
-            "https://support.brave.com/hc/en-us/articles/36550092449165";
+            "https://support.brave.app/hc/en-us/articles/36550092449165";
 
     // Chromium Prefs
     private static final String PREF_CAN_MAKE_PAYMENT = "can_make_payment";
@@ -205,9 +204,9 @@ public class BravePrivacySettings extends PrivacySettings {
     private ChromeSwitchPreference mBlockScriptsPref;
     private ChromeSwitchPreference mForgetFirstPartyStoragePref;
     private ChromeSwitchPreference mCloseTabsOnExitPref;
-    private ChromeSwitchPreference mSendP3A;
-    private ChromeSwitchPreference mSendCrashReports;
-    private ChromeSwitchPreference mBraveStatsUsagePing;
+    private @Nullable ChromeSwitchPreference mSendP3A;
+    private @Nullable ChromeSwitchPreference mSendCrashReports;
+    private @Nullable ChromeSwitchPreference mBraveStatsUsagePing;
     private ChromeSwitchPreference mSurveyPanelist;
     private ClickableSpansTextMessagePreference mSurveyPanelistLearnMore;
     private ChromeSwitchPreference mBlockCookieConsentNoticesPref;
@@ -368,13 +367,33 @@ public class BravePrivacySettings extends PrivacySettings {
         mClearBrowsingDataOnExit = (ChromeSwitchPreference) findPreference(PREF_CLEAR_ON_EXIT);
         mClearBrowsingDataOnExit.setOnPreferenceChangeListener(this);
 
-        mSendP3A = (ChromeSwitchPreference) findPreference(PREF_SEND_P3A);
-        mSendP3A.setOnPreferenceChangeListener(this);
+        // Hide P3A setting if it's managed by policy
+        if (BraveLocalState.get().isManagedPreference(BravePref.P3A_ENABLED)) {
+            removePreferenceIfPresent(PREF_SEND_P3A);
+            mSendP3A = null;
+        } else {
+            mSendP3A = (ChromeSwitchPreference) findPreference(PREF_SEND_P3A);
+            mSendP3A.setOnPreferenceChangeListener(this);
+        }
 
-        mSendCrashReports = (ChromeSwitchPreference) findPreference(PREF_SEND_CRASH_REPORTS);
-        mSendCrashReports.setOnPreferenceChangeListener(this);
-        mBraveStatsUsagePing = (ChromeSwitchPreference) findPreference(PREF_BRAVE_STATS_USAGE_PING);
-        mBraveStatsUsagePing.setOnPreferenceChangeListener(this);
+        // Hide crash reporting setting if it's disabled by policy
+        if (!mPrivacyPrefManager.isUsageAndCrashReportingPermittedByPolicy()) {
+            removePreferenceIfPresent(PREF_SEND_CRASH_REPORTS);
+            mSendCrashReports = null;
+        } else {
+            mSendCrashReports = (ChromeSwitchPreference) findPreference(PREF_SEND_CRASH_REPORTS);
+            mSendCrashReports.setOnPreferenceChangeListener(this);
+        }
+
+        // Hide stats usage ping setting if it's managed by policy
+        if (BraveLocalState.get().isManagedPreference(BravePref.STATS_REPORTING_ENABLED)) {
+            removePreferenceIfPresent(PREF_BRAVE_STATS_USAGE_PING);
+            mBraveStatsUsagePing = null;
+        } else {
+            mBraveStatsUsagePing =
+                    (ChromeSwitchPreference) findPreference(PREF_BRAVE_STATS_USAGE_PING);
+            mBraveStatsUsagePing.setOnPreferenceChangeListener(this);
+        }
 
         boolean surveyPanelistEnabled =
                 ChromeFeatureList.isEnabled(
@@ -803,21 +822,24 @@ public class BravePrivacySettings extends PrivacySettings {
                         .getString(R.string.settings_can_make_payment_toggle_label));
         mCanMakePayment.setSummary("");
 
-        mSendP3A.setTitle(
-                getActivity().getResources().getString(R.string.send_p3a_analytics_title));
-        mSendP3A.setSummary(
-                getActivity().getResources().getString(R.string.send_p3a_analytics_summary));
+        if (mSendP3A != null) {
+            mSendP3A.setTitle(
+                    getActivity().getResources().getString(R.string.send_p3a_analytics_title));
+            mSendP3A.setSummary(
+                    getActivity().getResources().getString(R.string.send_p3a_analytics_summary));
 
-        if (BraveConfig.P3A_ENABLED) {
             mSendP3A.setChecked(BraveLocalState.get().getBoolean(BravePref.P3A_ENABLED));
-        } else {
-            getPreferenceScreen().removePreference(mSendP3A);
         }
 
-        mSendCrashReports.setChecked(mPrivacyPrefManager.isUsageAndCrashReportingPermittedByUser());
+        if (mSendCrashReports != null) {
+            mSendCrashReports.setChecked(
+                    mPrivacyPrefManager.isUsageAndCrashReportingPermittedByUser());
+        }
 
-        mBraveStatsUsagePing.setChecked(
-                BraveLocalState.get().getBoolean(BravePref.STATS_REPORTING_ENABLED));
+        if (mBraveStatsUsagePing != null) {
+            mBraveStatsUsagePing.setChecked(
+                    BraveLocalState.get().getBoolean(BravePref.STATS_REPORTING_ENABLED));
+        }
 
         mSurveyPanelist.setChecked(
                 UserPrefs.get(getProfile())

@@ -3,16 +3,14 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-#include "src/chrome/browser/autocomplete/chrome_autocomplete_provider_client.cc"
-
 #include "base/check.h"
 #include "base/strings/utf_string_conversions.h"
 #include "brave/browser/ai_chat/ai_chat_service_factory.h"
-#include "brave/browser/ai_chat/ai_chat_urls.h"
 #include "brave/components/ai_chat/content/browser/ai_chat_tab_helper.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_service.h"
 #include "brave/components/ai_chat/core/browser/conversation_handler.h"
+#include "brave/components/ai_chat/core/common/ai_chat_urls.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
 #include "brave/components/commander/common/buildflags/buildflags.h"
@@ -28,13 +26,14 @@
 #include "brave/browser/misc_metrics/profile_misc_metrics_service_factory.h"
 #include "brave/browser/ui/brave_browser.h"
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
-#include "chrome/browser/ui/omnibox/clipboard_utils.h"
 #endif  // BUILDFLAG(!IS_ANDROID)
 
 #if BUILDFLAG(ENABLE_COMMANDER)
 #include "brave/browser/ui/commander/commander_service_factory.h"
 #include "brave/components/commander/browser/commander_frontend_delegate.h"
 #endif  // BUILDFLAG(ENABLE_COMMANDER)
+
+#include <chrome/browser/autocomplete/chrome_autocomplete_provider_client.cc>
 
 #if BUILDFLAG(ENABLE_COMMANDER)
 commander::CommanderFrontendDelegate*
@@ -82,7 +81,7 @@ void ChromeAutocompleteProviderClient::OpenLeo(const std::u16string& query) {
     DCHECK(chat_tab_helper);
     conversation_handler =
         ai_chat_service->GetOrCreateConversationHandlerForContent(
-            chat_tab_helper->GetContentId(), chat_tab_helper->GetWeakPtr());
+            chat_tab_helper->content_id(), chat_tab_helper->GetWeakPtr());
     if (!conversation_handler) {
       return;
     }
@@ -133,13 +132,5 @@ bool ChromeAutocompleteProviderClient::IsLeoProviderEnabled() {
   return profile_->IsRegularProfile() &&
          GetPrefs()->GetBoolean(
              ai_chat::prefs::kBraveChatAutocompleteProviderEnabled);
-#endif
-}
-
-std::u16string ChromeAutocompleteProviderClient::GetClipboardText() const {
-#if !BUILDFLAG(IS_ANDROID)
-  return ::GetClipboardText(/*notify_if_restricted*/ false);
-#else
-  return u"";
 #endif
 }

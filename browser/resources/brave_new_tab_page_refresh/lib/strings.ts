@@ -24,9 +24,16 @@ export type StringKey =
   'enabledSearchEnginesLabel' |
   'gradientBackgroundLabel' |
   'gradientBackgroundTitle' |
+  'hideRewardsWidgetLabel' |
+  'hideStatsWidgetLabel' |
+  'hideTalkWidgetLabel' |
   'hideTopSitesLabel' |
+  'hideVpnWidgetLabel' |
+  'newsCustomizeButtonLabel' |
+  'newsDisableButtonLabel' |
   'newsEnableButtonLabel' |
   'newsEnableText' |
+  'newsHideButtonLabel' |
   'newsSettingsTitle' |
   'newsWidgetTitle' |
   'photoCreditsText' |
@@ -44,6 +51,12 @@ export type StringKey =
   'rewardsLoginTitle' |
   'rewardsOnboardingButtonLabel' |
   'rewardsOnboardingLink' |
+  'rewardsPayoutCompletedText' |
+  'rewardsPayoutDetailsLink' |
+  'rewardsPayoutProcessingText' |
+  'rewardsTosUpdateButtonLabel' |
+  'rewardsTosUpdateText' |
+  'rewardsTosUpdateTitle' |
   'rewardsWidgetTitle' |
   'saveChangesButtonLabel' |
   'searchAskLeoDescription' |
@@ -72,12 +85,12 @@ export type StringKey =
   'statsBandwidthSavedText' |
   'statsTimeSavedText' |
   'statsTitle' |
+  'talkAboutDataLink' |
   'talkDescriptionText' |
   'talkDescriptionTitle' |
   'talkStartCallLabel' |
   'talkWidgetTitle' |
   'topSiteRemovedText' |
-  'topSiteRemovedTitle' |
   'topSitesCustomOptionText' |
   'topSitesCustomOptionTitle' |
   'topSitesMostVisitedOptionText' |

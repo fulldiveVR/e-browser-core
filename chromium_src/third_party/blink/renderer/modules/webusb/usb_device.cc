@@ -9,7 +9,7 @@
 #include "brave/third_party/blink/renderer/core/farbling/brave_session_cache.h"
 #include "third_party/blink/renderer/platform/wtf/text/string_builder.h"
 
-#include "src/third_party/blink/renderer/modules/webusb/usb_device.cc"
+#include <third_party/blink/renderer/modules/webusb/usb_device.cc>
 
 namespace blink {
 
@@ -21,7 +21,7 @@ String USBDevice::serialNumber() const {
               context,
               ContentSettingsType::BRAVE_WEBCOMPAT_USB_DEVICE_SERIAL_NUMBER,
               BraveFarblingLevel::BALANCED) != BraveFarblingLevel::OFF) {
-        WTF::StringBuilder result;
+        StringBuilder result;
         result.Append(realSerialNumber);
         result.Append("WEBUSB_SERIAL_NUMBER");
         return brave::BraveSessionCache::From(*context).GenerateRandomString(

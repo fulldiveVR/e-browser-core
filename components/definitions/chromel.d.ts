@@ -181,26 +181,6 @@ declare namespace chrome.braveTalk {
   const isSupported: (callback: (supported: boolean) => void) => {}
 }
 
-declare namespace chrome.rewardsNotifications {
-  const addNotification: (type: number, args: string[], id: string) => {}
-  const deleteNotification: (id: string) => {}
-  const deleteAllNotifications: () => {}
-  const getNotification: (id: string) => {}
-
-  const onNotificationAdded: {
-    addListener: (callback: (id: string, type: number, timestamp: number, args: string[]) => void) => void
-  }
-  const onNotificationDeleted: {
-    addListener: (callback: (id: string, type: number, timestamp: number) => void) => void
-  }
-  const onAllNotificationsDeleted: {
-    addListener: (callback: () => void) => void
-  }
-  const onGetNotification: {
-    addListener: (callback: (id: string, type: number, timestamp: number) => void) => void
-  }
-}
-
 declare namespace chrome.braveNews {
   const onClearHistory: {
     addListener: (callback: () => any) => void
@@ -240,6 +220,6 @@ declare namespace chrome.test {
 }
 
 declare namespace chrome.webDiscovery {
-  type WebDiscoveryNativeEnabledCallback = (enabled: boolean) => void
-  const isWebDiscoveryNativeEnabled: (callback: WebDiscoveryNativeEnabledCallback) => void
+  type WebDiscoveryExtensionEnabledCallback = (enabled: boolean) => void
+  const isWebDiscoveryExtensionEnabled: (callback: WebDiscoveryExtensionEnabledCallback) => void
 }

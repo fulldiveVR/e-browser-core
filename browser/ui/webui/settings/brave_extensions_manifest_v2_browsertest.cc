@@ -8,8 +8,9 @@
 #include "base/test/bind.h"
 #include "base/test/scoped_feature_list.h"
 #include "base/time/time.h"
+#include "brave/browser/extensions/manifest_v2/brave_hosted_extensions.h"
+#include "brave/browser/extensions/manifest_v2/features.h"
 #include "brave/browser/ui/webui/brave_settings_ui.h"
-#include "brave/browser/ui/webui/settings/brave_extensions_manifest_v2_handler.h"
 #include "brave/components/constants/brave_paths.h"
 #include "chrome/browser/extensions/chrome_content_verifier_delegate.h"
 #include "chrome/browser/extensions/crx_installer.h"
@@ -40,7 +41,7 @@ bool ClickExtensionToggle(content::WebContents* web_contents) {
   return EvalJs(web_contents,
                 "window.testing.extensionsV2Subpage.getElementById('"
                 "bgkmgpgeempochogfoddiobpbhdfgkdi').click()")
-      .value.is_none();
+      .is_ok();
 }
 
 bool ClickExtensionRemove(content::WebContents* web_contents) {
@@ -48,14 +49,14 @@ bool ClickExtensionRemove(content::WebContents* web_contents) {
                 "window.testing.extensionsV2Subpage.getElementById('"
                 "bgkmgpgeempochogfoddiobpbhdfgkdi').querySelector('#"
                 "bgkmgpgeempochogfoddiobpbhdfgkdi').click()")
-      .value.is_none();
+      .is_ok();
 }
 
 bool IsExtensionToggled(content::WebContents* web_contents) {
   return EvalJs(web_contents,
                 "window.testing.extensionsV2Subpage.getElementById('"
                 "bgkmgpgeempochogfoddiobpbhdfgkdi').checked")
-      .value.GetBool();
+      .ExtractBool();
 }
 
 bool IsExtensionToggleEnabled(content::WebContents* web_contents) {
@@ -63,7 +64,7 @@ bool IsExtensionToggleEnabled(content::WebContents* web_contents) {
                 "!window.testing.extensionsV2Subpage.getElementById('"
                 "bgkmgpgeempochogfoddiobpbhdfgkdi')."
                 "disabled")
-      .value.GetBool();
+      .ExtractBool();
 }
 
 void NonBlockingDelay(base::TimeDelta delay) {
@@ -96,7 +97,8 @@ std::string GupdateResponse() {
 class BraveExtensionsManifestV2BrowserTest : public InProcessBrowserTest {
  public:
   BraveExtensionsManifestV2BrowserTest() {
-    feature_list_.InitAndEnableFeature(kExtensionsManifestV2);
+    feature_list_.InitAndEnableFeature(
+        extensions_mv2::features::kExtensionsManifestV2);
     BraveSettingsUI::ShouldExposeElementsForTesting() = true;
   }
 

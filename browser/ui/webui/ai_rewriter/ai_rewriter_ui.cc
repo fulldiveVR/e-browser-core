@@ -29,8 +29,10 @@
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser_finder.h"
 #include "chrome/browser/ui/webui/constrained_web_dialog_ui.h"
+#include "chrome/browser/ui/webui/theme_source.h"
 #include "components/grit/brave_components_resources.h"
 #include "components/grit/brave_components_webui_strings.h"
+#include "content/public/browser/url_data_source.h"
 #include "content/public/browser/web_contents.h"
 #include "content/public/browser/web_ui_data_source.h"
 #include "mojo/public/cpp/bindings/pending_receiver.h"
@@ -44,7 +46,7 @@ namespace ai_rewriter {
 
 AIRewriterUI::AIRewriterUI(content::WebUI* web_ui)
     : ConstrainedWebDialogUI(web_ui), profile_(Profile::FromWebUI(web_ui)) {
-  DCHECK(profile_);
+  CHECK(profile_);
   DCHECK(profile_->IsRegularProfile());
   DCHECK(features::IsAIRewriterEnabled());
 
@@ -56,6 +58,9 @@ AIRewriterUI::AIRewriterUI(content::WebUI* web_ui)
 
   ai_engine_ = ai_chat::AIChatServiceFactory::GetForBrowserContext(profile_)
                    ->GetDefaultAIEngine();
+
+  content::URLDataSource::Add(profile_,
+                              std::make_unique<ThemeSource>(profile_));
 }
 
 AIRewriterUI::~AIRewriterUI() = default;

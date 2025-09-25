@@ -4,11 +4,12 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 #define BRAVE_INIT BraveInit();
-#include "src/components/content_settings/core/browser/content_settings_registry.cc"
+#include <components/content_settings/core/browser/content_settings_registry.cc>
 #undef BRAVE_INIT
 
 #include "base/containers/fixed_flat_map.h"
 #include "brave/components/brave_shields/core/common/brave_shield_constants.h"
+#include "brave/components/brave_shields/core/common/brave_shields_settings_values.h"
 #include "components/content_settings/core/common/content_settings.h"
 #include "components/content_settings/core/common/content_settings.mojom.h"
 #include "net/base/features.h"
@@ -50,9 +51,10 @@ void ContentSettingsRegistry::BraveInit() {
            /*valid_settings=*/{CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK},
            WebsiteSettingsInfo::TOP_ORIGIN_ONLY_SCOPE,
            WebsiteSettingsRegistry::DESKTOP |
-               WebsiteSettingsRegistry::PLATFORM_ANDROID,
+               WebsiteSettingsRegistry::PLATFORM_ANDROID |
+               WebsiteSettingsRegistry::PLATFORM_IOS,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   Register(ContentSettingsType::BRAVE_TRACKERS, brave_shields::kTrackers,
            CONTENT_SETTING_BLOCK, WebsiteSettingsInfo::SYNCABLE,
@@ -60,9 +62,10 @@ void ContentSettingsRegistry::BraveInit() {
            /*valid_settings=*/{CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK},
            WebsiteSettingsInfo::TOP_ORIGIN_ONLY_SCOPE,
            WebsiteSettingsRegistry::DESKTOP |
-               WebsiteSettingsRegistry::PLATFORM_ANDROID,
+               WebsiteSettingsRegistry::PLATFORM_ANDROID |
+               WebsiteSettingsRegistry::PLATFORM_IOS,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   Register(ContentSettingsType::BRAVE_HTTPS_UPGRADE,
            brave_shields::kHTTPSUpgrades, CONTENT_SETTING_ASK,
@@ -73,7 +76,7 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IF_LESS_PERMISSIVE,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   Register(ContentSettingsType::BRAVE_HTTP_UPGRADABLE_RESOURCES,
            brave_shields::kHTTPUpgradableResources, CONTENT_SETTING_BLOCK,
@@ -83,7 +86,7 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   Register(ContentSettingsType::BRAVE_REFERRERS, brave_shields::kReferrers,
            CONTENT_SETTING_BLOCK, WebsiteSettingsInfo::SYNCABLE,
@@ -93,29 +96,24 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
+  /* The default value for BRAVE_COOKIES specified during registration isn't
+   * important because the GetCookieControlType function identifies the default
+   * by looking for a (*,*) pattern and uses the COOKIES value.
+   * BRAVE_COOKIES is registered with CONTENT_SETTING_ALLOW for consistency with
+   * the COOKIES type. */
   Register(
       ContentSettingsType::BRAVE_COOKIES, brave_shields::kCookies,
-      CONTENT_SETTING_DEFAULT, WebsiteSettingsInfo::SYNCABLE,
+      CONTENT_SETTING_ALLOW, WebsiteSettingsInfo::SYNCABLE,
       /*allowlisted_schemes=*/{kChromeUIScheme, kChromeDevToolsScheme},
-      /*valid_settings=*/{CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK},
+      /*valid_settings=*/
+      {CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK},
       WebsiteSettingsInfo::REQUESTING_ORIGIN_WITH_TOP_ORIGIN_EXCEPTIONS_SCOPE,
       WebsiteSettingsRegistry::DESKTOP |
           WebsiteSettingsRegistry::PLATFORM_ANDROID,
       ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-      ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
-
-  Register(
-      ContentSettingsType::BRAVE_COSMETIC_FILTERING,
-      brave_shields::kCosmeticFiltering, CONTENT_SETTING_DEFAULT,
-      WebsiteSettingsInfo::SYNCABLE, /*allowlisted_schemes=*/{},
-      /*valid_settings=*/{CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK},
-      WebsiteSettingsInfo::REQUESTING_ORIGIN_WITH_TOP_ORIGIN_EXCEPTIONS_SCOPE,
-      WebsiteSettingsRegistry::DESKTOP |
-          WebsiteSettingsRegistry::PLATFORM_ANDROID,
-      ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-      ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+      PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   Register(ContentSettingsType::BRAVE_FINGERPRINTING_V2,
            brave_shields::kFingerprintingV2, CONTENT_SETTING_ASK,
@@ -124,9 +122,10 @@ void ContentSettingsRegistry::BraveInit() {
            {CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK, CONTENT_SETTING_ASK},
            WebsiteSettingsInfo::TOP_ORIGIN_ONLY_SCOPE,
            WebsiteSettingsRegistry::DESKTOP |
-               WebsiteSettingsRegistry::PLATFORM_ANDROID,
+               WebsiteSettingsRegistry::PLATFORM_ANDROID |
+               WebsiteSettingsRegistry::PLATFORM_IOS,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   Register(ContentSettingsType::BRAVE_SHIELDS, brave_shields::kBraveShields,
            CONTENT_SETTING_ALLOW, WebsiteSettingsInfo::SYNCABLE,
@@ -134,25 +133,32 @@ void ContentSettingsRegistry::BraveInit() {
            /*valid_settings=*/{CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK},
            WebsiteSettingsInfo::TOP_ORIGIN_ONLY_SCOPE,
            WebsiteSettingsRegistry::DESKTOP |
-               WebsiteSettingsRegistry::PLATFORM_ANDROID,
+               WebsiteSettingsRegistry::PLATFORM_ANDROID |
+               WebsiteSettingsRegistry::PLATFORM_IOS,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   Register(ContentSettingsType::BRAVE_SPEEDREADER, "braveSpeedreader",
-           CONTENT_SETTING_DEFAULT, WebsiteSettingsInfo::SYNCABLE,
+           // CONTENT_SETTING_ASK is used because the default is to defer to
+           // the "use when possible" pref which looks at heuristics to
+           // determine if the site looks like "readable". This will not
+           // actually trigger a permission request
+           CONTENT_SETTING_ASK, WebsiteSettingsInfo::SYNCABLE,
            /*allowlisted_schemes=*/{},
-           /*valid_settings=*/{CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK},
+           /*valid_settings=*/
+           {CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK, CONTENT_SETTING_ASK},
            WebsiteSettingsInfo::TOP_ORIGIN_ONLY_SCOPE,
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   // Add CONTENT_SETTING_ASK for autoplay
   // Note ASK has been deprecated, only keeping it for
   // DiscardObsoleteAutoplayAsk test case
   content_settings_info_.erase(ContentSettingsType::AUTOPLAY);
-  website_settings_registry_->UnRegister(ContentSettingsType::AUTOPLAY);
+  permission_settings_registry_->Unregister(ContentSettingsType::AUTOPLAY);
+  website_settings_registry_->Unregister(ContentSettingsType::AUTOPLAY);
   Register(ContentSettingsType::AUTOPLAY, "autoplay", CONTENT_SETTING_ALLOW,
            WebsiteSettingsInfo::UNSYNCABLE, /*allowlisted_schemes=*/{},
            /*valid_settings=*/
@@ -161,7 +167,7 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   // Register ethereum default value as Ask.
   Register(ContentSettingsType::BRAVE_ETHEREUM, "brave_ethereum",
@@ -173,7 +179,7 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IF_LESS_PERMISSIVE,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   // Register solana default value as Ask.
   Register(ContentSettingsType::BRAVE_SOLANA, "brave_solana",
@@ -185,7 +191,7 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IF_LESS_PERMISSIVE,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   // Register cardano default value as Ask.
   Register(ContentSettingsType::BRAVE_CARDANO, "brave_cardano",
@@ -197,7 +203,7 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IF_LESS_PERMISSIVE,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   // Register google sign in social media permission default value as Ask.
   // This is INHERIT_IN_INCOGNITO because it sets cookie rules, and cookies
@@ -212,7 +218,7 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   Register(ContentSettingsType::BRAVE_REMEMBER_1P_STORAGE,
            "brave_remember_1p_storage",
@@ -225,7 +231,7 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   // Register localhost permission default value as Ask.
   Register(ContentSettingsType::BRAVE_LOCALHOST_ACCESS,
@@ -238,7 +244,7 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IF_LESS_PERMISSIVE,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   // Register AI chat permission default value as Ask.
   Register(ContentSettingsType::BRAVE_OPEN_AI_CHAT, "brave_open_ai_chat",
@@ -250,11 +256,13 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IF_LESS_PERMISSIVE,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_ORIGINS_ONLY);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_ORIGINS_ONLY);
 
   // Disable background sync by default (brave/brave-browser#4709)
   content_settings_info_.erase(ContentSettingsType::BACKGROUND_SYNC);
-  website_settings_registry_->UnRegister(ContentSettingsType::BACKGROUND_SYNC);
+  permission_settings_registry_->Unregister(
+      ContentSettingsType::BACKGROUND_SYNC);
+  website_settings_registry_->Unregister(ContentSettingsType::BACKGROUND_SYNC);
   Register(ContentSettingsType::BACKGROUND_SYNC, "background-sync",
            CONTENT_SETTING_BLOCK, WebsiteSettingsInfo::UNSYNCABLE,
            /*allowlisted_schemes=*/{},
@@ -263,11 +271,12 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_ORIGINS_ONLY);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_ORIGINS_ONLY);
 
   // Disable WebNFC by default
   content_settings_info_.erase(ContentSettingsType::NFC);
-  website_settings_registry_->UnRegister(ContentSettingsType::NFC);
+  permission_settings_registry_->Unregister(ContentSettingsType::NFC);
+  website_settings_registry_->Unregister(ContentSettingsType::NFC);
   Register(ContentSettingsType::NFC, "nfc-devices", CONTENT_SETTING_BLOCK,
            WebsiteSettingsInfo::UNSYNCABLE, /*allowlisted_primary_schemes=*/{},
            /*valid_settings=*/
@@ -276,11 +285,12 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IF_LESS_PERMISSIVE,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_ORIGINS_ONLY);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_ORIGINS_ONLY);
 
   // Disable motion sensors by default (brave/brave-browser#4789)
   content_settings_info_.erase(ContentSettingsType::SENSORS);
-  website_settings_registry_->UnRegister(ContentSettingsType::SENSORS);
+  permission_settings_registry_->Unregister(ContentSettingsType::SENSORS);
+  website_settings_registry_->Unregister(ContentSettingsType::SENSORS);
   Register(ContentSettingsType::SENSORS, "sensors", CONTENT_SETTING_BLOCK,
            WebsiteSettingsInfo::UNSYNCABLE, /*allowlisted_schemes=*/{},
            /*valid_settings=*/{CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK},
@@ -288,12 +298,14 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsRegistry::DESKTOP |
                WebsiteSettingsRegistry::PLATFORM_ANDROID,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
   // Disable idle detection by default (we used to disable feature flag
   // kIdleDetection, but it went away in cr121).
   content_settings_info_.erase(ContentSettingsType::IDLE_DETECTION);
-  website_settings_registry_->UnRegister(ContentSettingsType::IDLE_DETECTION);
+  permission_settings_registry_->Unregister(
+      ContentSettingsType::IDLE_DETECTION);
+  website_settings_registry_->Unregister(ContentSettingsType::IDLE_DETECTION);
   Register(ContentSettingsType::IDLE_DETECTION, "idle-detection",
            CONTENT_SETTING_BLOCK, WebsiteSettingsInfo::UNSYNCABLE,
            /*allowlisted_primary_schemes=*/{},
@@ -302,14 +314,18 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsInfo::TOP_ORIGIN_ONLY_SCOPE,
            WebsiteSettingsRegistry::ALL_PLATFORMS,
            ContentSettingsInfo::INHERIT_IF_LESS_PERMISSIVE,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_ORIGINS_ONLY);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_ORIGINS_ONLY);
 
   // Disable storage access by default (we used to disable feature flag
   // kPermissionStorageAccessAPI, but it went away in cr124).
   content_settings_info_.erase(ContentSettingsType::STORAGE_ACCESS);
-  website_settings_registry_->UnRegister(ContentSettingsType::STORAGE_ACCESS);
+  permission_settings_registry_->Unregister(
+      ContentSettingsType::STORAGE_ACCESS);
+  website_settings_registry_->Unregister(ContentSettingsType::STORAGE_ACCESS);
   content_settings_info_.erase(ContentSettingsType::TOP_LEVEL_STORAGE_ACCESS);
-  website_settings_registry_->UnRegister(
+  permission_settings_registry_->Unregister(
+      ContentSettingsType::TOP_LEVEL_STORAGE_ACCESS);
+  website_settings_registry_->Unregister(
       ContentSettingsType::TOP_LEVEL_STORAGE_ACCESS);
   Register(ContentSettingsType::STORAGE_ACCESS, "storage-access",
            CONTENT_SETTING_BLOCK, WebsiteSettingsInfo::UNSYNCABLE,
@@ -319,7 +335,7 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsInfo::REQUESTING_AND_TOP_SCHEMEFUL_SITE_SCOPE,
            WebsiteSettingsRegistry::ALL_PLATFORMS,
            ContentSettingsInfo::INHERIT_IF_LESS_PERMISSIVE,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
   Register(ContentSettingsType::TOP_LEVEL_STORAGE_ACCESS,
            "top-level-storage-access", CONTENT_SETTING_BLOCK,
            WebsiteSettingsInfo::UNSYNCABLE,
@@ -329,9 +345,10 @@ void ContentSettingsRegistry::BraveInit() {
            WebsiteSettingsInfo::REQUESTING_ORIGIN_AND_TOP_SCHEMEFUL_SITE_SCOPE,
            WebsiteSettingsRegistry::ALL_PLATFORMS,
            ContentSettingsInfo::INHERIT_IF_LESS_PERMISSIVE,
-           ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+           PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
 
-  website_settings_registry_->UnRegister(ContentSettingsType::HTTP_ALLOWED);
+  permission_settings_registry_->Unregister(ContentSettingsType::HTTP_ALLOWED);
+  website_settings_registry_->Unregister(ContentSettingsType::HTTP_ALLOWED);
   website_settings_registry_->Register(
       ContentSettingsType::HTTP_ALLOWED, "http-allowed", base::Value(),
       WebsiteSettingsInfo::UNSYNCABLE, WebsiteSettingsInfo::NOT_LOSSY,
@@ -347,15 +364,16 @@ void ContentSettingsRegistry::BraveInit() {
            static_cast<int32_t>(settings_type) + 1)) {
     const auto match = kSettingsNames.find(settings_type);
     if (match != kSettingsNames.end()) {
-      Register(settings_type, match->second, CONTENT_SETTING_BLOCK,
-               WebsiteSettingsInfo::UNSYNCABLE, /*allowlisted_schemes=*/{},
-               /*valid_settings=*/
-               {CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK},
-               WebsiteSettingsInfo::TOP_ORIGIN_ONLY_SCOPE,
-               WebsiteSettingsRegistry::DESKTOP |
-                   WebsiteSettingsRegistry::PLATFORM_ANDROID,
-               ContentSettingsInfo::INHERIT_IN_INCOGNITO,
-               ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+      Register(
+          settings_type, match->second, CONTENT_SETTING_BLOCK,
+          WebsiteSettingsInfo::UNSYNCABLE, /*allowlisted_schemes=*/{},
+          /*valid_settings=*/
+          {CONTENT_SETTING_ALLOW, CONTENT_SETTING_BLOCK},
+          WebsiteSettingsInfo::TOP_ORIGIN_ONLY_SCOPE,
+          WebsiteSettingsRegistry::DESKTOP |
+              WebsiteSettingsRegistry::PLATFORM_ANDROID,
+          ContentSettingsInfo::INHERIT_IN_INCOGNITO,
+          PermissionSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
     }
   }
 
@@ -367,6 +385,17 @@ void ContentSettingsRegistry::BraveInit() {
       WebsiteSettingsRegistry::DESKTOP |
           WebsiteSettingsRegistry::PLATFORM_ANDROID,
       WebsiteSettingsInfo::DONT_INHERIT_IN_INCOGNITO);
+
+  website_settings_registry_->Register(
+      ContentSettingsType::BRAVE_COSMETIC_FILTERING,
+      brave_shields::kCosmeticFiltering,
+      brave_shields::CosmeticFilteringSetting::DefaultValue(),
+      WebsiteSettingsInfo::SYNCABLE, WebsiteSettingsInfo::NOT_LOSSY,
+      WebsiteSettingsInfo::TOP_ORIGIN_ONLY_SCOPE,
+      WebsiteSettingsRegistry::DESKTOP |
+          WebsiteSettingsRegistry::PLATFORM_ANDROID |
+          WebsiteSettingsRegistry::PLATFORM_IOS,
+      WebsiteSettingsInfo::INHERIT_IN_INCOGNITO);
 }
 
 }  // namespace content_settings

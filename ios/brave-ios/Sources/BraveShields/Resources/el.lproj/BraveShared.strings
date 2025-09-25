@@ -110,7 +110,7 @@
 "DomainBlockedTitle" = "Ο Τομέας αποκλείστηκε";
 
 /* A description of what the Enable GPC toggle does */
-"EnableGPCDescription" = "Ζήτα από τους ιστότοπους να μην πωλούν ή μοιράζονται τα δεδομένα σου. [Μάθε περισσότερα](https://support.brave.com/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)";
+"EnableGPCDescription" = "Ζήτα από τους ιστότοπους να μην πωλούν ή μοιράζονται τα δεδομένα σου. [Μάθε περισσότερα](https://support.brave.app/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)";
 
 /* A label of the GPC toggle */
 "EnableGPCLabel" = "Ενεργοποίηση καθολικού ελέγχου απορρήτου";
@@ -199,7 +199,8 @@
 /* A list row label for accessing the shred settings screen */
 "ShredSiteData" = "Δεδομένα ιστότοπου καταστροφής";
 
-/* A message for a confirmation window that appears when a user clicks on 'Shred Data'. */
+/* A message for a confirmation window that appears when a user clicks on 'Shred All Tabs'.
+A message for a confirmation window that appears when a user clicks on 'Shred Data'. */
 "ShredSiteDataConfirmationMessage" = "Με την καταστροφή θα κλείσουν όλες οι καρτέλες που είναι ανοιχτές σε αυτόν τον ιστότοπο και θα διαγραφούν όλα τα δεδομένα του ιστότοπου. Η ενέργεια αυτή δεν μπορεί να αναιρεθεί.";
 
 /* A title for a confirmation window that appears when a user clicks on 'Shred Data' */

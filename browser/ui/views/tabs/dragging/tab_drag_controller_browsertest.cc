@@ -8,6 +8,8 @@
 #include "brave/browser/ui/tabs/features.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_tabstrip.h"
+#include "chrome/browser/ui/ui_features.h"
+#include "chrome/browser/ui/views/frame/browser_view.h"
 #include "chrome/browser/ui/views/tabs/tab_strip.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
@@ -18,7 +20,9 @@ class TabDragControllerTest : public InProcessBrowserTest {
   ~TabDragControllerTest() override = default;
 
   TabDragControllerTest() {
-    scoped_feature_list_.InitAndEnableFeature(tabs::features::kBraveSplitView);
+    scoped_feature_list_.InitWithFeatures(
+        /*enabled_features*/ {tabs::features::kBraveSplitView},
+        /*disabled_features*/ {::features::kSideBySide});
   }
 
  protected:
@@ -62,7 +66,7 @@ IN_PROC_BROWSER_TEST_F(TabDragControllerTest,
       ui::EventType::kMousePressed, tab_group_header_center,
       tab_group_header_center, base::TimeTicks(), ui::EF_LEFT_MOUSE_BUTTON,
       ui::EF_LEFT_MOUSE_BUTTON);
-  tab_strip->StopAnimating(true);
+  tab_strip->StopAnimating();
   tab_strip->MaybeStartDrag(tab_group_header, mouse_pressed_event,
                             tab_strip->GetSelectionModel());
 

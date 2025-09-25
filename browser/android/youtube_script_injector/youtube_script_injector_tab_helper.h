@@ -9,9 +9,11 @@
 #include "base/memory/weak_ptr.h"
 #include "base/supports_user_data.h"
 #include "base/values.h"
+#include "brave/components/script_injector/common/mojom/script_injector.mojom.h"
 #include "content/public/browser/render_frame_host.h"
 #include "content/public/browser/web_contents_observer.h"
 #include "content/public/browser/web_contents_user_data.h"
+#include "mojo/public/cpp/bindings/associated_remote.h"
 
 class YouTubeScriptInjectorTabHelper
     : public content::WebContentsObserver,
@@ -23,6 +25,7 @@ class YouTubeScriptInjectorTabHelper
   YouTubeScriptInjectorTabHelper& operator=(
       const YouTubeScriptInjectorTabHelper&) = delete;
   ~YouTubeScriptInjectorTabHelper() override;
+  bool IsYouTubeDomain(bool mobileOnly = false) const;
   bool IsYouTubeVideo(bool mobileOnly = false) const;
   void MaybeSetFullscreen();
 
@@ -34,9 +37,12 @@ class YouTubeScriptInjectorTabHelper
   bool IsPictureInPictureAvailable() const;
 
   // content::WebContentsObserver overrides:
+  void PrimaryPageChanged(content::Page& page) override;
+  void RenderFrameDeleted(content::RenderFrameHost* rfh) override;
+  void DidFinishNavigation(
+      content::NavigationHandle* navigation_handle) override;
   void PrimaryMainDocumentElementAvailable() override;
-  void DidToggleFullscreenModeForTab(bool entered_fullscreen,
-                                     bool will_cause_resize) override;
+  void MediaEffectivelyFullscreenChanged(bool is_fullscreen) override;
 
   WEB_CONTENTS_USER_DATA_KEY_DECL();
 
@@ -44,6 +50,13 @@ class YouTubeScriptInjectorTabHelper
   // Callback for when the fullscreen script completes.
   void OnFullscreenScriptComplete(content::GlobalRenderFrameHostToken token,
                                   base::Value value);
+
+  void EnsureBound(content::RenderFrameHost* rfh);
+
+  // The remote used to send the fullscreen script to the renderer.
+  mojo::AssociatedRemote<script_injector::mojom::ScriptInjector>
+      script_injector_remote_;
+  content::GlobalRenderFrameHostId bound_rfh_id_;
 
   base::WeakPtrFactory<YouTubeScriptInjectorTabHelper> weak_factory_{this};
 };

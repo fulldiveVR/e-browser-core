@@ -17,6 +17,7 @@
 #include "base/logging.h"
 #include "base/notreached.h"
 #include "base/strings/string_util.h"
+#include "base/strings/utf_string_conversions.h"
 #include "base/values.h"
 #include "brave/components/brave_wallet/browser/account_discovery_manager.h"
 #include "brave/components/brave_wallet/browser/bitcoin/bitcoin_wallet_service.h"
@@ -27,6 +28,7 @@
 #include "brave/components/brave_wallet/browser/eth_allowance_manager.h"
 #include "brave/components/brave_wallet/browser/json_rpc_service.h"
 #include "brave/components/brave_wallet/browser/keyring_service.h"
+#include "brave/components/brave_wallet/browser/network_manager.h"
 #include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/brave_wallet/browser/tx_service.h"
 #include "brave/components/brave_wallet/browser/wallet_data_files_installer.h"
@@ -44,6 +46,7 @@
 #include "components/prefs/scoped_user_pref_update.h"
 #include "components/regional_capabilities/regional_capabilities_prefs.h"
 #include "services/network/public/cpp/shared_url_loader_factory.h"
+#include "ui/base/clipboard/scoped_clipboard_writer.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "url/origin.h"
 
@@ -112,6 +115,36 @@ std::vector<mojom::BlockchainTokenPtr> EnsureNativeTokens(
   return tokens;
 }
 
+// For Bitcoin and Cardano we have always fixed selected network based on
+// testnet/mainnet account type. Don't need to get value from prefs.
+mojom::NetworkInfoPtr GetFixedSelectedNetworkForAccount(
+    NetworkManager& network_manager,
+    const mojom::AccountIdPtr& account_id) {
+  DCHECK(IsFixedSelectedNetworkCoin(account_id->coin));
+
+  if (account_id->coin == mojom::CoinType::BTC) {
+    if (IsBitcoinMainnetKeyring(account_id->keyring_id)) {
+      return network_manager.GetChain(mojom::kBitcoinMainnet,
+                                      mojom::CoinType::BTC);
+    } else {
+      return network_manager.GetChain(mojom::kBitcoinTestnet,
+                                      mojom::CoinType::BTC);
+    }
+  }
+
+  if (account_id->coin == mojom::CoinType::ADA) {
+    if (IsCardanoMainnetKeyring(account_id->keyring_id)) {
+      return network_manager.GetChain(mojom::kCardanoMainnet,
+                                      mojom::CoinType::ADA);
+    } else {
+      return network_manager.GetChain(mojom::kCardanoTestnet,
+                                      mojom::CoinType::ADA);
+    }
+  }
+
+  NOTREACHED();
+}
+
 }  // namespace
 
 struct PendingDecryptRequest {
@@ -127,6 +160,27 @@ struct PendingGetEncryptPublicKeyRequest {
   mojom::EthereumProvider::RequestCallback encryption_public_key_callback;
   base::Value encryption_public_key_id;
 };
+
+struct PendingSignMessageRequest {
+  PendingSignMessageRequest();
+  PendingSignMessageRequest(
+      mojom::SignMessageRequestPtr request,
+      BraveWalletService::SignMessageRequestCallback callback);
+  ~PendingSignMessageRequest();
+  PendingSignMessageRequest(PendingSignMessageRequest&& other);
+
+  mojom::SignMessageRequestPtr request;
+  BraveWalletService::SignMessageRequestCallback callback;
+};
+
+PendingSignMessageRequest::PendingSignMessageRequest() = default;
+PendingSignMessageRequest::PendingSignMessageRequest(
+    mojom::SignMessageRequestPtr request,
+    BraveWalletService::SignMessageRequestCallback callback)
+    : request(std::move(request)), callback(std::move(callback)) {}
+PendingSignMessageRequest::~PendingSignMessageRequest() = default;
+PendingSignMessageRequest::PendingSignMessageRequest(
+    PendingSignMessageRequest&& other) = default;
 
 BraveWalletService::BraveWalletService(
     scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
@@ -163,6 +217,11 @@ BraveWalletService::BraveWalletService(
 
   if (IsCardanoEnabled()) {
     cardano_wallet_service_ = std::make_unique<CardanoWalletService>(
+        *keyring_service(), *network_manager(), url_loader_factory);
+  }
+
+  if (IsPolkadotEnabled()) {
+    polkadot_wallet_service_ = std::make_unique<PolkadotWalletService>(
         *keyring_service(), *network_manager(), url_loader_factory);
   }
 
@@ -264,6 +323,14 @@ void BraveWalletService::Bind(
     mojo::PendingReceiver<mojom::BitcoinWalletService> receiver) {
   if (GetBitcoinWalletService()) {
     GetBitcoinWalletService()->Bind(std::move(receiver));
+  }
+}
+
+template <>
+void BraveWalletService::Bind(
+    mojo::PendingReceiver<mojom::PolkadotWalletService> receiver) {
+  if (GetPolkadotWalletService()) {
+    GetPolkadotWalletService()->Bind(std::move(receiver));
   }
 }
 
@@ -651,14 +718,9 @@ BraveWalletService::GetNetworkForSelectedAccountOnActiveOriginSync() {
     return {};
   }
 
-  if (selected_account->account_id->coin == mojom::CoinType::BTC) {
-    if (IsBitcoinMainnetKeyring(selected_account->account_id->keyring_id)) {
-      return network_manager()->GetChain(mojom::kBitcoinMainnet,
-                                         mojom::CoinType::BTC);
-    } else {
-      return network_manager()->GetChain(mojom::kBitcoinTestnet,
-                                         mojom::CoinType::BTC);
-    }
+  if (IsFixedSelectedNetworkCoin(selected_account->account_id->coin)) {
+    return GetFixedSelectedNetworkForAccount(*network_manager(),
+                                             selected_account->account_id);
   }
 
   return json_rpc_service_->GetNetworkSync(selected_account->account_id->coin,
@@ -672,8 +734,8 @@ mojom::NetworkInfoPtr BraveWalletService::GetNetworkForAccountOnOriginSync(
     return nullptr;
   }
 
-  if (!HasPermissionSync(origin, account)) {
-    return nullptr;
+  if (IsFixedSelectedNetworkCoin(account->coin)) {
+    return GetFixedSelectedNetworkForAccount(*network_manager(), account);
   }
 
   return json_rpc_service_->GetNetworkSync(account->coin, origin);
@@ -691,8 +753,8 @@ bool BraveWalletService::SetNetworkForAccountOnOriginSync(
     return false;
   }
 
-  if (!HasPermissionSync(origin, account)) {
-    return false;
+  if (IsFixedSelectedNetworkCoin(account->coin)) {
+    return true;
   }
 
   return json_rpc_service_->SetNetwork(chain_id, account->coin, origin);
@@ -1117,6 +1179,10 @@ BitcoinWalletService* BraveWalletService::GetBitcoinWalletService() {
   return bitcoin_wallet_service_.get();
 }
 
+PolkadotWalletService* BraveWalletService::GetPolkadotWalletService() {
+  return polkadot_wallet_service_.get();
+}
+
 ZCashWalletService* BraveWalletService::GetZcashWalletService() {
   return zcash_wallet_service_.get();
 }
@@ -1133,19 +1199,18 @@ mojom::OriginInfoPtr BraveWalletService::GetActiveOriginSync() {
   return MakeOriginInfo(delegate_->GetActiveOrigin().value_or(url::Origin()));
 }
 
+std::vector<mojom::SignMessageRequestPtr>
+BraveWalletService::GetPendingSignMessageRequestsSync() {
+  std::vector<mojom::SignMessageRequestPtr> requests;
+  for (const auto& request : sign_message_requests_) {
+    requests.push_back(request.request.Clone());
+  }
+  return requests;
+}
+
 void BraveWalletService::GetPendingSignMessageRequests(
     GetPendingSignMessageRequestsCallback callback) {
-  std::vector<mojom::SignMessageRequestPtr> requests;
-  if (sign_message_requests_.empty()) {
-    std::move(callback).Run(std::move(requests));
-    return;
-  }
-
-  for (const auto& request : sign_message_requests_) {
-    requests.push_back(request.Clone());
-  }
-
-  std::move(callback).Run(std::move(requests));
+  std::move(callback).Run(GetPendingSignMessageRequestsSync());
 }
 
 void BraveWalletService::NotifySignMessageRequestProcessed(
@@ -1154,16 +1219,14 @@ void BraveWalletService::NotifySignMessageRequestProcessed(
     mojom::EthereumSignatureBytesPtr hw_signature,
     const std::optional<std::string>& error) {
   if (sign_message_requests_.empty() ||
-      sign_message_requests_.front()->id != id) {
-    VLOG(1) << "id: " << id << " is not expected, should be "
-            << sign_message_requests_.front()->id;
+      sign_message_requests_.front().request->id != id) {
     return;
   }
-  auto callback = std::move(sign_message_callbacks_.front());
-  sign_message_requests_.pop_front();
-  sign_message_callbacks_.pop_front();
 
-  std::move(callback).Run(approved, std::move(hw_signature), error);
+  auto request = std::move(sign_message_requests_.front());
+  sign_message_requests_.pop_front();
+
+  std::move(request.callback).Run(approved, std::move(hw_signature), error);
 }
 
 void BraveWalletService::GetPendingSignMessageErrors(
@@ -1206,6 +1269,26 @@ void BraveWalletService::GetPendingSignSolTransactionsRequests(
   std::move(callback).Run(std::move(requests));
 }
 
+void BraveWalletService::GetPendingSignCardanoTransactionRequests(
+    GetPendingSignCardanoTransactionRequestsCallback callback) {
+  std::vector<mojom::SignCardanoTransactionRequestPtr> requests;
+  if (sign_cardano_transaction_requests_.empty()) {
+    std::move(callback).Run(std::move(requests));
+    return;
+  }
+
+  for (const auto& request : sign_cardano_transaction_requests_) {
+    requests.push_back(request.Clone());
+  }
+
+  std::move(callback).Run(std::move(requests));
+}
+
+const base::circular_deque<mojom::SignCardanoTransactionRequestPtr>&
+BraveWalletService::GetPendingSignCardanoTransactionRequestsSync() const {
+  return sign_cardano_transaction_requests_;
+}
+
 void BraveWalletService::NotifySignSolTransactionsRequestProcessed(
     bool approved,
     int id,
@@ -1222,6 +1305,21 @@ void BraveWalletService::NotifySignSolTransactionsRequestProcessed(
   sign_sol_transactions_callbacks_.pop_front();
 
   std::move(callback).Run(approved, std::move(hw_signatures), error);
+}
+
+void BraveWalletService::NotifySignCardanoTransactionRequestProcessed(
+    bool approved,
+    int id,
+    const std::optional<std::string>& error) {
+  if (sign_cardano_transaction_requests_.empty() ||
+      sign_cardano_transaction_requests_.front()->id != id) {
+    return;
+  }
+  auto callback = std::move(sign_cardano_transaction_callbacks_.front());
+  sign_cardano_transaction_requests_.pop_front();
+  sign_cardano_transaction_callbacks_.pop_front();
+
+  std::move(callback).Run(approved, error);
 }
 
 void BraveWalletService::AddObserver(
@@ -1317,11 +1415,11 @@ void BraveWalletService::AddSignMessageRequest(
     SignMessageRequestCallback callback) {
   DCHECK(CoinSupportsDapps(request->coin));
 
-  if (request->id < 0) {
-    request->id = sign_message_id_++;
-  }
-  sign_message_requests_.push_back(std::move(request));
-  sign_message_callbacks_.push_back(std::move(callback));
+  DCHECK_EQ(request->id, 0);
+  request->id = sign_message_id_++;
+  sign_message_requests_.emplace_back(std::move(request), std::move(callback));
+
+  sign_message_added_callback_list_for_testing_.Notify();
 }
 
 void BraveWalletService::AddSignMessageError(mojom::SignMessageErrorPtr error) {
@@ -1339,6 +1437,18 @@ void BraveWalletService::AddSignSolTransactionsRequest(
   if (sign_sol_txs_request_added_cb_for_testing_) {
     std::move(sign_sol_txs_request_added_cb_for_testing_).Run();
   }
+}
+
+void BraveWalletService::AddSignCardanoTransactionRequest(
+    mojom::SignCardanoTransactionRequestPtr request,
+    SignCardanoTransactionRequestCallback callback) {
+  if (request->id < 0) {
+    request->id = sign_cardano_transactions_id_++;
+  }
+  sign_cardano_transaction_requests_.push_back(std::move(request));
+  sign_cardano_transaction_callbacks_.push_back(std::move(callback));
+
+  sign_transaction_added_callback_list_for_testing_.Notify();
 }
 
 mojom::SignSolTransactionsRequestPtr
@@ -1814,10 +1924,10 @@ void BraveWalletService::CancelAllSuggestedTokenCallbacks() {
 
 void BraveWalletService::CancelAllSignMessageCallbacks() {
   while (!sign_message_requests_.empty()) {
-    auto callback = std::move(sign_message_callbacks_.front());
+    auto request = std::move(sign_message_requests_.front());
     sign_message_requests_.pop_front();
-    sign_message_callbacks_.pop_front();
-    std::move(callback).Run(false, nullptr, std::nullopt);
+
+    std::move(request.callback).Run(false, nullptr, std::nullopt);
   }
 }
 
@@ -1887,6 +1997,9 @@ void BraveWalletService::Reset() {
   if (cardano_wallet_service_) {
     cardano_wallet_service_->Reset();
   }
+  if (polkadot_wallet_service_) {
+    polkadot_wallet_service_->Reset();
+  }
 
   // Clear BraveWalletService
   ClearBraveWalletServicePrefs(profile_prefs_);
@@ -1939,6 +2052,38 @@ BraveWalletService::GetTransactionSimulationOptInStatusSync() {
 void BraveWalletService::SetTransactionSimulationOptInStatus(
     mojom::BlowfishOptInStatus status) {
   ::brave_wallet::SetTransactionSimulationOptInStatus(profile_prefs_, status);
+}
+
+void BraveWalletService::WriteToClipboard(const std::string& text,
+                                          bool is_sensitive) {
+  // We manually disable the iOS builds here because of an upstream bug in how
+  // Chromium is adding sources to the clipboard component. It only
+  // conditionally adds the iOS sources when use_blink=true, which unfortunately
+  // leads to a whole slew of unresolved symbols during linking.
+  // https://source.chromium.org/chromium/chromium/src/+/066b9c51bfb0a1eddcfefa7aa809348ea181f8ac:ui/base/clipboard/BUILD.gn;l=21-27
+#if !BUILDFLAG(IS_IOS)
+  ui::ScopedClipboardWriter scw(ui::ClipboardBuffer::kCopyPaste);
+  std::u16string out;
+  base::UTF8ToUTF16(text.data(), text.size(), &out);
+  scw.WriteText(out);
+  if (is_sensitive) {
+    scw.MarkAsConfidential();
+  }
+#else
+  NOTREACHED();
+#endif
+}
+
+base::CallbackListSubscription
+BraveWalletService::RegisterSignMessageRequestAddedCallback(
+    base::RepeatingClosure cb) {
+  return sign_message_added_callback_list_for_testing_.Add(std::move(cb));
+}
+
+base::CallbackListSubscription
+BraveWalletService::RegisterSignTransactionRequestAddedCallback(
+    base::RepeatingClosure cb) {
+  return sign_transaction_added_callback_list_for_testing_.Add(std::move(cb));
 }
 
 }  // namespace brave_wallet

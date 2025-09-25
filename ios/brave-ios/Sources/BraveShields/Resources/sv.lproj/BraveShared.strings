@@ -110,7 +110,7 @@
 "DomainBlockedTitle" = "Blockerad domän";
 
 /* A description of what the Enable GPC toggle does */
-"EnableGPCDescription" = "Be webbplatser att inte sälja eller dela dina uppgifter. [Läs mer](https://support.brave.com/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)";
+"EnableGPCDescription" = "Be webbplatser att inte sälja eller dela dina uppgifter. [Läs mer](https://support.brave.app/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)";
 
 /* A label of the GPC toggle */
 "EnableGPCLabel" = "Aktivera Global Privacy Control";
@@ -199,7 +199,8 @@
 /* A list row label for accessing the shred settings screen */
 "ShredSiteData" = "Ta bort webbplatsdata";
 
-/* A message for a confirmation window that appears when a user clicks on 'Shred Data'. */
+/* A message for a confirmation window that appears when a user clicks on 'Shred All Tabs'.
+A message for a confirmation window that appears when a user clicks on 'Shred Data'. */
 "ShredSiteDataConfirmationMessage" = "Borttagning stänger alla flikar som är öppna för den här webbplatsen och tar bort alla webbplatsdata. Detta kan inte ångras.";
 
 /* A title for a confirmation window that appears when a user clicks on 'Shred Data' */

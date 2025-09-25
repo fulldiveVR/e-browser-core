@@ -5,8 +5,8 @@
 
 #include "brave/browser/brave_rewards/test/util/rewards_browsertest_context_util.h"
 
-#include "base/strings/stringprintf.h"
 #include "content/public/test/browser_test_utils.h"
+#include "third_party/abseil-cpp/absl/strings/str_format.h"
 
 namespace brave_rewards::test_util {
 
@@ -345,7 +345,7 @@ void DragAndDrop(content::WebContents* context,
     return;
   }
 
-  const std::string js_code = base::StringPrintf(
+  const std::string js_code = absl::StrFormat(
       R"(
         var triggerDragAndDrop = function (selectorDrag, selectorDrop) {
 
@@ -401,7 +401,7 @@ void DragAndDrop(content::WebContents* context,
           '%s',
           '%s')
       )",
-      drag_selector.c_str(), drop_selector.c_str());
+      drag_selector, drop_selector);
   content::EvalJsResult jsResult =
       EvalJs(context, js_code, content::EXECUTE_SCRIPT_NO_RESOLVE_PROMISES,
              content::ISOLATED_WORLD_ID_CONTENT_END);
@@ -414,8 +414,9 @@ std::vector<double> GetSiteBannerTipOptions(content::WebContents* context) {
   }
 
   WaitForElementToAppear(context, "[data-test-id=tip-amount-options]");
-  auto options = content::EvalJs(context,
-                                 R"(
+  content::EvalJsResult options =
+      content::EvalJs(context,
+                      R"(
           const delay = t => new Promise(resolve => setTimeout(resolve, t));
           delay(500).then(() => Array.from(
             document.querySelectorAll(
@@ -423,12 +424,11 @@ std::vector<double> GetSiteBannerTipOptions(content::WebContents* context) {
             )
           ).map(node => parseFloat(node.dataset.optionValue)))
       )",
-                                 content::EXECUTE_SCRIPT_DEFAULT_OPTIONS,
-                                 content::ISOLATED_WORLD_ID_CONTENT_END)
-                     .ExtractList();
+                      content::EXECUTE_SCRIPT_DEFAULT_OPTIONS,
+                      content::ISOLATED_WORLD_ID_CONTENT_END);
 
   std::vector<double> result;
-  for (const auto& value : options) {
+  for (const auto& value : options.ExtractList()) {
     result.push_back(value.GetDouble());
   }
   return result;

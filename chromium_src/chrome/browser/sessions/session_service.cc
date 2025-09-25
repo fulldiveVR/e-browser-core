@@ -4,6 +4,7 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 #include "brave/components/constants/pref_names.h"
+#include "components/prefs/pref_service.h"
 
 // Prevent detached tab has unnecessary tab restore steps.
 // When last window's last tab is closed, |has_open_trackable_browsers_|
@@ -14,6 +15,6 @@
 #define BRAVE_SESSION_SERVICE_TAB_CLOSED \
   if (profile()->GetPrefs()->GetBoolean(kEnableClosingLastTab))
 
-#include "src/chrome/browser/sessions/session_service.cc"
+#include <chrome/browser/sessions/session_service.cc>
 
 #undef BRAVE_SESSION_SERVICE_TAB_CLOSED

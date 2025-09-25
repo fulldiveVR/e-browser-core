@@ -15,8 +15,11 @@
 #include "base/functional/callback.h"
 #include "base/functional/callback_forward.h"
 #include "base/types/expected.h"
+#include "brave/components/ai_chat/core/browser/associated_content_manager.h"
 #include "brave/components/ai_chat/core/browser/types.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
+
+class PrefService;
 
 namespace ai_chat {
 class Tool;
@@ -71,24 +74,24 @@ class EngineConsumer {
 
   static std::string GetPromptForEntry(const mojom::ConversationTurnPtr& entry);
 
-  explicit EngineConsumer(ModelService* model_service);
+  EngineConsumer(ModelService* model_service, PrefService* prefs);
   EngineConsumer(const EngineConsumer&) = delete;
   EngineConsumer& operator=(const EngineConsumer&) = delete;
   virtual ~EngineConsumer();
 
   virtual void GenerateQuestionSuggestions(
-      const bool& is_video,
-      const std::string& page_content,
+      PageContents page_contents,
       const std::string& selected_language,
       SuggestedQuestionsCallback callback) = 0;
 
   virtual void GenerateAssistantResponse(
-      const bool& is_video,
-      const std::string& page_content,
+      PageContentsMap&& page_contents,
       const ConversationHistory& conversation_history,
       const std::string& selected_language,
+      bool is_temporary_chat,
       const std::vector<base::WeakPtr<Tool>>& tools,
       std::optional<std::string_view> preferred_tool_name,
+      mojom::ConversationCapability conversation_capability,
       GenerationDataCallback data_received_callback,
       GenerationCompletedCallback completed_callback) = 0;
 
@@ -97,6 +100,15 @@ class EngineConsumer {
       const std::string& question,
       const std::string& selected_language,
       GenerationDataCallback received_callback,
+      GenerationCompletedCallback completed_callback) {}
+
+  // Generate a conversation title based on the conversation history.
+  // Only called for engines that return true for
+  // RequiresClientSideTitleGeneration(). Conversation history should ONLY
+  // contain the first turn and completed assistant response.
+  virtual void GenerateConversationTitle(
+      const PageContentsMap& page_contents,
+      const ConversationHistory& conversation_history,
       GenerationCompletedCallback completed_callback) {}
 
   // Prevent indirect prompt injections being sent to the AI model.
@@ -111,6 +123,10 @@ class EngineConsumer {
   // each time the callback is run (use |false|) or whether it provides a delta
   // from the previous run (use |true|).
   virtual bool SupportsDeltaTextResponses() const;
+
+  // Whether this engine requires client-side conversation title generation.
+  // Returns true for OAI engines, false for conversation API (server-side).
+  virtual bool RequiresClientSideTitleGeneration() const;
 
   virtual void UpdateModelOptions(const mojom::ModelOptions& options) = 0;
 
@@ -130,6 +146,7 @@ class EngineConsumer {
   }
 
   static std::string GetImageDataURL(base::span<uint8_t> image_data);
+  static std::string GetPdfDataURL(base::span<uint8_t> pdf_data);
 
  protected:
   // Check if we should call GenerationCompletedCallback early based on the
@@ -140,6 +157,7 @@ class EngineConsumer {
   uint32_t max_associated_content_length_ = 0;
   std::string model_name_ = "";
   raw_ptr<ModelService> model_service_;
+  raw_ptr<PrefService> prefs_ = nullptr;
 };
 
 }  // namespace ai_chat

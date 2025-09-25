@@ -32,7 +32,7 @@ source_set("brave_wallet") {
   deps = [
     ":wallet_mojom_wrappers",
     "//base",
-    "//brave/base/mac",
+    "//brave/base/apple",
     "//brave/components/brave_wallet/browser",
     "//brave/components/brave_wallet/browser:constants",
     "//brave/components/brave_wallet/common",
@@ -57,6 +57,7 @@ ios_objc_mojom_wrappers("wallet_mojom_wrappers") {
   ]
   generate_namespace = false
   exclude_types = [
+    "CardanoProvider",
     "PageHandlerFactory",
     "PanelHandlerFactory",
   ]

@@ -13,6 +13,7 @@
 #include "base/check.h"
 #include "base/check_op.h"
 #include "brave/browser/extensions/manifest_v2/brave_extensions_manifest_v2_installer.h"
+#include "brave/browser/extensions/manifest_v2/brave_hosted_extensions.h"
 #include "brave/grit/brave_generated_resources.h"
 #include "chrome/browser/extensions/webstore_install_with_prompt.h"
 #include "chrome/browser/profiles/profile.h"
@@ -20,6 +21,7 @@
 #include "extensions/browser/extension_registrar.h"
 #include "extensions/browser/extension_registry.h"
 #include "extensions/browser/extension_system.h"
+#include "services/network/public/cpp/shared_url_loader_factory.h"
 #include "ui/base/l10n/l10n_util.h"
 
 BASE_FEATURE(kExtensionsManifestV2,

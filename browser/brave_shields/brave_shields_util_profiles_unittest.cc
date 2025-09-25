@@ -35,8 +35,7 @@ namespace brave_shields {
 
 class BraveShieldsUtilProfilesTest : public testing::Test {
  public:
-  BraveShieldsUtilProfilesTest()
-      : local_state_(TestingBrowserProcess::GetGlobal()) {}
+  BraveShieldsUtilProfilesTest() = default;
   ~BraveShieldsUtilProfilesTest() override = default;
 
   TestingProfile* regular_profile() { return &profile_; }
@@ -83,7 +82,6 @@ class BraveShieldsUtilProfilesTest : public testing::Test {
  private:
   content::BrowserTaskEnvironment task_environment_;
   TestingProfile profile_;
-  ScopedTestingLocalState local_state_;
 };
 
 TEST_F(BraveShieldsUtilProfilesTest, SetBraveShieldsEnabled) {

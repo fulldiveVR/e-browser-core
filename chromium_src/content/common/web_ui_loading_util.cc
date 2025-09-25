@@ -14,8 +14,8 @@ namespace {
 network::mojom::URLResponseHeadPtr UseContentLengthFromHeaders(
     network::mojom::URLResponseHeadPtr headers) {
   if (auto content_length = headers->headers->GetContentLength();
-      content_length != -1) {
-    headers->content_length = content_length;
+      content_length && !content_length->is_negative()) {
+    headers->content_length = content_length->InBytes();
   }
   return headers;
 }
@@ -26,5 +26,5 @@ network::mojom::URLResponseHeadPtr UseContentLengthFromHeaders(
 #define OnReceiveResponse(headers, ...) \
   OnReceiveResponse(UseContentLengthFromHeaders(headers), __VA_ARGS__)
 
-#include "src/content/common/web_ui_loading_util.cc"
+#include <content/common/web_ui_loading_util.cc>
 #undef OnReceiveResponse

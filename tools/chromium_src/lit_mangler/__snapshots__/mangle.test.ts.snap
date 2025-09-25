@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`mangled files should have up to date snapshots ./chromium_src/chrome/browser/resources/app_home/app_home_empty_page.html.ts.lit_mangler.ts should match snapshot 1`] = `
+"===================================================================
+--- ../chrome/browser/resources/app_home/app_home_empty_page.html.ts
++++ gen/chrome/browser/resources/app_home/preprocessed/app_home_empty_page.html.ts
+@@ -6,10 +6,9 @@
+   return html\`<!--_html_template_start_-->
+ <div class=\\"container\\">
+   <img src=\\"chrome://resources/images/apps_home_empty_238x170.svg\\">
+     <p>$i18n{appAppearanceLabel}</p>
+-    <a href=\\"https://support.google.com/chrome?p=install_web_apps\\"
+-        target=\\"_blank\\">
++    <a href=\\"https://support.brave.app/hc/en-us/articles/39077114659597\\" target=\\"_blank\\">
+       <cr-button>$i18n{learnToInstall}</cr-button>
+     </a>
+ </div>
+ <!--_html_template_end_-->\`;
+"
+`;
+
 exports[`mangled files should have up to date snapshots ./chromium_src/chrome/browser/resources/app_settings/window_mode_item.html.ts.lit_mangler.ts should match snapshot 1`] = `
 "===================================================================
 --- ../chrome/browser/resources/app_settings/window_mode_item.html.ts
@@ -116,8 +135,8 @@ exports[`mangled files should have up to date snapshots ./chromium_src/chrome/br
          $i18n{remove}
        </cr-button>
        \${this.shouldShowErrorsButton_() ? html\`
-         <cr-button id=\\"errors-button\\" @click=\\"\${this.onErrorsClick_}\\"
-@@ -168,24 +163,14 @@
+         <cr-button id=\\"errors-button\\"
+@@ -172,25 +167,14 @@
        <cr-button id=\\"terminated-reload-button\\" @click=\\"\${this.onReloadClick_}\\"
            aria-describedby=\\"a11yAssociation\\" class=\\"action-button\\">
          $i18n{itemReload}
@@ -129,9 +148,10 @@ exports[`mangled files should have up to date snapshots ./chromium_src/chrome/br
 -        icon-aria-label=\\"$i18n{parentDisabledPermissions}\\">
 +    <cr-tooltip-icon id=\\"parentDisabledPermissionsToolTip\\" ?hidden=\\"\${!this.data.disableReasons.parentDisabledPermissions}\\" tooltip-text=\\"$i18n{parentDisabledPermissions}\\" icon-class=\\"cr20:kite\\" icon-aria-label=\\"$i18n{parentDisabledPermissions}\\">
      </cr-tooltip-icon>
--    <cr-tooltip id=\\"enable-toggle-tooltip\\" for=\\"enableToggle\\" position=\\"left\\"
+-    <cr-tooltip id=\\"enable-toggle-tooltip\\" for=\\"enableToggle\\"
+-        position=\\"\${this.enableToggleTooltipPosition_}\\"
 -        aria-hidden=\\"true\\" animation-delay=\\"0\\" fit-to-visible-bounds>
-+    <cr-tooltip id=\\"enable-toggle-tooltip\\" for=\\"enableToggle\\" position=\\"left\\" aria-hidden=\\"true\\" animation-delay=\\"0\\" fit-to-visible-bounds=\\"\\">
++    <cr-tooltip id=\\"enable-toggle-tooltip\\" for=\\"enableToggle\\" position=\\"\${this.enableToggleTooltipPosition_}\\" aria-hidden=\\"true\\" animation-delay=\\"0\\" fit-to-visible-bounds=\\"\\">
        \${this.getEnableToggleTooltipText_()}
      </cr-tooltip>
 -    <cr-toggle id=\\"enableToggle\\"
@@ -152,7 +172,7 @@ exports[`mangled files should have up to date snapshots ./chromium_src/chrome/br
 "===================================================================
 --- ../chrome/browser/resources/side_panel/customize_chrome/app.html.ts
 +++ gen/chrome/browser/resources/side_panel/customize_chrome/preprocessed/app.html.ts
-@@ -4,31 +4,24 @@
+@@ -4,31 +4,25 @@
  
  export function getHtml(this: AppElement) {
    // clang-format off
@@ -174,7 +194,9 @@ exports[`mangled files should have up to date snapshots ./chromium_src/chrome/br
 -          id=\\"appearanceElement\\">
 +      <customize-chrome-appearance @edit-theme-click=\\"\${this.onEditThemeClick_}\\" @wallpaper-search-click=\\"\${this.onWallpaperSearchSelect_}\\" id=\\"appearanceElement\\">
        </customize-chrome-appearance>
-     </div>
+-    </div>
++    
++      <brave-darker-theme-toggle></brave-darker-theme-toggle></div>
      <hr class=\\"sp-cards-separator\\">
 -    <cr-button id=\\"toolbarButton\\" class=\\"section sp-card\\"
 -        @click=\\"\${this.onToolbarCustomizationButtonClick_}\\">
@@ -193,7 +215,7 @@ exports[`mangled files should have up to date snapshots ./chromium_src/chrome/br
       \${this.isSourceTabFirstPartyNtp_() ? html\`<hr class=\\"sp-cards-separator\\">
      <div id=\\"shortcuts\\" class=\\"section sp-card\\">
        <sp-heading hide-back-button>
-@@ -98,10 +91,9 @@
+@@ -98,10 +92,9 @@
      <customize-chrome-wallpaper-search @back-click=\\"\${this.onBackClick_}\\"
          page-name=\\"wallpaper-search\\" id=\\"wallpaperSearchPage\\">
      </customize-chrome-wallpaper-search>
@@ -389,14 +411,15 @@ exports[`mangled files should have up to date snapshots ./chromium_src/chrome/br
 "===================================================================
 --- ../chrome/browser/resources/signin/profile_picker/profile_card.html.ts
 +++ gen/chrome/browser/resources/signin/profile_picker/preprocessed/profile_card.html.ts
-@@ -5,53 +5,37 @@
+@@ -5,54 +5,37 @@
  
  export function getHtml(this: ProfileCardElement) {
    return html\`<!--_html_template_start_-->
  <div id=\\"profileCardContainer\\">
 -  <cr-button id=\\"profileCardButton\\" @click=\\"\${this.onProfileClick_}\\"
+-      ?disabled=\\"\${this.disabled}\\"
 -      aria-label=\\"\${this.profileState.profileCardButtonLabel}\\">
-+  <cr-button id=\\"profileCardButton\\" @click=\\"\${this.onProfileClick_}\\" aria-label=\\"\${this.profileState.profileCardButtonLabel}\\" class=\\"plain\\">
++  <cr-button id=\\"profileCardButton\\" @click=\\"\${this.onProfileClick_}\\" ?disabled=\\"\${this.disabled}\\" aria-label=\\"\${this.profileState.profileCardButtonLabel}\\" class=\\"plain\\">
      <div id=\\"avatarContainer\\">
        <img class=\\"profile-avatar\\" alt=\\"\\" .src=\\"\${this.profileState.avatarIcon}\\">
 -      <div id=\\"iconContainer\\"
@@ -437,7 +460,7 @@ exports[`mangled files should have up to date snapshots ./chromium_src/chrome/br
    </div>
 -  <profile-card-menu .profileState=\\"\${this.profileState}\\"
 -      ?hidden=\\"\${isGlicVersion()}\\">
-+  <profile-card-menu .profilestate=\\"\${this.profileState}\\" ?hidden=\\"\${isGlicVersion()}\\">
++  <profile-card-menu .profileState=\\"\${this.profileState}\\" ?hidden=\\"\${isGlicVersion()}\\">
    </profile-card-menu>
  </div>
 -<cr-tooltip id=\\"gaiaNameTooltip\\" for=\\"gaiaName\\" manual-mode offset=\\"0\\"
@@ -459,33 +482,31 @@ exports[`mangled files should have up to date snapshots ./chromium_src/chrome/br
 "===================================================================
 --- ../chrome/browser/resources/signin/profile_picker/profile_picker_main_view.html.ts
 +++ gen/chrome/browser/resources/signin/profile_picker/preprocessed/profile_picker_main_view.html.ts
-@@ -14,49 +14,35 @@
+@@ -14,10 +14,9 @@
      }
    }()}
  <div class=\\"flex-container\\">
    <div class=\\"title-container\\">
 -    <img id=\\"picker-logo\\" @click=\\"\${this.onProductLogoClick_}\\"
 -        src=\\"picker_logo.svg\\" role=\\"presentation\\">
--    <h1 class=\\"title\\" .innerHTML=\\"\${this.getTitle_()}\\"></h1>
--    <div class=\\"subtitle\\" .innerHTML=\\"\${this.getSubtitle_()}\\"></div>
 +    <img id=\\"picker-logo\\" @click=\\"\${this.onProductLogoClick_}\\" src=\\"picker_logo.svg\\" role=\\"presentation\\">
-+    <h1 class=\\"title\\" .innerhtml=\\"\${this.getTitle_()}\\"></h1>
-+    <div class=\\"subtitle\\" .innerhtml=\\"\${this.getSubtitle_()}\\"></div>
+     <h1 class=\\"title\\" .innerHTML=\\"\${this.getTitle_()}\\"></h1>
+     <div class=\\"subtitle\\" .innerHTML=\\"\${this.getSubtitle_()}\\"></div>
    </div>
    <div id=\\"profilesWrapper\\" ?hidden=\\"\${(this.shouldHideProfilesWrapper_())}\\">
-     <div id=\\"profilesContainer\\" class=\\"custom-scrollbar\\">
-       \${this.profilesList_.map((item, index) => html\`
-         <profile-card class=\\"profile-item\\" .profileState=\\"\${item}\\"
-             data-index=\\"\${index}\\">
+@@ -28,39 +27,24 @@
+             @toggle-drag=\\"\${this.toggleDrag_}\\"
+             @disable-all-picker-buttons=\\"\${this.disableAllPickerButtons_}\\">
          </profile-card>
        \`)}
 -      <cr-button id=\\"addProfile\\" class=\\"profile-item\\"
 -          @click=\\"\${this.onAddProfileClick_}\\"
 -          ?hidden=\\"\${!this.profileCreationAllowed_}\\"
+-          ?disabled=\\"\${this.pickerButtonsDisabled_}\\"
 -          aria-labelledby=\\"addProfileButtonLabel\\">
 -        <div id=\\"addProfileButtonLabel\\"
 -            class=\\"profile-card-info prominent-text\\">
-+      <cr-button id=\\"addProfile\\" class=\\"profile-item plain\\" @click=\\"\${this.onAddProfileClick_}\\" ?hidden=\\"\${!this.profileCreationAllowed_}\\" aria-labelledby=\\"addProfileButtonLabel\\">
++      <cr-button id=\\"addProfile\\" class=\\"profile-item plain\\" @click=\\"\${this.onAddProfileClick_}\\" ?hidden=\\"\${!this.profileCreationAllowed_}\\" ?disabled=\\"\${this.pickerButtonsDisabled_}\\" aria-labelledby=\\"addProfileButtonLabel\\">
 +        <div id=\\"addProfileButtonLabel\\" class=\\"profile-card-info prominent-text\\">
            $i18n{addSpaceButton}
          </div>
@@ -504,8 +525,9 @@ exports[`mangled files should have up to date snapshots ./chromium_src/chrome/br
  <div class=\\"footer\\">
 -  <cr-button id=\\"browseAsGuestButton\\"
 -      @click=\\"\${this.onLaunchGuestProfileClick_}\\"
--      ?hidden=\\"\${!this.guestModeEnabled_}\\">
-+  <cr-button id=\\"browseAsGuestButton\\" @click=\\"\${this.onLaunchGuestProfileClick_}\\" ?hidden=\\"\${!this.guestModeEnabled_}\\">
+-      ?hidden=\\"\${!this.guestModeEnabled_}\\"
+-      ?disabled=\\"\${this.pickerButtonsDisabled_}\\">
++  <cr-button id=\\"browseAsGuestButton\\" @click=\\"\${this.onLaunchGuestProfileClick_}\\" ?hidden=\\"\${!this.guestModeEnabled_}\\" ?disabled=\\"\${this.pickerButtonsDisabled_}\\">
      <cr-icon icon=\\"profiles:account-circle\\" slot=\\"prefix-icon\\"></cr-icon>
      $i18n{browseAsGuestButton}
    </cr-button>
@@ -517,7 +539,7 @@ exports[`mangled files should have up to date snapshots ./chromium_src/chrome/br
    </cr-checkbox>
  </div>
  
-@@ -66,15 +52,12 @@
+@@ -70,15 +54,12 @@
    <div slot=\\"body\\" id=\\"dialog-body\\" class=\\"warning-message\\">
      \${this.forceSigninErrorDialogBody_}
    </div>

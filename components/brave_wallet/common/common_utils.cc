@@ -28,13 +28,13 @@ namespace brave_wallet {
 namespace {
 
 bool IsDisabledByPolicy(PrefService* prefs) {
-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+#if BUILDFLAG(IS_ANDROID)
+  return false;
+#else
   DCHECK(prefs);
   return prefs->IsManagedPreference(prefs::kDisabledByPolicy) &&
          prefs->GetBoolean(prefs::kDisabledByPolicy);
-#else
-  return false;
-#endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+#endif
 }
 
 }  // namespace
@@ -75,6 +75,10 @@ bool IsZCashShieldedTransactionsEnabled() {
 #else
   return false;
 #endif
+}
+
+bool IsPolkadotEnabled() {
+  return base::FeatureList::IsEnabled(features::kBraveWalletPolkadotFeature);
 }
 
 bool IsAnkrBalancesEnabled() {
@@ -280,6 +284,37 @@ std::string GetNetworkForCardanoAccount(const mojom::AccountIdPtr& account_id) {
   return GetNetworkForCardanoKeyring(account_id->keyring_id);
 }
 
+bool IsPolkadotKeyring(mojom::KeyringId keyring_id) {
+  return keyring_id == mojom::KeyringId::kPolkadotMainnet ||
+         keyring_id == mojom::KeyringId::kPolkadotTestnet;
+}
+
+bool IsPolkadotNetwork(std::string_view network_id) {
+  return network_id == mojom::kPolkadotMainnet ||
+         network_id == mojom::kPolkadotTestnet;
+}
+
+bool IsPolkadotAccount(const mojom::AccountIdPtr& account_id) {
+  return account_id && account_id->coin == mojom::CoinType::DOT &&
+         IsPolkadotKeyring(account_id->keyring_id);
+}
+
+std::string GetNetworkForPolkadotKeyring(const mojom::KeyringId& keyring_id) {
+  if (keyring_id == mojom::KeyringId::kPolkadotMainnet) {
+    return mojom::kPolkadotMainnet;
+  }
+  if (keyring_id == mojom::KeyringId::kPolkadotTestnet) {
+    return mojom::kPolkadotTestnet;
+  }
+  NOTREACHED();
+}
+
+std::string GetNetworkForPolkadotAccount(
+    const mojom::AccountIdPtr& account_id) {
+  CHECK(IsPolkadotAccount(account_id));
+  return GetNetworkForPolkadotKeyring(account_id->keyring_id);
+}
+
 mojom::CoinType GetCoinForKeyring(mojom::KeyringId keyring_id) {
   if (IsEthereumKeyring(keyring_id)) {
     return mojom::CoinType::ETH;
@@ -303,6 +338,10 @@ mojom::CoinType GetCoinForKeyring(mojom::KeyringId keyring_id) {
 
   if (IsCardanoKeyring(keyring_id)) {
     return mojom::CoinType::ADA;
+  }
+
+  if (IsPolkadotKeyring(keyring_id)) {
+    return mojom::CoinType::DOT;
   }
 
   NOTREACHED() << "Unknown keyring: " << keyring_id;
@@ -359,6 +398,9 @@ std::vector<mojom::CoinType> GetEnabledCoins() {
   if (IsCardanoEnabled()) {
     coins.push_back(mojom::CoinType::ADA);
   }
+  if (IsPolkadotEnabled()) {
+    coins.push_back(mojom::CoinType::DOT);
+  }
   return coins;
 }
 
@@ -388,6 +430,11 @@ std::vector<mojom::KeyringId> GetEnabledKeyrings() {
     ids.push_back(mojom::KeyringId::kCardanoTestnet);
   }
 
+  if (IsPolkadotEnabled()) {
+    ids.push_back(mojom::KeyringId::kPolkadotMainnet);
+    ids.push_back(mojom::KeyringId::kPolkadotTestnet);
+  }
+
   DCHECK_GT(ids.size(), 0u);
   return ids;
 }
@@ -395,6 +442,11 @@ std::vector<mojom::KeyringId> GetEnabledKeyrings() {
 bool CoinSupportsDapps(mojom::CoinType coin) {
   return coin == mojom::CoinType::ETH || coin == mojom::CoinType::SOL ||
          coin == mojom::CoinType::ADA;
+}
+
+bool IsFixedSelectedNetworkCoin(mojom::CoinType coin) {
+  // This might need to be extended with ZEC and FIL.
+  return coin == mojom::CoinType::BTC || coin == mojom::CoinType::ADA;
 }
 
 std::vector<mojom::KeyringId> GetSupportedKeyringsForNetwork(
@@ -433,6 +485,10 @@ std::vector<mojom::KeyringId> GetSupportedKeyringsForNetwork(
       } else {
         return {mojom::KeyringId::kCardanoTestnet};
       }
+    case mojom::CoinType::DOT:
+      return {(chain_id == mojom::kPolkadotMainnet
+                   ? mojom::KeyringId::kPolkadotMainnet
+                   : mojom::KeyringId::kPolkadotTestnet)};
   }
   NOTREACHED();
 }
@@ -463,7 +519,7 @@ mojom::AccountIdPtr MakeIndexBasedAccountId(mojom::CoinType coin,
                                             uint32_t account_index) {
 #if DCHECK_IS_ON()
   DCHECK(coin == mojom::CoinType::BTC || coin == mojom::CoinType::ZEC ||
-         coin == mojom::CoinType::ADA);
+         coin == mojom::CoinType::ADA || coin == mojom::CoinType::DOT);
   if (coin == mojom::CoinType::BTC) {
     DCHECK(IsBitcoinKeyring(keyring_id));
     if (IsBitcoinHDKeyring(keyring_id)) {
@@ -482,6 +538,10 @@ mojom::AccountIdPtr MakeIndexBasedAccountId(mojom::CoinType coin,
   }
   if (coin == mojom::CoinType::ADA) {
     DCHECK(IsCardanoKeyring(keyring_id));
+    DCHECK_EQ(kind, mojom::AccountKind::kDerived);
+  }
+  if (coin == mojom::CoinType::DOT) {
+    DCHECK(IsPolkadotKeyring(keyring_id));
     DCHECK_EQ(kind, mojom::AccountKind::kDerived);
   }
 #endif

@@ -12,7 +12,7 @@ namespace security_interstitials {
 
 namespace {
 constexpr char kBraveLearnMoreLink[] =
-    "https://support.brave.com/hc/en-us/articles/15513090104717";
+    "https://support.brave.app/hc/en-us/articles/15513090104717";
 }  // namespace
 
 }  // namespace security_interstitials
@@ -20,6 +20,6 @@ constexpr char kBraveLearnMoreLink[] =
 #define OpenUrlInNewForegroundTab(...) \
   OpenUrlInNewForegroundTab(GURL(kBraveLearnMoreLink))
 
-#include "src/components/security_interstitials/content/https_only_mode_blocking_page.cc"
+#include <components/security_interstitials/content/https_only_mode_blocking_page.cc>
 
 #undef OpenUrlInNewForegroundTab

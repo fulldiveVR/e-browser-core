@@ -57,7 +57,7 @@ protocol SettingsDelegate: AnyObject {
 class SettingsViewController: TableViewController {
   weak var settingsDelegate: SettingsDelegate?
 
-  private let profile: Profile
+  private let profile: LegacyBrowserProfile
   private let tabManager: TabManager
   private let rewards: BraveRewards?
   private let feedDataSource: FeedDataSource
@@ -68,6 +68,7 @@ class SettingsViewController: TableViewController {
   private let syncProfileServices: BraveSyncProfileServiceIOS
   private let p3aUtilities: BraveP3AUtils
   private let deAmpPrefs: DeAmpPrefs
+  private let localState: any PrefService
   private let attributionManager: AttributionManager
   private let keyringStore: KeyringStore?
   private let cryptoStore: CryptoStore?
@@ -84,13 +85,14 @@ class SettingsViewController: TableViewController {
   private var cancellables: Set<AnyCancellable> = []
 
   init(
-    profile: Profile,
+    profile: LegacyBrowserProfile,
     tabManager: TabManager,
     feedDataSource: FeedDataSource,
     rewards: BraveRewards? = nil,
     windowProtection: WindowProtection?,
     p3aUtils: BraveP3AUtils,
     braveCore: BraveProfileController,
+    localState: any PrefService,
     attributionManager: AttributionManager,
     keyringStore: KeyringStore? = nil,
     cryptoStore: CryptoStore? = nil
@@ -101,6 +103,7 @@ class SettingsViewController: TableViewController {
     self.rewards = rewards
     self.windowProtection = windowProtection
     self.braveCore = braveCore
+    self.localState = localState
     self.historyAPI = braveCore.historyAPI
     self.passwordAPI = braveCore.passwordAPI
     self.syncAPI = braveCore.syncAPI
@@ -143,12 +146,14 @@ class SettingsViewController: TableViewController {
     view.tintColor = .braveBlurpleTint
     navigationController?.view.backgroundColor = .braveGroupedBackground
 
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(vpnConfigChanged(notification:)),
-      name: .NEVPNStatusDidChange,
-      object: nil
-    )
+    if braveCore.profile.prefs.isBraveVPNAvailable {
+      NotificationCenter.default.addObserver(
+        self,
+        selector: #selector(vpnConfigChanged(notification:)),
+        name: .NEVPNStatusDidChange,
+        object: nil
+      )
+    }
 
     self.altIconsModel.$selectedAltAppIcon
       .dropFirst()
@@ -225,7 +230,15 @@ class SettingsViewController: TableViewController {
       aboutSection,
     ]
 
+    if FeatureList.kBraveAccount.enabled {
+      list.insert(braveAccountSection, at: 1)
+    }
+
     let shouldShowVPNSection = { () -> Bool in
+      if !braveCore.profile.prefs.isBraveVPNAvailable {
+        return false
+      }
+
       if !BraveVPNProductInfo.isComplete || Preferences.VPN.vpnSettingHeaderWasDismissed.value {
         return false
       }
@@ -293,6 +306,9 @@ class SettingsViewController: TableViewController {
           selection: { [unowned self] in
             let controller = UIHostingController(
               rootView: DataImportView(
+                model: .init(
+                  coordinator: SafariDataImporterCoordinatorImpl(profile: braveCore.profile)
+                ),
                 openURL: { [unowned self] url in
                   self.settingsDelegate?.settingsOpenURLInNewTab(url)
                   self.dismiss(animated: true)
@@ -315,6 +331,35 @@ class SettingsViewController: TableViewController {
     return section
   }()
 
+  private lazy var braveAccountSection: Static.Section = {
+    var section = Static.Section(
+      header: .title(Strings.braveAccount),
+      rows: [
+        Row(
+          text: Strings.getStarted,
+          selection: { [unowned self] in
+            let controller = ChromeWebUIController(braveCore: braveCore, isPrivateBrowsing: false)
+            let container = UINavigationController(rootViewController: controller)
+            controller.title = Strings.braveAccount
+            controller.webView.load(URLRequest(url: URL(string: "brave://account")!))
+            controller.navigationItem.rightBarButtonItem = .init(
+              systemItem: .done,
+              primaryAction: .init { [unowned container] _ in
+                container.dismiss(animated: true)
+              }
+            )
+            present(container, animated: true)
+          },
+          image: UIImage(sharedNamed: "brave.logo"),
+          accessory: .disclosureIndicator,
+          cellClass: BraveAccountIconCell.self
+        )
+      ]
+    )
+
+    return section
+  }()
+
   private func makeFeaturesSection() -> Static.Section {
     weak var spinner: SpinnerView?
 
@@ -331,9 +376,11 @@ class SettingsViewController: TableViewController {
                   tabManager: self.tabManager,
                   feedDataSource: self.feedDataSource,
                   debounceService: DebounceServiceFactory.get(privateMode: false),
+                  braveShieldsSettings: BraveShieldsSettingsFactory.create(for: braveCore.profile),
                   braveCore: braveCore,
                   p3aUtils: p3aUtilities,
                   rewards: rewards,
+                  braveStats: braveCore.braveStats,
                   webcompatReporterHandler: WebcompatReporter.ServiceFactory.get(
                     privateMode: false
                   ),
@@ -378,7 +425,7 @@ class SettingsViewController: TableViewController {
       uuid: featureSectionUUID.uuidString
     )
 
-    if BraveRewards.isAvailable, let rewards = rewards {
+    if BraveRewards.isSupported(prefService: braveCore.profile.prefs), let rewards = rewards {
       section.rows += [
         Row(
           text: Strings.braveRewardsSettingsTitle,
@@ -392,36 +439,42 @@ class SettingsViewController: TableViewController {
       ]
     }
 
-    section.rows.append(
-      Row(
-        text: Strings.BraveNews.braveNewsTitle,
-        selection: { [unowned self] in
-          let controller = NewsSettingsViewController(
-            dataSource: self.feedDataSource,
-            openURL: { [weak self] url in
-              guard let self else { return }
-              self.dismiss(animated: true)
-              self.settingsDelegate?.settingsOpenURLs([url], loadImmediately: true)
+    if braveCore.profile.prefs.isBraveNewsAvailable {
+      section.rows.append(
+        Row(
+          text: Strings.BraveNews.braveNewsTitle,
+          selection: { [unowned self] in
+            let controller = NewsSettingsViewController(
+              dataSource: self.feedDataSource,
+              openURL: { [weak self] url in
+                guard let self else { return }
+                self.dismiss(animated: true)
+                self.settingsDelegate?.settingsOpenURLs([url], loadImmediately: true)
+              }
+            )
+            controller.viewDidDisappear = {
+              if Preferences.Review.braveNewsCriteriaPassed.value {
+                AppReviewManager.shared.isRevisedReviewRequired = true
+                Preferences.Review.braveNewsCriteriaPassed.value = false
+              }
             }
-          )
-          controller.viewDidDisappear = {
-            if Preferences.Review.braveNewsCriteriaPassed.value {
-              AppReviewManager.shared.isRevisedReviewRequired = true
-              Preferences.Review.braveNewsCriteriaPassed.value = false
-            }
-          }
-          self.navigationController?.pushViewController(controller, animated: true)
-        },
-        image: UIImage(braveSystemNamed: "leo.product.brave-news"),
-        accessory: .disclosureIndicator
+            self.navigationController?.pushViewController(controller, animated: true)
+          },
+          image: UIImage(braveSystemNamed: "leo.product.brave-news"),
+          accessory: .disclosureIndicator
+        )
       )
-    )
+    }
 
-    if !tabManager.privateBrowsingManager.isPrivateBrowsing && FeatureList.kAIChat.enabled {
+    if !tabManager.privateBrowsingManager.isPrivateBrowsing
+      && AIChatUtils.isAIChatEnabled(for: braveCore.profile.prefs)
+    {
       section.rows.append(leoSettingsRow)
     }
 
-    section.rows.append(vpnSettingsRow)
+    if braveCore.profile.prefs.isBraveVPNAvailable {
+      section.rows.append(vpnSettingsRow)
+    }
 
     section.rows.append(
       Row(
@@ -473,7 +526,7 @@ class SettingsViewController: TableViewController {
           text: Strings.Sync.syncTitle,
           selection: { [unowned self] in
             if syncAPI.isInSyncGroup {
-              if !DeviceInfo.hasConnectivity() {
+              if Reachability.shared.status.connectionType == .offline {
                 self.present(SyncAlerts.noConnection, animated: true)
                 return
               }
@@ -802,7 +855,7 @@ class SettingsViewController: TableViewController {
       )
     }
 
-    display.rows.append(contentsOf: [
+    display.rows.append(
       Row(
         text: Strings.ShortcutButton.shortcutButtonTitle,
         selection: { [weak self] in
@@ -813,13 +866,18 @@ class SettingsViewController: TableViewController {
         image: UIImage(braveSystemNamed: "leo.launch"),
         accessory: .disclosureIndicator,
         cellClass: MultilineValue1Cell.self
-      ),
-      .boolRow(
-        title: Strings.hideRewardsIcon,
-        option: Preferences.Rewards.hideRewardsIcon,
-        image: UIImage(braveSystemNamed: "leo.product.bat-outline")
-      ),
-    ])
+      )
+    )
+
+    if BraveRewards.isSupported(prefService: braveCore.profile.prefs) {
+      display.rows.append(
+        .boolRow(
+          title: Strings.hideRewardsIcon,
+          option: Preferences.Rewards.hideRewardsIcon,
+          image: UIImage(braveSystemNamed: "leo.product.bat-outline")
+        )
+      )
+    }
 
     return display
   }()
@@ -1421,7 +1479,7 @@ class SettingsViewController: TableViewController {
         $0.uuid == self.walletRowUUID.uuidString
       })
 
-      if walletRowIndex == nil {
+      if walletRowIndex == nil && braveCore.braveWalletAPI.isAllowed {
         let settingsStore = cryptoStore?.settingsStore
         copyOfSections[featureSectionIndex].rows.append(
           Row(
@@ -1501,6 +1559,19 @@ class SettingsViewController: TableViewController {
     if dataSource.sections.isEmpty { return }
     dataSource.sections[0] = Static.Section()
     Preferences.VPN.vpnSettingHeaderWasDismissed.value = true
+  }
+}
+
+private class BraveAccountIconCell: UITableViewCell, Cell {
+  func configure(row: Row) {
+    var content = defaultContentConfiguration()
+    let scaledValue = UIFontMetrics.default.scaledValue(for: 26)
+    content.image = row.image?.preparingThumbnail(
+      of: .init(width: scaledValue, height: scaledValue)
+    )
+    content.text = row.text
+    contentConfiguration = content
+    accessoryType = .disclosureIndicator
   }
 }
 

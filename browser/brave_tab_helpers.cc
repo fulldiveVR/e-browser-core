@@ -30,13 +30,13 @@
 #include "brave/components/brave_perf_predictor/browser/perf_predictor_tab_helper.h"
 #include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
-#include "brave/components/psst/browser/content/psst_tab_helper.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process.h"
+#include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/common/chrome_isolated_world_ids.h"
 #include "components/user_prefs/user_prefs.h"
@@ -76,7 +76,7 @@
 #endif
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/speedreader/speedreader_tab_helper.h"
+#include "brave/browser/ui/speedreader/speedreader_tab_helper.h"
 #endif
 
 #if BUILDFLAG(ENABLE_TOR)
@@ -135,8 +135,8 @@ void AttachTabHelpers(content::WebContents* web_contents) {
             web_contents,
             base::BindRepeating(
                 [](content::WebContents* web_contents, bool is_pdf,
-                   ai_chat::PrintPreviewExtractor::Extractor::CallbackVariant&&
-                       variant)
+                   ai_chat::PrintPreviewExtractor::Extractor::ImageCallback&&
+                       callback)
                     -> std::unique_ptr<
                         ai_chat::PrintPreviewExtractor::Extractor> {
                   return std::make_unique<
@@ -144,7 +144,7 @@ void AttachTabHelpers(content::WebContents* web_contents) {
                       web_contents,
                       Profile::FromBrowserContext(
                           web_contents->GetBrowserContext()),
-                      is_pdf, std::move(variant),
+                      is_pdf, std::move(callback),
                       base::BindRepeating(
                           []() -> base::IDMap<
                                    printing::mojom::PrintPreviewUI*>& {
@@ -176,8 +176,6 @@ void AttachTabHelpers(content::WebContents* web_contents) {
   brave_ads::AdsTabHelper::CreateForWebContents(web_contents);
   brave_ads::CreativeSearchResultAdTabHelper::MaybeCreateForWebContents(
       web_contents);
-  psst::PsstTabHelper::MaybeCreateForWebContents(
-      web_contents, ISOLATED_WORLD_ID_BRAVE_INTERNAL);
 #if BUILDFLAG(ENABLE_EXTENSIONS) || BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
   web_discovery::WebDiscoveryTabHelper::MaybeCreateForWebContents(web_contents);
 #endif
@@ -187,8 +185,7 @@ void AttachTabHelpers(content::WebContents* web_contents) {
 #endif
 
 #if BUILDFLAG(ENABLE_TOR)
-  tor::TorTabHelper::MaybeCreateForWebContents(
-      web_contents, web_contents->GetBrowserContext()->IsTor());
+  tor::TorTabHelper::MaybeCreateForWebContents(web_contents);
   tor::OnionLocationTabHelper::CreateForWebContents(web_contents);
 #endif
 

@@ -12,6 +12,7 @@
 #include "base/check.h"
 #include "base/no_destructor.h"
 #include "brave/browser/ai_chat/ai_chat_utils.h"
+#include "brave/browser/ai_chat/browser_tool_provider_factory.h"
 #include "brave/browser/ai_chat/tab_tracker_service_factory.h"
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/misc_metrics/profile_misc_metrics_service.h"
@@ -20,6 +21,7 @@
 #include "brave/components/ai_chat/content/browser/model_service_factory.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_credential_manager.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_service.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
@@ -80,7 +82,16 @@ AIChatServiceFactory::BuildServiceInstanceForBrowserContext(
       misc_metrics::ProfileMiscMetricsServiceFactory::GetServiceForContext(
           context);
 
-  return std::make_unique<AIChatService>(
+  std::vector<std::unique_ptr<ToolProviderFactory>> tool_provider_factories;
+  tool_provider_factories.push_back(
+      std::make_unique<BrowserToolProviderFactory>());
+
+#if BUILDFLAG(ENABLE_BRAVE_AI_CHAT_AGENT_PROFILE)
+  bool is_actor_allowed = features::IsAIChatAgentProfileEnabled() &&
+                          Profile::FromBrowserContext(context)->IsAIChatAgent();
+#endif
+
+  auto service = std::make_unique<AIChatService>(
       ModelServiceFactory::GetForBrowserContext(context),
       TabTrackerServiceFactory::GetForBrowserContext(context),
       std::move(credential_manager), user_prefs::UserPrefs::Get(context),
@@ -88,7 +99,17 @@ AIChatServiceFactory::BuildServiceInstanceForBrowserContext(
       g_browser_process->os_crypt_async(),
       context->GetDefaultStoragePartition()
           ->GetURLLoaderFactoryForBrowserProcess(),
-      version_info::GetChannelString(chrome::GetChannel()), context->GetPath());
+      version_info::GetChannelString(chrome::GetChannel()), context->GetPath(),
+      std::move(tool_provider_factories));
+
+#if BUILDFLAG(ENABLE_BRAVE_AI_CHAT_AGENT_PROFILE)
+  // This configuration is not part of the AIChatService constructor because it
+  // is experimental and might not always be per-profile and is not needed in
+  // the AIChatService constructor.
+  service->SetIsContentAgentAllowed(is_actor_allowed);
+#endif
+
+  return service;
 }
 
 }  // namespace ai_chat

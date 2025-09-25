@@ -58,7 +58,7 @@ AndroidWalletPageUI::AndroidWalletPageUI(content::WebUI* web_ui,
   webui::SetupWebUIDataSource(source, base::span(kBraveWalletPageGenerated),
                               IDR_WALLET_PAGE_HTML);
 
-  source->AddBoolean("isAndroid", true);
+  source->AddBoolean("isMobile", true);
   source->AddString("braveWalletLedgerBridgeUrl", kUntrustedLedgerURL);
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::FrameSrc,
@@ -78,6 +78,9 @@ AndroidWalletPageUI::AndroidWalletPageUI(content::WebUI* web_ui,
   source->AddBoolean(brave_wallet::mojom::kP3ACountTestNetworksLoadTimeKey,
                      base::CommandLine::ForCurrentProcess()->HasSwitch(
                          brave_wallet::mojom::kP3ACountTestNetworksSwitch));
+
+  // Rewards UI features are not currently supported on Android.
+  source->AddBoolean("rewardsFeatureEnabled", false);
 
   content::URLDataSource::Add(profile,
                               std::make_unique<SanitizedImageSource>(profile));
@@ -101,6 +104,8 @@ void AndroidWalletPageUI::CreatePageHandler(
         json_rpc_service_receiver,
     mojo::PendingReceiver<brave_wallet::mojom::BitcoinWalletService>
         bitcoin_wallet_service_receiver,
+    mojo::PendingReceiver<brave_wallet::mojom::PolkadotWalletService>
+        polkadot_wallet_service_receiver,
     mojo::PendingReceiver<brave_wallet::mojom::ZCashWalletService>
         zcash_wallet_service_receiver,
     mojo::PendingReceiver<brave_wallet::mojom::CardanoWalletService>
@@ -131,7 +136,7 @@ void AndroidWalletPageUI::CreatePageHandler(
     mojo::PendingReceiver<brave_wallet::mojom::MeldIntegrationService>
         meld_integration_service) {
   auto* profile = Profile::FromWebUI(web_ui());
-  DCHECK(profile);
+  CHECK(profile);
   page_handler_ = std::make_unique<AndroidWalletPageHandler>(
       std::move(page_receiver), profile, this);
   wallet_handler_ = std::make_unique<brave_wallet::WalletHandler>(
@@ -143,6 +148,7 @@ void AndroidWalletPageUI::CreatePageHandler(
     wallet_service->Bind(std::move(brave_wallet_service_receiver));
     wallet_service->Bind(std::move(json_rpc_service_receiver));
     wallet_service->Bind(std::move(bitcoin_wallet_service_receiver));
+    wallet_service->Bind(std::move(polkadot_wallet_service_receiver));
     wallet_service->Bind(std::move(zcash_wallet_service_receiver));
     wallet_service->Bind(std::move(cardano_wallet_service_receiver));
     wallet_service->Bind(std::move(keyring_service_receiver));

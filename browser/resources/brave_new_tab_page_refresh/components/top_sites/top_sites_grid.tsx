@@ -10,6 +10,7 @@ import NavDots from '@brave/leo/react/navdots'
 import { TopSite } from '../../state/top_sites_state'
 import { useTopSitesState, useTopSitesActions } from '../../context/top_sites_context'
 import { getString } from '../../lib/strings'
+import { usePersistedJSON } from '$web-common/usePersistedState'
 import { TopSitesTile } from './top_site_tile'
 import { createTileDragHandler } from './tile_drag_handler'
 import { inlineCSSVars } from '../../lib/inline_css_vars'
@@ -39,7 +40,9 @@ export function TopSitesGrid(props: Props) {
   const columnsPerPage = useColumnsPerPage(
     props.expanded ? maxTileColumnCount : collapsedTileColumnCount)
   const scrollRef = React.useRef<HTMLDivElement>(null)
-  const [scrollPage, setScrollPage] = React.useState(0)
+
+  const [scrollPage, setScrollPage] =
+    usePersistedJSON('ntp-top-sites-page', (data) => Number(data) || 0)
 
   const [dragHandler] = React.useState(() => createTileDragHandler({
     tileSelector: 'a',
@@ -64,6 +67,10 @@ export function TopSitesGrid(props: Props) {
     }
     return dragHandler.observe(elem)
   }, [dragHandler])
+
+  React.useEffect(() => {
+    scrollToPage(scrollPage, 'instant')
+  }, [])
 
   React.useEffect(() => {
     dragHandler.setCallbacks({
@@ -91,13 +98,16 @@ export function TopSitesGrid(props: Props) {
     setScrollPage(Math.round(scrollLeft / pageWidth))
   }
 
-  function scrollToPage(page: number) {
+  function scrollToPage(page: number, scrollBehavior?: ScrollBehavior) {
     if (page < 0) {
       page = 0
     } else if (page >= pages.length) {
       page = pages.length - 1
     }
-    scrollRef.current?.scrollTo({ left: page * pageWidth, behavior: 'smooth' })
+    scrollRef.current?.scrollTo({
+      left: page * pageWidth,
+      behavior: scrollBehavior ?? 'smooth'
+    })
   }
 
   function contextMenuHandler(topSite: TopSite) {
@@ -113,15 +123,14 @@ export function TopSitesGrid(props: Props) {
         className='top-site-tiles-mask'
         onScroll={onScroll}
         style={inlineCSSVars({
-          '--self-columns-per-page': columnsPerPage,
-          '--self-tile-count': tileCount
+          '--self-columns-per-page': Math.min(columnsPerPage, tileCount)
         })}
       >
-        {
-          pages.map((page, i) => (
-            <div key={i} className='top-site-tiles'>
-              {
-                page.map((tile, i) =>
+        {pages.map((page, i) => (
+          <div key={i} className='top-site-tiles'>
+            {page.map((row, i) => (
+              <div key={i} className='top-site-row'>
+                {row.map((tile, i) => (
                   tile === 'add-button' ?
                     <button
                       key={i}
@@ -142,11 +151,11 @@ export function TopSitesGrid(props: Props) {
                       canDrag={props.canReorderSites}
                       onContextMenu={contextMenuHandler(tile)}
                     />
-                )
-              }
-            </div>
-          ))
-        }
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
       {
         pages.length > 1 &&
@@ -196,25 +205,30 @@ type GridItem = TopSite | 'add-button'
 
 function splitIntoPages(topSites: TopSite[], options: SplitIntoPagesOptions) {
   const { columnsPerPage, rowsPerPage, canAddSite } = options
-  const pageSize = columnsPerPage * rowsPerPage
+
+  if (columnsPerPage === 0 || rowsPerPage === 0) {
+    return []
+  }
 
   const tiles: GridItem[] = [...topSites]
   if (canAddSite) {
     tiles.push('add-button')
   }
 
-  let currentPage: GridItem[] = []
-  const pages: GridItem[][] = [currentPage]
+  let currentRow: GridItem[] = []
+  let currentPage: GridItem[][] = [currentRow]
+  const pages: GridItem[][][] = [currentPage]
 
   tiles.forEach((tile) => {
-    if (pageSize === 0) {
-      return
+    if (currentRow.length >= columnsPerPage) {
+      if (currentPage.length >= rowsPerPage) {
+        currentPage = []
+        pages.push(currentPage)
+      }
+      currentRow = []
+      currentPage.push(currentRow)
     }
-    if (currentPage.length >= pageSize) {
-      currentPage = []
-      pages.push(currentPage)
-    }
-    currentPage.push(tile)
+    currentRow.push(tile)
   })
 
   return pages

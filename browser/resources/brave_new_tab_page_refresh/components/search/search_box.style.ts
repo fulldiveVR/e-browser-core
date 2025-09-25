@@ -46,12 +46,6 @@ export const style = scoped.css`
     }
   }
 
-  /* Transitioning inset-block-start is causing a render crash when using anchor
-     positioning and transitioning from display: none to display: block. */
-  &.hidden .search-container {
-    visibility: hidden;
-  }
-
   &.expanded .search-container {
     inset-block-start: 27vh;
     max-width: 540px;
@@ -66,10 +60,11 @@ export const style = scoped.css`
     padding: 8px;
     border-radius: 12px;
     background: ${color.container.background};
+    box-shadow: ${effect.elevation['03']};
     color: ${color.text.primary};
 
     &:hover, &:focus-within {
-      box-shadow: ${effect.elevation['01']};
+      box-shadow: ${effect.elevation['04']};
     }
   }
 
@@ -81,32 +76,6 @@ export const style = scoped.css`
     font: inherit;
     outline: none;
     background: inherit;
-  }
-
-  .engine-icon {
-    --leo-icon-size: 16px;
-    height: 16px;
-    width: 16px;
-  }
-
-  .engine-picker-button {
-    anchor-name: --engine-picker-button;
-
-    order: 1;
-    padding: 7px;
-    border-radius: 4px;
-    border: solid 1px transparent;
-    display: flex;
-    align-items: center;
-
-    &:hover {
-      background-color: ${color.container.interactive};
-    }
-
-    &.open {
-      background-color: ${color.container.interactive};
-      border-color: ${color.divider.interactive};
-    }
   }
 
   .search-button {
@@ -131,16 +100,6 @@ export const style = scoped.css`
     opacity: 1;
   }
 
-  .engine-options {
-    --leo-icon-size: 20px;
-
-    position: absolute;
-    position-anchor: --engine-picker-button;
-    position-area: block-end span-inline-end;
-    margin-top: 2px;
-    min-width: 232px;
-  }
-
   .results-container {
     position: absolute;
     position-anchor: --search-input-container;
@@ -152,6 +111,11 @@ export const style = scoped.css`
     flex-direction: column;
     visibility: hidden;
     opacity: 0;
+
+    border-radius: 16px;
+    background: ${color.container.background};
+    overflow: clip;
+    box-shadow: ${effect.elevation['01']};
 
     transition: opacity var(--self-transition-duration);
   }

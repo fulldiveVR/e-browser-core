@@ -26,7 +26,6 @@
 #include "base/strings/sys_string_conversions.h"
 #include "base/threading/thread_restrictions.h"
 #include "brave/components/brave_user_agent/browser/brave_user_agent_exceptions.h"
-#include "brave/components/p3a/buildflags.h"
 #include "brave/components/p3a/component_installer.h"
 #include "brave/components/p3a/histograms_braveizer.h"
 #include "brave/components/p3a/p3a_config.h"
@@ -42,9 +41,11 @@
 #include "brave/ios/browser/application_context/brave_application_context_impl.h"
 #include "brave/ios/browser/ui/webui/brave_web_ui_controller_factory.h"
 #include "brave/ios/browser/web/brave_web_client.h"
+#include "brave/ios/components/prefs/pref_service_bridge_impl.h"
 #import "build/blink_buildflags.h"
 #include "components/component_updater/component_updater_paths.h"
 #include "ios/chrome/app/startup/provider_registration.h"
+#include "ios/chrome/browser/shared/model/application_context/application_context.h"
 #include "ios/chrome/browser/shared/model/paths/paths.h"
 #include "ios/chrome/browser/shared/model/prefs/pref_names.h"
 #include "ios/chrome/browser/shared/model/profile/profile_ios.h"
@@ -210,8 +211,9 @@ const BraveCoreLogSeverity BraveCoreLogSeverityVerbose =
 
 - (void)onAppEnterForeground:(NSNotification*)notification {
   auto* context = GetApplicationContext();
-  if (context)
+  if (context) {
     context->OnAppEnterForeground();
+  }
 }
 
 - (void)onAppWillTerminate:(NSNotification*)notification {
@@ -278,6 +280,10 @@ static bool CustomLogHandler(int severity,
   CHECK(profileKeepAlive.profile()) << "A default profile must be loaded.";
   self.profileController = [[BraveProfileController alloc]
       initWithProfileKeepAlive:std::move(profileKeepAlive)];
+  // Desktop/Android call `StartBraveServices` during their main setup after the
+  // initial profile is created/loaded, but that setup does not exist on iOS.
+  static_cast<BraveApplicationContextImpl*>(GetApplicationContext())
+      ->StartBraveServices();
   completionHandler(self.profileController);
 }
 
@@ -306,22 +312,20 @@ static bool CustomLogHandler(int severity,
 
 - (void)initializeP3AServiceForChannel:(NSString*)channel
                       installationDate:(NSDate*)installDate {
-#if BUILDFLAG(BRAVE_P3A_ENABLED)
   _p3a_service = base::MakeRefCounted<p3a::P3AService>(
       *GetApplicationContext()->GetLocalState(),
       base::SysNSStringToUTF8(channel), base::Time::FromNSDate(installDate),
       p3a::P3AConfig::LoadFromCommandLine());
   _p3a_service->InitCallbacks();
-  _p3a_service->Init(GetApplicationContext()->GetSharedURLLoaderFactory());
+  _p3a_service->Init(GetApplicationContext()->GetSharedURLLoaderFactory(),
+                     GetApplicationContext()->GetComponentUpdateService());
   _histogram_braveizer = p3a::HistogramsBraveizer::Create();
   // Typically we'd register this component in RegisterComponentsForUpdate, but
   // because iOS needs to pass in the install date from the Swift side we don't
   // initialize the P3A service until after WebMain is started. If this changes
   // in the future, move this call there.
-  p3a::RegisterP3AComponent(
-      GetApplicationContext()->GetComponentUpdateService(),
-      _p3a_service->remote_config_manager()->GetWeakPtr());
-#endif  // BUILDFLAG(BRAVE_P3A_ENABLED)
+  p3a::MaybeToggleP3AComponent(
+      GetApplicationContext()->GetComponentUpdateService(), _p3a_service.get());
 }
 
 - (BraveP3AUtils*)p3aUtils {
@@ -331,6 +335,11 @@ static bool CustomLogHandler(int severity,
                 p3aService:_p3a_service];
   }
   return _p3aUtils;
+}
+
+- (id<PrefServiceBridge>)localState {
+  return [[PrefServiceBridgeImpl alloc]
+      initWithPrefService:GetApplicationContext()->GetLocalState()];
 }
 
 + (bool)initializeICUForTesting {

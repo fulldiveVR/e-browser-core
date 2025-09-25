@@ -9,6 +9,7 @@ import * as S from './style'
 import Button from '@brave/leo/react/button'
 import { P3APhase, WelcomeBrowserProxyImpl } from '../../api/welcome_browser_proxy'
 import { getLocale, formatLocale } from '$web-common/locale'
+import { loadTimeData } from '$web-common/loadTimeData'
 
 interface InputCheckboxProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -32,13 +33,13 @@ const readPrivacyPolicy = formatLocale('braveWelcomePrivacyPolicyNote', {
 })
 
 const diagnosticReportsLabel = formatLocale('braveWelcomeSendReportsLabel', {
-  $1: content => <a href='https://support.brave.com/hc/en-us/articles/360017905872-How-do-I-enable-or-disable-automatic-crash-reporting' target='_blank'>
+  $1: content => <a href='https://support.brave.app/hc/en-us/articles/360017905872-How-do-I-enable-or-disable-automatic-crash-reporting' target='_blank'>
     {content}
   </a>
 })
 
 const braveProductUsageDataLabel = formatLocale('braveWelcomeSendInsightsLabel', {
-  $1: content => <a href='https://support.brave.com/hc/en-us/articles/9140465918093-What-is-P3A-in-Brave-' target='_blank'>
+  $1: content => <a href='https://support.brave.app/hc/en-us/articles/9140465918093-What-is-P3A-in-Brave-' target='_blank'>
     {content}
   </a>
 })
@@ -65,6 +66,10 @@ function HelpImprove() {
     return WelcomeBrowserProxyImpl.getInstance().getWelcomeCompleteURL()
   })
 
+  // Show toggles only if the preference is not managed by policy
+  const showMetricsToggle = !loadTimeData.getBoolean('isMetricsReportingEnabledManaged')
+  const showP3AToggle = !loadTimeData.getBoolean('isP3AEnabledManaged')
+
   const handleP3AChange = () => {
     setP3AEnabled(!isP3AEnabled)
   }
@@ -74,12 +79,29 @@ function HelpImprove() {
   }
 
   const handleFinish = () => {
-    WelcomeBrowserProxyImpl.getInstance().setP3AEnabled(isP3AEnabled)
-    WelcomeBrowserProxyImpl.getInstance().setMetricsReportingEnabled(isMetricsReportingEnabled)
+    // Only set preferences if they're not managed by policy
+    if (showP3AToggle) {
+      WelcomeBrowserProxyImpl.getInstance().setP3AEnabled(isP3AEnabled)
+    }
+    if (showMetricsToggle) {
+      WelcomeBrowserProxyImpl.getInstance().setMetricsReportingEnabled(isMetricsReportingEnabled)
+    }
     WelcomeBrowserProxyImpl.getInstance().recordP3A(P3APhase.Finished)
     completeURLPromise.then((url) => {
       window.open(url || 'chrome://newtab', '_self', 'noopener')
     })
+  }
+
+  // Auto-finish if both settings are managed (no toggles to show)
+  React.useEffect(() => {
+    if (!showMetricsToggle && !showP3AToggle) {
+      handleFinish()
+    }
+  }, [])
+
+  // If both are managed, don't render anything since we auto-finish
+  if (!showMetricsToggle && !showP3AToggle) {
+    return null
   }
 
   return (
@@ -91,20 +113,24 @@ function HelpImprove() {
       </div>
       <S.Grid>
         <div className="list">
-          <InputCheckbox
-            id="metrics"
-            onChange={handleMetricsReportingChange}
-            isChecked={isMetricsReportingEnabled}
-          >
-            {diagnosticReportsLabel}
-          </InputCheckbox>
-          <InputCheckbox
-            id="p3a"
-            onChange={handleP3AChange}
-            isChecked={isP3AEnabled}
-          >
-            {braveProductUsageDataLabel}
-          </InputCheckbox>
+          {showMetricsToggle && (
+            <InputCheckbox
+              id="metrics"
+              onChange={handleMetricsReportingChange}
+              isChecked={isMetricsReportingEnabled}
+            >
+              {diagnosticReportsLabel}
+            </InputCheckbox>
+          )}
+          {showP3AToggle && (
+            <InputCheckbox
+              id="p3a"
+              onChange={handleP3AChange}
+              isChecked={isP3AEnabled}
+            >
+              {braveProductUsageDataLabel}
+            </InputCheckbox>
+          )}
         </div>
       </S.Grid>
       <S.ActionBox>

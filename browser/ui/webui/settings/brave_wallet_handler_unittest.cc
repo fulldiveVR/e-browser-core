@@ -12,6 +12,7 @@
 #include <utility>
 #include <vector>
 
+#include "base/json/json_reader.h"
 #include "base/run_loop.h"
 #include "base/strings/utf_string_conversions.h"
 #include "base/test/bind.h"
@@ -27,7 +28,6 @@
 #include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/brave_wallet/common/test_utils.h"
 #include "brave/components/brave_wallet/common/value_conversion_utils.h"
-#include "chrome/test/base/scoped_testing_local_state.h"
 #include "chrome/test/base/testing_browser_process.h"
 #include "chrome/test/base/testing_profile.h"
 #include "components/prefs/scoped_user_pref_update.h"
@@ -64,8 +64,7 @@ void UpdateCustomNetworks(PrefService* prefs,
 class TestBraveWalletHandler : public BraveWalletHandler {
  public:
   TestBraveWalletHandler()
-      : local_state_(TestingBrowserProcess::GetGlobal()),
-        shared_url_loader_factory_(
+      : shared_url_loader_factory_(
             base::MakeRefCounted<network::WeakWrapperSharedURLLoaderFactory>(
                 &url_loader_factory_)) {
     TestingProfile::Builder builder;
@@ -131,6 +130,12 @@ class TestBraveWalletHandler : public BraveWalletHandler {
   void SetDefaultNetwork(const base::Value::List& args) {
     BraveWalletHandler::SetDefaultNetwork(args);
   }
+  void GetWeb3ProviderList(const base::Value::List& args) {
+    BraveWalletHandler::GetWeb3ProviderList(args);
+  }
+  void IsNativeWalletEnabled(const base::Value::List& args) {
+    BraveWalletHandler::IsNativeWalletEnabled(args);
+  }
   content::TestWebUI* web_ui() { return &test_web_ui_; }
   PrefService* prefs() { return profile_->GetPrefs(); }
 
@@ -141,7 +146,6 @@ class TestBraveWalletHandler : public BraveWalletHandler {
   }
 
  private:
-  ScopedTestingLocalState local_state_;
   content::BrowserTaskEnvironment browser_task_environment_;
   std::unique_ptr<TestingProfile> profile_;
   std::unique_ptr<content::WebContents> web_contents_;
@@ -381,4 +385,56 @@ TEST(TestBraveWalletHandler, SetDefaultNetwork) {
                                                              std::nullopt),
               "chain_id2");
   }
+}
+
+TEST(TestBraveWalletHandler, GetWeb3ProviderList) {
+  TestBraveWalletHandler handler;
+
+  base::Value::List args;
+  args.Append(base::Value("test-callback-id"));
+
+  handler.GetWeb3ProviderList(args);
+
+  const auto& data = *handler.web_ui()->call_data()[0];
+  ASSERT_TRUE(data.arg1()->is_string());
+  EXPECT_EQ(data.arg1()->GetString(), "test-callback-id");
+  ASSERT_TRUE(data.arg3()->is_string());
+
+  std::string json_result = data.arg3()->GetString();
+  EXPECT_FALSE(json_result.empty());
+
+  std::optional<base::Value> parsed_json = base::JSONReader::Read(json_result);
+  ASSERT_TRUE(parsed_json.has_value());
+  ASSERT_TRUE(parsed_json->is_list());
+
+  const base::Value::List& provider_list = parsed_json->GetList();
+  ASSERT_EQ(provider_list.size(), 3u);
+
+  ASSERT_TRUE(provider_list[0].is_dict());
+  EXPECT_EQ(
+      provider_list[0].GetDict().FindInt("value"),
+      static_cast<int>(
+          brave_wallet::mojom::DefaultWallet::BraveWalletPreferExtension));
+
+  ASSERT_TRUE(provider_list[1].is_dict());
+  EXPECT_EQ(provider_list[1].GetDict().FindInt("value"),
+            static_cast<int>(brave_wallet::mojom::DefaultWallet::BraveWallet));
+
+  ASSERT_TRUE(provider_list[2].is_dict());
+  EXPECT_EQ(provider_list[2].GetDict().FindInt("value"),
+            static_cast<int>(brave_wallet::mojom::DefaultWallet::None));
+}
+
+TEST(TestBraveWalletHandler, IsNativeWalletEnabled) {
+  TestBraveWalletHandler handler;
+
+  base::Value::List args;
+  args.Append(base::Value("test-callback-id"));
+
+  handler.IsNativeWalletEnabled(args);
+
+  const auto& data = *handler.web_ui()->call_data()[0];
+  ASSERT_TRUE(data.arg1()->is_string());
+  EXPECT_EQ(data.arg1()->GetString(), "test-callback-id");
+  ASSERT_TRUE(data.arg3()->is_bool());
 }

@@ -348,7 +348,7 @@ const attachElementPicker = () => {
     'box-shadow: none',
     'color-scheme: light dark',
     'display: block',
-    'height: 100%',
+    'height: 100lvh',
     'left: 0',
     'margin: 0',
     'max-height: none',
@@ -560,69 +560,10 @@ const setShowRulesHiddenBtnState = (
   showRulesButton.textContent = show ? btnHideRulesBoxText : btnShowRulesBoxText
 }
 
-const setMinimizeState = (root: ShadowRoot, minimized: boolean) => {
-  const mainSection = root.getElementById('main-section')
-  if (!mainSection) return;
-  mainSection.classList.toggle('minimized', minimized);
+const setMinimizeState = (minimized: boolean) => {
+  if (!pickerDiv) return
+  pickerDiv.classList.toggle('minimized', minimized)
 }
-
-const setupDragging = (root: ShadowRoot): void => {
-  const mainSection = root.getElementById('main-section');
-  const dragHeader = root.getElementById('drag-header');
-
-  if (!mainSection || !dragHeader) return;
-
-  const sectionHeight = mainSection.offsetHeight;
-  const HEADER_HEIGHT = 28;
-
-  let isDragging = false;
-  let startY = 0;
-  let startTransform = 0;
-
-  const parseTranslateY = (transform: string): number => {
-    if (transform === 'none') return 0;
-    const match = transform.match(/matrix\(.*,\s*([-\d.]+)\)$/);
-    if (match) return parseFloat(match[1]);
-    const parts = transform.split(',');
-    return parseFloat(parts[5]) ?? 0;
-  };
-
-  const handleDragStart = (e: TouchEvent): void => {
-    isDragging = true;
-    startY = e.touches[0].clientY;
-    startTransform = parseTranslateY(
-      window.getComputedStyle(mainSection).transform);
-  };
-
-  const handleDragMove = (e: Event): void => {
-    if (!isDragging) return;
-
-    const touchEvent = e as TouchEvent;
-    touchEvent.preventDefault();
-
-    const touch = touchEvent.touches[0];
-    if (!touch) return;
-
-    const deltaY = touch.clientY - startY;
-    const newTransform = Math.min(
-      Math.max(startTransform + deltaY, 0), sectionHeight - HEADER_HEIGHT);
-    mainSection.style.transform = `translateY(${newTransform}px)`;
-  };
-
-  const handleDragEnd = (): void => {
-    if (!isDragging) return;
-    isDragging = false;
-
-    const currentTransform = parseTranslateY(
-      window.getComputedStyle(mainSection).transform);
-    setMinimizeState(root, currentTransform > sectionHeight / 4)
-    mainSection.style.transform = '';
-  };
-
-  dragHeader.addEventListener('touchstart', handleDragStart);
-  root.addEventListener('touchmove', handleDragMove);
-  root.addEventListener('touchend', handleDragEnd);
-};
 
 function initSlider(element: HTMLElement
   | null, options: SliderOptions = {}): SliderAPI | undefined {
@@ -678,7 +619,10 @@ const launchElementPicker = (root: ShadowRoot) => {
   }
 
   if (isAndroid) {
-    setupDragging(root)
+    const minimizeButton = root.getElementById('card-header')!
+    minimizeButton.addEventListener('click', () => {
+      setMinimizeState(true)
+    })
   } else {
     const closeButton = root.getElementById('close-btn')!
     closeButton.addEventListener('click', () => {
@@ -686,13 +630,13 @@ const launchElementPicker = (root: ShadowRoot) => {
     })
     const minimizeButton = root.getElementById('minimize-dlg-btn')!
     minimizeButton.addEventListener('click', () => {
-      setMinimizeState(root, true)
-    })
-    const maximizeButton = root.getElementById('desktop-min-icon-container')!
-    maximizeButton.addEventListener('click', () => {
-      setMinimizeState(root, false);
+      setMinimizeState(true)
     })
   }
+  const maximizeButton = root.getElementById('desktop-min-icon-container')!
+  maximizeButton.addEventListener('click', () => {
+    setMinimizeState(false);
+  })
 
   const sliderElement = root.getElementById('custom-slider');
   const slider = initSlider(sliderElement, {
@@ -819,7 +763,7 @@ const launchElementPicker = (root: ShadowRoot) => {
   const oneClickEventHandler = (event: MouseEvent | TouchEvent) => {
     let elem: Element | null = null
 
-    setMinimizeState(root, false);
+    setMinimizeState(false);
 
     if (event instanceof MouseEvent) {
       elem = elementFromFrameCoords(event.clientX, event.clientY)
@@ -968,4 +912,6 @@ if (!active) {
         btnQuitText)
       launchElementPicker(root)
     });
+} else {
+  active.classList.toggle('minimized', false)
 }

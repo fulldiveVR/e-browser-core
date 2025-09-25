@@ -115,9 +115,11 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
     <file lang="iw" path="translations/android_brave_strings_iw.xtb" />
     <file lang="ja" path="translations/android_brave_strings_ja.xtb" />
     <file lang="ka" path="translations/android_brave_strings_ka.xtb" />
+    <file lang="kk" path="translations/android_brave_strings_kk.xtb" />
     <file lang="km" path="translations/android_brave_strings_km.xtb" />
     <file lang="kn" path="translations/android_brave_strings_kn.xtb" />
     <file lang="ko" path="translations/android_brave_strings_ko.xtb" />
+    <file lang="lo" path="translations/android_brave_strings_lo.xtb" />
     <file lang="lt" path="translations/android_brave_strings_lt.xtb" />
     <file lang="lv" path="translations/android_brave_strings_lv.xtb" />
     <file lang="mk" path="translations/android_brave_strings_mk.xtb" />
@@ -164,6 +166,12 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       </message>
       <message name="IDS_SELECT_YOUR_COUNTRY_DESCRIPTION"  desc="Text for Select your country so we can show you the right options and ads for your region.">
         Select your country so we can show you the right options and ads for your region.
+      </message>
+      <message name="IDS_PASSWORD_SETTINGS_IMPORT_ACTION_TITLE" desc="Title for the password import action in Android settings">
+        Import passwords
+      </message>
+      <message name="IDS_PASSWORD_SETTINGS_IMPORT_ACTION_DESCRIPTION" desc="Description for the password import action in Android settings">
+        Select a .csv file that contains your passwords to import them to Brave's password manager.
       </message>
       <message name="IDS_REWARDS_ONBOARDING_ALL_SET_DESCRIPTION"  desc="Text for Now you can get rewarded for viewing ads. You’re helping make the web a better place for everyone. And that’s awesome!">
         Now you can get rewarded for viewing ads. You’re helping make the web a better place for everyone. And that’s awesome!
@@ -474,6 +482,12 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       <message name="IDS_PREFS_SUPPORT_SECTION" desc="Title for the support section ">
         Support
       </message>
+      <message name="IDS_PREFS_SECTION_BRAVE_ACCOUNT" desc="Title for the Brave Account section in settings">
+        Brave Account
+      </message>
+      <message name="IDS_GET_STARTED" desc="Button text to get started with Brave Account">
+        Get started
+      </message>
       <message name="IDS_PREFS_SECTION_FEATURES" desc="Title for Brave-specific features section">
         Features
       </message>
@@ -497,9 +511,6 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       </message>
       <message name="IDS_SHOW_SEARCH_SUGGESTIONS_TITLE" desc="Title for a switch in Settings that controls URL and search autocompletion and informs the user about the data shared by this feature.">
         Show search suggestions
-      </message>
-      <message name="IDS_AUTOCOMPLETE_TOP_SUGGESTIONS_TITLE" desc="The label for settings switch controlling whether or not top suggestions show up in autocomplete">
-        Show top suggestions
       </message>
       <message name="IDS_INDEX_OTHER_SEARCH_ENGINES_TITLE" desc="Title for the settings related to index other search engines">
         Index other search engines
@@ -1058,6 +1069,21 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
       </message>
       <message name="IDS_BRAVE_NEWS_TITLE" desc="Title for Brave news settings">
         Brave News
+      </message>
+      <message name="IDS_CUSTOMIZE_MENU_TITLE" desc="Title for customize menu settings">
+        Customize menu
+      </message>
+      <message name="IDS_CUSTOMIZE_MAIN_MENU_SECTION_TITLE" desc="Title for main menu customization settings">
+        Main menu
+      </message>
+      <message name="IDS_CUSTOMIZE_PAGE_ACTIONS_SECTION_TITLE" desc="Title for page actions customization settings">
+        Page actions
+      </message>
+      <message name="IDS_CUSTOMIZE_PAGE_ACTIONS_SECTION_SUMMARY" desc="Description for page actions customization settings">
+        The following items will only be visible on the menu when supported by the current open webpage.
+      </message>
+        <message name="IDS_WEBAPP" desc="WebApp placeholder used in menu item customization preferences">
+        WebApp
       </message>
       <message name="IDS_BRAVE_UI_USD" desc="USD value of tokens">
         ≈ <ph name="VALUE">%1$s<ex>0.0</ex></ph> USD
@@ -1681,6 +1707,12 @@ Are you sure you want to do this?
       </message>
       <message name="IDS_THANK_YOU_TEXT" desc="Text for thank you UI for shields.">
         Thanks for letting Brave's developers know that there's something wrong with this site. We'll do our best to fix it!
+      </message>
+      <message name="IDS_ISSUE_CATEGORY_SPINNER_TEXT" desc="Label for a dropdown containing categories of issues on a webpage">
+        What's the main issue you're seeing?
+      </message>
+      <message name="IDS_ISSUE_CATEGORY_PLACEHOLDER" desc="Placeholder text that instructs the user to select one of the following categories of issues on a webpage">
+        Select one option
       </message>
       <message name="IDS_ADVANCED_CONTROLS" desc="Title for toggle section.">
         Advanced controls
@@ -2346,7 +2378,7 @@ Are you sure you want to do this?
     <message name="IDS_YEARLY_SUBSCRIPTION_AMOUNT" desc="Brave VPN plan text">
       <ph name="YEARLY_AMOUNT">%1$s</ph> /year
     </message>
-    <message name="IDS_BRAVE_VPN_RENEWAL_TEXT" desc="Brave VPN plan text">
+    <message name="IDS_BRAVE_SUBSCRIPTION_RENEWAL_TEXT" desc="Brave subscription renewal text">
       Subscriptions will be charged via your Google account. Any unused portion of the free trial, if offered, is forfeited when you buy a subscription.\n\nYour subscription will renew automatically unless it is canceled at least 24 hours before the end of the current period.\n\nYou can manage your subscriptions in Settings.\n\nBy using Brave, you agree to the Terms of Use and Privacy Policy.
     </message>
     <message name="IDS_ALREADY_PURCHASED" desc="Brave subscription plan page already purchased text">
@@ -2602,6 +2634,9 @@ If you don't accept this request, VPN will not reconnect and your internet conne
     </message>
     <message name="IDS_EDIT" desc="Brave wallet accounts text">
       Edit
+    </message>
+    <message name="IDS_WALLET_ACCOUNTS_UPDATE" desc="Brave wallet accounts update text">
+      Update
     </message>
     <message name="IDS_ACCOUNT_UPDATE_FAILED" desc="Brave Wallet account update error text">
       Account update failed.
@@ -3570,7 +3605,7 @@ If you don't accept this request, VPN will not reconnect and your internet conne
       Select all
     </message>
     <message name="IDS_MENU_BRAVE_LEO" desc="Brave AI menu item text">
-      Leo
+      Leo AI
     </message>
     <message name="IDS_BRAVE_WALLET_SIGN_IN_WITH_BRAVE_WALLET" desc="Sign in with Brave Wallet Title">
       Sign in with Brave Wallet
@@ -3630,9 +3665,9 @@ If you don't accept this request, VPN will not reconnect and your internet conne
       Manage Subscription
     </message>
     <message name="IDS_BRAVE_LEO_PREMIUM" desc="Title for Brave Leo plans dialog">
-      Leo Premium
+      Leo AI Premium
     </message>
-    <message name="IDS_YEARLY_SUBSCRIPTION_LEO" desc="Brave Leo yearly plan text">
+    <message name="IDS_ONE_YEAR_SUBSCRIPTION" desc="Brave Leo and Origin yearly plan text">
       One year
     </message>
     <message name="IDS_YEARLY_SUBSCRIPTION_LEO_BEST_VALUE" desc="Brave Leo yearly plan best value text">
@@ -3642,7 +3677,7 @@ If you don't accept this request, VPN will not reconnect and your internet conne
       Monthly
     </message>
     <message name="IDS_ASK_LEO_AUTO_SUGGESTION" desc="Omnibox Brave Leo auto suggestion description">
-      Ask Leo
+      Ask Leo AI
     </message>
     <!-- Start of Playlist strings -->
     <message name="IDS_REMEMBER_FILE_PLAYBACK_POSITION" desc="Remember file playback position title for playlist settings">
@@ -3827,7 +3862,7 @@ If you don't accept this request, VPN will not reconnect and your internet conne
     </message>
     <!-- End of Playlist strings -->
     <message name="IDS_LEO_UNLEASH_POWER" desc="Title for Brave Leo subscription purchase">
-      Unleash Leo's full powers with Premium:
+      Unleash Leo AI's full powers with Premium:
     </message>
     <message name="IDS_LEO_TIP_EXPLORE_TITLE" desc="Title for Brave Leo subscription Explore tip">
       Explore different AI models
@@ -4054,6 +4089,200 @@ If you don't accept this request, VPN will not reconnect and your internet conne
     </message>
     <message name="IDS_BRAVE_HOMEPAGE_MOBILE_BOOKMARKS_TEXT" desc="Text for `Mobile bookmarks` setting in `Homepage` settings">
       Mobile bookmarks
+    </message>
+    <message name="IDS_BRAVE_ORIGIN_PREMIUM" desc="Title for Origin Premium">
+      Origin
+    </message>
+    <message name="IDS_YEARLY_SUBSCRIPTION_AMOUNT_ORIGIN" desc="Brave Origin plan text">
+      <ph name="YEARLY_AMOUNT">%1$s</ph> /year
+    </message>
+    <message name="IDS_MONTHLY_SUBSCRIPTION_AMOUNT_ORIGIN" desc="Brave Origin plan text">
+      <ph name="MONTHLY_AMOUNT">%1$s</ph> /month
+    </message>
+    <message name="IDS_ORIGIN_SUBSCRIPTION_TRY_FREE_TRIAL" desc="Try free trial now button for Brave Origin subscription">
+      Try 7 days free
+    </message>
+    <message name="IDS_ORIGIN_PAYWALL_TEXT_1" desc="Brave Origin paywall text">
+      Support Brave's industry-leading work for Web privacy and open-source adblocking lists
+    </message>
+    <message name="IDS_ORIGIN_PAYWALL_TEXT_2" desc="Brave Origin paywall text">
+      Optimized for a more minimalist browser interface
+    </message>
+    <message name="IDS_ORIGIN_PAYWALL_TEXT_3" desc="Brave Origin paywall text">
+      A core of Brave Shields for adblock, privacy, and speed
+    </message>
+    <message name="IDS_ORIGIN_PAYWALL_TEXT_4" desc="Brave Origin paywall text">
+      Support for IT-managed policies at work
+    </message>
+    <message name="IDS_YEARLY_SUBSCRIPTION_BEST_VALUE" desc="Brave Origin yearly plan best value text">
+      best value
+    </message>
+    <message name="IDS_MONTHLY_SUBSCRIPTION_ORIGIN" desc="Brave Origin monthly subscription text">
+      Monthly subscription
+    </message>
+    <message name="IDS_LEARN_MORE_ABOUT_ORIGIN" desc="Brave Origin learn more about text">
+      Learn more about Origin
+    </message>
+    <!-- Password Manager backport -->
+    <message name="IDS_PASSWORD_SETTINGS_SAVE_PASSWORDS" desc="Title for the checkbox toggling whether passwords are saved or not. [CHAR_LIMIT=32]">
+      Save passwords
+    </message>
+    <message name="IDS_PASSWORDS_AUTO_SIGNIN_TITLE" desc="Title for checkbox to enable automatically signing the user in to websites">
+      Auto Sign-in
+    </message>
+    <message name="IDS_PASSWORDS_AUTO_SIGNIN_DESCRIPTION" desc="Text under 'Auto sign-in' checkbox">
+      Automatically sign in to websites using stored credentials. When the feature is off, you’ll be asked for verification every time before signing in to a website.
+    </message>
+    <message name="IDS_SAVED_PASSWORDS_NONE_TEXT" desc="Text when there are no saved passwords/exceptions.">
+      Saved passwords will appear here.
+    </message>
+    <message name="IDS_PASSWORD_NO_RESULT" desc="Text when a password search returned no results.">
+      Can’t find that password. Check your spelling and try again.
+    </message>
+    <message name="IDS_PASSWORD_SETTINGS_EXPORT_ACTION_TITLE" desc="The title of a menu item to trigger exporting passwords from the password settings.">
+      Export passwords…
+    </message>
+    <message name="IDS_PASSWORD_SETTINGS_EXPORT_ACTION_DESCRIPTION" desc="The description of a menu item to trigger exporting passwords from the password settings.">
+      Export passwords stored with Brave
+    </message>
+    <message name="IDS_SETTINGS_PASSWORDS_PREPARING_EXPORT" desc="Text shown to the user above a progress bar, informing the user that passwords are being prepared for export.">
+      Preparing passwords…
+    </message>
+    <message name="IDS_PASSWORD_SETTINGS_EXPORT_LEARN_GOOGLE_DRIVE" desc="The label of a button in an error dialog after exporting passwords from the settings failed. The button takes the user to a help article about using Google Drive.">
+      Learn how to use Google Drive
+    </message>
+    <message name="IDS_PASSWORD_SETTINGS_EXPORT_NO_APP" desc="The explanation of the error when exporting passwords fails because the user has no Android app installed which could consume the exported data. The description is shown in the body of an alert dialog.">
+      Your device doesn’t have an app to store the passwords file.
+    </message>
+    <message name="IDS_PASSWORD_SETTINGS_EXPORT_ERROR_DETAILS" desc="A short prefix to introduce a technical error message passed to the user from Android after exporting passwords through a temporary file fails. Both the prefix and the error message are shown in the body of an alert dialog.">
+      Details: <ph name="ERROR_DESCRIPTION">%1$s<ex>IOException: No space left on device</ex></ph>
+    </message>
+    <message name="IDS_PASSWORD_MANAGER_UI_SELECT_FILE" desc="A button in the settings page that triggers import of passwords from a CSV file.">
+      Select file
+    </message>
+    <message name="IDS_PASSWORD_MANAGER_UI_IMPORT_ERROR_UNKNOWN" desc="Message is shown on the dialog for importing passwords if no passwords were imported and we don't know the cause of error. Probably error in the backend or in our systems.">
+      Your passwords weren't imported
+    </message>
+    <message name="IDS_PASSWORD_MANAGER_UI_IMPORT_SUCCESS_TITLE" desc="The title of a dialog, which offers the ability for the user to import passwords into Password Manager. Shown when import has successfully finished with no errors.">
+      Import successful!
+    </message>
+    <message name="IDS_PASSWORD_MANAGER_UI_IMPORT_ERROR_BAD_FORMAT" desc="Message is shown on the dialog for importing passwords if no passwords were imported because file is not formated correctly">
+      Can't import passwords. Check <ph name="FILENAME">&lt;span class="bold-text"&gt;$1&lt;/span&gt;<ex>&lt;span class="bold-text"&gt;filename.csv&lt;/span&gt;</ex></ph> and make sure it's formatted correctly. <ph name="BEGIN_LINK">&lt;a href="$2" target="_blank"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+    </message>
+    <message name="IDS_PASSWORD_MANAGER_UI_IMPORT_FILE_SIZE_EXCEEDED" desc="Message is shown on the dialog for importing passwords if no passwords were imported because file size exceeds 1 MB.">
+      Can't import passwords. The file size should be less than 1 MB.
+    </message>
+    <message name="IDS_PASSWORD_MANAGER_UI_IMPORT_ERROR_LIMIT_EXCEEDED" desc="Message is shown on the dialog for importing passwords if no passwords were imported because user tried to import more than `NUMBER` passwords from a single file.">
+      <!-- Silences a build warning, If there is a better way to silence this, please change it. We should never be limiting to 1 password per import -->
+      {COUNT, plural,
+        =1 {Can't import passwords. You can only import 1 password at a time.}
+        other {Can't import passwords. You can only import up to <ph name="COUNT_MANY"><ex>3000</ex>%1$d</ph> passwords at a time.}}
+    </message>
+    <message name="IDS_PASSWORD_MANAGER_UI_IMPORT_CONFLICT_DEVICE" desc="An error message for a row that wasn't imported, because the provided credential is already stored on their device. It is shown on the dialog for importing passwords if some passwords weren't imported.">
+      A password for this account is already saved on this device
+    </message>
+    <message name="IDS_PASSWORD_MANAGER_UI_IMPORT_ALREADY_ACTIVE" desc="Message is shown on the dialog for importing passwords if the import process is already running in another tab.">
+      You're already importing passwords in another tab
+    </message>
+    <message name="IDS_PASSWORD_SETTINGS_IMPORT_FILE_READ_ERROR" desc="The message to display if there is an error reading the CSV file selected by the user.">
+      Failed to read the selected file. <ph name="EXCEPTION_INFO">%1$s</ph>
+    </message>
+    <message name="IDS_PASSWORD_SETTINGS_IMPORT_FILE_SUCCESS_COUNT" desc="Shows the user a brief message along with the total number of passwords imported.">
+      {IMPORT_COUNT, plural,
+        =1 {Successfully imported 1 password.}
+        other {Successfully imported <ph name="IMPORT_COUNT_MANY">%1$d</ph> passwords.}}
+    </message>
+    <message name="IDS_PASSWORD_SETTINGS_IMPORT_FILE_ERROR_TITLE" desc="The title message that shows to the user if there was an error importing their CSV.">
+      Import failed.
+    </message>
+    <message name="IDS_PASSWORD_SETTINGS_MANAGER_NOT_AVAILABLE" desc="The message to display if the app is not able to get an instance of the PasswordManager class.">
+      Password manager not available.
+    </message>
+    <message name="IDS_LOCKSCREEN_DESCRIPTION_EXPORT" desc="When a user attempts to export saved passwords in Brave's settings, Brave launches a lock screen to verify the user's identity and displays the following explanation.">
+      Unlock to export your passwords
+    </message>
+    <message name="IDS_HELP_CONTEXT_PASSWORDS" desc="When a user attempts to export saved passwords in Brave's settings, Brave launches a lock screen to verify the user's identity and displays the following explanation.">
+      passwords
+    </message>
+    <message name="IDS_SECTION_SAVED_PASSWORDS_EXCEPTIONS" desc="Header for the list of websites for which user selected to never save passwords. [CHAR_LIMIT=32]">
+      Never saved
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_COPY_STORED_USERNAME" desc="Content description for the button that copies the stored username.">
+      Copy username
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_COPY_STORED_PASSWORD" desc="Content description for the button that copies the stored password.">
+      Copy password
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_SHOW_STORED_PASSWORD" desc="Content description for the button that allows users to view the stored password upon reauthentication.">
+      Show password
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_DELETE_STORED_PASSWORD_ACTION_TITLE" desc="Title for button on action bar that deletes the stored password.">
+      Delete password
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_EDIT_STORED_PASSWORD_ACTION_TITLE" desc="Title for button on action bar that edits the stored password.">
+      Edit password
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_HIDE_STORED_PASSWORD" desc="A tooltip on a button that hides the saved password that is being shown.">
+      Hide password
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_DELETE_STORED_PASSWORD" desc="Content description for the button that allows users to delete the stored password.">
+      Delete stored password
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_USERNAME_COPIED_INTO_CLIPBOARD" desc="Text that announces to the user that the username of a saved account has been copied into clipboard.">
+      Username copied
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_PASSWORD_COPIED_INTO_CLIPBOARD" desc="Text that announces to the user that the password of a saved account has been copied into clipboard.">
+      Password copied
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_TITLE" desc="Title of the overview screen for a saved password.">
+      Saved password
+    </message>
+    <message name="IDS_PASSWORD_EDIT_HINT" desc="Small hint on the editing screens that advises users to store the same password as they use on the currently edited site.">
+      Make sure the password you are saving matches your password for <ph name="SITE">%1$s<ex>example.com</ex></ph>
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_EDIT_DUPLICATE_USERNAME_ERROR" desc="Error text displayed when the user changes the username in the editor to another username that they already saved for the same site.">
+      You already saved this username for this site
+    </message>
+    <message name="IDS_PASSWORD_VIA_FEDERATION" desc="Text for federated credential's value.">
+      with <ph name="PROVIDER">%1$s<ex>example.com</ex></ph>
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_EDIT_DELETE_CREDENTIAL_DIALOG_TITLE" desc="The title of a prompt to confirm that the user intends to delete the stored password.">
+      Delete password?
+    </message>
+    <message name="IDS_PASSWORD_CHECK_DELETE_CREDENTIAL_DIALOG_BODY" desc="The body of a prompt to confirm that the user intends to delete the stored password.">
+      Deleting this password will not delete your account on <ph name="SITE">%1$s<ex>example.com</ex></ph>. Change your password or delete your account on <ph name="SITE">%1$s<ex>example.com</ex></ph> to keep it safe from others.
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_EDIT_DELETE_CREDENTIAL_DIALOG_CONFIRM" desc="The caption the button confirming that the user intends to delete the stored password.">
+      Delete password
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_SITE_TITLE" desc="Title preceding the identification of the site where the stored password comes from.">
+      Site
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_USERNAME_TITLE" desc="Title preceding username of the account where the stored password comes from.">
+      Username
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEWER_PASSWORD" desc="Title preceding password on password entry viewer.">
+      Password
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_EDIT_DELETION_DIALOG_BODY" desc="Text explaining the user that deleting the credential that they are viewing will not remove their account on the reaspective website.">
+      Deleting this password will not delete your account on <ph name="SITE">%1$s<ex>example.com</ex></ph>
+    </message>
+
+    <!-- Lock Screen Fragment -->
+    <message name="IDS_LOCKSCREEN_DESCRIPTION_COPY" desc="When a user attempts to copy a password for a particular website into clipboard in Brave's settings, Brave launches a lock screen to verify the user's identity and displays the following explanation.">
+      Unlock to copy your password
+    </message>
+    <message name="IDS_LOCKSCREEN_DESCRIPTION_VIEW" desc="When a user attempts to view a password for a particular website in Brave's settings, Brave launches a lock screen to verify the user's identity and displays the following explanation.">
+      Unlock to view your password
+    </message>
+    <message name="IDS_LOCKSCREEN_DESCRIPTION_EDIT" desc="When a user attempts to edit a password for a particular website in Brave's settings, Brave launches a lock screen to verify the user's identity and displays the following explanation.">
+      Unlock to edit your password
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_COPY_SET_SCREEN_LOCK" desc="Text prompting user to set up screen lock on their device in order to copy passwords">
+      To copy passwords, first set a screen lock on your device
+    </message>
+    <message name="IDS_PASSWORD_ENTRY_VIEW_SET_SCREEN_LOCK" desc="Text prompting user to set up screen lock on their device in order to view passwords">
+      To view passwords, first set a screen lock on your device
     </message>
   </messages>
   </release>

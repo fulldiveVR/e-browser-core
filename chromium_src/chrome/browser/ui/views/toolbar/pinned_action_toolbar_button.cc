@@ -7,9 +7,10 @@
 
 #include "chrome/browser/ui/views/toolbar/pinned_toolbar_actions_container.h"
 #include "chrome/browser/ui/views/toolbar/toolbar_button.h"
+#include "chrome/browser/ui/views/toolbar/toolbar_view.h"
 
 #define UpdateIcon UpdateIcon_ChromiumImpl
-#include "src/chrome/browser/ui/views/toolbar/pinned_action_toolbar_button.cc"
+#include <chrome/browser/ui/views/toolbar/pinned_action_toolbar_button.cc>
 #undef UpdateIcon
 
 bool PinnedActionToolbarButton::ShouldShowMenu() {

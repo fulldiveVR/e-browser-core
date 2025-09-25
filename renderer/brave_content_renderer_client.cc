@@ -101,6 +101,7 @@ void BraveContentRendererClient::
       SetRuntimeFeaturesDefaultsBeforeBlinkInitialization();
 
   blink::WebRuntimeFeatures::EnableFledge(false);
+  blink::WebRuntimeFeatures::EnablePermissionElement(false);
   // Disable topics APIs because kBrowsingTopics feature is disabled
   blink::WebRuntimeFeatures::EnableTopicsAPI(false);
   blink::WebRuntimeFeatures::EnableTopicsDocumentAPI(false);
@@ -177,8 +178,8 @@ void BraveContentRendererClient::RenderFrameCreated(
   }
 
   if (base::FeatureList::IsEnabled(skus::features::kSkusFeature) &&
-      !IsIncognitoProcess()) {
-    new skus::SkusRenderFrameObserver(render_frame);
+      !process_state::IsIncognitoProcess()) {
+    skus::SkusRenderFrameObserver::Create(render_frame);
   }
 
 #if BUILDFLAG(IS_ANDROID)
@@ -198,7 +199,7 @@ void BraveContentRendererClient::RenderFrameCreated(
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
   if (base::FeatureList::IsEnabled(playlist::features::kPlaylist) &&
-      !IsIncognitoProcess()) {
+      !process_state::IsIncognitoProcess()) {
     new playlist::PlaylistRenderFrameObserver(
         render_frame, base::BindRepeating([] {
           return BraveRenderThreadObserver::GetDynamicParams().playlist_enabled;
@@ -207,7 +208,8 @@ void BraveContentRendererClient::RenderFrameCreated(
   }
 #endif
 
-  if (ai_chat::features::IsAIChatEnabled() && !IsIncognitoProcess()) {
+  if (ai_chat::features::IsAIChatEnabled() &&
+      !process_state::IsIncognitoProcess()) {
     new ai_chat::PageContentExtractor(render_frame, registry,
                                       content::ISOLATED_WORLD_ID_GLOBAL,
                                       ISOLATED_WORLD_ID_BRAVE_INTERNAL);
@@ -222,7 +224,7 @@ void BraveContentRendererClient::RenderFrameCreated(
 #if BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
   if (base::FeatureList::IsEnabled(
           web_discovery::features::kBraveWebDiscoveryNative) &&
-      !IsIncognitoProcess()) {
+      !process_state::IsIncognitoProcess()) {
     new web_discovery::BlinkDocumentExtractor(render_frame, registry);
   }
 #endif

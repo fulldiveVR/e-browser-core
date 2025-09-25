@@ -6,7 +6,7 @@
 #include "chrome/browser/ui/ui_features.h"
 
 #define HasTabSearchToolbarButton HasTabSearchToolbarButton_ChromiumImpl
-#include "src/chrome/browser/ui/ui_features.cc"
+#include <chrome/browser/ui/ui_features.cc>
 #undef HasTabSearchToolbarButton
 
 #include "base/feature_override.h"
@@ -20,8 +20,7 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
     // TODO(https://github.com/brave/brave-browser/issues/46337): Re-enable
     // scrim views if needed.
     {kScrimForBrowserWindowModal, base::FEATURE_DISABLED_BY_DEFAULT},
-    {KScrimForTabModal, base::FEATURE_DISABLED_BY_DEFAULT},
-    {kSideBySide, base::FEATURE_DISABLED_BY_DEFAULT},
+    {kSideBySide, base::FEATURE_ENABLED_BY_DEFAULT},
     {kTabHoverCardImages, base::FEATURE_DISABLED_BY_DEFAULT},
     {kTabstripComboButton, base::FEATURE_ENABLED_BY_DEFAULT},
 }});

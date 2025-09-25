@@ -12,7 +12,7 @@
   Unused_IsPositionInWindowCaption() {                              \
     return false;                                                   \
   }                                                                 \
-  friend class VerticalTabStripRegionView;                          \
+  friend class BraveVerticalTabStripRegionView;                     \
   friend class BraveTabStrip;                                       \
   friend class BraveTabStripRegionView;                             \
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest, MinHeight); \
@@ -20,7 +20,7 @@
 
 #define UpdateTabStripMargin virtual UpdateTabStripMargin
 
-#include "src/chrome/browser/ui/views/frame/tab_strip_region_view.h"  // IWYU pragma: export
+#include <chrome/browser/ui/views/frame/tab_strip_region_view.h>  // IWYU pragma: export
 
 #undef UpdateTabStripMargin
 #undef IsPositionInWindowCaption

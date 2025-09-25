@@ -7,6 +7,7 @@
 
 #include "base/android/callback_android.h"
 #include "base/android/jni_string.h"
+#include "components/prefs/android/pref_service_android.h"
 #include "components/signin/public/identity_manager/identity_manager.h"
 
 // Must come after all headers that specialize FromJniType() / ToJniType().
@@ -18,7 +19,8 @@ namespace {
 class UnusedClass {
  private:
   void test() {
-    Java_SigninManagerImpl_create(nullptr, 0ll, nullptr, nullptr, nullptr);
+    Java_SigninManagerImpl_create(nullptr, 0ll, nullptr, nullptr, nullptr,
+                                  nullptr);
     Java_SigninManagerImpl_destroy(nullptr, 0ll);
   }
 };
@@ -26,6 +28,6 @@ class UnusedClass {
 
 #define Java_SigninManagerImpl_create Java_BraveSigninManager_create
 #define Java_SigninManagerImpl_destroy Java_BraveSigninManager_destroy
-#include "src/chrome/browser/signin/android/signin_manager_android.cc"
+#include <chrome/browser/signin/android/signin_manager_android.cc>
 #undef Java_SigninManagerImpl_create
 #undef Java_SigninManagerImpl_destroy

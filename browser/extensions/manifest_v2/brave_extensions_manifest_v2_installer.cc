@@ -14,6 +14,7 @@
 #include "base/strings/escape.h"
 #include "base/strings/string_util.h"
 #include "base/strings/utf_string_conversions.h"
+#include "brave/browser/extensions/manifest_v2/brave_hosted_extensions.h"
 #include "brave/components/constants/brave_services_key.h"
 #include "brave/components/constants/brave_services_key_helper.h"
 #include "brave/components/constants/network_constants.h"
@@ -28,6 +29,7 @@
 #include "extensions/common/extension_urls.h"
 #include "net/traffic_annotation/network_traffic_annotation.h"
 #include "services/network/public/cpp/resource_request.h"
+#include "services/network/public/cpp/shared_url_loader_factory.h"
 #include "services/network/public/cpp/simple_url_loader.h"
 #include "url/gurl.h"
 
@@ -95,10 +97,6 @@ GURL GetCrxDownloadUrl(const base::Value::Dict& update_manifest,
 
 }  // namespace
 
-bool IsKnownMV2Extension(const extensions::ExtensionId& id) {
-  return kPreconfiguredManifestV2Extensions.contains(id);
-}
-
 ExtensionManifestV2Installer::ExtensionManifestV2Installer(
     const std::string& extension_id,
     content::WebContents* web_contents,
@@ -108,7 +106,7 @@ ExtensionManifestV2Installer::ExtensionManifestV2Installer(
       web_contents_(web_contents->GetWeakPtr()),
       url_loader_factory_(std::move(url_loader_factory)),
       callback_(std::move(callback)) {
-  CHECK(IsKnownMV2Extension(extension_id));
+  CHECK(IsKnownBraveHostedExtension(extension_id));
 }
 
 ExtensionManifestV2Installer::~ExtensionManifestV2Installer() = default;

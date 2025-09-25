@@ -18,13 +18,13 @@ TEST(BraveAdsNewTabPageAdFeatureTest, IsEnabled) {
 
 TEST(BraveAdsNewTabPageAdFeatureTest, ShouldSupportNewTabPageAdConfirmations) {
   // Act & Assert
-  EXPECT_FALSE(kShouldSupportNewTabPageAdConfirmationsForNonRewards.Get());
+  EXPECT_TRUE(kShouldSupportNewTabPageAdConfirmationsForNonRewards.Get());
 }
 
 TEST(BraveAdsNewTabPageAdFeatureTest,
      ShouldFrequencyCapNewTabPageAdsForNonRewards) {
   // Act & Assert
-  EXPECT_FALSE(kShouldFrequencyCapNewTabPageAdsForNonRewards.Get());
+  EXPECT_TRUE(kShouldFrequencyCapNewTabPageAdsForNonRewards.Get());
 }
 
 TEST(BraveAdsNewTabPageAdFeatureTest, MaximumNewTabPageAdsPerHour) {

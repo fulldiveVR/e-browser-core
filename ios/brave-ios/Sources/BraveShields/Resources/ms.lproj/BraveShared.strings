@@ -110,7 +110,7 @@
 "DomainBlockedTitle" = "Domain Disekat";
 
 /* A description of what the Enable GPC toggle does */
-"EnableGPCDescription" = "Minta laman web agar tidak menjual atau kongsikan data anda. [Ketahui lebih lanjut](https://support.brave.com/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)";
+"EnableGPCDescription" = "Minta laman web agar tidak menjual atau kongsikan data anda. [Ketahui lebih lanjut](https://support.brave.app/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)";
 
 /* A label of the GPC toggle */
 "EnableGPCLabel" = "Dayakan Kawalan Privasi Global";
@@ -199,7 +199,8 @@
 /* A list row label for accessing the shred settings screen */
 "ShredSiteData" = "Hapuskan Data Laman";
 
-/* A message for a confirmation window that appears when a user clicks on 'Shred Data'. */
+/* A message for a confirmation window that appears when a user clicks on 'Shred All Tabs'.
+A message for a confirmation window that appears when a user clicks on 'Shred Data'. */
 "ShredSiteDataConfirmationMessage" = "Penghapusan akan menutup semua tab yang dibuka pada laman ini dan memadamkan semua data laman. Tindakan ini tidak boleh dibuat asal.";
 
 /* A title for a confirmation window that appears when a user clicks on 'Shred Data' */

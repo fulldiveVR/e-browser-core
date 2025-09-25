@@ -26,7 +26,6 @@
 #include "content/public/renderer/v8_value_converter.h"
 #include "gin/array_buffer.h"
 #include "gin/converter.h"
-#include "gin/handle.h"
 #include "gin/object_template_builder.h"
 #include "third_party/blink/public/platform/browser_interface_broker_proxy.h"
 #include "third_party/blink/public/platform/scheduler/web_agent_group_scheduler.h"
@@ -37,6 +36,8 @@
 #include "third_party/blink/public/web/web_script_source.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/base/resource/resource_bundle.h"
+#include "v8/include/cppgc/allocation.h"
+#include "v8/include/v8-cppgc.h"
 #include "v8/include/v8-microtask-queue.h"
 #include "v8/include/v8-proxy.h"
 #include "v8/include/v8-typed-array.h"
@@ -97,11 +98,14 @@ JSSolanaProvider::JSSolanaProvider(content::RenderFrame* render_frame)
     : RenderFrameObserver(render_frame),
       v8_value_converter_(content::V8ValueConverter::Create()) {
   EnsureConnected();
+  self_ = this;
 }
 
 JSSolanaProvider::~JSSolanaProvider() = default;
 
-gin::WrapperInfo JSSolanaProvider::kWrapperInfo = {gin::kEmbedderNativeGin};
+void JSSolanaProvider::OnDestruct() {
+  self_.Clear();
+}
 
 // static
 void JSSolanaProvider::Install(bool allow_overwrite_window_solana,
@@ -129,14 +133,10 @@ void JSSolanaProvider::Install(bool allow_overwrite_window_solana,
   }
 
   // v8 will manage the lifetime of JSSolanaProvider
-  gin::Handle<JSSolanaProvider> provider =
-      gin::CreateHandle(isolate, new JSSolanaProvider(render_frame));
-  if (provider.IsEmpty()) {
-    return;
-  }
-  v8::Local<v8::Value> provider_value = provider.ToV8();
+  JSSolanaProvider* provider = cppgc::MakeGarbageCollected<JSSolanaProvider>(
+      isolate->GetCppHeap()->GetAllocationHandle(), render_frame);
   v8::Local<v8::Object> provider_object =
-      provider_value->ToObject(context).ToLocalChecked();
+      provider->GetWrapper(isolate).ToLocalChecked();
 
   // Create a proxy to the actual JSSolanaProvider object which will be
   // exposed via window.braveSolana and window.solana.
@@ -172,8 +172,7 @@ void JSSolanaProvider::Install(bool allow_overwrite_window_solana,
        {"connect", "disconnect", "signAndSendTransaction", "signMessage",
         "request", "signTransaction", "signAllTransactions",
         "walletStandardInit"}) {
-    SetOwnPropertyWritable(context,
-                           provider_value->ToObject(context).ToLocalChecked(),
+    SetOwnPropertyWritable(context, provider_object,
                            gin::StringToV8(isolate, method), false);
   }
 
@@ -208,8 +207,8 @@ gin::ObjectTemplateBuilder JSSolanaProvider::GetObjectTemplateBuilder(
       .SetMethod("walletStandardInit", &JSSolanaProvider::WalletStandardInit);
 }
 
-const char* JSSolanaProvider::GetTypeName() {
-  return "JSSolanaProvider";
+const gin::WrapperInfo* JSSolanaProvider::wrapper_info() const {
+  return &kWrapperInfo;
 }
 
 void JSSolanaProvider::AccountChangedEvent(
@@ -788,7 +787,7 @@ void JSSolanaProvider::OnSignAllTransactions(
   if (error == mojom::SolanaProviderError::kSuccess) {
     size_t serialized_txs_length = serialized_txs.size();
     v8::Local<v8::Array> tx_array =
-        v8::Array::New(context->GetIsolate(), serialized_txs_length);
+        v8::Array::New(v8::Isolate::GetCurrent(), serialized_txs_length);
     for (size_t i = 0; i < serialized_txs_length; ++i) {
       v8::Local<v8::Value> transaction =
           CreateTransaction(context, serialized_txs[i], versions[i]);
@@ -1071,7 +1070,7 @@ bool JSSolanaProvider::LoadSolanaWeb3ModuleIfNeeded(v8::Isolate* isolate) {
 v8::Local<v8::Value> JSSolanaProvider::CreatePublicKey(
     v8::Local<v8::Context> context,
     const std::string& base58_str) {
-  v8::Isolate* isolate = context->GetIsolate();
+  v8::Isolate* isolate = v8::Isolate::GetCurrent();
   v8::MicrotasksScope microtasks(isolate, context->GetMicrotaskQueue(),
                                  v8::MicrotasksScope::kDoNotRunMicrotasks);
   v8::Context::Scope context_scope(context);
@@ -1103,7 +1102,7 @@ v8::Local<v8::Value> JSSolanaProvider::CreateTransaction(
     v8::Local<v8::Context> context,
     const std::vector<uint8_t> serialized_tx,
     mojom::SolanaMessageVersion version) {
-  v8::Isolate* isolate = context->GetIsolate();
+  v8::Isolate* isolate = v8::Isolate::GetCurrent();
   if (!render_frame()) {
     return v8::Undefined(isolate);
   }

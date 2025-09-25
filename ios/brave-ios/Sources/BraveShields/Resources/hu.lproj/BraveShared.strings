@@ -110,7 +110,7 @@
 "DomainBlockedTitle" = "Domén blokkolva";
 
 /* A description of what the Enable GPC toggle does */
-"EnableGPCDescription" = "Kérje meg a weboldalakat, hogy ne adják el vagy osszák meg az adatait. [További információk](https://support.brave.com/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)";
+"EnableGPCDescription" = "Kérje meg a weboldalakat, hogy ne adják el vagy osszák meg az adatait. [További információk](https://support.brave.app/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)";
 
 /* A label of the GPC toggle */
 "EnableGPCLabel" = "A Global Privacy Control engedélyezése";
@@ -199,7 +199,8 @@
 /* A list row label for accessing the shred settings screen */
 "ShredSiteData" = "Webhelyadatok megsemmisítése";
 
-/* A message for a confirmation window that appears when a user clicks on 'Shred Data'. */
+/* A message for a confirmation window that appears when a user clicks on 'Shred All Tabs'.
+A message for a confirmation window that appears when a user clicks on 'Shred Data'. */
 "ShredSiteDataConfirmationMessage" = "A megsemmisítés a webhely összes nyitott lapját be fogja zárni, és valamennyi webhelyadatot törölni fogja. Ezt nem lehet visszavonni.";
 
 /* A title for a confirmation window that appears when a user clicks on 'Shred Data' */

@@ -24,6 +24,8 @@ class GURL;
 
 namespace brave_wallet {
 
+class CardanoAddress;
+
 bool EncodeString(std::string_view input, std::string* output);
 bool EncodeStringArray(base::span<const std::string> input,
                        std::string* output);
@@ -65,8 +67,6 @@ void SetDefaultBaseCryptocurrency(PrefService* prefs,
                                   std::string_view cryptocurrency);
 std::string GetDefaultBaseCryptocurrency(PrefService* prefs);
 
-std::string_view GetUnstoppableDomainsProxyReaderContractAddress(
-    std::string_view chain_id);
 std::string GetEnsRegistryContractAddress(std::string_view chain_id);
 
 mojom::BlockchainTokenPtr GetUserAsset(PrefService* prefs,
@@ -118,6 +118,7 @@ std::string GenerateRandomHexString();
 std::string WalletInternalErrorMessage();
 std::string WalletParsingErrorMessage();
 std::string WalletInsufficientBalanceErrorMessage();
+std::string WalletUserRejectedRequestErrorMessage();
 
 mojom::BlockchainTokenPtr GetBitcoinNativeToken(std::string_view chain_id);
 mojom::BlockchainTokenPtr GetZcashNativeToken(std::string_view chain_id);
@@ -140,6 +141,10 @@ const std::string& GetAccountPermissionIdentifier(
     const mojom::AccountIdPtr& account_id);
 
 bool IsBraveWalletOrigin(const url::Origin& origin);
+
+std::optional<std::map<CardanoAddress, mojom::CardanoKeyIdPtr>>
+GetCardanoAddressesWithKeyIds(
+    const std::vector<mojom::CardanoAddressPtr>& addresses);
 
 }  // namespace brave_wallet
 

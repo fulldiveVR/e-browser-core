@@ -9,10 +9,14 @@ import { setIconBasePath } from '@brave/leo/react/icon'
 import '$web-components/app.global.scss'
 import '$web-common/defaultTrustedTypesPolicy'
 import getAPI from './api'
-import { AIChatContextProvider, ConversationEntriesProps, useAIChat } from './state/ai_chat_context'
+import {
+  AIChatContextProvider,
+  ConversationEntriesProps,
+  useAIChat,
+} from './state/ai_chat_context'
 import {
   ConversationContextProvider,
-  useConversation
+  useConversation,
 } from './state/conversation_context'
 import Main from './components/main'
 import FullScreen from './components/full_page'
@@ -35,7 +39,7 @@ function App() {
     <AIChatContextProvider conversationEntriesComponent={ConversationEntries}>
       <ActiveChatProviderFromUrl>
         <ConversationContextProvider>
-            <Content />
+          <Content />
         </ConversationContextProvider>
       </ActiveChatProviderFromUrl>
     </AIChatContextProvider>
@@ -80,15 +84,19 @@ function ConversationEntries(props: ConversationEntriesProps) {
   // it will never grow until a user action happens.
   React.useEffect(() => {
     // conversationUuid populated is a sign that data has been fetched
-    if (!hasNotifiedContentReady.current && conversationContext.conversationUuid &&
-        !conversationContext.conversationHistory.length && hasLoaded) {
+    if (
+      !hasNotifiedContentReady.current
+      && conversationContext.conversationUuid
+      && !conversationContext.conversationHistory.length
+      && hasLoaded
+    ) {
       hasNotifiedContentReady.current = true
       props.onIsContentReady(true)
     }
   }, [
     conversationContext.conversationUuid,
     conversationContext.conversationHistory.length,
-    hasLoaded
+    hasLoaded,
   ])
 
   React.useEffect(() => {
@@ -109,24 +117,50 @@ function ConversationEntries(props: ConversationEntriesProps) {
         const additionalHeight = Math.max(0, 500 - height)
         document.body.style.setProperty(
           '--iframe-additional-margin-for-menus',
-          additionalHeight + 'px'
+          additionalHeight + 'px',
         )
-        iframeRef.current.style.height = (height + additionalHeight) + 'px'
+        iframeRef.current.style.height = height + additionalHeight + 'px'
         props.onHeightChanged()
       }
     }
-    const id = api.conversationEntriesFrameObserver.childHeightChanged.addListener(listener)
+    const id =
+      api.conversationEntriesFrameObserver.childHeightChanged.addListener(
+        listener,
+      )
 
     return () => {
       api.conversationEntriesFrameObserver.removeListener(id)
     }
   }, [props.onHeightChanged, props.onIsContentReady])
 
+  React.useEffect(() => {
+    // Set the iframe position to relative when the regenerate
+    // answer menu is open. Otherwise the menu can sometimes be
+    // overlapped by the Suggested question buttons.
+    const listener = (isOpen: boolean) => {
+      document.body.style.setProperty(
+        '--iframe-position-for-menus',
+        isOpen ? 'relative' : 'unset',
+      )
+    }
+    const id =
+      api.conversationEntriesFrameObserver.regenerateAnswerMenuIsOpen.addListener(
+        listener,
+      )
+
+    return () => {
+      api.conversationEntriesFrameObserver.removeListener(id)
+    }
+  }, [])
+
   return (
     <iframe
       sandbox='allow-scripts allow-same-origin'
       allow='clipboard-write'
-      src={'chrome-untrusted://leo-ai-conversation-entries/' + conversationContext.conversationUuid}
+      src={
+        'chrome-untrusted://leo-ai-conversation-entries/'
+        + conversationContext.conversationUuid
+      }
       ref={iframeRef}
       onLoad={() => setHasLoaded(true)}
     />

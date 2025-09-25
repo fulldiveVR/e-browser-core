@@ -293,7 +293,8 @@ void SolanaProviderImpl::ContinueSignTransaction(
 
   auto request = mojom::SignSolTransactionsRequest::New(
       MakeOriginInfo(delegate_->GetOrigin()), -1, account->account_id.Clone(),
-      std::move(tx_datas), std::move(raw_messages), chain_id);
+      std::move(tx_datas), std::move(raw_messages),
+      mojom::ChainId::New(mojom::CoinType::SOL, chain_id));
   brave_wallet_service_->AddSignSolTransactionsRequest(
       std::move(request),
       base::BindOnce(&SolanaProviderImpl::OnSignTransactionRequestProcessed,
@@ -433,7 +434,8 @@ void SolanaProviderImpl::ContinueSignAllTransactions(
 
   auto request = mojom::SignSolTransactionsRequest::New(
       MakeOriginInfo(delegate_->GetOrigin()), -1, account->account_id.Clone(),
-      std::move(tx_datas), std::move(raw_messages), chain_id);
+      std::move(tx_datas), std::move(raw_messages),
+      mojom::ChainId::New(mojom::CoinType::SOL, chain_id));
 
   brave_wallet_service_->AddSignSolTransactionsRequest(
       std::move(request),
@@ -655,7 +657,7 @@ void SolanaProviderImpl::SignMessage(
     message = std::string(blob_msg.begin(), blob_msg.end());
   }
   auto request = mojom::SignMessageRequest::New(
-      MakeOriginInfo(delegate_->GetOrigin()), -1, account->account_id.Clone(),
+      MakeOriginInfo(delegate_->GetOrigin()), 0, account->account_id.Clone(),
       mojom::SignDataUnion::NewSolanaSignData(
           mojom::SolanaSignData::New(message, blob_msg)),
       mojom::CoinType::SOL,

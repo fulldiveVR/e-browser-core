@@ -33,6 +33,7 @@
 #include "brave/browser/ui/views/brave_help_bubble/brave_help_bubble_host_view.h"
 #include "brave/browser/ui/views/frame/brave_contents_layout_manager.h"
 #include "brave/browser/ui/views/frame/brave_contents_view_util.h"
+#include "brave/browser/ui/views/frame/split_view/brave_contents_container_view.h"
 #include "brave/browser/ui/views/frame/split_view/brave_multi_contents_view.h"
 #include "brave/browser/ui/views/frame/vertical_tabs/vertical_tab_strip_region_view.h"
 #include "brave/browser/ui/views/frame/vertical_tabs/vertical_tab_strip_widget_delegate_view.h"
@@ -47,13 +48,16 @@
 #include "brave/browser/ui/views/window_closing_confirm_dialog_view.h"
 #include "brave/components/commands/common/features.h"
 #include "brave/components/constants/pref_names.h"
+#include "brave/components/sidebar/common/features.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/ui/color/nala/nala_color_id.h"
 #include "chrome/app/chrome_command_ids.h"
 #include "chrome/browser/app_mode/app_mode_utils.h"
+#include "chrome/browser/devtools/devtools_ui_controller.h"
 #include "chrome/browser/devtools/devtools_window.h"
 #include "chrome/browser/enterprise/watermark/watermark_view.h"
 #include "chrome/browser/ui/browser_commands.h"
+#include "chrome/browser/ui/browser_element_identifiers.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/color/chrome_color_id.h"
 #include "chrome/browser/ui/exclusive_access/exclusive_access_manager.h"
@@ -67,6 +71,7 @@
 #include "chrome/browser/ui/views/frame/multi_contents_view.h"
 #include "chrome/browser/ui/views/frame/tab_strip_region_view.h"
 #include "chrome/browser/ui/views/frame/top_container_view.h"
+#include "chrome/browser/ui/views/interaction/browser_elements_views.h"
 #include "chrome/browser/ui/views/side_panel/side_panel_coordinator.h"
 #include "chrome/browser/ui/views/tabs/tab_search_button.h"
 #include "chrome/browser/ui/views/tabs/tab_strip.h"
@@ -78,11 +83,13 @@
 #include "content/public/browser/page_navigator.h"
 #include "content/public/browser/web_contents.h"
 #include "extensions/buildflags/buildflags.h"
+#include "third_party/blink/public/common/input/web_mouse_event.h"
 #include "ui/base/accelerators/accelerator.h"
 #include "ui/base/accelerators/accelerator_manager.h"
 #include "ui/base/metadata/metadata_header_macros.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/compositor/layer.h"
+#include "ui/events/event.h"
 #include "ui/events/event_observer.h"
 #include "ui/gfx/geometry/rounded_corners_f.h"
 #include "ui/views/border.h"
@@ -101,7 +108,7 @@
 #endif
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/speedreader/speedreader_tab_helper.h"
+#include "brave/browser/ui/speedreader/speedreader_tab_helper.h"
 #include "brave/browser/ui/views/speedreader/reader_mode_bubble.h"
 #include "brave/browser/ui/views/speedreader/reader_mode_toolbar_view.h"
 #endif
@@ -140,6 +147,10 @@ class ContentsBackground : public views::View {
   ContentsBackground() {
     SetBackground(views::CreateSolidBackground(kColorToolbar));
     SetEnabled(false);
+
+    // Prevent to eat any events that goes to web contents because web contents
+    // could be behind this background.
+    SetCanProcessEventsWithinSubtree(false);
   }
 };
 BEGIN_METADATA(ContentsBackground)
@@ -230,30 +241,26 @@ BraveBrowserView::BraveBrowserView(std::unique_ptr<Browser> browser)
   const bool use_rounded_corners =
       BraveBrowser::ShouldUseBraveWebViewRoundedCorners(browser_.get());
 #if BUILDFLAG(ENABLE_SPEEDREADER)
-  reader_mode_toolbar_ =
-      contents_container_->AddChildView(std::make_unique<ReaderModeToolbarView>(
-          browser_->profile(), use_rounded_corners));
-
-  views::View* contents_view = contents_web_view_;
-  // MultiContentsView is contents view with SideBySide feature.
-  if (base::FeatureList::IsEnabled(features::kSideBySide)) {
-    contents_view = multi_contents_view_;
+  // When SideBySide is enabled, each ContentsContainerView in MultiContentsView
+  // own ReaderModeToolbarView.
+  if (!base::FeatureList::IsEnabled(features::kSideBySide)) {
+    reader_mode_toolbar_ = contents_container_->AddChildView(
+        std::make_unique<ReaderModeToolbarView>(browser_->profile(),
+                                                use_rounded_corners));
+    contents_container_->SetLayoutManager(
+        std::make_unique<BraveContentsLayoutManager>(
+            contents_container_view_, lens_overlay_view_, reader_mode_toolbar_,
+            /*scrim_view=*/nullptr));
   }
-  CHECK(contents_view);
-  contents_container_->SetLayoutManager(
-      std::make_unique<BraveContentsLayoutManager>(
-          devtools_web_view(), devtools_scrim_view(), contents_view,
-          lens_overlay_view_, contents_scrim_view(), /*border_view*/ nullptr,
-          watermark_view_.get(), reader_mode_toolbar_));
 #endif
 
   if (use_rounded_corners) {
     // Collapse the separator line between the toolbar or bookmark bar and the
     // views below.
-    contents_separator_->SetPreferredSize(gfx::Size());
+    top_container_separator_->SetPreferredSize(gfx::Size());
     contents_shadow_ = BraveContentsViewUtil::CreateShadow(contents_container_);
     contents_background_view_ =
-        AddChildView(std::make_unique<ContentsBackground>());
+        AddChildViewAt(std::make_unique<ContentsBackground>(), 0);
   }
 
   pref_change_registrar_.Init(GetProfile()->GetPrefs());
@@ -298,9 +305,9 @@ BraveBrowserView::BraveBrowserView(std::unique_ptr<Browser> browser)
   }
 
   if (tabs::features::IsBraveSplitViewEnabled() && browser_->is_type_normal()) {
-    split_view_ =
-        contents_container_->parent()->AddChildView(std::make_unique<SplitView>(
-            *browser_, contents_container_, contents_web_view_));
+    split_view_ = contents_container_->parent()->AddChildView(
+        std::make_unique<SplitView>(*browser_, *this, contents_container_,
+                                    contents_container_view_->contents_view()));
     set_contents_view(split_view_);
   }
 
@@ -319,10 +326,6 @@ BraveBrowserView::BraveBrowserView(std::unique_ptr<Browser> browser)
   // re-ordering. FindBarHost widgets uses this view as a  kHostViewKey.
   // See the comments of BrowserView::find_bar_host_view().
   ReorderChildView(find_bar_host_view_, -1);
-}
-
-views::View* BraveBrowserView::GetContentsBoundingView() const {
-  return contents_view();
 }
 
 void BraveBrowserView::OnPreferenceChanged(const std::string& pref_name) {
@@ -352,6 +355,11 @@ void BraveBrowserView::UpdateSideBarHorizontalAlignment() {
 
   sidebar_container_view_->SetSidebarOnLeft(on_left);
 
+  if (multi_contents_view_ &&
+      base::FeatureList::IsEnabled(sidebar::features::kSidebarWebPanel)) {
+    GetBraveMultiContentsView()->SetWebPanelOnLeft(on_left);
+  }
+
   DeprecatedLayoutImmediately();
 }
 
@@ -364,7 +372,8 @@ void BraveBrowserView::UpdateSearchTabsButtonState() {
       tab_search_button->SetVisible(!is_vertical_tabs && use_search_button);
     }
   } else if (auto* tab_search_button =
-                 tab_strip_region_view_->GetTabSearchButton()) {
+                 BrowserElementsViews::From(browser())
+                     ->GetViewAs<TabSearchButton>(kTabSearchButtonElementId)) {
     tab_search_button->SetVisible(!is_vertical_tabs && use_search_button);
   }
 }
@@ -377,7 +386,17 @@ sidebar::Sidebar* BraveBrowserView::InitSidebar() {
   // Start Sidebar UI initialization.
   DCHECK(sidebar_container_view_);
   sidebar_container_view_->Init();
+
+  // Ask BraveMultiContentsView for preparing web panel feature.
+  if (multi_contents_view_ &&
+      base::FeatureList::IsEnabled(sidebar::features::kSidebarWebPanel)) {
+    GetBraveMultiContentsView()->SetWebPanelWidth(
+        sidebar_container_view_->side_panel()->GetPreferredSize().width());
+    GetBraveMultiContentsView()->UseContentsContainerViewForWebPanel();
+  }
+
   UpdateSideBarHorizontalAlignment();
+
   return sidebar_container_view_;
 }
 
@@ -434,16 +453,6 @@ bool BraveBrowserView::GetTabStripVisible() const {
   return BrowserView::GetTabStripVisible();
 }
 
-#if BUILDFLAG(IS_WIN)
-bool BraveBrowserView::GetSupportsTitle() const {
-  if (tabs::utils::SupportsVerticalTabs(browser())) {
-    return true;
-  }
-
-  return BrowserView::GetSupportsTitle();
-}
-#endif
-
 void BraveBrowserView::SetStarredState(bool is_starred) {
   BraveBookmarkButton* button =
       static_cast<BraveToolbarView*>(toolbar())->bookmark_button();
@@ -453,6 +462,15 @@ void BraveBrowserView::SetStarredState(bool is_starred) {
 }
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
+ReaderModeToolbarView* BraveBrowserView::reader_mode_toolbar() {
+  if (base::FeatureList::IsEnabled(features::kSideBySide)) {
+    return GetBraveMultiContentsView()
+        ->GetActiveContentsContainerView()
+        ->reader_mode_toolbar();
+  }
+
+  return reader_mode_toolbar_;
+}
 
 speedreader::SpeedreaderBubbleView* BraveBrowserView::ShowSpeedreaderBubble(
     speedreader::SpeedreaderTabHelper* tab_helper,
@@ -465,7 +483,7 @@ speedreader::SpeedreaderBubbleView* BraveBrowserView::ShowSpeedreaderBubble(
       arrow = views::BubbleBorder::TOP_RIGHT;
       break;
     case speedreader::SpeedreaderBubbleLocation::kToolbar:
-      anchor = reader_mode_toolbar_->toolbar();
+      anchor = reader_mode_toolbar()->toolbar();
       arrow = views::BubbleBorder::TOP_LEFT;
       break;
   }
@@ -489,8 +507,18 @@ void BraveBrowserView::UpdateReaderModeToolbar() {
     }
     return false;
   };
-  reader_mode_toolbar_->SetVisible(
+  reader_mode_toolbar()->SetVisible(
       is_distilled(browser()->tab_strip_model()->GetActiveWebContents()));
+
+  if (base::FeatureList::IsEnabled(features::kSideBySide)) {
+    // Need to update inactive split tabs' reader mode toolbar because
+    // it's also visible.
+    auto* contents_container =
+        GetBraveMultiContentsView()->GetInactiveContentsContainerView();
+    auto* reader_mode_toolbar = contents_container->reader_mode_toolbar();
+    reader_mode_toolbar->SetVisible(
+        is_distilled(contents_container->contents_view()->web_contents()));
+  }
 }
 #endif  // BUILDFLAG(ENABLE_SPEEDREADER)
 
@@ -749,9 +777,29 @@ void BraveBrowserView::MaybeShowReadingListInSidePanelIPH() {
   // Do nothing.
 }
 
-void BraveBrowserView::UpdateDevToolsForContents(
-    content::WebContents* web_contents,
-    bool update_devtools_web_contents) {
+void BraveBrowserView::UpdateDevTools(
+    content::WebContents* inspected_web_contents) {
+  if (!split_view_ ||
+      split_view_->secondary_contents_web_view()->web_contents() !=
+          inspected_web_contents) {
+    BrowserView::UpdateDevTools(inspected_web_contents);
+    return;
+  }
+
+  // In case of split view and `inspected_web_contents` is not the active web
+  // contents, we need to update devtools for the secondary web contents
+  // container view.
+  auto* devtools_ui_controller =
+      browser_->GetFeatures().devtools_ui_controller();
+  devtools_ui_controller->MakeSureControllerExists(
+      split_view_->secondary_contents_container_view());
+  devtools_ui_controller->UpdateDevtools(
+      split_view_->secondary_contents_container_view(), inspected_web_contents,
+      true);
+  DeprecatedLayoutImmediately();
+}
+
+bool BraveBrowserView::MaybeUpdateDevtools(content::WebContents* web_contents) {
   CHECK(!web_contents || web_contents == GetActiveWebContents())
       << "This method is supposed to be called only for the active web "
          "contents";
@@ -760,14 +808,14 @@ void BraveBrowserView::UpdateDevToolsForContents(
     split_view_->WillUpdateDevToolsForActiveContents({});
   }
 
-  BrowserView::UpdateDevToolsForContents(web_contents,
-                                         update_devtools_web_contents);
+  bool result = BrowserView::MaybeUpdateDevtools(web_contents);
 
   if (split_view_) {
     split_view_->DidUpdateDevToolsForActiveContents({});
   }
 
   UpdateWebViewRoundedCorners();
+  return result;
 }
 
 void BraveBrowserView::OnWidgetActivationChanged(views::Widget* widget,
@@ -794,29 +842,47 @@ void BraveBrowserView::GetAccessiblePanes(std::vector<views::View*>* panes) {
   }
 }
 
+void BraveBrowserView::UpdateContentsShadowVisibility() {
+  // With SideBySide, we use chromium's mini toolbar.
+  // Unfortunately, it's not rendered well with contents shadow.
+  // Fixed by hiding contents shadow when split view is active.
+  // As split view has another border around contents, we don't need
+  // contents shadow.
+  if (!base::FeatureList::IsEnabled(features::kSideBySide)) {
+    return;
+  }
+
+  if (!BraveBrowser::ShouldUseBraveWebViewRoundedCorners(browser_.get())) {
+    return;
+  }
+
+  // Hide contents shadow when active tab is in split tab.
+  auto* tab_strip_model = browser()->tab_strip_model();
+  const bool hide_contents_shadow = tab_strip_model->IsActiveTabSplit();
+
+  if (hide_contents_shadow && contents_shadow_) {
+    contents_shadow_.reset();
+    contents_container_->DestroyLayer();
+    return;
+  }
+
+  if (!hide_contents_shadow && !contents_shadow_) {
+    contents_shadow_ = BraveContentsViewUtil::CreateShadow(contents_container_);
+  }
+}
+
 void BraveBrowserView::ShowSplitView(bool focus_active_view) {
   BrowserView::ShowSplitView(focus_active_view);
 
+  UpdateContentsShadowVisibility();
   UpdateContentsSeparatorVisibility();
-  GetBraveMultiContentsView()->UpdateSecondaryLocationBar();
 }
 
 void BraveBrowserView::HideSplitView() {
   BrowserView::HideSplitView();
 
+  UpdateContentsShadowVisibility();
   UpdateContentsSeparatorVisibility();
-}
-
-void BraveBrowserView::UpdateActiveTabInSplitView() {
-  BrowserView::UpdateActiveTabInSplitView();
-  GetBraveMultiContentsView()->UpdateSecondaryLocationBar();
-}
-
-void BraveBrowserView::UpdateContentsInSplitView(
-    const std::vector<std::pair<tabs::TabInterface*, int>>& prev_tabs,
-    const std::vector<std::pair<tabs::TabInterface*, int>>& new_tabs) {
-  BrowserView::UpdateContentsInSplitView(prev_tabs, new_tabs);
-  GetBraveMultiContentsView()->UpdateSecondaryLocationBar();
 }
 
 BraveMultiContentsView* BraveBrowserView::GetBraveMultiContentsView() const {
@@ -863,6 +929,8 @@ void BraveBrowserView::OnActiveTabChanged(content::WebContents* old_contents,
     split_view_->DidChangeActiveWebContents(
         /*passkey*/ {}, old_contents, new_contents);
   }
+
+  UpdateContentsShadowVisibility();
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
   UpdateReaderModeToolbar();
@@ -921,10 +989,10 @@ void BraveBrowserView::UpdateContentsSeparatorVisibility() {
   // container.
   if ((split_view_ && split_view_->IsSplitViewActive()) ||
       (multi_contents_view_ && multi_contents_view_->IsInSplitView())) {
-    contents_separator_->SetPreferredSize({});
+    top_container_separator_->SetPreferredSize({});
     return;
   }
-  contents_separator_->SetPreferredSize(
+  top_container_separator_->SetPreferredSize(
       gfx::Size(views::Separator::kThickness, views::Separator::kThickness));
 }
 
@@ -963,6 +1031,34 @@ void BraveBrowserView::ReadyToListenFullscreenChanges() {
   }
 }
 
+bool BraveBrowserView::PreHandleMouseEvent(const blink::WebMouseEvent& event) {
+  if (event.GetTypeAsUiEventType() == ui::EventType::kMouseMoved &&
+      sidebar_container_view_) {
+    return sidebar_container_view_->PreHandleMouseEvent(
+        event.PositionInScreen());
+  }
+
+  return false;
+}
+
+void BraveBrowserView::OnMouseMoved(const ui::MouseEvent& event) {
+  BrowserView::OnMouseMoved(event);
+
+  // To make sidebar UI visible when mouse moved to space between window border
+  // & contents. This space exists when rounded corners feature is enabled. As
+  // BraveBrowserView::PreHandleMouseEvent() is only called from web contents,
+  // we need to handle move event from browser view.
+  // This handling is useful when it's in fullscreen. If move the mouse point to
+  // window edge quickly BraveBrowserView::PreHandleMouseEvent() is not called.
+  if (sidebar_container_view_ && event.type() == ui::EventType::kMouseMoved &&
+      BraveBrowser::ShouldUseBraveWebViewRoundedCorners(browser_.get())) {
+    gfx::Point position_in_screen = event.location();
+    views::View::ConvertPointToScreen(this, &position_in_screen);
+    sidebar_container_view_->PreHandleMouseEvent(
+        gfx::PointF(position_in_screen));
+  }
+}
+
 bool BraveBrowserView::IsSidebarVisible() const {
   return sidebar_container_view_ && sidebar_container_view_->IsSidebarVisible();
 }
@@ -990,15 +1086,22 @@ void BraveBrowserView::UpdateWebViewRoundedCorners() {
 
   // Set the appropriate corner radius for the view that contains both the web
   // contents and devtools.
-  contents_container_->layer()->SetRoundedCornerRadius(corners);
+  if (contents_container_->layer()) {
+    contents_container_->layer()->SetRoundedCornerRadius(corners);
+  }
+
+  if (multi_contents_view_) {
+    GetBraveMultiContentsView()->UpdateCornerRadius();
+  }
 
   const auto in_split_view_mode =
       !!browser_->GetFeatures().split_view_browser_data();
 
   auto update_corner_radius =
-      [in_split_view_mode](views::WebView* contents, views::WebView* devtools,
-                           DevToolsDockedPlacement devtools_placement,
-                           gfx::RoundedCornersF corners) {
+      [in_split_view_mode](
+          views::WebView* contents, views::WebView* devtools,
+          ContentsContainerView::DevToolsDockedPlacement devtools_placement,
+          gfx::RoundedCornersF corners) {
         // In addition to giving the contents container rounded corners, we also
         // need to round the corners of the native view holder that displays the
         // web contents.
@@ -1017,21 +1120,21 @@ void BraveBrowserView::UpdateWebViewRoundedCorners() {
           // BrowserView::GetDevToolsDockedPlacement(). It depends on coordinate
           // of it but in split view mode, the calculation is not correct.
           switch (devtools_placement) {
-            case DevToolsDockedPlacement::kLeft:
+            case ContentsContainerView::DevToolsDockedPlacement::kLeft:
               corners.set_upper_left(0);
               corners.set_lower_left(0);
               break;
-            case DevToolsDockedPlacement::kRight:
+            case ContentsContainerView::DevToolsDockedPlacement::kRight:
               corners.set_upper_right(0);
               corners.set_lower_right(0);
               break;
-            case DevToolsDockedPlacement::kBottom:
+            case ContentsContainerView::DevToolsDockedPlacement::kBottom:
               corners.set_lower_left(0);
               corners.set_lower_right(0);
               break;
-            case DevToolsDockedPlacement::kNone:
+            case ContentsContainerView::DevToolsDockedPlacement::kNone:
               break;
-            case DevToolsDockedPlacement::kUnknown:
+            case ContentsContainerView::DevToolsDockedPlacement::kUnknown:
               break;
           }
         }
@@ -1044,8 +1147,12 @@ void BraveBrowserView::UpdateWebViewRoundedCorners() {
         }
       };
 
-  update_corner_radius(contents_web_view_, devtools_web_view_,
-                       devtools_docked_placement(), corners);
+  if (contents_container_view_) {
+    update_corner_radius(contents_container_view_->contents_view(),
+                         contents_container_view_->devtools_web_view(),
+                         contents_container_view_->devtools_docked_placement(),
+                         corners);
+  }
 
   if (in_split_view_mode) {
     split_view_->UpdateCornerRadius(corners);

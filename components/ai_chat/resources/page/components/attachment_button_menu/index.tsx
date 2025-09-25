@@ -8,9 +8,8 @@ import ButtonMenu from '@brave/leo/react/buttonMenu'
 import Button from '@brave/leo/react/button'
 import Icon from '@brave/leo/react/icon'
 import { ConversationContext } from '../../state/conversation_context'
-import { MAX_IMAGES } from '../../../common/constants'
 import { AIChatContext } from '../../state/ai_chat_context'
-import { getImageFiles } from '../../../common/conversation_history_utils'
+import { shouldDisableAttachmentsButton } from '../../../common/conversation_history_utils'
 
 // Utils
 import { getLocale } from '$web-common/locale'
@@ -18,21 +17,24 @@ import { getLocale } from '$web-common/locale'
 // Styles
 import styles from './style.module.scss'
 
-type Props = Pick<ConversationContext, 'uploadImage' | 'getScreenshots' |
-  'conversationHistory' | 'associatedContentInfo' | 'setShowAttachments'
-  | 'associateDefaultContent'> &
-  Pick<AIChatContext, 'isMobile' | 'tabs'> & {
+type Props = Pick<
+  ConversationContext,
+  | 'uploadFile'
+  | 'getScreenshots'
+  | 'conversationHistory'
+  | 'associatedContentInfo'
+  | 'setAttachmentsDialog'
+  | 'associateDefaultContent'
+  | 'unassociatedTabs'
+>
+  & Pick<AIChatContext, 'isMobile'> & {
     conversationStarted: boolean
   }
 
 export default function AttachmentButtonMenu(props: Props) {
-  const totalUploadedImages = props.conversationHistory.reduce(
-    (total, turn) => total +
-      (getImageFiles(turn.uploadedFiles)?.length || 0),
-    0
+  const isMenuDisabled = shouldDisableAttachmentsButton(
+    props.conversationHistory,
   )
-
-  const isMenuDisabled = totalUploadedImages >= MAX_IMAGES
   const hasAssociatedContent = props.associatedContentInfo.length > 0
 
   return (
@@ -51,7 +53,7 @@ export default function AttachmentButtonMenu(props: Props) {
             <Icon name='attachment' />
           </Button>
         </div>
-        <leo-menu-item onClick={() => props.uploadImage(false)}>
+        <leo-menu-item onClick={() => props.uploadFile(false)}>
           <div className={styles.buttonContent}>
             <Icon
               className={styles.buttonIcon}
@@ -60,7 +62,7 @@ export default function AttachmentButtonMenu(props: Props) {
             {getLocale(S.AI_CHAT_UPLOAD_FILE_BUTTON_LABEL)}
           </div>
         </leo-menu-item>
-        {hasAssociatedContent &&
+        {hasAssociatedContent && (
           <leo-menu-item onClick={() => props.getScreenshots()}>
             <div className={styles.buttonContent}>
               <Icon
@@ -69,9 +71,10 @@ export default function AttachmentButtonMenu(props: Props) {
               />
               {getLocale(S.AI_CHAT_SCREENSHOT_BUTTON_LABEL)}
             </div>
-          </leo-menu-item>}
-        {props.isMobile &&
-          <leo-menu-item onClick={() => props.uploadImage(true)}>
+          </leo-menu-item>
+        )}
+        {props.isMobile && (
+          <leo-menu-item onClick={() => props.uploadFile(true)}>
             <div className={styles.buttonContent}>
               <Icon
                 className={styles.buttonIcon}
@@ -80,20 +83,20 @@ export default function AttachmentButtonMenu(props: Props) {
               {getLocale(S.AI_CHAT_TAKE_A_PICTURE_BUTTON_LABEL)}
             </div>
           </leo-menu-item>
-        }
-        {!props.conversationStarted && <>
-          {props.associateDefaultContent && (
-            <leo-menu-item onClick={() => props.associateDefaultContent?.()}>
-              <div className={styles.buttonContent}>
-                <Icon
-                  className={styles.buttonIcon}
-                  name='window-tab'
-                />
-                {getLocale(S.AI_CHAT_CURRENT_TAB_CONTENTS_BUTTON_LABEL)}
-              </div>
-            </leo-menu-item>
-          )}
-          {props.tabs.length > 0 && (<leo-menu-item onClick={() => props.setShowAttachments(true)}>
+        )}
+        {props.associateDefaultContent && (
+          <leo-menu-item onClick={() => props.associateDefaultContent?.()}>
+            <div className={styles.buttonContent}>
+              <Icon
+                className={styles.buttonIcon}
+                name='window-tab'
+              />
+              {getLocale(S.AI_CHAT_CURRENT_TAB_CONTENTS_BUTTON_LABEL)}
+            </div>
+          </leo-menu-item>
+        )}
+        {props.unassociatedTabs.length > 0 && (
+          <leo-menu-item onClick={() => props.setAttachmentsDialog('tabs')}>
             <div className={styles.buttonContent}>
               <Icon
                 className={styles.buttonIcon}
@@ -101,8 +104,8 @@ export default function AttachmentButtonMenu(props: Props) {
               />
               {getLocale(S.AI_CHAT_ATTACH_OPEN_TABS_BUTTON_LABEL)}
             </div>
-          </leo-menu-item>)}
-        </>}
+          </leo-menu-item>
+        )}
       </ButtonMenu>
     </>
   )

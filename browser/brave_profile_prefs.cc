@@ -7,6 +7,7 @@
 
 #include <string>
 
+#include "base/feature_list.h"
 #include "brave/browser/brave_shields/brave_shields_web_contents_observer.h"
 #include "brave/browser/new_tab/new_tab_shows_options.h"
 #include "brave/browser/themes/brave_dark_mode_utils.h"
@@ -16,6 +17,7 @@
 #include "brave/components/ai_chat/core/browser/model_service.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
+#include "brave/components/brave_account/prefs.h"
 #include "brave/components/brave_adaptive_captcha/brave_adaptive_captcha_service.h"
 #include "brave/components/brave_ads/core/public/prefs/obsolete_pref_util.h"
 #include "brave/components/brave_ads/core/public/prefs/pref_registry.h"
@@ -47,6 +49,7 @@
 #include "brave/components/ntp_background_images/buildflags/buildflags.h"
 #include "brave/components/ntp_background_images/common/view_counter_pref_registry.h"
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
+#include "brave/components/psst/buildflags/buildflags.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "brave/components/search_engines/brave_prepopulated_engines.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
@@ -85,6 +88,7 @@
 #endif
 
 #if BUILDFLAG(ENABLE_SPEEDREADER)
+#include "brave/components/speedreader/speedreader_pref_migration.h"
 #include "brave/components/speedreader/speedreader_service.h"
 #endif
 
@@ -116,6 +120,8 @@
 #endif
 
 #if defined(TOOLKIT_VIEWS)
+#include "brave/browser/ui/darker_theme/features.h"
+#include "brave/browser/ui/darker_theme/pref_names.h"
 #include "brave/components/sidebar/browser/pref_names.h"
 #endif
 
@@ -126,6 +132,10 @@ using extensions::FeatureSwitch;
 
 #if BUILDFLAG(ENABLE_CUSTOM_BACKGROUND)
 #include "brave/browser/ntp_background/ntp_background_prefs.h"
+#endif
+
+#if BUILDFLAG(ENABLE_PSST)
+#include "brave/components/psst/common/pref_names.h"
 #endif
 
 #if BUILDFLAG(ENABLE_CONTAINERS)
@@ -315,6 +325,11 @@ void RegisterProfilePrefsForMigration(
 #if !BUILDFLAG(IS_IOS) && !BUILDFLAG(IS_ANDROID)
   registry->RegisterBooleanPref(kWebTorrentEnabled, false);
 #endif
+
+  // Added 2025-08 - Speedreader preference migration
+#if BUILDFLAG(ENABLE_SPEEDREADER)
+  speedreader::RegisterProfilePrefsForMigration(registry);
+#endif
 }
 
 void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
@@ -369,7 +384,6 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
 
 #if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
   registry->RegisterBooleanPref(kBraveWaybackMachineEnabled, true);
-  registry->RegisterBooleanPref(kBraveWaybackMachineDisabledByPolicy, false);
 #endif
 
   brave_adaptive_captcha::BraveAdaptiveCaptchaService::RegisterProfilePrefs(
@@ -415,6 +429,10 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
 
   // Brave Wallet
   brave_wallet::RegisterProfilePrefs(registry);
+
+#if BUILDFLAG(ENABLE_PSST)
+  psst::RegisterProfilePrefs(registry);
+#endif
 
   // Brave Search
   if (brave_search::IsDefaultAPIEnabled()) {
@@ -469,6 +487,8 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
   ai_chat::prefs::RegisterProfilePrefs(registry);
   ai_chat::ModelService::RegisterProfilePrefs(registry);
 
+  brave_account::prefs::RegisterPrefs(registry);
+
   brave_search_conversion::RegisterPrefs(registry);
 
   // kEnableMediaRouterOnRestart is used to remember the user's choice.
@@ -486,7 +506,10 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
 
 #if defined(TOOLKIT_VIEWS)
   bookmarks::prefs::RegisterProfilePrefs(registry);
-#endif
+  if (base::FeatureList::IsEnabled(darker_theme::features::kBraveDarkerTheme)) {
+    registry->RegisterBooleanPref(darker_theme::prefs::kBraveDarkerMode, false);
+  }
+#endif  // defined(TOOLKIT_VIEWS)
 
   brave_ads::RegisterProfilePrefs(registry);
   brave_rewards::RegisterProfilePrefs(registry);

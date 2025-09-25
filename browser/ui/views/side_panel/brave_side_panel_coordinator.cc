@@ -40,12 +40,13 @@ std::optional<SidePanelEntry::Id> GetDefaultEntryId(Profile* profile) {
 BraveSidePanelCoordinator::~BraveSidePanelCoordinator() = default;
 
 void BraveSidePanelCoordinator::Show(
-    SidePanelEntry::Key entry_key,
-    std::optional<SidePanelUtil::SidePanelOpenTrigger> open_trigger) {
+    const UniqueKey& entry,
+    std::optional<SidePanelUtil::SidePanelOpenTrigger> open_trigger,
+    bool suppress_animations) {
   sidebar::SetLastUsedSidePanel(browser_view_->GetProfile()->GetPrefs(),
-                                entry_key.id());
+                                entry.key.id());
 
-  SidePanelCoordinator::Show(entry_key, open_trigger);
+  SidePanelCoordinator::Show(entry, open_trigger, suppress_animations);
 }
 
 void BraveSidePanelCoordinator::OnTabStripModelChanged(
@@ -82,7 +83,8 @@ void BraveSidePanelCoordinator::Toggle() {
       !browser_view_->unified_side_panel()->IsClosing()) {
     Close();
   } else if (const auto key = GetLastActiveEntryKey()) {
-    Show(*key, SidePanelUtil::SidePanelOpenTrigger::kToolbarButton);
+    SidePanelUIBase::Show(*key,
+                          SidePanelUtil::SidePanelOpenTrigger::kToolbarButton);
   }
 }
 
@@ -94,7 +96,8 @@ void BraveSidePanelCoordinator::Toggle(
 
 void BraveSidePanelCoordinator::OnViewVisibilityChanged(
     views::View* observed_view,
-    views::View* starting_from) {
+    views::View* starting_view,
+    bool visible) {
   UpdateToolbarButtonHighlight(observed_view->GetVisible());
 
   // See the comment of SidePanelCoordinator::OnViewVisibilityChanged()
@@ -104,7 +107,8 @@ void BraveSidePanelCoordinator::OnViewVisibilityChanged(
     update_items_state = false;
   }
 
-  SidePanelCoordinator::OnViewVisibilityChanged(observed_view, starting_from);
+  SidePanelCoordinator::OnViewVisibilityChanged(observed_view, starting_view,
+                                                visible);
 
   if (update_items_state) {
     GetBraveBrowserView()->sidebar_container_view()->UpdateActiveItemState();
@@ -151,6 +155,7 @@ void BraveSidePanelCoordinator::UpdateToolbarButtonHighlight(
 void BraveSidePanelCoordinator::PopulateSidePanel(
     bool supress_animations,
     const UniqueKey& unique_key,
+    std::optional<SidePanelUtil::SidePanelOpenTrigger> open_trigger,
     SidePanelEntry* entry,
     std::optional<std::unique_ptr<views::View>> content_view) {
   CHECK(entry);
@@ -166,7 +171,8 @@ void BraveSidePanelCoordinator::PopulateSidePanel(
   // Notify to give opportunity to observe another panel entries from
   // global or active tab's contextual registry.
   GetBraveBrowserView()->sidebar_container_view()->WillShowSidePanel();
-  SidePanelCoordinator::PopulateSidePanel(supress_animations, unique_key, entry,
+  SidePanelCoordinator::PopulateSidePanel(supress_animations, unique_key,
+                                          std::move(open_trigger), entry,
                                           std::move(content_view));
 }
 

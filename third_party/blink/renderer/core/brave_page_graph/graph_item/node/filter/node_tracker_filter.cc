@@ -6,12 +6,12 @@
 #include "brave/third_party/blink/renderer/core/brave_page_graph/graph_item/node/filter/node_tracker_filter.h"
 
 #include "brave/third_party/blink/renderer/core/brave_page_graph/graphml.h"
-#include "third_party/blink/renderer/platform/wtf/text/string_builder_stream.h"
+#include "third_party/blink/renderer/platform/wtf/text/strcat.h"
 
 namespace brave_page_graph {
 
 NodeTrackerFilter::NodeTrackerFilter(GraphItemContext* context,
-                                     const String& host)
+                                     const blink::String& host)
     : NodeFilter(context), host_(host) {}
 
 NodeTrackerFilter::~NodeTrackerFilter() = default;
@@ -21,9 +21,7 @@ ItemName NodeTrackerFilter::GetItemName() const {
 }
 
 ItemDesc NodeTrackerFilter::GetItemDesc() const {
-  StringBuilder ts;
-  ts << NodeFilter::GetItemDesc() << " [" << host_ << "]";
-  return ts.ReleaseString();
+  return blink::StrCat({NodeFilter::GetItemDesc(), " [", host_, "]"});
 }
 
 void NodeTrackerFilter::AddGraphMLAttributes(xmlDocPtr doc,

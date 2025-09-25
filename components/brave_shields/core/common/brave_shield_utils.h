@@ -11,6 +11,7 @@
 #include "components/content_settings/core/common/content_settings.h"
 
 class GURL;
+class PrefService;
 
 namespace brave_shields {
 
@@ -30,10 +31,18 @@ ContentSetting GetBraveWebcompatContentSettingFromRules(
     const GURL& primary_url,
     const ContentSettingsType content_settings_type);
 
-ShieldsSettingCounts GetFPSettingCountFromRules(
+ShieldsSettingCounts GetSettingCountFromRules(
     const ContentSettingsForOneType& fp_rules);
-ShieldsSettingCounts GetAdsSettingCountFromRules(
-    const ContentSettingsForOneType& ads_rules);
+
+ShieldsSettingCounts GetSettingCountFromCosmeticFilteringRules(
+    const ContentSettingsForOneType& fp_rules);
+
+bool IsAdblockOnlyModeFeatureEnabled();
+
+bool IsBraveShieldsAdBlockOnlyModeEnabled(PrefService* local_state);
+void SetBraveShieldsAdBlockOnlyModeEnabled(PrefService* local_state,
+                                           bool enabled);
+
 }  // namespace brave_shields
 
 #endif  // BRAVE_COMPONENTS_BRAVE_SHIELDS_CORE_COMMON_BRAVE_SHIELD_UTILS_H_

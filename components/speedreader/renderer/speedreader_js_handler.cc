@@ -5,22 +5,19 @@
 
 #include "brave/components/speedreader/renderer/speedreader_js_handler.h"
 
-#include <utility>
-
 #include "base/check.h"
 #include "brave/components/speedreader/common/speedreader.mojom.h"
-#include "brave/components/speedreader/renderer/speedreader_render_frame_observer.h"
 #include "content/public/renderer/render_frame.h"
 #include "gin/converter.h"
-#include "gin/handle.h"
 #include "gin/object_template_builder.h"
 #include "gin/wrappable.h"
 #include "mojo/public/cpp/bindings/associated_remote.h"
 #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"
 #include "third_party/blink/public/platform/scheduler/web_agent_group_scheduler.h"
-#include "third_party/blink/public/web/blink.h"
 #include "third_party/blink/public/web/web_local_frame.h"
+#include "v8/include/cppgc/allocation.h"
 #include "v8/include/v8-context.h"
+#include "v8/include/v8-cppgc.h"
 
 namespace {
 constexpr const char kSpeedreader[] = "speedreader";
@@ -28,22 +25,23 @@ constexpr const char kSpeedreader[] = "speedreader";
 
 namespace speedreader {
 
-gin::WrapperInfo SpeedreaderJSHandler::kWrapperInfo = {gin::kEmbedderNativeGin};
-
-SpeedreaderJSHandler::SpeedreaderJSHandler(
-    base::WeakPtr<SpeedreaderRenderFrameObserver> owner)
-    : owner_(std::move(owner)) {}
+SpeedreaderJSHandler::SpeedreaderJSHandler(content::RenderFrame* render_frame)
+    : RenderFrameObserver(render_frame) {
+  self_ = this;
+}
 
 SpeedreaderJSHandler::~SpeedreaderJSHandler() = default;
 
+void SpeedreaderJSHandler::OnDestruct() {
+  self_.Clear();
+}
+
 // static
-void SpeedreaderJSHandler::Install(
-    base::WeakPtr<SpeedreaderRenderFrameObserver> owner,
-    v8::Local<v8::Context> context) {
-  DCHECK(owner);
-  CHECK(owner->render_frame());
+void SpeedreaderJSHandler::Install(content::RenderFrame* render_frame,
+                                   v8::Local<v8::Context> context) {
+  CHECK(render_frame);
   v8::Isolate* isolate =
-      owner->render_frame()->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
+      render_frame->GetWebFrame()->GetAgentGroupScheduler()->Isolate();
   v8::HandleScope handle_scope(isolate);
 
   if (context.IsEmpty()) {
@@ -61,13 +59,12 @@ void SpeedreaderJSHandler::Install(
     return;
   }
 
-  gin::Handle<SpeedreaderJSHandler> handler =
-      gin::CreateHandle(isolate, new SpeedreaderJSHandler(std::move(owner)));
-  if (handler.IsEmpty()) {
-    return;
-  }
+  SpeedreaderJSHandler* handler =
+      cppgc::MakeGarbageCollected<SpeedreaderJSHandler>(
+          isolate->GetCppHeap()->GetAllocationHandle(), render_frame);
 
-  v8::PropertyDescriptor desc(handler.ToV8(), false);
+  v8::PropertyDescriptor desc(handler->GetWrapper(isolate).ToLocalChecked(),
+                              false);
   desc.set_configurable(false);
 
   global
@@ -85,12 +82,12 @@ gin::ObjectTemplateBuilder SpeedreaderJSHandler::GetObjectTemplateBuilder(
 
 void SpeedreaderJSHandler::ShowOriginalPage(v8::Isolate* isolate) {
   DCHECK(isolate);
-  if (!owner_) {
+  if (!render_frame()) {
     return;
   }
 
   mojo::AssociatedRemote<speedreader::mojom::SpeedreaderHost> speedreader_host;
-  owner_->render_frame()->GetRemoteAssociatedInterfaces()->GetInterface(
+  render_frame()->GetRemoteAssociatedInterfaces()->GetInterface(
       &speedreader_host);
 
   if (speedreader_host.is_bound()) {
@@ -98,15 +95,19 @@ void SpeedreaderJSHandler::ShowOriginalPage(v8::Isolate* isolate) {
   }
 }
 
+const gin::WrapperInfo* SpeedreaderJSHandler::wrapper_info() const {
+  return &kWrapperInfo;
+}
+
 void SpeedreaderJSHandler::TtsPlayPause(v8::Isolate* isolate,
                                         int paragraph_index) {
   DCHECK(isolate);
-  if (!owner_) {
+  if (!render_frame()) {
     return;
   }
 
   mojo::AssociatedRemote<speedreader::mojom::SpeedreaderHost> speedreader_host;
-  owner_->render_frame()->GetRemoteAssociatedInterfaces()->GetInterface(
+  render_frame()->GetRemoteAssociatedInterfaces()->GetInterface(
       &speedreader_host);
 
   if (speedreader_host.is_bound()) {

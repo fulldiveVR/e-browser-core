@@ -5,6 +5,7 @@
 
 import Icon from '@brave/leo/react/icon'
 import Button from '@brave/leo/react/button'
+import Tooltip from '@brave/leo/react/tooltip'
 import * as React from 'react'
 import classnames from '$web-common/classnames'
 import { getLocale } from '$web-common/locale'
@@ -13,8 +14,15 @@ import { AIChatContext } from '../../state/ai_chat_context'
 import { ConversationContext } from '../../state/conversation_context'
 import styles from './style.module.scss'
 import AttachmentButtonMenu from '../attachment_button_menu'
-import { AttachmentImageItem, AttachmentSpinnerItem, AttachmentPageItem } from '../attachment_item'
+import {
+  AttachmentUploadItems,
+  AttachmentSpinnerItem,
+  AttachmentPageItem,
+} from '../attachment_item'
+import { ModelSelector } from '../model_selector'
 import usePromise from '$web-common/usePromise'
+import { isImageFile } from '../../constants/file_types'
+import { convertFileToUploadedFile } from '../../utils/file_utils'
 
 type Props = Pick<
   ConversationContext,
@@ -32,18 +40,28 @@ type Props = Pick<
   | 'handleVoiceRecognition'
   | 'isGenerating'
   | 'handleStopGenerating'
-  | 'uploadImage'
+  | 'uploadFile'
   | 'getScreenshots'
-  | 'pendingMessageImages'
-  | 'removeImage'
+  | 'pendingMessageFiles'
+  | 'removeFile'
   | 'conversationHistory'
   | 'associatedContentInfo'
   | 'isUploadingFiles'
   | 'disassociateContent'
   | 'associateDefaultContent'
-  | 'setShowAttachments'
-> &
-  Pick<AIChatContext, 'isMobile' | 'hasAcceptedAgreement' | 'getPluralString' | 'tabs'>
+  | 'setAttachmentsDialog'
+  | 'attachImages'
+  | 'unassociatedTabs'
+>
+  & Pick<
+    AIChatContext,
+    | 'isMobile'
+    | 'isAIChatAgentProfileFeatureEnabled'
+    | 'isAIChatAgentProfile'
+    | 'hasAcceptedAgreement'
+    | 'getPluralString'
+    | 'openAIChatAgentProfile'
+  >
 
 export interface InputBoxProps {
   context: Props
@@ -51,8 +69,16 @@ export interface InputBoxProps {
   maybeShowSoftKeyboard?: (querySubmitted: boolean) => unknown
 }
 
-function usePlaceholderText(attachmentsCount: number, conversationStarted: boolean, getter: AIChatContext['getPluralString']) {
-  const { result: attachmentsPlaceholder } = usePromise(async () => getter(S.CHAT_UI_PLACEHOLDER_ATTACHED_PAGES_LABEL, attachmentsCount), [attachmentsCount, getter])
+function usePlaceholderText(
+  attachmentsCount: number,
+  conversationStarted: boolean,
+  getter: AIChatContext['getPluralString'],
+) {
+  const { result: attachmentsPlaceholder } = usePromise(
+    async () =>
+      getter(S.CHAT_UI_PLACEHOLDER_ATTACHED_PAGES_LABEL, attachmentsCount),
+    [attachmentsCount, getter],
+  )
 
   if (conversationStarted) return getLocale(S.CHAT_UI_PLACEHOLDER_LABEL)
 
@@ -96,11 +122,39 @@ function InputBox(props: InputBoxProps) {
     }
 
     if (
-      e.key === 'Backspace' &&
-      props.context.inputText === '' &&
-      props.context.selectedActionType
+      e.key === 'Backspace'
+      && props.context.inputText === ''
+      && props.context.selectedActionType
     ) {
       props.context.resetSelectedActionType()
+    }
+  }
+
+  const handleOnPaste = async (
+    e: React.ClipboardEvent<HTMLTextAreaElement>,
+  ) => {
+    const clipboardData = e.clipboardData
+
+    if (!clipboardData || clipboardData.files.length === 0) {
+      return
+    }
+
+    const files = Array.from(clipboardData.files).filter(isImageFile)
+
+    if (files.length === 0) {
+      return
+    }
+
+    // Prevent the default paste behavior for images
+    e.preventDefault()
+
+    try {
+      const uploadedFiles = await Promise.all(
+        files.map((file) => convertFileToUploadedFile(file)),
+      )
+      props.context.attachImages(uploadedFiles)
+    } catch (error) {
+      // Silently fail - error will be handled by the upload system
     }
   }
 
@@ -108,36 +162,43 @@ function InputBox(props: InputBoxProps) {
     if (!node) {
       return
     }
-    if (props.context.selectedActionType ||
-      props.maybeShowSoftKeyboard?.(querySubmitted.current)) {
+    if (
+      props.context.selectedActionType
+      || props.maybeShowSoftKeyboard?.(querySubmitted.current)
+    ) {
       node.focus()
     }
   }
 
   const updateAttachmentWrapperHeight = () => {
     let { height } = attachmentWrapperRef?.current?.getBoundingClientRect() ?? {
-      height: 0
+      height: 0,
     }
     setAttachmentWrapperHeight(height)
   }
 
   React.useEffect(() => {
     // Update the height of the attachment wrapper when
-    // pendingMessageImages changes.
-    if (props.context?.pendingMessageImages.length > 0) {
+    // pendingMessageFiles changes.
+    if (props.context.pendingMessageFiles.length > 0) {
       updateAttachmentWrapperHeight()
     }
-  }, [props.context.pendingMessageImages])
+  }, [props.context.pendingMessageFiles])
 
   const placeholderText = usePlaceholderText(
     props.context.associatedContentInfo.length,
     props.conversationStarted,
-    props.context.getPluralString
+    props.context.getPluralString,
   )
 
-  const showImageAttachments = props.context.pendingMessageImages.length > 0 || props.context.isUploadingFiles
-  const showPageAttachments = props.context.associatedContentInfo.length > 0
-    && !props.conversationStarted
+  const handleContentAgentToggle = () => {
+    props.context.openAIChatAgentProfile()
+  }
+
+  const showUploadedFiles = props.context.pendingMessageFiles.length > 0
+  const pendingContent = props.context.associatedContentInfo.filter(
+    (c) => !c.conversationTurnUuid,
+  )
   const isSendButtonDisabled =
     props.context.shouldDisableUserInput || props.context.inputText === ''
 
@@ -152,16 +213,16 @@ function InputBox(props: InputBoxProps) {
           />
         </div>
       )}
-      {(showImageAttachments || showPageAttachments) && (
+      {(showUploadedFiles || pendingContent.length > 0) && (
         <div
           className={classnames({
             [styles.attachmentWrapper]: true,
             [styles.attachmentWrapperScrollStyles]:
-              attachmentWrapperHeight >= 240
+              attachmentWrapperHeight >= 240,
           })}
           ref={attachmentWrapperRef}
         >
-          {showPageAttachments && props.context.associatedContentInfo.map((content) => (
+          {pendingContent.map((content) => (
             <AttachmentPageItem
               key={content.contentId}
               title={content.title}
@@ -170,15 +231,14 @@ function InputBox(props: InputBoxProps) {
             />
           ))}
           {props.context.isUploadingFiles && (
-            <AttachmentSpinnerItem title={getLocale(S.AI_CHAT_UPLOADING_FILE_LABEL)} />
-          )}
-          {showImageAttachments && props.context.pendingMessageImages?.map((img, i) => (
-            <AttachmentImageItem
-              key={img.filename}
-              uploadedImage={img}
-              remove={() => props.context.removeImage(i)}
+            <AttachmentSpinnerItem
+              title={getLocale(S.AI_CHAT_UPLOADING_FILE_LABEL)}
             />
-          ))}
+          )}
+          <AttachmentUploadItems
+            uploadedFiles={props.context.pendingMessageFiles}
+            remove={(index) => props.context.removeFile(index)}
+          />
         </div>
       )}
       <div
@@ -190,6 +250,7 @@ function InputBox(props: InputBoxProps) {
           placeholder={placeholderText}
           onChange={onInputChange}
           onKeyDown={handleOnKeyDown}
+          onPaste={handleOnPaste}
           value={props.context.inputText}
           autoFocus
           rows={1}
@@ -200,7 +261,7 @@ function InputBox(props: InputBoxProps) {
           className={classnames({
             [styles.counterText]: true,
             [styles.counterTextVisible]: props.context.isCharLimitApproaching,
-            [styles.counterTextError]: props.context.isCharLimitExceeded
+            [styles.counterTextError]: props.context.isCharLimitExceeded,
           })}
         >
           {props.context.inputTextCharCountDisplay}
@@ -211,18 +272,16 @@ function InputBox(props: InputBoxProps) {
           <Button
             fab
             kind='plain-faint'
-            size='large'
             onClick={(e) => {
               e.preventDefault()
               e.stopPropagation()
               props.context.setIsToolsMenuOpen(!props.context.isToolsMenuOpen)
-            }
-            }
+            }}
             title={getLocale(S.AI_CHAT_LEO_TOOLS_BUTTON_LABEL)}
           >
             <Icon
               className={classnames({
-                [styles.slashIconActive]: props.context.isToolsMenuOpen
+                [styles.slashIconActive]: props.context.isToolsMenuOpen,
               })}
               name='slash'
             />
@@ -239,30 +298,59 @@ function InputBox(props: InputBoxProps) {
             </Button>
           )}
           <AttachmentButtonMenu
-            uploadImage={props.context.uploadImage}
+            uploadFile={props.context.uploadFile}
             getScreenshots={props.context.getScreenshots}
             conversationHistory={props.context.conversationHistory}
             associatedContentInfo={props.context.associatedContentInfo}
             associateDefaultContent={props.context.associateDefaultContent}
             conversationStarted={props.conversationStarted}
             isMobile={props.context.isMobile}
-            tabs={props.context.tabs}
-            setShowAttachments={props.context.setShowAttachments}
+            unassociatedTabs={props.context.unassociatedTabs}
+            setAttachmentsDialog={props.context.setAttachmentsDialog}
           />
+          {props.context.hasAcceptedAgreement
+            && props.context.isAIChatAgentProfileFeatureEnabled
+            && !props.context.isAIChatAgentProfile && (
+              <Button
+                fab
+                kind='plain-faint'
+                onClick={handleContentAgentToggle}
+                title={'Open Leo AI Content Agent Window'}
+              >
+                <Icon name='leo-cursor' />
+              </Button>
+            )}
+          {props.context.isAIChatAgentProfileFeatureEnabled
+            && props.context.isAIChatAgentProfile && (
+              <div data-testid='agent-profile-tooltip'>
+                <Tooltip
+                  text={getLocale(S.CHAT_UI_CONTENT_AGENT_PROFILE_BUTTON_LABEL)}
+                >
+                  <Icon
+                    className={styles.contentAgentButtonEnabled}
+                    name='leo-cursor'
+                  />
+                </Tooltip>
+              </div>
+            )}
         </div>
-        <div>
+        <div className={styles.modelSelectorAndSendButton}>
+          <ModelSelector />
           {props.context.isGenerating ? (
             <Button
               fab
               kind='filled'
               className={classnames({
                 [styles.button]: true,
-                [styles.streamingButton]: true
+                [styles.streamingButton]: true,
               })}
               onClick={handleStopGenerating}
               title={getLocale(S.CHAT_UI_STOP_GENERATION_BUTTON_LABEL)}
             >
-              <Icon name='stop-circle' className={styles.streamingIcon} />
+              <Icon
+                name='stop-circle'
+                className={styles.streamingIcon}
+              />
             </Button>
           ) : (
             <Button
@@ -270,15 +358,18 @@ function InputBox(props: InputBoxProps) {
               kind='filled'
               className={classnames({
                 [styles.button]: true,
-                [styles.sendButtonDisabled]: isSendButtonDisabled
+                [styles.sendButtonDisabled]: isSendButtonDisabled,
               })}
               onClick={handleSubmit}
               disabled={isSendButtonDisabled}
               title={getLocale(S.CHAT_UI_SEND_CHAT_BUTTON_LABEL)}
             >
-              <Icon className={classnames({
-                [styles.sendIconDisabled]: isSendButtonDisabled
-              })} name='arrow-up' />
+              <Icon
+                className={classnames({
+                  [styles.sendIconDisabled]: isSendButtonDisabled,
+                })}
+                name='arrow-up'
+              />
             </Button>
           )}
         </div>

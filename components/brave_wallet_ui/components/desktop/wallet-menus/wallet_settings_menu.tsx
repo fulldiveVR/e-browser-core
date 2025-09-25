@@ -7,6 +7,9 @@ import * as React from 'react'
 import { useLocation, useHistory } from 'react-router-dom'
 import Toggle from '@brave/leo/react/toggle'
 
+// Page API Proxy
+import getWalletPageApiProxy from '../../../page/wallet_page_api_proxy'
+
 // Selectors
 import { UISelectors } from '../../../common/selectors'
 import { useSafeUISelector } from '../../../common/hooks/use-safe-selector'
@@ -56,8 +59,8 @@ export const WalletSettingsMenu = (props: Props) => {
 
   // Selectors
   const isPanel = useSafeUISelector(UISelectors.isPanel)
-  const isAndroid = useSafeUISelector(UISelectors.isAndroid)
-  const isAndroidOrPanel = isAndroid || isPanel
+  const isMobile = useSafeUISelector(UISelectors.isMobile)
+  const isMobileOrPanel = isMobile || isPanel
 
   // Routing
   const history = useHistory()
@@ -115,7 +118,7 @@ export const WalletSettingsMenu = (props: Props) => {
   const onClickHelpCenter = React.useCallback(() => {
     chrome.tabs.create(
       {
-        url: 'https://support.brave.com/hc/categories/360001062531-Wallet',
+        url: 'https://support.brave.app/hc/categories/360001062531-Wallet',
       },
       () => {
         if (chrome.runtime.lastError) {
@@ -167,7 +170,12 @@ export const WalletSettingsMenu = (props: Props) => {
     history.push(route)
   }
 
-  const onClickBackup = () => {
+  const onClickBackup = React.useCallback(() => {
+    if (isMobile) {
+      getWalletPageApiProxy().pageHandler.showWalletBackupUI()
+      return
+    }
+
     if (isPanel) {
       chrome.tabs.create(
         {
@@ -184,17 +192,17 @@ export const WalletSettingsMenu = (props: Props) => {
       return
     }
     history.push(WalletRoutes.Backup)
-  }
+  }, [isMobile, isPanel, history])
 
   // Memos
   const accountSettingsOptions = React.useMemo(() => {
-    if (isAndroid) {
+    if (isMobile) {
       return CreateAccountOptions.filter(
         (option) => option.name !== 'braveWalletConnectHardwareWallet',
       )
     }
     return CreateAccountOptions
-  }, [isAndroid])
+  }, [isMobile])
 
   return (
     <StyledWrapper
@@ -225,7 +233,7 @@ export const WalletSettingsMenu = (props: Props) => {
 
         {(selectedNetwork?.coin === BraveWallet.CoinType.ETH
           || selectedNetwork?.coin === BraveWallet.CoinType.SOL)
-          && !isAndroid && (
+          && !isMobile && (
             <PopupButton onClick={onClickConnectedSites}>
               <ButtonIcon name='link-normal' />
               <PopupButtonText>
@@ -234,7 +242,7 @@ export const WalletSettingsMenu = (props: Props) => {
             </PopupButton>
           )}
 
-        {!isAndroid && (
+        {!isMobile && (
           <PopupButton onClick={onClickSettings}>
             <ButtonIcon name='settings' />
             <PopupButtonText>
@@ -300,7 +308,7 @@ export const WalletSettingsMenu = (props: Props) => {
         </>
       )}
 
-      {walletLocation === WalletRoutes.Accounts && isAndroidOrPanel && (
+      {walletLocation === WalletRoutes.Accounts && isMobileOrPanel && (
         <>
           <SectionLabel justifyContent='flex-start'>
             {getLocale('braveWalletAccountSettings')}

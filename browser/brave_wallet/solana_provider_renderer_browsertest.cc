@@ -3,14 +3,17 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
+#include <array>
 #include <optional>
 
 #include "base/containers/flat_map.h"
+#include "base/containers/to_vector.h"
 #include "base/feature_list.h"
 #include "base/memory/weak_ptr.h"
 #include "base/path_service.h"
 #include "base/strings/strcat.h"
 #include "base/strings/string_number_conversions.h"
+#include "base/strings/string_util.h"
 #include "base/test/values_test_util.h"
 #include "brave/browser/brave_content_browser_client.h"
 #include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
@@ -36,6 +39,7 @@
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
 #include "content/public/test/content_mock_cert_verifier.h"
+#include "mojo/public/cpp/bindings/binder_map.h"
 #include "mojo/public/cpp/bindings/pending_remote.h"
 #include "mojo/public/cpp/bindings/remote.h"
 #include "mojo/public/cpp/bindings/self_owned_receiver.h"
@@ -64,52 +68,52 @@ constexpr char kTestSignature[] =
     "As4N6cok5f7nhXp56Hdw8dWZpUnY8zjYKzBqK45CexE1qNPCqt6Y2gnZduGgqASDD1c6QULBRy"
     "pVa9BikoxWpGA";
 
-const std::vector<uint8_t> kSerializedMessage = {
-    1,   0,   1,   2,   161, 51,  89,  91,  115, 210, 217, 212, 76,  159, 171,
-    200, 40,  150, 157, 70,  197, 71,  24,  44,  209, 108, 143, 4,   58,  251,
-    215, 62,  201, 172, 159, 197, 0,   0,   0,   0,   0,   0,   0,   0,   0,
-    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
-    0,   0,   0,   0,   0,   0,   0,   0,   65,  223, 160, 84,  229, 200, 41,
-    124, 255, 227, 200, 207, 94,  13,  128, 218, 71,  139, 178, 169, 91,  44,
-    201, 177, 125, 166, 36,  96,  136, 125, 3,   136, 1,   1,   2,   0,   0,
-    12,  2,   0,   0,   0,   100, 0,   0,   0,   0,   0,   0,   0};
+constexpr auto kSerializedMessage = std::to_array<uint8_t>(
+    {1,   0,   1,   2,   161, 51,  89,  91,  115, 210, 217, 212, 76,  159, 171,
+     200, 40,  150, 157, 70,  197, 71,  24,  44,  209, 108, 143, 4,   58,  251,
+     215, 62,  201, 172, 159, 197, 0,   0,   0,   0,   0,   0,   0,   0,   0,
+     0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+     0,   0,   0,   0,   0,   0,   0,   0,   65,  223, 160, 84,  229, 200, 41,
+     124, 255, 227, 200, 207, 94,  13,  128, 218, 71,  139, 178, 169, 91,  44,
+     201, 177, 125, 166, 36,  96,  136, 125, 3,   136, 1,   1,   2,   0,   0,
+     12,  2,   0,   0,   0,   100, 0,   0,   0,   0,   0,   0,   0});
 
-const std::vector<uint8_t> kSerializedTx = {
-    1,   224, 52,  14,  175, 211, 221, 245, 217, 123, 232, 68,  232, 120, 145,
-    131, 154, 133, 31,  130, 73,  190, 13,  227, 109, 83,  152, 160, 202, 226,
-    134, 138, 141, 135, 187, 72,  153, 173, 159, 205, 222, 253, 26,  44,  34,
-    18,  250, 176, 21,  84,  7,   142, 247, 65,  218, 40,  117, 145, 118, 52,
-    75,  183, 98,  232, 10,  1,   0,   1,   2,   161, 51,  89,  91,  115, 210,
-    217, 212, 76,  159, 171, 200, 40,  150, 157, 70,  197, 71,  24,  44,  209,
-    108, 143, 4,   58,  251, 215, 62,  201, 172, 159, 197, 0,   0,   0,   0,
-    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
-    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   65,  223,
-    160, 84,  229, 200, 41,  124, 255, 227, 200, 207, 94,  13,  128, 218, 71,
-    139, 178, 169, 91,  44,  201, 177, 125, 166, 36,  96,  136, 125, 3,   136,
-    1,   1,   2,   0,   0,   12,  2,   0,   0,   0,   100, 0,   0,   0,   0,
-    0,   0,   0};
+constexpr auto kSerializedTx = std::to_array<uint8_t>(
+    {1,   224, 52,  14,  175, 211, 221, 245, 217, 123, 232, 68,  232, 120, 145,
+     131, 154, 133, 31,  130, 73,  190, 13,  227, 109, 83,  152, 160, 202, 226,
+     134, 138, 141, 135, 187, 72,  153, 173, 159, 205, 222, 253, 26,  44,  34,
+     18,  250, 176, 21,  84,  7,   142, 247, 65,  218, 40,  117, 145, 118, 52,
+     75,  183, 98,  232, 10,  1,   0,   1,   2,   161, 51,  89,  91,  115, 210,
+     217, 212, 76,  159, 171, 200, 40,  150, 157, 70,  197, 71,  24,  44,  209,
+     108, 143, 4,   58,  251, 215, 62,  201, 172, 159, 197, 0,   0,   0,   0,
+     0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+     0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   65,  223,
+     160, 84,  229, 200, 41,  124, 255, 227, 200, 207, 94,  13,  128, 218, 71,
+     139, 178, 169, 91,  44,  201, 177, 125, 166, 36,  96,  136, 125, 3,   136,
+     1,   1,   2,   0,   0,   12,  2,   0,   0,   0,   100, 0,   0,   0,   0,
+     0,   0,   0});
 
-const std::vector<uint8_t> kSignedTx = {
-    1,   231, 78,  150, 120, 219, 234, 88,  44,  144, 225, 53,  221, 88,  82,
-    59,  51,  62,  211, 225, 231, 182, 123, 231, 229, 201, 48,  30,  137, 119,
-    233, 102, 88,  31,  65,  88,  147, 197, 72,  166, 241, 126, 26,  59,  239,
-    64,  196, 116, 28,  17,  124, 0,   123, 13,  28,  65,  242, 241, 226, 46,
-    227, 55,  234, 251, 10,  1,   0,   1,   2,   161, 51,  89,  91,  115, 210,
-    217, 212, 76,  159, 171, 200, 40,  150, 157, 70,  197, 71,  24,  44,  209,
-    108, 143, 4,   58,  251, 215, 62,  201, 172, 159, 197, 0,   0,   0,   0,
-    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
-    0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   62,  84,
-    174, 253, 228, 77,  50,  164, 215, 178, 46,  88,  242, 49,  114, 246, 244,
-    48,  9,   18,  36,  41,  160, 254, 174, 6,   207, 115, 11,  58,  220, 167,
-    1,   1,   2,   0,   0,   12,  2,   0,   0,   0,   100, 0,   0,   0,   0,
-    0,   0,   0};
+constexpr auto kSignedTx = std::to_array<uint8_t>(
+    {1,   231, 78,  150, 120, 219, 234, 88,  44,  144, 225, 53,  221, 88,  82,
+     59,  51,  62,  211, 225, 231, 182, 123, 231, 229, 201, 48,  30,  137, 119,
+     233, 102, 88,  31,  65,  88,  147, 197, 72,  166, 241, 126, 26,  59,  239,
+     64,  196, 116, 28,  17,  124, 0,   123, 13,  28,  65,  242, 241, 226, 46,
+     227, 55,  234, 251, 10,  1,   0,   1,   2,   161, 51,  89,  91,  115, 210,
+     217, 212, 76,  159, 171, 200, 40,  150, 157, 70,  197, 71,  24,  44,  209,
+     108, 143, 4,   58,  251, 215, 62,  201, 172, 159, 197, 0,   0,   0,   0,
+     0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,
+     0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   62,  84,
+     174, 253, 228, 77,  50,  164, 215, 178, 46,  88,  242, 49,  114, 246, 244,
+     48,  9,   18,  36,  41,  160, 254, 174, 6,   207, 115, 11,  58,  220, 167,
+     1,   1,   2,   0,   0,   12,  2,   0,   0,   0,   100, 0,   0,   0,   0,
+     0,   0,   0});
 
-const std::vector<uint8_t> kMessageToSign = {
-    84,  111, 32,  97,  118, 111, 105, 100, 32,  100, 105, 103, 105, 116, 97,
-    108, 32,  100, 111, 103, 110, 97,  112, 112, 101, 114, 115, 44,  32,  115,
-    105, 103, 110, 32,  98,  101, 108, 111, 119, 32,  116, 111, 32,  97,  117,
-    116, 104, 101, 110, 116, 105, 99,  97,  116, 101, 32,  119, 105, 116, 104,
-    32,  67,  114, 121, 112, 116, 111, 67,  111, 114, 103, 105, 115, 46};
+constexpr auto kMessageToSign = std::to_array<uint8_t>(
+    {84,  111, 32,  97,  118, 111, 105, 100, 32,  100, 105, 103, 105, 116, 97,
+     108, 32,  100, 111, 103, 110, 97,  112, 112, 101, 114, 115, 44,  32,  115,
+     105, 103, 110, 32,  98,  101, 108, 111, 119, 32,  116, 111, 32,  97,  117,
+     116, 104, 101, 110, 116, 105, 99,  97,  116, 101, 32,  119, 105, 116, 104,
+     32,  67,  114, 121, 112, 116, 111, 67,  111, 114, 103, 105, 115, 46});
 
 constexpr char OnAccountChangedScript[] =
     R"(async function disconnect() {await window.braveSolana.disconnect()}
@@ -127,15 +131,11 @@ constexpr char OnAccountChangedScript[] =
 constexpr char CheckSolanaProviderScript[] = "!!window.braveSolana";
 constexpr char OverwriteScript[] = "window.solana = ['test'];window.solana[0]";
 
-std::string VectorToArrayString(const std::vector<uint8_t>& vec) {
-  std::string result;
-  for (size_t i = 0; i < vec.size(); ++i) {
-    base::StrAppend(&result, {base::NumberToString(vec[i])});
-    if (i != vec.size() - 1) {
-      base::StrAppend(&result, {", "});
-    }
-  }
-  return result;
+std::string VectorToArrayString(base::span<const uint8_t> data) {
+  return base::JoinString(
+      base::ToVector(data,
+                     [](int value) { return base::NumberToString(value); }),
+      ", ");
 }
 
 std::string GetRequestObject(std::string_view method) {
@@ -197,7 +197,7 @@ std::string ConnectScript(std::string_view args) {
       args);
 }
 
-std::string CreateTransactionScript(const std::vector<uint8_t>& serialized_tx) {
+std::string CreateTransactionScript(base::span<const uint8_t> serialized_tx) {
   const std::string serialized_tx_str = VectorToArrayString(serialized_tx);
   return absl::StrFormat(
       R"((function() {
@@ -357,7 +357,7 @@ class TestSolanaProvider final : public brave_wallet::mojom::SolanaProvider {
               brave_wallet::Base58Encode(kSerializedMessage));
     if (error_ == SolanaProviderError::kSuccess) {
       std::move(callback).Run(
-          SolanaProviderError::kSuccess, "", kSignedTx,
+          SolanaProviderError::kSuccess, "", base::ToVector(kSignedTx),
           brave_wallet::mojom::SolanaMessageVersion::kLegacy);
     } else {
       std::move(callback).Run(
@@ -375,7 +375,8 @@ class TestSolanaProvider final : public brave_wallet::mojom::SolanaProvider {
     }
     if (error_ == SolanaProviderError::kSuccess) {
       std::move(callback).Run(
-          SolanaProviderError::kSuccess, "", {kSignedTx, kSignedTx},
+          SolanaProviderError::kSuccess, "",
+          {base::ToVector(kSignedTx), base::ToVector(kSignedTx)},
           {brave_wallet::mojom::SolanaMessageVersion::kLegacy,
            brave_wallet::mojom::SolanaMessageVersion::kLegacy});
     } else {
@@ -408,7 +409,7 @@ class TestSolanaProvider final : public brave_wallet::mojom::SolanaProvider {
   void SignMessage(const std::vector<uint8_t>& blob_msg,
                    const std::optional<std::string>& display_encoding,
                    SignMessageCallback callback) override {
-    EXPECT_EQ(blob_msg, kMessageToSign);
+    EXPECT_EQ(blob_msg, base::ToVector(kMessageToSign));
     base::Value::Dict result;
     if (error_ == SolanaProviderError::kSuccess) {
       result.Set("publicKey", kTestPublicKey);
@@ -608,19 +609,19 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, Incognito) {
 
   auto result =
       EvalJs(web_contents(private_browser), CheckSolanaProviderScript);
-  EXPECT_EQ(base::Value(false), result.value);
+  EXPECT_EQ(base::Value(false), result);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, DefaultWallet) {
   auto result = EvalJs(web_contents(browser()), CheckSolanaProviderScript);
 
-  EXPECT_EQ(base::Value(true), result.value);
+  EXPECT_EQ(base::Value(true), result);
   brave_wallet::SetDefaultSolanaWallet(
       browser()->profile()->GetPrefs(),
       brave_wallet::mojom::DefaultWallet::None);
   ReloadAndWaitForLoadStop(browser());
   auto result2 = EvalJs(web_contents(browser()), CheckSolanaProviderScript);
-  EXPECT_EQ(base::Value(false), result2.value);
+  EXPECT_EQ(base::Value(false), result2);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, ExtensionOverwrite) {
@@ -629,8 +630,8 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, ExtensionOverwrite) {
       brave_wallet::mojom::DefaultWallet::BraveWallet);
   ReloadAndWaitForLoadStop(browser());
   // can't be overwritten
-  EXPECT_EQ(content::EvalJs(web_contents(browser()), OverwriteScript).error,
-            "");
+  EXPECT_TRUE(
+      content::EvalJs(web_contents(browser()), OverwriteScript).is_ok());
   ASSERT_TRUE(
       content::EvalJs(web_contents(browser()), "window.solana.isPhantom")
           .ExtractBool());
@@ -686,7 +687,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, NonWritable) {
       SCOPED_TRACE(method);
       auto result = EvalJs(web_contents(browser()),
                            NonWriteableScriptMethod(provider, method));
-      EXPECT_EQ(base::Value(true), result.value) << result.error;
+      EXPECT_EQ(base::Value(true), result) << result;
     }
     // window.braveSolana.* and window.solana.* (properties)
     for (const std::string& property :
@@ -694,7 +695,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, NonWritable) {
       SCOPED_TRACE(property);
       auto result = EvalJs(web_contents(browser()),
                            NonWriteableScriptProperty(provider, property));
-      EXPECT_EQ(base::Value(true), result.value) << result.error;
+      EXPECT_EQ(base::Value(true), result) << result;
     }
   }
 }
@@ -706,10 +707,10 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, IsPhantomAndIsBraveWallet) {
   // Both are non-writable
   auto result1 =
       EvalJs(web_contents(browser()), "window.braveSolana.isPhantom");
-  EXPECT_EQ(base::Value(true), result1.value);
+  EXPECT_EQ(base::Value(true), result1);
   auto result2 =
       EvalJs(web_contents(browser()), "window.braveSolana.isBraveWallet");
-  EXPECT_EQ(base::Value(true), result2.value);
+  EXPECT_EQ(base::Value(true), result2);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, Connect) {
@@ -723,14 +724,14 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, Connect) {
        }) {
     SCOPED_TRACE(valid_case);
     auto result = EvalJs(web_contents(browser()), ConnectScript(valid_case));
-    EXPECT_EQ(base::Value(kTestPublicKey), result.value);
+    EXPECT_EQ(base::Value(kTestPublicKey), result);
   }
 
   // non object args
   auto result2 = EvalJs(web_contents(browser()), ConnectScript("123"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result2.value);
+      result2);
 
   TestSolanaProvider* provider = test_content_browser_client_.GetProvider(
       web_contents(browser())->GetPrimaryMainFrame());
@@ -743,7 +744,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, Connect) {
   EXPECT_EQ(base::Value(kErrorMessage +
                         base::NumberToString(static_cast<int>(
                             SolanaProviderError::kUserRejectedRequest))),
-            result3.value);
+            result3);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, OnConnect) {
@@ -756,13 +757,13 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, OnConnect) {
                   connect();
                 });
               )");
-  EXPECT_EQ(base::Value(kTestPublicKey), result.value);
+  EXPECT_EQ(base::Value(kTestPublicKey), result);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, IsConnected) {
   auto result =
       EvalJs(web_contents(browser()), "window.braveSolana.isConnected");
-  EXPECT_EQ(base::Value(true), result.value);
+  EXPECT_EQ(base::Value(true), result);
 
   TestSolanaProvider* provider = test_content_browser_client_.GetProvider(
       web_contents(browser())->GetPrimaryMainFrame());
@@ -773,13 +774,13 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, IsConnected) {
 
   auto result2 =
       EvalJs(web_contents(browser()), "window.braveSolana.isConnected");
-  EXPECT_EQ(base::Value(false), result2.value);
+  EXPECT_EQ(base::Value(false), result2);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, GetPublicKey) {
   auto result = EvalJs(web_contents(browser()),
                        "window.braveSolana.publicKey.toString()");
-  EXPECT_EQ(base::Value(kTestPublicKey), result.value);
+  EXPECT_EQ(base::Value(kTestPublicKey), result);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, Disconnect) {
@@ -792,32 +793,32 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, Disconnect) {
                     return false;
                 }
                 disconnect();)");
-  EXPECT_EQ(base::Value(true), result.value);
+  EXPECT_EQ(base::Value(true), result);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignTransaction) {
   const std::string tx =
       base::StrCat({"(", CreateTransactionScript(kSerializedTx), ")"});
   auto result = EvalJs(web_contents(browser()), SignTransactionScript(tx));
-  EXPECT_EQ(base::Value(true), result.value);
+  EXPECT_EQ(base::Value(true), result);
 
   // allow extra parameters
   const std::string tx2 = base::StrCat({"(", tx, ", {})"});
   auto result2 = EvalJs(web_contents(browser()), SignTransactionScript(tx2));
-  EXPECT_EQ(base::Value(true), result2.value);
+  EXPECT_EQ(base::Value(true), result2);
 
   // no arg
   auto result3 = EvalJs(web_contents(browser()), SignTransactionScript("()"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result3.value);
+      result3);
 
   // not solanaWeb3.Transaction
   auto result4 =
       EvalJs(web_contents(browser()), SignTransactionScript("('123')"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result4.value);
+      result4);
 
   TestSolanaProvider* provider = test_content_browser_client_.GetProvider(
       web_contents(browser())->GetPrimaryMainFrame());
@@ -830,7 +831,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignTransaction) {
   EXPECT_EQ(base::Value(kErrorMessage +
                         base::NumberToString(static_cast<int>(
                             SolanaProviderError::kUserRejectedRequest))),
-            result5.value);
+            result5);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignAllTransactions) {
@@ -838,28 +839,28 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignAllTransactions) {
       base::StrCat({"([", CreateTransactionScript(kSerializedTx), ",",
                     CreateTransactionScript(kSerializedTx), "])"});
   auto result = EvalJs(web_contents(browser()), SignAllTransactionsScript(txs));
-  EXPECT_EQ(base::Value(true), result.value);
+  EXPECT_EQ(base::Value(true), result);
 
   // allow extra parameters
   const std::string txs2 =
       base::StrCat({"([", CreateTransactionScript(kSerializedTx), "], 1234)"});
   auto result2 =
       EvalJs(web_contents(browser()), SignAllTransactionsScript(txs2));
-  EXPECT_EQ(base::Value(true), result2.value);
+  EXPECT_EQ(base::Value(true), result2);
 
   // no arg
   auto result3 =
       EvalJs(web_contents(browser()), SignAllTransactionsScript("()"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result3.value);
+      result3);
 
   // not array
   auto result4 =
       EvalJs(web_contents(browser()), SignAllTransactionsScript("({})"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result4.value);
+      result4);
 
   // not entirely solanaWeb3.Transaction[]
   const std::string txs3 =
@@ -868,7 +869,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignAllTransactions) {
       EvalJs(web_contents(browser()), SignAllTransactionsScript("({})"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result5.value);
+      result5);
 
   TestSolanaProvider* provider = test_content_browser_client_.GetProvider(
       web_contents(browser())->GetPrimaryMainFrame());
@@ -881,7 +882,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignAllTransactions) {
   EXPECT_EQ(base::Value(kErrorMessage +
                         base::NumberToString(static_cast<int>(
                             SolanaProviderError::kUserRejectedRequest))),
-            result6.value);
+            result6);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignAndSendTransaction) {
@@ -900,7 +901,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignAndSendTransaction) {
   auto send_options_result =
       EvalJs(web_contents(browser()),
              SignAndSendTransactionScript(tx_with_send_options));
-  EXPECT_EQ(base::Value(true), send_options_result.value);
+  EXPECT_EQ(base::Value(true), send_options_result);
 
   provider->SetSendOptions(std::nullopt);
   const std::string tx =
@@ -912,7 +913,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignAndSendTransaction) {
     SCOPED_TRACE(valid_case);
     auto result = EvalJs(web_contents(browser()),
                          SignAndSendTransactionScript(valid_case));
-    EXPECT_EQ(base::Value(true), result.value);
+    EXPECT_EQ(base::Value(true), result);
   }
 
   // allow extra parameters
@@ -920,7 +921,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignAndSendTransaction) {
   const std::string tx2 = base::StrCat({"(", tx, ", {}, {})"});
   auto result2 =
       EvalJs(web_contents(browser()), SignAndSendTransactionScript(tx2));
-  EXPECT_EQ(base::Value(true), result2.value);
+  EXPECT_EQ(base::Value(true), result2);
   provider->SetSendOptions(std::nullopt);
 
   // no arg
@@ -928,14 +929,14 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignAndSendTransaction) {
       EvalJs(web_contents(browser()), SignAndSendTransactionScript("()"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result3.value);
+      result3);
 
   // not solanaWeb3.Transaction
   auto result4 =
       EvalJs(web_contents(browser()), SignAndSendTransactionScript("('123')"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result4.value);
+      result4);
 
   provider->SetError(SolanaProviderError::kUserRejectedRequest, kErrorMessage);
 
@@ -945,7 +946,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignAndSendTransaction) {
   EXPECT_EQ(base::Value(kErrorMessage +
                         base::NumberToString(static_cast<int>(
                             SolanaProviderError::kUserRejectedRequest))),
-            result5.value);
+            result5);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignMessage) {
@@ -966,7 +967,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignMessage) {
     SCOPED_TRACE(valid_case);
     auto result =
         EvalJs(web_contents(browser()), SignMessageScript(valid_case));
-    EXPECT_EQ(base::Value(true), result.value);
+    EXPECT_EQ(base::Value(true), result);
   }
 
   // not Uint8Array
@@ -974,19 +975,19 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignMessage) {
   auto result4 = EvalJs(web_contents(browser()), SignMessageScript(msg4));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result4.value);
+      result4);
 
   // no arg
   auto result5 = EvalJs(web_contents(browser()), SignMessageScript("()"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result5.value);
+      result5);
 
   // display is not string, use default utf8 encoding
   const std::string msg6 =
       base::StrCat({"(new Uint8Array([", msg_str, "], 12345))"});
   auto result6 = EvalJs(web_contents(browser()), SignMessageScript(msg6));
-  EXPECT_EQ(base::Value(true), result6.value);
+  EXPECT_EQ(base::Value(true), result6);
 
   TestSolanaProvider* provider = test_content_browser_client_.GetProvider(
       web_contents(browser())->GetPrimaryMainFrame());
@@ -999,7 +1000,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, SignMessage) {
   EXPECT_EQ(base::Value(kErrorMessage +
                         base::NumberToString(static_cast<int>(
                             SolanaProviderError::kUserRejectedRequest))),
-            result7.value);
+            result7);
 }
 
 // Request test here won't be testing params object, renderer just convert the
@@ -1009,30 +1010,30 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, Request) {
   const std::string request =
       base::StrCat({"(", GetRequestObject("connect"), ")"});
   auto result = EvalJs(web_contents(browser()), RequestScript(request));
-  EXPECT_EQ(base::Value(kTestPublicKey), result.value);
+  EXPECT_EQ(base::Value(kTestPublicKey), result);
 
   const std::string request2 =
       base::StrCat({"(", GetRequestObject("signAndSendTransaction"), ")"});
   auto result2 = EvalJs(web_contents(browser()), RequestScript(request2));
-  EXPECT_EQ(base::Value(true), result2.value);
+  EXPECT_EQ(base::Value(true), result2);
 
   // allow extra parameters
   const std::string request3 =
       base::StrCat({"(", GetRequestObject("signTransaction"), ", 123)"});
   auto result3 = EvalJs(web_contents(browser()), RequestScript(request3));
-  EXPECT_EQ(base::Value(true), result2.value);
+  EXPECT_EQ(base::Value(true), result2);
 
   // no arg
   auto result4 = EvalJs(web_contents(browser()), RequestScript("()"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result4.value);
+      result4);
 
   // object without method
   auto result5 = EvalJs(web_contents(browser()), RequestScript("({})"));
   EXPECT_EQ(
       base::Value(l10n_util::GetStringUTF8(IDS_WALLET_INVALID_PARAMETERS)),
-      result5.value);
+      result5);
 
   TestSolanaProvider* provider = test_content_browser_client_.GetProvider(
       web_contents(browser())->GetPrimaryMainFrame());
@@ -1045,12 +1046,12 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, Request) {
   EXPECT_EQ(base::Value(kErrorMessage +
                         base::NumberToString(static_cast<int>(
                             SolanaProviderError::kUserRejectedRequest))),
-            result6.value);
+            result6);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, OnAccountChanged) {
   auto result = EvalJs(web_contents(browser()), OnAccountChangedScript);
-  EXPECT_EQ(base::Value(kTestPublicKey), result.value);
+  EXPECT_EQ(base::Value(kTestPublicKey), result);
 
   TestSolanaProvider* provider = test_content_browser_client_.GetProvider(
       web_contents(browser())->GetPrimaryMainFrame());
@@ -1059,7 +1060,7 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, OnAccountChanged) {
   provider->SetEmitEmptyAccountChanged(true);
 
   auto result2 = EvalJs(web_contents(browser()), OnAccountChangedScript);
-  EXPECT_EQ(base::Value(), result2.value);
+  EXPECT_EQ(base::Value(), result2);
 }
 
 IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest, NonConfigurable) {
@@ -1251,5 +1252,5 @@ IN_PROC_BROWSER_TEST_F(SolanaProviderRendererTest,
                        SolanaWeb3PrototypePollution) {
   ASSERT_TRUE(ExecJs(web_contents(browser()), "Object.freeze = ()=>{}"));
   auto result = EvalJs(web_contents(browser()), ConnectScript(""));
-  EXPECT_EQ(base::Value(kTestPublicKey), result.value);
+  EXPECT_EQ(base::Value(kTestPublicKey), result);
 }

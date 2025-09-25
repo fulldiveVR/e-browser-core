@@ -42,6 +42,11 @@
     margin-bottom: 0;
   }
 
+  .filter-list-description {
+    font-size: 0.9em;
+    color: var(--text02);
+  }
+
   .flex {
     align-self: center;
     flex: 1 1 auto;
@@ -165,8 +170,13 @@
   #search-box iron-icon {
     --iron-icon-fill-color: var(--google-grey-500);
   }
+
+  #adblock-section .settings-box:first-child {
+    border-top: transparent;
+  }
 </style>
 
+<settings-subpage page-title="$i18n{adblockContentFiltersLabel}">
 <div id="adblock-section">
   <div class="settings-box">
     <div class="flex">
@@ -190,7 +200,10 @@
           filter="{{searchListBy_(filterListTitle)}}" observe="val" initial-count="10">
             <div class$="filter-list-item selected-[[item.enabled]]">
               <cr-checkbox checked="{{item.enabled}}" on-change="handleFilterListItemToggle_">
-                <div>[[item.title]]</div>
+                <div>
+                  <div>[[item.title]]</div>
+                  <div class="filter-list-description">[[item.desc]]</div>
+                </div>
               </cr-checkbox>
             </div>
           </template>
@@ -330,7 +343,7 @@
       <div class="label shields-primary-title">
         $i18n{adblockCustomFiltersLabel}
       </div>
-      <div class="label secondary shields-secondary-title" inner-h-t-m-l="[[getStringHtml_('adblockCustomFiltersDesc', 'https://support.brave.com/hc/en-us/articles/6449369961741')]]"></div>
+      <div class="label secondary shields-secondary-title" inner-h-t-m-l="[[getStringHtml_('adblockCustomFiltersDesc', 'https://support.brave.app/hc/en-us/articles/6449369961741')]]"></div>
       <adblock-filter-editor
         prefs="{{prefs}}"
         value="{{customFilters_}}"
@@ -346,10 +359,9 @@
       <div class="label shields-primary-title">
         $i18n{adblockCustomSciptletsListLabel}
       </div>
-      <adblock-scriptlet-list
-        prefs="{{prefs}}"
-        on-list-changed="handleSciptletsChanged_">
+      <adblock-scriptlet-list prefs="{{prefs}}">
       </adblock-scriptlet-list>
     </div>
   </div>
 </template>
+</settings-subpage>

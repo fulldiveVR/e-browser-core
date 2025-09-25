@@ -389,12 +389,11 @@ public class SendTokenStore: ObservableObject, WalletObserverStore {
         balance = BDouble(btcBalances[.available, default: 0])
         if self.btcPrice == nil,
           btcBalances[.pending] != 0,  // price needed for details display
-          let btcPriceString = await assetRatioService.fetchPrices(
-            for: [selectedSendToken.assetRatioId],
-            toAssets: [selectTokenStore.currencyCode],
-            timeframe: .oneDay
-          )[selectedSendToken.assetRatioId],
-          let btcPriceDouble = Double(btcPriceString)
+          let btcPrice = await assetRatioService.fetchPrices(
+            for: [selectedSendToken],
+            vsCurrency: selectTokenStore.currencyCode
+          ).first,
+          let btcPriceDouble = Double(btcPrice.price)
         {
           self.btcPrice = btcPriceDouble
         }
@@ -1029,10 +1028,16 @@ public class SendTokenStore: ObservableObject, WalletObserverStore {
       inputs: [],
       outputs: []
     )
-    self.txService.addUnapprovedTransaction(
-      txDataUnion: BraveWallet.TxDataUnion(zecTxData: zecTxData),
-      chainId: token.chainId,
-      from: fromAccountId
+    self.txService.addUnapprovedZCashTransaction(
+      params: .init(
+        chainId: token.chainId,
+        from: fromAccountId,
+        to: sendAddress,
+        amount: amountInSatoshi,
+        sendingMaxAmount: isSendingMaxValue,
+        memo: nil,
+        useShieldedPool: false
+      )
     ) { success, txMetaId, errorMessage in
       self.isMakingTx = false
       completion(success, errorMessage)

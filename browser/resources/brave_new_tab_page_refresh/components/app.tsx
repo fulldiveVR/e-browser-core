@@ -8,12 +8,13 @@ import Icon from '@brave/leo/react/icon'
 
 import { SearchBox } from './search/search_box'
 import { Background } from './background/background'
+import { BackgroundClickRegion } from './background/background_click_region'
 import { BackgroundCaption } from './background/background_caption'
 import { SettingsModal, SettingsView } from './settings/settings_modal'
 import { TopSites } from './top_sites/top_sites'
 import { Clock } from './common/clock'
+import { LazyNewsFeed } from './news/lazy_news_feed'
 import { WidgetStack } from './widgets/widget_stack'
-import { NewsFeed } from './news/news_feed'
 import { useSearchLayoutReady, useWidgetLayoutReady } from './app_layout_ready'
 import useMediaQuery from '$web-common/useMediaQuery'
 
@@ -44,7 +45,7 @@ export function App() {
     <div data-css-scope={style.scope}>
       <Background />
       <div className='background-filter allow-background-pointer-events' />
-      <div className='top-controls'>
+      <main className='allow-background-pointer-events'>
         <button
           className='clock'
           onClick={() => setSettingsView('clock')}
@@ -57,20 +58,22 @@ export function App() {
         >
           <Icon name='settings' />
         </button>
-      </div>
-      <main className='allow-background-pointer-events'>
         <div className='topsites-container'>
           <TopSites />
         </div>
         <div className='searchbox-container'>
           {
             searchLayoutReady &&
-              <SearchBox
-                onCustomizeSearchEngineList={() => setSettingsView('search')}
-              />
+              <SearchBox showSearchSettings={() => setSettingsView('search')} />
           }
         </div>
-        <div className='spacer allow-background-pointer-events' />
+        <div className='
+          spacer
+          sponsored-background-safe-area
+          allow-background-pointer-events'
+        >
+          <BackgroundClickRegion />
+        </div>
         <div className='caption-container'>
           <BackgroundCaption />
         </div>
@@ -91,7 +94,7 @@ export function App() {
         </div>
       </main>
       <div className='news-container'>
-        <NewsFeed />
+        <LazyNewsFeed />
       </div>
       <SettingsModal
         isOpen={settingsView !== null}

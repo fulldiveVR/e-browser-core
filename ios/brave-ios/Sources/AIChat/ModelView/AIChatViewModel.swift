@@ -241,7 +241,7 @@ public class AIChatViewModel: NSObject, ObservableObject {
   }
 
   @MainActor
-  func modifyConversation(turnId: UInt, newText: String) {
+  func modifyConversation(turnId: String, newText: String) {
     api.modifyConversation(turnId, newText: newText)
   }
 }
@@ -334,7 +334,8 @@ extension AIChatViewModel: AIChatDelegate {
     self.suggestionsStatus = status
   }
 
-  public func onModelChanged(_ modelKey: String, modelList: [AiChat.Model]) {
+  public func onModelChanged(_ modelKey: String, defaultModelKey: String, modelList: [AiChat.Model])
+  {
     self.currentModel = self.models.first(where: { $0.key == modelKey })
     self.models = modelList
   }

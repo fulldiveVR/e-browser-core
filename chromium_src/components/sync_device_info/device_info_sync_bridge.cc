@@ -28,7 +28,7 @@
     device_info_prefs_->SetResetDevicesProgressTokenDone();     \
   }
 
-#include "src/components/sync_device_info/device_info_sync_bridge.cc"
+#include <components/sync_device_info/device_info_sync_bridge.cc>
 
 #undef BRAVE_ON_READ_ALL_METADATA_CLEAR_PROGRESS_TOKEN
 #undef BRAVE_SKIP_EXPIRE_OLD_ENTRIES
@@ -141,6 +141,15 @@ void DeviceInfoSyncBridge::RefreshLocalDeviceInfoIfNeeded() {
   }
 
   RefreshLocalDeviceInfoIfNeeded_ChromiumImpl();
+}
+
+// Tucking this function away here because `DeviceInfoTracker` has not
+// translation unit, and the clang plugin wont allow the definition in the
+// header. This function has to provide a dead definition, otherwise there are
+// certain types of breakages that require patching upstream code.
+std::vector<std::unique_ptr<BraveDeviceInfo>>
+DeviceInfoTracker::GetAllBraveDeviceInfo() const {
+  NOTREACHED() << "This function must be overriden";
 }
 
 }  // namespace syncer

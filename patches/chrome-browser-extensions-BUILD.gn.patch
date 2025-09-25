@@ -1,11 +1,11 @@
 diff --git a/chrome/browser/extensions/BUILD.gn b/chrome/browser/extensions/BUILD.gn
-index a66766c31c9af8c7df2ee22c4794a24ebe636dea..cd80ec39d4d397b66685516043ce50a886227fea 100644
+index 45fdf038cc2ac6c34bdf5b30d30368acc2f4d281..b98c8af3b34c1ae25cbce52dd3a5f0a9b985b54e 100644
 --- a/chrome/browser/extensions/BUILD.gn
 +++ b/chrome/browser/extensions/BUILD.gn
-@@ -1537,6 +1537,7 @@ source_set("extensions") {
-       deps += [ "//chrome/browser/ui/toasts" ]
-     }
-   }  # if (enable_extensions)
+@@ -1573,6 +1573,7 @@ source_set("extensions") {
+       "api/tabs/app_window_helper.h",
+     ]
+   }
 +  deps += brave_extensions_resources
  }
  

@@ -4,21 +4,14 @@
 // you can obtain one at https://mozilla.org/MPL/2.0/.
 
 import '../brave_appearance_page/super_referral.js'
+import '../brave_appearance_page/toolbar.js'
 
 import {
   html,
-  RegisterPolymerComponentReplacement,
   RegisterPolymerTemplateModifications
 } from 'chrome://resources/brave/polymer_overriding.js'
 
-import {getTrustedHTML} from 'chrome://resources/js/static_types.js'
-
-import {loadTimeData} from '../i18n_setup.js'
-import {Router} from '../router.js'
-
-import {
-  SettingsAppearancePageElement
-} from '../appearance_page/appearance_page.js'
+import { loadTimeData } from '../i18n_setup.js'
 
 
 const superReferralStringId = 'superReferralThemeName'
@@ -64,7 +57,7 @@ RegisterPolymerTemplateModifications({
       homeButtonToggle.remove()
     }
     const homeButtonOptionsTemplate = templateContent.querySelector(
-        'template[is=dom-if][if="[[prefs.browser.show_home_button.value]]"]')
+      'template[is=dom-if][if="[[prefs.browser.show_home_button.value]]"]')
     if (!homeButtonOptionsTemplate) {
       console.error(
         `[Settings] Couldn't find home button options template`)
@@ -97,13 +90,6 @@ RegisterPolymerTemplateModifications({
       console.error(`[Settings] Couldn't find customize fonts subpage trigger`)
     } else {
       customizeFontsSubpageTrigger.remove()
-    }
-    const customizeFontsTemplate = templateContent.querySelector(
-        'template[is=dom-if][route-path="/fonts"]')
-    if (!customizeFontsTemplate) {
-      console.error(`[Settings] Couldn't find customize fonts subpage template`)
-    } else {
-      customizeFontsTemplate.remove()
     }
     const pageZoom = templateContent.querySelector('.cr-row:has(#pageZoom)')
     if (!pageZoom) {
@@ -178,5 +164,35 @@ RegisterPolymerTemplateModifications({
     } else if (sidePanelPosition.parentNode) {
       sidePanelPosition.parentNode.setAttribute('hidden', 'true')
     }
+
+    const section = templateContent.querySelector('settings-section')
+    if (!section) {
+      console.error(`[Settings] Couldn't find settings-section`)
+      return
+    }
+    // Append toolbar settings to the appearance section.
+    section.appendChild(html`
+      <settings-brave-appearance-toolbar
+        prefs="{{prefs}}">
+      </settings-brave-appearance-toolbar>
+    `)
+
+    // Remove a couple of items to from appearance page as we have them in
+    // <settings-brave-appearance-toolbar>
+    // - showSavedTabGroups and autoPinNewTabGroups should be after bookmark bar setting
+    const removeElementWithId = (id: string) => {
+      const elem = templateContent.querySelector(`#${id}`)
+      if (!elem) {
+        console.error(`[Settings] Couldn't find element with id: ${id}`)
+      } else {
+        elem.remove()
+      }
+    }
+    removeElementWithId('showSavedTabGroups')
+    removeElementWithId('autoPinNewTabGroups')
+
+    // Remove "Allow split view drag-and-drop on left or right edge of window"
+    // toggle as we show it on the Content page.
+    removeElementWithId('splitViewDragAndDrop')
   }
 })

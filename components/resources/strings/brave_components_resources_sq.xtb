@@ -62,9 +62,9 @@
 <translation id="8803682034537762884">Një për rresht, një filtër përshkruhet sipas sintaksës së filtrave nga Adblock Plus</translation>
 <translation id="2653659639078652383">Parashtroje</translation>
 <translation id="1209739344687072997">Raporto një sajt të dëmtuar</translation>
-<translation id="8510478288840333677">Bëji me dije programuesit e Brave se kjo faqe interneti nuk punon mirë me Mbrojtje-n:</translation>
 <translation id="5299848999918506028">Faleminderit!</translation>
 <translation id="76550953340008122">Faleminderit që bëre me dije programuesit e Brave-s se ka diçka që nuk shkon me këtë faqe interneti. Ne do të bëjmë më të mirën ta rregullojmë këtë.</translation>
+<translation id="7138678301420049075">Tjetër</translation>
 <translation id="6112368337882254910">Vetë-Kontribuoni</translation>
 <translation id="4229016885653790965">Na ndjeni! Reklamat s’janë ende të përdorshme në rajonin tuaj.</translation>
 <translation id="2539279826042558064">Për momentin Reklamat dhe Shpërblimet Brave nuk janë të disponueshme në pajisjen tënde.</translation>
@@ -211,7 +211,6 @@
 <translation id="4114667046481794032">Sasia e kontribuar</translation>
 <translation id="7550470870580166294">Fonde të Pamjaftueshme</translation>
 <translation id="1166682575529520472">Çdo Muaj</translation>
-<translation id="7138678301420049075">Tjetër</translation>
 <translation id="5309155375926073606">Po, do të doja të kontribuoja edhe në Kërkimin Brave dhe të zgjedh <ph name="LINK_BEGIN"/>Projektin e Zbulimit të Internetit<ph name="LINK_END"/>.</translation>
 <translation id="4622826307953794521">Kontribuo me të dhëna anonime kërkimi dhe shfletimi për të përmirësuar Kërkimin Brave me Projektin e Zbulimit të Internetit. Është tërësisht me burim të hapur.</translation>
 <translation id="4174337572777167894">Projekti i Zbulimit të Internetit</translation>
@@ -271,6 +270,7 @@
 <translation id="1178581264944972037">Pauzë</translation>
 <translation id="4744699166186440">Investues</translation>
 <translation id="3155170474926428993">Nisës Tor-i</translation>
+<translation id="1772301834467143364">Lajmet Brave</translation>
 <translation id="939305735877869636">Brave</translation>
 <translation id="1264974993859112054">Sport</translation>
 <translation id="6709133671862442373">Lajmet</translation>
@@ -284,6 +284,7 @@
 <translation id="5975083100439434680">Zvogëlo</translation>
 <translation id="5016205925109358554">Serif</translation>
 <translation id="2593272815202181319">Me hapësirë fikse</translation>
+<translation id="7557539689487606886">Bëhu Premium</translation>
 <translation id="3840096463915153852">Kontribuo me të dhëna anonime kërkimi dhe shfletimi për të përmirësuar Kërkimin Brave me Projektin e Zbulimit të Internetit. Është tërësisht me burim të hapur.</translation>
 <translation id="2304783958703511257">Parametra të përparuara</translation>
 <translation id="4165928407303989823">Qëndro në temë</translation>
@@ -301,6 +302,7 @@
 <translation id="7979673624064378842">Biseda rrufe</translation>
 <translation id="2836330653441111204">Shpejtësi dhe inteligjencë e ekuilibruar</translation>
 <translation id="42981349822642051">Përhap</translation>
+<translation id="7742969455167760092">Hap skedat...</translation>
 <translation id="3960619311638643872">Brave VPN</translation>
 <translation id="8425213833346101688">Ndrysho</translation>
 <translation id="755045397420611731">Privatësi shtesë &amp; siguri në internet</translation>
@@ -330,6 +332,8 @@
 <translation id="6764845498618413165">Mësoni Më Tepër.</translation>
 <translation id="7818938154803162778">Do t'ju ndihmoj, sigurisht</translation>
 <translation id="2370739752330685659">Ndoshta më vonë</translation>
+<translation id="7207456302801184289">Mirë se vini në Brave</translation>
+<translation id="8293206222192510085">Shto faqeruajtës</translation>
 <translation id="5753795690521538679">Fillo provë 7-ditore falas</translation>
 <translation id="3357036723290257445">Ke blerë Brave VPN?</translation>
 <translation id="7805768142964895445">Statusi</translation>

@@ -12,6 +12,7 @@
 #include "brave/components/brave_wallet/browser/brave_wallet_service.h"
 #include "brave/components/brave_wallet/browser/ethereum_provider_impl.h"
 #include "brave/components/brave_wallet/browser/solana_provider_impl.h"
+#include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/brave_wallet/resources/grit/brave_wallet_script_generated.h"
 #include "brave/ios/browser/api/brave_wallet/brave_wallet.mojom.objc+private.h"
 #include "brave/ios/browser/api/brave_wallet/brave_wallet_provider_delegate_ios+private.h"
@@ -54,6 +55,10 @@ BraveWalletProviderScriptKey const BraveWalletProviderScriptKeyWalletStandard =
     _providerScripts = [[NSMutableDictionary alloc] init];
   }
   return self;
+}
+
+- (bool)isAllowed {
+  return brave_wallet::IsAllowed(_profile->GetPrefs());
 }
 
 + (id<BraveWalletBlockchainRegistry>)blockchainRegistry {
@@ -161,6 +166,9 @@ BraveWalletProviderScriptKey const BraveWalletProviderScriptKeyWalletStandard =
         // Currently not supported
         return {std::make_pair(@"", 0)};
       case BraveWalletCoinTypeAda:
+        // Currently not supported
+        return {std::make_pair(@"", 0)};
+      case BraveWalletCoinTypeDot:
         // Currently not supported
         return {std::make_pair(@"", 0)};
     }

@@ -1,0 +1,13 @@
+diff --git a/chrome/browser/ui/android/toolbar/java/res/xml/adaptive_toolbar_preference.xml b/chrome/browser/ui/android/toolbar/java/res/xml/adaptive_toolbar_preference.xml
+index b9f7ada321d81c935787c4db75e5c2addcdbdd52..9417e14b9fa1dbe578f969aa11351fffe22bface 100644
+--- a/chrome/browser/ui/android/toolbar/java/res/xml/adaptive_toolbar_preference.xml
++++ b/chrome/browser/ui/android/toolbar/java/res/xml/adaptive_toolbar_preference.xml
+@@ -17,7 +17,7 @@ found in the LICENSE file.
+         android:key="toolbar_shortcut_switch"
+         android:title="@string/toolbar_shortcut" />
+ 
+-    <org.chromium.chrome.browser.toolbar.adaptive.settings.RadioButtonGroupAdaptiveToolbarPreference
++    <org.chromium.chrome.browser.toolbar.adaptive.settings.BraveRadioButtonGroupAdaptiveToolbarPreference
+         android:key="adaptive_toolbar_radio_group"
+         android:selectable="false"
+         app:allowDividerAbove="true"

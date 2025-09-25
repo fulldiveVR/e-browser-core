@@ -11,7 +11,6 @@
 #include "brave/components/permissions/permission_widevine_utils.h"
 #include "chrome/browser/download/download_permission_request.h"
 #include "chrome/test/base/chrome_render_view_host_test_harness.h"
-#include "chrome/test/base/scoped_testing_local_state.h"
 #include "chrome/test/base/testing_browser_process.h"
 #include "chrome/test/base/testing_profile_manager.h"
 #include "components/permissions/permission_prompt.h"
@@ -81,8 +80,8 @@ class WidevinePermissionAndroidTest : public ChromeRenderViewHostTestHarness {
     ChromeRenderViewHostTestHarness::TearDown();
   }
 
-  TestingPrefServiceSimple* local_state() {
-    return profile_manager_->local_state()->Get();
+  PrefService* local_state() {
+    return TestingBrowserProcess::GetGlobal()->local_state();
   }
   Profile* profile() { return profile_; }
   content::WebContents* web_contents() const { return web_contents_.get(); }

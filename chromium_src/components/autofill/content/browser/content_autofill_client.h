@@ -19,8 +19,8 @@ namespace autofill {
 // methods would still be marked as final they need to be virtual in a base
 // class - which is what we are providing here.
 struct BraveContentAutofillClientUnused {
-  virtual AutofillOptimizationGuide* GetAutofillOptimizationGuide_Unused()
-      const;
+  virtual AutofillOptimizationGuideDecider*
+  GetAutofillOptimizationGuideDecider_Unused() const;
   virtual bool IsAutofillEnabled_Unused() const;
   virtual bool IsAutocompleteEnabled_Unused() const;
 };
@@ -28,7 +28,7 @@ struct BraveContentAutofillClientUnused {
 }  // namespace autofill
 
 #define AutofillClient BraveContentAutofillClientUnused, public AutofillClient
-#include "src/components/autofill/content/browser/content_autofill_client.h"  // IWYU pragma: export
+#include <components/autofill/content/browser/content_autofill_client.h>  // IWYU pragma: export
 #undef AutofillClient
 
 #endif  // BRAVE_CHROMIUM_SRC_COMPONENTS_AUTOFILL_CONTENT_BROWSER_CONTENT_AUTOFILL_CLIENT_H_

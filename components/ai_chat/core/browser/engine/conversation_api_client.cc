@@ -17,6 +17,7 @@
 #include "base/check.h"
 #include "base/command_line.h"
 #include "base/containers/checked_iterators.h"
+#include "base/containers/fixed_flat_map.h"
 #include "base/containers/flat_map.h"
 #include "base/functional/bind.h"
 #include "base/json/json_writer.h"
@@ -93,37 +94,39 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
 base::Value::List ConversationEventsToList(
     std::vector<ConversationEvent> conversation) {
   static const base::NoDestructor<std::map<ConversationEventRole, std::string>>
-      kRoleMap({{ConversationEventRole::User, "user"},
-                {ConversationEventRole::Assistant, "assistant"},
-                {ConversationEventRole::Tool, "tool"}});
+      kRoleMap({{ConversationEventRole::kUser, "user"},
+                {ConversationEventRole::kAssistant, "assistant"},
+                {ConversationEventRole::kTool, "tool"}});
 
   static const base::NoDestructor<std::map<ConversationEventType, std::string>>
       kTypeMap(
-          {{ConversationEventType::ContextURL, "contextURL"},
-           {ConversationEventType::UserText, "userText"},
-           {ConversationEventType::PageText, "pageText"},
-           {ConversationEventType::PageExcerpt, "pageExcerpt"},
-           {ConversationEventType::VideoTranscript, "videoTranscript"},
-           {ConversationEventType::VideoTranscriptXML, "videoTranscriptXML"},
-           {ConversationEventType::VideoTranscriptVTT, "videoTranscriptVTT"},
-           {ConversationEventType::ChatMessage, "chatMessage"},
-           {ConversationEventType::RequestRewrite, "requestRewrite"},
-           {ConversationEventType::RequestSummary, "requestSummary"},
-           {ConversationEventType::RequestSuggestedActions,
+          {{ConversationEventType::kContextURL, "contextURL"},
+           {ConversationEventType::kUserText, "userText"},
+           {ConversationEventType::kPageText, "pageText"},
+           {ConversationEventType::kPageExcerpt, "pageExcerpt"},
+           {ConversationEventType::kVideoTranscript, "videoTranscript"},
+           {ConversationEventType::kVideoTranscriptXML, "videoTranscriptXML"},
+           {ConversationEventType::kVideoTranscriptVTT, "videoTranscriptVTT"},
+           {ConversationEventType::kChatMessage, "chatMessage"},
+           {ConversationEventType::kRequestRewrite, "requestRewrite"},
+           {ConversationEventType::kRequestSummary, "requestSummary"},
+           {ConversationEventType::kRequestSuggestedActions,
             "requestSuggestedActions"},
-           {ConversationEventType::SuggestedActions, "suggestedActions"},
-           {ConversationEventType::GetSuggestedTopicsForFocusTabs,
+           {ConversationEventType::kSuggestedActions, "suggestedActions"},
+           {ConversationEventType::kGetSuggestedTopicsForFocusTabs,
             "suggestFocusTopics"},
-           {ConversationEventType::DedupeTopics, "dedupeFocusTopics"},
-           {ConversationEventType::GetSuggestedAndDedupeTopicsForFocusTabs,
+           {ConversationEventType::kDedupeTopics, "dedupeFocusTopics"},
+           {ConversationEventType::kGetSuggestedAndDedupeTopicsForFocusTabs,
             "suggestAndDedupeFocusTopics"},
-           {ConversationEventType::GetFocusTabsForTopic, "classifyTabs"},
-           {ConversationEventType::UploadImage, "uploadImage"},
-           {ConversationEventType::PageScreenshot, "pageScreenshot"},
-           {ConversationEventType::ToolUse, "toolUse"}});
+           {ConversationEventType::kGetFocusTabsForTopic, "classifyTabs"},
+           {ConversationEventType::kUploadImage, "uploadImage"},
+           {ConversationEventType::kPageScreenshot, "pageScreenshot"},
+           {ConversationEventType::kUploadPdf, "uploadPdf"},
+           {ConversationEventType::kToolUse, "toolUse"},
+           {ConversationEventType::kUserMemory, "userMemory"}});
 
   base::Value::List events;
-  for (const auto& event : conversation) {
+  for (auto& event : conversation) {
     base::Value::Dict event_dict;
 
     // Set role
@@ -141,6 +144,9 @@ base::Value::List ConversationEventsToList(
 
     // Tool calls
     if (!event.tool_calls.empty()) {
+      // For some reason the server currently expects chat messages that contain
+      // tool calls as well as regular content to have a different type.
+      event_dict.Set("type", "toolCalls");
       base::Value::List tool_call_dicts;
       for (const auto& tool_event : event.tool_calls) {
         base::Value::Dict tool_call_dict;
@@ -163,8 +169,12 @@ base::Value::List ConversationEventsToList(
       event_dict.Set("tool_call_id", event.tool_call_id);
     }
 
-    if (event.type == ConversationEventType::GetFocusTabsForTopic) {
+    if (event.type == ConversationEventType::kGetFocusTabsForTopic) {
       event_dict.Set("topic", event.topic);
+    }
+
+    if (event.type == ConversationEventType::kUserMemory && event.user_memory) {
+      event_dict.Set("memory", std::move(*event.user_memory));
     }
 
     events.Append(std::move(event_dict));
@@ -206,12 +216,14 @@ ConversationAPIClient::ConversationEvent::ConversationEvent(
     ConversationEventType type,
     Content content,
     const std::string& topic,
+    std::optional<base::Value::Dict> user_memory,
     std::vector<mojom::ToolUseEventPtr> tool_calls,
     const std::string& tool_call_id)
     : role(role),
       type(type),
       content(std::move(content)),
       topic(topic),
+      user_memory(std::move(user_memory)),
       tool_calls(std::move(tool_calls)),
       tool_call_id(tool_call_id) {}
 
@@ -249,6 +261,7 @@ void ConversationAPIClient::PerformRequest(
     const std::string& selected_language,
     std::optional<base::Value::List> oai_tool_definitions,
     const std::optional<std::string>& preferred_tool_name,
+    mojom::ConversationCapability conversation_capability,
     GenerationDataCallback data_received_callback,
     GenerationCompletedCallback completed_callback,
     const std::optional<std::string>& model_name) {
@@ -257,7 +270,7 @@ void ConversationAPIClient::PerformRequest(
       &ConversationAPIClient::PerformRequestWithCredentials,
       weak_ptr_factory_.GetWeakPtr(), std::move(conversation),
       selected_language, std::move(oai_tool_definitions), preferred_tool_name,
-      model_name, std::move(data_received_callback),
+      conversation_capability, model_name, std::move(data_received_callback),
       std::move(completed_callback));
   credential_manager_->FetchPremiumCredential(std::move(callback));
 }
@@ -267,11 +280,21 @@ std::string ConversationAPIClient::CreateJSONRequestBody(
     const std::string& selected_language,
     std::optional<base::Value::List> oai_tool_definitions,
     const std::optional<std::string>& preferred_tool_name,
+    mojom::ConversationCapability conversation_capability,
     const std::optional<std::string>& model_name,
     const bool is_sse_enabled) {
   base::Value::Dict dict;
 
+  static constexpr auto kCapabilityMap =
+      base::MakeFixedFlatMap<mojom::ConversationCapability, std::string_view>(
+          {{mojom::ConversationCapability::CHAT, "chat"},
+           {mojom::ConversationCapability::CONTENT_AGENT, "content_agent"}});
+  auto capability_it = kCapabilityMap.find(conversation_capability);
+  CHECK(capability_it != kCapabilityMap.end())
+      << "Invalid conversation capability: " << conversation_capability;
+
   dict.Set("events", ConversationEventsToList(std::move(conversation)));
+  dict.Set("capability", capability_it->second);
   dict.Set("model", model_name ? *model_name : model_name_);
   dict.Set("selected_language", selected_language);
   dict.Set("system_language",
@@ -296,6 +319,7 @@ void ConversationAPIClient::PerformRequestWithCredentials(
     const std::string& selected_language,
     std::optional<base::Value::List> oai_tool_definitions,
     const std::optional<std::string>& preferred_tool_name,
+    mojom::ConversationCapability conversation_capability,
     const std::optional<std::string>& model_name,
     GenerationDataCallback data_received_callback,
     GenerationCompletedCallback completed_callback,
@@ -315,10 +339,10 @@ void ConversationAPIClient::PerformRequestWithCredentials(
 
   const bool is_sse_enabled =
       ai_chat::features::kAIChatSSE.Get() && !data_received_callback.is_null();
-  const std::string request_body =
-      CreateJSONRequestBody(std::move(conversation), selected_language,
-                            std::move(oai_tool_definitions),
-                            preferred_tool_name, model_name, is_sse_enabled);
+  const std::string request_body = CreateJSONRequestBody(
+      std::move(conversation), selected_language,
+      std::move(oai_tool_definitions), preferred_tool_name,
+      conversation_capability, model_name, is_sse_enabled);
 
   base::flat_map<std::string, std::string> headers;
   const auto digest_header = brave_service_keys::GetDigestHeader(request_body);

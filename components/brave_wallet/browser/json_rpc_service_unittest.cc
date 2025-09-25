@@ -3206,27 +3206,33 @@ class UnstoppableDomainsUnitTest : public JsonRpcServiceUnitTest {
     JsonRpcServiceUnitTest::SetUp();
     eth_mainnet_endpoint_handler_ = std::make_unique<JsonRpcEndpointHandler>(
         NetworkManager::GetUnstoppableDomainsRpcUrl(mojom::kMainnetChainId));
-    eth_mainnet_getmany_call_handler_ = std::make_unique<UDGetManyCallHandler>(
-        EthAddress::FromHex(GetUnstoppableDomainsProxyReaderContractAddress(
-            mojom::kMainnetChainId)));
+    eth_mainnet_getmany_call_handler_ =
+        std::make_unique<UDGetManyCallHandler>(EthAddress::FromHex(
+            JsonRpcService::
+                GetUnstoppableDomainsProxyReaderContractAddressForTesting(
+                    mojom::kMainnetChainId)));
     eth_mainnet_endpoint_handler_->AddEthCallHandler(
         eth_mainnet_getmany_call_handler_.get());
 
     polygon_endpoint_handler_ = std::make_unique<JsonRpcEndpointHandler>(
         NetworkManager::GetUnstoppableDomainsRpcUrl(
             mojom::kPolygonMainnetChainId));
-    polygon_getmany_call_handler_ = std::make_unique<UDGetManyCallHandler>(
-        EthAddress::FromHex(GetUnstoppableDomainsProxyReaderContractAddress(
-            mojom::kPolygonMainnetChainId)));
+    polygon_getmany_call_handler_ =
+        std::make_unique<UDGetManyCallHandler>(EthAddress::FromHex(
+            JsonRpcService::
+                GetUnstoppableDomainsProxyReaderContractAddressForTesting(
+                    mojom::kPolygonMainnetChainId)));
     polygon_endpoint_handler_->AddEthCallHandler(
         polygon_getmany_call_handler_.get());
 
     base_endpoint_handler_ = std::make_unique<JsonRpcEndpointHandler>(
         NetworkManager::GetUnstoppableDomainsRpcUrl(
             mojom::kBaseMainnetChainId));
-    base_getmany_call_handler_ = std::make_unique<UDGetManyCallHandler>(
-        EthAddress::FromHex(GetUnstoppableDomainsProxyReaderContractAddress(
-            mojom::kBaseMainnetChainId)));
+    base_getmany_call_handler_ =
+        std::make_unique<UDGetManyCallHandler>(EthAddress::FromHex(
+            JsonRpcService::
+                GetUnstoppableDomainsProxyReaderContractAddressForTesting(
+                    mojom::kBaseMainnetChainId)));
     base_endpoint_handler_->AddEthCallHandler(base_getmany_call_handler_.get());
 
     url_loader_factory_.SetInterceptor(base::BindRepeating(
@@ -3958,6 +3964,7 @@ TEST_F(JsonRpcServiceUnitTest, GetWalletAddrInvalidCoin) {
            mojom::CoinType::BTC,
            mojom::CoinType::ZEC,
            mojom::CoinType::ADA,
+           mojom::CoinType::DOT,
        }) {
     auto token = mojom::BlockchainToken::New();
     token->coin = coin;
@@ -3967,7 +3974,7 @@ TEST_F(JsonRpcServiceUnitTest, GetWalletAddrInvalidCoin) {
     task_environment_.RunUntilIdle();
   }
 
-  static_assert(AllCoinsTested<6>());
+  static_assert(AllCoinsTested<7>());
 }
 
 TEST_F(JsonRpcServiceUnitTest, IsValidEnsDomain) {
@@ -8281,7 +8288,7 @@ TEST_F(JsonRpcServiceUnitTest, GetNftMetadatas) {
 
   std::map<GURL, std::string> responses_eth;
   responses_eth[GURL(
-      "https://simplehash.wallet.brave.com/api/v0/nfts/"
+      "https://gate3.wallet.brave.com/simplehash/api/v0/nfts/"
       "assets?nft_ids=ethereum.0xED5AF388653567Af2F388E6224dC7C4b3241C544.2767%"
       "2Cethereum.0xAbc1230000000000000000000000000000000000.1234")] = R"({
     "nfts": [
@@ -8353,7 +8360,7 @@ TEST_F(JsonRpcServiceUnitTest, GetNftMetadatas) {
 
   std::map<GURL, std::string> responses_sol;
   responses_sol[GURL(
-      "https://simplehash.wallet.brave.com/api/v0/nfts/"
+      "https://gate3.wallet.brave.com/simplehash/api/v0/nfts/"
       "assets?nft_ids=solana.2iZBbRGnLVEEZH6JDsaNsTo66s2uxx7DTchVWKU8oisR%"
       "2Csolana.3knghmwnuaMxkiuqXrqzjL7gLDuRw6DkkZcW7F4mvkK8")] = R"({
     "nfts": [
@@ -8580,7 +8587,7 @@ TEST_F(JsonRpcServiceUnitTest, GetNftBalances) {
 
   std::map<GURL, std::string> responses;
   responses[GURL(
-      "https://simplehash.wallet.brave.com/api/v0/nfts/"
+      "https://gate3.wallet.brave.com/simplehash/api/v0/nfts/"
       "assets?nft_ids=solana.3knghmwnuaMxkiuqXrqzjL7gLDuRw6DkkZcW7F4mvkK8%"
       "2Csolana.2izbbrgnlveezh6jdsansto66s2uxx7dtchvwku8oisr")] = json;
 

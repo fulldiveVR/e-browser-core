@@ -10,6 +10,7 @@ include_rules = [
   "+components/user_prefs",
   "+content/public/browser",
   "+content/public/common",
+  "+content/public/test",
   "+crypto",
   "+services/network/public",
   "+services/network/public/cpp",
@@ -23,5 +24,8 @@ specific_include_rules = {
   ],
   "url_readable_hints\.cc": [
     "+third_party/re2",
+  ],
+  "speedreader_rewriter_unittest\.cc": [
+    "!brave/components/constants/brave_paths.h",
   ],
 }

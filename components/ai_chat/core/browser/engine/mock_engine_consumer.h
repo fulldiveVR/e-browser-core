@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 
+#include "brave/components/ai_chat/core/browser/associated_content_manager.h"
 #include "brave/components/ai_chat/core/browser/engine/engine_consumer.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #include "testing/gmock/include/gmock/gmock.h"
@@ -22,20 +23,20 @@ class MockEngineConsumer : public EngineConsumer {
 
   MOCK_METHOD(void,
               GenerateQuestionSuggestions,
-              (const bool& is_video,
-               const std::string& page_content,
+              (PageContents page_contents,
                const std::string& selected_language,
                SuggestedQuestionsCallback callback),
               (override));
 
   MOCK_METHOD(void,
               GenerateAssistantResponse,
-              (const bool& is_video,
-               const std::string& page_content,
+              (PageContentsMap && page_contents,
                const ConversationHistory& conversation_history,
                const std::string& selected_language,
+               bool is_temporary_chat,
                const std::vector<base::WeakPtr<Tool>>& tools,
                std::optional<std::string_view> preferred_tool_name,
+               mojom::ConversationCapability conversation_capability,
                GenerationDataCallback data_received_callback,
                GenerationCompletedCallback completed_callback),
               (override));
@@ -46,6 +47,13 @@ class MockEngineConsumer : public EngineConsumer {
                const std::string& question,
                const std::string& selected_language,
                GenerationDataCallback received_callback,
+               GenerationCompletedCallback completed_callback),
+              (override));
+
+  MOCK_METHOD(void,
+              GenerateConversationTitle,
+              (const PageContentsMap& page_contents,
+               const ConversationHistory& conversation_history,
                GenerationCompletedCallback completed_callback),
               (override));
 
@@ -64,6 +72,8 @@ class MockEngineConsumer : public EngineConsumer {
                GetFocusTabsCallback),
               (override));
   MOCK_METHOD(const std::string&, GetModelName, (), (const, override));
+
+  MOCK_METHOD(bool, RequiresClientSideTitleGeneration, (), (const, override));
 
   bool SupportsDeltaTextResponses() const override {
     return supports_delta_text_responses_;

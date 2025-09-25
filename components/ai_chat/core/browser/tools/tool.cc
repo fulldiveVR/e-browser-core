@@ -24,10 +24,6 @@ std::optional<std::vector<std::string>> Tool::RequiredProperties() const {
   return std::nullopt;
 }
 
-bool Tool::IsContentAssociationRequired() const {
-  return false;
-}
-
 bool Tool::IsAgentTool() const {
   return false;
 }
@@ -41,8 +37,20 @@ bool Tool::RequiresUserInteractionBeforeHandling() const {
   return false;
 }
 
+bool Tool::SupportsConversation(
+    bool is_temporary,
+    bool has_untrusted_content,
+    mojom::ConversationCapability conversation_capability) const {
+  return true;
+}
+
 std::optional<base::Value::Dict> Tool::ExtraParams() const {
   return std::nullopt;
+}
+
+void Tool::UseTool(const std::string& input_json,
+                   Tool::UseToolCallback callback) {
+  CHECK(false) << "UseTool called but not implemented";
 }
 
 }  // namespace ai_chat

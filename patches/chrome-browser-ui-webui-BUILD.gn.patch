@@ -1,10 +1,10 @@
 diff --git a/chrome/browser/ui/webui/BUILD.gn b/chrome/browser/ui/webui/BUILD.gn
-index fb704595cdeb3249d6541bb04801117f18d1d8cb..99551c12a16a903aff4ea9b049b7155816ae03c4 100644
+index 1cda7d0cd6d892a74f5779100ccc367320a50cc9..2f424c8511878ededcd401c3329aa506b356c029 100644
 --- a/chrome/browser/ui/webui/BUILD.gn
 +++ b/chrome/browser/ui/webui/BUILD.gn
-@@ -101,6 +101,7 @@ source_set("configs") {
-   if (enable_glic) {
-     deps += [ "//chrome/browser/glic" ]
+@@ -120,6 +120,7 @@ source_set("configs") {
+   if (enable_session_service) {
+     deps += [ "//chrome/browser/ui/webui/tab_strip_internals" ]
    }
 +  import("//brave/browser/ui/webui/sources.gni") deps += brave_browser_ui_webui_configs_deps
  }

@@ -10,7 +10,6 @@ import static org.chromium.ui.base.ViewUtils.dpToPx;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
-import android.app.PictureInPictureParams;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
@@ -56,7 +55,6 @@ import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveRewardsHelper;
 import org.chromium.chrome.browser.BraveRewardsNativeWorker;
 import org.chromium.chrome.browser.BraveRewardsObserver;
-import org.chromium.chrome.browser.BraveYouTubeScriptInjectorNativeHelper;
 import org.chromium.chrome.browser.app.BraveActivity;
 import org.chromium.chrome.browser.brave_stats.BraveStatsUtil;
 import org.chromium.chrome.browser.crypto_wallet.controller.DAppsWalletController;
@@ -65,8 +63,6 @@ import org.chromium.chrome.browser.customtabs.FullScreenCustomTabActivity;
 import org.chromium.chrome.browser.customtabs.features.toolbar.CustomTabToolbar;
 import org.chromium.chrome.browser.dialogs.BraveAdsSignupDialog;
 import org.chromium.chrome.browser.flags.ChromeFeatureList;
-import org.chromium.chrome.browser.fullscreen.FullscreenManager;
-import org.chromium.chrome.browser.fullscreen.FullscreenOptions;
 import org.chromium.chrome.browser.local_database.BraveStatsTable;
 import org.chromium.chrome.browser.local_database.DatabaseHelper;
 import org.chromium.chrome.browser.local_database.SavedBandwidthTable;
@@ -92,9 +88,11 @@ import org.chromium.chrome.browser.shields.BraveShieldsUtils;
 import org.chromium.chrome.browser.tab.Tab;
 import org.chromium.chrome.browser.tab.TabHidingType;
 import org.chromium.chrome.browser.tab.TabSelectionType;
+import org.chromium.chrome.browser.tabmodel.IncognitoStateProvider;
 import org.chromium.chrome.browser.tabmodel.TabModelSelector;
 import org.chromium.chrome.browser.tabmodel.TabModelSelectorTabModelObserver;
 import org.chromium.chrome.browser.tabmodel.TabModelSelectorTabObserver;
+import org.chromium.chrome.browser.theme.ThemeColorProvider;
 import org.chromium.chrome.browser.theme.ThemeUtils;
 import org.chromium.chrome.browser.toolbar.ToolbarDataProvider;
 import org.chromium.chrome.browser.toolbar.ToolbarProgressBar;
@@ -102,6 +100,8 @@ import org.chromium.chrome.browser.toolbar.ToolbarTabController;
 import org.chromium.chrome.browser.toolbar.back_button.BackButtonCoordinator;
 import org.chromium.chrome.browser.toolbar.bottom.BottomToolbarConfiguration;
 import org.chromium.chrome.browser.toolbar.bottom.BottomToolbarVariationManager;
+import org.chromium.chrome.browser.toolbar.extensions.ExtensionToolbarCoordinator;
+import org.chromium.chrome.browser.toolbar.forward_button.ForwardButtonCoordinator;
 import org.chromium.chrome.browser.toolbar.home_button.HomeButton;
 import org.chromium.chrome.browser.toolbar.menu_button.BraveMenuButtonCoordinator;
 import org.chromium.chrome.browser.toolbar.menu_button.MenuButtonCoordinator;
@@ -112,6 +112,7 @@ import org.chromium.chrome.browser.util.BraveConstants;
 import org.chromium.chrome.browser.util.BraveTouchUtils;
 import org.chromium.chrome.browser.util.ConfigurationUtils;
 import org.chromium.chrome.browser.util.PackageUtils;
+import org.chromium.chrome.browser.youtube_script_injector.BraveYouTubeScriptInjectorNativeHelper;
 import org.chromium.components.embedder_support.util.UrlUtilities;
 import org.chromium.components.feature_engagement.Tracker;
 import org.chromium.content_public.browser.NavigationHandle;
@@ -146,8 +147,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                 BraveRewardsObserver,
                 BraveRewardsNativeWorker.PublisherObserver,
                 ConnectionErrorHandler,
-                PlaylistServiceObserverImplDelegate,
-                FullscreenManager.Observer {
+                PlaylistServiceObserverImplDelegate {
     private static final String TAG = "BraveToolbar";
 
     private static final int URL_FOCUS_TOOLBAR_BUTTONS_TRANSLATION_X_DP = 10;
@@ -205,7 +205,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             Collections.synchronizedSet(new HashSet<Integer>());
 
     private PlaylistService mPlaylistService;
-    private FullscreenManager mFullscreenManager;
 
     private enum BigtechCompany {
         Google,
@@ -479,14 +478,6 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         }
     }
 
-    public void setFullscreenManager(final FullscreenManager fullscreenManager) {
-        mFullscreenManager = fullscreenManager;
-        if (ChromeFeatureList.isEnabled(
-                BraveFeatureList.BRAVE_PICTURE_IN_PICTURE_FOR_YOUTUBE_VIDEOS)) {
-            mFullscreenManager.addObserver(this);
-        }
-    }
-
     public void setTabModelSelector(TabModelSelector selector) {
         // We might miss events before calling setTabModelSelector, so we need
         // to proactively update the shields button state here, otherwise shields
@@ -512,6 +503,9 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
 
                     @Override
                     public void onShown(Tab tab, @TabSelectionType int type) {
+                        if (!PictureInPicture.isEnabled(getContext())) {
+                            hideYouTubePipIcon();
+                        }
                         // Update shields button state when visible tab is changed.
                         updateBraveShieldsButtonState(tab);
                         // case when window.open is triggered from dapps site and new tab is in
@@ -569,7 +563,13 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                     @Override
                     public void onDidFinishNavigationInPrimaryMainFrame(
                             Tab tab, NavigationHandle navigation) {
-                        showYouTubePipIcon(tab);
+                        if (navigation.isInPrimaryMainFrame()
+                                && navigation.isSameDocument()
+                                && navigation.hasCommitted()) {
+                            showYouTubePipIcon(tab);
+                        } else {
+                            hideYouTubePipIcon();
+                        }
                         if (mBraveRewardsNativeWorker != null) {
                             mBraveRewardsNativeWorker.triggerOnNotifyFrontTabUrlChanged();
                         }
@@ -638,16 +638,20 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             return;
         }
 
+        // Return early if picture in picture is not supported
+        // or disabled in the OS settings.
+        if (!PictureInPicture.isEnabled(getContext())) {
+            mYouTubePipLayout.setVisibility(View.GONE);
+            return;
+        }
+
         // Hide the layout if the current tab is in a state where it doesn't support or allow PiP
         // mode. This can also happen when a tab is re-selected after a crash and it's showing
         // the crash custom view, or is in a frozen state (likely inactive or unloaded).
         final boolean available =
                 BraveYouTubeScriptInjectorNativeHelper.isPictureInPictureAvailable(
                         tab.getWebContents());
-        final boolean enabled = PictureInPicture.isEnabled(getContext());
-
-        final boolean show = available && enabled;
-        mYouTubePipLayout.setVisibility(show ? View.VISIBLE : View.GONE);
+        mYouTubePipLayout.setVisibility(available ? View.VISIBLE : View.GONE);
     }
 
     private void hideYouTubePipIcon() {
@@ -1163,6 +1167,10 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             if (currentTab != null
                     && BraveYouTubeScriptInjectorNativeHelper.isPictureInPictureAvailable(
                             currentTab.getWebContents())) {
+                if (!PictureInPicture.isEnabled(getContext())) {
+                    hideYouTubePipIcon();
+                    return;
+                }
                 BraveYouTubeScriptInjectorNativeHelper.setFullscreen(currentTab.getWebContents());
             }
         }
@@ -1583,7 +1591,11 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
             ToolbarProgressBar progressBar,
             @Nullable ReloadButtonCoordinator reloadButtonCoordinator,
             @Nullable BackButtonCoordinator backButtonCoordinator,
-            HomeButtonDisplay homeButtonDisplay) {
+            @Nullable ForwardButtonCoordinator forwardButtonCoordinator,
+            @Nullable HomeButtonDisplay homeButtonDisplay,
+            @Nullable ExtensionToolbarCoordinator extensionToolbarCoordinator,
+            ThemeColorProvider themeColorProvider,
+            IncognitoStateProvider incognitoStateProvider) {
         super.initialize(
                 toolbarDataProvider,
                 tabController,
@@ -1595,12 +1607,14 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
                 progressBar,
                 reloadButtonCoordinator,
                 backButtonCoordinator,
-                homeButtonDisplay);
+                forwardButtonCoordinator,
+                homeButtonDisplay,
+                extensionToolbarCoordinator,
+                themeColorProvider,
+                incognitoStateProvider);
 
         BraveMenuButtonCoordinator.setMenuFromBottom(
-                isMenuButtonOnBottomControls()
-                        || (isToolbarPhone()
-                                && BottomToolbarConfiguration.isToolbarBottomAnchored()));
+                isMenuButtonOnBottomControls() || isMenuOnBottomWithBottomAddressBar());
     }
 
     public void updateWalletBadgeVisibility(boolean visible) {
@@ -1612,8 +1626,7 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         if (BottomToolbarConfiguration.isBraveBottomControlsEnabled()) {
             BraveMenuButtonCoordinator.setMenuFromBottom(mIsBottomControlsVisible);
         } else {
-            BraveMenuButtonCoordinator.setMenuFromBottom(
-                    isToolbarPhone() && BottomToolbarConfiguration.isToolbarBottomAnchored());
+            BraveMenuButtonCoordinator.setMenuFromBottom(isMenuOnBottomWithBottomAddressBar());
         }
     }
 
@@ -1679,33 +1692,20 @@ public abstract class BraveToolbarLayoutImpl extends ToolbarLayout
         }
     }
 
-    @Override
-    protected void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-        // Remove the observer when the layout is detached from the window.
-        if (mFullscreenManager != null) {
-            mFullscreenManager.removeObserver(this);
+    private boolean isMenuOnBottomWithBottomAddressBar() {
+        // If address bar is not on bottom, then menu is not on bottom too.
+        if (!BottomToolbarConfiguration.isToolbarBottomAnchored()) {
+            return false;
         }
-    }
-
-    // FullscreenManager.Observer method.
-    @Override
-    public void onEnterFullscreen(Tab tab, FullscreenOptions options) {
-        if (BraveYouTubeScriptInjectorNativeHelper.hasFullscreenBeenRequested(
-                tab.getWebContents())) {
-            Activity activity = tab.getWindowAndroid().getActivity().get();
-            if (activity != null) {
-                try {
-                    activity.enterPictureInPictureMode(
-                            new PictureInPictureParams.Builder().build());
-                } catch (IllegalStateException | IllegalArgumentException e) {
-                    Log.e(TAG, "Error entering picture in picture mode.", e);
-                }
-            }
+        // Menu can be on bottom only with ToolbarPhone.
+        if (!BraveReflectionUtil.equalTypes(this.getClass(), ToolbarPhone.class)) {
+            return false;
         }
-    }
-
-    private boolean isToolbarPhone() {
-        return BraveReflectionUtil.equalTypes(this.getClass(), ToolbarPhone.class);
+        // In overview mode the menu is on top.
+        Context context = getContext();
+        if (context instanceof BraveActivity && ((BraveActivity) context).isInOverviewMode()) {
+            return false;
+        }
+        return true;
     }
 }

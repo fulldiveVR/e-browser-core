@@ -1,10 +1,10 @@
 diff --git a/content/browser/BUILD.gn b/content/browser/BUILD.gn
-index 2202a76584bc0caf604314f25d34892258162008..52c1f4dc71315d253330ec314880875f8fb6f0d4 100644
+index c92c7110c747cc575c94cf941cf9131987ef4fd6..600aa82572720cbd7edf59ebfd908970a035d560 100644
 --- a/content/browser/BUILD.gn
 +++ b/content/browser/BUILD.gn
-@@ -3731,6 +3731,7 @@ source_set("browser") {
+@@ -3682,6 +3682,7 @@ source_set("browser") {
    if (is_chromeos) {
-     deps += [ "//ash/constants:constants" ]
+     deps += [ "//ash/constants" ]
    }
 +  import("//brave/content/browser/sources.gni") sources += brave_content_browser_sources deps += brave_content_browser_deps
  }

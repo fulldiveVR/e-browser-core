@@ -8,7 +8,6 @@
 #include <initializer_list>
 
 #include "brave/browser/brave_browser_features.h"
-#include "brave/browser/brave_features_internal_names.h"
 #include "brave/browser/ui/brave_ui_features.h"
 #include "brave/browser/ui/tabs/features.h"
 #include "brave/browser/updater/buildflags.h"
@@ -22,6 +21,7 @@
 #include "brave/components/brave_rewards/core/buildflags/buildflags.h"
 #include "brave/components/brave_rewards/core/features.h"
 #include "brave/components/brave_shields/core/common/features.h"
+#include "brave/components/brave_sync/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/buildflags.h"
 #include "brave/components/brave_wallet/common/features.h"
@@ -31,7 +31,7 @@
 #include "brave/components/google_sign_in_permission/features.h"
 #include "brave/components/ntp_background_images/browser/features.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
-#include "brave/components/psst/common/features.h"
+#include "brave/components/psst/buildflags/buildflags.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
 #include "brave/components/skus/common/features.h"
 #include "brave/components/speedreader/common/buildflags/buildflags.h"
@@ -73,10 +73,16 @@
 #if BUILDFLAG(IS_ANDROID)
 #include "brave/browser/android/safe_browsing/features.h"
 #include "brave/browser/android/youtube_script_injector/features.h"
+#include "chrome/browser/flags/android/chrome_feature_list.h"
+#include "content/public/common/content_features.h"
 #else
 #include "brave/browser/ui/views/tabs/switches.h"
 #include "brave/components/commander/common/features.h"
 #include "brave/components/commands/common/features.h"
+#endif
+
+#if BUILDFLAG(IS_MAC)
+#include "brave/browser/brave_browser_main_parts_mac.h"
 #endif
 
 #if BUILDFLAG(IS_WIN)
@@ -84,7 +90,7 @@
 #endif
 
 #if BUILDFLAG(ENABLE_EXTENSIONS)
-#include "brave/browser/ui/webui/settings/brave_extensions_manifest_v2_handler.h"
+#include "brave/browser/extensions/manifest_v2/features.h"
 #endif
 
 #if BUILDFLAG(ENABLE_BRAVE_EDUCATION)
@@ -97,6 +103,14 @@
 
 #if BUILDFLAG(ENABLE_OMAHA4)
 #include "brave/browser/updater/features.h"
+#endif
+
+#if BUILDFLAG(ENABLE_PSST)
+#include "brave/components/psst/common/features.h"
+#endif
+
+#if defined(TOOLKIT_VIEWS)
+#include "brave/browser/ui/darker_theme/features.h"
 #endif
 
 #define EXPAND_FEATURE_ENTRIES(...) __VA_ARGS__,
@@ -121,7 +135,7 @@ const flags_ui::FeatureEntry::FeatureVariation kZCashFeatureVariations[] = {
 
 namespace {
 const char* const kBraveSyncImplLink[1] = {"https://github.com/brave/go-sync"};
-}
+}  // namespace
 
 #define SPEEDREADER_FEATURE_ENTRIES                                        \
   IF_BUILDFLAG(                                                            \
@@ -256,19 +270,29 @@ const char* const kBraveSyncImplLink[1] = {"https://github.com/brave/go-sync"};
       ENABLE_PLAYLIST,                                                 \
       EXPAND_FEATURE_ENTRIES(                                          \
           {                                                            \
-              kPlaylistFeatureInternalName,                            \
+              "playlist",                                              \
               "Playlist",                                              \
               "Enables Playlist",                                      \
               kOsMac | kOsWin | kOsLinux | kOsAndroid,                 \
               FEATURE_VALUE_TYPE(playlist::features::kPlaylist),       \
           },                                                           \
           {                                                            \
-              kPlaylistFakeUAFeatureInternalName,                      \
+              "playlist-fake-ua",                                      \
               "PlaylistFakeUA",                                        \
               "Use fake UA for playlist",                              \
               kOsMac | kOsWin | kOsLinux | kOsAndroid,                 \
               FEATURE_VALUE_TYPE(playlist::features::kPlaylistFakeUA), \
           }))
+
+#define PSST_FEATURE_ENTRIES                                           \
+  IF_BUILDFLAG(ENABLE_PSST,                                            \
+               EXPAND_FEATURE_ENTRIES({                                \
+                   "enable-psst",                                      \
+                   "Enable PSST (Privacy Site Settings Tool) feature", \
+                   "Enable PSST feature",                              \
+                   kOsAll,                                             \
+                   FEATURE_VALUE_TYPE(psst::features::kEnablePsst),    \
+               }))
 
 #if !BUILDFLAG(IS_ANDROID)
 #define BRAVE_COMMANDS_FEATURE_ENTRIES                                      \
@@ -333,9 +357,38 @@ const char* const kBraveSyncImplLink[1] = {"https://github.com/brave/go-sync"};
       kOsAndroid,                                                             \
       FEATURE_VALUE_TYPE(safe_browsing::features::kBraveAndroidSafeBrowsing), \
   })
+#define BRAVE_ADAPTIVE_BUTTON_IN_TOOLBAR_ANDROID                        \
+  EXPAND_FEATURE_ENTRIES({                                              \
+      "adaptive-button-in-toolbar",                                     \
+      "Adaptive Button In Toolbar (quick shortcut)",                    \
+      "Show quick shortcut button in toolbar. ",                        \
+      kOsAndroid,                                                       \
+      FEATURE_VALUE_TYPE(                                               \
+          chrome::android::kAdaptiveButtonInTopToolbarCustomizationV2), \
+  })
+#define BRAVE_ANDROID_DYNAMIC_COLORS                                 \
+  EXPAND_FEATURE_ENTRIES({                                           \
+      "brave-android-dynamic-colors",                                \
+      "Dynamic Colors",                                              \
+      "Use dynamic colors in the application. This feature is only " \
+      "available on Android 12 and above.",                          \
+      kOsAndroid,                                                    \
+      FEATURE_VALUE_TYPE(features::kBraveAndroidDynamicColors),      \
+  })
+#define BRAVE_ANDROID_OPEN_PDF_INLINE                      \
+  EXPAND_FEATURE_ENTRIES({                                 \
+      "brave-android-open-pdf-inline",                     \
+      "Open PDF inline on Android",                        \
+      "Opens pdf files in browser when enabled.",          \
+      kOsAndroid,                                          \
+      FEATURE_VALUE_TYPE(features::kAndroidOpenPdfInline), \
+  })
 #else
 #define BRAVE_BACKGROUND_VIDEO_PLAYBACK_ANDROID
 #define BRAVE_SAFE_BROWSING_ANDROID
+#define BRAVE_ADAPTIVE_BUTTON_IN_TOOLBAR_ANDROID
+#define BRAVE_ANDROID_DYNAMIC_COLORS
+#define BRAVE_ANDROID_OPEN_PDF_INLINE
 #endif  // BUILDFLAG(IS_ANDROID)
 
 #if !BUILDFLAG(IS_ANDROID)
@@ -415,22 +468,48 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
           MULTI_VALUE_TYPE(kVerticalTabCollapseDelayChoices),                  \
       },                                                                       \
       {                                                                        \
-          kSplitViewFeatureInternalName,                                       \
-          "Enable split view",                                                 \
-          "Enables split view",                                                \
-          kOsWin | kOsMac | kOsLinux,                                          \
-          FEATURE_VALUE_TYPE(tabs::features::kBraveSplitView),                 \
-      },                                                                       \
-      {                                                                        \
           "brave-tree-tab",                                                    \
           "Brave Tree Tab",                                                    \
           "Enables the Tree Tab feature",                                      \
           kOsWin | kOsMac | kOsLinux,                                          \
           FEATURE_VALUE_TYPE(tabs::features::kBraveTreeTab),                   \
+      },                                                                       \
+      {                                                                        \
+          "brave-renaming-tabs",                                               \
+          "Brave Renaming Tabs",                                               \
+          "Enables renaming tabs via tab context menu.",                       \
+          kOsWin | kOsMac | kOsLinux,                                          \
+          FEATURE_VALUE_TYPE(tabs::features::kBraveRenamingTabs),              \
       })
+
 #else
 #define BRAVE_TABS_FEATURE_ENTRIES
 #endif
+
+#define BRAVE_UPGRADE_WHEN_IDLE_FEATURE_ENTRY                                  \
+  IF_BUILDFLAG(                                                                \
+      IS_MAC,                                                                  \
+      EXPAND_FEATURE_ENTRIES({                                                 \
+          "upgrade-when-idle",                                                 \
+          "Upgrade when idle",                                                 \
+          "Restart the browser to apply a pending update when no windows are " \
+          "open, the system is idle, and no data would be cleared on exit.",   \
+          kOsMac,                                                              \
+          FEATURE_VALUE_TYPE(brave::kUpgradeWhenIdle),                         \
+      }))
+
+#if defined(TOOLKIT_VIEWS)
+#define BRAVE_DARKER_THEME_FEATURE_ENTRIES                           \
+  EXPAND_FEATURE_ENTRIES({                                           \
+      "brave-midnight-theme",                                        \
+      "Brave Midnight Theme",                                        \
+      "Enables the Brave Midnight theme",                            \
+      kOsWin | kOsMac | kOsLinux,                                    \
+      FEATURE_VALUE_TYPE(darker_theme::features::kBraveDarkerTheme), \
+  })
+#else
+#define BRAVE_DARKER_THEME_FEATURE_ENTRIES
+#endif  // defined(TOOLKIT_VIEWS)
 
 #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 #define BRAVE_MIDDLE_CLICK_AUTOSCROLL_FEATURE_ENTRY                      \
@@ -467,6 +546,22 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
           "Enables AI Chat History persistence and management",                \
           kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
           FEATURE_VALUE_TYPE(ai_chat::features::kAIChatHistory),               \
+      },                                                                       \
+      {                                                                        \
+          "brave-ai-chat-tools",                                               \
+          "Brave AI Chat Tools",                                               \
+          "Conversations can provide Tools to the AI to perform more "         \
+          "specific actions.",                                                 \
+          kOsWin | kOsMac | kOsLinux | kOsAndroid,                             \
+          FEATURE_VALUE_TYPE(ai_chat::features::kAIChatTools),                 \
+      },                                                                       \
+      {                                                                        \
+          "brave-ai-chat-agent-profile",                                       \
+          "Brave AI Chat Agent Profile",                                       \
+          "Enables Leo's content agent features and only in a separate "       \
+          "built-in profile.",                                                 \
+          kOsWin | kOsMac | kOsLinux,                                          \
+          FEATURE_VALUE_TYPE(ai_chat::features::kAIChatAgentProfile),          \
       },                                                                       \
       {                                                                        \
           "brave-ai-host-specific-distillation",                               \
@@ -538,15 +633,16 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
           FEATURE_VALUE_TYPE(history::kHistoryMoreSearchResults),             \
       })
 
-#define BRAVE_EXTENSIONS_MANIFEST_V2                                        \
-  IF_BUILDFLAG(ENABLE_EXTENSIONS,                                           \
-               EXPAND_FEATURE_ENTRIES({                                     \
-                   "brave-extensions-manifest-v2",                          \
-                   "Brave Extensions manifest V2",                          \
-                   "Enables Brave support for some manifest V2 extensions", \
-                   kOsDesktop,                                              \
-                   FEATURE_VALUE_TYPE(kExtensionsManifestV2),               \
-               }))
+#define BRAVE_EXTENSIONS_MANIFEST_V2                                           \
+  IF_BUILDFLAG(                                                                \
+      ENABLE_EXTENSIONS,                                                       \
+      EXPAND_FEATURE_ENTRIES({                                                 \
+          "brave-extensions-manifest-v2",                                      \
+          "Brave Extensions manifest V2",                                      \
+          "Enables Brave support for some manifest V2 extensions",             \
+          kOsDesktop,                                                          \
+          FEATURE_VALUE_TYPE(extensions_mv2::features::kExtensionsManifestV2), \
+      }))
 
 #define BRAVE_ADBLOCK_CUSTOM_SCRIPTLETS                                 \
   EXPAND_FEATURE_ENTRIES({                                              \
@@ -649,16 +745,6 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
               brave_shields::features::kBraveAdblockCookieListDefault),        \
       },                                                                       \
       {                                                                        \
-          "brave-adblock-cookie-list-opt-in",                                  \
-          "Show an opt-in bubble for the 'Easylist-Cookie List' filter",       \
-          "When enabled, a bubble will be displayed inviting the user to "     \
-          "enable the 'Easylist-Cookie List' filter for blocking cookie "      \
-          "consent dialogs",                                                   \
-          kOsDesktop | kOsAndroid,                                             \
-          FEATURE_VALUE_TYPE(                                                  \
-              brave_shields::features::kBraveAdblockCookieListOptIn),          \
-      },                                                                       \
-      {                                                                        \
           "brave-adblock-cosmetic-filtering",                                  \
           "Enable cosmetic filtering",                                         \
           "Enable support for cosmetic filtering",                             \
@@ -724,6 +810,15 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
               brave_shields::features::kBraveAdblockScriptletDebugLogs),       \
       },                                                                       \
       {                                                                        \
+          "brave-adblock-show-hidden-components",                              \
+          "Show hidden adblock filter list components",                        \
+          "Reveals adblock filter list components in "                         \
+          "brave://settings/shields/filters that would normally be hidden.",   \
+          kOsAll,                                                              \
+          FEATURE_VALUE_TYPE(                                                  \
+              brave_shields::features::kBraveAdblockShowHiddenComponents),     \
+      },                                                                       \
+      {                                                                        \
           "brave-dark-mode-block",                                             \
           "Enable dark mode blocking fingerprinting protection",               \
           "Always report light mode when fingerprinting protections set to "   \
@@ -780,13 +875,6 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
               brave_shields::features::kBraveLocalhostAccessPermission),       \
       },                                                                       \
       {                                                                        \
-          "brave-psst",                                                        \
-          "Enable PSST (Privacy Site Settings Tool) feature",                  \
-          "Enable PSST feature",                                               \
-          kOsAll,                                                              \
-          FEATURE_VALUE_TYPE(psst::features::kBravePsst),                      \
-      },                                                                       \
-      {                                                                        \
           "brave-extension-network-blocking",                                  \
           "Enable extension network blocking",                                 \
           "Enable blocking for network requests initiated by extensions",      \
@@ -825,6 +913,21 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
           kOsAll,                                                              \
           FEATURE_VALUE_TYPE(                                                  \
               brave_shields::features::kBraveShieldsElementPicker),            \
+      },                                                                       \
+      {                                                                        \
+          "brave-farbling",                                                    \
+          "Enable Brave Farbling",                                             \
+          "Enables randomization of fingerprinting-susceptible WebAPIs",       \
+          kOsAll,                                                              \
+          FEATURE_VALUE_TYPE(brave_shields::features::kBraveFarbling),         \
+      },                                                                       \
+      {                                                                        \
+          "brave-provisional-tld-ephemeral-lifetime",                          \
+          "Enable Provisional TLDEphemeralLifetime",                           \
+          "Cleanup third party cookies set during redirects",                  \
+          kOsAll,                                                              \
+          FEATURE_VALUE_TYPE(                                                  \
+              net::features::kBraveProvisionalTLDEphemeralLifetime),           \
       },                                                                       \
       {                                                                        \
           "brave-super-referral",                                              \
@@ -1092,6 +1195,14 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
           kOsAll,                                                              \
           ORIGIN_LIST_VALUE_TYPE(syncer::kSyncServiceURL, ""),                 \
           kBraveSyncImplLink,                                                  \
+      },                                                                       \
+      {                                                                        \
+          "brave-sync-default-passwords",                                      \
+          "Enable password syncing by default",                                \
+          "Turn on password syncing when Sync is enabled.",                    \
+          kOsAll,                                                              \
+          FEATURE_VALUE_TYPE(                                                  \
+              brave_sync::features::kBraveSyncDefaultPasswords),               \
       })                                                                       \
   BRAVE_NATIVE_WALLET_FEATURE_ENTRIES                                          \
   BRAVE_NEWS_FEATURE_ENTRIES                                                   \
@@ -1104,17 +1215,23 @@ constexpr flags_ui::FeatureEntry::Choice kVerticalTabCollapseDelayChoices[] = {
   CONTAINERS_FEATURE_ENTRIES                                                   \
   BRAVE_BACKGROUND_VIDEO_PLAYBACK_ANDROID                                      \
   BRAVE_SAFE_BROWSING_ANDROID                                                  \
+  BRAVE_ADAPTIVE_BUTTON_IN_TOOLBAR_ANDROID                                     \
+  BRAVE_ANDROID_DYNAMIC_COLORS                                                 \
+  BRAVE_ANDROID_OPEN_PDF_INLINE                                                \
   BRAVE_CHANGE_ACTIVE_TAB_ON_SCROLL_EVENT_FEATURE_ENTRIES                      \
   BRAVE_TABS_FEATURE_ENTRIES                                                   \
+  BRAVE_DARKER_THEME_FEATURE_ENTRIES                                           \
   BRAVE_AI_CHAT_FEATURE_ENTRIES                                                \
   BRAVE_AI_REWRITER                                                            \
   BRAVE_OMNIBOX_FEATURES                                                       \
   BRAVE_MIDDLE_CLICK_AUTOSCROLL_FEATURE_ENTRY                                  \
+  BRAVE_UPGRADE_WHEN_IDLE_FEATURE_ENTRY                                        \
   BRAVE_EXTENSIONS_MANIFEST_V2                                                 \
   BRAVE_WORKAROUND_NEW_WINDOW_FLASH                                            \
   BRAVE_ADBLOCK_CUSTOM_SCRIPTLETS                                              \
   BRAVE_EDUCATION_FEATURE_ENTRIES                                              \
   BRAVE_UPDATER_FEATURE_ENTRIES                                                \
+  PSST_FEATURE_ENTRIES                                                         \
   LAST_BRAVE_FEATURE_ENTRIES_ITEM  // Keep it as the last item.
 namespace flags_ui {
 namespace {

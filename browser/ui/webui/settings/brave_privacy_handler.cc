@@ -131,6 +131,13 @@ void BravePrivacyHandler::AddLoadTimeData(content::WebUIDataSource* data_source,
       "isOpenAIChatFromBraveSearchEnabled",
       ai_chat::IsAIChatEnabled(profile->GetPrefs()) &&
           ai_chat::features::IsOpenAIChatFromBraveSearchEnabled());
+  auto* local_state = g_browser_process->local_state();
+  data_source->AddBoolean(
+      "isStatsReportingEnabledManaged",
+      local_state->IsManagedPreference(kStatsReportingEnabled));
+  data_source->AddBoolean("isP3AEnabledManaged",
+                          local_state->IsManagedPreference(p3a::kP3AEnabled));
+
 #if BUILDFLAG(IS_WIN)
   {
     data_source->AddBoolean("isWindowsRecallAvailable",
@@ -182,9 +189,11 @@ void BravePrivacyHandler::GetStatsUsagePingEnabled(
 void BravePrivacyHandler::OnStatsUsagePingEnabledChanged() {
   if (IsJavascriptAllowed()) {
     PrefService* local_state = g_browser_process->local_state();
-    bool enabled = local_state->GetBoolean(kStatsReportingEnabled);
+    bool user_enabled = local_state->GetBoolean(kStatsReportingEnabled);
+    bool is_managed = local_state->IsManagedPreference(kStatsReportingEnabled);
 
-    FireWebUIListener("stats-usage-ping-enabled-changed", base::Value(enabled));
+    FireWebUIListener("stats-usage-ping-enabled-changed", user_enabled,
+                      is_managed);
   }
 }
 
@@ -199,9 +208,10 @@ void BravePrivacyHandler::GetP3AEnabled(const base::Value::List& args) {
 void BravePrivacyHandler::OnP3AEnabledChanged() {
   if (IsJavascriptAllowed()) {
     PrefService* local_state = g_browser_process->local_state();
-    bool enabled = local_state->GetBoolean(p3a::kP3AEnabled);
+    bool user_enabled = local_state->GetBoolean(p3a::kP3AEnabled);
+    bool is_managed = local_state->IsManagedPreference(p3a::kP3AEnabled);
 
-    FireWebUIListener("p3a-enabled-changed", base::Value(enabled));
+    FireWebUIListener("p3a-enabled-changed", user_enabled, is_managed);
   }
 }
 

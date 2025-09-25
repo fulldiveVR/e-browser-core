@@ -13,8 +13,8 @@
 }
 
 .growWrap {
-  border-radius: var(--leo-radius-m);
-  border: 1px solid var(--leo-color-divider-strong);
+  border-radius: var(--leo-radius-xl);
+  border: 1px solid var(--leo-color-divider-subtle);
   background: var(--leo-color-container-background);
 
   justify-content: space-between;
@@ -35,11 +35,13 @@
     border: 0;
     overflow: hidden;
 
-    &:focus { outline: none; }
+    &:focus {
+      outline: none;
+    }
   }
 
   &::after {
-    content: attr(data-replicated-value) " ";
+    content: attr(data-replicated-value) ' ';
     white-space: pre-wrap;
     visibility: hidden;
   }

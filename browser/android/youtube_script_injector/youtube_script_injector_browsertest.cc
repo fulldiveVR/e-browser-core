@@ -31,7 +31,8 @@ constexpr std::u16string_view kSimulateDelayedScriptLoad =
   const moviePlayer = document.getElementById('movie_player');
   if (moviePlayer) {
     moviePlayer.innerHTML = `
-      <video class="html5-main-video" src="mov_bbb.mp4" controls></video>
+      <video class="html5-main-video" src="mov_bbb.mp4" controls
+      onclick="requestFullscreen();"></video>
       <button class="fullscreen-icon"
       onclick="document.querySelector('video.html5-main-video')
         .requestFullscreen();">⛶</button>
@@ -170,11 +171,6 @@ IN_PROC_BROWSER_TEST_F(YouTubeScriptInjectorBrowserTest,
   // Check the video is in fullscreen mode.
   EXPECT_TRUE(
       WaitForJsResult(web_contents(), "document.fullscreenElement !== null"));
-
-  // Check the video is playing.
-  EXPECT_TRUE(WaitForJsResult(
-      web_contents(),
-      "document.querySelector('video.html5-main-video').paused === false"));
 }
 
 IN_PROC_BROWSER_TEST_F(YouTubeScriptInjectorBrowserTest,
@@ -216,7 +212,7 @@ IN_PROC_BROWSER_TEST_F(YouTubeScriptInjectorBrowserTest,
 }
 
 IN_PROC_BROWSER_TEST_F(YouTubeScriptInjectorBrowserTest,
-                       VideoIsPlayedFromFullscreenState) {
+                       NoOpIfAlreadyInFullscreen) {
   const GURL url = https_server_.GetURL("youtube.com", "/yt_fullscreen.html");
   content::NavigateToURLBlockUntilNavigationsComplete(web_contents(), url, 1,
                                                       true);
@@ -239,9 +235,9 @@ IN_PROC_BROWSER_TEST_F(YouTubeScriptInjectorBrowserTest,
 
   helper->MaybeSetFullscreen();
 
-  EXPECT_TRUE(WaitForJsResult(
-      web_contents(),
-      "document.querySelector('video.html5-main-video').paused === false"));
+  // Verify that the video is still in fullscreen mode.
+  EXPECT_TRUE(
+      WaitForJsResult(web_contents(), "document.fullscreenElement !== null"));
 }
 
 IN_PROC_BROWSER_TEST_F(YouTubeScriptInjectorBrowserTest,
@@ -330,15 +326,15 @@ IN_PROC_BROWSER_TEST_F(YouTubeScriptInjectorBrowserTest,
   // Wait for the mutation observer to complete and trigger fullscreen mode.
   EXPECT_TRUE(
       WaitForJsResult(web_contents(), "document.fullscreenElement !== null"));
-
-  EXPECT_TRUE(WaitForJsResult(
-      web_contents(),
-      "document.querySelector('video.html5-main-video').paused === false"));
 }
 
+// The test is flaky on CI, but succeed on local environment including physical
+// device
+// TODO(alexeybarabash): https://github.com/brave/brave-browser/issues/48430
+// Enable if possible
 // Test that MaybeSetFullscreen() works with multiple calls.
 IN_PROC_BROWSER_TEST_F(YouTubeScriptInjectorBrowserTest,
-                       MultipleFullscreenCalls) {
+                       DISABLED_MultipleFullscreenCalls) {
   const GURL url = https_server_.GetURL("youtube.com", "/yt_fullscreen.html");
   content::NavigateToURLBlockUntilNavigationsComplete(web_contents(), url, 1,
                                                       true);

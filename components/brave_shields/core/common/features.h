@@ -17,7 +17,6 @@ BASE_DECLARE_FEATURE(kAdBlockDefaultResourceUpdateInterval);
 BASE_DECLARE_FEATURE(kBraveAdblockCnameUncloaking);
 BASE_DECLARE_FEATURE(kBraveAdblockCollapseBlockedElements);
 BASE_DECLARE_FEATURE(kBraveAdblockCookieListDefault);
-BASE_DECLARE_FEATURE(kBraveAdblockCookieListOptIn);
 BASE_DECLARE_FEATURE(kBraveAdblockCosmeticFiltering);
 BASE_DECLARE_FEATURE(kBraveAdblockProceduralFiltering);
 BASE_DECLARE_FEATURE(kBraveAdblockCspRules);
@@ -25,6 +24,7 @@ BASE_DECLARE_FEATURE(kBraveAdblockDefault1pBlocking);
 BASE_DECLARE_FEATURE(kBraveAdblockMobileNotificationsListDefault);
 BASE_DECLARE_FEATURE(kBraveAdblockExperimentalListDefault);
 BASE_DECLARE_FEATURE(kBraveAdblockScriptletDebugLogs);
+BASE_DECLARE_FEATURE(kBraveAdblockShowHiddenComponents);
 BASE_DECLARE_FEATURE(kBraveDarkModeBlock);
 BASE_DECLARE_FEATURE(kBraveDomainBlock);
 BASE_DECLARE_FEATURE(kBraveDomainBlock1PES);
@@ -34,6 +34,7 @@ BASE_DECLARE_FEATURE(kBraveLocalhostAccessPermission);
 BASE_DECLARE_FEATURE(kBraveReduceLanguage);
 BASE_DECLARE_FEATURE(kBraveShredFeature);
 BASE_DECLARE_FEATURE(kBraveShredCacheData);
+BASE_DECLARE_FEATURE(kBraveShieldsContentSettingsIOS);
 BASE_DECLARE_FEATURE(kBraveIOSDebugAdblock);
 BASE_DECLARE_FEATURE(kBraveIOSEnableFarblingPlugins);
 BASE_DECLARE_FEATURE(kBraveShowStrictFingerprintingMode);
@@ -55,6 +56,8 @@ extern const base::FeatureParam<int>
     kAdblockOverrideRegexDiscardPolicyCleanupIntervalSec;
 extern const base::FeatureParam<int>
     kAdblockOverrideRegexDiscardPolicyDiscardUnusedSec;
+
+BASE_DECLARE_FEATURE(kAdblockOnlyMode);
 
 }  // namespace features
 }  // namespace brave_shields

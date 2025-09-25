@@ -19,6 +19,7 @@
 #include "brave/components/brave_news/common/p3a_pref_names.h"
 #include "brave/components/brave_news/common/pref_names.h"
 #include "brave/components/brave_search_conversion/p3a.h"
+#include "brave/components/brave_shields/content/browser/ad_block_service.h"
 #include "brave/components/brave_shields/core/browser/brave_shields_p3a.h"
 #include "brave/components/brave_sync/brave_sync_prefs.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
@@ -33,6 +34,7 @@
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
 #include "brave/components/p3a/metric_log_store.h"
 #include "brave/components/p3a/rotation_scheduler.h"
+#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/common/channel_info.h"
@@ -67,7 +69,7 @@
 #define MigrateObsoleteProfilePrefs MigrateObsoleteProfilePrefs_ChromiumImpl
 #define MigrateObsoleteLocalStatePrefs \
   MigrateObsoleteLocalStatePrefs_ChromiumImpl
-#include "src/chrome/browser/prefs/browser_prefs.cc"
+#include <chrome/browser/prefs/browser_prefs.cc>
 #undef MigrateObsoleteProfilePrefs
 #undef MigrateObsoleteLocalStatePrefs
 
@@ -81,6 +83,10 @@
 
 #if defined(TOOLKIT_VIEWS)
 #include "brave/components/sidebar/browser/pref_names.h"
+#endif
+
+#if BUILDFLAG(ENABLE_SPEEDREADER)
+#include "brave/components/speedreader/speedreader_pref_migration.h"
 #endif
 
 // This method should be periodically pruned of year+ old migrations.
@@ -210,6 +216,11 @@ void MigrateObsoleteProfilePrefs(PrefService* profile_prefs,
   profile_prefs->ClearPref(kWebTorrentEnabled);
 #endif
 
+  // Added 2025-08 - Speedreader preference migration
+#if BUILDFLAG(ENABLE_SPEEDREADER)
+  speedreader::MigrateObsoleteProfilePrefs(profile_prefs);
+#endif
+
   // END_MIGRATE_OBSOLETE_PROFILE_PREFS
 }
 
@@ -237,6 +248,7 @@ void MigrateObsoleteLocalStatePrefs(PrefService* local_state) {
 
   misc_metrics::UptimeMonitorImpl::MigrateObsoletePrefs(local_state);
   brave_search_conversion::p3a::MigrateObsoleteLocalStatePrefs(local_state);
+  brave_shields::MigrateObsoletePrefsForAdBlockService(local_state);
   brave_stats::MigrateObsoleteLocalStatePrefs(local_state);
   brave_l10n::MigrateObsoleteLocalStatePrefs(local_state);
   p3a::MetricLogStore::MigrateObsoleteLocalStatePrefs(local_state);

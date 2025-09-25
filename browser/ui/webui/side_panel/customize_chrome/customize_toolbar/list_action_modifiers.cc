@@ -12,10 +12,12 @@
 #include "base/containers/contains.h"
 #include "base/containers/fixed_flat_set.h"
 #include "base/strings/utf_string_conversions.h"
+#include "brave/browser/brave_rewards/rewards_util.h"
 #include "brave/browser/ui/webui/side_panel/customize_chrome/customize_toolbar/brave_action.h"
 #include "brave/components/ai_chat/core/browser/utils.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/common/common_utils.h"
+#include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/webui/util/image_util.h"
 #include "components/prefs/pref_service.h"
 #include "components/user_prefs/user_prefs.h"
@@ -32,8 +34,47 @@
 
 namespace customize_chrome {
 
+namespace {
+
+void AddActionsForAddressBarCategory(Profile* profile,
+                                     std::vector<BraveAction>& brave_actions) {
+  if (brave_rewards::IsSupportedForProfile(profile)) {
+    brave_actions.push_back(kShowReward);
+  }
+
+  if (!profile->GetPrefs()->GetBoolean(
+          brave_news::prefs::kBraveNewsDisabledByPolicy)) {
+    brave_actions.push_back(kShowBraveNews);
+  }
+}
+
+}  // namespace
+
 using side_panel::customize_chrome::mojom::ActionId;
 using side_panel::customize_chrome::mojom::ActionPtr;
+using side_panel::customize_chrome::mojom::Category;
+using side_panel::customize_chrome::mojom::CategoryId;
+using side_panel::customize_chrome::mojom::CategoryPtr;
+
+std::vector<CategoryPtr> AppendBraveSpecificCategories(
+    content::WebContents& web_contents,
+    std::vector<CategoryPtr> categories) {
+  // Add a new "Address bar" category.
+  std::vector<BraveAction> brave_actions;
+  AddActionsForAddressBarCategory(
+      Profile::FromBrowserContext(web_contents.GetBrowserContext()),
+      brave_actions);
+  if (brave_actions.empty()) {
+    // In case we don't have any Brave actions for Address bar category, we
+    // don't need to add the category.
+    return categories;
+  }
+
+  categories.push_back(Category::New(
+      CategoryId::kAddressBar,
+      l10n_util::GetStringUTF8(IDS_CUSTOMIZE_TOOLBAR_CATEGORY_ADDRESS_BAR)));
+  return categories;
+}
 
 std::vector<ActionPtr> FilterUnsupportedChromiumActions(
     std::vector<ActionPtr> actions) {
@@ -74,11 +115,11 @@ std::vector<ActionPtr> ApplyBraveSpecificModifications(
     actions.insert(incognito_action_it + 1, std::move(tab_search_action));
   }
 
-  // 2. Update icons for existing actions.
+  // 2. Update icons/strings for existing actions.
   const auto& cp = web_contents.GetColorProvider();
 
   float scale_factor = 1.0f;
-  if (auto* screen = display::Screen::GetScreen()) {
+  if (auto* screen = display::Screen::Get()) {
     scale_factor =
         screen->GetDisplayNearestWindow(web_contents.GetTopLevelNativeWindow())
             .device_scale_factor();
@@ -102,17 +143,31 @@ std::vector<ActionPtr> ApplyBraveSpecificModifications(
         get_icon_url(kLeoProductPrivateWindowIcon);
   }
 
+  {
+    auto bookmark_panel_it =
+        std::ranges::find(actions, ActionId::kShowBookmarks, get_action_id);
+    CHECK(bookmark_panel_it != actions.end())
+        << "Bookmark panel action not found";
+    (*bookmark_panel_it)->display_name =
+        l10n_util::GetStringUTF8(IDS_CUSTOMIZE_TOOLBAR_TOGGLE_BOOKMARKS_PANEL);
+  }
+
   // 3. Add Brave specific actions.
   // Brave specific actions
   // Navigation
+  //   kShowAddBookmarkButton,
   //   kShowSidePanel,
   //   kShowWallet,
   //   kShowAIChat,
   //   kShowVPN,
+  // Address bar
+  //   kShowReward
+  //   kShowBraveNews
   auto* prefs = user_prefs::UserPrefs::Get(web_contents.GetBrowserContext());
   CHECK(prefs) << "Browser context does not have prefs";
 
   std::vector<BraveAction> brave_actions;
+  brave_actions.push_back(kShowAddBookmarkButton);
   brave_actions.push_back(kShowSidePanelAction);
 
   // Followings are dynamic actions: anchor to TabSearchButton and append to
@@ -131,12 +186,15 @@ std::vector<ActionPtr> ApplyBraveSpecificModifications(
     brave_actions.push_back(kShowWalletAction);
   }
 
+  AddActionsForAddressBarCategory(
+      Profile::FromBrowserContext(web_contents.GetBrowserContext()),
+      brave_actions);
+
   for (const auto& brave_action : brave_actions) {
-    // Find the anchor action.
+    // Find the anchor action. If anchor action is not found, just append to the
+    // end of the list.
     auto anchor_it =
         std::ranges::find(actions, brave_action.anchor, get_action_id);
-    CHECK(anchor_it != actions.end()) << "action to anchor not found: "
-                                      << static_cast<int>(brave_action.anchor);
 
     // Create the new action.
     auto new_action = Action::New(
@@ -147,8 +205,9 @@ std::vector<ActionPtr> ApplyBraveSpecificModifications(
         /*has_enterprise_controlled_pinned_state=*/false, brave_action.category,
         get_icon_url(brave_action.icon));
 
-    // Insert the new action after the anchor.
-    actions.insert(anchor_it + 1, std::move(new_action));
+    // Insert the new action after the anchor or end of the list.
+    actions.insert(anchor_it == actions.end() ? actions.end() : anchor_it + 1,
+                   std::move(new_action));
   }
 
   return actions;

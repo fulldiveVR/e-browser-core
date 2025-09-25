@@ -521,6 +521,7 @@ provideStrings({
   braveWalletAccountSettings: 'Account settings',
   braveWalletPasswordIsRequiredToTakeThisAction:
     'Password is required to take this action.',
+  braveWalletAddToken: 'Add token',
 
   // Empty Token List State
   braveWalletNoAvailableAssets: 'No available assets',
@@ -644,6 +645,10 @@ provideStrings({
   braveWalletExchangeNamePlusSteps: '$1 + $2 $3',
   braveWalletExchangeViaProvider: '$1 via $2',
   braveWalletSortBy: 'Sort by',
+  braveWalletConfirmSwap: 'Confirm swap',
+  braveWalletConfirmBridge: 'Confirm bridge',
+  braveWalletConfirmSend: 'Confirm send',
+  braveWalletSpend: 'Spend',
 
   // Buy
   braveWalletBuyTitle: 'Test faucet',
@@ -708,7 +713,7 @@ provideStrings({
   braveWalletFundWalletTitle:
     'To finish your $1 purchase, select one of our partners',
   braveWalletFundWalletDescription:
-    'On completion, your funds will be transfered to your Brave Wallet',
+    'On completion, your funds will be transferred to your Brave Wallet',
 
   // Deposit Funds Screen
   braveWalletDepositFundsTitle: 'Deposit crypto',
@@ -759,6 +764,13 @@ provideStrings({
   braveWalletResources: 'Resources',
   braveWalletSecurityRiskDetected: 'Security risk detected',
 
+  // Transaction Details Labels
+  braveWalletInput: 'Input',
+  braveWalletOutput: 'Output',
+  braveWalletInputs: 'Inputs',
+  braveWalletOutputs: 'Outputs',
+  braveWalletValue: 'Value',
+
   // Encryption Key Panel
   braveWalletProvideEncryptionKeyTitle:
     'A DApp is requesting your public encryption key',
@@ -784,6 +796,10 @@ provideStrings({
   braveWalletAllowSpendRejectButton: 'Reject',
   braveWalletAllowSpendConfirmButton: 'Confirm',
   braveWalletAllowSpendUnlimitedWarningTitle: 'Unlimited approval requested',
+  braveWalletSpendLimit: 'Spend limit',
+  braveWalletApprovalTarget: 'Approval target',
+  braveWalletCurrentApprovalLimit: 'Current approval limit',
+  braveWalletProposedApprovalLimit: 'Proposed approval limit',
 
   // Allow Add or Change Network Panel
   braveWalletAllowAddNetworkTitle: 'Allow this site to add a network?',
@@ -810,7 +826,7 @@ provideStrings({
   braveWalletConfirmTransactionTransactionFee: 'Transaction fee',
   braveWalletConfirmTransactionBid: 'Bid',
   braveWalletConfirmTransactionAmountGas: 'Amount + gas',
-  braveWalletConfirmTransactionAmountFee: 'Amount + fee',
+  braveWalletConfirmTransactionAmountFee: 'Amount + Network fee',
   braveWalletConfirmTransactionNoData: 'No data.',
   braveWalletConfirmTransactionNext: 'next',
   braveWalletConfirmTransactionFirst: 'first',
@@ -824,6 +840,8 @@ provideStrings({
   braveWalletTransactionGasPremium: 'Gas Premium',
   braveWalletTransactionGasFeeCap: 'Gas Fee Cap',
   braveWalletNetworkFees: 'Network fees',
+  braveWalletNetworkFee: 'Network fee',
+  braveWalletCustomFeeAmount: 'Custom fee amount',
   braveWalletTransactionMayIncludeAccountCreationFee:
     'This transaction may include an account creation fee',
   braveWalletSystemProgramAssignWarningTitle:
@@ -831,6 +849,9 @@ provideStrings({
   braveWalletSystemProgramAssignWarningDescription:
     'This transaction will reassign ownership of the account to a new '
     + 'program. This action is irreversible and may result in loss of funds.',
+  braveSwapSlow: 'Slow',
+  braveSwapAverage: 'Average',
+  braveSwapFast: 'Fast',
 
   // Wallet Main Panel
   braveWalletPanelTitle: 'Brave Wallet',
@@ -1047,6 +1068,11 @@ provideStrings({
   braveWalletGasFeeLimitLowerThanBaseFeeWarning:
     'Fee limit is set lower than the base fee. '
     + 'Your transaction may take a long time or fail.',
+  braveWalletGasTipLimit: 'Gas tip limit',
+  braveWalletGasPriceLimit: 'Gas price limit',
+  braveWalletGasPrice: 'Gas price',
+  braveWalletEditGasEstimatedNetworkFee: 'Estimated network fee',
+  braveWalletUseDefault: 'Use default',
 
   // Advanced transaction settings
   braveWalletAdvancedTransactionSettings: 'Advanced settings',
@@ -1064,6 +1090,8 @@ provideStrings({
   braveWalletEditPermissionsButton: 'Edit permissions',
   braveWalletEditPermissionsProposedAllowance: 'Proposed allowance',
   braveWalletEditPermissionsCustomAllowance: 'Custom allowance',
+  braveWalletProposedSpendLimit: 'Proposed spend limit',
+  braveWalletCustomSpendLimit: 'Custom spend limit',
 
   // Send Input Errors
   braveWalletNotValidFilAddress: 'Not a valid FIL address',
@@ -1138,6 +1166,12 @@ provideStrings({
 
   // Transaction Details
   braveWalletOn: 'On',
+
+  // Transaction Queue Selector
+  braveWalletPendingTransactionsNumber: 'Pending ($1)',
+  braveWalletNextTransaction: 'Next transaction',
+  braveWalletPreviousTransaction: 'Previous transaction',
+  braveWalletRejectTransactions: 'Reject $1 transactions',
 
   // NFT Details Page
   braveWalletNFTDetailBlockchain: 'Blockchain',

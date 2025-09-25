@@ -53,9 +53,9 @@
 #include "brave/components/brave_wallet/browser/brave_wallet_service.h"
 #include "brave/components/brave_wallet/browser/json_rpc_service.h"
 #include "brave/components/ntp_background_images/common/pref_names.h"
-#include "brave/grit/brave_generated_resources.h"
 #include "components/country_codes/country_codes.h"
 #include "components/favicon/core/favicon_service.h"
+#include "components/grit/brave_components_strings.h"
 #include "components/os_crypt/sync/os_crypt.h"
 #include "components/prefs/pref_service.h"
 #include "components/regional_capabilities/regional_capabilities_prefs.h"
@@ -184,16 +184,14 @@ void DeferCallback(base::Location location, Callback callback, Args&&... args) {
 
 }  // namespace
 
-// read comment about file pathes at src\base\files\file_path.h
-#if BUILDFLAG(IS_WIN)
-const base::FilePath::StringType kCreatorPrefixStore(L"RewardsCreators.db");
-const base::FilePath::StringType kDiagnosticLogPath(L"Rewards.log");
-const base::FilePath::StringType kPublisher_info_db(L"publisher_info_db");
-#else
-const base::FilePath::StringType kCreatorPrefixStore("RewardsCreators.db");
-const base::FilePath::StringType kDiagnosticLogPath("Rewards.log");
-const base::FilePath::StringType kPublisher_info_db("publisher_info_db");
-#endif
+// Read comment about file paths at src/base/files/file_path.h
+using CharType = base::FilePath::CharType;
+static constexpr CharType kCreatorPrefixStore[] =
+    FILE_PATH_LITERAL("RewardsCreators.db");
+static constexpr CharType kDiagnosticLogPath[] =
+    FILE_PATH_LITERAL("Rewards.log");
+static constexpr CharType kPublisher_info_db[] =
+    FILE_PATH_LITERAL("publisher_info_db");
 
 RewardsServiceImpl::RewardsServiceImpl(
     PrefService* prefs,
@@ -254,9 +252,7 @@ bool RewardsServiceImpl::IsInitialized() {
 }
 
 void RewardsServiceImpl::Init(
-    std::unique_ptr<RewardsServiceObserver> extension_observer,
-    std::unique_ptr<RewardsNotificationServiceObserver> notification_observer) {
-  notification_service_->Init(std::move(notification_observer));
+    std::unique_ptr<RewardsServiceObserver> extension_observer) {
   AddObserver(notification_service_.get());
 
   if (extension_observer) {
@@ -496,7 +492,12 @@ std::string RewardsServiceImpl::GetCountryCode() const {
 
 void RewardsServiceImpl::GetAvailableCountries(
     GetAvailableCountriesCallback callback) const {
-  static const std::vector<std::string> kISOCountries = GetISOCountries();
+  // TODO(https://github.com/brave/brave-browser/issues/48713): This is a case
+  // of `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has been
+  // added in the meantime to fix the build error. Remove this attribute and
+  // provide a proper fix.
+  [[clang::no_destroy]] static const std::vector<std::string> kISOCountries =
+      GetISOCountries();
 
   if (!Connected()) {
     return DeferCallback(FROM_HERE, std::move(callback), kISOCountries);
@@ -519,15 +520,20 @@ void RewardsServiceImpl::GetAvailableCountries(
 
     // If the user is currently connected to any other external wallet provider,
     // then remove |kBitflyerCountries| from the list of ISO countries.
-    static const std::vector<std::string> kNonBitflyerCountries = []() {
-      auto countries = kISOCountries;
-      auto to_remove =
-          std::ranges::remove_if(countries, [](const std::string& country) {
-            return kBitflyerCountries.contains(country);
-          });
-      countries.erase(to_remove.begin(), to_remove.end());
-      return countries;
-    }();
+    // TODO(https://github.com/brave/brave-browser/issues/48713): This is a case
+    // of `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has
+    // been added in the meantime to fix the build error. Remove this attribute
+    // and provide a proper fix.
+    [[clang::no_destroy]] static const std::vector<std::string>
+        kNonBitflyerCountries = []() {
+          auto countries = kISOCountries;
+          auto to_remove =
+              std::ranges::remove_if(countries, [](const std::string& country) {
+                return kBitflyerCountries.contains(country);
+              });
+          countries.erase(to_remove.begin(), to_remove.end());
+          return countries;
+        }();
 
     return std::move(callback).Run(kNonBitflyerCountries);
   };
@@ -910,13 +916,7 @@ std::vector<std::string> RewardsServiceImpl::GetExternalWalletProviders()
 
   if (base::FeatureList::IsEnabled(
           features::kAllowSelfCustodyProvidersFeature)) {
-    auto& self_custody_dict = prefs_->GetDict(prefs::kSelfCustodyAvailable);
-
-    if (auto solana_entry =
-            self_custody_dict.FindBool(internal::constant::kWalletSolana);
-        solana_entry && *solana_entry) {
-      providers.push_back(internal::constant::kWalletSolana);
-    }
+    providers.push_back(internal::constant::kWalletSolana);
   }
 
   return providers;
@@ -1756,6 +1756,7 @@ void RewardsServiceImpl::RecordBackendP3AStats(bool delay_report) {
   }
 
   p3a::RecordRewardsPageViews(prefs_, false);
+  p3a::RecordOfferClicks(prefs_, false);
 
   GetExternalWallet(
       base::BindOnce(&RewardsServiceImpl::OnRecordBackendP3AExternalWallet,

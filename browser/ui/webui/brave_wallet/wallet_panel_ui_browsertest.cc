@@ -10,7 +10,6 @@
 
 #include "base/memory/raw_ptr.h"
 #include "base/run_loop.h"
-#include "base/strings/stringprintf.h"
 #include "base/test/bind.h"
 #include "brave/browser/brave_wallet/asset_ratio_service_factory.h"
 #include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
@@ -33,6 +32,7 @@
 #include "content/public/test/test_utils.h"
 #include "services/network/public/cpp/weak_wrapper_shared_url_loader_factory.h"
 #include "services/network/test/test_url_loader_factory.h"
+#include "third_party/abseil-cpp/absl/strings/str_format.h"
 
 using content::EvalJsResult;
 
@@ -41,14 +41,13 @@ namespace {
 constexpr char kSomeEndpoint[] = "https://some.endpoint.com/";
 
 std::string SelectInNetworkList(const std::string& selector) {
-  return base::StringPrintf(
-      "window.testing.walletNetworks60.querySelector(`%s`)", selector.c_str());
+  return absl::StrFormat("window.testing.walletNetworks60.querySelector(`%s`)",
+                         selector);
 }
 
 std::string SelectInAddNetworkDialog(const std::string& selector) {
-  return base::StringPrintf(
-      "window.testing.addWalletNetworkDialog.querySelector(`%s`)",
-      selector.c_str());
+  return absl::StrFormat(
+      "window.testing.addWalletNetworkDialog.querySelector(`%s`)", selector);
 }
 
 std::string DoubleClickOn(const std::string& element) {
@@ -83,13 +82,12 @@ std::string NetworksButton() {
 }
 
 std::string QuerySelectorJS(const std::string& selector) {
-  return base::StringPrintf(R"(document.querySelector(`%s`))",
-                            selector.c_str());
+  return absl::StrFormat(R"(document.querySelector(`%s`))", selector);
 }
 
 std::string Select(const std::string& selector1, const std::string& selector2) {
-  return base::StringPrintf(R"(document.querySelector(`%s %s`))",
-                            selector1.c_str(), selector2.c_str());
+  return absl::StrFormat(R"(document.querySelector(`%s %s`))", selector1,
+                         selector2);
 }
 
 void NonBlockingDelay(base::TimeDelta delay) {
@@ -116,7 +114,7 @@ bool WaitAndClickElement(content::WebContents* web_contents,
       return false;
     }
     auto result = EvalJs(web_contents, selector + ".click()");
-    if (result.value.is_none() && result.error.empty()) {
+    if (result.is_ok() && result == base::Value()) {
       return true;
     }
   }
@@ -174,8 +172,7 @@ class WalletPanelUIBrowserTest : public InProcessBrowserTest {
         ui_test_utils::BROWSER_TEST_WAIT_FOR_LOAD_STOP);
     settings_index_ = browser()->tab_strip_model()->active_index();
     // Overriding native confirmation dialog so it always confirms.
-    EXPECT_TRUE(
-        EvalJs(settings(), "window.confirm = () => true").value.is_none());
+    EXPECT_TRUE(EvalJs(settings(), "window.confirm = () => true").is_ok());
   }
 
   void ActivateSettingsTab() {
@@ -202,8 +199,8 @@ class WalletPanelUIBrowserTest : public InProcessBrowserTest {
                                               .AsStringPiece());
           url_loader_factory_.ClearResponses();
           if (request_string.find("eth_chainId") != std::string::npos) {
-            const std::string response = base::StringPrintf(
-                R"({"jsonrpc":"2.0","id":1,"result":"%s"})", chain_id.c_str());
+            const std::string response = absl::StrFormat(
+                R"({"jsonrpc":"2.0","id":1,"result":"%s"})", chain_id);
             for (auto& url : network_urls) {
               url_loader_factory_.AddResponse(url.spec(), response);
             }
@@ -256,24 +253,15 @@ IN_PROC_BROWSER_TEST_F(WalletPanelUIBrowserTest, InitialUIRendered) {
   ASSERT_TRUE(EvalJs(wallet(), wallet_panel_js).ExtractBool());
 }
 
-// This test is crashing on macos because renderer process DCHECKs trying
-// to display scroll bar. Disabled for macos until this is fixed.
-#if BUILDFLAG(IS_MAC)
-#define MAYBE_HideNetworkInSettings DISABLED_HideNetworkInSettings
-#else
-#define MAYBE_HideNetworkInSettings HideNetworkInSettings
-#endif
-IN_PROC_BROWSER_TEST_F(WalletPanelUIBrowserTest, MAYBE_HideNetworkInSettings) {
+IN_PROC_BROWSER_TEST_F(WalletPanelUIBrowserTest, HideNetworkInSettings) {
   ActivateWalletTab();
   // Wait and click on select network button.
   ASSERT_TRUE(WaitAndClickElement(wallet(), QuerySelectorJS(NetworksButton())));
 
   // Both Polygon and Neon EVM are listed.
   ASSERT_TRUE(WaitFor(wallet(), QuerySelectorJS(PolygonNetwork())));
-  ASSERT_TRUE(
-      EvalJs(wallet(), QuerySelectorJS(PolygonNetwork())).value.is_dict());
-  ASSERT_TRUE(
-      EvalJs(wallet(), QuerySelectorJS(NeonEVMNetwork())).value.is_dict());
+  ASSERT_TRUE(EvalJs(wallet(), QuerySelectorJS(PolygonNetwork())).is_dict());
+  ASSERT_TRUE(EvalJs(wallet(), QuerySelectorJS(NeonEVMNetwork())).is_dict());
 
   // Wait and click on hide button for Neon EVM network in settings.
   CreateSettingsTab();
@@ -289,10 +277,8 @@ IN_PROC_BROWSER_TEST_F(WalletPanelUIBrowserTest, MAYBE_HideNetworkInSettings) {
 
   // Polygon is listed but Neon EVM is not.
   ASSERT_TRUE(WaitFor(wallet(), QuerySelectorJS(PolygonNetwork())));
-  ASSERT_TRUE(
-      EvalJs(wallet(), QuerySelectorJS(PolygonNetwork())).value.is_dict());
-  ASSERT_TRUE(
-      EvalJs(wallet(), QuerySelectorJS(NeonEVMNetwork())).value.is_none());
+  ASSERT_TRUE(EvalJs(wallet(), QuerySelectorJS(PolygonNetwork())).is_dict());
+  ASSERT_TRUE(EvalJs(wallet(), QuerySelectorJS(NeonEVMNetwork())).is_ok());
 }
 
 IN_PROC_BROWSER_TEST_F(WalletPanelUIBrowserTest, CustomNetworkInSettings) {
@@ -338,6 +324,8 @@ IN_PROC_BROWSER_TEST_F(WalletPanelUIBrowserTest, CustomNetworkInSettings) {
 
   // Chain name for Neon EVM changes to 'Custom Network' in wallet.
   ActivateWalletTab();
+  wallet()->GetController().Reload(content::ReloadType::NORMAL, true);
+  EXPECT_TRUE(WaitForLoadStop(wallet()));
   ASSERT_TRUE(WaitFor(wallet(), Select(NeonEVMNetwork(), NetworkNameSpan()) +
                                     "?.innerText === 'Custom Network'"));
 }

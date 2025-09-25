@@ -12,7 +12,6 @@
 
 #include "base/memory/ref_counted.h"
 #include "base/memory/scoped_refptr.h"
-#include "base/strings/stringprintf.h"
 #include "base/test/bind.h"
 #include "base/test/mock_callback.h"
 #include "base/test/task_environment.h"
@@ -31,6 +30,7 @@
 #include "services/network/test/test_url_loader_factory.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
+#include "third_party/abseil-cpp/absl/strings/str_format.h"
 #include "ui/base/l10n/l10n_util.h"
 
 using base::test::ParseJson;
@@ -866,7 +866,7 @@ TEST_F(SwapServiceUnitTest, GetZeroExQuoteURL) {
                                   mojom::SwapProvider::kZeroEx),
         "85");
     EXPECT_EQ(url,
-              base::StringPrintf(
+              absl::StrFormat(
                   "https://api.0x.wallet.brave.com/swap/allowance-holder/price?"
                   "chainId=%s&"
                   "taker=0xa92D461a9a988A7f11ec285d39783A637Fdd6ba4&"
@@ -877,7 +877,7 @@ TEST_F(SwapServiceUnitTest, GetZeroExQuoteURL) {
                   "swapFeeRecipient=0xbd9420A98a7Bd6B89765e5715e169481602D9c3d&"
                   "swapFeeToken=ETH&"
                   "slippageBps=300",
-                  encoded_chain_id.c_str()));
+                  encoded_chain_id));
 
     // Ok: no fees
     url = swap_service_->GetZeroExQuoteURL(
@@ -886,7 +886,7 @@ TEST_F(SwapServiceUnitTest, GetZeroExQuoteURL) {
                                   mojom::SwapProvider::kZeroEx),
         "");
     EXPECT_EQ(url,
-              base::StringPrintf(
+              absl::StrFormat(
                   "https://api.0x.wallet.brave.com/swap/allowance-holder/price?"
                   "chainId=%s&"
                   "taker=0xa92D461a9a988A7f11ec285d39783A637Fdd6ba4&"
@@ -894,7 +894,7 @@ TEST_F(SwapServiceUnitTest, GetZeroExQuoteURL) {
                   "buyToken=ETH&"
                   "sellToken=DAI&"
                   "slippageBps=300",
-                  encoded_chain_id.c_str()));
+                  encoded_chain_id));
   }
 
   // KO: unsupported network
@@ -929,7 +929,7 @@ TEST_F(SwapServiceUnitTest, GetZeroExTransactionURL) {
                                   mojom::SwapProvider::kZeroEx),
         "85");
     EXPECT_EQ(url,
-              base::StringPrintf(
+              absl::StrFormat(
                   "https://api.0x.wallet.brave.com/swap/allowance-holder/quote?"
                   "chainId=%s&"
                   "taker=0xa92D461a9a988A7f11ec285d39783A637Fdd6ba4&"
@@ -940,7 +940,7 @@ TEST_F(SwapServiceUnitTest, GetZeroExTransactionURL) {
                   "swapFeeRecipient=0xbd9420A98a7Bd6B89765e5715e169481602D9c3d&"
                   "swapFeeToken=ETH&"
                   "slippageBps=300",
-                  encoded_chain_id.c_str()));
+                  encoded_chain_id));
 
     // OK: no fees
     url = swap_service_->GetZeroExTransactionURL(
@@ -949,7 +949,7 @@ TEST_F(SwapServiceUnitTest, GetZeroExTransactionURL) {
                                   mojom::SwapProvider::kZeroEx),
         "");
     EXPECT_EQ(url,
-              base::StringPrintf(
+              absl::StrFormat(
                   "https://api.0x.wallet.brave.com/swap/allowance-holder/quote?"
                   "chainId=%s&"
                   "taker=0xa92D461a9a988A7f11ec285d39783A637Fdd6ba4&"
@@ -957,7 +957,7 @@ TEST_F(SwapServiceUnitTest, GetZeroExTransactionURL) {
                   "buyToken=ETH&"
                   "sellToken=DAI&"
                   "slippageBps=300",
-                  encoded_chain_id.c_str()));
+                  encoded_chain_id));
   }
 
   // KO: unsupported network
@@ -1008,7 +1008,7 @@ TEST_F(SwapServiceUnitTest, GetJupiterQuoteURL) {
   // OK: with fees
   auto url = swap_service_->GetJupiterQuoteURL(*params, "85");
   EXPECT_EQ(url,
-            "https://jupiter.wallet.brave.com/v6/quote?"
+            "https://jupiter-lite.wallet.brave.com/swap/v1/quote?"
             "inputMint=So11111111111111111111111111111111111111112&"
             "outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&"
             "amount=10000&"
@@ -1019,7 +1019,7 @@ TEST_F(SwapServiceUnitTest, GetJupiterQuoteURL) {
   // OK: no fees
   url = swap_service_->GetJupiterQuoteURL(*params, "");
   EXPECT_EQ(url,
-            "https://jupiter.wallet.brave.com/v6/quote?"
+            "https://jupiter-lite.wallet.brave.com/swap/v1/quote?"
             "inputMint=So11111111111111111111111111111111111111112&"
             "outputMint=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&"
             "amount=10000&"
@@ -1029,7 +1029,7 @@ TEST_F(SwapServiceUnitTest, GetJupiterQuoteURL) {
 
 TEST_F(SwapServiceUnitTest, GetJupiterTransactionURL) {
   auto url = swap_service_->GetJupiterTransactionURL(mojom::kSolanaMainnet);
-  EXPECT_EQ(url, "https://jupiter.wallet.brave.com/v6/swap");
+  EXPECT_EQ(url, "https://jupiter-lite.wallet.brave.com/swap/v1/swap");
 }
 
 TEST_F(SwapServiceUnitTest, GetJupiterQuote) {

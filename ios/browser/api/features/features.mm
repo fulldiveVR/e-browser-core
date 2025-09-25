@@ -106,11 +106,6 @@
       initWithFeature:&brave_shields::features::kBraveAdblockCookieListDefault];
 }
 
-+ (Feature*)kBraveAdblockCookieListOptIn {
-  return [[Feature alloc]
-      initWithFeature:&brave_shields::features::kBraveAdblockCookieListOptIn];
-}
-
 + (Feature*)kBraveAdblockCosmeticFiltering {
   return [[Feature alloc]
       initWithFeature:&brave_shields::features::kBraveAdblockCosmeticFiltering];
@@ -214,6 +209,11 @@
 + (Feature*)kBraveShredCacheData {
   return [[Feature alloc]
       initWithFeature:&brave_shields::features::kBraveShredCacheData];
+}
+
++ (Feature*)kBraveShieldsContentSettings {
+  return [[Feature alloc] initWithFeature:&brave_shields::features::
+                                              kBraveShieldsContentSettingsIOS];
 }
 
 + (Feature*)kBraveIOSDebugAdblock {

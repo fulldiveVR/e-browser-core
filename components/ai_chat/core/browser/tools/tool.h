@@ -11,6 +11,7 @@
 #include <string_view>
 #include <vector>
 
+#include "base/functional/callback_forward.h"
 #include "base/memory/weak_ptr.h"
 #include "base/values.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom-forward.h"
@@ -20,6 +21,9 @@ namespace ai_chat {
 // Base class for Tools that are exposed to the Assistant
 class Tool {
  public:
+  using ToolResult = std::vector<mojom::ContentBlockPtr>;
+  using UseToolCallback = base::OnceCallback<void(ToolResult output)>;
+
   Tool();
   virtual ~Tool();
 
@@ -60,10 +64,6 @@ class Tool {
   // e.g. location for a search tool, or screen size for a computer use tool.
   virtual std::optional<base::Value::Dict> ExtraParams() const;
 
-  // If this tool requires content associated, it won't be provided if
-  // used in a conversation without content association.
-  virtual bool IsContentAssociationRequired() const;
-
   // If this tool is an agent tool, it will only be available to
   // conversations using the agent mode instead of the chat mode.
   virtual bool IsAgentTool() const;
@@ -76,6 +76,17 @@ class Tool {
   // be sent to the Assistant. This can be for permission or because
   // the tool requires the user to take some action to provide the result.
   virtual bool RequiresUserInteractionBeforeHandling() const;
+
+  // Whether this tool supports the given conversation. Can be used to filter
+  // tools based on conversation properties like temporary status.
+  virtual bool SupportsConversation(
+      bool is_temporary,
+      bool has_untrusted_content,
+      mojom::ConversationCapability conversation_capability) const;
+
+  // Implementers should handle tool execution unless it is a built-in
+  // tool handled directly by the ConversationHandler.
+  virtual void UseTool(const std::string& input_json, UseToolCallback callback);
 
   base::WeakPtr<Tool> GetWeakPtr() { return weak_ptr_factory_.GetWeakPtr(); }
 

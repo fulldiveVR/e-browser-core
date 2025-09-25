@@ -12,6 +12,7 @@
 #include "brave/browser/brave_adaptive_captcha/brave_adaptive_captcha_service_factory.h"
 #include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/brave_news/brave_news_controller_factory.h"
+#include "brave/browser/brave_origin/brave_origin_service_factory.h"
 #include "brave/browser/brave_rewards/rewards_service_factory.h"
 #include "brave/browser/brave_search/backup_results_service_factory.h"
 #include "brave/browser/brave_shields/ad_block_pref_service_factory.h"
@@ -60,7 +61,6 @@
 #include "brave/browser/ui/tabs/shared_pinned_tab_service_factory.h"
 #include "brave/components/commands/common/features.h"
 #else
-#include "brave/browser/brave_shields/cookie_list_opt_in_service_factory.h"
 #include "brave/browser/brave_shields/filter_list_service_factory.h"
 #include "brave/browser/ntp_background/android/ntp_background_images_bridge.h"
 #endif
@@ -95,11 +95,16 @@
 #include "brave/browser/web_discovery/web_discovery_service_factory.h"
 #endif
 
+#if BUILDFLAG(ENABLE_EXTENSIONS)
+#include "brave/browser/extensions/manifest_v2/brave_extensions_manifest_v2_migrator.h"
+#endif
+
 namespace brave {
 
 void EnsureBrowserContextKeyedServiceFactoriesBuilt() {
   brave_adaptive_captcha::BraveAdaptiveCaptchaServiceFactory::GetInstance();
   brave_ads::AdsServiceFactory::GetInstance();
+  brave_origin::BraveOriginServiceFactory::GetInstance();
   brave_perf_predictor::NamedThirdPartyRegistryFactory::GetInstance();
   brave_rewards::RewardsServiceFactory::GetInstance();
   brave_shields::AdBlockPrefServiceFactory::GetInstance();
@@ -118,7 +123,6 @@ void EnsureBrowserContextKeyedServiceFactoriesBuilt() {
 #if !BUILDFLAG(IS_ANDROID)
   BookmarkPrefsServiceFactory::GetInstance();
 #else
-  brave_shields::CookieListOptInServiceFactory::GetInstance();
   brave_shields::FilterListServiceFactory::GetInstance();
   ntp_background_images::NTPBackgroundImagesBridgeFactory::GetInstance();
 #endif
@@ -199,6 +203,10 @@ void EnsureBrowserContextKeyedServiceFactoriesBuilt() {
   if (base::FeatureList::IsEnabled(email_aliases::kEmailAliases)) {
     email_aliases::EmailAliasesServiceFactory::GetInstance();
   }
+
+#if BUILDFLAG(ENABLE_EXTENSIONS)
+  extensions_mv2::ExtensionsManifestV2MigratorFactory::GetInstance();
+#endif
 }
 
 }  // namespace brave

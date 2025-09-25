@@ -20,9 +20,11 @@
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_finder.h"
 #include "chrome/browser/ui/webui/favicon_source.h"
+#include "chrome/browser/ui/webui/theme_source.h"
 #include "chrome/browser/ui/webui/webui_embedding_context.h"
 #include "components/favicon_base/favicon_url_parser.h"
 #include "components/grit/brave_components_resources.h"
+#include "components/prefs/pref_service.h"
 #include "content/public/browser/web_ui.h"
 #include "content/public/browser/web_ui_data_source.h"
 #include "content/public/common/url_constants.h"
@@ -69,6 +71,8 @@ ShieldsPanelUI::ShieldsPanelUI(content::WebUI* web_ui)
   content::URLDataSource::Add(
       profile_, std::make_unique<FaviconSource>(
                     profile_, chrome::FaviconUrlFormat::kFavicon2));
+  content::URLDataSource::Add(profile_,
+                              std::make_unique<ThemeSource>(profile_));
   webui::SetupWebUIDataSource(source, kBraveShieldsPanelGenerated,
                               IDR_SHIELDS_PANEL_HTML);
 }
@@ -88,7 +92,7 @@ void ShieldsPanelUI::CreatePanelHandler(
     mojo::PendingReceiver<brave_shields::mojom::DataHandler>
         data_handler_receiver) {
   auto* profile = Profile::FromWebUI(web_ui());
-  DCHECK(profile);
+  CHECK(profile);
   panel_handler_ = std::make_unique<ShieldsPanelHandler>(
       std::move(panel_receiver), this, profile);
   auto* browser = webui::GetBrowserWindowInterface(web_ui()->GetWebContents());

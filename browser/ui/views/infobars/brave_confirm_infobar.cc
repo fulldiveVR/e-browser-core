@@ -117,6 +117,17 @@ BraveConfirmInfoBar::BraveConfirmInfoBar(
         base::BindRepeating(&BraveConfirmInfoBar::CheckboxPressed,
                             weak_ptr_factory_.GetWeakPtr())));
   }
+
+  // Upstream doesn't need this reorder because all other children
+  // except icon and close button are in |content_container_| that lives
+  // between both. It guarantees that close button is always the last
+  // children. However, we just add children directly instead of
+  // that container.
+  // TODO(https://github.com/brave/brave-browser/issues/48822): Add our children
+  // into content container.
+  if (close_button_) {
+    ReorderChildView(close_button_, children().size());
+  }
 }
 
 BraveConfirmInfoBar::~BraveConfirmInfoBar() = default;
@@ -258,8 +269,12 @@ void BraveConfirmInfoBar::ExtraButtonPressed() {
   }
 }
 
-BraveConfirmInfoBarDelegate* BraveConfirmInfoBar::GetDelegate() const {
+BraveConfirmInfoBarDelegate* BraveConfirmInfoBar::GetDelegate() {
   return reinterpret_cast<BraveConfirmInfoBarDelegate*>(delegate());
+}
+
+const BraveConfirmInfoBarDelegate* BraveConfirmInfoBar::GetDelegate() const {
+  return reinterpret_cast<const BraveConfirmInfoBarDelegate*>(delegate());
 }
 
 int BraveConfirmInfoBar::GetContentMinimumWidth() const {

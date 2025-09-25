@@ -4,6 +4,7 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import { ExternalWallet } from '../../../../components/brave_rewards/resources/shared/lib/external_wallet'
+import { ProviderPayoutStatus } from '../../../../components/brave_rewards/resources/shared/lib/provider_payout_status'
 
 export interface RewardsState {
   initialized: boolean
@@ -14,6 +15,9 @@ export interface RewardsState {
   rewardsBalance: number | null
   rewardsExchangeRate: number
   rewardsAdsViewed: number | null
+  minEarningsPreviousMonth: number
+  payoutStatus: Record<string, ProviderPayoutStatus>
+  tosUpdateRequired: boolean
 }
 
 export function defaultRewardsState(): RewardsState {
@@ -25,7 +29,10 @@ export function defaultRewardsState(): RewardsState {
     rewardsExternalWallet: null,
     rewardsBalance: null,
     rewardsExchangeRate: 0,
-    rewardsAdsViewed: null
+    rewardsAdsViewed: null,
+    minEarningsPreviousMonth: 0,
+    payoutStatus: {},
+    tosUpdateRequired: false
   }
 }
 

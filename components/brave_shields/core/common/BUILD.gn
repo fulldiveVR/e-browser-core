@@ -10,6 +10,7 @@ static_library("common") {
     "brave_shield_constants.h",
     "brave_shield_utils.cc",
     "brave_shield_utils.h",
+    "brave_shields_settings_values.h",
     "features.cc",
     "features.h",
     "pref_names.h",
@@ -40,7 +41,6 @@ mojom_component("mojom") {
   sources = [
     "brave_shields.mojom",
     "brave_shields_panel.mojom",
-    "cookie_list_opt_in.mojom",
     "filter_list.mojom",
     "shields_settings.mojom",
   ]
@@ -56,4 +56,22 @@ mojom_component("mojom") {
   export_class_attribute_blink = "BLINK_PLATFORM_EXPORT"
   export_define_blink = "BLINK_PLATFORM_IMPLEMENTATION=1"
   export_header_blink = "third_party/blink/public/platform/web_common.h"
+}
+
+source_set("unit_tests") {
+  testonly = true
+
+  sources = [
+    "brave_shield_utils_unittest.cc",
+    "brave_shields_settings_values_unittest.cc",
+  ]
+
+  deps = [
+    ":common",
+    "//base",
+    "//base/test:test_support",
+    "//components/prefs",
+    "//components/prefs:test_support",
+    "//testing/gtest",
+  ]
 }

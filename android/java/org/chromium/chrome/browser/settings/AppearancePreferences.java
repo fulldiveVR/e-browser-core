@@ -7,7 +7,6 @@ package org.chromium.chrome.browser.settings;
 
 import static org.chromium.chrome.browser.settings.MainSettings.PREF_UI_THEME;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
@@ -17,6 +16,7 @@ import org.chromium.base.BravePreferenceKeys;
 import org.chromium.base.ContextUtils;
 import org.chromium.base.supplier.ObservableSupplier;
 import org.chromium.base.supplier.ObservableSupplierImpl;
+import org.chromium.brave.browser.customize_menu.CustomizeBraveMenu;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.BraveFeatureUtil;
 import org.chromium.chrome.browser.BraveRelaunchUtils;
@@ -33,6 +33,7 @@ import org.chromium.chrome.browser.preferences.ChromeSharedPreferences;
 import org.chromium.chrome.browser.profiles.ProfileManager;
 import org.chromium.chrome.browser.tasks.tab_management.BraveTabUiFeatureUtilities;
 import org.chromium.chrome.browser.toolbar.ToolbarPositionController;
+import org.chromium.chrome.browser.toolbar.adaptive.AdaptiveToolbarFeatures;
 import org.chromium.chrome.browser.toolbar.bottom.BottomToolbarConfiguration;
 import org.chromium.chrome.browser.toolbar.settings.AddressBarSettingsFragment;
 import org.chromium.components.browser_ui.settings.ChromeSwitchPreference;
@@ -54,6 +55,8 @@ public class AppearancePreferences extends BravePreferenceFragment
     public static final String PREF_ENABLE_MULTI_WINDOWS = "enable_multi_windows";
     public static final String PREF_SHOW_UNDO_WHEN_TABS_CLOSED = "show_undo_when_tabs_closed";
     public static final String PREF_ADDRESS_BAR = "address_bar";
+    public static final String PREF_TOOLBAR_SHORTCUT = "toolbar_shortcut";
+    private static final String PREF_BRAVE_CUSTOMIZE_MENU = "brave_customize_menu";
 
     private BraveRewardsNativeWorker mBraveRewardsNativeWorker;
 
@@ -64,6 +67,11 @@ public class AppearancePreferences extends BravePreferenceFragment
         super.onCreate(savedInstanceState);
         mPageTitle.set(getString(R.string.prefs_appearance));
         SettingsUtils.addPreferencesFromResource(this, R.xml.brave_appearance_preferences);
+
+        // Forward the custom menu item keys from appearance to custom menu item preference screen.
+        CustomizeBraveMenu.propagateMenuItemExtras(
+                findPreference(PREF_BRAVE_CUSTOMIZE_MENU), getArguments());
+
         boolean isTablet =
                 DeviceFormFactor.isNonMultiDisplayContextOnTablet(
                         ContextUtils.getApplicationContext());
@@ -89,6 +97,10 @@ public class AppearancePreferences extends BravePreferenceFragment
 
         if (!ToolbarPositionController.isToolbarPositionCustomizationEnabled(getContext(), false)) {
             removePreferenceIfPresent(PREF_ADDRESS_BAR);
+        }
+
+        if (!AdaptiveToolbarFeatures.isCustomizationEnabled()) {
+            removePreferenceIfPresent(PREF_TOOLBAR_SHORTCUT);
         }
     }
 
@@ -161,7 +173,8 @@ public class AppearancePreferences extends BravePreferenceFragment
                 ((ChromeSwitchPreference) enableSpeedreader)
                         .setChecked(
                                 UserPrefs.get(ProfileManager.getLastUsedRegularProfile())
-                                        .getBoolean(BravePref.SPEEDREADER_PREF_ENABLED));
+                                        .getBoolean(
+                                                BravePref.SPEEDREADER_PREF_ENABLED_FOR_ALL_SITES));
             }
         }
 
@@ -235,6 +248,11 @@ public class AppearancePreferences extends BravePreferenceFragment
             ((ChromeSwitchPreference) enableBottomToolbar)
                     .setEnabled(BottomToolbarConfiguration.isToolbarTopAnchored());
         }
+
+        if (AdaptiveToolbarFeatures.isCustomizationEnabled()) {
+            updatePreferenceIcon(
+                    PREF_TOOLBAR_SHORTCUT, R.drawable.ic_browser_customizable_shortcut);
+        }
     }
 
     @Override
@@ -250,21 +268,17 @@ public class AppearancePreferences extends BravePreferenceFragment
         String key = preference.getKey();
         boolean shouldRelaunch = false;
         if (BravePreferenceKeys.BRAVE_BOTTOM_TOOLBAR_ENABLED_KEY.equals(key)) {
-            SharedPreferences prefs = ContextUtils.getAppSharedPreferences();
             Boolean originalStatus = BottomToolbarConfiguration.isBraveBottomControlsEnabled();
             updatePreferenceSummary(
                     BravePreferenceKeys.BRAVE_BOTTOM_TOOLBAR_ENABLED_KEY,
                     !originalStatus ? R.string.text_on : R.string.text_off);
-            prefs.edit()
-                    .putBoolean(
-                            BravePreferenceKeys.BRAVE_BOTTOM_TOOLBAR_ENABLED_KEY, !originalStatus)
-                    .apply();
+            ChromeSharedPreferences.getInstance()
+                    .writeBoolean(
+                            BravePreferenceKeys.BRAVE_BOTTOM_TOOLBAR_ENABLED_KEY, !originalStatus);
             shouldRelaunch = true;
         } else if (PREF_SHOW_BRAVE_REWARDS_ICON.equals(key)) {
-            SharedPreferences sharedPreferences = ContextUtils.getAppSharedPreferences();
-            SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
-            sharedPreferencesEditor.putBoolean(PREF_SHOW_BRAVE_REWARDS_ICON, !(boolean) newValue);
-            sharedPreferencesEditor.apply();
+            ChromeSharedPreferences.getInstance()
+                    .writeBoolean(PREF_SHOW_BRAVE_REWARDS_ICON, !(boolean) newValue);
             shouldRelaunch = true;
         } else if (PREF_ADS_SWITCH.equals(key)) {
             setPrefAdsInBackgroundEnabled((boolean) newValue);
@@ -281,7 +295,8 @@ public class AppearancePreferences extends BravePreferenceFragment
                     .writeBoolean(BravePreferenceKeys.BRAVE_TAB_GROUPS_ENABLED, (boolean) newValue);
         } else if (PREF_BRAVE_ENABLE_SPEEDREADER.equals(key)) {
             UserPrefs.get(ProfileManager.getLastUsedRegularProfile())
-                    .setBoolean(BravePref.SPEEDREADER_PREF_ENABLED, (boolean) newValue);
+                    .setBoolean(
+                            BravePref.SPEEDREADER_PREF_ENABLED_FOR_ALL_SITES, (boolean) newValue);
             shouldRelaunch = true;
         } else if (PREF_ENABLE_MULTI_WINDOWS.equals(key)) {
             if (!(boolean) newValue) {
@@ -324,16 +339,12 @@ public class AppearancePreferences extends BravePreferenceFragment
 
     /** Returns the user preference for whether the brave ads in background is enabled. */
     public static boolean getPrefAdsInBackgroundEnabled() {
-        SharedPreferences sharedPreferences = ContextUtils.getAppSharedPreferences();
-        return sharedPreferences.getBoolean(PREF_ADS_SWITCH, false);
+        return ChromeSharedPreferences.getInstance().readBoolean(PREF_ADS_SWITCH, false);
     }
 
     /** Sets the user preference for whether the brave ads in background is enabled. */
     public void setPrefAdsInBackgroundEnabled(boolean enabled) {
-        SharedPreferences sharedPreferences = ContextUtils.getAppSharedPreferences();
-        SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
-        sharedPreferencesEditor.putBoolean(PREF_ADS_SWITCH, enabled);
-        sharedPreferencesEditor.apply();
+        ChromeSharedPreferences.getInstance().writeBoolean(PREF_ADS_SWITCH, enabled);
     }
 
     private void updatePreferenceIcon(String preferenceString, int drawable) {

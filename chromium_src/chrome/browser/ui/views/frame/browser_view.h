@@ -26,7 +26,7 @@
 #define MaybeShowReadingListInSidePanelIPH \
   virtual MaybeShowReadingListInSidePanelIPH
 
-#define UpdateDevToolsForContents virtual UpdateDevToolsForContents
+#define MaybeUpdateDevtools virtual MaybeUpdateDevtools
 #define GetTabStripVisible virtual GetTabStripVisible
 
 #define GetTabSearchBubbleHost     \
@@ -41,8 +41,6 @@
   void UpdateExclusiveAccessBubble
 
 #if BUILDFLAG(IS_WIN)
-#define GetSupportsTitle virtual GetSupportsTitle
-
 // On Windows <winuser.h> defines LoadAccelerators
 // Using push_macro seems to be causing #undef not to work in Chromium 125.
 // Unclear what causes this.
@@ -52,25 +50,20 @@
 #define LoadAccelerators virtual LoadAccelerators
 #define ShowSplitView virtual ShowSplitView
 #define HideSplitView virtual HideSplitView
-#define UpdateActiveTabInSplitView virtual UpdateActiveTabInSplitView
-#define UpdateContentsInSplitView virtual UpdateContentsInSplitView
 
-#include "src/chrome/browser/ui/views/frame/browser_view.h"  // IWYU pragma: export
+#include <chrome/browser/ui/views/frame/browser_view.h>  // IWYU pragma: export
 
-#undef UpdateActiveTabInSplitView
-#undef UpdateContentsInSplitView
 #undef HideSplitView
 #undef ShowSplitView
 #undef LoadAccelerators
 #if BUILDFLAG(IS_WIN)
 // #pragma pop_macro("LoadAccelerators")
-#undef GetSupportsTitle
 #endif
 
 #undef UpdateExclusiveAccessBubble
 #undef GetTabSearchBubbleHost
 #undef GetTabStripVisible
-#undef UpdateDevToolsForContents
+#undef MaybeUpdateDevtools
 #undef MaybeShowReadingListInSidePanelIPH
 #undef BookmarkBarView
 #undef SidePanel

@@ -322,7 +322,7 @@ extension Strings.Shields {
     tableName: "BraveShared",
     bundle: .module,
     value:
-      "Ask websites not to sell or share your data. [Learn more](https://support.brave.com/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)",
+      "Ask websites not to sell or share your data. [Learn more](https://support.brave.app/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)",
     comment: "A description of what the Enable GPC toggle does"
   )
 }
@@ -424,6 +424,31 @@ extension Strings.Shields {
       "Shredding will close all tabs open to this site, and delete all site data. This cannot be undone.",
     comment: """
       A message for a confirmation window that appears when a user clicks on 'Shred Data'.
+      """
+  )
+
+  /// A message for a confirmation window that appears when a user clicks on 'Shred All Tabs'.
+  public static let shredSiteAllTabsConfirmationMessage = NSLocalizedString(
+    "ShredSiteAllTabsConfirmationMessage",
+    tableName: "BraveShared",
+    bundle: .module,
+    value:
+      "Shredding will close all tabs, and delete all site data. This cannot be undone.",
+    comment: """
+      A message for a confirmation window that appears when a user clicks on 'Shred All Tabs'.
+      """
+  )
+
+  /// A message for a confirmation window that appears when a user clicks on 'Shred' with multiple
+  /// tabs selected.
+  public static let shredSiteSelectedTabsConfirmationMessage = NSLocalizedString(
+    "ShredSiteDataConfirmationMessage",
+    tableName: "BraveShared",
+    bundle: .module,
+    value:
+      "Shredding will close the selected tabs, and delete all site data. This cannot be undone.",
+    comment: """
+      A message for a confirmation window that appears when a user clicks on 'Shred' with multiple tabs selected.
       """
   )
 

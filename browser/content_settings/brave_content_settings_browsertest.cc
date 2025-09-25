@@ -6,7 +6,6 @@
 #include "base/containers/contains.h"
 #include "base/containers/fixed_flat_set.h"
 #include "base/notreached.h"
-#include "base/strings/stringprintf.h"
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/browser.h"
@@ -20,6 +19,7 @@
 #include "net/dns/mock_host_resolver.h"
 #include "net/test/embedded_test_server/embedded_test_server.h"
 #include "services/network/public/cpp/network_switches.h"
+#include "third_party/abseil-cpp/absl/strings/str_format.h"
 #include "url/gurl.h"
 
 class BraveContentSettingsBrowserTest : public InProcessBrowserTest {
@@ -37,7 +37,7 @@ class BraveContentSettingsBrowserTest : public InProcessBrowserTest {
     InProcessBrowserTest::SetUpCommandLine(command_line);
     command_line->AppendSwitchASCII(
         network::switches::kHostResolverRules,
-        base::StringPrintf("MAP *:443 127.0.0.1:%d", https_server_.port()));
+        absl::StrFormat("MAP *:443 127.0.0.1:%d", https_server_.port()));
   }
 
   void SetUpOnMainThread() override {
@@ -83,12 +83,10 @@ IN_PROC_BROWSER_TEST_F(BraveContentSettingsBrowserTest,
     const ContentSettingsType type = info->website_settings_info()->type();
     SCOPED_TRACE(testing::Message()
                  << "ContentSettingsType=" << static_cast<int>(type));
-    // Ignore unusual settings and settings that use CONTENT_SETTING_DEFAULT as
-    // a default value (it DCHECKs as invalid default value).
+    // Ignore unusual settings and settings that have no default value.
     if (!info->IsSettingValid(CONTENT_SETTING_ALLOW) ||
         !info->IsSettingValid(CONTENT_SETTING_BLOCK) ||
-        info->website_settings_info()->initial_default_value().GetInt() ==
-            CONTENT_SETTING_DEFAULT) {
+        info->website_settings_info()->initial_default_value().is_none()) {
       continue;
     }
 

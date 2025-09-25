@@ -31,14 +31,15 @@ import {
   NativeAssetBalanceRegistry,
   mockAccount,
   mockCardanoAccount,
-  mockEthAccountInfo,
-  mockFilecoinAccountInfo,
+  mockEthAccount,
+  mockFilecoinAccount,
   mockFilecoinMainnetNetwork,
   mockOnRampCurrencies,
-  mockSolanaAccountInfo,
+  mockSolanaAccount,
   mockSolanaMainnetNetwork,
 } from '../../constants/mocks'
 import {
+  mockCardanoMainnetNetwork,
   mockEthMainnet,
   mockNetworks,
 } from '../../../stories/mock-data/mock-networks'
@@ -54,6 +55,8 @@ import {
   mockTokensList,
 } from '../../../stories/mock-data/mock-asset-options'
 import {
+  mockETHSwapTransaction,
+  mockETHNativeTokenSendTransaction,
   mockFilSendTransaction,
   mockTransactionInfo,
   mockedErc20ApprovalTransaction,
@@ -63,7 +66,7 @@ import { mockNFTMetadata } from '../../../stories/mock-data/mock-nft-metadata'
 import {
   coinMarketMockData, //
 } from '../../../stories/mock-data/mock-coin-market-data'
-import { mockOriginInfo } from '../../../stories/mock-data/mock-origin-info'
+import { mockUniswapOriginInfo } from '../../../stories/mock-data/mock-origin-info'
 import { WalletApiDataOverrides } from '../../../constants/testing_types'
 import {
   mockAddChainRequest,
@@ -90,9 +93,10 @@ export class MockedWalletApiProxy {
   selectedAccountId: BraveWallet.AccountId = mockAccount.accountId
   accountInfos: BraveWallet.AccountInfo[] = [
     mockAccount,
-    mockEthAccountInfo,
-    mockSolanaAccountInfo,
-    mockFilecoinAccountInfo,
+    mockEthAccount,
+    mockSolanaAccount,
+    mockFilecoinAccount,
+    mockCardanoAccount,
   ]
 
   selectedNetwork: BraveWallet.NetworkInfo = mockEthMainnet
@@ -101,12 +105,14 @@ export class MockedWalletApiProxy {
     [BraveWallet.CoinType.ETH]: BraveWallet.MAINNET_CHAIN_ID,
     [BraveWallet.CoinType.SOL]: BraveWallet.SOLANA_MAINNET,
     [BraveWallet.CoinType.FIL]: BraveWallet.FILECOIN_MAINNET,
+    [BraveWallet.CoinType.ADA]: BraveWallet.CARDANO_MAINNET,
   }
 
   chainsForCoins: Record<BraveWallet.CoinType, BraveWallet.NetworkInfo> = {
     [BraveWallet.CoinType.ETH]: mockEthMainnet,
     [BraveWallet.CoinType.SOL]: mockSolanaMainnetNetwork,
     [BraveWallet.CoinType.FIL]: mockFilecoinMainnetNetwork,
+    [BraveWallet.CoinType.ADA]: mockCardanoMainnetNetwork,
   }
 
   networks: BraveWallet.NetworkInfo[] = mockNetworks
@@ -195,6 +201,8 @@ export class MockedWalletApiProxy {
     deserializeTransaction(mockTransactionInfo),
     mockFilSendTransaction as BraveWallet.TransactionInfo,
     deserializeTransaction(mockedErc20ApprovalTransaction),
+    deserializeTransaction(mockETHNativeTokenSendTransaction),
+    mockETHSwapTransaction,
   ]
 
   // name service lookups
@@ -215,6 +223,9 @@ export class MockedWalletApiProxy {
 
   private signSolTransactionsRequests =
     [] as BraveWallet.SignSolTransactionsRequest[]
+
+  private signCardanoTransactionRequests =
+    [] as BraveWallet.SignCardanoTransactionRequest[]
 
   constructor(overrides?: WalletApiDataOverrides | undefined) {
     this.applyOverrides(overrides)
@@ -247,6 +258,9 @@ export class MockedWalletApiProxy {
       overrides.simulationOptInStatus ?? this.txSimulationOptInStatus
     this.signSolTransactionsRequests =
       overrides.signSolTransactionsRequests ?? this.signSolTransactionsRequests
+    this.signCardanoTransactionRequests =
+      overrides.signCardanoTransactionRequests
+      ?? this.signCardanoTransactionRequests
   }
 
   assetsRatioService: Partial<
@@ -408,7 +422,9 @@ export class MockedWalletApiProxy {
     },
     getPendingAddSuggestTokenRequests: async () => {
       return {
-        requests: [{ origin: mockOriginInfo, token: mockBasicAttentionToken }],
+        requests: [
+          { origin: mockUniswapOriginInfo, token: mockBasicAttentionToken },
+        ],
       }
     },
     removeUserAsset: async (token) => {
@@ -468,6 +484,11 @@ export class MockedWalletApiProxy {
       this.signSolTransactionsRequests =
         this.signSolTransactionsRequests.filter((req) => req.id !== id)
     },
+    getPendingSignCardanoTransactionRequests: async () => {
+      return {
+        requests: this.signCardanoTransactionRequests,
+      }
+    },
     getPendingSignMessageRequests: async () => {
       return {
         requests: [mockSignMessageRequest],
@@ -510,6 +531,12 @@ export class MockedWalletApiProxy {
         return { network: mockSolanaMainnetNetwork }
       }
       return { network: mockEthMainnet }
+    },
+
+    writeToClipboard: async (text: string, isConfidential: boolean) => {
+      return {
+        data: true,
+      }
     },
   }
 
@@ -610,7 +637,7 @@ export class MockedWalletApiProxy {
         accounts: this.accountInfos,
         selectedAccount: selectedAccount,
         ethDappSelectedAccount: selectedAccount,
-        solDappSelectedAccount: mockSolanaAccountInfo,
+        solDappSelectedAccount: mockSolanaAccount,
         adaDappSelectedAccount: mockCardanoAccount,
       }
       return { allAccounts }
@@ -702,17 +729,19 @@ export class MockedWalletApiProxy {
   assetRatioService: Partial<
     InstanceType<typeof BraveWallet.AssetRatioServiceInterface>
   > = {
-    getPrice: async (fromAssets, toAssets, timeframe) => {
+    getPrice: async (requests, vsCurrency) => {
       return {
         success: true,
-        values: [
-          {
-            assetTimeframeChange: '1',
-            fromAsset: fromAssets[0],
-            toAsset: toAssets[0],
-            price: '1234.56',
-          },
-        ],
+        values: requests.map((request) => ({
+          percentageChange24h: '1',
+          coin: request.coin,
+          chainId: request.chainId,
+          address: request.address || '',
+          vsCurrency: vsCurrency,
+          cacheStatus: BraveWallet.Gate3CacheStatus.kHit,
+          source: BraveWallet.AssetPriceSource.kCoingecko,
+          price: '3873.78',
+        })),
       }
     },
     getCoinMarkets: async (vsAsset: string, limit: number) => {
@@ -1410,10 +1439,10 @@ export class MockedWalletApiProxy {
     },
   }
 
-  simulationService: Partial<
-    InstanceType<typeof BraveWallet.SimulationServiceInterface>
+  simulationService: InstanceType<
+    typeof BraveWallet.SimulationServiceInterface
   > = {
-    hasMessageScanSupport: async (chainId, coin) => ({ result: false }),
+    hasMessageScanSupport: async (chainId) => ({ result: false }),
     hasTransactionScanSupport: async () => ({ result: true }),
     scanEVMTransaction: async (txInfo, language) => {
       return {
@@ -1423,6 +1452,13 @@ export class MockedWalletApiProxy {
       }
     },
     scanSolanaTransaction: async (request, language) => {
+      return {
+        errorResponse: '',
+        errorString: '',
+        response: this.svmSimulationResponse,
+      }
+    },
+    scanSignSolTransactionsRequest: async (request, language) => {
       return {
         errorResponse: '',
         errorString: '',

@@ -59,6 +59,7 @@ extension BrowserViewController {
       windowProtection: self.windowProtection,
       p3aUtils: self.braveCore.p3aUtils,
       braveCore: self.profileController,
+      localState: self.braveCore.localState,
       attributionManager: attributionManager,
       keyringStore: keyringStore,
       cryptoStore: cryptoStore
@@ -137,7 +138,9 @@ extension BrowserViewController {
     pageURL: URL?
   ) {
     var actions: [Action] = []
-    actions.append(vpnMenuAction)
+    if profileController.profile.prefs.isBraveVPNAvailable {
+      actions.append(vpnMenuAction)
+    }
     actions.append(contentsOf: destinationMenuActions(for: pageURL))
     actions.append(contentsOf: pageActions(for: pageURL, tab: tab))
     var pageActivities: Set<Action> = Set(
@@ -432,7 +435,7 @@ extension BrowserViewController {
 
   private func destinationMenuActions(for pageURL: URL?) -> [Action] {
     let isPrivateBrowsing = privateBrowsingManager.isPrivateBrowsing
-    return [
+    var actions: [Action] = [
       .init(id: .bookmarks) { @MainActor [unowned self] _ in
         let vc = BookmarksViewController(
           folder: bookmarkManager.lastVisitedFolder(),
@@ -473,61 +476,78 @@ extension BrowserViewController {
         }
         return .none
       },
-      .init(id: .braveWallet) { @MainActor [unowned self] _ in
-        // Present wallet already handles dismiss + present
-        self.presentWallet()
-        return .none
-      },
-      .init(
-        id: .braveLeo,
-        attributes: isPrivateBrowsing ? .disabled : []
-      ) { @MainActor [unowned self] _ in
-        self.dismiss(animated: true) {
-          self.openBraveLeo()
-        }
-        return .none
-      },
       .init(id: .playlist) { @MainActor [unowned self] _ in
         // presentPlaylistController already handles dismiss + present
         self.presentPlaylistController()
         return .none
       },
-      .init(id: .braveNews) { @MainActor [unowned self] _ in
-        self.dismiss(animated: true) {
-          if pageURL == nil,
-            let newTabPageController = self.tabManager.selectedTab?.newTabPageViewController
-          {
-            // Already on NTP
-            newTabPageController.scrollToBraveNews()
-          } else {
-            // Make a new tab and scroll to it
-            self.openBlankNewTab(
-              attemptLocationFieldFocus: false,
-              isPrivate: false,
-              isExternal: true
-            )
+    ]
+    if profileController.braveWalletAPI.isAllowed {
+      actions.append(
+        .init(id: .braveWallet) { @MainActor [unowned self] _ in
+          // Present wallet already handles dismiss + present
+          self.presentWallet()
+          return .none
+        }
+      )
+    }
+    if AIChatUtils.isAIChatEnabled(for: profileController.profile.prefs) {
+      actions.append(
+        .init(
+          id: .braveLeo,
+          attributes: isPrivateBrowsing ? .disabled : []
+        ) { @MainActor [unowned self] _ in
+          self.dismiss(animated: true) {
+            self.openBraveLeo()
+          }
+          return .none
+        }
+      )
+    }
+    if profileController.profile.prefs.isBraveTalkAvailable {
+      actions.append(
+        .init(id: .braveTalk) { @MainActor [unowned self] _ in
+          self.dismiss(animated: true) {
+            guard let url = URL(string: "https://talk.brave.com/") else { return }
             self.popToBVC()
-            if let newTabPageController = self.tabManager.selectedTab?.newTabPageViewController {
-              newTabPageController.scrollToBraveNews()
+            if pageURL == nil {
+              // Already on NTP
+              self.finishEditingAndSubmit(url)
+            } else {
+              self.openURLInNewTab(url, isPrivileged: false)
             }
           }
+          return .none
         }
-        return .none
-      },
-      .init(id: .braveTalk) { @MainActor [unowned self] _ in
-        self.dismiss(animated: true) {
-          guard let url = URL(string: "https://talk.brave.com/") else { return }
-          self.popToBVC()
-          if pageURL == nil {
-            // Already on NTP
-            self.finishEditingAndSubmit(url)
-          } else {
-            self.openURLInNewTab(url, isPrivileged: false)
+      )
+    }
+    if profileController.profile.prefs.isBraveNewsAvailable {
+      actions.append(
+        .init(id: .braveNews) { @MainActor [unowned self] _ in
+          self.dismiss(animated: true) {
+            if pageURL == nil,
+              let newTabPageController = self.tabManager.selectedTab?.newTabPageViewController
+            {
+              // Already on NTP
+              newTabPageController.scrollToBraveNews()
+            } else {
+              // Make a new tab and scroll to it
+              self.openBlankNewTab(
+                attemptLocationFieldFocus: false,
+                isPrivate: false,
+                isExternal: true
+              )
+              self.popToBVC()
+              if let newTabPageController = self.tabManager.selectedTab?.newTabPageViewController {
+                newTabPageController.scrollToBraveNews()
+              }
+            }
           }
+          return .none
         }
-        return .none
-      },
-    ]
+      )
+    }
+    return actions
   }
 
 }

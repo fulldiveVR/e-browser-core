@@ -57,6 +57,23 @@ public class BraveProfileMigrations {
   }
 }
 
+public class BraveLocalStateMigration {
+  let localState: any PrefService
+  public init(localState: any PrefService) {
+    self.localState = localState
+  }
+
+  public func launchMigrations() {
+    migrateDAUPingPreference()
+  }
+
+  private func migrateDAUPingPreference() {
+    Preferences.DeprecatedPreferences.sendUsagePing.migrate { value in
+      localState.set(value, forPath: kStatsReportingEnabledPrefName)
+    }
+  }
+}
+
 public class Migration {
 
   public init() {}
@@ -70,6 +87,7 @@ public class Migration {
     Preferences.migrateBookmarksButtonInToolbar()
     Preferences.migrateShortcutsButtonOniPad()
     Preferences.migrateReaderModeStyle()
+    Preferences.migrateYoutubeHighQualityDefault()
 
     if Preferences.General.isFirstLaunch.value {
       if UIDevice.current.userInterfaceIdiom == .phone {
@@ -191,6 +209,8 @@ extension Migration {
 
 extension Preferences {
   fileprivate final class DeprecatedPreferences {
+    static let sendUsagePing = Option<Bool>(key: "dau.send-usage-ping", default: true)
+
     static let blockAdsAndTracking = Option<Bool>(
       key: "shields.block-ads-and-tracking",
       default: true
@@ -282,6 +302,11 @@ extension Preferences {
 
     static let migratedReaderModeStyle = Option<Bool>(
       key: "migration.reader-mode-style",
+      default: false
+    )
+
+    static let youtubeHighQualityDefault = Option<Bool>(
+      key: "migration.youtube-high-quality-default",
       default: false
     )
   }
@@ -474,6 +499,15 @@ extension Preferences {
     }
 
     Migration.migratedReaderModeStyle.value = true
+  }
+
+  fileprivate class func migrateYoutubeHighQualityDefault() {
+    guard !Migration.youtubeHighQualityDefault.value else {
+      return
+    }
+
+    Preferences.General.youtubeHighQuality.value = YoutubeHighQualityPreference.off.rawValue
+    Migration.youtubeHighQualityDefault.value = true
   }
 }
 

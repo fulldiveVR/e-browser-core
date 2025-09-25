@@ -1,9 +1,9 @@
 diff --git a/components/page_info/page_info.cc b/components/page_info/page_info.cc
-index c85e7ec633736a77de02db555854f51ef396c49c..ba6d12e63b14778822b79980395b9f2159633f07 100644
+index b42a15c44a66b8d4817e34ca9aae26be69177d53..218d01e24f1f0b54df4c109be2fd5677a8bcdd12 100644
 --- a/components/page_info/page_info.cc
 +++ b/components/page_info/page_info.cc
-@@ -1312,6 +1312,7 @@ void PageInfo::PopulatePermissionInfo(PermissionInfo& permission_info,
- // applies to permissions listed in |kPermissionType|.
+@@ -1365,6 +1365,7 @@ void PageInfo::PopulatePermissionInfo(PermissionInfo& permission_info,
+ // via `HasContentSettingChangedViaPageInfo(type)`.
  bool PageInfo::ShouldShowPermission(
      const PageInfo::PermissionInfo& info) const {
 +  BRAVE_PAGE_INFO_SHOULD_SHOW_PERMISSION

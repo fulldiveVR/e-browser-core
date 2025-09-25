@@ -29,6 +29,8 @@ static_library("browser") {
     "ad_block_service_helper.h",
     "brave_shields_p3a.cc",
     "brave_shields_p3a.h",
+    "brave_shields_settings.cc",
+    "brave_shields_settings.h",
     "brave_shields_utils.cc",
     "brave_shields_utils.h",
     "filter_list_catalog_entry.cc",
@@ -46,7 +48,7 @@ static_library("browser") {
     "//brave/components/p3a",
     "//brave/components/p3a_utils",
     "//brave/components/webcompat/core/common",
-    "//components/component_updater:component_updater",
+    "//components/component_updater",
     "//components/content_settings/core/browser",
     "//components/content_settings/core/browser:cookie_settings",
     "//components/content_settings/core/common",
@@ -56,4 +58,25 @@ static_library("browser") {
     "//url",
   ]
   public_deps = [ "//base" ]
+}
+
+source_set("unit_tests") {
+  testonly = true
+
+  sources = [
+    "ad_block_custom_resource_provider_unittest.cc",
+    "brave_shields_settings_unittest.cc",
+  ]
+
+  deps = [
+    ":browser",
+    "//base/test:test_support",
+    "//brave/components/brave_shields/core/common",
+    "//components/content_settings/core/browser",
+    "//components/prefs",
+    "//components/prefs:test_support",
+    "//components/sync_preferences:test_support",
+    "//testing/gtest",
+    "//url",
+  ]
 }

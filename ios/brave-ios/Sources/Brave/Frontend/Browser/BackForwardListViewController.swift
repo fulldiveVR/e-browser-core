@@ -22,7 +22,7 @@ class BackForwardListViewController: UIViewController, UIGestureRecognizerDelega
   weak var toolbarUrlActionsDelegate: ToolbarUrlActionsDelegate?
 
   private let cellIdentifier = "BackForwardListViewController"
-  private var profile: Profile
+  private var profile: LegacyBrowserProfile
   private lazy var sites = [String: Site]()
   private var dismissing = false
   private var currentRow = 0
@@ -76,7 +76,7 @@ class BackForwardListViewController: UIViewController, UIGestureRecognizerDelega
     return tabManager?.privateBrowsingManager.isPrivateBrowsing ?? false
   }
 
-  init(profile: Profile, backForwardList: BackForwardListProxy) {
+  init(profile: LegacyBrowserProfile, backForwardList: BackForwardListProxy) {
     self.profile = profile
     super.init(nibName: nil, bundle: nil)
 
@@ -295,7 +295,7 @@ extension BackForwardListViewController: UITableViewDelegate {
       [unowned self] _ in
       let openInNewTabAction = UIAction(
         title: Strings.openNewTabButtonTitle,
-        image: UIImage(systemName: "plus.square.on.square"),
+        image: UIImage(braveSystemNamed: "leo.browser.mobile-tab-new"),
         handler: UIAction.deferredActionHandler { _ in
           self.toolbarUrlActionsDelegate?.openInNewTab(
             listItemURL,
@@ -307,14 +307,14 @@ extension BackForwardListViewController: UITableViewDelegate {
 
       let copyAction = UIAction(
         title: Strings.copyLinkActionTitle,
-        image: UIImage(systemName: "doc.on.doc"),
+        image: UIImage(braveSystemNamed: "leo.copy"),
         handler: UIAction.deferredActionHandler { _ in
           self.toolbarUrlActionsDelegate?.copy(listItemURL)
         }
       )
       let shareAction = UIAction(
         title: Strings.shareLinkActionTitle,
-        image: UIImage(systemName: "square.and.arrow.up"),
+        image: UIImage(braveSystemNamed: "leo.share.macos"),
         handler: UIAction.deferredActionHandler { _ in
           self.toolbarUrlActionsDelegate?.share(listItemURL)
         }

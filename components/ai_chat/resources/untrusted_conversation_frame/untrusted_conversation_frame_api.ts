@@ -23,26 +23,58 @@ export const defaultConversationEntriesUIState: ConversationEntriesUIState = {
   allModels: [],
   currentModelKey: '',
   contentUsedPercentage: undefined,
+  visualContentUsedPercentage: undefined,
   trimmedTokens: BigInt(0),
   totalTokens: BigInt(0),
   canSubmitUserEntries: false,
   isMobile: loadTimeData.getBoolean('isMobile'),
-  associatedContent: []
+  associatedContent: [],
+  conversationCapability: Mojom.ConversationCapability.CHAT,
+}
+
+// Updates a tool use event for a conversation entry in the history.
+// when its data has changed (e.g. output).
+export function updateToolUseEventInHistory(
+  history: Readonly<Mojom.ConversationTurn[]>,
+  entryUuid: string,
+  toolUse: Mojom.ToolUseEvent,
+) {
+  const updatedHistory = [...history]
+  const index = history.findIndex((entry) => entry.uuid === entryUuid)
+  if (index !== -1) {
+    updatedHistory[index] = {
+      ...updatedHistory[index],
+      events: updatedHistory[index].events?.map((event) => event),
+    }
+    const eventIndex = updatedHistory[index].events?.findIndex(
+      (event) => event.toolUseEvent?.id === toolUse.id,
+    )
+    if (eventIndex !== undefined && eventIndex !== -1) {
+      updatedHistory[index].events![eventIndex] = {
+        toolUseEvent: toolUse,
+      } as Mojom.ConversationEntryEvent
+      return updatedHistory
+    }
+  }
+  return null
 }
 
 // Define how to get the initial data and update the state from events
 export default class UntrustedConversationFrameAPI extends API<ConversationEntriesUIState> {
-  public conversationHandler: Mojom.UntrustedConversationHandlerRemote
-    = Mojom.UntrustedConversationHandler.getRemote()
+  public conversationHandler: Mojom.UntrustedConversationHandlerRemote =
+    Mojom.UntrustedConversationHandler.getRemote()
 
-  public uiHandler: Mojom.UntrustedUIHandlerRemote
-    = Mojom.UntrustedUIHandler.getRemote()
+  public uiHandler: Mojom.UntrustedUIHandlerRemote =
+    Mojom.UntrustedUIHandler.getRemote()
 
-  public parentUIFrame: Mojom.ParentUIFrameRemote
-    = new Mojom.ParentUIFrameRemote()
+  public parentUIFrame: Mojom.ParentUIFrameRemote =
+    new Mojom.ParentUIFrameRemote()
 
-  private conversationObserver: Mojom.UntrustedConversationUICallbackRouter
-    = new Mojom.UntrustedConversationUICallbackRouter
+  public conversationObserver: Mojom.UntrustedConversationUICallbackRouter =
+    new Mojom.UntrustedConversationUICallbackRouter()
+
+  public uiObserver: Mojom.UntrustedUICallbackRouter =
+    new Mojom.UntrustedUICallbackRouter()
 
   constructor() {
     super(defaultConversationEntriesUIState)
@@ -50,27 +82,30 @@ export default class UntrustedConversationFrameAPI extends API<ConversationEntri
   }
 
   async initialize() {
-    const [
-      { conversationEntriesState },
-      { conversationHistory }
-     ] = await Promise.all([
-      this.conversationHandler.bindUntrustedConversationUI(
-        this.conversationObserver.$.bindNewPipeAndPassRemote()
-      ),
-      this.conversationHandler.getConversationHistory()
-    ])
+    // Bind UntrustedUI for memory notifications
+    this.uiHandler.bindUntrustedUI(this.uiObserver.$.bindNewPipeAndPassRemote())
+
+    const [{ conversationEntriesState }, { conversationHistory }] =
+      await Promise.all([
+        this.conversationHandler.bindUntrustedConversationUI(
+          this.conversationObserver.$.bindNewPipeAndPassRemote(),
+        ),
+        this.conversationHandler.getConversationHistory(),
+      ])
     this.setPartialState({
       ...conversationEntriesState,
-      conversationHistory
+      conversationHistory,
     })
     this.conversationObserver.onConversationHistoryUpdate.addListener(
       async (entry?: Mojom.ConversationTurn) => {
         if (entry) {
           // Use the shared utility function to update the history
-          const updatedHistory =
-            updateConversationHistory(this.state.conversationHistory, entry)
+          const updatedHistory = updateConversationHistory(
+            this.state.conversationHistory,
+            entry,
+          )
           this.setPartialState({
-            conversationHistory: updatedHistory
+            conversationHistory: updatedHistory,
           })
         } else {
           // When no entry is provided, fetch the full history
@@ -78,19 +113,38 @@ export default class UntrustedConversationFrameAPI extends API<ConversationEntri
             await this.conversationHandler.getConversationHistory()
           this.setPartialState({ conversationHistory })
         }
-      }
+      },
     )
 
-    this.conversationObserver.onEntriesUIStateChanged.addListener((state: Mojom.ConversationEntriesState) => {
-      this.setPartialState(state)
-    })
+    this.conversationObserver.onToolUseEventOutput.addListener(
+      (entryUuid: string, toolUse: Mojom.ToolUseEvent) => {
+        const updatedHistory = updateToolUseEventInHistory(
+          this.state.conversationHistory,
+          entryUuid,
+          toolUse,
+        )
+        if (updatedHistory) {
+          this.setPartialState({ conversationHistory: updatedHistory })
+        }
+      },
+    )
 
-    this.conversationObserver.associatedContentChanged.addListener((content: Mojom.AssociatedContent[]) => {
-      this.setPartialState({ associatedContent: content })
-    })
+    this.conversationObserver.onEntriesUIStateChanged.addListener(
+      (state: Mojom.ConversationEntriesState) => {
+        this.setPartialState(state)
+      },
+    )
+
+    this.conversationObserver.associatedContentChanged.addListener(
+      (content: Mojom.AssociatedContent[]) => {
+        this.setPartialState({ associatedContent: content })
+      },
+    )
 
     // Set up communication with the parent frame
-    this.uiHandler.bindParentPage(this.parentUIFrame.$.bindNewPipeAndPassReceiver())
+    this.uiHandler.bindParentPage(
+      this.parentUIFrame.$.bindNewPipeAndPassReceiver(),
+    )
 
     // Send document height to parent frame
     window.addEventListener('resize', () => this.sendDocumentHeight())

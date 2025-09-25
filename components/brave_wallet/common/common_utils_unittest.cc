@@ -7,8 +7,13 @@
 
 #include "base/test/gtest_util.h"
 #include "base/test/scoped_feature_list.h"
+#include "base/values.h"
 #include "brave/components/brave_wallet/common/features.h"
+#include "brave/components/brave_wallet/common/pref_names.h"
 #include "brave/components/brave_wallet/common/test_utils.h"
+#include "build/build_config.h"
+#include "components/prefs/pref_registry_simple.h"
+#include "components/prefs/testing_pref_service.h"
 #include "testing/gmock/include/gmock/gmock.h"
 #include "testing/gtest/include/gtest/gtest.h"
 
@@ -367,6 +372,47 @@ TEST(CommonUtils, GetNetworkForCardanoAccount) {
                 mojom::AccountKind::kDerived, 123)));
 }
 
+TEST(CommonUtils, IsPolkadotKeyring) {
+  for (const auto& keyring_id : kAllKeyrings) {
+    if (keyring_id == mojom::KeyringId::kPolkadotMainnet ||
+        keyring_id == mojom::KeyringId::kPolkadotTestnet) {
+      EXPECT_TRUE(IsPolkadotKeyring(keyring_id));
+    } else {
+      EXPECT_FALSE(IsPolkadotKeyring(keyring_id));
+    }
+  }
+}
+
+TEST(CommonUtils, IsPolkadotNetwork) {
+  EXPECT_TRUE(IsPolkadotNetwork(mojom::kPolkadotMainnet));
+  EXPECT_TRUE(IsPolkadotNetwork(mojom::kPolkadotTestnet));
+
+  EXPECT_FALSE(IsPolkadotNetwork(mojom::kMainnetChainId));
+  EXPECT_FALSE(IsPolkadotNetwork(mojom::kFilecoinMainnet));
+  EXPECT_FALSE(IsPolkadotNetwork(mojom::kSolanaMainnet));
+  EXPECT_FALSE(IsPolkadotNetwork(mojom::kBitcoinMainnet));
+  EXPECT_FALSE(IsPolkadotNetwork(""));
+  EXPECT_FALSE(IsPolkadotNetwork("abc"));
+}
+
+TEST(CommonUtils, GetNetworkForPolkadotKeyring) {
+  EXPECT_EQ(mojom::kPolkadotMainnet,
+            GetNetworkForPolkadotKeyring(mojom::KeyringId::kPolkadotMainnet));
+  EXPECT_EQ(mojom::kPolkadotTestnet,
+            GetNetworkForPolkadotKeyring(mojom::KeyringId::kPolkadotTestnet));
+}
+
+TEST(CommonUtils, GetNetworkForPolkadotAccount) {
+  EXPECT_EQ(mojom::kPolkadotMainnet,
+            GetNetworkForPolkadotAccount(MakeIndexBasedAccountId(
+                mojom::CoinType::DOT, mojom::KeyringId::kPolkadotMainnet,
+                mojom::AccountKind::kDerived, 123)));
+  EXPECT_EQ(mojom::kPolkadotTestnet,
+            GetNetworkForPolkadotAccount(MakeIndexBasedAccountId(
+                mojom::CoinType::DOT, mojom::KeyringId::kPolkadotTestnet,
+                mojom::AccountKind::kDerived, 123)));
+}
+
 TEST(CommonUtils, GetActiveEndpointUrl) {
   mojom::NetworkInfo chain = GetTestNetworkInfo1();
   EXPECT_EQ(GURL("https://url1.com"), GetActiveEndpointUrl(chain));
@@ -389,7 +435,8 @@ TEST(CommonUtils, GetEnabledCoins) {
   base::test::ScopedFeatureList disabled_feature_list;
   const std::vector<base::test::FeatureRef> coin_features = {
       features::kBraveWalletBitcoinFeature, features::kBraveWalletZCashFeature,
-      features::kBraveWalletCardanoFeature};
+      features::kBraveWalletCardanoFeature,
+      features::kBraveWalletPolkadotFeature};
   disabled_feature_list.InitWithFeatures({}, coin_features);
 
   uint32_t test_cases_count = (1 << coin_features.size());
@@ -423,10 +470,14 @@ TEST(CommonUtils, GetEnabledCoins) {
       EXPECT_EQ(coins[last_pos++], mojom::CoinType::ADA);
     }
 
+    if (IsPolkadotEnabled()) {
+      EXPECT_EQ(coins[last_pos++], mojom::CoinType::DOT);
+    }
+
     EXPECT_EQ(last_pos, coins.size());
   }
 
-  static_assert(AllCoinsTested<6>());
+  static_assert(AllCoinsTested<7>());
 }
 
 TEST(CommonUtils, GetEnabledKeyrings) {
@@ -437,6 +488,7 @@ TEST(CommonUtils, GetEnabledKeyrings) {
       features::kBraveWalletBitcoinImportFeature,
       features::kBraveWalletBitcoinLedgerFeature,
       features::kBraveWalletCardanoFeature,
+      features::kBraveWalletPolkadotFeature,
   };
   disabled_feature_list.InitWithFeatures({}, coin_features);
 
@@ -485,6 +537,11 @@ TEST(CommonUtils, GetEnabledKeyrings) {
     if (IsCardanoEnabled()) {
       EXPECT_EQ(keyrings[last_pos++], mojom::KeyringId::kCardanoMainnet);
       EXPECT_EQ(keyrings[last_pos++], mojom::KeyringId::kCardanoTestnet);
+    }
+
+    if (IsPolkadotEnabled()) {
+      EXPECT_EQ(keyrings[last_pos++], mojom::KeyringId::kPolkadotMainnet);
+      EXPECT_EQ(keyrings[last_pos++], mojom::KeyringId::kPolkadotTestnet);
     }
 
     EXPECT_EQ(last_pos, keyrings.size());
@@ -560,7 +617,17 @@ TEST(CommonUtils, GetSupportedKeyringsForNetwork) {
                                              "any non mainnet chain"),
               ElementsAreArray({mojom::KeyringId::kCardanoTestnet}));
 
-  static_assert(AllCoinsTested<6>());
+  EXPECT_THAT(GetSupportedKeyringsForNetwork(mojom::CoinType::DOT,
+                                             mojom::kPolkadotMainnet),
+              ElementsAreArray({mojom::KeyringId::kPolkadotMainnet}));
+  EXPECT_THAT(GetSupportedKeyringsForNetwork(mojom::CoinType::DOT,
+                                             mojom::kPolkadotTestnet),
+              ElementsAreArray({mojom::KeyringId::kPolkadotTestnet}));
+  EXPECT_THAT(GetSupportedKeyringsForNetwork(mojom::CoinType::DOT,
+                                             "any non mainnet chain"),
+              ElementsAreArray({mojom::KeyringId::kPolkadotTestnet}));
+
+  static_assert(AllCoinsTested<7>());
 
   static_assert(AllKeyringsTested<14>());
 }
@@ -637,7 +704,9 @@ TEST(CommonUtils, MakeAccountId) {
   EXPECT_DCHECK_DEATH(MakeAccountId(mojom::CoinType::ADA,
                                     mojom::KeyringId::kCardanoMainnet,
                                     mojom::AccountKind::kDerived, "0xabc"));
-  static_assert(AllCoinsTested<6>());
+  // TODO(https://github.com/brave/brave-browser/issues/49225): Polkadot Keyring
+  // Testing
+  static_assert(AllCoinsTested<7>());
 
   static_assert(AllKeyringsTested<14>());
 }
@@ -709,7 +778,7 @@ TEST(CommonUtils, MakeIndexBasedAccountId_BTC) {
   EXPECT_TRUE(MakeIndexBasedAccountId(mojom::CoinType::BTC,
                                       mojom::KeyringId::kBitcoinHardwareTestnet,
                                       mojom::AccountKind::kHardware, 123));
-  static_assert(AllCoinsTested<6>());
+  static_assert(AllCoinsTested<7>());
 
   static_assert(AllKeyringsTested<14>());
 }
@@ -814,6 +883,53 @@ TEST(CommonUtils, GetNetworkForBitcoinAccount) {
             GetNetworkForBitcoinAccount(MakeIndexBasedAccountId(
                 mojom::CoinType::BTC, mojom::KeyringId::kBitcoin84Testnet,
                 mojom::AccountKind::kDerived, 123)));
+}
+
+class BraveWalletPolicyTest : public testing::Test {
+ public:
+  BraveWalletPolicyTest() {
+    prefs_.registry()->RegisterBooleanPref(prefs::kDisabledByPolicy, false);
+  }
+
+ protected:
+  void BlockWalletByPolicy(bool value) {
+    prefs_.SetManagedPref(prefs::kDisabledByPolicy, base::Value(value));
+  }
+
+  TestingPrefServiceSimple prefs_;
+};
+
+TEST_F(BraveWalletPolicyTest, PolicyDisablesWallet) {
+  // Set policy to disable Brave Wallet
+  BlockWalletByPolicy(true);
+
+  // Test that the policy preference is set correctly
+  EXPECT_TRUE(prefs_.GetBoolean(prefs::kDisabledByPolicy));
+
+#if BUILDFLAG(IS_ANDROID)
+  // On android the policy is not enforced
+  EXPECT_TRUE(IsAllowed(&prefs_));
+#else
+  // On other platforms, policy should be enforced
+  EXPECT_FALSE(IsAllowed(&prefs_));
+#endif  // BUILDFLAG(IS_ANDROID)
+}
+
+TEST_F(BraveWalletPolicyTest, PolicyEnablesWallet) {
+  // Set policy to enable Brave Wallet
+  BlockWalletByPolicy(false);
+
+  // Test that the policy preference is set correctly
+  EXPECT_FALSE(prefs_.GetBoolean(prefs::kDisabledByPolicy));
+
+  // Test that IsAllowed returns true when policy enables it
+  // This should be true on all platforms
+  EXPECT_TRUE(IsAllowed(&prefs_));
+}
+
+TEST_F(BraveWalletPolicyTest, DefaultBehavior) {
+  // Test that IsAllowed returns true when no policy is set
+  EXPECT_TRUE(IsAllowed(&prefs_));
 }
 
 }  // namespace brave_wallet

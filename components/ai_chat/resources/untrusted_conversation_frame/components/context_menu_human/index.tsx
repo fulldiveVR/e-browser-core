@@ -19,7 +19,7 @@ interface ContextMenuHumanProps {
   onClick: () => void
   onClose: () => void
   onEditQuestionClicked: () => void
-  onCopyQuestionClicked: () => void
+  onCopyQuestionClicked?: () => void
 }
 
 export default function ContextMenuHuman(props: ContextMenuHumanProps) {
@@ -35,31 +35,30 @@ export default function ContextMenuHuman(props: ContextMenuHumanProps) {
         <Button
           fab
           slot='anchor-content'
-          size="tiny"
-          kind="plain-faint"
+          size='tiny'
+          kind='plain-faint'
           onClick={props.onClick}
           className={classnames({
             [styles.moreButton]: true,
             [styles.moreButtonActive]: props.isOpen,
-            [styles.moreButtonHide]: conversationContext.isMobile
+            [styles.moreButtonHide]: conversationContext.isMobile,
           })}
         >
           <Icon name='more-vertical' />
         </Button>
-        {conversationContext.canSubmitUserEntries && (
-          <leo-menu-item
-            onClick={props.onEditQuestionClicked}
-          >
-            <Icon name='edit-pencil' />
-            <span>{getLocale(S.CHAT_UI_EDIT_PROMPT_BUTTON_LABEL)}</span>
+        {conversationContext.canSubmitUserEntries
+          && props.onEditQuestionClicked && (
+            <leo-menu-item onClick={props.onEditQuestionClicked}>
+              <Icon name='edit-pencil' />
+              <span>{getLocale(S.CHAT_UI_EDIT_PROMPT_BUTTON_LABEL)}</span>
+            </leo-menu-item>
+          )}
+        {props.onCopyQuestionClicked && (
+          <leo-menu-item onClick={props.onCopyQuestionClicked}>
+            <Icon name='copy' />
+            <span>{getLocale(S.CHAT_UI_COPY_PROMPT_BUTTON_LABEL)}</span>
           </leo-menu-item>
         )}
-        <leo-menu-item
-          onClick={props.onCopyQuestionClicked}
-        >
-          <Icon name='copy' />
-          <span>{getLocale(S.CHAT_UI_COPY_PROMPT_BUTTON_LABEL)}</span>
-        </leo-menu-item>
       </ButtonMenu>
     </>
   )

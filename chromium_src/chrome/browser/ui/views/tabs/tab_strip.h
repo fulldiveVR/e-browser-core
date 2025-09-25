@@ -12,11 +12,11 @@
 
 class BraveTabHoverCardController;
 
-#define UpdateHoverCard                    \
-  UpdateHoverCard_Unused();                \
-  friend class BraveTabHoverTest;          \
-  friend class BraveTabStrip;              \
-  friend class VerticalTabStripRegionView; \
+#define UpdateHoverCard                         \
+  UpdateHoverCard_Unused();                     \
+  friend class BraveTabHoverTest;               \
+  friend class BraveTabStrip;                   \
+  friend class BraveVerticalTabStripRegionView; \
   void UpdateHoverCard
 
 #define ShouldDrawStrokes   \
@@ -37,7 +37,7 @@ class BraveTabHoverCardController;
   }                                                                     \
   virtual TabDragContext* GetDragContext
 #define TabHoverCardController BraveTabHoverCardController
-#include "src/chrome/browser/ui/views/tabs/tab_strip.h"  // IWYU pragma: export
+#include <chrome/browser/ui/views/tabs/tab_strip.h>  // IWYU pragma: export
 #undef TabHoverCardController
 #undef GetDragContext
 #undef ShouldDrawStrokes

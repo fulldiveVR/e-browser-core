@@ -179,6 +179,10 @@ class RunableConfiguration:
     args.extend(binary.get_run_benchmark_args())
     browser_args.extend(self.binary.get_browser_args())
 
+    # process the benchmark-specific args:
+    args.extend(benchmark_config.extra_benchmark_args)
+    browser_args.extend(benchmark_config.extra_browser_args)
+
     # process the extra args from json config:
     args.extend(self.config.extra_benchmark_args)
     browser_args.extend(self.config.extra_browser_args)
@@ -225,14 +229,6 @@ class RunableConfiguration:
     if custom_handler is not None and not local_run:
       assert bench_out_dir
       return custom_handler(bench_out_dir)
-
-    # Optimize redownloading trace_processor_shell: if the file exists use it.
-    is_win = sys.platform == 'win32'
-    trace_processor_path = os.path.join(
-        path_util.GetChromiumPerfDir(), 'core', 'perfetto_binary_roller', 'bin',
-        'trace_processor_shell' + ('.exe' if is_win else ''))
-    if os.path.isfile(trace_processor_path):
-      args.append(f'--trace-processor-path={trace_processor_path}')
 
     if self.common_options.verbose:
       args.extend(['--show-stdout', '--verbose'])
@@ -329,7 +325,7 @@ class RunableConfiguration:
 
     run_tests_ok = self.RunTests()
     if self.common_options.do_report:
-      if run_tests_ok or self.common_options.report_on_failure:
+      if run_tests_ok:
         report_ok = self.ReportToDashboard()
     self.logs.append(self.TakeStatusLine())
     if run_tests_ok and report_ok and not self.config.save_artifacts:
@@ -378,7 +374,7 @@ def SpawnConfigurationsFromTargetList(target_list: List[str],
     if not config.location:
       config.location = location
     if not config.version:
-      raise RuntimeError(f'Can get the version from target {target_string}')
+      raise RuntimeError(f'Can get the version from target "{target_string}"')
     if not config.label:
       config.label = config.version.to_string()
     configurations.append(config)

@@ -310,6 +310,18 @@ void RewardsPageHandler::AcceptTermsOfServiceUpdate(
   std::move(callback).Run();
 }
 
+void RewardsPageHandler::GetSelfCustodyProviderInvites(
+    GetSelfCustodyProviderInvitesCallback callback) {
+  std::vector<std::string> providers;
+  auto& self_custody_dict = prefs_->GetDict(prefs::kSelfCustodyAvailable);
+  for (auto&& [key, value] : self_custody_dict) {
+    if (auto available = value.GetIfBool(); available && *available) {
+      providers.push_back(key);
+    }
+  }
+  std::move(callback).Run(std::move(providers));
+}
+
 void RewardsPageHandler::GetSelfCustodyInviteDismissed(
     GetSelfCustodyInviteDismissedCallback callback) {
   std::move(callback).Run(
@@ -687,6 +699,16 @@ void RewardsPageHandler::FetchUICards(FetchUICardsCallback callback) {
 
 void RewardsPageHandler::ResetRewards(ResetRewardsCallback callback) {
   rewards_service_->CompleteReset(std::move(callback));
+}
+
+void RewardsPageHandler::RecordOfferView(RecordOfferViewCallback callback) {
+  p3a::RecordOfferView(prefs_);
+  std::move(callback).Run();
+}
+
+void RewardsPageHandler::RecordOfferClick(RecordOfferClickCallback callback) {
+  p3a::RecordOfferClicks(prefs_, true);
+  std::move(callback).Run();
 }
 
 void RewardsPageHandler::OnUpdate(UpdateSource update_source) {

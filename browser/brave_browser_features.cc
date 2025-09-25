@@ -11,7 +11,7 @@ namespace features {
 
 BASE_FEATURE(kBraveNewTabPageRefreshEnabled,
              "BraveNewTabPageRefreshEnabled",
-             base::FEATURE_DISABLED_BY_DEFAULT);
+             base::FEATURE_ENABLED_BY_DEFAULT);
 
 // Cleanup Session Cookies on browser restart if Session Restore is enabled.
 BASE_FEATURE(kBraveCleanupSessionCookiesOnSessionRestore,
@@ -54,6 +54,13 @@ BASE_FEATURE(kBraveDayZeroExperiment,
 // Enable new onboarding on Android
 BASE_FEATURE(kNewAndroidOnboarding,
              "NewAndroidOnboarding",
+             base::FEATURE_DISABLED_BY_DEFAULT);
+
+// Enable dynamic colors on Android, which allows the app to adapt its
+// color scheme based on the user's wallpaper and system theme.
+// This feature is only available on Android 12 and above.
+BASE_FEATURE(kBraveAndroidDynamicColors,
+             "BraveAndroidDynamicColors",
              base::FEATURE_DISABLED_BY_DEFAULT);
 #endif  // BUILDFLAG(IS_ANDROID)
 

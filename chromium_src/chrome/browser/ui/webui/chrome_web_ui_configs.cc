@@ -7,6 +7,7 @@
 
 #include "brave/browser/ui/webui/ai_chat/ai_chat_ui.h"
 #include "brave/browser/ui/webui/brave_account/brave_account_ui.h"
+#include "brave/browser/ui/webui/brave_wallet/wallet_page_ui.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/brave_account/features.h"
 #include "brave/components/brave_education/buildflags.h"
@@ -14,13 +15,12 @@
 
 #define RegisterChromeWebUIConfigs RegisterChromeWebUIConfigs_ChromiumImpl
 
-#include "src/chrome/browser/ui/webui/chrome_web_ui_configs.cc"
+#include <chrome/browser/ui/webui/chrome_web_ui_configs.cc>
 #undef RegisterChromeWebUIConfigs
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/ui/webui/brave_rewards/rewards_page_top_ui.h"
 #include "brave/browser/ui/webui/brave_settings_ui.h"
-#include "brave/browser/ui/webui/brave_shields/cookie_list_opt_in_ui.h"
 #include "brave/browser/ui/webui/brave_shields/shields_panel_ui.h"
 #include "brave/browser/ui/webui/brave_wallet/wallet_panel_ui.h"
 #include "brave/browser/ui/webui/private_new_tab_page/brave_private_new_tab_ui.h"
@@ -78,9 +78,9 @@ void RegisterChromeWebUIConfigs() {
   map.AddWebUIConfig(std::make_unique<brave_rewards::RewardsPageTopUIConfig>());
   map.AddWebUIConfig(std::make_unique<BravePrivateNewTabUIConfig>());
   map.AddWebUIConfig(std::make_unique<BraveSettingsUIConfig>());
-  map.AddWebUIConfig(std::make_unique<CookieListOptInUIConfig>());
   map.AddWebUIConfig(std::make_unique<ShieldsPanelUIConfig>());
   map.AddWebUIConfig(std::make_unique<SpeedreaderToolbarUIConfig>());
+  map.AddWebUIConfig(std::make_unique<WalletPageUIConfig>());
   map.AddWebUIConfig(std::make_unique<WalletPanelUIConfig>());
   map.AddWebUIConfig(
       std::make_unique<webcompat_reporter::WebcompatReporterUIConfig>());

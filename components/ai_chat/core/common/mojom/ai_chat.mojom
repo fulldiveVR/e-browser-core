@@ -11,9 +11,31 @@ import "mojo/public/mojom/base/time.mojom";
 import "mojo/public/mojom/base/values.mojom";
 import "url/mojom/url.mojom";
 
+// Share some tool names between the browser and the UI so that
+// custom user actions and UI representations can be created.
+const string kUserChoiceToolName = "user_choice_tool";
+const string kMemoryStorageToolName = "memory_storage_tool";
+
+// Maximum length for memory and customization records.
+const int32 kMaxMemoryRecordLength = 512;
+
+// Full page screenshot filename prefix
+const string kFullPageScreenshotPrefix = "fullscreenshot_";
+
+// File upload limits
+// https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Message.html#API_runtime_Message_Contents
+const uint32 MAX_IMAGES = 20;
+const uint32 MAX_DOCUMENTS = 5;
+const uint32 MAX_DOCUMENT_SIZE_BYTES = 4718592; // 4.5MB
+
 enum CharacterType {
   HUMAN,
   ASSISTANT
+};
+
+enum ConversationCapability {
+  CHAT,
+  CONTENT_AGENT
 };
 
 enum APIError {
@@ -84,8 +106,13 @@ struct AssociatedContent {
 
   url.mojom.Url url;
 
-  // Percentage of the content that has been utilized by remote LLM (0-100)
+  // Percentage of the text content that has been utilized by remote LLM (0-100)
   int32 content_used_percentage;
+
+  // If set, the conversation turn that this content is associated with.
+  // If |nullopt| this indicates that the user has staged the content but it
+  // hasn't been submitted yet (i.e. its in the input box).
+  string? conversation_turn_uuid;
 };
 
 struct Conversation {
@@ -122,6 +149,9 @@ struct Conversation {
 struct ContentArchive {
   string content_uuid;
   string content;
+
+  // The turn this Content was sent with.
+  string conversation_turn_uuid;
 };
 
 struct ConversationArchive {
@@ -200,6 +230,7 @@ struct ConversationTitleEvent {
 enum UploadedFileType {
   kImage = 0,
   kScreenshot,
+  kPdf,
 };
 
 struct UploadedFile {
@@ -363,6 +394,8 @@ struct Model {
   bool vision_support;
   // Model supports tool use
   bool supports_tools = false;
+  // Is a suggested model
+  bool is_suggested_model;
 };
 
 struct ModelWithSubtitle {
@@ -442,11 +475,17 @@ interface AIChatUIHandler {
   // Open various external links or dialogs depending on the platform
   OpenAIChatSettings();
 
+  // Open AI Chat memory management settings
+  OpenMemorySettings();
+
   // From a sidebar or popup conversation, open the conversation in the
   // full-page UI.
   // TODO(petemill): WebUI Compile-timesupport for build flags
   // so that we can use [EnableIfNot=is_android] here.
   OpenConversationFullPage(string conversation_uuid);
+
+  // Open the AIChat Agent profile
+  OpenAIChatAgentProfile();
 
   OpenURL(url.mojom.Url url);
   OpenStorageSupportUrl();
@@ -459,8 +498,12 @@ interface AIChatUIHandler {
   ShowSoftKeyboard();
   // use_media_capture is used on Android only currently. It could
   // be used on desktop as well in the future when a camera support is added.
-  UploadImage(bool use_media_capture)
-      => (array<UploadedFile>? uploaded_images);
+  UploadFile(bool use_media_capture)
+      => (array<UploadedFile>? uploaded_files);
+
+  // Process image files using backend processing (resizing and sanitization)
+  ProcessImageFile(array<uint8> file_data, string filename)
+      => (UploadedFile? processed_file);
 
   // Get a plural string for the given key and count.
   GetPluralString(string key, int32 count) => (string plural_string);
@@ -499,7 +542,7 @@ interface ChatUI {
   // if any.
   OnNewDefaultConversation(int32? content_id);
   OnChildFrameBound(pending_receiver<ParentUIFrame> receiver);
-  // Notifies that files are selected between AIChatUIHandler::UploadImage() is
+  // Notifies that files are selected between AIChatUIHandler::UploadFile() is
   // called and return of uploaded files after processed.
   OnUploadFilesSelected();
 };
@@ -509,6 +552,7 @@ struct ConversationState {
   bool is_request_in_progress;
   array<Model> all_models;
   string current_model_key;
+  string default_model_key;
   array<string> suggested_questions;
   SuggestionGenerationStatus suggestion_status;
   array<AssociatedContent> associated_content;
@@ -531,6 +575,10 @@ struct ConversationEntriesState {
   // How much of the content has been used by the AI engine, percentage,or null
   // if no content is associated.
   uint32? content_used_percentage;
+  // Percentage of the visual content that has been utilized by remote LLM
+  // (0-100)
+  // This tracks image/screenshot truncation due to MAX_IMAGES limits
+  uint32? visual_content_used_percentage;
   // Whether the UI should represent that the user cannot submit new messages
   // or edits to the conversation.
   bool can_submit_user_entries;
@@ -538,6 +586,7 @@ struct ConversationEntriesState {
   uint64 total_tokens;
   // Indicates the number of tokens that were trimmed from the conversation
   uint64 trimmed_tokens;
+  ConversationCapability conversation_capability;
 };
 
 // Browser-side handler for a Conversation
@@ -565,7 +614,6 @@ interface ConversationHandler {
   SubmitHumanConversationEntry(
       string input, array<UploadedFile>? uploaded_files);
   SubmitHumanConversationEntryWithAction(string input, ActionType action_type);
-  ModifyConversation(uint32 turn_index, string new_text);
   SubmitSummarizationRequest();
 
   // Submit one of the generated suggested questions for response from
@@ -615,7 +663,11 @@ interface UntrustedConversationHandler {
   // Get all visible history entries, including in-progress responses
   GetConversationHistory() => (array<ConversationTurn> conversation_history);
 
-  ModifyConversation(uint32 turn_index, string new_text);
+  ModifyConversation(string entry_uuid, string new_text);
+
+  // Allows a client to provide an answer to a tool use request
+  // as a result of a user action.
+  RespondToToolUseRequest(string tool_id, array<ContentBlock> output_json);
 
   // Regenerate answer using specified model.
   RegenerateAnswer(string turn_uuid, string model_key);
@@ -625,6 +677,7 @@ interface UntrustedConversationHandler {
 // content generated by the AI engine.
 interface UntrustedConversationUI {
   OnConversationHistoryUpdate(ConversationTurn? entry);
+  OnToolUseEventOutput(string entry_uuid, ToolUseEvent tool_use);
   OnEntriesUIStateChanged(ConversationEntriesState state);
 
   // Called when the associated content is changed - called when the untrusted
@@ -640,7 +693,9 @@ interface ConversationUI {
   // it could be changed from the browser.
   // When the browser changes the model, it will also provide a new list
   // of models.
-  OnModelDataChanged(string conversation_model_key, array<Model> all_models);
+  OnModelDataChanged(string conversation_model_key,
+                     string default_model_key,
+                     array<Model> all_models);
   // Provides the full list of questions for the active tab in the page's
   // Browser window.
   OnSuggestedQuestionsChanged(

@@ -39,7 +39,7 @@
 #include "components/page_info/core/features.h"
 #include "components/performance_manager/public/features.h"
 #include "components/permissions/features.h"
-#include "components/plus_addresses/features.h"
+#include "components/plus_addresses/core/common/features.h"
 #include "components/privacy_sandbox/privacy_sandbox_features.h"
 #include "components/safe_browsing/core/common/features.h"
 #include "components/search/ntp_features.h"
@@ -70,6 +70,7 @@
 #else
 #include "chrome/browser/enterprise/connectors/analysis/content_analysis_features.h"
 #include "chrome/browser/sharing_hub/sharing_hub_features.h"
+#include "chrome/browser/ui/toasts/toast_features.h"
 #include "components/device_signals/core/common/signals_features.h"
 #include "components/translate/core/common/translate_util.h"
 #include "extensions/common/extension_features.h"
@@ -80,12 +81,9 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
   // Please, keep alphabetized
   const base::Feature* disabled_features[] = {
       &aggregation_service::kAggregationServiceMultipleCloudProviders,
-#if BUILDFLAG(IS_ANDROID)
-      &android_webview::features::kWebViewMediaIntegrityApiBlinkExtension,
-#endif
       &attribution_reporting::features::kConversionMeasurement,
       &autofill::features::kAutofillAiServerModel,
-      &autofill::features::kAutofillEnableAmountExtractionDesktop,
+      &autofill::features::kAutofillEnableAmountExtraction,
       &autofill::features::kAutofillEnableBuyNowPayLater,
       &autofill::features::kAutofillEnableCardBenefitsForAmericanExpress,
       &autofill::features::kAutofillEnableCardBenefitsForBmo,
@@ -105,6 +103,7 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &blink::features::kFledgeConsiderKAnonymity,
       &blink::features::kFledgeEnforceKAnonymity,
       &blink::features::kParakeet,
+      &blink::features::kPermissionElement,
       &blink::features::kPrerender2,
       &blink::features::kPrivateAggregationApi,
 #if BUILDFLAG(IS_ANDROID)
@@ -122,7 +121,6 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &content_settings::features::kUserBypassUI,
 #if !BUILDFLAG(IS_ANDROID)
       &enterprise_signals::features::kDeviceSignalsConsentDialog,
-      &extensions_features::kExtensionManifestV2DeprecationWarning,
       &extensions_features::kExtensionManifestV2Disabled,
       &extensions_features::kExtensionManifestV2Unsupported,
       &extensions_features::kExtensionsManifestV3Only,
@@ -130,8 +128,9 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX)
       &feature_engagement::kIPHGMCCastStartStopFeature,
       &feature_engagement::kIPHPasswordsManagementBubbleAfterSaveFeature,
+      &feature_engagement::kIPHTabSearchToolbarButtonFeature,
 #endif
-      &features::kBookmarkTriggerForPrerender2,
+      &features::kBookmarkTriggerForPrefetch,
       &features::kChromeStructuredMetrics,
       &features::kCookieDeprecationFacilitatedTesting,
 #if !BUILDFLAG(IS_ANDROID)
@@ -161,9 +160,7 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
 #endif
       &features::kSCTAuditing,
       &features::kScrimForBrowserWindowModal,
-      &features::KScrimForTabModal,
       &features::kServiceWorkerAutoPreload,
-      &features::kSideBySide,
       &features::kTabHoverCardImages,
 #if !BUILDFLAG(IS_ANDROID)
       &features::kTrustSafetySentimentSurvey,
@@ -190,7 +187,6 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &history_embeddings::kLaunchedHistoryEmbeddings,
       &lens::features::kLensOverlay,
       &lens::features::kLensStandalone,
-      &manta::features::kMantaService,
       &media::kLiveCaption,
       &metrics::structured::kPhoneHubStructuredMetrics,
       &net::features::kEnableWebTransportDraft07,
@@ -214,7 +210,6 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &optimization_guide::features::kOptimizationGuideFetchingForSRP,
       &optimization_guide::features::kOptimizationGuidePersonalizedFetching,
       &optimization_guide::features::kOptimizationHints,
-      &optimization_guide::features::kRemoteOptimizationGuideFetching,
       &page_image_service::kImageService,
       &page_image_service::kImageServiceSuggestPoweredImages,
       &permissions::features::kCpssUseTfliteSignatureRunner,
@@ -225,18 +220,13 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &permissions::features::kPermissionPredictionsV2,
       &permissions::features::kShowRelatedWebsiteSetsPermissionGrants,
       &plus_addresses::features::kPlusAddressesEnabled,
-      &policy::kDevicePolicyInvalidationWithDirectMessagesEnabled,
-      &policy::kDeviceLocalAccountPolicyInvalidationWithDirectMessagesEnabled,
-      &policy::kCbcmPolicyInvalidationWithDirectMessagesEnabled,
-      &policy::kUserPolicyInvalidationWithDirectMessagesEnabled,
       &privacy_sandbox::kEnforcePrivacySandboxAttestations,
       &privacy_sandbox::kFingerprintingProtectionUx,
       &privacy_sandbox::kOverridePrivacySandboxSettingsLocalTesting,
       &privacy_sandbox::kPrivacySandboxSettings4,
-      &safe_browsing::kDownloadsPageReferrerUrl,
-      &safe_browsing::kExtensionTelemetryForEnterprise,
+      &safe_browsing::kClientSideDetectionClipboardCopyApi,
       &safe_browsing::kGooglePlayProtectInApkTelemetry,
-      &segmentation_platform::features::kSegmentationPlatformCollectTabRankData,
+      &safe_browsing::kNotificationTelemetry,
       &segmentation_platform::features::kSegmentationPlatformDeviceTier,
       &segmentation_platform::features::kSegmentationPlatformFeature,
       &segmentation_platform::features::kSegmentationPlatformTimeDelaySampling,
@@ -245,6 +235,7 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
       &switches::kSyncEnableBookmarksInTransportMode,
       &syncer::kSyncAutofillLoyaltyCard,
 #if !BUILDFLAG(IS_ANDROID)
+      &toast_features::kPinnedTabToastOnClose,
       &translate::kTFLiteLanguageDetectionEnabled,
 #endif
       &webapps::features::kWebAppsEnableMLModelForPromotion,
@@ -258,21 +249,19 @@ TEST(FeatureDefaultsTest, DisabledFeatures) {
 TEST(FeatureDefaultsTest, EnabledFeatures) {
   const base::Feature* enabled_features[] = {
       &omnibox::kAblateSearchProviderWarmup,
-      &blink::features::kPrefetchPrivacyChanges,
       &blink::features::kReducedReferrerGranularity,
       &blink::features::kReduceUserAgentMinorVersion,
       &blink::features::kUACHOverrideBlank,
+      &features::kBookmarkTriggerForPrerender2KillSwitch,
       &features::kCertificateTransparencyAskBeforeEnabling,
       &features::kDesktopPWAsTabStripSettings,
 #if !BUILDFLAG(IS_ANDROID)
       &features::kLocationProviderManager,
 #endif
+      &features::kSideBySide,
       &features::kTabstripComboButton,
       &media::kEnableTabMuting,
       &net::features::kPartitionConnectionsByNetworkIsolationKey,
-#if BUILDFLAG(IS_ANDROID)
-      &omnibox::kRetainOmniboxOnFocus,
-#endif
 #if !BUILDFLAG(IS_ANDROID)
       &sharing_hub::kDesktopScreenshots,
 #endif

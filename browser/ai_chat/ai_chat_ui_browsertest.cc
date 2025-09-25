@@ -34,6 +34,7 @@
 #include "chrome/common/pref_names.h"
 #include "chrome/test/base/in_process_browser_test.h"
 #include "chrome/test/base/ui_test_utils.h"
+#include "components/prefs/pref_service.h"
 #include "content/public/browser/web_contents.h"
 #include "content/public/test/browser_test.h"
 #include "content/public/test/browser_test_utils.h"
@@ -174,18 +175,15 @@ class AIChatUIBrowserTest : public InProcessBrowserTest {
                         bool wait_for_callback = true) {
     SCOPED_TRACE(testing::Message() << location.ToString());
     base::RunLoop run_loop;
-    chat_tab_helper_->GetPageContent(
-        base::BindLambdaForTesting(
-            [&run_loop, expected_text, wait_for_callback](
-                std::string text, bool is_video,
-                std::string invalidation_token) {
-              EXPECT_FALSE(is_video);
-              EXPECT_EQ(text, expected_text);
-              if (wait_for_callback) {
-                run_loop.Quit();
-              }
-            }),
-        "");
+    chat_tab_helper_->GetContent(base::BindLambdaForTesting(
+        [&run_loop, expected_text,
+         wait_for_callback](ai_chat::PageContent content) {
+          EXPECT_FALSE(content.is_video);
+          EXPECT_EQ(content.content, expected_text);
+          if (wait_for_callback) {
+            run_loop.Quit();
+          }
+        }));
     if (wait_for_callback) {
       run_loop.Run();
     }
@@ -229,102 +227,6 @@ class AIChatUIBrowserTest : public InProcessBrowserTest {
   content::ContentMockCertVerifier mock_cert_verifier_;
 };
 
-IN_PROC_BROWSER_TEST_F(AIChatUIBrowserTest, PrintPreview) {
-  NavigateURL(https_server_.GetURL("docs.google.com", "/long_canvas.html"),
-              false);
-#if BUILDFLAG(ENABLE_TEXT_RECOGNITION)
-  FetchPageContent(
-      FROM_HERE, "This is the way.\n\nI have spoken.\nWherever I Go, He Goes.");
-  // Panel is still active so we don't need to set it up again
-
-  // Page recognition host with a canvas element
-  NavigateURL(https_server_.GetURL("docs.google.com", "/canvas.html"), false);
-  FetchPageContent(FROM_HERE, "this is the way");
-
-  // Ignores all dom content, only does print preview extraction
-  NavigateURL(https_server_.GetURL("docs.google.com",
-                                   "/long_canvas_with_dom_content.html"));
-  FetchPageContent(FROM_HERE,
-                   "This is the way.\n\nI have spoken.\nWherever I Go, He "
-                   "Goes.\nOr maybe not.");
-
-#if BUILDFLAG(IS_WIN)
-  // Unsupported locale should return no content for Windows only
-  // Other platforms do not use locale for extraction
-  const brave_l10n::test::ScopedDefaultLocale locale("xx_XX");
-  NavigateURL(https_server_.GetURL("docs.google.com", "/canvas.html"), false);
-  FetchPageContent(FROM_HERE, "");
-#endif  // #if BUILDFLAG(IS_WIN)
-#else
-  FetchPageContent(FROM_HERE, "");
-#endif
-  // Each request is cleared after extraction.
-  EXPECT_FALSE(HasPendingGetContentRequest());
-}
-
-#if BUILDFLAG(ENABLE_TEXT_RECOGNITION) && BUILDFLAG(ENABLE_PRINT_PREVIEW)
-IN_PROC_BROWSER_TEST_F(AIChatUIBrowserTest, PrintPreviewPagesLimit) {
-  NavigateURL(
-      https_server_.GetURL("docs.google.com", "/extra_long_canvas.html"),
-      false);
-  std::string expected_string(ai_chat::kMaxPreviewPages - 1, '\n');
-  base::StrAppend(&expected_string, {"This is the way."});
-  FetchPageContent(FROM_HERE, expected_string);
-}
-
-// Test print preview extraction while print dialog open
-IN_PROC_BROWSER_TEST_F(AIChatUIBrowserTest, PrintDiaglogExtraction) {
-  NavigateURL(https_server_.GetURL("docs.google.com", "/long_canvas.html"),
-              false);
-
-  printing::TestPrintPreviewObserver print_preview_observer(
-      /*wait_for_loaded=*/true);
-  content::ExecuteScriptAsync(GetActiveWebContents()->GetPrimaryMainFrame(),
-                              "window.print();");
-  print_preview_observer.WaitUntilPreviewIsReady();
-  FetchPageContent(
-      FROM_HERE, "This is the way.\n\nI have spoken.\nWherever I Go, He Goes.");
-}
-
-// Test print dialog can still be open after print preview extraction
-IN_PROC_BROWSER_TEST_F(AIChatUIBrowserTest, ExtractionPrintDialog) {
-  NavigateURL(https_server_.GetURL("docs.google.com", "/long_canvas.html"),
-              false);
-  FetchPageContent(
-      FROM_HERE, "This is the way.\n\nI have spoken.\nWherever I Go, He Goes.");
-
-  printing::TestPrintPreviewObserver print_preview_observer(
-      /*wait_for_loaded=*/true);
-  content::ExecuteScriptAsync(GetActiveWebContents()->GetPrimaryMainFrame(),
-                              "window.print();");
-  print_preview_observer.WaitUntilPreviewIsReady();
-}
-
-// Disable flaky test on ASAN windows 64-bit
-// https://github.com/brave/brave-browser/issues/37969
-#if BUILDFLAG(IS_WIN) && defined(ADDRESS_SANITIZER) && defined(ARCH_CPU_64_BITS)
-#define MAYBE_PrintPreviewFallback DISABLED_PrintPreviewFallback
-#else
-#define MAYBE_PrintPreviewFallback PrintPreviewFallback
-#endif  // BUILDFLAG(IS_WIN) && defined(ADDRESS_SANITIZER) &&
-        // defined(ARCH_CPU_64_BITS)
-IN_PROC_BROWSER_TEST_F(AIChatUIBrowserTest, MAYBE_PrintPreviewFallback) {
-  NavigateURL(https_server_.GetURL("a.com", "/text_in_image.pdf"), false);
-  ASSERT_TRUE(
-      pdf_extension_test_util::EnsurePDFHasLoaded(GetActiveWebContents()));
-  FetchPageContent(
-      FROM_HERE, "This is the way.\n\nI have spoken.\nWherever I Go, He Goes.");
-
-  NavigateURL(https_server_.GetURL("a.com", "/canvas.html"), false);
-  FetchPageContent(FROM_HERE, "this is the way");
-
-  // Does not fall back when there is regular DOM content
-  NavigateURL(
-      https_server_.GetURL("a.com", "/long_canvas_with_dom_content.html"),
-      false);
-  FetchPageContent(FROM_HERE, "Or maybe not.");
-}
-#endif  // BUILDFLAG(ENABLE_TEXT_RECOGNITION) && BUILDFLAG(ENABLE_PRINT_PREVIEW)
 
 IN_PROC_BROWSER_TEST_F(AIChatUIBrowserTest, PrintPreviewDisabled) {
   prefs()->SetBoolean(prefs::kPrintPreviewDisabled, true);

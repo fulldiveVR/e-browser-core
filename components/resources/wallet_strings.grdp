@@ -145,6 +145,10 @@
     }
   </message>
   <message name="IDS_BRAVE_WALLET_EXCHANGE_VIA_PROVIDER" desc="Exchange being used via API provider"><ph name="EXCHANGE_NAME"><ex>0x</ex>$1</ph> via <ph name="PROVIDER_NAME"><ex>Li.Fi</ex>$2</ph></message>
+  <message name="IDS_BRAVE_WALLET_CONFIRM_SWAP" desc="Confirm swap title">Confirm swap</message>
+  <message name="IDS_BRAVE_WALLET_CONFIRM_BRIDGE" desc="Confirm bridge title">Confirm bridge</message>
+  <message name="IDS_BRAVE_WALLET_CONFIRM_SEND" desc="Confirm send title">Confirm send</message>
+  <message name="IDS_BRAVE_WALLET_SPEND" desc="Spend button">Spend</message>
   <message name="IDS_BRAVE_WALLET_SORT_BY" desc="Sort by button label">Sort by</message>
   <message name="IDS_BRAVE_WALLET_REVIEW_BRIDGE" desc="Review bridge button">Review bridge</message>
   <message name="IDS_BRAVE_WALLET_EST_TIME" desc="Bridge and Swap estimated time label">Est time</message>
@@ -384,6 +388,10 @@
   <message name="IDS_BRAVE_WALLET_ALLOW_SPEND_CURRENT_ALLOWANCE" desc="Allow spend panel current approval limit">Current allowance</message>
   <message name="IDS_BRAVE_WALLET_ALLOW_SPEND_PROPOSED_ALLOWANCE" desc="Allow spend panel proposed approval">Proposed allowance</message>
   <message name="IDS_BRAVE_WALLET_ALLOW_SPEND_UNLIMITED_WARNING_TITLE" desc="Allow spend panel unlimited approval warning">Unlimited approval requested</message>
+  <message name="IDS_BRAVE_WALLET_SPEND_LIMIT" desc="Allow spend panel spend limit label">Spend limit</message>
+  <message name="IDS_BRAVE_WALLET_APPROVAL_TARGET" desc="Allow spend panel approval target label">Approval target</message>
+  <message name="IDS_BRAVE_WALLET_CURRENT_APPROVAL_LIMIT" desc="Allow spend panel current approval limit label">Current approval limit</message>
+  <message name="IDS_BRAVE_WALLET_PROPOSED_APPROVAL_LIMIT" desc="Allow spend panel proposed approval limit label">Proposed approval limit</message>
   <message name="IDS_BRAVE_WALLET_ALLOW_ADD_NETWORK_TITLE" desc="Add network panel title">Allow this site to add a network?</message>
   <message name="IDS_BRAVE_WALLET_ALLOW_ADD_NETWORK_DESCRIPTION" desc="Add network panel description">This will allow this network to be used within Brave Wallet.</message>
   <message name="IDS_BRAVE_WALLET_ALLOW_ADD_NETWORK_LEARN_MORE_BUTTON" desc="Add network panel learn more button">Learn more.</message>
@@ -403,7 +411,7 @@
   <message name="IDS_BRAVE_WALLET_CONFIRM_TRANSACTION_TRANSACTION_FEE" desc="Confirm transaction panel transaction fee label">Transaction fee</message>
   <message name="IDS_BRAVE_WALLET_CONFIRM_TRANSACTION_BID" desc="Confirm transaction panel bid label">Bid</message>
   <message name="IDS_BRAVE_WALLET_CONFIRM_TRANSACTION_AMOUNT_GAS" desc="Confirm transaction panel total gas label">Amount + gas</message>
-  <message name="IDS_BRAVE_WALLET_CONFIRM_TRANSACTION_AMOUNT_FEE" desc="Confirm transaction panel total fee label">Amount + fee</message>
+  <message name="IDS_BRAVE_WALLET_CONFIRM_TRANSACTION_AMOUNT_FEE" desc="Confirm transaction panel total fee label">Amount + Network fee</message>
   <message name="IDS_BRAVE_WALLET_CONFIRM_TRANSACTION_NO_DATA" desc="Confirm transaction panel no data placeholder">No data.</message>
   <message name="IDS_BRAVE_WALLET_CONFIRM_TRANSACTION_NEXT" desc="Confirm transaction panel next transaction button">next</message>
   <message name="IDS_BRAVE_WALLET_CONFIRM_TRANSACTION_FIRST" desc="Confirm transaction panel first transaction button">first</message>
@@ -514,6 +522,8 @@
   <message name="IDS_BRAVE_WALLET_EDIT_PERMISSIONS_BUTTON" desc="Edit allowance panel button">Edit permissions</message>
   <message name="IDS_BRAVE_WALLET_EDIT_PERMISSIONS_PROPOSED_ALLOWANCE" desc="Edit allowance panel button">Proposed allowance</message>
   <message name="IDS_BRAVE_WALLET_EDIT_PERMISSIONS_CUSTOM_ALLOWANCE" desc="Edit allowance panel button">Custom allowance</message>
+  <message name="IDS_BRAVE_WALLET_PROPOSED_SPEND_LIMIT" desc="Edit allowance proposed spend limit label">Proposed spend limit</message>
+  <message name="IDS_BRAVE_WALLET_CUSTOM_SPEND_LIMIT" desc="Edit allowance custom spend limit label">Custom spend limit</message>
   <message name="IDS_BRAVE_WALLET_NOT_VALID_ETH_ADDRESS" desc="Send input not valid ETH address error">Not a valid ETH address</message>
   <message name="IDS_BRAVE_WALLET_NOT_VALID_SOL_ADDRESS" desc="Send input not valid SOL address error">Not a valid SOL address</message>
   <message name="IDS_BRAVE_WALLET_NOT_VALID_ADDRESS" desc="Send input not valid address error">Not a valid <ph name="COIN_TYPE_SYMBOL"><ex>ETH</ex>$1</ph> address.</message>
@@ -591,6 +601,10 @@
   <message name="IDS_BRAVE_WALLET_HARDWARE_BRIDGE_NOT_READY_ERROR" desc="Error when hardware bridge is not ready"><ph name="DEVICE_NAME">$1<ex>Trezor</ex></ph> bridge is not ready</message>
   <message name="IDS_BRAVE_WALLET_ADD_SUGGESTED_TOKEN_TITLE" desc="Add Suggested Token Panel Title">Add suggested token</message>
   <message name="IDS_BRAVE_WALLET_ADD_SUGGESTED_TOKEN_DESCRIPTION" desc="Add Suggested Token Panel Description">Would you like to import this token?</message>
+  <message name="IDS_BRAVE_WALLET_PENDING_TRANSACTIONS_NUMBER" desc="Pending transactions number text">Pending (<ph name="QUEUE_LENGTH">$1<ex>4</ex></ph>)</message>
+  <message name="IDS_BRAVE_WALLET_NEXT_TRANSACTION" desc="Next transaction button text">Next transaction</message>
+  <message name="IDS_BRAVE_WALLET_PREVIOUS_TRANSACTION" desc="Previous transaction button text">Previous transaction</message>
+  <message name="IDS_BRAVE_WALLET_REJECT_TRANSACTIONS" desc="Reject transactions button text">Reject <ph name="QUEUE_LENGTH">$1<ex>4</ex></ph>  transactions</message>
   <message name="IDS_BRAVE_WALLET_NFT_DETAIL_BLOCKCHAIN" desc="NFT detail screen blockchain category">Blockchain</message>
   <message name="IDS_BRAVE_WALLET_NFT_DETAIL_TOKEN_STANDARD" desc="NFT detail screen token standard category">Token standard</message>
   <message name="IDS_BRAVE_WALLET_NFT_DETAIL_TOKEN_ID" desc="NFT detail screen token id category">Token ID</message>
@@ -769,9 +783,14 @@
   <message name="IDS_BRAVE_WALLET_REQUEST_ID" desc="Sign in with Brave Wallet Request ID label">Request ID</message>
   <message name="IDS_BRAVE_WALLET_RESOURCES" desc="Sign in with Brave Wallet Resources Label">Resources</message>
   <message name="IDS_BRAVE_WALLET_SECURITY_RISK_DETECTED" desc="Sign in with Brave Wallet Error Security risk">Security risk detected</message>
+  <message name="IDS_BRAVE_WALLET_INPUT" desc="Transaction Details Input Label">Input</message>
+  <message name="IDS_BRAVE_WALLET_OUTPUT" desc="Transaction Details Output Label">Output</message>
+  <message name="IDS_BRAVE_WALLET_INPUTS" desc="Transaction Details Inputs Label">Inputs</message>
+  <message name="IDS_BRAVE_WALLET_OUTPUTS" desc="Transaction Details Outputs Label">Outputs</message>
+  <message name="IDS_BRAVE_WALLET_VALUE" desc="Transaction Details Value Label">Value</message>
   <message name="IDS_BRAVE_WALLET_NETWORK_FILTER_SECONDARY" desc="Network Filter Selector Secondary Networks">Secondary networks</message>
   <message name="IDS_BRAVE_WALLET_NETWORK_FILTER_TEST_NETWORKS" desc="Network Filter Selector Test Networks">Test networks</message>
-  <message name="IDS_BRAVE_WALLET_EDIT_GAS_LIMIT_ERROR" desc="An eroor regarding an incorrect gas limit value">
+  <message name="IDS_BRAVE_WALLET_EDIT_GAS_LIMIT_ERROR" desc="An error regarding an incorrect gas limit value">
     Gas limit must be an integer greater than 0
   </message>
   <message name="IDS_WALLET_FIL_SEND_TRANSACTION_TO" desc="Error message if transaction 'to' is empty">Transaction data 'to' must be specified</message>
@@ -1087,6 +1106,13 @@
   <message name="IDS_BRAVE_WALLET_AUTO_DISCOVERY_EMPTY_STATE_ACTIONS" desc="NFTs tab empty state action button text when auto discovery is enabled"><ph name="REFRESH_START">$1</ph>Refresh<ph name="REFRESH_END">/$1</ph> or <ph name="IMPORT_START">$2</ph>Import Manually<ph name="IMPORT_END">/$2</ph></message>
   <message name="IDS_BRAVE_WALLET_AUTO_DISCOVERY_EMPTY_STATE_REFRESH" desc="NFTs tab empty state refreshing text">Refreshing</message>
   <message name="IDS_BRAVE_WALLET_NETWORK_FEES" desc="Label for blockchain network fees">Network fees</message>
+  <message name="IDS_BRAVE_WALLET_NETWORK_FEE" desc="Label for blockchain network fee">Network fee</message>
+  <message name="IDS_BRAVE_WALLET_CUSTOM_FEE_AMOUNT" desc="Label for custom fee amount">Custom fee amount</message>
+  <message name="IDS_BRAVE_WALLET_GAS_TIP_LIMIT" desc="Label for gas tip limit">Gas tip limit</message>
+  <message name="IDS_BRAVE_WALLET_GAS_PRICE_LIMIT" desc="Label for gas price limit">Gas price limit</message>
+  <message name="IDS_BRAVE_WALLET_GAS_PRICE" desc="Label for gas price">Gas price</message>
+  <message name="IDS_BRAVE_WALLET_EDIT_GAS_ESTIMATED_NETWORK_FEE" desc="Label for estimated network fee">Estimated network fee</message>
+  <message name="IDS_BRAVE_WALLET_USE_DEFAULT" desc="Label for use default">Use default</message>
   <message name="IDS_WALLET_EIP6963_PROVIDER_NAME" desc="Provider name which will be return when announce ethereum provider">Brave Wallet</message>
   <message name="IDS_BRAVE_WALLET_RECEIVE" desc="Receive asset event title">Receive</message>
   <message name="IDS_BRAVE_WALLET_FROM" desc="From address label">From</message>
@@ -1247,4 +1273,6 @@
   <message name="IDS_BRAVE_WALLET_PAGE_NOT_FOUND_TITLE" desc="Page not found title">We can’t find the page you’re looking for right now.</message>
   <message name="IDS_BRAVE_WALLET_PAGE_NOT_FOUND_DESCRIPTION" desc="Page not found description">It may have moved to a different place or the URL may contain a typo.</message>
   <message name="IDS_BRAVE_WALLET_GO_TO_PORTFOLIO" desc="Go to portfolio button text">Go to Portfolio</message>
+  <message name="IDS_BRAVE_WALLET_ADD_TOKEN" desc="Add token button text">Add token</message>
+  <message name="IDS_BRAVE_WALLET_UTILITY_PROCESS_WALLET_UTILS_NAME" desc="The display name (in the system task manager, etc) of the service process used for running wallet utils">Brave Wallet Utility Service</message>
 </grit-part>

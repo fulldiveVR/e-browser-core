@@ -32,7 +32,8 @@ v8::Local<v8::Value> ConvertError(
 class JSCardanoWalletApi final : public gin::Wrappable<JSCardanoWalletApi>,
                                  public content::RenderFrameObserver {
  public:
-  JSCardanoWalletApi(base::PassKey<class JSCardanoProvider> pass_key,
+  JSCardanoWalletApi(mojo::Remote<mojom::CardanoApi> remote,
+                     base::PassKey<class JSCardanoProvider> pass_key,
                      v8::Local<v8::Context> context,
                      v8::Isolate* isolate,
                      content::RenderFrame* render_frame);
@@ -40,12 +41,13 @@ class JSCardanoWalletApi final : public gin::Wrappable<JSCardanoWalletApi>,
   JSCardanoWalletApi(const JSCardanoWalletApi&) = delete;
   JSCardanoWalletApi& operator=(const JSCardanoWalletApi&) = delete;
 
-  static gin::WrapperInfo kWrapperInfo;
+  static constexpr gin::WrapperInfo kWrapperInfo = {{gin::kEmbedderNativeGin},
+                                                    gin::kCardanoWalletApi};
 
   // gin::WrappableBase
   gin::ObjectTemplateBuilder GetObjectTemplateBuilder(
       v8::Isolate* isolate) override;
-  const char* GetTypeName() override;
+  const gin::WrapperInfo* wrapper_info() const override;
 
  private:
   bool EnsureConnected();
@@ -54,13 +56,14 @@ class JSCardanoWalletApi final : public gin::Wrappable<JSCardanoWalletApi>,
   void HandleStringResult(v8::Global<v8::Context> global_context,
                           v8::Global<v8::Promise::Resolver> promise_resolver,
                           v8::Isolate* isolate,
-                          const std::string& result,
+                          const std::optional<std::string>& result,
                           mojom::CardanoProviderErrorBundlePtr error);
-  void HandleStringVecResult(v8::Global<v8::Context> global_context,
-                             v8::Global<v8::Promise::Resolver> promise_resolver,
-                             v8::Isolate* isolate,
-                             const std::vector<std::string>& result,
-                             mojom::CardanoProviderErrorBundlePtr error);
+  void HandleStringVecResult(
+      v8::Global<v8::Context> global_context,
+      v8::Global<v8::Promise::Resolver> promise_resolver,
+      v8::Isolate* isolate,
+      const std::optional<std::vector<std::string>>& result,
+      mojom::CardanoProviderErrorBundlePtr error);
   void HandleUtxoVecResult(
       v8::Global<v8::Context> global_context,
       v8::Global<v8::Promise::Resolver> promise_resolver,
@@ -93,7 +96,7 @@ class JSCardanoWalletApi final : public gin::Wrappable<JSCardanoWalletApi>,
   void OnSignData(v8::Global<v8::Context> global_context,
                   v8::Global<v8::Promise::Resolver> promise_resolver,
                   v8::Isolate* isolate,
-                  mojom::CardanoProviderSignatureResultPtr result,
+                  std::optional<base::Value::Dict> result,
                   mojom::CardanoProviderErrorBundlePtr error_message);
 
   v8::Local<v8::Promise> SubmitTx(gin::Arguments* args);
@@ -102,7 +105,7 @@ class JSCardanoWalletApi final : public gin::Wrappable<JSCardanoWalletApi>,
 
   v8::Local<v8::Promise> GetCollateral(gin::Arguments* args);
 
-  mojo::Remote<mojom::CardanoProvider> cardano_provider_;
+  mojo::Remote<mojom::CardanoApi> cardano_api_;
   base::WeakPtrFactory<JSCardanoWalletApi> weak_ptr_factory_{this};
 };
 

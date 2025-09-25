@@ -35,11 +35,6 @@ BASE_FEATURE(kBraveAdblockCollapseBlockedElements,
 BASE_FEATURE(kBraveAdblockCookieListDefault,
              "BraveAdblockCookieListDefault",
              base::FEATURE_ENABLED_BY_DEFAULT);
-// When enabled, Brave will display a bubble inviting the user to turn on the
-// "Easylist-Cookie List" filter.
-BASE_FEATURE(kBraveAdblockCookieListOptIn,
-             "BraveAdblockCookieListOptIn",
-             base::FEATURE_DISABLED_BY_DEFAULT);
 BASE_FEATURE(kBraveAdblockCosmeticFiltering,
              "BraveAdblockCosmeticFiltering",
              base::FEATURE_ENABLED_BY_DEFAULT);
@@ -54,6 +49,9 @@ BASE_FEATURE(kBraveAdblockScriptletDebugLogs,
 BASE_FEATURE(kBraveAdblockCspRules,
              "BraveAdblockCspRules",
              base::FEATURE_ENABLED_BY_DEFAULT);
+BASE_FEATURE(kBraveAdblockShowHiddenComponents,
+             "BraveAdblockShowHiddenComponents",
+             base::FEATURE_DISABLED_BY_DEFAULT);
 // When enabled, Brave will enable "Fanboy's Mobile Notifications List" by
 // default unless overridden by a locally set preference.
 BASE_FEATURE(kBraveAdblockMobileNotificationsListDefault,
@@ -107,6 +105,10 @@ BASE_FEATURE(kBraveShredCacheData,
 #else
              base::FEATURE_DISABLED_BY_DEFAULT);
 #endif
+// When enabled, brave will use content settings for Shields on iOS.
+BASE_FEATURE(kBraveShieldsContentSettingsIOS,
+             "BraveShieldsContentSettingsIOS",
+             base::FEATURE_DISABLED_BY_DEFAULT);
 // When enabled, will display debug menu for adblock features in the Shields
 // panel.
 BASE_FEATURE(kBraveIOSDebugAdblock,
@@ -145,6 +147,10 @@ BASE_FEATURE(kBlockAllCookiesToggle,
 BASE_FEATURE(kBraveShieldsElementPicker,
              "BraveShieldsElementPicker",
              base::FEATURE_ENABLED_BY_DEFAULT);
+
+BASE_FEATURE(kAdblockOnlyMode,
+             "AdblockOnlyMode",
+             base::FEATURE_DISABLED_BY_DEFAULT);
 
 // Enables extra TRACE_EVENTs in content filter js. The feature is
 // primary designed for local debugging.

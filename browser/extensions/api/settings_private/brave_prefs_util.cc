@@ -28,6 +28,7 @@
 #include "chrome/browser/extensions/api/settings_private/prefs_util.h"
 #include "chrome/common/extensions/api/settings_private.h"
 #include "chrome/common/pref_names.h"
+#include "components/bookmarks/common/bookmark_pref_names.h"
 #include "components/browsing_data/core/pref_names.h"
 #include "components/gcm_driver/gcm_buildflags.h"
 #include "components/omnibox/browser/omnibox_prefs.h"
@@ -133,7 +134,7 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[kLocationBarIsWide] = settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[omnibox::kAutocompleteEnabled] =
       settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[omnibox::kTopSuggestionsEnabled] =
+  (*s_brave_allowlist)[omnibox::kOnDeviceSuggestionsEnabled] =
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[omnibox::kHistorySuggestionsEnabled] =
       settings_api::PrefType::kBoolean;
@@ -166,7 +167,9 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
       settings_api::PrefType::kNumber;
 #endif
 #if BUILDFLAG(ENABLE_SPEEDREADER)
-  (*s_brave_allowlist)[speedreader::kSpeedreaderPrefEnabled] =
+  (*s_brave_allowlist)[speedreader::kSpeedreaderPrefFeatureEnabled] =
+      settings_api::PrefType::kBoolean;
+  (*s_brave_allowlist)[speedreader::kSpeedreaderPrefEnabledForAllSites] =
       settings_api::PrefType::kBoolean;
 #endif
   // De-AMP feature
@@ -215,13 +218,11 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[browsing_data::prefs::kDeleteBraveLeoHistoryOnExit] =
       settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[kAlwaysShowBookmarkBarOnNTP] =
+  (*s_brave_allowlist)[bookmarks::prefs::kAlwaysShowBookmarkBarOnNTP] =
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[kMRUCyclingEnabled] = settings_api::PrefType::kBoolean;
 #if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
   (*s_brave_allowlist)[kBraveWaybackMachineEnabled] =
-      settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[kBraveWaybackMachineDisabledByPolicy] =
       settings_api::PrefType::kBoolean;
 #endif
   (*s_brave_allowlist)[kEnableWindowClosingConfirm] =
@@ -262,6 +263,10 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[ai_chat::prefs::kBraveAIChatShowToolbarButton] =
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[ai_chat::prefs::kBraveAIChatTabOrganizationEnabled] =
+      settings_api::PrefType::kBoolean;
+  (*s_brave_allowlist)[ai_chat::prefs::kBraveAIChatUserCustomizationEnabled] =
+      settings_api::PrefType::kBoolean;
+  (*s_brave_allowlist)[ai_chat::prefs::kBraveAIChatUserMemoryEnabled] =
       settings_api::PrefType::kBoolean;
 
   // Survey Panelist pref
@@ -315,6 +320,8 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[brave_tabs::kVerticalTabsShowScrollbar] =
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[brave_tabs::kVerticalTabsExpandedStatePerWindow] =
+      settings_api::PrefType::kBoolean;
+  (*s_brave_allowlist)[brave_tabs::kVerticalTabsHideCompletelyWhenCollapsed] =
       settings_api::PrefType::kBoolean;
 #endif
 

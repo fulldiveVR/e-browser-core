@@ -176,11 +176,9 @@ extension BrowserViewController {
     searchController.handleKeyCommands(sender: sender)
   }
 
-  #if canImport(BraveTalk)
   @objc private func toggleBraveTalkMuteCommand() {
     braveTalkJitsiCoordinator.toggleMute()
   }
-  #endif
 
   @objc private func reopenRecentlyClosedTabCommand() {
     guard let recentlyClosed = RecentlyClosed.all().first else {
@@ -418,6 +416,17 @@ extension BrowserViewController {
       ),
     ]
 
+    // Find in Page Key Commands, find next & previous key commands are automatically handled by the
+    // underlying UIFindInteraction once find in page is active.
+    let findTextCommands = [
+      UIKeyCommand(
+        title: Strings.Hotkey.findInPageTitle,
+        action: #selector(findInPageKeyCommand),
+        input: "f",
+        modifierFlags: .command
+      )
+    ]
+
     // Share With Key Command
     let shareCommands = [
       UIKeyCommand(
@@ -439,8 +448,8 @@ extension BrowserViewController {
     ]
 
     var keyCommandList =
-      navigationCommands + tabNavigationCommands + bookmarkEditingCommands + shareCommands
-      + additionalPriorityCommandKeys
+      navigationCommands + tabNavigationCommands + bookmarkEditingCommands + findTextCommands
+      + shareCommands + additionalPriorityCommandKeys
 
     // URL completion and Override Key commands
     let searchLocationCommands = [
@@ -456,11 +465,9 @@ extension BrowserViewController {
       ),
     ]
 
-    #if canImport(BraveTalk)
     let braveTalkKeyCommands: [UIKeyCommand] = [
       UIKeyCommand(input: "m", modifierFlags: [], action: #selector(toggleBraveTalkMuteCommand))
     ]
-    #endif
 
     // In iOS 15+, certain keys events are delivered to the text input or focus systems first, unless specified otherwise
     searchLocationCommands.forEach { $0.wantsPriorityOverSystemBehavior = true }
@@ -472,16 +479,13 @@ extension BrowserViewController {
       keyCommandList.append(contentsOf: searchLocationCommands)
     }
 
-    #if canImport(BraveTalk)
     if braveTalkJitsiCoordinator.isCallActive && !braveTalkJitsiCoordinator.isBraveTalkInPiPMode {
       keyCommandList.append(contentsOf: braveTalkKeyCommands)
     }
-    #endif
 
     return keyCommandList
   }
 
-  #if canImport(BraveTalk)
   public override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
     super.pressesBegan(presses, with: event)
     braveTalkJitsiCoordinator.handleResponderPresses(presses: presses, phase: .began)
@@ -501,5 +505,4 @@ extension BrowserViewController {
     super.pressesCancelled(presses, with: event)
     braveTalkJitsiCoordinator.handleResponderPresses(presses: presses, phase: .cancelled)
   }
-  #endif
 }

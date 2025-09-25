@@ -8,6 +8,8 @@
 
 #include "base/containers/fixed_flat_map.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
+#include "brave/components/brave_news/common/pref_names.h"
+#include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/constants/pref_names.h"
@@ -34,6 +36,14 @@ struct BraveAction {
   // RAW_PTR_EXCLUSION: #global-scope
   RAW_PTR_EXCLUSION const gfx::VectorIcon& icon;
 };
+
+inline constexpr BraveAction kShowAddBookmarkButton = {
+    .id = side_panel::customize_chrome::mojom::ActionId::kShowAddBookmarkButton,
+    .display_name_resource_id = IDS_CUSTOMIZE_TOOLBAR_TOGGLE_BOOKMARK,
+    .anchor = side_panel::customize_chrome::mojom::ActionId::kForward,
+    .category = side_panel::customize_chrome::mojom::CategoryId::kNavigation,
+    .pref_name = kShowBookmarksButton,
+    .icon = kLeoBrowserBookmarkNormalIcon};
 
 inline constexpr BraveAction kShowSidePanelAction = {
     .id = side_panel::customize_chrome::mojom::ActionId::kShowSidePanel,
@@ -70,15 +80,36 @@ inline constexpr BraveAction kShowVPNAction = {
     .icon = kLeoProductVpnIcon};
 #endif  // BUILDFLAG(ENABLE_BRAVE_VPN)
 
+inline constexpr BraveAction kShowReward = {
+    .id = side_panel::customize_chrome::mojom::ActionId::kShowReward,
+    .display_name_resource_id = IDS_CUSTOMIZE_TOOLBAR_TOGGLE_REWARD,
+    .anchor = side_panel::customize_chrome::mojom::ActionId::
+        kShowReward,  // assign id of itself to append to the end of the list
+    .category = side_panel::customize_chrome::mojom::CategoryId::kAddressBar,
+    .pref_name = brave_rewards::prefs::kShowLocationBarButton,
+    .icon = kLeoProductBatOutlineIcon};
+
+inline constexpr BraveAction kShowBraveNews = {
+    .id = side_panel::customize_chrome::mojom::ActionId::kShowBraveNews,
+    .display_name_resource_id = IDS_CUSTOMIZE_TOOLBAR_TOGGLE_BRAVE_NEWS,
+    .anchor = side_panel::customize_chrome::mojom::ActionId::
+        kShowBraveNews,  // assign id of itself to append to the end of the list
+    .category = side_panel::customize_chrome::mojom::CategoryId::kAddressBar,
+    .pref_name = brave_news::prefs::kShouldShowToolbarButton,
+    .icon = kLeoRssIcon};
+
 inline constexpr auto kBraveActions =
     base::MakeFixedFlatMap<side_panel::customize_chrome::mojom::ActionId,
                            const BraveAction*>({
+        {kShowAddBookmarkButton.id, &kShowAddBookmarkButton},
         {kShowSidePanelAction.id, &kShowSidePanelAction},
         {kShowWalletAction.id, &kShowWalletAction},
         {kShowAIChatAction.id, &kShowAIChatAction},
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
         {kShowVPNAction.id, &kShowVPNAction},
 #endif  // BUILDFLAG(ENABLE_BRAVE_VPN)
+        {kShowReward.id, &kShowReward},
+        {kShowBraveNews.id, &kShowBraveNews},
     });
 
 }  // namespace customize_chrome

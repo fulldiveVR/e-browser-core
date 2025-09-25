@@ -25,18 +25,8 @@ RegisterPolymerTemplateModifications({
     if (!captions) {
         console.error(`[Settings][a11y] Couldn't find #captions`)
     } else {
-        captions.setAttribute('hidden', 'true')
+        captions.remove()
     }
-    // <if expr="is_linux">
-    const captionsRoute = templateContent.
-      querySelector('template[is=dom-if][route-path="/captions"]')
-    if (!captionsRoute) {
-      console.error(
-        `[Settings][a11y] Couldn't find captionsRoute template`)
-    } else {
-      captionsRoute.remove()
-    }
-    // </if>
 
     // We hide the image labels toggle button as we don't support this service
     const imageLabelsToggle = templateContent.querySelector(
@@ -44,7 +34,7 @@ RegisterPolymerTemplateModifications({
     if (imageLabelsToggle) {
       imageLabelsToggle.setAttribute('hidden', 'true')
     } else {
-      console.error('[Settings] missing image labels toggle button')
+      throw new Error('[Settings] Missing image labels toggle button')
     }
   }
 })

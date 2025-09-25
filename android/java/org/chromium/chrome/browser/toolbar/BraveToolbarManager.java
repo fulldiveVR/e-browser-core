@@ -23,7 +23,6 @@ import org.chromium.base.ContextUtils;
 import org.chromium.base.supplier.ObservableSupplier;
 import org.chromium.base.supplier.ObservableSupplierImpl;
 import org.chromium.base.supplier.OneshotSupplier;
-import org.chromium.base.supplier.Supplier;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.ActivityTabProvider;
 import org.chromium.chrome.browser.app.BraveActivity;
@@ -49,6 +48,7 @@ import org.chromium.chrome.browser.layouts.LayoutType;
 import org.chromium.chrome.browser.lifecycle.ActivityLifecycleDispatcher;
 import org.chromium.chrome.browser.merchant_viewer.MerchantTrustSignalsCoordinator;
 import org.chromium.chrome.browser.multiwindow.MultiInstanceManager;
+import org.chromium.chrome.browser.ntp_customization.edge_to_edge.TopInsetCoordinator;
 import org.chromium.chrome.browser.omnibox.LocationBar;
 import org.chromium.chrome.browser.preferences.ChromePreferenceKeys;
 import org.chromium.chrome.browser.profiles.Profile;
@@ -85,7 +85,6 @@ import org.chromium.chrome.browser.toolbar.top.TopToolbarCoordinator;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuCoordinator;
 import org.chromium.chrome.browser.ui.appmenu.AppMenuDelegate;
 import org.chromium.chrome.browser.ui.edge_to_edge.EdgeToEdgeController;
-import org.chromium.chrome.browser.ui.extensions.ExtensionService;
 import org.chromium.chrome.browser.ui.system.StatusBarColorController;
 import org.chromium.chrome.browser.undo_tab_close_snackbar.UndoBarThrottle;
 import org.chromium.components.browser_ui.bottomsheet.BottomSheetController;
@@ -97,6 +96,7 @@ import org.chromium.ui.base.WindowAndroid;
 import org.chromium.ui.modaldialog.ModalDialogManager;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 @SuppressWarnings("UseSharedPreferencesManagerFromChromeCheck")
 public class BraveToolbarManager extends ToolbarManager
@@ -172,7 +172,6 @@ public class BraveToolbarManager extends ToolbarManager
             ActivityTabProvider tabProvider,
             ScrimManager scrimManager,
             ToolbarActionModeCallback toolbarActionModeCallback,
-            @Nullable ExtensionService extensionService,
             FindToolbarManager findToolbarManager,
             ObservableSupplier<Profile> profileSupplier,
             ObservableSupplier<BookmarkModel> bookmarkModelSupplier,
@@ -199,13 +198,13 @@ public class BraveToolbarManager extends ToolbarManager
             Supplier<EphemeralTabCoordinator> ephemeralTabCoordinatorSupplier,
             boolean initializeWithIncognitoColors,
             @Nullable BackPressManager backPressManager,
-            @Nullable ObservableSupplier<Integer> overviewColorSupplier,
             ObservableSupplier<ReadAloudController> readAloudControllerSupplier,
             @Nullable DesktopWindowStateManager desktopWindowStateManager,
             @Nullable MultiInstanceManager multiInstanceManager,
             @NonNull ObservableSupplier<TabBookmarker> tabBookmarkerSupplier,
             @Nullable MenuButtonCoordinator.VisibilityDelegate menuButtonVisibilityDelegate,
             TopControlsStacker topControlsStacker,
+            ObservableSupplier<TopInsetCoordinator> topInsetCoordinatorSupplier,
             @Nullable ObservableSupplier<Boolean> xrSpaceModeObservableSupplier) {
         super(
                 activity,
@@ -223,7 +222,6 @@ public class BraveToolbarManager extends ToolbarManager
                 tabProvider,
                 scrimManager,
                 toolbarActionModeCallback,
-                extensionService,
                 findToolbarManager,
                 profileSupplier,
                 bookmarkModelSupplier,
@@ -248,13 +246,13 @@ public class BraveToolbarManager extends ToolbarManager
                 ephemeralTabCoordinatorSupplier,
                 initializeWithIncognitoColors,
                 backPressManager,
-                overviewColorSupplier,
                 readAloudControllerSupplier,
                 desktopWindowStateManager,
                 multiInstanceManager,
                 tabBookmarkerSupplier,
                 menuButtonVisibilityDelegate,
                 topControlsStacker,
+                topInsetCoordinatorSupplier,
                 xrSpaceModeObservableSupplier);
 
         mOmniboxFocusStateSupplier = omniboxFocusStateSupplier;
@@ -408,6 +406,8 @@ public class BraveToolbarManager extends ToolbarManager
                         mActivity.findViewById(R.id.control_container),
                         closeAllTabsAction);
             }
+            assert mBottomControlsCoordinatorSupplier != null
+                    : "It must not be null at this point! Something has changed in the upstream!";
             mBottomControlsCoordinatorSupplier.set(bottomControlsCoordinator);
             mBottomControls.setBottomControlsCoordinatorSupplier(
                     mBottomControlsCoordinatorSupplier);
@@ -463,7 +463,6 @@ public class BraveToolbarManager extends ToolbarManager
         if (toolbarLayout instanceof BraveToolbarLayoutImpl) {
             final BraveToolbarLayoutImpl braveToolbarLayout =
                     (BraveToolbarLayoutImpl) toolbarLayout;
-            braveToolbarLayout.setFullscreenManager(mFullscreenManager);
             braveToolbarLayout.setTabModelSelector(mTabModelSelectorSupplier.get());
         }
     }
@@ -503,7 +502,8 @@ public class BraveToolbarManager extends ToolbarManager
     protected void onOrientationChange() {
         if (mActionModeController != null) mActionModeController.showControlsOnOrientationChange();
 
-        if (mBottomControlsCoordinatorSupplier.get() != null
+        if (mBottomControlsCoordinatorSupplier != null
+                && mBottomControlsCoordinatorSupplier.get() != null
                 && BottomToolbarConfiguration.isBraveBottomControlsEnabled()) {
             boolean isBraveBottomControlsVisible =
                     mCurrentOrientation != Configuration.ORIENTATION_LANDSCAPE;
@@ -531,7 +531,9 @@ public class BraveToolbarManager extends ToolbarManager
                 currentTab == null || bridge == null || bridge.isEditBookmarksEnabled();
         mToolbar.updateBookmarkButton(isBookmarked, editingAllowed);
 
-        if (mBottomControlsCoordinatorSupplier.get() instanceof BraveBottomControlsCoordinator) {
+        if (mBottomControlsCoordinatorSupplier != null
+                && mBottomControlsCoordinatorSupplier.get()
+                        instanceof BraveBottomControlsCoordinator) {
             ((BraveBottomControlsCoordinator) mBottomControlsCoordinatorSupplier.get())
                     .updateBookmarkButton(isBookmarked, editingAllowed);
         }
@@ -552,7 +554,9 @@ public class BraveToolbarManager extends ToolbarManager
         if (mToolbar instanceof BraveTopToolbarCoordinator) {
             ((BraveTopToolbarCoordinator) mToolbar).onBottomControlsVisibilityChanged(visible);
         }
-        if (mBottomControlsCoordinatorSupplier.get() instanceof BraveBottomControlsCoordinator) {
+        if (mBottomControlsCoordinatorSupplier != null
+                && mBottomControlsCoordinatorSupplier.get()
+                        instanceof BraveBottomControlsCoordinator) {
             ((BraveBottomControlsCoordinator) mBottomControlsCoordinatorSupplier.get())
                     .setBottomToolbarVisible(visible);
         }

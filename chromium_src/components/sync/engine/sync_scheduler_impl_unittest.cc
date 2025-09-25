@@ -3,7 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-#include "src/components/sync/engine/sync_scheduler_impl_unittest.cc"
+#include <components/sync/engine/sync_scheduler_impl_unittest.cc>
 
 namespace syncer {
 
@@ -33,9 +33,9 @@ TEST_F(SyncSchedulerImplTest, BraveNoBackoffOnNigoriError) {
 
   SyncShareTimes times;
   EXPECT_CALL(*syncer(), PollSyncShare)
-      .WillOnce(DoAll(Invoke(SimulatePollFailedNigoryNotReady),
+      .WillOnce(DoAll(SimulatePollFailedNigoryNotReady,
                       RecordSyncShare(&times, false)))
-      .WillOnce(DoAll(Invoke(SimulatePollFailedRegularTransientError),
+      .WillOnce(DoAll(SimulatePollFailedRegularTransientError,
                       RecordSyncShare(&times, false)));
 
   StartSyncScheduler(base::Time());

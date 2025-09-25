@@ -156,8 +156,11 @@
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_TABS_SHOW_TITLE_BAR" desc="The label for showing window title when vertical tab strip is enabled.">
     Show title bar
   </message>
+  <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_TABS_HIDE_COMPLETELY_WHEN_COLLPASED" desc="The label for hiding vertical tabs completely when collapsed" formatter_data="webui=BraveSettings">
+    Hide completely when minimized
+  </message>
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_TABS_USE_FLOATING_VERTICAL_TABS" desc="The label for enabling floating mode for vertical tab strip">
-    Expand vertical tabs panel on mouseover when collapsed
+    Expand vertical tabs panel on mouseover when minimized
   </message>
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_BRAVE_TAB_HOVER_MODE" desc="The label for the settings select controlling what happens when a user hovers over a tab.">
     Tab hover mode
@@ -198,8 +201,8 @@
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_SHOW_AUTOCOMPLETE_IN_ADDRESS_BAR" desc="The label for settings switch controlling the showing of autocomplete in address bar">
     Show autocomplete suggestions in address bar
   </message>
-  <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_TOP_SUGGESTIONS" desc="The label for settings checkbox controlling whether or not top suggestions show up in autocomplete">
-    Top Suggestions
+  <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_ON_DEVICE" desc="The label for settings checkbox controlling whether or not on-device suggestions show up in autocomplete">
+    On-device suggestions
   </message>
   <message name="IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_HISTORY" desc="The label for settings checkbox controlling whether or not browsing history shows up in autocomplete">
     Browsing History
@@ -246,10 +249,19 @@
   <message name="IDS_SETTINGS_TABS_SEARCH_SHOW" desc="The button for searching tabs on the left of tab strip region.">
     Show tab search button
   </message>
-  <message name="IDS_SETTINGS_SPEEDREADER_LABEL" desc="The label to activate Speedreader">
+  <message name="IDS_SETTINGS_SPEEDREADER_SETTING_LABEL" desc="The main label for the Speedreader settings section">
     Speedreader
   </message>
-  <message name="IDS_SETTINGS_SPEEDREADER_SUB_LABEL" desc="The sub-label describing Speedreader">
+  <message name="IDS_SETTINGS_SPEEDREADER_FEATURE_LABEL" desc="The label for the Speedreader feature toggle">
+    Speedreader
+  </message>
+  <message name="IDS_SETTINGS_SPEEDREADER_FEATURE_SUB_LABEL" desc="The sub-label describing the Speedreader feature">
+    Enable the Speedreader feature
+  </message>
+  <message name="IDS_SETTINGS_SPEEDREADER_ENABLED_FOR_ALL_SITES_LABEL" desc="The label for enabling Speedreader on all sites">
+    Automatically use Speedreader when possible
+  </message>
+  <message name="IDS_SETTINGS_SPEEDREADER_ENABLED_FOR_ALL_SITES_SUB_LABEL" desc="The sub-label for enabling Speedreader on all sites">
     Articles automatically load in reader mode, saving you time
   </message>
   <message name="IDS_SETTINGS_DISABLE_CLICKABLE_MUTE_INDICATORS" desc="The text for the settings option for disabling clickable tab mute indicators">
@@ -378,7 +390,7 @@
     Prevent sites from fingerprinting me based on my language preferences
   </message>
   <message name="IDS_SETTINGS_BRAVE_SHIELDS_REDUCE_LANGUAGE_SUBITEM" desc="Description that shows under main toggle setting for reduce language control setting label">
-    Enabling this setting reduces how much web sites can learn about your language preferences.
+    Enabling this setting reduces how much web sites can learn about your language preferences
   </message>
   <message name="IDS_SETTINGS_BRAVE_SHIELDS_AD_CONTROL_LABEL" desc="Default Brave block cross-site trackers control setting label">
     Trackers &amp; ads blocking
@@ -449,7 +461,7 @@
     Content filtering
   </message>
   <message name="IDS_BRAVE_ADBLOCK_CONTENT_FILTER_LABEL_DESCRIPTION" desc="Long description describing what Content Filtering does">
-    Enable custom filters that block regional and language-specific trackers and Annoyances.
+    Enable custom filters that block regional and language-specific trackers and Annoyances
   </message>
   <message name="IDS_BRAVE_ADBLOCK_ADD_CUSTOM_FILTERS_LISTS_LABEL" desc="Label for custom filters lists section">
     Add custom filter lists
@@ -649,7 +661,7 @@
     Automatically send diagnostic reports
   </message>
   <message name="IDS_BRAVE_DIAGNOSTIC_REPORTS_PREF_DESC" desc="The description of the checkbox to enable/disable sending diagnostic reports (crashes, hangs).">
-    Help improve Brave's product stability by automatically sending diagnostic reports when the Brave Browser crashes or freezes.
+    Help improve Brave's product stability by automatically sending diagnostic reports when the Brave Browser crashes or freezes
   </message>
   <!-- Request OTR -->
   <if expr="enable_request_otr">
@@ -1087,7 +1099,7 @@
     Index other search engines
   </message>
   <message name="IDS_SETTINGS_BRAVE_OTHER_SEARCH_ENGINES_DESC" desc="The description for the settings switch controlling the addition of custom search engines">
-    Automatically indexes websites that follow the OpenSearch spec.
+    Automatically indexes websites that follow the OpenSearch spec
   </message>
   <message name="IDS_SETTINGS_NORMAL_PROFILE_SEARCH_EXPLANATION" desc="Explanation for the search engine setting.">
     Search engine used in the address bar.
@@ -1107,6 +1119,12 @@
   <message name="IDS_SETTINGS_PRIVATE_PROFILE_SEARCH_ENGINE_CHOICE_SETTINGS_CONFIRMATION_TOAST_LABEL" desc="This confirmation message is intended to help users understand that their choice is now saved. It appears after the user changes their default private search engine in Brave settings. (A search engine provides answers to search queries; this is different from a browser, which displays web pages. A search engine powers many experiences within a browser.)">
     <ph name="SEARCH_ENGINE_NAME">$1<ex>Brave</ex></ph> is now your default search engine for private windows
   </message>
+  <message name="IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_DESCRIPTION" desc="The description shown with the Brave Search radio button in the search engines list.">
+    Brave Search is recommended for the best browsing experience while using Brave browser.
+  </message>
+  <message name="IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_RECOMMENDED" desc="The label shown in the Brave Search radio button in the search engines list.">
+    Recommended
+  </message>
 
   <!-- Settings / Extensions -->
   <message name="IDS_SETTINGS_BRAVE_DEFAULT_EXTENSIONS_TITLE" desc="The title for Brave default extensions in settings">
@@ -1116,13 +1134,13 @@
     Allow Google login for extensions
   </message>
   <message name="IDS_SETTINGS_MEDIA_ROUTER_ENABLED_DESC" desc="The description for media router switch in settings">
-    Media router enables cast feature in the browser.
+    Media router enables cast feature in the browser
   </message>
   <message name="IDS_SETTINGS_RESOLVE_UNSTOPPABLE_DOMAINS_DESC" desc="The description for how to handle Unstoppable Domains">
     Resolve Unstoppable Domains domain names
   </message>
   <message name="IDS_SETTINGS_RESOLVE_UNSTOPPABLE_DOMAINS_SUB_DESC" desc="The sub-description for how to handle Unstoppable Domains">
-    <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn More<ph name="END_LINK">&lt;/a&gt;</ph> about Unstoppable Domains privacy considerations.
+    <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn More<ph name="END_LINK">&lt;/a&gt;</ph> about Unstoppable Domains privacy considerations
   </message>
   <message name="IDS_SETTINGS_RESOLVE_ENS_DESC" desc="The description for how to handle ENS">
     Resolve Ethereum Name Service (ENS) domain names
@@ -1209,10 +1227,10 @@
     Only resolve .onion addresses in Tor windows
   </message>
   <message name="IDS_SETTINGS_ONION_ONLY_IN_TOR_WINDOWS_DESC" desc="">
-    Onion services won't be available outside of Tor windows.
+    Onion services won't be available outside of Tor windows
   </message>
   <message name="IDS_SETTINGS_ENABLE_WIDEVINE_DESC" desc="Text fragment for enabling widevine component. 'Widevine' is the name of a plugin and should not be translated.">
-    Use Widevine digital rights management (DRM) component to view protected streaming video and other content in the browser.
+    Use Widevine digital rights management (DRM) component to view protected streaming video and other content in the browser
   </message>
   <message name="IDS_SETTINGS_MANAGE_EXTENSIONS_V2_LABEL" desc="The label of manage v2 extensions link in settings">
     Manifest V2 extensions
@@ -1301,10 +1319,10 @@
     Automatically add NFTs you own to the Wallet using third party APIs.
   </message>
   <message name="IDS_SETTINGS_ENABLE_BRAVE_WALLET_IN_PRIVATE_WINDOWS_LABEL" desc="The label for enabling private window support">
-    Enable Brave Wallet in Private Windows.
+    Enable Brave Wallet in Private Windows
   </message>
   <message name="IDS_SETTINGS_ENABLE_BRAVE_WALLET_IN_PRIVATE_WINDOWS_DESC" desc="The description for enabling private window support">
-    Warning: Reusing a wallet address in a private window session can enable a site to link a private window session to a non-private window session.
+    Warning: Reusing a wallet address in a private window session can enable a site to link a private window session to a non-private window session
   </message>
   <message name="IDS_SETTINGS_AUTO_LOCK_MINUTES" desc="The title for the amount of minutes it takes for the Brave Wallet to automatically lock">
     Automatically lock Brave Wallet
@@ -1517,14 +1535,11 @@
   <message name="IDS_SETTINGS_LEO_ASSISTANT_HISTORY_PREFERENCE_CONFIRM" desc="The confirmation prompt about disabling the AI Chat history preference">
     Disabling conversation storage will permanently erase all previously stored conversations. This action can't be undone.
   </message>
-  <message name="IDS_SETTINGS_LEO_ASSISTANT_RESET_AND_CLEAR_DATA_LABEL" desc="The button label for deleteing all AI Chat conversations">
-    Delete all Leo AI conversation data
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_RESET_AND_CLEAR_DATA_LABEL" desc="The button label for resetting AI Chat data">
+    Clear Leo data
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_RESET_AND_CLEAR_DATA_CONFIRMATION_LABEL" desc="The confirmation window message for reset option">
-    Resetting Leo AI will require you to opt-in to use Brave
-Leo AI in the future and will also clear your chat history. Clearing your
-chat history will delete all your previous conversations with Brave
-Leo AI. This action can't be undone.
+    Resetting Leo AI will require you to opt-in to use Brave Leo AI in the future and will also clear your chat history, customizations, and memories. Clearing your chat history will delete all your previous conversations with Brave Leo AI. This action can't be undone.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_AUTOCOMPLETE_LINK" desc="A label for a link to settings page to adjust autocomplete suggestion based on Leo">
     Adjust autocomplete suggestions
@@ -1546,6 +1561,12 @@ Leo AI. This action can't be undone.
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_MODEL_SELECTION_LABEL" desc="Label for selecting default model">
     Default model for new conversations
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_PERSONALIZATION_LABEL" desc="Label for the personalization section">
+    Personalization
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_LINK_LABEL" desc="Label for a link to Leo customization page">
+    Customize Leo's responses and memories
   </message>
   <message name="IDS_SETTINGS_LEO_ASSISTANT_MANAGE_URL" desc="Label for managing accounts url">
     Manage premium subscription
@@ -1652,6 +1673,102 @@ Leo AI. This action can't be undone.
   <message name="IDS_SETTINGS_LEO_ASSISTANT_TOKENS_COUNT" desc="A label for the (estimated) number of tokens in the system prompt">
     ≈<ph name="TOKENS_COUNT">$1<ex>175</ex></ph> tokens
   </message>
+   <!-- Leo Customization -->
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_PAGE_TITLE" desc="The title for Leo Assistant customization page">
+    Customize Leo
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_TITLE" desc="The title for Leo Assistant customization section">
+    About you
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_DESCRIPTION" desc="The description for Leo Assistant customization section">
+    Tell Leo about yourself to get more personalized answers. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_ENABLED_LABEL" desc="The label for enabling Leo Assistant customization">
+    Enable Leo Customization
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_USER_MEMORY_ENABLED_LABEL" desc="The label for enabling user memory in Leo Assistant">
+    Enable User Memory
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_NAME_LABEL" desc="Label for the input where the user specifies what Leo should call them">
+    What should Leo call you?
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_NAME_PLACEHOLDER" desc="Placeholder for the input where the user specifies what Leo should call them">
+    Enter your preferred name for Leo to call you by
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_JOB_LABEL" desc="Label for the input where the user describes what they do">
+    What do you do?
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_JOB_PLACEHOLDER" desc="Placeholder for the input where the user describes what they do">
+    Tell Leo a little bit about what you do
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_TONE_LABEL" desc="Label for the input where the user describes how Leo should answer">
+    How should Leo answer your questions?
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_TONE_PLACEHOLDER" desc="Placeholder for the input where the user describes how Leo should answer">
+    Describe the tone and traits you would like Leo to use when answering
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_OTHER_LABEL" desc="Label for the input where the user can add anything else Leo should know">
+    Anything else Leo should know about you?
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_OTHER_PLACEHOLDER" desc="Placeholder for the input where the user can add anything else Leo should know">
+    Let Leo know about any preferences you want it to keep in mind when answering
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_SAVE_BUTTON" desc="Label for the save changes button in Leo customization">
+    Save changes
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_CHANGES_SAVED" desc="Label for the save changes button in Leo customization when the changes are saved">
+    Changes saved
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_INPUT_LENGTH_ERROR" desc="General error message shown when any input exceeds the maximum length">
+    Input is too long
+  </message>
+
+  <!-- Leo Assistant Memory Section -->
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_YOUR_MEMORIES_TITLE" desc="The title for Leo Assistant memory section">
+    Memories
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_YOUR_MEMORIES_DESC" desc="The description for Leo Assistant memory section">
+    All the things that Leo learned about you and won't forget about. <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_LINK">&lt;/a&gt;</ph>
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_MEMORY_LIST_EMPTY_TITLE" desc="The title shown when the memory list is empty">
+    No memories created yet
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_MEMORY_LIST_EMPTY_DESCRIPTION" desc="The description shown when the memory list is empty">
+    Add a memory to help Leo get to know you better.
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_ADD_NEW_MEMORY_BUTTON_LABEL" desc="The label for the button to add a new memory">
+    Add new memory
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_EDIT_MEMORY_DIALOG_TITLE" desc="The title for the edit memory dialog">
+    Edit this memory
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CREATE_MEMORY_DIALOG_TITLE" desc="The title for the create new memory dialog">
+    Create a new memory
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_MEMORY_INPUT_PLACEHOLDER" desc="The placeholder text for the memory input field">
+    What do you want Leo to remember?
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_DELETE_MEMORY_CONFIRMATION_TITLE" desc="The title for delete memory dialog">
+    Delete this memory
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_DELETE_MEMORY_CONFIRMATION" desc="The confirmation message for deleting a memory">
+    Are you sure you want to delete this memory? This action cannot be undone.
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_DELETE_ALL_MEMORIES_CONFIRMATION_TITLE" desc="The title for delete all memories dialog and the label for delete all memories action button">
+    Delete all memories
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_DELETE_ALL_MEMORIES_CONFIRMATION" desc="The confirmation message for deleting all memories">
+    Are you sure you want to delete all memories? This action cannot be undone.
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_NO_SEARCH_RESULTS_FOUND" desc="The message shown when no search results are found in memory search">
+    No results found
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_CLEAR_SEARCH" desc="The label for the link to clear search in memory search">
+    Clear search
+  </message>
+  <message name="IDS_SETTINGS_LEO_ASSISTANT_SEARCH_MEMORIES_PLACEHOLDER" desc="The placeholder text for the memory search input field">
+    Search for a memory
+  </message>
 
   <!-- Settings / Survey Panelist -->
   <message name="IDS_SETTINGS_SURVEY_PANELIST" desc="Title for an item in the 'Survey Panelist' section of Brave Settings">
@@ -1672,7 +1789,7 @@ Leo AI. This action can't be undone.
     Automatically add files for offline viewing
   </message>
   <message name="IDS_SETTINGS_PLAYLIST_CACHE_BY_DEFAULT_SUB_LABEL" desc="A description for setting to en/disable media cache behavior">
-    This option will automatically cache media files so you can play them without an Internet connection.
+    This option will automatically cache media files so you can play them without an Internet connection
   </message>
 
   <!-- Settings / Secure DNS -->

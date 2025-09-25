@@ -30,11 +30,31 @@ interface ParentUIFrame {
   // then deals with whether to display the modal or to continue opening
   // the link.
   UserRequestedOpenGeneratedUrl(url.mojom.Url url);
+
+  // Notify the parent that the child has received a drag enter. We don't have
+  // a corresponding DragEnd because the parent should intercept the drag event
+  // with an overlay.
+  DragStart();
+
+  // This is sent to the parent trusted webui to allow settings the iframes
+  // wrapper position to relative while the Regenerate Answer Menu is open.
+  // Otherwise the menu can sometimes be overlapped by the Suggested question
+  // buttons.
+  RegenerateAnswerMenuIsOpen(bool is_open);
+};
+
+// UI-side handler for callbacks from UntrustedUIHandler
+interface UntrustedUI {
+  // Called when memories have changed (added, updated, or deleted)
+  OnMemoriesChanged(array<string> memories);
 };
 
 // Browser-side handler for untrusted frame that handles rendering of
 // conversation entries.
 interface UntrustedUIHandler {
+  // Bind UntrustedUI for callbacks
+  BindUntrustedUI(pending_remote<UntrustedUI> untrusted_ui);
+
   // Open a URL for the web search query the assistant used for a response
   OpenSearchURL(string query);
 
@@ -44,5 +64,14 @@ interface UntrustedUIHandler {
   // response. Could be any http/https destination.
   OpenURLFromResponse(url.mojom.Url url);
 
+  // Open AI Chat customization settings page
+  OpenAIChatCustomizationSettings();
+
   BindParentPage(pending_receiver<ParentUIFrame> parent_frame);
+
+  // Delete a specific memory from user memory storage
+  DeleteMemory(string memory);
+
+  // Check if a specific memory exists in storage
+  HasMemory(string memory) => (bool exists);
 };

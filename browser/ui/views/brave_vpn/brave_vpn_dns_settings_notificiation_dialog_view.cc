@@ -14,6 +14,7 @@
 #include "chrome/browser/ui/views/frame/browser_view.h"
 #include "components/constrained_window/constrained_window_views.h"
 #include "components/grit/brave_components_strings.h"
+#include "components/prefs/pref_service.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/base/mojom/dialog_button.mojom.h"
@@ -27,7 +28,7 @@ namespace brave_vpn {
 namespace {
 
 constexpr char kBraveVPNLearnMoreURL[] =
-    "https://support.brave.com/hc/en-us/articles/10864482160141";
+    "https://support.brave.app/hc/en-us/articles/10864482160141";
 
 constexpr int kChildSpacing = 16;
 constexpr int kPadding = 24;

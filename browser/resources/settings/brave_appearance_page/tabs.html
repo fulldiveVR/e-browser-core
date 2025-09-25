@@ -1,5 +1,9 @@
 <!-- This file will be converted into tabs.html.js using //tools/grit/preprocess_if_expr -->
-<style include="settings-shared"></style>
+<style include="cr-shared-style settings-shared"></style>
+
+<settings-section
+  id="tabs"
+  page-title="$i18n{appearanceSettingsTabsSection}">
 
 <!-- Vertical Tab strip -->
 <settings-toggle-button
@@ -16,11 +20,39 @@
       pref="{{prefs.brave.tabs.vertical_tabs_show_title_on_window}}"
       label="$i18n{appearanceSettingsTabsShowWindowTitle}">
     </settings-checkbox>
-    <settings-checkbox
-      class="list-item"
-      pref="{{prefs.brave.tabs.vertical_tabs_floating_enabled}}"
-      label="$i18n{appearanceSettingsTabsFloatOnMouseOver}">
-    </settings-checkbox>
+    <template is="dom-if" if="[[isHideVerticalTabCompletelyFlagEnabled()]]">
+      <settings-checkbox
+        class="list-item"
+        pref="{{prefs.brave.tabs.vertical_tabs_hide_completely_when_collapsed}}"
+        label="$i18n{SETTINGS_APPEARANCE_SETTINGS_TABS_HIDE_COMPLETELY_WHEN_COLLPASED}">
+      </settings-checkbox>
+      <template is="dom-if" if="[[prefs.brave.tabs.vertical_tabs_hide_completely_when_collapsed.value]]">
+        <!-- Show always checked and disabled checkbox. When 
+             vertical_tabs_hide_completely_when_collapsed is true
+             "Float on mouse over" is always enabled -->
+        <settings-checkbox
+          class="list-item"
+          disabled="true"
+          no-set-pref
+          pref="{{prefs.brave.tabs.vertical_tabs_hide_completely_when_collapsed}}"
+          label="$i18n{appearanceSettingsTabsFloatOnMouseOver}">
+        </settings-checkbox>
+      </template>
+      <template is="dom-if" if="[[!prefs.brave.tabs.vertical_tabs_hide_completely_when_collapsed.value]]">
+        <settings-checkbox
+          class="list-item"
+          pref="{{prefs.brave.tabs.vertical_tabs_floating_enabled}}"
+          label="$i18n{appearanceSettingsTabsFloatOnMouseOver}">
+        </settings-checkbox>
+      </template>
+    </template>
+    <template is="dom-if" if="[[!isHideVerticalTabCompletelyFlagEnabled()]]">
+      <settings-checkbox
+        class="list-item"
+        pref="{{prefs.brave.tabs.vertical_tabs_floating_enabled}}"
+        label="$i18n{appearanceSettingsTabsFloatOnMouseOver}">
+      </settings-checkbox>
+    </template>
     <settings-checkbox
       class="list-item"
       pref="{{prefs.brave.tabs.vertical_tabs_expanded_state_per_window}}"
@@ -59,13 +91,6 @@
     </settings-radio-group>
   </div>
 </template> <!-- vertical_tabs_enabled.value -->
-
-<!-- Tab search button visibility -->
-<settings-toggle-button
-  pref="{{prefs.brave.tabs_search_show}}"
-  class="cr-row"
-  label="$i18n{showSearchTabsBtn}">
-</settings-toggle-button>
 
 <!-- Tab speaker icons function  -->
 <settings-toggle-button
@@ -109,3 +134,5 @@
   sub-label-with-link="$i18n{discardRingTreatmentEnabledDescriptionWithLearnLink}"
   on-sub-label-link-clicked="onDiscardRingTreatmentLearnMoreLinkClick_">
 </settings-toggle-button>
+
+</settings-section>

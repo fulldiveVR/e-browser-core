@@ -24,7 +24,7 @@ export function getHtml(this: BraveAccountDialogElement) {
           <leo-button
             kind="plain-faint"
             size="tiny"
-            @click=${() => this.fire('close-button-clicked')}
+            @click=${() => this.fire('close-dialog')}
           >
             <leo-icon name="close"></leo-icon>
           </leo-button>
@@ -55,6 +55,7 @@ export function getHtml(this: BraveAccountDialogElement) {
         </if>
       </div>
     </div>
+    ${this.isFooterSlotted ? html`<div class="divider"></div>` : nothing}
     <slot name="footer"></slot>
     <!--_html_template_end_-->`
 }

@@ -39,6 +39,7 @@ import org.chromium.base.library_loader.ProcessInitException;
 import org.chromium.base.task.PostTask;
 import org.chromium.base.task.TaskTraits;
 import org.chromium.chrome.R;
+import org.chromium.chrome.browser.BraveIntentHandler;
 import org.chromium.chrome.browser.IntentHandler;
 import org.chromium.chrome.browser.browserservices.intents.WebappConstants;
 import org.chromium.chrome.browser.document.ChromeLauncherActivity;
@@ -92,12 +93,15 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
 
     public static String FROM_SETTINGS = "FROM_SETTINGS";
 
-    private static final int TOTAL_TILES = 16;
+    private static final int TOTAL_TILES = 12;
     private static final int TILES_PER_ROW = 4;
-    private static final int MIN_VISIBLE_HEIGHT_ROW_1 = 125;
-    private static final int MIN_VISIBLE_HEIGHT_ROW_2 = 220;
-    private static final int MIN_VISIBLE_HEIGHT_ROW_3 = 252;
-    private static final int MIN_VISIBLE_HEIGHT_ROW_4 = 320;
+    // Tiles row is ~72dp + search bar height(48dp)(depends on the text size
+    // settings on the device)
+    private static final int MIN_VISIBLE_HEIGHT_ROW_1 = 110;
+    // Two tiles rows height is ~144dp + search bar height
+    private static final int MIN_VISIBLE_HEIGHT_ROW_2 = 177;
+    // The rest could be visible after that point
+    private static final int MIN_VISIBLE_HEIGHT_ROW_3 = 210;
     private static final int DESIRED_ICON_SIZE = 44;
     private static final int DESIRED_ICON_RADIUS = 16;
 
@@ -120,12 +124,6 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
                     {R.id.ivRow3Bookmark2Icon, R.id.tvRow3Bookmark2Name, R.id.layoutRow3Bookmark2},
                     {R.id.ivRow3Bookmark3Icon, R.id.tvRow3Bookmark3Name, R.id.layoutRow3Bookmark3},
                     {R.id.ivRow3Bookmark4Icon, R.id.tvRow3Bookmark4Name, R.id.layoutRow3Bookmark4},
-                },
-                {
-                    {R.id.ivRow4Bookmark1Icon, R.id.tvRow4Bookmark1Name, R.id.layoutRow4Bookmark1},
-                    {R.id.ivRow4Bookmark2Icon, R.id.tvRow4Bookmark2Name, R.id.layoutRow4Bookmark2},
-                    {R.id.ivRow4Bookmark3Icon, R.id.tvRow4Bookmark3Name, R.id.layoutRow4Bookmark3},
-                    {R.id.ivRow4Bookmark4Icon, R.id.tvRow4Bookmark4Name, R.id.layoutRow4Bookmark4},
                 },
             };
 
@@ -292,9 +290,14 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
             Bundle options = appWidgetManager.getAppWidgetOptions(appWidgetId);
             int minHeight = options.getInt(AppWidgetManager.OPTION_APPWIDGET_MIN_HEIGHT);
             setDefaultSearchEngineString(views);
-            setSearchBarPendingIntent(context, views);
-            setTopTiles(context, views, widgetTileList);
+            // Request code should be unique. By using distinct request codes,
+            // we allow the system to differentiate between the intents,
+            // ensuring that each button triggers its respective action.
+            int requestCode = -1;
+            requestCode = setSearchBarPendingIntent(context, views, requestCode);
+            setTopTiles(context, views, widgetTileList, requestCode);
             setRowsVisibility(views, widgetTileList.size(), minHeight);
+            setDynamicLayout(views, widgetTileList.size(), minHeight);
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }
     }
@@ -314,7 +317,7 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
     }
 
     private static void setTopTiles(
-            Context context, RemoteViews views, List<WidgetTile> widgetTileList) {
+            Context context, RemoteViews views, List<WidgetTile> widgetTileList, int requestCode) {
         int tilesSize = widgetTileList.size();
         int i = 0;
         int j = 0;
@@ -329,7 +332,8 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
             int tileTextViewId = tileViewsIdArray[row][j][1];
 
             views.setViewVisibility(tileLayoutId, View.VISIBLE);
-            views.setOnClickPendingIntent(tileLayoutId, createIntent(context, tile.getUrl()));
+            views.setOnClickPendingIntent(
+                    tileLayoutId, createIntent(context, tile.getUrl(), ++requestCode));
             views.setTextViewText(tileTextViewId, tile.getTitle());
             views.setInt(tileImageViewId, "setColorFilter", 0);
             fetchGurlIcon(tileImageViewId, tile.getGURL());
@@ -365,9 +369,11 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
                             int fallbackColor,
                             boolean isFallbackColorDefault,
                             @IconType int iconType) {
-                        if (icon == null)
+                        if (icon == null) {
                             updateTileIcon(imageViewId, getTileIconFromColor(gurl, fallbackColor));
-                        else updateTileIcon(imageViewId, getRoundedTileIconFromBitmap(icon));
+                        } else {
+                            updateTileIcon(imageViewId, getRoundedTileIconFromBitmap(icon));
+                        }
                     }
                 };
         largeIconBridge.getLargeIconForUrl(gurl, DESIRED_ICON_SIZE, callback);
@@ -389,10 +395,18 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
         return mIconGenerator.generateIconForUrl(gurl);
     }
 
-    private static void setSearchBarPendingIntent(Context context, RemoteViews views) {
-        views.setOnClickPendingIntent(R.id.ivIncognito, createIncognitoIntent(context));
-        views.setOnClickPendingIntent(R.id.layoutSearchWithBrave, createIntent(context, false));
-        views.setOnClickPendingIntent(R.id.ivVoiceSearch, createIntent(context, true));
+    private static int setSearchBarPendingIntent(
+            Context context, RemoteViews views, int requestCode) {
+        views.setOnClickPendingIntent(
+                R.id.ivIncognito, createIncognitoIntent(context, ++requestCode));
+        views.setOnClickPendingIntent(
+                R.id.layoutSearchWithBrave, createIntent(context, false, ++requestCode));
+        views.setOnClickPendingIntent(
+                R.id.ivVoiceSearch, createIntent(context, true, ++requestCode));
+        views.setOnClickPendingIntent(
+                R.id.ibLeo, createPendingIntent(context, createLeoIntent(context), ++requestCode));
+
+        return requestCode;
     }
 
     private static Bitmap getBitmap(@Nullable Drawable drawable) {
@@ -409,35 +423,73 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
     }
 
     private static void setRowsVisibility(RemoteViews views, int tilesSize, int minHeight) {
-        views.setViewVisibility(R.id.BookmarkLayoutRow1,
+        views.setViewVisibility(
+                R.id.BookmarkLayoutRow1,
                 tilesSize > 0 * TILES_PER_ROW && minHeight >= MIN_VISIBLE_HEIGHT_ROW_1
                         ? View.VISIBLE
                         : View.GONE);
-        views.setViewVisibility(R.id.BookmarkLayoutRow2,
+        views.setViewVisibility(
+                R.id.BookmarkLayoutRow2,
                 tilesSize > 1 * TILES_PER_ROW && minHeight >= MIN_VISIBLE_HEIGHT_ROW_2
                         ? View.VISIBLE
                         : View.GONE);
-        views.setViewVisibility(R.id.BookmarkLayoutRow3,
+        views.setViewVisibility(
+                R.id.BookmarkLayoutRow3,
                 tilesSize > 2 * TILES_PER_ROW && minHeight >= MIN_VISIBLE_HEIGHT_ROW_3
-                        ? View.VISIBLE
-                        : View.GONE);
-        views.setViewVisibility(R.id.BookmarkLayoutRow4,
-                tilesSize > 3 * TILES_PER_ROW && minHeight >= MIN_VISIBLE_HEIGHT_ROW_4
                         ? View.VISIBLE
                         : View.GONE);
     }
 
-    private static PendingIntent createIntent(@NonNull Context context, @NonNull String url) {
-        Intent intent = new Intent(
-                Intent.ACTION_VIEW, Uri.parse(url), context, ChromeLauncherActivity.class);
+    private static void setDynamicLayout(RemoteViews views, int tilesSize, int minHeight) {
+        // Check if BookmarkLayoutRow1 is visible (same condition as in setRowsVisibility)
+        boolean isRow1Visible = tilesSize > 0 && minHeight >= MIN_VISIBLE_HEIGHT_ROW_1;
+        if (isRow1Visible) {
+            // When top tiles are visible:
+            // 1. Set gravity to "top" to align content to top
+            views.setInt(R.id.background, "setGravity", android.view.Gravity.TOP);
+            // 2. Set layout height to match_parent (API 31+)
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+                try {
+                    views.setViewLayoutHeight(
+                            R.id.background,
+                            android.view.ViewGroup.LayoutParams.MATCH_PARENT,
+                            android.util.TypedValue.COMPLEX_UNIT_PX);
+                } catch (Exception e) {
+                    Log.d(TAG, "Could not set layout height to MATCH_PARENT", e);
+                }
+            }
+        } else {
+            // When no top tiles are shown:
+            // 1. Set gravity to "center" to center the search bar
+            views.setInt(R.id.background, "setGravity", android.view.Gravity.CENTER);
+            // 2. Reset layout height to wrap_content (API 31+)
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+                try {
+                    views.setViewLayoutHeight(
+                            R.id.background,
+                            android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
+                            android.util.TypedValue.COMPLEX_UNIT_PX);
+                } catch (Exception e) {
+                    Log.d(TAG, "Could not set layout height to WRAP_CONTENT", e);
+                }
+            }
+        }
+    }
+
+    private static PendingIntent createIntent(
+            @NonNull Context context, @NonNull String url, int requestCode) {
+        Intent intent =
+                new Intent(
+                        Intent.ACTION_VIEW, Uri.parse(url), context, ChromeLauncherActivity.class);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(WebappConstants.EXTRA_SOURCE, ShortcutSource.BOOKMARK_NAVIGATOR_WIDGET);
         intent.putExtra(WebappConstants.REUSE_URL_MATCHING_TAB_ELSE_NEW_TAB, true);
-        return createPendingIntent(context, intent);
+        return createPendingIntent(context, intent, requestCode);
     }
 
-    private static PendingIntent createIntent(@NonNull Context context, boolean startVoiceSearch) {
+    private static PendingIntent createIntent(
+            @NonNull Context context, boolean startVoiceSearch, int requestCode) {
         SearchActivityClient client =
                 new SearchActivityClientImpl(context, IntentOrigin.SEARCH_WIDGET);
 
@@ -449,21 +501,36 @@ public class QuickActionSearchAndBookmarkWidgetProvider extends AppWidgetProvide
         searchIntent.putExtra(SearchWidgetProvider.EXTRA_FROM_SEARCH_WIDGET, true);
         searchIntent.setComponent(new ComponentName(context, SearchActivity.class));
         searchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        return createPendingIntent(context, searchIntent);
+        return createPendingIntent(context, searchIntent, requestCode);
     }
 
-    private static PendingIntent createIncognitoIntent(Context context) {
+    private static PendingIntent createIncognitoIntent(Context context, int requestCode) {
         Intent trustedIncognitoIntent =
-                IntentHandler.createTrustedOpenNewTabIntent(context, /*incognito=*/true);
+                IntentHandler.createTrustedOpenNewTabIntent(context, /* incognito= */ true);
         trustedIncognitoIntent.putExtra(IntentHandler.EXTRA_INVOKED_FROM_APP_WIDGET, true);
         trustedIncognitoIntent.addFlags(
                 Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
         trustedIncognitoIntent.putExtra(SearchWidgetProvider.EXTRA_FROM_SEARCH_WIDGET, true);
-        return createPendingIntent(context, trustedIncognitoIntent);
+        return createPendingIntent(context, trustedIncognitoIntent, requestCode);
     }
 
-    private static PendingIntent createPendingIntent(Context context, Intent intent) {
-        return PendingIntent.getActivity(context, 0, intent,
+    public static Intent createLeoIntent(Context context) {
+        Intent trustedIncognitoIntent =
+                IntentHandler.createTrustedOpenNewTabIntent(context, /* incognito= */ false);
+        trustedIncognitoIntent.putExtra(IntentHandler.EXTRA_INVOKED_FROM_APP_WIDGET, true);
+        trustedIncognitoIntent.putExtra(BraveIntentHandler.EXTRA_INVOKED_FROM_APP_WIDGET_LEO, true);
+        trustedIncognitoIntent.addFlags(
+                Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
+        trustedIncognitoIntent.putExtra(SearchWidgetProvider.EXTRA_FROM_SEARCH_WIDGET, true);
+        return trustedIncognitoIntent;
+    }
+
+    private static PendingIntent createPendingIntent(
+            Context context, Intent intent, int requestCode) {
+        return PendingIntent.getActivity(
+                context,
+                requestCode,
+                intent,
                 PendingIntent.FLAG_UPDATE_CURRENT
                         | IntentUtils.getPendingIntentMutabilityFlag(false));
     }

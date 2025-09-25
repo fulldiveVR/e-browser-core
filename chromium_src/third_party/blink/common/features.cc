@@ -3,16 +3,15 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-#include "src/third_party/blink/common/features.cc"
-
 #include "base/feature_override.h"
+
+#include <third_party/blink/common/features.cc>
 
 namespace blink::features {
 
 OVERRIDE_FEATURE_DEFAULT_STATES({{
     // Upgrade all mixed content
     {kMixedContentAutoupgrade, base::FEATURE_ENABLED_BY_DEFAULT},
-    {kPrefetchPrivacyChanges, base::FEATURE_ENABLED_BY_DEFAULT},
     {kReducedReferrerGranularity, base::FEATURE_ENABLED_BY_DEFAULT},
     {kUACHOverrideBlank, base::FEATURE_ENABLED_BY_DEFAULT},
 
@@ -29,6 +28,7 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
     {kFledgeConsiderKAnonymity, base::FEATURE_DISABLED_BY_DEFAULT},
     {kFledgeEnforceKAnonymity, base::FEATURE_DISABLED_BY_DEFAULT},
     {kParakeet, base::FEATURE_DISABLED_BY_DEFAULT},
+    {kPermissionElement, base::FEATURE_DISABLED_BY_DEFAULT},
     {kPrerender2, base::FEATURE_DISABLED_BY_DEFAULT},
     {kPrivateAggregationApi, base::FEATURE_DISABLED_BY_DEFAULT},
     // This feature uses shared memory to reduce IPCs to access cookies, but

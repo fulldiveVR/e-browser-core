@@ -110,7 +110,7 @@
 "DomainBlockedTitle" = "Domein geblokkeerd";
 
 /* A description of what the Enable GPC toggle does */
-"EnableGPCDescription" = "Vraag websites om je gegevens niet te verkopen of te delen. [Meer informatie](https://support.brave.com/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)";
+"EnableGPCDescription" = "Vraag websites om je gegevens niet te verkopen of te delen. [Meer informatie](https://support.brave.app/hc/en-us/articles/360017989132-How-do-I-change-my-Privacy-Settings#h_01HHFRRT6B5YTRREA4ZDARGTWM)";
 
 /* A label of the GPC toggle */
 "EnableGPCLabel" = "Schakel Global Privacy Control in";
@@ -199,7 +199,8 @@
 /* A list row label for accessing the shred settings screen */
 "ShredSiteData" = "Versnipper sitegegevens";
 
-/* A message for a confirmation window that appears when a user clicks on 'Shred Data'. */
+/* A message for a confirmation window that appears when a user clicks on 'Shred All Tabs'.
+A message for a confirmation window that appears when a user clicks on 'Shred Data'. */
 "ShredSiteDataConfirmationMessage" = "Door de versnippering worden alle tabbladen van deze site gesloten en worden alle sitegegevens verwijderd. Deze actie kun je niet ongedaan maken.";
 
 /* A title for a confirmation window that appears when a user clicks on 'Shred Data' */

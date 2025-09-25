@@ -35,17 +35,26 @@ std::string EngineConsumer::GetPromptForEntry(
   return prompt_entry->prompt.value_or(prompt_entry->text);
 }
 
-EngineConsumer::EngineConsumer(ModelService* model_service)
-    : model_service_(model_service) {}
+EngineConsumer::EngineConsumer(ModelService* model_service, PrefService* prefs)
+    : model_service_(model_service), prefs_(prefs) {}
 EngineConsumer::~EngineConsumer() = default;
 
 bool EngineConsumer::SupportsDeltaTextResponses() const {
   return false;
 }
 
+bool EngineConsumer::RequiresClientSideTitleGeneration() const {
+  return false;  // Default: server handles titles (e.g., conversation API)
+}
+
 std::string EngineConsumer::GetImageDataURL(base::span<uint8_t> image_data) {
   constexpr char kDataUrlPrefix[] = "data:image/png;base64,";
   return base::StrCat({kDataUrlPrefix, base::Base64Encode(image_data)});
+}
+
+std::string EngineConsumer::GetPdfDataURL(base::span<uint8_t> pdf_data) {
+  constexpr char kDataUrlPrefix[] = "data:application/pdf;base64,";
+  return base::StrCat({kDataUrlPrefix, base::Base64Encode(pdf_data)});
 }
 
 bool EngineConsumer::CanPerformCompletionRequest(

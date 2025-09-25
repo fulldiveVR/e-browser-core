@@ -23,16 +23,18 @@ source_set("component_loader") {
 
   deps = [
     "//base",
-    "//brave/components/brave_component_updater/browser",
     "//brave/components/brave_extension:static_resources",
-    "//chrome/browser:browser_process",
     "//chrome/browser/extensions",
     "//chrome/browser/profiles:profile",
-    "//chrome/common:constants",
     "//components/prefs",
     "//extensions/browser",
     "//extensions/common",
+    "//ui/base",
   ]
+
+  if (enable_web_discovery_native) {
+    deps += [ "//brave/components/web_discovery/common" ]
+  }
 }
 
 # This is split out from extensions and the rest of brave_prefs_util because it
@@ -70,8 +72,6 @@ source_set("extensions") {
     "api/brave_theme_api.h",
     "api/identity/brave_web_auth_flow.cc",
     "api/identity/brave_web_auth_flow.h",
-    "api/rewards_notifications_api.cc",
-    "api/rewards_notifications_api.h",
     "api/settings_private/brave_prefs_util.cc",
     "api/settings_private/brave_prefs_util.h",
     "api/web_discovery_api.cc",
@@ -93,7 +93,6 @@ source_set("extensions") {
   deps = [
     ":brave_prefs_util_impl",
     ":resources",
-    "//base",
     "//base",
     "//brave/app:brave_generated_resources_grit",
     "//brave/browser:browser_process",
@@ -193,11 +192,6 @@ source_set("extensions") {
     deps += [ "//brave/components/windows_recall" ]
   }
 
-  # This API is still being used by the preferences page
-  sources += [
-    "api/brave_wallet_api.cc",
-    "api/brave_wallet_api.h",
-  ]
   deps += [
     "//brave/components/brave_wallet/browser",
     "//brave/components/brave_wallet/common:buildflags",

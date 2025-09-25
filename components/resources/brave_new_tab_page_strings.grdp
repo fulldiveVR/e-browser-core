@@ -65,8 +65,36 @@
     Gradients
   </message>
 
+  <message name="IDS_NEW_TAB_HIDE_REWARDS_WIDGET_LABEL" desc="Label for button that hides the Rewards widget">
+    Hide Rewards card
+  </message>
+
+  <message name="IDS_NEW_TAB_HIDE_STATS_WIDGET_LABEL" desc="Label for button that hides the Rewards widget">
+    Hide stats card
+  </message>
+
+  <message name="IDS_NEW_TAB_HIDE_TALK_WIDGET_LABEL" desc="Label for button that hides the Talk widget">
+    Hide Talk card
+  </message>
+
   <message name="IDS_NEW_TAB_HIDE_TOP_SITES_LABEL" desc="Label for button that hides the top sites UI">
     Hide top sites
+  </message>
+
+  <message name="IDS_NEW_TAB_HIDE_VPN_WIDGET_LABEL" desc="Label for button that hides the VPN widget">
+    Hide VPN card
+  </message>
+
+  <message name="IDS_NEW_TAB_NEWS_CUSTOMIZE_BUTTON_LABEL" desc="Label for button that opens the News settings modal">
+    Customize News
+  </message>
+
+  <message name="IDS_NEW_TAB_NEWS_DISABLE_BUTTON_LABEL" desc="Label for button that disables News on the NTP">
+    Disable News
+  </message>
+
+  <message name="IDS_NEW_TAB_NEWS_HIDE_BUTTON_LABEL" desc="Label for button that hides News on the NTP">
+    Hide News
   </message>
 
   <message name="IDS_NEW_TAB_NEWS_WIDGET_TITLE" desc="Title for Brave News widget">
@@ -119,6 +147,10 @@
 
   <message name="IDS_NEW_TAB_REWARDS_ONBOARDING_LINK" desc="Text for Rewards onboarding link">
     How does it work?
+  </message>
+
+  <message name="IDS_NEW_TAB_REWARDS_PAYOUT_DETAILS_LINK" desc="Text for link to more information about Rewards payouts">
+    Details
   </message>
 
   <message name="IDS_NEW_TAB_REWARDS_WIDGET_TITLE" desc="Title of the Rewards NTP widget">
@@ -225,8 +257,12 @@
     STATS
   </message>
 
+  <message name="IDS_NEW_TAB_TALK_ABOUT_DATA_LINK" desc="Text for link to page describing Brave Talk data policies">
+    About your data
+  </message>
+
   <message name="IDS_NEW_TAB_TALK_DESCRIPTION_TEXT" desc="Description text for Brave Talk widget">
-    Encrypted video calls with Brave Talk.
+    Encrypted video calls with Brave Talk
   </message>
 
   <message name="IDS_NEW_TAB_TALK_DESCRIPTION_TITLE" desc="Description title for Brave Talk widget">
@@ -243,10 +279,6 @@
 
   <message name="IDS_NEW_TAB_TOP_SITE_REMOVED_TEXT" desc="Text displayed when a top site is removed">
     Top site removed
-  </message>
-
-  <message name="IDS_NEW_TAB_TOP_SITE_REMOVED_TITLE" desc="Title of message that is displayed when a top site is removed">
-    Removed
   </message>
 
   <message name="IDS_NEW_TAB_TOP_SITES_CUSTOM_OPTION_TEXT" desc="Text that describes custom top sites option">

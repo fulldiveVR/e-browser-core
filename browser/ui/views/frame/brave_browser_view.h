@@ -82,7 +82,6 @@ class BraveBrowserView : public BrowserView,
 
   SplitView* split_view() { return split_view_; }
   const SplitView* split_view() const { return split_view_; }
-  views::View* GetContentsBoundingView() const;
 
   void SetStarredState(bool is_starred) override;
   void ShowUpdateChromeDialog() override;
@@ -104,16 +103,14 @@ class BraveBrowserView : public BrowserView,
   views::View* GetAnchorViewForBraveVPNPanel();
   gfx::Rect GetShieldsBubbleRect() override;
 #if BUILDFLAG(ENABLE_SPEEDREADER)
-  ReaderModeToolbarView* reader_mode_toolbar() { return reader_mode_toolbar_; }
+  // Give active tab's reader mode toolbar.
+  ReaderModeToolbarView* reader_mode_toolbar();
   speedreader::SpeedreaderBubbleView* ShowSpeedreaderBubble(
       speedreader::SpeedreaderTabHelper* tab_helper,
       speedreader::SpeedreaderBubbleLocation location) override;
   void UpdateReaderModeToolbar() override;
 #endif
   bool GetTabStripVisible() const override;
-#if BUILDFLAG(IS_WIN)
-  bool GetSupportsTitle() const override;
-#endif
   bool ShouldShowWindowTitle() const override;
   void OnThemeChanged() override;
   void OnActiveTabChanged(content::WebContents* old_contents,
@@ -124,6 +121,8 @@ class BraveBrowserView : public BrowserView,
   bool IsInTabDragging() const override;
   views::View* GetContentsContainerForLayoutManager() override;
   void ReadyToListenFullscreenChanges() override;
+  void OnMouseMoved(const ui::MouseEvent& event) override;
+  bool PreHandleMouseEvent(const blink::WebMouseEvent& event) override;
 
 #if defined(USE_AURA)
   views::View* sidebar_host_view() { return sidebar_host_view_; }
@@ -154,6 +153,7 @@ class BraveBrowserView : public BrowserView,
   friend class VerticalTabStripDragAndDropBrowserTest;
   friend class SplitViewBrowserTest;
   friend class SplitViewLocationBarBrowserTest;
+  friend class BraveBrowserViewTest;
 
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest, VisualState);
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest, Fullscreen);
@@ -166,6 +166,14 @@ class BraveBrowserView : public BrowserView,
   FRIEND_TEST_ALL_PREFIXES(SideBySideEnabledBrowserTest,
                            BraveMultiContentsViewTest);
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripHideCompletelyTest, GetMinimumWidth);
+  FRIEND_TEST_ALL_PREFIXES(VerticalTabStripHideCompletelyTest,
+                           ShouldBeInvisible);
+  FRIEND_TEST_ALL_PREFIXES(SideBySideWithRoundedCornersTest,
+                           TabFullscreenStateTest);
+  FRIEND_TEST_ALL_PREFIXES(BraveBrowserViewWithRoundedCornersTest,
+                           ContentsBackgroundEventHandleTest);
+  FRIEND_TEST_ALL_PREFIXES(SideBySideWithRoundedCornersTest,
+                           ContentsShadowTest);
 
   static void SetDownloadConfirmReturnForTesting(bool allow);
 
@@ -182,19 +190,14 @@ class BraveBrowserView : public BrowserView,
       Browser::DownloadCloseType dialog_type,
       base::OnceCallback<void(bool)> callback) override;
   void MaybeShowReadingListInSidePanelIPH() override;
-  void UpdateDevToolsForContents(content::WebContents* web_contents,
-                                 bool update_devtools_web_contents) override;
+  void UpdateDevTools(content::WebContents* inspected_web_contents) override;
+  bool MaybeUpdateDevtools(content::WebContents* web_contents) override;
   void OnWidgetActivationChanged(views::Widget* widget, bool active) override;
   void GetAccessiblePanes(std::vector<views::View*>* panes) override;
   void ShowSplitView(bool focus_active_view) override;
   void HideSplitView() override;
-  void UpdateActiveTabInSplitView() override;
 
-  void UpdateContentsInSplitView(
-      const std::vector<std::pair<tabs::TabInterface*, int>>& prev_tabs,
-      const std::vector<std::pair<tabs::TabInterface*, int>>& new_tabs)
-      override;
-
+  void UpdateContentsShadowVisibility();
   void StopTabCycling();
   void UpdateSearchTabsButtonState();
   void OnPreferenceChanged(const std::string& pref_name);
@@ -216,8 +219,8 @@ class BraveBrowserView : public BrowserView,
 #endif
 
   void UpdateSideBarHorizontalAlignment();
-  views::View* contents_separator_for_testing() const {
-    return contents_separator_;
+  views::View* top_container_separator_for_testing() const {
+    return top_container_separator_;
   }
 
   std::unique_ptr<views::Widget> vertical_tab_strip_widget_;

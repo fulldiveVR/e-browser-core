@@ -9,15 +9,23 @@ const readline = require('readline')
 const os = require('os')
 const config = require('./config')
 const fs = require('fs-extra')
+const {glob, writeFile} = require('fs/promises')
 const crypto = require('crypto')
 const Log = require('./logging')
 const assert = require('assert')
 const updateChromeVersion = require('./updateChromeVersion')
-const updateUnsafeBuffersPaths = require('./updateUnsafeBuffersPaths.js')
 const ActionGuard = require('./actionGuard')
 
 // Do not limit the number of listeners to avoid warnings from EventEmitter.
 process.setMaxListeners(0)
+
+async function generateInstrumentationFile(instrumentationFile) {
+  const files = await Array.fromAsync(glob(`**/*.{cc,c,h,cpp,hpp,m,mm}`))
+
+  const paths = files.map(x => `../../brave/${x}`)
+  await fs.mkdirp(path.dirname(instrumentationFile));
+  await writeFile(instrumentationFile, paths.join('\n'), 'utf-8')
+}
 
 async function applyPatches(printPatchFailuresInJson) {
   const GitPatcher = require('./gitPatcher')
@@ -111,8 +119,6 @@ async function applyPatches(printPatchFailuresInJson) {
     process.exit(1)
   }
 
-  await updateUnsafeBuffersPaths()
-
   updateChromeVersion()
   Log.progressFinish('apply patches')
 }
@@ -161,12 +167,21 @@ const getAdditionalGenLocation = () => {
   return ''
 }
 
+const normalizeCommand = (cmd, args) => {
+  if (process.platform === 'win32') {
+    args = ['/c', cmd, ...args]
+    cmd = 'cmd'
+  }
+  return [ cmd, args ]
+}
+
 const util = {
+  generateInstrumentationFile,
   runProcess: (cmd, args = [], options = {}, skipLogging = false) => {
     if (!skipLogging) {
       Log.command(options.cwd, cmd, args)
     }
-    return spawnSync(cmd, args, options)
+    return spawnSync(...normalizeCommand(cmd, args), options)
   },
 
   run: (cmd, args = [], options = {}) => {
@@ -203,7 +218,7 @@ const util = {
       Log.command(cmdOptions.cwd, cmd, args)
     }
     return new Promise((resolve, reject) => {
-      const prog = spawn(cmd, args, cmdOptions)
+      const prog = spawn(...normalizeCommand(cmd, args), cmdOptions)
       const signalsToForward = ['SIGINT', 'SIGTERM', 'SIGQUIT', 'SIGHUP']
       const signalHandler = (s) => {
         prog.kill(s)
@@ -260,6 +275,7 @@ const util = {
           )
           err.stderr = stderr
           err.stdout = stdout
+          err.statusCode = statusCode
           reject(err)
           if (!continueOnFail) {
             console.error(err.message)
@@ -447,6 +463,11 @@ const util = {
   },
 
   buildNativeRedirectCC: async () => {
+    if (config.useSiso) {
+      // redirect_cc logic is handled by siso handler.
+      return
+    }
+
     // Expected path to redirect_cc.
     const redirectCC = path.join(
       config.nativeRedirectCCDir,
@@ -475,7 +496,6 @@ const util = {
       use_remoteexec: config.useRemoteExec,
       use_reclient: config.useRemoteExec,
       use_siso: false,
-      rbe_exec_root: config.rbeExecRoot,
       reclient_bin_dir: config.realRewrapperDir,
       real_rewrapper: path.join(config.realRewrapperDir, 'rewrapper'),
     }
@@ -613,6 +633,15 @@ const util = {
     options = config.defaultOptions,
   ) => {
     assert(Array.isArray(targets))
+
+    if (config.use_clang_coverage) {
+      const instrumentationFile = path.join(
+        config.outputDir,
+        'files-to-instrument.txt',
+      )
+      await generateInstrumentationFile(instrumentationFile)
+    }
+
     const buildId = crypto.randomUUID()
     const outputDir = options.outputDir || config.outputDir
     const progressMessage = `build ${targets} (${path.basename(
@@ -640,23 +669,20 @@ const util = {
     // block.
     let buildStats = ''
 
+    // Parse output to display the build progress on Teamcity.
     if (config.isTeamcity) {
-      // Parse output to display the build status and exact failure location.
-      let hasError = false
       let lastStatusTime = Date.now()
       options.onStdOutLine = (line) => {
-        if (!hasError && line.startsWith('FAILED: ')) {
-          hasError = true
-        }
-        if (hasError) {
-          Log.error(line)
-        } else if (buildStats || /^(RBE Stats:|metric\s+count)\s+/.test(line)) {
+        if (
+          buildStats
+          || /^(RBE Stats:|metric\s+count|build finished)\s+/.test(line)
+        ) {
           buildStats += line + '\n'
         } else {
           console.log(line)
           if (Date.now() - lastStatusTime > 5000) {
-            // Extract the status message from the ninja output.
-            const match = line.match(/^\[\d+ processes, (.+?) : .+?\s\]/)
+            // Extract the status message from the siso output.
+            const match = line.match(/^\[(.+?)\]/)
             if (match) {
               lastStatusTime = Date.now()
               Log.status(`build ${targets} ${match[1]}`)
@@ -668,7 +694,30 @@ const util = {
       options.stdio = 'pipe'
     }
 
-    await util.runAsync('autoninja', ninjaOpts, options)
+    // Enable to allow error post-processing after autoninja/siso failure.
+    options.continueOnFail = true
+
+    // Ensure siso_output doesn't exist before the build.
+    const sisoOutputFile = path.join(outputDir, 'siso_output')
+    if (fs.existsSync(sisoOutputFile)) {
+      fs.unlinkSync(sisoOutputFile)
+    }
+
+    try {
+      await util.runAsync('autoninja', ninjaOpts, options)
+    } catch (e) {
+      // Display siso_output on CI after a build failure.
+      if (config.isCI && fs.existsSync(sisoOutputFile)) {
+        const sisoOutput = fs.readFileSync(sisoOutputFile, 'utf8')
+        Log.error(`Siso output from ${sisoOutputFile}:`)
+        // Split the output into lines to correctly display on Teamcity.
+        for (const line of sisoOutput.split('\n')) {
+          Log.error(line)
+        }
+      }
+      console.error(e.message)
+      process.exit(e.statusCode || 1)
+    }
 
     Log.progressFinish(progressMessage)
 

@@ -14,6 +14,13 @@ namespace permissions {
 class PermissionPromptAndroid_ChromiumImpl;
 }  // namespace permissions
 
+#define OnRequestingOriginFaviconLoaded                                     \
+  ApplyLifetimeToPermissionRequests(                                        \
+      JNIEnv* env, PermissionPromptAndroid* permission_prompt);             \
+  void ApplyDontAskAgainOption(JNIEnv* env,                                 \
+                               PermissionPromptAndroid* permission_prompt); \
+  void OnRequestingOriginFaviconLoaded
+
 // Additional PermissionDialogDelegate::Create stub method to be in accordance
 // with the overridden method at permission_prompt_android.h
 //   void CreatePermissionDialogDelegate() {
@@ -28,8 +35,10 @@ class PermissionPromptAndroid_ChromiumImpl;
          PermissionPromptAndroid_ChromiumImpl* permission_prompt); \
   static std::unique_ptr<PermissionDialogDelegate> Create
 
-#include "src/components/permissions/android/permission_prompt/permission_dialog_delegate.h"  // IWYU pragma: export
+#include <components/permissions/android/permission_prompt/permission_dialog_delegate.h>  // IWYU pragma: export
 
 #undef Create
+
+#undef OnRequestingOriginFaviconLoaded
 
 #endif  // BRAVE_CHROMIUM_SRC_COMPONENTS_PERMISSIONS_ANDROID_PERMISSION_PROMPT_PERMISSION_DIALOG_DELEGATE_H_

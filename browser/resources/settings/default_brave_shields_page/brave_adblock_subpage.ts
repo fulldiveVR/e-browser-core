@@ -24,11 +24,14 @@ import {
   SubscriptionInfo
 } from './brave_adblock_browser_proxy.js'
 
+import {SettingsViewMixin} from '../settings_page/settings_view_mixin.js';
+
 import {getTemplate} from './brave_adblock_subpage.html.js'
 
 import {loadTimeData} from '../i18n_setup.js'
 
-const AdBlockSubpageBase = PrefsMixin(I18nMixin(BaseMixin(PolymerElement)))
+const AdBlockSubpageBase = SettingsViewMixin(
+  PrefsMixin(I18nMixin(BaseMixin(PolymerElement))))
 
 class AdBlockSubpage extends AdBlockSubpageBase {
   static get is() {
@@ -108,6 +111,14 @@ class AdBlockSubpage extends AdBlockSubpageBase {
         this.customFilters_ = value
       }
     )
+    this.browserProxy_.addWebUiListener(
+      'brave_adblock.onCustomResourcesChanged',
+      () => {
+        this.browserProxy_.getCustomScriptlets().then((value: Scriptlet[]) => {
+          this.customScriptlets_ = value
+        })
+      },
+    )
   }
 
   private updateState_(
@@ -125,11 +136,6 @@ class AdBlockSubpage extends AdBlockSubpageBase {
       devMode !== undefined &&
       customFilters !== undefined &&
       (customFilters.trim().length > 0 || devMode)
-  }
-
-  private handleSciptletsChanged_(e: CustomEvent) {
-    const value = e.detail.value as Scriptlet[]
-    this.customScriptlets_ = value
   }
 
   private handleShowList_() {
@@ -158,10 +164,11 @@ class AdBlockSubpage extends AdBlockSubpageBase {
       return null
     }
 
-    return (item: SubscriptionInfo) => {
+    return (item: FilterList) => {
       this.hasListExpanded_ = true
       title = title.toLowerCase()
-      return (item.title?.toLowerCase().includes(title))
+      return (item.title?.toLowerCase().includes(title) ||
+              item.desc?.toLowerCase().includes(title))
     }
   }
 

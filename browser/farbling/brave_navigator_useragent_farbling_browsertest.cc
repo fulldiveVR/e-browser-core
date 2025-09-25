@@ -8,7 +8,6 @@
 #include "base/functional/function_ref.h"
 #include "base/path_service.h"
 #include "base/strings/strcat.h"
-#include "base/strings/stringprintf.h"
 #include "base/test/thread_test_helper.h"
 #include "base/version.h"
 #include "brave/browser/extensions/brave_base_local_data_files_browsertest.h"
@@ -36,6 +35,7 @@
 #include "net/test/embedded_test_server/embedded_test_server.h"
 #include "net/test/embedded_test_server/http_request.h"
 #include "services/network/public/cpp/network_switches.h"
+#include "third_party/abseil-cpp/absl/strings/str_format.h"
 
 #if BUILDFLAG(ENABLE_EXTENSIONS)
 #include "chrome/browser/extensions/chrome_test_extension_loader.h"
@@ -178,7 +178,7 @@ class BraveNavigatorUserAgentFarblingBrowserTest : public InProcessBrowserTest {
     mock_cert_verifier_.SetUpCommandLine(command_line);
     command_line->AppendSwitchASCII(
         network::switches::kHostResolverRules,
-        base::StringPrintf("MAP *:443 127.0.0.1:%d", https_server_->port()));
+        absl::StrFormat("MAP *:443 127.0.0.1:%d", https_server_->port()));
 #if BUILDFLAG(ENABLE_EXTENSIONS)
     command_line->AppendSwitch(extensions::switches::kOffscreenDocumentTesting);
 #endif  // BUILDFLAG(ENABLE_EXTENSIONS)
@@ -477,12 +477,10 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorUserAgentFarblingBrowserTest,
   ASSERT_TRUE(ui_test_utils::NavigateToURL(browser(), url));
   const content::EvalJsResult result =
       EvalJs(contents(), kGetHighEntropyValuesScript);
-  EXPECT_TRUE(result.error.empty());
-  const base::Value::Dict* values = result.value.GetIfDict();
-  ASSERT_NE(nullptr, values);
 
   // Check brands versions
-  const base::Value::List* brands_list = values->FindList("brands");
+  const base::Value::Dict& values = result.ExtractDict();
+  const base::Value::List* brands_list = values.FindList("brands");
   ASSERT_NE(nullptr, brands_list);
 
   // Expected major version for Brave and Chromium.
@@ -495,7 +493,7 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorUserAgentFarblingBrowserTest,
 
   // Check full versions
   const base::Value::List* full_version_list =
-      values->FindList("fullVersionList");
+      values.FindList("fullVersionList");
   ASSERT_NE(nullptr, full_version_list);
 
   // Expected version string for Brave and Chromium.
@@ -514,7 +512,7 @@ IN_PROC_BROWSER_TEST_F(BraveNavigatorUserAgentFarblingBrowserTest,
       });
 
   // Check auFullVersion
-  const std::string* ua_full_version = values->FindString("uaFullVersion");
+  const std::string* ua_full_version = values.FindString("uaFullVersion");
   ASSERT_NE(nullptr, ua_full_version);
   EXPECT_EQ(expected_full_version, *ua_full_version);
 }

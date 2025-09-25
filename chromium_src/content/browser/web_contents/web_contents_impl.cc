@@ -22,6 +22,16 @@ bool WebContentsImpl::GetShouldDoLearningForTesting() {
 
 #define ShouldDoLearning(...) ShouldDoLearning_ChromiumImpl(__VA_ARGS__)
 
-#include "src/content/browser/web_contents/web_contents_impl.cc"
+#include <content/browser/web_contents/web_contents_impl.cc>
 
 #undef ShouldDoLearning
+
+namespace content {
+
+bool WebContentsImpl::PreHandleMouseEvent(const blink::WebMouseEvent& event) {
+  OPTIONAL_TRACE_EVENT0(TRACE_DISABLED_BY_DEFAULT("content.verbose"),
+                        "WebContentsImpl::PreHandleMouseEvent");
+  return delegate_ ? delegate_->PreHandleMouseEvent(this, event) : false;
+}
+
+}  // namespace content

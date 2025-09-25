@@ -12,6 +12,8 @@
 #include "base/system/sys_info.h"
 #include "base/time/time.h"
 
+class PrefService;
+
 namespace brave_stats {
 
 enum class ProcessArch {

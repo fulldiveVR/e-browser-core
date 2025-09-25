@@ -8,6 +8,7 @@ import { debounce } from '$web-common/debounce'
 
 import {
   externalWalletFromExtensionData,
+  isSelfCustodyProvider,
   ExternalWalletProvider,
   externalWalletProviderFromString
 } from '../../shared/lib/external_wallet'
@@ -52,6 +53,11 @@ function parseCreatorPlatform(value: string) {
 
 function openTab(url: string) {
   window.open(url, '__blank', 'noopener noreferrer')
+}
+
+function isValidWeb3URL(url: string) {
+  try { return new URL(url).protocol === 'https:' } catch {}
+  return false
 }
 
 function createModelForUnsupportedRegion(): AppModel {
@@ -140,6 +146,20 @@ export function createModel(): AppModel {
     const { updateRequired } =
       await pageHandler.getTermsOfServiceUpdateRequired()
     stateManager.update({ tosUpdateRequired: updateRequired })
+  }
+
+  async function updateSelfCustodyProviderInvites() {
+    const { providers } = await pageHandler.getSelfCustodyProviderInvites()
+
+    const selfCustodyProviderInvites: ExternalWalletProvider[] = []
+    for (const name of providers) {
+      const provider = externalWalletProviderFromString(name)
+      if (provider && isSelfCustodyProvider(provider)) {
+        selfCustodyProviderInvites.push(provider)
+      }
+    }
+
+    stateManager.update({ selfCustodyProviderInvites })
   }
 
   async function updateSelfCustodyInviteDismissed() {
@@ -248,7 +268,8 @@ export function createModel(): AppModel {
           title: publisherBanner?.title || '',
           description: publisherBanner?.description || '',
           background: publisherBanner?.background || '',
-          web3URL: publisherBanner?.web3Url || ''
+          web3URL:isValidWeb3URL(publisherBanner?.web3Url ?? '') ?
+            publisherBanner?.web3Url ?? '' : ''
         },
         supportedWalletProviders:
           walletProvidersFromPublisherStatus(publisherInfo.status)
@@ -304,6 +325,7 @@ export function createModel(): AppModel {
       updateExternalWalletProviders(),
       inBackground(updateBalance()),
       updateTosUpdateRequired(),
+      updateSelfCustodyProviderInvites(),
       updateSelfCustodyInviteDismissed(),
       updateAdsInfo(),
       updateRecurringContributions(),
@@ -533,6 +555,14 @@ export function createModel(): AppModel {
         })
       })
       await pageHandler.clearRewardsNotification(id)
+    },
+
+    async recordOfferClick() {
+      await pageHandler.recordOfferClick()
+    },
+
+    async recordOfferView() {
+      await pageHandler.recordOfferView()
     }
   }
 }

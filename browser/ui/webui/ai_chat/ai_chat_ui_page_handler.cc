@@ -15,13 +15,15 @@
 #include "base/check.h"
 #include "base/functional/bind.h"
 #include "base/functional/callback_forward.h"
+#include "base/notimplemented.h"
 #include "brave/browser/ai_chat/ai_chat_service_factory.h"
-#include "brave/browser/ai_chat/ai_chat_urls.h"
 #include "brave/browser/misc_metrics/profile_misc_metrics_service.h"
 #include "brave/browser/misc_metrics/profile_misc_metrics_service_factory.h"
 #include "brave/browser/ui/side_panel/ai_chat/ai_chat_side_panel_utils.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_service.h"
 #include "brave/components/ai_chat/core/browser/constants.h"
+#include "brave/components/ai_chat/core/common/ai_chat_urls.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom.h"
 #include "brave/components/ai_chat/core/common/mojom/tab_tracker.mojom.h"
@@ -35,11 +37,13 @@
 #include "components/grit/brave_components_webui_strings.h"
 #include "components/tabs/public/tab_interface.h"
 #include "content/public/browser/browser_context.h"
+#include "content/public/browser/navigation_controller.h"
 #include "content/public/browser/navigation_entry.h"
 #include "content/public/browser/storage_partition.h"
 #include "content/public/browser/web_contents.h"
 #include "content/public/browser/web_contents_observer.h"
 #include "content/public/common/url_constants.h"
+#include "services/data_decoder/public/cpp/data_decoder.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "ui/base/page_transition_types.h"
 
@@ -48,13 +52,19 @@
 #include "chrome/browser/android/tab_android.h"
 #include "chrome/browser/ui/android/tab_model/tab_model.h"
 #include "chrome/browser/ui/android/tab_model/tab_model_list.h"
+#else
+#include "chrome/browser/ui/chrome_pages.h"
+#endif
+
+#if BUILDFLAG(ENABLE_BRAVE_AI_CHAT_AGENT_PROFILE)
+#include "brave/browser/ai_chat/ai_chat_agent_profile_helper.h"
 #endif
 
 namespace {
 constexpr char kURLRefreshPremiumSession[] =
     "https://account.brave.com/?intent=recover&product=leo";
 constexpr char kURLLearnMoreAboutStorage[] =
-    "https://support.brave.com/hc/en-us/articles/"
+    "https://support.brave.app/hc/en-us/articles/"
     "32663367857549-How-do-I-use-Chat-History-in-Brave-Leo";
 
 #if !BUILDFLAG(IS_ANDROID)
@@ -155,7 +165,10 @@ AIChatUIPageHandler::AIChatUIPageHandler(
     mojo::PendingReceiver<ai_chat::mojom::AIChatUIHandler> receiver)
     : owner_web_contents_(owner_web_contents),
       profile_(profile),
-      receiver_(this, std::move(receiver)) {
+      receiver_(this, std::move(receiver)),
+      conversations_are_content_associated_(
+          !profile_->IsAIChatAgent() &&
+          !features::IsAIChatGlobalSidePanelEverywhereEnabled()) {
   // Standalone mode means Chat is opened as its own tab in the tab strip and
   // not a side panel. chat_context_web_contents is nullptr in that case
   const bool is_standalone = chat_context_web_contents == nullptr;
@@ -173,6 +186,7 @@ AIChatUIPageHandler::AIChatUIPageHandler(
 #endif  // !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
     active_chat_tab_helper_ =
         ai_chat::AIChatTabHelper::FromWebContents(chat_context_web_contents);
+
     associated_content_delegate_observation_.Observe(active_chat_tab_helper_);
     chat_context_observer_ =
         std::make_unique<ChatContextObserver>(chat_context_web_contents, *this);
@@ -194,19 +208,40 @@ void AIChatUIPageHandler::ShowSoftKeyboard() {
 #endif
 }
 
-void AIChatUIPageHandler::UploadImage(bool use_media_capture,
-                                      UploadImageCallback callback) {
+void AIChatUIPageHandler::UploadFile(bool use_media_capture,
+                                     UploadFileCallback callback) {
   if (!upload_file_helper_) {
     upload_file_helper_ =
         std::make_unique<UploadFileHelper>(owner_web_contents_, profile_);
     upload_file_helper_observation_.Observe(upload_file_helper_.get());
   }
-  upload_file_helper_->UploadImage(
+  upload_file_helper_->UploadFile(
       std::make_unique<ChromeSelectFilePolicy>(owner_web_contents_),
 #if BUILDFLAG(IS_ANDROID)
       use_media_capture,
 #endif
       std::move(callback));
+}
+
+void AIChatUIPageHandler::ProcessImageFile(
+    const std::vector<uint8_t>& file_data,
+    const std::string& filename,
+    ProcessImageFileCallback callback) {
+  UploadFileHelper::ProcessImageData(
+      &data_decoder_, file_data,
+      base::BindOnce(
+          [](const std::string& filename, ProcessImageFileCallback callback,
+             std::optional<std::vector<uint8_t>> processed_data) {
+            if (!processed_data) {
+              std::move(callback).Run(nullptr);
+              return;
+            }
+            auto uploaded_file = ai_chat::mojom::UploadedFile::New(
+                filename, processed_data->size(), *processed_data,
+                ai_chat::mojom::UploadedFileType::kImage);
+            std::move(callback).Run(std::move(uploaded_file));
+          },
+          filename, std::move(callback)));
 }
 
 void AIChatUIPageHandler::GetPluralString(const std::string& key,
@@ -237,6 +272,15 @@ void AIChatUIPageHandler::OpenAIChatSettings() {
 #endif
 }
 
+void AIChatUIPageHandler::OpenMemorySettings() {
+#if !BUILDFLAG(IS_ANDROID)
+  chrome::ShowSettingsSubPageForProfile(
+      profile_, ai_chat::kBraveAIChatCustomizationSubPage);
+#else
+  NOTIMPLEMENTED();
+#endif
+}
+
 void AIChatUIPageHandler::OpenConversationFullPage(
     const std::string& conversation_uuid) {
   CHECK(ai_chat::features::IsAIChatHistoryEnabled());
@@ -255,6 +299,13 @@ void AIChatUIPageHandler::OpenConversationFullPage(
           false,
       },
       {});
+}
+
+void AIChatUIPageHandler::OpenAIChatAgentProfile() {
+  CHECK(ai_chat::features::IsAIChatAgentProfileEnabled());
+#if BUILDFLAG(ENABLE_BRAVE_AI_CHAT_AGENT_PROFILE)
+  ai_chat::OpenBrowserWindowForAIChatAgentProfile(*profile_);
+#endif
 }
 
 void AIChatUIPageHandler::OpenURL(const GURL& url) {
@@ -316,7 +367,8 @@ void AIChatUIPageHandler::HandleWebContentsDestroyed() {
   chat_context_observer_.reset();
 }
 
-void AIChatUIPageHandler::OnNavigated(AssociatedContentDelegate* delegate) {
+void AIChatUIPageHandler::OnRequestArchive(
+    AssociatedContentDelegate* delegate) {
   // This is only applicable to content-adjacent UI, e.g. SidePanel on Desktop
   // where it would like to remain associated with the Tab and move away from
   // Conversations of previous navigations. That doens't apply to the standalone
@@ -324,7 +376,7 @@ void AIChatUIPageHandler::OnNavigated(AssociatedContentDelegate* delegate) {
 
   chat_ui_->OnNewDefaultConversation(
       active_chat_tab_helper_
-          ? std::make_optional(active_chat_tab_helper_->GetContentId())
+          ? std::make_optional(active_chat_tab_helper_->content_id())
           : std::nullopt);
 }
 
@@ -347,14 +399,15 @@ void AIChatUIPageHandler::SetChatUI(mojo::PendingRemote<mojom::ChatUI> chat_ui,
 
   chat_ui_->OnNewDefaultConversation(
       active_chat_tab_helper_
-          ? std::make_optional(active_chat_tab_helper_->GetContentId())
+          ? std::make_optional(active_chat_tab_helper_->content_id())
           : std::nullopt);
 }
 
 void AIChatUIPageHandler::BindRelatedConversation(
     mojo::PendingReceiver<mojom::ConversationHandler> receiver,
     mojo::PendingRemote<mojom::ConversationUI> conversation_ui_handler) {
-  if (!active_chat_tab_helper_) {
+  // For global panel, don't recall conversations by their associated tab
+  if (!active_chat_tab_helper_ || !conversations_are_content_associated_) {
     ConversationHandler* conversation =
         AIChatServiceFactory::GetForBrowserContext(profile_)
             ->CreateConversation();
@@ -365,7 +418,7 @@ void AIChatUIPageHandler::BindRelatedConversation(
   ConversationHandler* conversation =
       AIChatServiceFactory::GetForBrowserContext(profile_)
           ->GetOrCreateConversationHandlerForContent(
-              active_chat_tab_helper_->GetContentId(),
+              active_chat_tab_helper_->content_id(),
               active_chat_tab_helper_->GetWeakPtr());
 
   conversation->Bind(std::move(receiver), std::move(conversation_ui_handler));
@@ -407,10 +460,12 @@ void AIChatUIPageHandler::NewConversation(
     mojo::PendingReceiver<mojom::ConversationHandler> receiver,
     mojo::PendingRemote<mojom::ConversationUI> conversation_ui_handler) {
   ConversationHandler* conversation;
-  if (active_chat_tab_helper_) {
+  // For standalone or global panel, don't recall conversations by their
+  // associated tab.
+  if (active_chat_tab_helper_ && conversations_are_content_associated_) {
     conversation = AIChatServiceFactory::GetForBrowserContext(profile_)
                        ->CreateConversationHandlerForContent(
-                           active_chat_tab_helper_->GetContentId(),
+                           active_chat_tab_helper_->content_id(),
                            active_chat_tab_helper_->GetWeakPtr());
   } else {
     conversation = AIChatServiceFactory::GetForBrowserContext(profile_)

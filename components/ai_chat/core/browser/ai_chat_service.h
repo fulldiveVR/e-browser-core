@@ -11,7 +11,6 @@
 #include <functional>
 #include <map>
 #include <memory>
-#include <ostream>
 #include <string>
 #include <string_view>
 #include <utility>
@@ -30,6 +29,7 @@
 #include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
 #include "brave/components/ai_chat/core/browser/conversation_handler.h"
 #include "brave/components/ai_chat/core/browser/engine/engine_consumer.h"
+#include "brave/components/ai_chat/core/browser/tools/tool_provider_factory.h"
 #include "brave/components/ai_chat/core/common/mojom/ai_chat.mojom-forward.h"
 #include "brave/components/ai_chat/core/common/mojom/tab_tracker.mojom.h"
 #include "brave/components/skus/common/skus_sdk.mojom.h"
@@ -56,6 +56,7 @@ namespace ai_chat {
 class ModelService;
 class TabTrackerService;
 class AIChatMetrics;
+class MemoryStorageTool;
 
 // Main entry point for creating and consuming AI Chat conversations
 class AIChatService : public KeyedService,
@@ -79,7 +80,10 @@ class AIChatService : public KeyedService,
       os_crypt_async::OSCryptAsync* os_crypt_async,
       scoped_refptr<network::SharedURLLoaderFactory> url_loader_factory,
       std::string_view channel_string,
-      base::FilePath profile_path);
+      base::FilePath profile_path,
+      // Factories of ToolProviders from other layers
+      std::vector<std::unique_ptr<ToolProviderFactory>>
+          tool_provider_factories = {});
 
   ~AIChatService() override;
   AIChatService(const AIChatService&) = delete;
@@ -94,12 +98,16 @@ class AIChatService : public KeyedService,
   // ConversationHandler::Observer
   void OnRequestInProgressChanged(ConversationHandler* handler,
                                   bool in_progress) override;
-  void OnConversationEntryAdded(ConversationHandler* handler,
-                                mojom::ConversationTurnPtr& entry,
-                                std::optional<std::vector<std::string_view>>
-                                    maybe_associated_content) override;
+  void OnConversationEntryAdded(
+      ConversationHandler* handler,
+      mojom::ConversationTurnPtr& entry,
+      std::optional<PageContents> maybe_associated_content) override;
   void OnConversationEntryRemoved(ConversationHandler* handler,
                                   std::string entry_uuid) override;
+  void OnToolUseEventOutput(ConversationHandler* handler,
+                            std::string_view entry_uuid,
+                            size_t event_order,
+                            mojom::ToolUseEventPtr tool_use) override;
   void OnClientConnectionChanged(ConversationHandler* handler) override;
   void OnConversationTitleChanged(const std::string& conversation_uuid,
                                   const std::string& title) override;
@@ -113,6 +121,9 @@ class AIChatService : public KeyedService,
 
   // Adds new conversation and returns the handler
   ConversationHandler* CreateConversation();
+
+  // Provides memory tool for testing
+  MemoryStorageTool* GetMemoryToolForTesting();
 
   ConversationHandler* GetConversation(std::string_view uuid);
   void GetConversation(std::string_view conversation_uuid,
@@ -179,6 +190,9 @@ class AIChatService : public KeyedService,
   void BindMetrics(mojo::PendingReceiver<mojom::Metrics> metrics) override;
   void BindObserver(mojo::PendingRemote<mojom::ServiceObserver> ui,
                     BindObserverCallback callback) override;
+
+  bool GetIsContentAgentAllowed() const;
+  void SetIsContentAgentAllowed(bool is_allowed);
 
   bool HasUserOptedIn();
   bool IsPremiumStatus();
@@ -288,6 +302,8 @@ class AIChatService : public KeyedService,
   void OnDataDeletedForDisabledStorage(bool success);
   mojom::ServiceStatePtr BuildState();
   void OnStateChanged();
+  void OnMemoryEnabledChanged();
+  void InitializeTools();
 
   void GetEngineForTabOrganization(base::OnceClosure callback);
   void ContinueGetEngineForTabOrganization(base::OnceClosure callback,
@@ -305,6 +321,8 @@ class AIChatService : public KeyedService,
   void OnGetFocusTabs(
       GetFocusTabsCallback callback,
       base::expected<std::vector<std::string>, mojom::APIError> result);
+  std::vector<std::unique_ptr<ToolProvider>>
+  CreateToolProvidersForNewConversation();
 
   raw_ptr<ModelService> model_service_;
   raw_ptr<TabTrackerService> tab_tracker_service_;
@@ -317,8 +335,14 @@ class AIChatService : public KeyedService,
   std::unique_ptr<AIChatFeedbackAPI> feedback_api_;
   std::unique_ptr<AIChatCredentialManager> credential_manager_;
 
+  // Factories of ToolProviders from other layers
+  std::vector<std::unique_ptr<ToolProviderFactory>> tool_provider_factories_;
+
   // Engine for tab organization, created on demand and owned by AIChatService.
   std::unique_ptr<ai_chat::EngineConsumer> tab_organization_engine_;
+
+  // Memory tool that is available and shared across all conversations.
+  std::unique_ptr<MemoryStorageTool> memory_tool_;
 
   base::FilePath profile_path_;
 
@@ -365,6 +389,10 @@ class AIChatService : public KeyedService,
   // subscription status changes. So we cache it and fetch latest fairly
   // often (whenever UI is focused).
   mojom::PremiumStatus last_premium_status_ = mojom::PremiumStatus::Unknown;
+
+  // Whether conversations can utilize content agent capabilities. For now,
+  // this is profile-specific.
+  bool is_content_agent_allowed_ = false;
 
   base::WeakPtrFactory<AIChatService> weak_ptr_factory_{this};
 };

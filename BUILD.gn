@@ -45,24 +45,73 @@ declare_args() {
   audit_dev_deps = true
 }
 
+chromium_unit_tests_deps = [
+  "//base:base_unittests",
+  "//net:net_unittests",
+]
+if (!is_ios) {
+  chromium_unit_tests_deps += [ "//chrome/test:unit_tests" ]
+}
+if (use_blink && !is_android) {
+  # TODO(https://github.com/brave/brave-browser/issues/48062): Fix this target
+  # for android.
+  chromium_unit_tests_deps += [ "//content/test:content_unittests" ]
+}
+
+if (!is_android) {
+  # TODO(https://github.com/brave/brave-browser/issues/48062): Fix this target
+  # for android.
+  chromium_unit_tests_deps += [ "//components:components_unittests" ]
+}
+
+group("chromium_unit_tests") {
+  testonly = true
+  data_deps = chromium_unit_tests_deps
+  write_file("$root_out_dir/chromium_unit_tests.json",
+             chromium_unit_tests_deps,
+             "json")
+}
+
+# Only add tests to this list if you want them to run by default for
+# brave_all_unit_tests.
+brave_all_unit_tests_deps = [ "//brave/components:brave_components_unittests" ]
+if (!is_ios) {
+  brave_all_unit_tests_deps += [ "//brave/test:brave_unit_tests" ]
+} else {
+  brave_all_unit_tests_deps += [
+    "//brave/ios/testing:ios_brave_unit_tests",
+    "//brave/ios/web:ios_brave_web_inttests",
+    "//brave/ios/web:ios_brave_web_unittests",
+  ]
+}
+if (!is_ios && !is_android) {
+  brave_all_unit_tests_deps += [ "//brave/test:brave_installer_unittests" ]
+}
+
+# This group is for unit tests that run as part of brave_all_unit_tests. Other
+# tests that you only want to build should be added directly to `all` group
+group("brave_all_unit_tests") {
+  testonly = true
+  data_deps = brave_all_unit_tests_deps
+  write_file("$root_out_dir/brave_all_unit_tests.json",
+             brave_all_unit_tests_deps,
+             "json")
+}
+
 # This target serves as a canonical place to define all code that has to be
 # buildable in all platforms in a single build run.
 group("all") {
   testonly = true
   deps = [
-    "//base:base_unittests",
+    ":brave_all_unit_tests",
+    ":chromium_unit_tests",
     "//brave",
   ]
 
   if (!is_android && !is_ios) {
     deps += [
-      "//brave/test:brave_installer_unittests",
       "//brave/test:brave_network_audit_tests",
       "//chrome/test:browser_tests",
-      "//chrome/test:unit_tests",
-      "//components:components_unittests",
-      "//content/test:content_unittests",
-      "//net:net_unittests",
     ]
   }
 
@@ -71,11 +120,7 @@ group("all") {
   }
 
   if (!is_ios) {
-    deps += [
-      "//brave/components:brave_components_unittests",
-      "//brave/test:brave_browser_tests",
-      "//brave/test:brave_unit_tests",
-    ]
+    deps += [ "//brave/test:brave_browser_tests" ]
   }
 
   if (is_android) {
@@ -146,7 +191,7 @@ if (is_win) {
     ]
     deps = [
       "//chrome/installer/mini_installer:mini_installer_archive",
-      "//chrome/installer/setup:setup",
+      "//chrome/installer/setup",
       "//components/zucchini:zucchini64",
     ]
     if (!skip_signing) {
@@ -173,7 +218,7 @@ if (is_win) {
     sign("signed_setup_exe") {
       sources = [ "$root_out_dir/setup.exe" ]
       outputs = [ "$root_out_dir/presigned_binaries/setup.exe" ]
-      deps = [ "//chrome/installer/setup:setup" ]
+      deps = [ "//chrome/installer/setup" ]
     }
     sign("signed_brave_exe") {
       sources = [ "$root_out_dir/brave.exe" ]
@@ -256,10 +301,7 @@ if (is_android) {
 
 if (is_mac) {
   group("framework_bundle_data") {
-    deps = [
-      "components/brave_extension/extension/brave_extension:brave_extension_framework_bundle_data",
-      "//brave/build/rust:framework_exports",
-    ]
+    deps = [ "components/brave_extension/extension/brave_extension:brave_extension_framework_bundle_data" ]
   }
 }
 
@@ -305,6 +347,8 @@ if (!is_ios) {
 }
 
 branding_dir = "//chrome/app/theme/$branding_path_component"
+branding_dir_100 =
+    "//chrome/app/theme/default_100_percent/$branding_path_component"
 copy("theme_files") {
   visibility = [ ":*" ]
   if (is_linux) {
@@ -313,6 +357,24 @@ copy("theme_files") {
       "$branding_dir/linux/product_logo_128_dev.png",
       "$branding_dir/linux/product_logo_128_development.png",
       "$branding_dir/linux/product_logo_128_nightly.png",
+      "$branding_dir/linux/product_logo_24_beta.png",
+      "$branding_dir/linux/product_logo_24_dev.png",
+      "$branding_dir/linux/product_logo_24_nightly.png",
+      "$branding_dir/linux/product_logo_256_beta.png",
+      "$branding_dir/linux/product_logo_256_dev.png",
+      "$branding_dir/linux/product_logo_256_nightly.png",
+      "$branding_dir/linux/product_logo_48_beta.png",
+      "$branding_dir/linux/product_logo_48_dev.png",
+      "$branding_dir/linux/product_logo_48_nightly.png",
+      "$branding_dir/linux/product_logo_64_beta.png",
+      "$branding_dir/linux/product_logo_64_dev.png",
+      "$branding_dir/linux/product_logo_64_nightly.png",
+      "$branding_dir_100/linux/product_logo_16_beta.png",
+      "$branding_dir_100/linux/product_logo_16_dev.png",
+      "$branding_dir_100/linux/product_logo_16_nightly.png",
+      "$branding_dir_100/linux/product_logo_32_beta.png",
+      "$branding_dir_100/linux/product_logo_32_dev.png",
+      "$branding_dir_100/linux/product_logo_32_nightly.png",
     ]
   } else {
     sources = [
@@ -651,12 +713,16 @@ if (is_mac) {
 
 action("audit_deps") {
   script = "//brave/script/audit_deps.py"
+  output = "$target_gen_dir/audit_deps.json"
 
-  outputs = [ "$root_gen_dir/non-existent-audit_deps" ]
+  # Action must have outputs, and these outputs must be created, otherwise
+  # SISO will fail.
+  outputs = [ output ]
 
   args = [
     "--source_root=" + rebase_path("//brave"),
     "--cargo_audit_exe=" + rebase_path(cargo_audit_exe),
+    "--output=" + rebase_path(output),
   ]
 
   if (audit_dev_deps) {

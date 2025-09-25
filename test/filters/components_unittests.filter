@@ -37,6 +37,54 @@
 # This test fails because we disable @aimode search keyword
 -FeaturedSearchProviderTest.StarterPack
 
+# These tests pass locally but fail on CI (flaky).
+-SupervisedUserServiceTest.CantEnableFilteringUsingUserControls
+
+# These tests fail because we stub out
+# optimization_guide::IsUserPermittedToFetchRemoteOptimizationGuide and
+# optimization_guide::features::IsModelDownloadingEnabled
+-HintsManagerFetchingTest.*
+-HintsManagerProactivePersonalizationFetchingTest.*
+-ModelBrokerClientTest.*
+-OnDeviceModelAdaptationLoaderTest2.UnavailableAdaptationRejectsSession
+-OptimizationGuidePermissionsUtilTest.IsUserPermittedToFetchHintsDefaultUserAnonymousDataCollectionEnabled
+-PDPMetricsTest.TestFalseOptGuideResponseIsRecorded
+-PDPMetricsTest.TestPDPIsRecorded
+-PredictionManagerTest.*
+
+# These tests fail because we disable commerce::kShoppingList
+-All/ShoppingServiceTest.TestShoppingList*/*
+
+# This test fails because we disable omnibox::kDocumentProviderNoSyncRequirement
+-DocumentProviderTest.IsDocumentProviderAllowed
+
+# These tests fail because we override SyncAuthManager::DetermineAccountToUse.
+-SyncServiceImplStartupWithDetermineAccountTypeTest.StartupWithConsumerAccount
+-SyncServiceImplStartupWithDetermineAccountTypeTest.StartupWithManagedAccount
+
+# This test fails because we use different search engine keywords.
+-SearchEngineChoiceEligibilityTest.ChoiceScreenConditions_SkipFor3p_Waffle
+
+# These tests fail because upstream doesn't expect passwords to be syncable
+-SyncPrefsMigrationTest.DoNotMigratePasswordsToPerAccountPrefIfLastGaiaIdMissing
+-SyncPrefsMigrationTest.DoNotMigratePasswordsToPerAccountPrefIfPasswordsEnabled
+-SyncPrefsMigrationTest.DoNotMigratePasswordsToPerAccountPrefIfSyncEverythingEnabled
+-SyncPrefsMigrationTest.GlobalToAccount_CustomPassphrase
+-SyncPrefsMigrationTest.GlobalToAccount_CustomState
+-SyncPrefsMigrationTest.GlobalToAccount_DefaultState
+-SyncPrefsMigrationTest.MigratePasswordsToPerAccountPrefRunsOnce
+-SyncPrefsTest.DefaultSelectedTypesForAccountInTransportMode_SyncToSigninDisabled
+-SyncPrefsTest.DefaultSelectedTypesForAccountInTransportMode_SyncToSigninEnabled
+-SyncPrefsTest.SelectedTypesKeepEverythingSynced
+-SyncPrefsTest.SelectedTypesKeepEverythingSyncedButPolicyRestricted
+-SyncPrefsTest.SelectedTypesNotKeepEverythingSynced
+-SyncPrefsTest.SelectedTypesNotKeepEverythingSyncedAndPolicyRestricted
+-SyncUserSettingsImplTest.DefaultSelectedTypesWhileSignedIn_SyncToSigninDisabled
+-SyncUserSettingsImplTest.DefaultSelectedTypesWhileSignedIn_SyncToSigninEnabled
+-SyncUserSettingsImplTest.PreferredTypesNotKeepEverythingSynced
+-SyncUserSettingsImplTest.PreferredTypesSyncEverything
+-SyncUserSettingsImplTest.SetSelectedTypeInFullSyncMode
+
 # Tests below this point have not been diagnosed or had issues created yet.
 -AccountInvestigatorTest.*
 -AccountReconcilorDiceTest.*
@@ -105,8 +153,6 @@
 -LeakDetectionDelegateTest.StartCheckWithEnhancedProtection
 -LocationBarModelUtilTest.GetSecurityVectorIconWithSecureLevel
 -MirrorTableMultilogin/AccountReconcilorTestMirrorMultilogin.TableRowTest/*
--ModelBrokerClientTest.PendingClient
--ModelBrokerClientTest.ReadyWithSetupClient
 -MostVisitedSitesTest.ShouldDeduplicatePopularSitesWithMostVisitedIffHostAndTitleMatches
 -MostVisitedSitesTest.ShouldHandleTopSitesCacheHit
 -MostVisitedSitesWithCustomLinksTest.DisableCustomLinksWhenInitialized
@@ -137,6 +183,7 @@
 -PasswordFormFillingTest.Autofill
 -PasswordFormFillingTest.TestFillOnLoadSuggestion
 -PasswordFormFillingTest.TestFillOnLoadSuggestionWithPrefill
+-PasswordManagerFeaturesUtilTest.MigrateDefaultProfileStorePref
 -PasswordManagerTest.AutofillingOfAffiliatedCredentials/0
 -PasswordManagerTest.AutofillingOfAffiliatedCredentials/1
 -PaymentsNetworkInterfaceTest.*

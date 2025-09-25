@@ -24,7 +24,10 @@
 #include "content/public/browser/web_contents.h"
 
 #if BUILDFLAG(ENABLE_TOR)
+#include "brave/browser/tor/tor_profile_service_factory.h"
+#include "brave/components/tor/pref_names.h"
 #include "brave/components/tor/tor_launcher_factory.h"
+#include "chrome/browser/browser_process.h"
 #endif
 
 namespace {
@@ -58,7 +61,7 @@ void BravePrivateNewTabPageHandler::SetClientPage(
 }
 
 void BravePrivateNewTabPageHandler::SetDisclaimerDismissed(bool dismissed) {
-  DCHECK(profile_);
+  CHECK(profile_);
 
   profile_->GetOriginalProfile()->GetPrefs()->SetBoolean(
       profile_->IsTor()
@@ -70,7 +73,7 @@ void BravePrivateNewTabPageHandler::SetDisclaimerDismissed(bool dismissed) {
 
 void BravePrivateNewTabPageHandler::GetDisclaimerDismissed(
     GetDisclaimerDismissedCallback callback) {
-  DCHECK(profile_);
+  CHECK(profile_);
 
   bool dismissed = profile_->GetOriginalProfile()->GetPrefs()->GetBoolean(
       profile_->IsTor()
@@ -93,11 +96,28 @@ void BravePrivateNewTabPageHandler::GetIsTorConnected(
   std::move(callback).Run(is_connected);
 }
 
+void BravePrivateNewTabPageHandler::GetIsTorDisabled(
+    GetIsTorDisabledCallback callback) {
+  CHECK(profile_);
+#if BUILDFLAG(ENABLE_TOR)
+  // For private new tab page, only check if Tor is explicitly
+  // disabled by enterprise policy (managed and set to true)
+  bool is_disabled = false;
+  if (auto* prefs = g_browser_process->local_state()) {
+    auto* pref = prefs->FindPreference(tor::prefs::kTorDisabled);
+    is_disabled = pref && pref->IsManaged() && pref->GetValue()->GetBool();
+  }
+#else
+  bool is_disabled = true;
+#endif
+  std::move(callback).Run(is_disabled);
+}
+
 using ConnectionStatus = brave_private_new_tab::mojom::ConnectionStatus;
 
 void BravePrivateNewTabPageHandler::GoToBraveSearch(const std::string& input,
                                                     bool open_new_tab) {
-  DCHECK(profile_);
+  CHECK(profile_);
 
   auto provider_data = TemplateURLDataFromPrepopulatedEngine(
       profile_->IsTor() ? TemplateURLPrepopulateData::brave_search_tor
@@ -139,7 +159,7 @@ void BravePrivateNewTabPageHandler::GoToBraveSupport() {
     web_contents = web_contents_;
 
   web_contents->OpenURL(
-      content::OpenURLParams(GURL("https://support.brave.com/"),
+      content::OpenURLParams(GURL("https://support.brave.app/"),
                              content::Referrer(),
                              WindowOpenDisposition::NEW_FOREGROUND_TAB,
                              ui::PageTransition::PAGE_TRANSITION_LINK, false),

@@ -15,7 +15,7 @@ import { PanelActions } from '../../panel/actions'
 
 // utils
 import Amount from '../../utils/amount'
-import { getPriceIdForToken } from '../../utils/pricing-utils'
+import { getPriceRequestsForTokens } from '../../utils/pricing-utils'
 import { isHardwareAccount } from '../../utils/account-utils'
 import { getLocale } from '../../../common/locale'
 import { getCoinFromTxDataUnion } from '../../utils/network-utils'
@@ -56,6 +56,7 @@ import {
   usePendingTransactionsQuery,
   useGetCombinedTokensListQuery,
   useAccountQuery,
+  useAccountFromAddressQuery,
 } from '../slices/api.slice.extra'
 import { useSwapTransactionParser } from './use-swap-tx-parser'
 import {
@@ -65,7 +66,11 @@ import {
 import { useIsAccountSyncing } from './use_is_account_syncing'
 
 // Constants
-import { BraveWallet, emptyProviderErrorCodeUnion } from '../../constants/types'
+import {
+  BraveWallet,
+  emptyProviderErrorCodeUnion,
+  MaxPriorityFeeOptionType,
+} from '../../constants/types'
 import {
   UpdateUnapprovedTransactionGasFieldsType,
   UpdateUnapprovedTransactionNonceType,
@@ -146,17 +151,14 @@ export const usePendingTransactions = () => {
 
   const txToken = findTransactionToken(transactionInfo, combinedTokensList)
 
-  const tokenPriceIds = React.useMemo(
-    () =>
-      [txToken, networkAsset]
-        .filter((t): t is BraveWallet.BlockchainToken => Boolean(t))
-        .map(getPriceIdForToken),
+  const tokenPriceRequests = React.useMemo(
+    () => getPriceRequestsForTokens([txToken, networkAsset]),
     [txToken, networkAsset],
   )
 
-  const { data: spotPriceRegistry } = useGetTokenSpotPricesQuery(
-    tokenPriceIds.length > 0 && defaultFiat
-      ? { ids: tokenPriceIds, toCurrency: defaultFiat }
+  const { data: spotPrices } = useGetTokenSpotPricesQuery(
+    tokenPriceRequests.length > 0 && defaultFiat
+      ? { requests: tokenPriceRequests, vsCurrency: defaultFiat }
       : skipToken,
     querySubscriptionOptions60s,
   )
@@ -210,7 +212,7 @@ export const usePendingTransactions = () => {
   const transactionDetails = React.useMemo(() => {
     if (
       !transactionInfo
-      || !spotPriceRegistry
+      || !spotPrices
       || !txAccount
       || !transactionsNetwork
       || !accounts
@@ -222,7 +224,7 @@ export const usePendingTransactions = () => {
       tx: transactionInfo,
       accounts,
       gasFee,
-      spotPriceRegistry,
+      spotPrices,
       tokensList: combinedTokensList,
       transactionAccount: txAccount,
       transactionNetwork: transactionsNetwork,
@@ -230,7 +232,7 @@ export const usePendingTransactions = () => {
   }, [
     transactionInfo,
     accounts,
-    spotPriceRegistry,
+    spotPrices,
     txAccount,
     transactionsNetwork,
     gasFee,
@@ -333,8 +335,29 @@ export const usePendingTransactions = () => {
     })
   }, [nativeBalance, gasFee])
 
-  const { suggestedMaxPriorityFeeChoices, baseFeePerGas } = React.useMemo(
+  const {
+    suggestedMaxPriorityFeeOptions,
+    suggestedMaxPriorityFeeChoices,
+    baseFeePerGas,
+  } = React.useMemo(
     () => ({
+      suggestedMaxPriorityFeeOptions: [
+        {
+          id: 'slow',
+          fee: gasEstimates?.slowMaxPriorityFeePerGas || '0',
+          duration: '',
+        },
+        {
+          id: 'average',
+          fee: gasEstimates?.avgMaxPriorityFeePerGas || '0',
+          duration: '',
+        },
+        {
+          id: 'fast',
+          fee: gasEstimates?.fastMaxPriorityFeePerGas || '0',
+          duration: '',
+        },
+      ] as MaxPriorityFeeOptionType[],
       suggestedMaxPriorityFeeChoices: [
         gasEstimates?.slowMaxPriorityFeePerGas || '0',
         gasEstimates?.avgMaxPriorityFeePerGas || '0',
@@ -407,6 +430,25 @@ export const usePendingTransactions = () => {
       nextIndex === pendingTransactions.length // at end of list?
         ? pendingTransactions[0]?.id // go to first item in list
         : pendingTransactions[nextIndex]?.id // go to next item in list
+
+    dispatch(UIActions.setPendingTransactionId(newSelectedPendingTransactionId))
+  }, [selectedPendingTransactionId, pendingTransactions, dispatch])
+
+  const queuePreviousTransaction = React.useCallback(() => {
+    // if id hasn't been set, start at beginning of tx list
+    const currentIndex = selectedPendingTransactionId
+      ? pendingTransactions.findIndex(
+          (tx) => tx.id === selectedPendingTransactionId,
+        )
+      : 0
+
+    const previousIndex = currentIndex - 1
+
+    const newSelectedPendingTransactionId =
+      previousIndex < 0 // at end of list?
+        ? // go to last item in list
+          pendingTransactions[pendingTransactions.length - 1]?.id
+        : pendingTransactions[previousIndex]?.id // go to next item in list
 
     dispatch(UIActions.setPendingTransactionId(newSelectedPendingTransactionId))
   }, [selectedPendingTransactionId, pendingTransactions, dispatch])
@@ -642,12 +684,24 @@ export const usePendingTransactions = () => {
       : skipToken,
   )
 
+  const { account: toAccount } = useAccountFromAddressQuery(
+    transactionDetails?.recipient,
+  )
+
+  const canEditNetworkFee = React.useMemo(() => {
+    return (
+      isEthereumTransaction(transactionInfo)
+      || transactionDetails?.isFilecoinTransaction
+    )
+  }, [transactionInfo, transactionDetails?.isFilecoinTransaction])
+
   return {
     baseFeePerGas,
     currentTokenAllowance,
     isCurrentAllowanceUnlimited,
     erc20ApproveTokenInfo,
     fromAccount: txAccount,
+    toAccount,
     fromOrb,
     isConfirmButtonDisabled,
     isEthereumTransaction: isEthereumTransaction(transactionInfo),
@@ -662,6 +716,8 @@ export const usePendingTransactions = () => {
     onEditAllowanceSave,
     queueNextTransaction,
     rejectAllTransactions,
+    queuePreviousTransaction,
+    suggestedMaxPriorityFeeOptions,
     suggestedMaxPriorityFeeChoices,
     toOrb,
     transactionDetails,
@@ -685,5 +741,6 @@ export const usePendingTransactions = () => {
     isCardanoTransaction: isCardanoTransaction(transactionInfo),
     isAccountSyncing,
     isShieldingFunds,
+    canEditNetworkFee,
   }
 }

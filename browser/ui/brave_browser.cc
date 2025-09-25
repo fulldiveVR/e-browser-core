@@ -7,6 +7,7 @@
 
 #include <memory>
 #include <optional>
+#include <string>
 #include <utility>
 
 #include "base/check.h"
@@ -21,10 +22,14 @@
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/browser/ui/tabs/features.h"
+#include "brave/browser/ui/tabs/public/constants.h"
+#include "brave/browser/ui/views/tabs/vertical_tab_utils.h"
 #include "brave/components/constants/pref_names.h"
 #include "chrome/browser/lifetime/browser_close_manager.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/search/search.h"
+#include "chrome/browser/sessions/session_service.h"
+#include "chrome/browser/sessions/session_service_factory.h"
 #include "chrome/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_finder.h"
 #include "chrome/browser/ui/browser_tabstrip.h"
@@ -34,9 +39,11 @@
 #include "chrome/browser/ui/webui/new_tab_page/new_tab_page_ui.h"
 #include "chrome/browser/ui/webui/new_tab_page_third_party/new_tab_page_third_party_ui.h"
 #include "chrome/browser/ui/webui/ntp/new_tab_ui.h"
+#include "chrome/browser/ui/webui_browser/webui_browser.h"
 #include "chrome/common/webui_url_constants.h"
 #include "components/bookmarks/common/bookmark_pref_names.h"
 #include "components/prefs/pref_service.h"
+#include "components/sessions/content/session_tab_helper.h"
 #include "components/tabs/public/tab_interface.h"
 #include "content/public/browser/file_select_listener.h"
 #include "content/public/browser/navigation_entry.h"
@@ -73,6 +80,12 @@ BraveBrowser::BraveBrowser(const CreateParams& params) : Browser(params) {
     sidebar_controller->SetSidebar(brave_window()->InitSidebar());
   }
 
+  if (webui_browser::IsWebUIBrowserEnabled() && is_type_normal()) {
+    // WebUIBrowserWindow was created in Browser's c'tor (in
+    // BrowserWindow::CreateBrowserWindow), not a BraveBrowserWindow.
+    return;
+  }
+
   // As browser window(BrowserView) is initialized before fullscreen controller
   // is ready, it's difficult to know when browsr window can listen.
   // Notify exact timing to do it.
@@ -81,7 +94,6 @@ BraveBrowser::BraveBrowser(const CreateParams& params) : Browser(params) {
 }
 
 BraveBrowser::~BraveBrowser() = default;
-
 
 void BraveBrowser::ScheduleUIUpdate(content::WebContents* source,
                                     unsigned changed_flags) {
@@ -138,8 +150,17 @@ void BraveBrowser::TabStripEmpty() {
   }
 
   base::SequencedTaskRunner::GetCurrentDefault()->PostTask(
-      FROM_HERE, base::BindOnce(&chrome::AddTabAt, this, GetNewTabURL(), -1,
-                                true, std::nullopt));
+      FROM_HERE, base::BindOnce(
+                     [](base::WeakPtr<BraveBrowser> browser) {
+                       if (browser) {
+                         chrome::AddTabAt(browser.get(),
+                                          browser->GetNewTabURL(),
+                                          /*index=*/-1, /*foreground=*/true,
+                                          /*group=*/std::nullopt,
+                                          /*pinned=*/false);
+                       }
+                     },
+                     weak_ptr_factory_.GetWeakPtr()));
 }
 
 void BraveBrowser::RunFileChooser(
@@ -168,6 +189,21 @@ void BraveBrowser::RunFileChooser(
   }
   Browser::RunFileChooser(render_frame_host, listener, *new_params);
 #endif
+}
+
+void BraveBrowser::TabCustomTitleChanged(
+    content::WebContents* contents,
+    const std::optional<std::string>& custom_title) {
+  SessionService* session_service =
+      SessionServiceFactory::GetForProfileIfExisting(profile());
+  if (session_service) {
+    sessions::SessionTabHelper* session_tab_helper =
+        sessions::SessionTabHelper::FromWebContents(contents);
+    session_service->AddTabExtraData(session_id(),
+                                     session_tab_helper->session_id(),
+                                     tabs::kBraveTabCustomTitleExtraDataKey,
+                                     custom_title.value_or(std::string()));
+  }
 }
 
 bool BraveBrowser::ShouldDisplayFavicon(
@@ -265,6 +301,27 @@ bool BraveBrowser::TryToCloseWindow(
 void BraveBrowser::ResetTryToCloseWindow() {
   confirmed_to_close_ = false;
   Browser::ResetTryToCloseWindow();
+}
+
+bool BraveBrowser::NormalBrowserSupportsWindowFeature(
+    WindowFeature feature,
+    bool check_can_support) const {
+#if BUILDFLAG(IS_WIN)
+  if (feature == WindowFeature::FEATURE_TITLEBAR) {
+    // In case of vertical tab strip is allowed, we need to have ability to
+    // show title bar on Windows.
+    return tabs::utils::ShouldShowVerticalTabs(this) &&
+           tabs::utils::ShouldShowWindowTitleForVerticalTabs(this);
+  }
+#endif
+
+  return Browser::NormalBrowserSupportsWindowFeature(feature,
+                                                     check_can_support);
+}
+
+bool BraveBrowser::PreHandleMouseEvent(content::WebContents* source,
+                                       const blink::WebMouseEvent& event) {
+  return brave_window()->PreHandleMouseEvent(event);
 }
 
 bool BraveBrowser::IsWebContentsVisible(content::WebContents* web_contents) {

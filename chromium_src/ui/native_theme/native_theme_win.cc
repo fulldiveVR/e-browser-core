@@ -12,10 +12,18 @@ bool s_ignore_system_dark_mode_change = false;
     return;                                       \
   }
 
-#include "src/ui/native_theme/native_theme_win.cc"
+#include <ui/native_theme/native_theme_win.cc>
 #undef BRAVE_NATIVETHEMEWIN_UPDATEDARKMODESTATUS
 
 namespace ui {
+
+// Shared instance for dark UI. This was part of Chromium, but got removed in
+// Chromium 141. However, we use it for Private/Tor windows.
+NativeTheme* NativeTheme::GetInstanceForDarkUI() {
+  static base::NoDestructor<NativeThemeWin> s_dark_native_theme(
+      /*configure_web_instance=*/false, /*should_only_use_dark_colors=*/true);
+  return s_dark_native_theme.get();
+}
 
 void COMPONENT_EXPORT(NATIVE_THEME) IgnoreSystemDarkModeChange(bool ignore) {
   s_ignore_system_dark_mode_change = ignore;

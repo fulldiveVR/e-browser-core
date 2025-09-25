@@ -28,7 +28,6 @@
 #include "content/public/common/isolated_world_ids.h"
 #include "content/public/renderer/v8_value_converter.h"
 #include "gin/function_template.h"
-#include "gin/handle.h"
 #include "gin/object_template_builder.h"
 #include "third_party/abseil-cpp/absl/base/macros.h"
 #include "third_party/blink/public/mojom/devtools/console_message.mojom.h"
@@ -38,6 +37,8 @@
 #include "third_party/blink/public/web/web_local_frame.h"
 #include "ui/base/l10n/l10n_util.h"
 #include "url/origin.h"
+#include "v8/include/cppgc/allocation.h"
+#include "v8/include/v8-cppgc.h"
 
 namespace {
 
@@ -118,11 +119,14 @@ JSEthereumProvider::JSEthereumProvider(content::RenderFrame* render_frame)
     : RenderFrameObserver(render_frame) {
   uuid_ = base::Uuid::GenerateRandomV4().AsLowercaseString();
   EnsureConnected();
+  self_ = this;
 }
 
 JSEthereumProvider::~JSEthereumProvider() = default;
 
-gin::WrapperInfo JSEthereumProvider::kWrapperInfo = {gin::kEmbedderNativeGin};
+void JSEthereumProvider::OnDestruct() {
+  self_.Clear();
+}
 
 void JSEthereumProvider::WillReleaseScriptContext(v8::Local<v8::Context>,
                                                   int32_t world_id) {
@@ -182,14 +186,11 @@ void JSEthereumProvider::Install(bool install_ethereum_provider,
     return;
   }
 
-  gin::Handle<JSEthereumProvider> provider =
-      gin::CreateHandle(isolate, new JSEthereumProvider(render_frame));
-  if (provider.IsEmpty()) {
-    return;
-  }
-  v8::Local<v8::Value> provider_value = provider.ToV8();
+  JSEthereumProvider* provider =
+      cppgc::MakeGarbageCollected<JSEthereumProvider>(
+          isolate->GetCppHeap()->GetAllocationHandle(), render_frame);
   v8::Local<v8::Object> provider_object =
-      provider_value->ToObject(context).ToLocalChecked();
+      provider->GetWrapper(isolate).ToLocalChecked();
 
   // Create a proxy to the actual JSEthereumProvider object which will be
   // exposed via window.ethereum.
@@ -266,9 +267,6 @@ bool JSEthereumProvider::GetIsMetaMask() {
   return true;
 }
 
-gin::WrapperInfo JSEthereumProvider::MetaMask::kWrapperInfo = {
-    gin::kEmbedderNativeGin};
-
 JSEthereumProvider::MetaMask::MetaMask(content::RenderFrame* render_frame)
     : render_frame_(render_frame) {}
 JSEthereumProvider::MetaMask::~MetaMask() = default;
@@ -279,8 +277,8 @@ JSEthereumProvider::MetaMask::GetObjectTemplateBuilder(v8::Isolate* isolate) {
       kIsUnlocked, &JSEthereumProvider::MetaMask::IsUnlocked);
 }
 
-const char* JSEthereumProvider::MetaMask::GetTypeName() {
-  return kMetaMask;
+const gin::WrapperInfo* JSEthereumProvider::MetaMask::wrapper_info() const {
+  return &kWrapperInfo;
 }
 
 v8::Local<v8::Promise> JSEthereumProvider::MetaMask::IsUnlocked(
@@ -326,16 +324,13 @@ void JSEthereumProvider::MetaMask::OnIsUnlocked(
 
 v8::Local<v8::Value> JSEthereumProvider::GetMetaMask(v8::Isolate* isolate) {
   // Set non-writable _metamask obj with non-writable isUnlocked method.
-  gin::Handle<MetaMask> metamask =
-      gin::CreateHandle(isolate, new MetaMask(render_frame()));
-  if (metamask.IsEmpty()) {
-    return v8::Undefined(isolate);
-  }
-  v8::Local<v8::Value> metamask_value = metamask.ToV8();
-  SetOwnPropertyWritable(isolate->GetCurrentContext(),
-                         metamask_value.As<v8::Object>(),
+  MetaMask* metamask = cppgc::MakeGarbageCollected<MetaMask>(
+      isolate->GetCppHeap()->GetAllocationHandle(), render_frame());
+  v8::Local<v8::Object> object = metamask->GetWrapper(isolate).ToLocalChecked();
+
+  SetOwnPropertyWritable(isolate->GetCurrentContext(), object,
                          gin::StringToV8(isolate, kIsUnlocked), false);
-  return metamask_value;
+  return object;
 }
 
 std::string JSEthereumProvider::GetChainId() {
@@ -385,8 +380,8 @@ gin::ObjectTemplateBuilder JSEthereumProvider::GetObjectTemplateBuilder(
       .SetMethod("send", &JSEthereumProvider::SendMethod);
 }
 
-const char* JSEthereumProvider::GetTypeName() {
-  return "JSEthereumProvider";
+const gin::WrapperInfo* JSEthereumProvider::wrapper_info() const {
+  return &kWrapperInfo;
 }
 
 // There are 3 supported signatures for send:

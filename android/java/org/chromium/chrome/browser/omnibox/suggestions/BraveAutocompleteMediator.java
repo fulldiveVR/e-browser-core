@@ -9,7 +9,6 @@ import android.content.Context;
 import android.os.Handler;
 
 import org.chromium.base.Callback;
-import org.chromium.base.supplier.Supplier;
 import org.chromium.build.annotations.NullMarked;
 import org.chromium.build.annotations.Nullable;
 import org.chromium.chrome.browser.brave_leo.BraveLeoPrefUtils;
@@ -35,6 +34,7 @@ import org.chromium.ui.modelutil.PropertyModel;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.function.Supplier;
 
 @NullMarked
 class BraveAutocompleteMediator extends AutocompleteMediator
@@ -63,13 +63,15 @@ class BraveAutocompleteMediator extends AutocompleteMediator
             Supplier<ShareDelegate> shareDelegateSupplier,
             LocationBarDataProvider locationBarDataProvider,
             Callback<Tab> bringTabToFrontCallback,
+            Callback<String> bringTabGroupToFrontCallback,
             Supplier<TabWindowManager> tabWindowManagerSupplier,
             BookmarkState bookmarkState,
             OmniboxActionDelegate omniboxActionDelegate,
             ActivityLifecycleDispatcher lifecycleDispatcher,
             OmniboxSuggestionsDropdownEmbedder embedder,
             WindowAndroid windowAndroid,
-            DeferredIMEWindowInsetApplicationCallback deferredIMEWindowInsetApplicationCallback) {
+            DeferredIMEWindowInsetApplicationCallback deferredIMEWindowInsetApplicationCallback,
+            boolean forcePhoneStyleOmnibox) {
         super(
                 context,
                 delegate,
@@ -81,13 +83,15 @@ class BraveAutocompleteMediator extends AutocompleteMediator
                 shareDelegateSupplier,
                 locationBarDataProvider,
                 bringTabToFrontCallback,
+                bringTabGroupToFrontCallback,
                 tabWindowManagerSupplier,
                 bookmarkState,
                 omniboxActionDelegate,
                 lifecycleDispatcher,
                 embedder,
                 windowAndroid,
-                deferredIMEWindowInsetApplicationCallback);
+                deferredIMEWindowInsetApplicationCallback,
+                forcePhoneStyleOmnibox);
 
         mDelegate = delegate;
         mActivityTabSupplier = activityTabSupplier;

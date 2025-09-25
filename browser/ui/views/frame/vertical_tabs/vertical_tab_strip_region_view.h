@@ -21,20 +21,25 @@
 #include "ui/base/metadata/metadata_header_macros.h"
 #include "ui/views/controls/resize_area_delegate.h"
 
+namespace views {
+class LabelButton;
+class MenuRunner;
+}  // namespace views
+
 class BraveNewTabButton;
 class BrowserView;
 class FullscreenController;
 class TabStripScrollContainer;
 
 // Wraps TabStripRegion and show it vertically.
-class VerticalTabStripRegionView : public views::View,
-                                   public views::ResizeAreaDelegate,
-                                   public views::AnimationDelegateViews,
-                                   public views::WidgetObserver,
-                                   public FullscreenObserver,
-                                   public BrowserListObserver,
-                                   public views::ContextMenuController {
-  METADATA_HEADER(VerticalTabStripRegionView, views::View)
+class BraveVerticalTabStripRegionView : public views::View,
+                                        public views::ResizeAreaDelegate,
+                                        public views::AnimationDelegateViews,
+                                        public views::WidgetObserver,
+                                        public FullscreenObserver,
+                                        public BrowserListObserver,
+                                        public views::ContextMenuController {
+  METADATA_HEADER(BraveVerticalTabStripRegionView, views::View)
  public:
   // We have a state machine which cycles like:
   //
@@ -51,9 +56,9 @@ class VerticalTabStripRegionView : public views::View,
     kExpanded,
   };
 
-  VerticalTabStripRegionView(BrowserView* browser_view,
-                             TabStripRegionView* region_view);
-  ~VerticalTabStripRegionView() override;
+  BraveVerticalTabStripRegionView(BrowserView* browser_view,
+                                  TabStripRegionView* region_view);
+  ~BraveVerticalTabStripRegionView() override;
 
   State state() const { return state_; }
   State last_state() const { return last_state_; }
@@ -130,8 +135,6 @@ class VerticalTabStripRegionView : public views::View,
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest, ExpandedWidth);
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest,
                            LayoutAfterFirstTabCreation);
-  FRIEND_TEST_ALL_PREFIXES(SideBySideEnabledBrowserTest,
-                           PinnedSplitTabsLayoutInVerticalTabTest);
 
   FullscreenController* GetFullscreenController() const;
   bool IsTabFullscreen() const;
@@ -155,6 +158,7 @@ class VerticalTabStripRegionView : public views::View,
   void OnFloatingModePrefChanged();
   void OnExpandedStatePerWindowPrefChanged();
   void OnExpandedWidthPrefChanged();
+  void OnHideComopletelyWhenCollapsedPrefChanged();
 
   bool IsFloatingVerticalTabsEnabled() const;
   bool IsFloatingEnabledForBrowserFullscreen() const;
@@ -180,6 +184,10 @@ class VerticalTabStripRegionView : public views::View,
   void OnMenuClosed();
 
   views::LabelButton& GetToggleButtonForTesting();
+
+  // Callback that is called when collapse animation ends. We update visibility
+  // of this view if it's needed
+  void OnCollapseAnimationEnded();
 
   raw_ptr<BrowserView> browser_view_ = nullptr;
   raw_ptr<Browser> browser_ = nullptr;
@@ -210,6 +218,7 @@ class VerticalTabStripRegionView : public views::View,
   BooleanPrefMember collapsed_pref_;
   BooleanPrefMember expanded_state_per_window_pref_;
   BooleanPrefMember floating_mode_pref_;
+  BooleanPrefMember hide_completely_when_collapsed_pref_;
 
   IntegerPrefMember expanded_width_pref_;
   int expanded_width_ = 220;
@@ -237,7 +246,7 @@ class VerticalTabStripRegionView : public views::View,
 
   std::unique_ptr<views::MenuRunner> menu_runner_;
 
-  base::WeakPtrFactory<VerticalTabStripRegionView> weak_factory_{this};
+  base::WeakPtrFactory<BraveVerticalTabStripRegionView> weak_factory_{this};
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_FRAME_VERTICAL_TABS_VERTICAL_TAB_STRIP_REGION_VIEW_H_

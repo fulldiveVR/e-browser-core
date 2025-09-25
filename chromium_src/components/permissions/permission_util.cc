@@ -33,8 +33,6 @@
 #define PERMISSION_UTIL_PERMISSION_TYPE_TO_CONTENT_SETTINGS_TYPE \
   case PermissionType::BRAVE_ADS:                                \
     return ContentSettingsType::BRAVE_ADS;                       \
-  case PermissionType::BRAVE_COSMETIC_FILTERING:                 \
-    return ContentSettingsType::BRAVE_COSMETIC_FILTERING;        \
   case PermissionType::BRAVE_TRACKERS:                           \
     return ContentSettingsType::BRAVE_TRACKERS;                  \
   case PermissionType::BRAVE_HTTP_UPGRADABLE_RESOURCES:          \
@@ -62,7 +60,7 @@
   case PermissionType::BRAVE_CARDANO:                            \
     return ContentSettingsType::BRAVE_CARDANO;
 
-#include "src/components/permissions/permission_util.cc"
+#include <components/permissions/permission_util.cc>
 #undef PermissionUtil
 #undef BRAVE_GET_UMA_VALUE_FOR_REQUEST_TYPE
 #undef BRAVE_GET_UMA_VALUE_FOR_REQUESTS
@@ -136,8 +134,6 @@ PermissionType PermissionUtil::ContentSettingsTypeToPermissionType(
   switch (permission) {
     case ContentSettingsType::BRAVE_ADS:
       return PermissionType::BRAVE_ADS;
-    case ContentSettingsType::BRAVE_COSMETIC_FILTERING:
-      return PermissionType::BRAVE_COSMETIC_FILTERING;
     case ContentSettingsType::BRAVE_TRACKERS:
       return PermissionType::BRAVE_TRACKERS;
     case ContentSettingsType::BRAVE_HTTP_UPGRADABLE_RESOURCES:

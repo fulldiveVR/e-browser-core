@@ -7,6 +7,7 @@
 
 #include <iostream>
 
+#include "base/containers/map_util.h"
 #include "base/logging.h"
 #include "brave/components/brave_perf_predictor/browser/bandwidth_linreg.h"
 #include "components/page_load_metrics/common/page_load_metrics.mojom.h"
@@ -75,13 +76,14 @@ void BandwidthSavingsPredictor::OnResourceLoadComplete(
   if (is_third_party) {
     feature_map_["resources.third-party.requestCount"] += 1;
     feature_map_["resources.third-party.size"] +=
-        resource_load_info.raw_body_bytes;
+        resource_load_info.raw_body_bytes.InBytes();
   }
 
   feature_map_["resources.total.requestCount"] += 1;
-  feature_map_["resources.total.size"] += resource_load_info.raw_body_bytes;
+  feature_map_["resources.total.size"] +=
+      resource_load_info.raw_body_bytes.InBytes();
   feature_map_["transfer.total.size"] +=
-      resource_load_info.total_received_bytes;
+      resource_load_info.total_received_bytes.InBytes();
   std::string resource_type;
   switch (resource_load_info.request_destination) {
     case network::mojom::RequestDestination::kDocument:
@@ -113,7 +115,7 @@ void BandwidthSavingsPredictor::OnResourceLoadComplete(
   }
   feature_map_["resources." + resource_type + ".requestCount"] += 1;
   feature_map_["resources." + resource_type + ".size"] +=
-      resource_load_info.raw_body_bytes;
+      resource_load_info.raw_body_bytes.InBytes();
 }
 
 double BandwidthSavingsPredictor::PredictSavingsBytes() const {
@@ -121,17 +123,19 @@ double BandwidthSavingsPredictor::PredictSavingsBytes() const {
       !main_frame_url_.SchemeIsHTTPOrHTTPS()) {
     return 0;
   }
-  const auto total_size = feature_map_.find("transfer.total.size");
-  if (total_size != feature_map_.end() && total_size->second > 0) {
-    VLOG(2) << main_frame_url_ << " total download size " << total_size->second
+  const auto* total_size =
+      base::FindOrNull(feature_map_, "transfer.total.size");
+  if (total_size && *total_size > 0) {
+    VLOG(2) << main_frame_url_ << " total download size " << *total_size
             << " bytes";
   } else {
     return 0;
   }
 
   // Short-circuit if nothing got blocked
-  const auto adblock_requests = feature_map_.find("adblockRequests");
-  if (adblock_requests == feature_map_.end() || adblock_requests->second < 1) {
+  const auto* adblock_requests =
+      base::FindOrNull(feature_map_, "adblockRequests");
+  if (!adblock_requests || *adblock_requests < 1) {
     return 0;
   }
   if (VLOG_IS_ON(3)) {
@@ -144,7 +148,7 @@ double BandwidthSavingsPredictor::PredictSavingsBytes() const {
   VLOG(2) << main_frame_url_ << " estimated saving " << prediction << " bytes";
   // Sanity check for predicted saving
   if (prediction > kSavingsAbsoluteOutlier &&
-      (prediction / kOutlierThreshold) > total_size->second) {
+      (prediction / kOutlierThreshold) > *total_size) {
     return 0;
   }
   return prediction;

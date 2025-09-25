@@ -9,7 +9,6 @@
 // clang-format off
 #define NUM                         \
   BRAVE_ADS,                        \
-  BRAVE_COSMETIC_FILTERING,         \
   BRAVE_TRACKERS,                   \
   BRAVE_HTTP_UPGRADABLE_RESOURCES,  \
   BRAVE_FINGERPRINTING_V2,          \
@@ -26,7 +25,7 @@
   NUM
 // clang-format on
 
-#include "src/third_party/blink/public/common/permissions/permission_utils.h"  // IWYU pragma: export
+#include <third_party/blink/public/common/permissions/permission_utils.h>  // IWYU pragma: export
 #undef NUM
 
 #endif  // BRAVE_CHROMIUM_SRC_THIRD_PARTY_BLINK_PUBLIC_COMMON_PERMISSIONS_PERMISSION_UTILS_H_

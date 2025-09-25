@@ -8,26 +8,26 @@
 
 // Make override-able
 #define LayoutTabStripRegion           \
-  UnUsed() { return {}; }              \
+  UnUsed();                            \
   friend class BraveBrowserViewLayout; \
-  virtual int LayoutTabStripRegion
-#define LayoutBookmarkAndInfoBars virtual LayoutBookmarkAndInfoBars
+  virtual void LayoutTabStripRegion
+#define LayoutBookmarkBar virtual LayoutBookmarkBar
 #define LayoutInfoBar virtual LayoutInfoBar
 #define LayoutContentsContainerView virtual LayoutContentsContainerView
 
 // Add a new method: NotifyDialogPositionRequiresUpdate(). This is needed for
 // split view to update the dialog position when the split view is resized.
-#define set_contents_border_widget           \
-  set_contents_border_widget_unused();       \
+#define set_webui_tab_strip                  \
+  set_webui_tab_strip_unused();              \
   void NotifyDialogPositionRequiresUpdate(); \
-  void set_contents_border_widget
+  void set_webui_tab_strip
 
-#include "src/chrome/browser/ui/views/frame/browser_view_layout.h"  // IWYU pragma: export
+#include <chrome/browser/ui/views/frame/browser_view_layout.h>  // IWYU pragma: export
 
-#undef set_contents_border_widget
+#undef set_webui_tab_strip
 #undef LayoutContentsContainerView
 #undef LayoutInfoBar
-#undef LayoutBookmarkAndInfoBars
+#undef LayoutBookmarkBar
 #undef LayoutTabStripRegion
 
 #endif  // BRAVE_CHROMIUM_SRC_CHROME_BROWSER_UI_VIEWS_FRAME_BROWSER_VIEW_LAYOUT_H_

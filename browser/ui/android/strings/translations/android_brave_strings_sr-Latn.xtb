@@ -196,6 +196,7 @@
 <translation id="5987838417172370108">Doprinesite poboljšanju stabilnosti Brave-ovog proizvoda automatskim slanjem dijagnostičkih izveštaja kada Brave pregledač prekine sa radom ili se zamrzne.</translation>
 <translation id="7977176350719484850">Procenjeni sačuvani podaci</translation>
 <translation id="9008534313521214777">Procenjeno ušteđeno vreme</translation>
+<translation id="8347743943525229984">Aktiviraj Brave ankete</translation>
 <translation id="410351446219883937">Automatsko puštanje</translation>
 <translation id="7445411102860286510">Dozvoli sajtovima da automatski puštaju video snimke sa isključenim zvukom (preporučeno)</translation>
 <translation id="7837721118676387834">Dozvoli automatsko puštanje video snimaka sa isključenim zvukom određenom sajtu.</translation>
@@ -412,10 +413,10 @@ Dobro proverite da li je ove reči koda generisao uređaj koji vi posedujete.
 <translation id="8520059774736886747">Nedavno je verifikovan autor <ph name="PUBLISHER_NAME"/></translation>
 <translation id="1486343603936278248">token</translation>
 <translation id="7781069478569868053">Stranica nove kartice</translation>
+<translation id="5927196110206824867">Sponzorisane slike pozadine podržavaju Brave-ovu misiju izgradnje nezavisnog veba koji je prvenstveno usmeren na korisnike. I za razliku od velikih tehnoloških kompanija, mi anonimno merimo učinak oglasa kako bismo sačuvali vašu privatnost.</translation>
 <translation id="8748471354357836070">Saznajte više / opcije za odustanak</translation>
 <translation id="3171669670217312786">Slike pozadine</translation>
 <translation id="8522669544471808198">Prikaži slike pozadine</translation>
-<translation id="3870475560794762985">Prikaži sponzorisane slike</translation>
 <translation id="8793108040181436796">Vidžeti</translation>
 <translation id="8643377320501056697">Prikaži omiljene sajtove</translation>
 <translation id="7275773481201277457">Pokaži Brave statistiku</translation>
@@ -628,7 +629,6 @@ Dobro proverite da li je ove reči koda generisao uređaj koji vi posedujete.
 <translation id="3961126209136843111">Uvezi postojeći novčanik</translation>
 <translation id="4811736040444856406">Prikaži frazu za oporavak</translation>
 <translation id="4359319875297001084">Želite li da uvezete iz zastarelih Brave kripto novčanika?</translation>
-<translation id="3157931365184549694">Vrati</translation>
 <translation id="5844138175312846408">Već imate novčanik?</translation>
 <translation id="2502258949541727762">Pre nego što počnemo</translation>
 <translation id="4303748097351941030">Podržane mreže</translation>
@@ -1217,4 +1217,41 @@ Ako ne budete prihvatili ovaj zahtev, VPN se neće ponovo povezati i vaša veza 
 <translation id="6859935199732075666">Prikaži greške prilikom bezbednog pregledanja</translation>
 <translation id="2735247450315842119">Dozvoli snimke ekrana u privatnim karticama</translation>
 <translation id="8420414929552321089">Ako je opcija aktivirana, privatne kartice će takođe biti vidljive kada je otvoreno više aplikacija.</translation>
+<translation id="1943432128510653496">Sačuvaj lozinke</translation>
+<translation id="2100273922101894616">Automatsko prijavljivanje</translation>
+<translation id="363596933471559332">Automatski se prijavljujte na veb-sajtove pomoću sačuvanih akreditiva. Kada je ova funkcija isključena, tražićemo vam da se verifikujete pre svakog prijavljivanja na veb-sajt.</translation>
+<translation id="8562452229998620586">Sačuvane lozinke će se pojaviti ovde.</translation>
+<translation id="1303339473099049190">Ne možemo da pronađemo tu lozinku. Proverite kako ste je napisali i probajte ponovo.</translation>
+<translation id="2259659629660284697">Izvezi lozinke…</translation>
+<translation id="133012818630824069">Izvezite lozinke sačuvane u Brave-u</translation>
+<translation id="2321086116217818302">Pripremaju se lozinke...</translation>
+<translation id="5139940364318403933">Saznajte kako da koristite Brave disk</translation>
+<translation id="729975465115245577">Uređaj nema aplikaciju za čuvanje datoteke sa lozinkama.</translation>
+<translation id="1129510026454351943">Detalji: <ph name="ERROR_DESCRIPTION"/></translation>
+<translation id="6221633008163990886">Otključajte da biste izvezli lozinke</translation>
+<translation id="5245792669563792664">lozinke</translation>
+<translation id="10614374240317010">Nikada se ne čuva</translation>
+<translation id="1571304935088121812">Kopiraj korisničko ime</translation>
+<translation id="5005498671520578047">Kopiranje lozinke</translation>
+<translation id="2435457462613246316">Prikaži lozinku</translation>
+<translation id="1513858653616922153">Izbriši lozinku</translation>
+<translation id="543338862236136125">Izmenite lozinku</translation>
+<translation id="4565377596337484307">Sakrij lozinku</translation>
+<translation id="8523928698583292556">Izbriši sačuvanu lozinku</translation>
+<translation id="5433691172869980887">Korisničko ime je kopirano</translation>
+<translation id="2625189173221582860">Lozinka je kopirana</translation>
+<translation id="8084114998886531721">Sačuvana lozinka</translation>
+<translation id="6590680911007613645">Proverite da li se lozinka koju čuvate podudara sa lozinkom za <ph name="SITE"/></translation>
+<translation id="1492417797159476138">Već ste sačuvali ovo korisničko ime za ovaj sajt</translation>
+<translation id="5454166040603940656">sa dobavljačem <ph name="PROVIDER"/></translation>
+<translation id="686366188661646310">Želite da izbrišete lozinku?</translation>
+<translation id="7808889146555843082">Brisanjem ove lozinke nećete izbrisati nalog na <ph name="SITE"/>. Promenite lozinku ili izbrišite nalog na <ph name="SITE"/> da biste ga zaštitili od drugih.</translation>
+<translation id="2870560284913253234">Sajt</translation>
+<translation id="8503813439785031346">Korisničko ime</translation>
+<translation id="2278052315791335171">Brisanjem ove lozinke nećete izbrisati nalog na <ph name="SITE"/></translation>
+<translation id="6891726759199484455">Otključajte da biste kopirali lozinku</translation>
+<translation id="5515439363601853141">Otključajte da biste pregledali lozinku</translation>
+<translation id="1724977129262658800">Otključajte da biste izmenili lozinku</translation>
+<translation id="5780792035410621042">Da biste kopirali lozinke, prvo podesite otključavanje ekrana na uređaju</translation>
+<translation id="7986497153528221272">Da biste videli lozinke, prvo podesite otključavanje ekrana na uređaju</translation>
 </translationbundle>

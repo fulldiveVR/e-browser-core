@@ -17,6 +17,7 @@
 #include "base/test/run_until.h"
 #include "base/test/scoped_feature_list.h"
 #include "brave/app/brave_command_ids.h"
+#include "brave/browser/brave_browser_features.h"
 #include "brave/browser/ui/browser_commands.h"
 #include "brave/browser/ui/sidebar/sidebar_controller.h"
 #include "brave/browser/ui/sidebar/sidebar_model.h"
@@ -25,12 +26,16 @@
 #include "brave/browser/ui/tabs/features.h"
 #include "brave/browser/ui/tabs/split_view_browser_data.h"
 #include "brave/browser/ui/views/frame/brave_browser_view.h"
+#include "brave/browser/ui/views/frame/brave_contents_view_util.h"
+#include "brave/browser/ui/views/frame/split_view/brave_contents_container_view.h"
+#include "brave/browser/ui/views/frame/split_view/brave_multi_contents_view.h"
 #include "brave/browser/ui/views/side_panel/brave_side_panel.h"
 #include "brave/browser/ui/views/side_panel/brave_side_panel_resize_widget.h"
 #include "brave/browser/ui/views/sidebar/sidebar_container_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_control_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_items_contents_view.h"
 #include "brave/browser/ui/views/sidebar/sidebar_items_scroll_view.h"
+#include "brave/browser/ui/views/split_view/split_view.h"
 #include "brave/browser/ui/views/tabs/vertical_tab_utils.h"
 #include "brave/browser/ui/views/toolbar/brave_toolbar_view.h"
 #include "brave/browser/ui/views/toolbar/side_panel_button.h"
@@ -46,10 +51,13 @@
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/search_engines/template_url_service_factory.h"
 #include "chrome/browser/ui/browser_command_controller.h"
+#include "chrome/browser/ui/browser_commands.h"
 #include "chrome/browser/ui/browser_finder.h"
 #include "chrome/browser/ui/browser_window.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
 #include "chrome/browser/ui/tabs/tab_strip_model.h"
+#include "chrome/browser/ui/ui_features.h"
+#include "chrome/browser/ui/views/frame/multi_contents_view.h"
 #include "chrome/browser/ui/views/frame/toolbar_button_provider.h"
 #include "chrome/browser/ui/views/side_panel/side_panel_ui.h"
 #include "chrome/common/chrome_switches.h"
@@ -74,7 +82,7 @@ namespace sidebar {
 
 class SidebarBrowserTest : public InProcessBrowserTest {
  public:
-  SidebarBrowserTest() : scoped_features_(tabs::features::kBraveSplitView) {}
+  SidebarBrowserTest() = default;
   ~SidebarBrowserTest() override = default;
 
   void PreRunTestOnMainThread() override {
@@ -103,12 +111,6 @@ class SidebarBrowserTest : public InProcessBrowserTest {
   views::View* GetVerticalTabsContainer() const {
     auto* view = BrowserView::GetBrowserViewForBrowser(browser());
     return static_cast<BraveBrowserView*>(view)->vertical_tab_strip_host_view_;
-  }
-
-  views::Widget* GetEventDetectWidget() {
-    auto* sidebar_container_view =
-        static_cast<SidebarContainerView*>(controller()->sidebar());
-    return sidebar_container_view->GetEventDetectWidget()->widget_.get();
   }
 
   views::Widget* GetSidePanelResizeWidget() {
@@ -282,7 +284,6 @@ class SidebarBrowserTest : public InProcessBrowserTest {
     return std::distance(items.cbegin(), iter);
   }
 
-  base::test::ScopedFeatureList scoped_features_;
   raw_ptr<views::View, DanglingUntriaged> item_added_bubble_anchor_ = nullptr;
   std::unique_ptr<base::RunLoop> run_loop_;
   base::WeakPtrFactory<SidebarBrowserTest> weak_factory_{this};
@@ -351,7 +352,13 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, BasicTest) {
   // Remove Item at index 0 to change active index.
   sidebar_service->RemoveItemAt(0);
   active_item_index--;
-  EXPECT_EQ(--expected_count, model()->GetAllSidebarItems().size());
+  --expected_count;
+
+  // Wait for sidebar item removal to complete before navigation.
+  WaitUntil(base::BindLambdaForTesting([&]() {
+    return model()->GetAllSidebarItems().size() == expected_count;
+  }));
+  EXPECT_EQ(expected_count, model()->GetAllSidebarItems().size());
   EXPECT_THAT(model()->active_index(), Optional(active_item_index));
 
   // If current active tab is not NTP, we can add current url to sidebar.
@@ -596,49 +603,318 @@ IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, ItemDragIndicatorCalcTest) {
   }
 }
 
-IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, EventDetectWidgetTest) {
-  auto* widget = GetEventDetectWidget();
+class SidebarBrowserWithSplitViewTest
+    : public SidebarBrowserTest,
+      public testing::WithParamInterface<std::tuple<bool, bool, bool>> {
+ public:
+  SidebarBrowserWithSplitViewTest() {
+    // Use all three false as a default state.
+    // Don't touch any feature state.
+    if (!std::get<0>(GetParam()) && !std::get<1>(GetParam()) &&
+        !std::get<2>(GetParam())) {
+      scoped_features_.Init();
+      return;
+    }
+
+    scoped_features_.InitWithFeatureStates(
+        {{::features::kBraveWebViewRoundedCorners, std::get<0>(GetParam())},
+         {tabs::features::kBraveSplitView, std::get<1>(GetParam())},
+         {::features::kSideBySide, std::get<2>(GetParam())}});
+  }
+
+  ~SidebarBrowserWithSplitViewTest() override = default;
+
+  void NewSplitTab() {
+    if (IsSideBySideEnabled()) {
+      chrome::NewSplitTab(browser(),
+                          split_tabs::SplitTabCreatedSource::kTabContextMenu);
+      return;
+    }
+
+    if (IsBraveSplitViewEnabled()) {
+      brave::NewSplitViewForTab(browser());
+      return;
+    }
+
+    NOTREACHED();
+  }
+
+  // Use this when left split view is active.
+  views::View* GetStartSplitContentsView() {
+    if (IsSideBySideEnabled()) {
+      return browser_view()
+          ->GetBraveMultiContentsView()
+          ->GetActiveContentsContainerView();
+    }
+
+    if (IsBraveSplitViewEnabled()) {
+      return browser_view()->split_view()->contents_container_;
+    }
+
+    NOTREACHED();
+  }
+
+  // Use this when left split view is active.
+  views::View* GetEndSplitContentsView() {
+    if (IsSideBySideEnabled()) {
+      return browser_view()
+          ->GetBraveMultiContentsView()
+          ->GetInactiveContentsContainerView();
+    }
+
+    if (IsBraveSplitViewEnabled()) {
+      return browser_view()->split_view()->secondary_contents_container_view();
+    }
+
+    NOTREACHED();
+  }
+
+  BraveBrowserView* browser_view() {
+    return BraveBrowserView::From(
+        BrowserView::GetBrowserViewForBrowser(browser()));
+  }
+
+  bool IsBraveSplitViewEnabled() const {
+    return base::FeatureList::IsEnabled(tabs::features::kBraveSplitView);
+  }
+  bool IsSideBySideEnabled() const {
+    return base::FeatureList::IsEnabled(::features::kSideBySide);
+  }
+
+ private:
+  base::test::ScopedFeatureList scoped_features_;
+};
+
+IN_PROC_BROWSER_TEST_P(SidebarBrowserWithSplitViewTest,
+                       ShowSidebarOnMouseOverTest) {
   auto* service = SidebarServiceFactory::GetForProfile(browser()->profile());
+  service->SetSidebarShowOption(
+      SidebarService::ShowSidebarOption::kShowOnMouseOver);
+
   auto* browser_view = BrowserView::GetBrowserViewForBrowser(browser());
   auto* contents_container =
-      BraveBrowserView::From(browser_view)->GetContentsBoundingView();
+      browser_view->GetContentsContainerForLayoutManager();
   auto* prefs = browser()->profile()->GetPrefs();
   auto* sidebar_container = GetSidebarContainerView();
 
-  // Check widget is located on left side when sidebar on left.
+  // Check sidebar is not shown.
+  ASSERT_TRUE(base::test::RunUntil(
+      [&]() { return !sidebar_container->IsSidebarVisible(); }));
+
+  // Set mouse position inside the mouse hover area to check sidebar UI is shown
+  // with that mouse position when sidebar is on right side.
+  auto contents_container_rect = contents_container->GetBoundsInScreen();
+  gfx::Point mouse_position = contents_container_rect.top_right();
+  mouse_position.Offset(-2, 2);
+  EXPECT_TRUE(
+      sidebar_container->PreHandleMouseEvent(gfx::PointF(mouse_position)));
+  EXPECT_TRUE(sidebar_container->IsSidebarVisible());
+
+  // Check when sidebar on left.
   prefs->SetBoolean(prefs::kSidePanelHorizontalAlignment, false);
-  service->SetSidebarShowOption(
-      SidebarService::ShowSidebarOption::kShowOnMouseOver);
-  ASSERT_TRUE(
-      base::test::RunUntil([&]() { return sidebar_container->width() == 0; }));
-  EXPECT_EQ(contents_container->GetBoundsInScreen().x(),
-            widget->GetWindowBoundsInScreen().x());
 
-  // Check widget is located on right side when sidebar on right.
-  prefs->SetBoolean(prefs::kSidePanelHorizontalAlignment, true);
-  ASSERT_TRUE(
-      base::test::RunUntil([&]() { return sidebar_container->width() == 0; }));
-  EXPECT_EQ(contents_container->GetBoundsInScreen().right(),
-            widget->GetWindowBoundsInScreen().right());
+  // Hide sidebar.
+  HideSidebar(true);
+  ASSERT_TRUE(base::test::RunUntil(
+      [&]() { return !sidebar_container->IsSidebarVisible(); }));
+  contents_container_rect = contents_container->GetBoundsInScreen();
+  mouse_position = contents_container_rect.origin();
 
+  // Set mouse position inside the mouse hover area to check sidebar UI is shown
+  // with that mouse position when sidebar is on left side.
+  mouse_position.Offset(2, 2);
+  EXPECT_TRUE(
+      sidebar_container->PreHandleMouseEvent(gfx::PointF(mouse_position)));
+  EXPECT_TRUE(sidebar_container->IsSidebarVisible());
+
+  // Hide sidebar.
+  HideSidebar(true);
+  ASSERT_TRUE(base::test::RunUntil(
+      [&]() { return !sidebar_container->IsSidebarVisible(); }));
+
+  contents_container_rect = contents_container->GetBoundsInScreen();
+  mouse_position = contents_container_rect.origin();
+
+  // Set mouse position outside of the mouse hover area to check sidebar UI is
+  // not shown with that mouse position when sidebar is on left side.
+  mouse_position.Offset(10, 10);
+  EXPECT_FALSE(
+      sidebar_container->PreHandleMouseEvent(gfx::PointF(mouse_position)));
+
+  contents_container_rect = contents_container->GetBoundsInScreen();
+  contents_container_rect.Outset(
+      BraveContentsViewUtil::GetRoundedCornersWebViewMargin(browser()));
+
+  // Check with the space between window border and contents.
+  // We have that space with rounded corners.
+  // When mouse moves into that space, sidebar should be visible.
+  mouse_position = contents_container_rect.origin();
+  EXPECT_TRUE(
+      sidebar_container->PreHandleMouseEvent(gfx::PointF(mouse_position)));
+  EXPECT_TRUE(sidebar_container->IsSidebarVisible());
+
+  // Hide sidebar.
+  HideSidebar(true);
+  ASSERT_TRUE(base::test::RunUntil(
+      [&]() { return !sidebar_container->IsSidebarVisible(); }));
+
+  // Test with split view.
+  // With sidebar on left, only left split view contents' left side hot
+  // corner should trigger split view.
+  NewSplitTab();
   auto* tab_strip_model = browser()->tab_strip_model();
-  brave::NewSplitViewForTab(browser());
-  auto* split_view_data = browser()->GetFeatures().split_view_browser_data();
-  ASSERT_TRUE(split_view_data);
-  ASSERT_TRUE(split_view_data->IsTabTiled(
-      tab_strip_model->GetTabAtIndex(0)->GetHandle()));
-  ASSERT_TRUE(split_view_data->IsTabTiled(
-      tab_strip_model->GetTabAtIndex(1)->GetHandle()));
+  EXPECT_EQ(2, tab_strip_model->count());
 
-  // Check event detect widget position with split view.
-  EXPECT_EQ(contents_container->GetBoundsInScreen().right(),
-            widget->GetWindowBoundsInScreen().right());
-  prefs->SetBoolean(prefs::kSidePanelHorizontalAlignment, false);
-  ASSERT_TRUE(
-      base::test::RunUntil([&]() { return sidebar_container->width() == 0; }));
-  EXPECT_EQ(contents_container->GetBoundsInScreen().x(),
-            widget->GetWindowBoundsInScreen().x());
+  // Make left split view as active to make secondary container put
+  // at right side(end).
+  tab_strip_model->ActivateTabAt(0);
+  auto* left_split_view = GetStartSplitContentsView();
+  auto* right_split_view = GetEndSplitContentsView();
+
+  // With Brave split view, need to wait as primary/secondary contents view
+  // are positioned in async based on active tab status.
+  if (!IsSideBySideEnabled()) {
+    ASSERT_TRUE(base::test::RunUntil([&]() {
+      return left_split_view->bounds().x() < right_split_view->bounds().x();
+    }));
+  }
+
+  // Check left split view's left hot corner handles.
+  mouse_position = left_split_view->GetBoundsInScreen().origin();
+  mouse_position.Offset(2, 2);
+  EXPECT_TRUE(
+      sidebar_container->PreHandleMouseEvent(gfx::PointF(mouse_position)));
+
+  // Check right split view's left hot corner doesn't handle.
+  mouse_position = right_split_view->GetBoundsInScreen().origin();
+  mouse_position.Offset(2, 2);
+  EXPECT_FALSE(
+      sidebar_container->PreHandleMouseEvent(gfx::PointF(mouse_position)));
 }
+
+INSTANTIATE_TEST_SUITE_P(
+    /* no prefix */,
+    SidebarBrowserWithSplitViewTest,
+    testing::Values(std::make_tuple(/*rounded*/ false,
+                                    /*brave split*/ true,
+                                    /*sidebyside*/ false),
+                    std::make_tuple(false, false, true),
+                    std::make_tuple(true, true, false),
+                    std::make_tuple(true, false, true),
+                    std::make_tuple(false, false, false)));
+
+class SidebarBrowserWithWebPanelTest
+    : public SidebarBrowserTest,
+      public testing::WithParamInterface<bool> {
+ public:
+  SidebarBrowserWithWebPanelTest() {
+    if (IsWebPanelEnabled()) {
+      scoped_features_.InitAndEnableFeature(
+          sidebar::features::kSidebarWebPanel);
+    }
+  }
+  ~SidebarBrowserWithWebPanelTest() override = default;
+
+  BraveMultiContentsView* GetBraveMultiContentsView() {
+    return browser_view()->GetBraveMultiContentsView();
+  }
+
+  BraveBrowserView* browser_view() {
+    return BraveBrowserView::From(
+        BrowserView::GetBrowserViewForBrowser(browser()));
+  }
+
+  bool IsWebPanelEnabled() const {
+    return base::FeatureList::IsEnabled(features::kSidebarWebPanel);
+  }
+
+ private:
+  base::test::ScopedFeatureList scoped_features_;
+};
+
+IN_PROC_BROWSER_TEST_P(SidebarBrowserWithWebPanelTest, WebPanelTest) {
+  auto contents_container_view_for_web_panel =
+      GetBraveMultiContentsView()->contents_container_view_for_web_panel_;
+  if (!IsWebPanelEnabled()) {
+    EXPECT_FALSE(contents_container_view_for_web_panel);
+
+    // Even web panel feature is disabled, sidebar could have web panel
+    // type because it could be added when that feature enabled.
+    // In this sitaution, web panel type should work like web type that
+    // load its url in a tab.
+    // Test it works in that way after adding web panel type.
+    auto* sidebar_service =
+        SidebarServiceFactory::GetForProfile(browser()->profile());
+    GURL item_url("http://foo.bar/");
+    sidebar_service->AddItem(sidebar::SidebarItem::Create(
+        item_url, u"title", SidebarItem::Type::kTypeWeb,
+        SidebarItem::BuiltInItemType::kNone, /*open_in_panel*/ true));
+    EXPECT_NE(tab_model()->GetActiveWebContents()->GetVisibleURL(), item_url);
+    // Above item is added at last.
+    controller()->ActivateItemAt(sidebar_service->items().size() - 1);
+    EXPECT_EQ(tab_model()->GetActiveWebContents()->GetVisibleURL(), item_url);
+    return;
+  }
+
+  EXPECT_TRUE(contents_container_view_for_web_panel);
+  EXPECT_FALSE(contents_container_view_for_web_panel->GetVisible());
+  EXPECT_GT(GetBraveMultiContentsView()->web_panel_width_, 0);
+  EXPECT_EQ(GetBraveMultiContentsView()->GetWebPanelWidth(), 0);
+  EXPECT_EQ(contents_container_view_for_web_panel->width(), 0);
+  EXPECT_FALSE(GetBraveMultiContentsView()->web_panel_on_left_);
+  EXPECT_EQ(
+      GetBraveMultiContentsView()->width(),
+      GetBraveMultiContentsView()->GetActiveContentsContainerView()->width());
+
+  contents_container_view_for_web_panel->SetVisible(true);
+  EXPECT_GT(GetBraveMultiContentsView()->GetWebPanelWidth(), 0);
+  GetBraveMultiContentsView()->InvalidateLayout();
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    return contents_container_view_for_web_panel->width() ==
+           GetBraveMultiContentsView()->web_panel_width_;
+  }));
+  EXPECT_EQ(contents_container_view_for_web_panel->bounds().origin(),
+            GetBraveMultiContentsView()
+                    ->GetActiveContentsContainerView()
+                    ->bounds()
+                    .top_right() -
+                gfx::Vector2d(0, /*contents separator=*/1));
+
+  GetBraveMultiContentsView()->SetWebPanelOnLeft(true);
+  ASSERT_TRUE(base::test::RunUntil([&]() {
+    return contents_container_view_for_web_panel->bounds().top_right() ==
+           GetBraveMultiContentsView()
+                   ->GetActiveContentsContainerView()
+                   ->bounds()
+                   .origin() -
+               gfx::Vector2d(0, /*contents separator*/ 1);
+  }));
+
+  contents_container_view_for_web_panel->SetVisible(false);
+
+  // Add an web panel item and check panel is shown by activating it.
+  ASSERT_TRUE(
+      ui_test_utils::NavigateToURL(browser(), GURL("https://brave.com/")));
+  EXPECT_TRUE(CanAddCurrentActiveTabToSidebar(browser()));
+  controller()->AddItemWithCurrentTab();
+  EXPECT_FALSE(GetBraveMultiContentsView()->IsWebPanelVisible());
+
+  // Activate web panel item and check panel gets visible.
+  const int web_panel_item_index = model()->GetAllSidebarItems().size() - 1;
+  EXPECT_TRUE(
+      model()->GetAllSidebarItems()[web_panel_item_index].is_web_panel_type());
+  controller()->ActivateItemAt(web_panel_item_index);
+  EXPECT_TRUE(GetBraveMultiContentsView()->IsWebPanelVisible());
+
+  // Toggle web panel item and check panel gets hidden.
+  controller()->ActivateItemAt(web_panel_item_index);
+  EXPECT_FALSE(GetBraveMultiContentsView()->IsWebPanelVisible());
+}
+
+INSTANTIATE_TEST_SUITE_P(
+    /* no prefix */,
+    SidebarBrowserWithWebPanelTest,
+    ::testing::Bool());
 
 IN_PROC_BROWSER_TEST_F(SidebarBrowserTest, HideSidebarUITest) {
   auto* service = SidebarServiceFactory::GetForProfile(browser()->profile());

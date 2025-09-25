@@ -3,9 +3,9 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-#include "src/components/feature_engagement/public/feature_constants.cc"
-
 #include "base/feature_override.h"
+
+#include <components/feature_engagement/public/feature_constants.cc>
 
 namespace feature_engagement {
 
@@ -14,6 +14,7 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
     {kIPHGMCCastStartStopFeature, base::FEATURE_DISABLED_BY_DEFAULT},
     {kIPHPasswordsManagementBubbleAfterSaveFeature,
      base::FEATURE_DISABLED_BY_DEFAULT},
+    {kIPHTabSearchToolbarButtonFeature, base::FEATURE_DISABLED_BY_DEFAULT},
 #endif
 }});
 

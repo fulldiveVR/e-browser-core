@@ -15,7 +15,6 @@ import {
   SerializableTimeDelta,
   SortingOrder,
   TransactionInfo,
-  SpotPriceRegistry,
 } from '../constants/types'
 import { SolanaTransactionTypes } from '../common/constants/solana'
 import {
@@ -421,6 +420,7 @@ export const findTransactionToken = <
       === BraveWallet.TransactionType.SolanaDappSignAndSendTransaction
     || tx.txType === BraveWallet.TransactionType.SolanaDappSignTransaction
     || tx.txType === BraveWallet.TransactionType.ETHSend
+    || tx.txType === BraveWallet.TransactionType.Other
     || tx.txDataUnion.filTxData
     || tx.txDataUnion.btcTxData
     || tx.txDataUnion.zecTxData
@@ -1468,7 +1468,7 @@ export const getTransactionFiatValues = ({
   normalizedTransferredValue,
   sellAmountWei,
   sellToken,
-  spotPriceRegistry,
+  spotPrices,
   token,
   transferredValueWei,
   tx,
@@ -1479,7 +1479,7 @@ export const getTransactionFiatValues = ({
   normalizedTransferredValue: string
   sellAmountWei?: string
   sellToken?: BraveWallet.BlockchainToken
-  spotPriceRegistry: SpotPriceRegistry
+  spotPrices: BraveWallet.AssetPrice[]
   token?: BraveWallet.BlockchainToken
   transferredValueWei?: string
   tx: TransactionInfo
@@ -1499,16 +1499,13 @@ export const getTransactionFiatValues = ({
   if (isSolanaDappTransaction(tx)) {
     const transferredAmountFiat = txNetwork
       ? computeFiatAmount({
-          spotPriceRegistry,
+          spotPrices,
           value: transferredValueWei || '',
           token: {
             decimals: txNetwork.decimals,
-            symbol: txNetwork.symbol,
             contractAddress: '',
             chainId: txNetwork.chainId,
             coin: txNetwork.coin,
-            coingeckoId: '',
-            isShielded: false,
           },
         })
       : Amount.empty()
@@ -1527,7 +1524,7 @@ export const getTransactionFiatValues = ({
     const [, amount] = tx.txArgs // (address recipient, uint256 amount) → bool
 
     const price = token
-      ? getTokenPriceAmountFromRegistry(spotPriceRegistry, token)
+      ? getTokenPriceAmountFromRegistry(spotPrices, token)
       : Amount.empty()
 
     const sendAmountFiat = new Amount(amount)
@@ -1572,7 +1569,7 @@ export const getTransactionFiatValues = ({
   // SPL
   if (isSolanaSplTransaction(tx)) {
     const price = token
-      ? getTokenPriceAmountFromRegistry(spotPriceRegistry, token)
+      ? getTokenPriceAmountFromRegistry(spotPrices, token)
       : Amount.empty()
     const sendAmountFiat = new Amount(normalizedTransferredValue).times(price)
 
@@ -1591,7 +1588,7 @@ export const getTransactionFiatValues = ({
     const sellAmountFiat =
       sellToken && sellAmountWei
         ? computeFiatAmount({
-            spotPriceRegistry,
+            spotPrices,
             value: sellAmountWei,
             token: sellToken,
           })
@@ -1609,16 +1606,13 @@ export const getTransactionFiatValues = ({
   // DEFAULT
   const sendAmountFiat = txNetwork
     ? computeFiatAmount({
-        spotPriceRegistry,
+        spotPrices,
         value: getTransactionBaseValue(tx) || '',
         token: {
           decimals: txNetwork.decimals,
-          symbol: txNetwork.symbol,
           contractAddress: '',
           chainId: txNetwork.chainId,
           coin: txNetwork.coin,
-          coingeckoId: '',
-          isShielded: false,
         },
       })
     : Amount.empty()
@@ -1820,7 +1814,7 @@ export const parseTransactionWithPrices = ({
   tx,
   transactionAccount,
   transactionNetwork,
-  spotPriceRegistry,
+  spotPrices,
   gasFee,
   tokensList,
 }: {
@@ -1829,16 +1823,14 @@ export const parseTransactionWithPrices = ({
   transactionAccount: BraveWallet.AccountInfo
   transactionNetwork: BraveWallet.NetworkInfo
   tokensList: BraveWallet.BlockchainToken[]
-  spotPriceRegistry: SpotPriceRegistry
+  spotPrices: BraveWallet.AssetPrice[]
   gasFee: string
 }): ParsedTransaction => {
   const networkSpotPrice = transactionNetwork
-    ? getTokenPriceAmountFromRegistry(spotPriceRegistry, {
-        symbol: transactionNetwork.symbol,
+    ? getTokenPriceAmountFromRegistry(spotPrices, {
         contractAddress: '',
         chainId: transactionNetwork.chainId,
-        coingeckoId: '',
-        isShielded: false,
+        coin: transactionNetwork.coin,
       }).format()
     : ''
 
@@ -1869,7 +1861,7 @@ export const parseTransactionWithPrices = ({
       sellAmountWei: sellAmountWei?.format(),
       networkSpotPrice,
       normalizedTransferredValue,
-      spotPriceRegistry,
+      spotPrices,
       tx,
       sellToken,
       token,

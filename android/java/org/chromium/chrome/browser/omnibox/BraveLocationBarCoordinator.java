@@ -14,7 +14,6 @@ import androidx.annotation.Nullable;
 
 import org.chromium.base.Callback;
 import org.chromium.base.supplier.ObservableSupplier;
-import org.chromium.base.supplier.Supplier;
 import org.chromium.build.annotations.NullUnmarked;
 import org.chromium.chrome.browser.back_press.BackPressManager;
 import org.chromium.chrome.browser.browser_controls.BrowserControlsStateProvider;
@@ -22,7 +21,6 @@ import org.chromium.chrome.browser.browser_controls.BrowserStateBrowserControlsV
 import org.chromium.chrome.browser.lifecycle.ActivityLifecycleDispatcher;
 import org.chromium.chrome.browser.merchant_viewer.MerchantTrustSignalsCoordinator;
 import org.chromium.chrome.browser.omnibox.LocationBarMediator.OmniboxUma;
-import org.chromium.chrome.browser.omnibox.LocationBarMediator.SaveOfflineButtonState;
 import org.chromium.chrome.browser.omnibox.status.StatusCoordinator.PageInfoAction;
 import org.chromium.chrome.browser.omnibox.suggestions.OmniboxSuggestionsDropdownScrollListener;
 import org.chromium.chrome.browser.omnibox.suggestions.basic.BasicSuggestionProcessor.BookmarkState;
@@ -39,6 +37,7 @@ import org.chromium.ui.base.WindowAndroid;
 import org.chromium.ui.modaldialog.ModalDialogManager;
 
 import java.util.function.BooleanSupplier;
+import java.util.function.Supplier;
 
 // NullUnmarked because LocationBarCoordinator is not yet NullMarked
 @NullUnmarked
@@ -75,7 +74,7 @@ public class BraveLocationBarCoordinator extends LocationBarCoordinator {
             BackKeyBehaviorDelegate backKeyBehavior,
             @NonNull PageInfoAction pageInfoAction,
             @NonNull Callback<Tab> bringTabToFrontCallback,
-            @NonNull SaveOfflineButtonState saveOfflineButtonState,
+            Callback<String> bringTabGroupToFrontCallback,
             @NonNull OmniboxUma omniboxUma,
             @NonNull Supplier<TabWindowManager> tabWindowManagerSupplier,
             @NonNull BookmarkState bookmarkState,
@@ -95,8 +94,7 @@ public class BraveLocationBarCoordinator extends LocationBarCoordinator {
             Supplier<Integer> bottomWindowPaddingSupplier,
             @Nullable OnLongClickListener onLongClickListener,
             @Nullable BrowserControlsStateProvider browserControlsStateProvider,
-            boolean isToolbarPositionCustomizationEnabled,
-            @NonNull OfflineDownloader offlineDownloader) {
+            boolean isToolbarPositionCustomizationEnabled) {
         super(
                 locationBarLayout,
                 autocompleteAnchorView,
@@ -113,7 +111,7 @@ public class BraveLocationBarCoordinator extends LocationBarCoordinator {
                 backKeyBehavior,
                 pageInfoAction,
                 bringTabToFrontCallback,
-                saveOfflineButtonState,
+                bringTabGroupToFrontCallback,
                 omniboxUma,
                 tabWindowManagerSupplier,
                 bookmarkState,
@@ -133,8 +131,7 @@ public class BraveLocationBarCoordinator extends LocationBarCoordinator {
                                         : 0),
                 onLongClickListener,
                 browserControlsStateProvider,
-                isToolbarPositionCustomizationEnabled,
-                offlineDownloader);
+                isToolbarPositionCustomizationEnabled);
 
         if (mUrlBar != null) {
             ((UrlBar) mUrlBar).setSelectAllOnFocus(true);

@@ -1,9 +1,9 @@
 diff --git a/chrome/browser/resources/settings/privacy_page/privacy_page.ts b/chrome/browser/resources/settings/privacy_page/privacy_page.ts
-index 30b89ed907d791a2ddf7cf08840440e9bb506cc6..9f29314a73b3c05e08731f67faeab2f17ddf6b30 100644
+index b45a26e61192b28cddb4f9a964f9397e6c332809..81075c6b8c5488e72a02e92693155550e32013dd 100644
 --- a/chrome/browser/resources/settings/privacy_page/privacy_page.ts
 +++ b/chrome/browser/resources/settings/privacy_page/privacy_page.ts
-@@ -25,6 +25,7 @@ import '../site_settings/geolocation_page.js';
- import '../site_settings/notifications_page.js';
+@@ -24,6 +24,7 @@ import '../settings_shared.css.js';
+ import '../site_settings/protected_content_page.js';
  import '../site_settings/settings_category_default_radio_group.js';
  import '../site_settings/smart_card_readers_page.js';
 +import './personalization_options.js';

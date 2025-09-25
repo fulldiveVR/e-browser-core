@@ -7,10 +7,18 @@
 #include "ui/native_theme/native_theme_mac.h"
 
 #define GetSystemButtonPressedColor GetSystemButtonPressedColor_ChromiumImpl
-#include "src/ui/native_theme/native_theme_mac.mm"
+#include <ui/native_theme/native_theme_mac.mm>
 #undef GetSystemButtonPressedColor
 
 namespace ui {
+
+// Shared instance for dark UI. This was part of Chromium, but got removed in
+// Chromium 141. However, we use it for Private/Tor windows.
+NativeTheme* NativeTheme::GetInstanceForDarkUI() {
+  static base::NoDestructor<NativeThemeMac> s_native_theme(
+      /*configure_web_instance=*/false, /*should_only_use_dark_colors=*/true);
+  return s_native_theme.get();
+}
 
 SkColor NativeThemeMac::GetSystemButtonPressedColor(SkColor base_color) const {
   return NativeTheme::GetSystemButtonPressedColor(base_color);

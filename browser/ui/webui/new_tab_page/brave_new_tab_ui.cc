@@ -10,7 +10,6 @@
 #include "base/check.h"
 #include "base/check_is_test.h"
 #include "base/feature_list.h"
-#include "base/strings/stringprintf.h"
 #include "brave/browser/brave_browser_process.h"
 #include "brave/browser/brave_news/brave_news_controller_factory.h"
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
@@ -37,20 +36,23 @@
 #include "chrome/browser/search_engines/template_url_service_factory.h"
 #include "chrome/browser/themes/theme_syncable_service.h"
 #include "chrome/browser/ui/webui/sanitized_image_source.h"
+#include "chrome/browser/ui/webui/theme_source.h"
 #include "chrome/common/pref_names.h"
 #include "components/country_codes/country_codes.h"
 #include "components/grit/brave_components_resources.h"
 #include "components/grit/brave_components_webui_strings.h"
+#include "components/omnibox/browser/searchbox.mojom.h"
 #include "components/prefs/pref_service.h"
 #include "components/strings/grit/components_strings.h"
+#include "content/public/browser/navigation_controller.h"
 #include "content/public/browser/navigation_entry.h"
 #include "content/public/browser/url_data_source.h"
 #include "content/public/browser/web_contents.h"
 #include "content/public/browser/web_ui_data_source.h"
 #include "content/public/common/url_constants.h"
 #include "mojo/public/cpp/bindings/pending_receiver.h"
+#include "third_party/abseil-cpp/absl/strings/str_format.h"
 #include "ui/base/l10n/l10n_util.h"
-#include "ui/webui/resources/cr_components/searchbox/searchbox.mojom.h"
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/browser/brave_vpn/brave_vpn_service_factory.h"
@@ -142,8 +144,7 @@ BraveNewTabUI::BraveNewTabUI(
 
   web_ui->AddMessageHandler(base::WrapUnique(
       BraveNewTabMessageHandler::Create(source, profile, was_restored)));
-  web_ui->AddMessageHandler(
-      base::WrapUnique(new TopSitesMessageHandler(profile)));
+  web_ui->AddMessageHandler(std::make_unique<TopSitesMessageHandler>(profile));
 
   // For custom background images.
   if (auto* ntp_custom_background_images_service =
@@ -155,7 +156,7 @@ BraveNewTabUI::BraveNewTabUI(
 
   source->OverrideContentSecurityPolicy(
       network::mojom::CSPDirectiveName::FrameSrc,
-      base::StringPrintf("frame-src %s;", kNTPNewTabTakeoverRichMediaUrl));
+      absl::StrFormat("frame-src %s;", kNTPNewTabTakeoverRichMediaUrl));
   source->AddString("ntpNewTabTakeoverRichMediaUrl",
                     kNTPNewTabTakeoverRichMediaUrl);
 
@@ -172,6 +173,8 @@ BraveNewTabUI::BraveNewTabUI(
   // Add a SanitizedImageSource to allow fetching images for Brave News.
   content::URLDataSource::Add(profile,
                               std::make_unique<SanitizedImageSource>(profile));
+
+  content::URLDataSource::Add(profile, std::make_unique<ThemeSource>(profile));
 }
 
 BraveNewTabUI::~BraveNewTabUI() = default;
@@ -179,7 +182,7 @@ BraveNewTabUI::~BraveNewTabUI() = default;
 void BraveNewTabUI::BindInterface(
     mojo::PendingReceiver<brave_news::mojom::BraveNewsController> receiver) {
   auto* profile = Profile::FromWebUI(web_ui());
-  DCHECK(profile);
+  CHECK(profile);
   // Wire up JS mojom to service
   auto* brave_news_controller =
       brave_news::BraveNewsControllerFactory::GetForBrowserContext(profile);
@@ -201,7 +204,7 @@ void BraveNewTabUI::BindInterface(
 void BraveNewTabUI::BindInterface(
     mojo::PendingReceiver<searchbox::mojom::PageHandler> pending_page_handler) {
   auto* profile = Profile::FromWebUI(web_ui());
-  DCHECK(profile);
+  CHECK(profile);
 
   realbox_handler_ = std::make_unique<RealboxHandler>(
       std::move(pending_page_handler), profile, web_ui()->GetWebContents(),

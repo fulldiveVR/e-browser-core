@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import org.chromium.base.jank_tracker.JankTracker;
 import org.chromium.base.supplier.ObservableSupplier;
 import org.chromium.base.supplier.OneshotSupplier;
-import org.chromium.base.supplier.Supplier;
 import org.chromium.build.annotations.NullUnmarked;
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.browser_controls.BrowserControlsStateProvider;
@@ -23,6 +22,7 @@ import org.chromium.chrome.browser.feed.FeedSwipeRefreshLayout;
 import org.chromium.chrome.browser.lifecycle.ActivityLifecycleDispatcher;
 import org.chromium.chrome.browser.magic_stack.ModuleRegistry;
 import org.chromium.chrome.browser.metrics.StartupMetricsTracker;
+import org.chromium.chrome.browser.ntp_customization.edge_to_edge.TopInsetCoordinator;
 import org.chromium.chrome.browser.privacy.settings.PrivacyPreferencesManagerImpl;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.search_engines.TemplateUrlServiceFactory;
@@ -39,6 +39,8 @@ import org.chromium.chrome.browser.ui.native_page.NativePageHost;
 import org.chromium.components.browser_ui.bottomsheet.BottomSheetController;
 import org.chromium.components.search_engines.TemplateUrlService;
 import org.chromium.ui.base.WindowAndroid;
+
+import java.util.function.Supplier;
 
 @NullUnmarked // Waiting for upstream parent class to be NullMarked
 public class BraveNewTabPage extends NewTabPage {
@@ -78,6 +80,7 @@ public class BraveNewTabPage extends NewTabPage {
             ObservableSupplier<Integer> tabStripHeightSupplier,
             OneshotSupplier<ModuleRegistry> moduleRegistrySupplier,
             ObservableSupplier<EdgeToEdgeController> edgeToEdgeControllerSupplier,
+            ObservableSupplier<TopInsetCoordinator> topInsetCoordinatorSupplier,
             StartupMetricsTracker startupMetricsTracker) {
         super(
                 activity,
@@ -102,6 +105,7 @@ public class BraveNewTabPage extends NewTabPage {
                 tabStripHeightSupplier,
                 moduleRegistrySupplier,
                 edgeToEdgeControllerSupplier,
+                topInsetCoordinatorSupplier,
                 startupMetricsTracker);
 
         mJankTracker = jankTracker;
@@ -177,8 +181,9 @@ public class BraveNewTabPage extends NewTabPage {
         mFeedSurfaceProvider = feedSurfaceCoordinator;
     }
 
-    public void updateSearchProviderHasLogo() {
+    public boolean updateSearchProvider() {
         // Search provider logo is not used in Brave's NTP.
         mSearchProviderHasLogo = false;
+        return false;
     }
 }

@@ -5,32 +5,22 @@
 
 package org.chromium.chrome.browser.omnibox.suggestions.editurl;
 
-import android.content.Context;
-
 import androidx.annotation.NonNull;
 
-import org.chromium.base.supplier.Supplier;
-import org.chromium.chrome.browser.omnibox.styles.OmniboxImageSupplier;
-import org.chromium.chrome.browser.omnibox.suggestions.SuggestionHost;
-import org.chromium.chrome.browser.share.ShareDelegate;
+import org.chromium.chrome.browser.omnibox.suggestions.AutocompleteUIContext;
 import org.chromium.chrome.browser.tab.Tab;
 import org.chromium.components.omnibox.AutocompleteMatch;
 import org.chromium.components.omnibox.OmniboxSuggestionType;
 
-import java.util.Optional;
+import java.util.function.Supplier;
 
 public class BraveEditUrlSuggestionProcessor extends EditUrlSuggestionProcessor {
     private final @NonNull Supplier<Tab> mTabSupplier;
 
-    public BraveEditUrlSuggestionProcessor(
-            Context context,
-            SuggestionHost suggestionHost,
-            Optional<OmniboxImageSupplier> imageSupplier,
-            Supplier<Tab> tabSupplier,
-            Supplier<ShareDelegate> shareDelegateSupplier) {
-        super(context, suggestionHost, imageSupplier, tabSupplier, shareDelegateSupplier);
+    public BraveEditUrlSuggestionProcessor(AutocompleteUIContext uiContext) {
+        super(uiContext);
 
-        mTabSupplier = tabSupplier;
+        mTabSupplier = uiContext.activityTabSupplier;
     }
 
     @Override
@@ -83,7 +73,7 @@ public class BraveEditUrlSuggestionProcessor extends EditUrlSuggestionProcessor 
                     suggestion.getImageUrl(),
                     suggestion.getImageDominantColor(),
                     suggestion.isDeletable(),
-                    suggestion.getPostContentType(),
+                    suggestion.getExtraHeaders().get("Content-Type"),
                     suggestion.getPostData(),
                     suggestion.getGroupId(),
                     suggestion.getClipboardImageData(),
@@ -92,7 +82,8 @@ public class BraveEditUrlSuggestionProcessor extends EditUrlSuggestionProcessor 
                     suggestion.allowedToBeDefaultMatch(),
                     suggestion.getInlineAutocompletion(),
                     suggestion.getAdditionalText(),
-                    suggestion.getTabGroupUuid());
+                    suggestion.getTabGroupUuid(),
+                    /* serializedSuggestTemplate */ null);
         }
         return suggestion;
     }

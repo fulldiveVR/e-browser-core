@@ -60,8 +60,6 @@ static constexpr auto kSimpleQueryStringTrackers =
             "fb_comment_id",
             // https://github.com/brave/brave-browser/issues/4239
             "fbclid",
-            // https://github.com/brave/brave-browser/issues/18758
-            "gbraid",
             // https://github.com/brave/brave-browser/issues/4239
             "gclid",
             // https://github.com/brave/brave-browser/issues/25691
@@ -102,10 +100,16 @@ static constexpr auto kSimpleQueryStringTrackers =
             "sc_customer",
             "sc_eh",
             "sc_uid",
+            // https://github.com/brave/brave-browser/issues/48228
+            "sms_click",
+            "sms_source",
+            "sms_uph",
             // https://github.com/brave/brave-browser/issues/40912
             "srsltid",
             // https://github.com/brave/brave-browser/issues/24988
             "ss_email_id",
+            // https://github.com/brave/brave-browser/issues/48226
+            "ttclid",
             // https://github.com/brave/brave-browser/issues/18020
             "twclid",
             // https://github.com/brave/brave-browser/issues/33172
@@ -142,7 +146,11 @@ static constexpr auto kConditionalQueryStringTrackers =
 // parameter is scoped to example.com below, it will be removed from
 // https://example.com/index.php and from http://www.example.com/ for
 // example.
-static const auto kScopedQueryStringTrackers =
+// TODO(https://github.com/brave/brave-browser/issues/48713): This is a case of
+// `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has been
+// added in the meantime to fix the build error. Remove this attribute and
+// provide a proper fix.
+[[clang::no_destroy]] static const auto kScopedQueryStringTrackers =
     std::map<std::string_view, std::vector<std::string_view>>({
         // https://github.com/brave/brave-browser/issues/35094
         {"igsh", {"instagram.com"}},

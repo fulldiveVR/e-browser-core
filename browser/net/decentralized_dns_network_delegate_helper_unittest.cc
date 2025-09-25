@@ -10,8 +10,10 @@
 #include "base/functional/callback_helpers.h"
 #include "base/run_loop.h"
 #include "base/test/scoped_feature_list.h"
+#include "base/values.h"
 #include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
 #include "brave/browser/net/url_context.h"
+#include "brave/components/brave_wallet/browser/brave_wallet_prefs.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_service.h"
 #include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
 #include "brave/components/brave_wallet/browser/json_rpc_service.h"
@@ -20,13 +22,16 @@
 #include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/brave_wallet/common/eth_abi_utils.h"
 #include "brave/components/brave_wallet/common/hex_utils.h"
+#include "brave/components/brave_wallet/common/pref_names.h"
 #include "brave/components/decentralized_dns/core/constants.h"
 #include "brave/components/decentralized_dns/core/pref_names.h"
 #include "brave/components/decentralized_dns/core/utils.h"
-#include "chrome/test/base/scoped_testing_local_state.h"
+#include "build/build_config.h"
 #include "chrome/test/base/testing_browser_process.h"
 #include "chrome/test/base/testing_profile.h"
 #include "components/prefs/testing_pref_service.h"
+#include "components/sync_preferences/testing_pref_service_syncable.h"
+#include "components/user_prefs/user_prefs.h"
 #include "content/public/test/browser_task_environment.h"
 #include "net/base/net_errors.h"
 #include "services/data_decoder/public/cpp/test_support/in_process_data_decoder.h"
@@ -41,9 +46,7 @@ namespace decentralized_dns {
 
 class DecentralizedDnsNetworkDelegateHelperTest : public testing::Test {
  public:
-  DecentralizedDnsNetworkDelegateHelperTest()
-      : local_state_(std::make_unique<ScopedTestingLocalState>(
-            TestingBrowserProcess::GetGlobal())) {}
+  DecentralizedDnsNetworkDelegateHelperTest() = default;
 
   ~DecentralizedDnsNetworkDelegateHelperTest() override = default;
 
@@ -64,12 +67,13 @@ class DecentralizedDnsNetworkDelegateHelperTest : public testing::Test {
   void TearDown() override {
     json_rpc_service_ = nullptr;
     profile_.reset();
-    local_state_.reset();
   }
 
   content::BrowserContext* browser_context() { return profile_.get(); }
   TestingProfile* profile() { return profile_.get(); }
-  PrefService* local_state() { return local_state_->Get(); }
+  PrefService* local_state() {
+    return TestingBrowserProcess::GetGlobal()->GetTestingLocalState();
+  }
   network::TestURLLoaderFactory& test_url_loader_factory() {
     return test_url_loader_factory_;
   }
@@ -78,7 +82,6 @@ class DecentralizedDnsNetworkDelegateHelperTest : public testing::Test {
 
  private:
   std::unique_ptr<TestingProfile> profile_;
-  std::unique_ptr<ScopedTestingLocalState> local_state_;
   network::TestURLLoaderFactory test_url_loader_factory_;
   scoped_refptr<network::SharedURLLoaderFactory> shared_url_loader_factory_;
   raw_ptr<brave_wallet::JsonRpcService> json_rpc_service_ = nullptr;
@@ -440,6 +443,69 @@ TEST_F(DecentralizedDnsNetworkDelegateHelperTest, SnsRedirectWork) {
   EXPECT_EQ(brave_request_info->new_url_spec, GURL("https://brave.com"));
 
   EXPECT_FALSE(brave_request_info->pending_error.has_value());
+}
+
+// Test that decentralized DNS is disabled when BraveWalletDisabled policy is
+// true
+TEST_F(DecentralizedDnsNetworkDelegateHelperTest,
+       DisabledWhenBraveWalletDisabledByPolicy) {
+  // Set up the preferences to enable decentralized DNS methods
+  local_state()->SetInteger(kUnstoppableDomainsResolveMethod,
+                            static_cast<int>(ResolveMethodTypes::ENABLED));
+  local_state()->SetInteger(kENSResolveMethod,
+                            static_cast<int>(ResolveMethodTypes::ENABLED));
+  local_state()->SetInteger(kSnsResolveMethod,
+                            static_cast<int>(ResolveMethodTypes::ENABLED));
+
+  // Disable Brave Wallet by policy
+  auto* prefs = profile()->GetTestingPrefService();
+  prefs->SetManagedPref(brave_wallet::prefs::kDisabledByPolicy,
+                        base::Value(true));
+
+  // Create test request for an unstoppable domain
+  GURL url("http://test.crypto");
+  auto brave_request_info = std::make_shared<brave::BraveRequestInfo>(url);
+  brave_request_info->browser_context = browser_context();
+
+  // Call the decentralized DNS helper
+  int result = OnBeforeURLRequest_DecentralizedDnsPreRedirectWork(
+      base::DoNothing(), brave_request_info);
+
+#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+  // On desktop platforms, policy is enforced, so wallet is disabled
+  // Should return OK immediately (not pending) because wallet is disabled
+  EXPECT_EQ(net::OK, result);
+  EXPECT_TRUE(brave_request_info->new_url_spec.empty());
+#else
+  // On mobile platforms, policy is not enforced, so wallet is always enabled
+  // Should return ERR_IO_PENDING because it will try to resolve the domain
+  EXPECT_EQ(net::ERR_IO_PENDING, result);
+#endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+}
+
+// Test that decentralized DNS works when BraveWalletDisabled policy is false
+TEST_F(DecentralizedDnsNetworkDelegateHelperTest,
+       EnabledWhenBraveWalletEnabledByPolicy) {
+  // Set up the preferences to enable decentralized DNS methods
+  local_state()->SetInteger(kUnstoppableDomainsResolveMethod,
+                            static_cast<int>(ResolveMethodTypes::ENABLED));
+
+  // Enable Brave Wallet by policy (this is the default)
+  auto* prefs = profile()->GetTestingPrefService();
+  prefs->SetManagedPref(brave_wallet::prefs::kDisabledByPolicy,
+                        base::Value(false));
+
+  // Create test request for an unstoppable domain
+  GURL url("http://test.crypto");
+  auto brave_request_info = std::make_shared<brave::BraveRequestInfo>(url);
+  brave_request_info->browser_context = browser_context();
+
+  // Call the decentralized DNS helper
+  int result = OnBeforeURLRequest_DecentralizedDnsPreRedirectWork(
+      base::DoNothing(), brave_request_info);
+
+  // Should return ERR_IO_PENDING because it will try to resolve the domain
+  EXPECT_EQ(net::ERR_IO_PENDING, result);
 }
 
 }  // namespace decentralized_dns

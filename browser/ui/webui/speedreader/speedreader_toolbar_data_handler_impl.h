@@ -7,7 +7,7 @@
 #define BRAVE_BROWSER_UI_WEBUI_SPEEDREADER_SPEEDREADER_TOOLBAR_DATA_HANDLER_IMPL_H_
 
 #include "base/scoped_observation.h"
-#include "brave/browser/speedreader/speedreader_tab_helper.h"
+#include "brave/browser/ui/speedreader/speedreader_tab_helper.h"
 #include "brave/components/speedreader/common/speedreader_toolbar.mojom.h"
 #include "brave/components/speedreader/speedreader_service.h"
 #include "brave/components/speedreader/tts_player.h"
@@ -95,7 +95,7 @@ class SpeedreaderToolbarDataHandlerImpl
       const TabStripSelectionChange& selection) override;
 
   // BrowserTabStripTrackerDelegate:
-  bool ShouldTrackBrowser(Browser* browser) override;
+  bool ShouldTrackBrowser(BrowserWindowInterface* browser) override;
 
   // ThemeServiceObserver:.
   void OnThemeChanged() override;

@@ -276,7 +276,7 @@ extension BrowserViewController: TabPolicyDecider {
       let isBlockFingerprintingEnabled =
         tab.braveShieldsHelper?.isShieldExpected(
           for: mainDocumentURL,
-          shield: .noScript,
+          shield: .fpProtection,
           considerAllShieldsOption: true
         ) ?? true
 
@@ -478,7 +478,11 @@ extension BrowserViewController: TabPolicyDecider {
 
     if requestURL.scheme?.contains("brave") == true || requestURL.scheme?.contains("chrome") == true
     {
-      return .allow
+      // brave://account should not be treated as a regular WebUI page.
+      // It is part of the Settings UI and is intended to be opened only
+      // from within Settings – much like you cannot open a new tab
+      // and directly navigate to a settings screen (e.g. for Page Zoom).
+      return requestURL.host == "account" ? .cancel : .allow
     }
 
     // Standard schemes are handled in previous if-case.
@@ -579,10 +583,10 @@ extension BrowserViewController {
     // (i.e. appropriate settings are enabled for that redirect rule)
     if let debounceService = DebounceServiceFactory.get(privateMode: tab.isPrivate),
       debounceService.isEnabled,
-      let currentURL = tab.visibleURL,
-      currentURL.baseDomain != requestURL.baseDomain
+      let lastCommittedURL = tab.lastCommittedURL,
+      lastCommittedURL.baseDomain != requestURL.baseDomain
     {
-      if let redirectURL = debounceService.debounce(requestURL) {
+      if let redirectURL = debounceService.debounce(url: requestURL) {
         // For now we only allow the `Referer`. The browser will add other headers during navigation.
         var modifiedRequest = URLRequest(url: redirectURL)
 
@@ -773,12 +777,14 @@ extension BrowserViewController {
 
     var alertTitle = Strings.openExternalAppURLGenericTitle
 
-    if case let origin = URLOrigin(url: url), !origin.isOpaque {
-      let displayHost =
-        "\(origin.scheme)://\(origin.host):\(origin.port)"
-      alertTitle = String(format: Strings.openExternalAppURLTitle, displayHost)
-    } else if let displayHost = tab.visibleURL?.withoutWWW.host {
-      alertTitle = String(format: Strings.openExternalAppURLTitle, displayHost)
+    if requestInfo.isMainFrame {
+      if case let origin = URLOrigin(url: url), !origin.isOpaque {
+        let displayHost =
+          "\(origin.scheme)://\(origin.host):\(origin.port)"
+        alertTitle = String(format: Strings.openExternalAppURLTitle, displayHost)
+      } else if let displayHost = tab.visibleURL?.withoutWWW.host {
+        alertTitle = String(format: Strings.openExternalAppURLTitle, displayHost)
+      }
     }
 
     // Handling condition when Tab is empty when handling an external URL we should remove the tab once the user decides

@@ -1,5 +1,9 @@
 <style include="cr-shared-style settings-shared md-select"></style>
 
+<settings-section
+  id="content"
+  page-title="$i18n{contentSettingsContentSection}">
+
 <div class="cr-row">
     <div class="flex cr-padded-text" aria-hidden="true">
         $i18n{fontSize}
@@ -39,21 +43,18 @@
         label="$i18n{tabsToLinks}">
     </settings-toggle-button>
 </if>
+<settings-toggle-button class="hr" id="splitViewDragAndDrop"
+    hidden="[[!showSplitViewDragAndDropSetting_]]"
+    pref="{{prefs.browser.split_view_drag_and_drop_enabled}}"
+    label="$i18n{allowSplitViewDragAndDrop}">
+</settings-toggle-button>
 <if expr="enable_brave_wayback_machine">
   <settings-toggle-button
     class="cr-row"
     pref="{{prefs.brave.wayback_machine_enabled}}"
     label="$i18n{braveWaybackMachineLabel}"
-    hidden="[[isWaybackMachineDisabledByPolicy_]]">
+    hidden="[[isWaybackMachineManaged_(prefs.brave.wayback_machine_enabled)]]">
   </settings-toggle-button>
 </if>
 
-<settings-animated-pages id="pages" section="content">
-    <template is="dom-if" route-path="/fonts">
-        <settings-subpage associated-control="[[$$('#customize-fonts-subpage-trigger')]]"
-            page-title="$i18n{customizeFonts}">
-            <settings-appearance-fonts-page prefs="{{prefs}}">
-            </settings-appearance-fonts-page>
-        </settings-subpage>
-    </template>
-</settings-animated-pages>
+</settings-section>

@@ -10,13 +10,35 @@
   virtual SelectRelativeTab(__VA_ARGS__); \
   friend class BraveTabStripModel
 
+// Added another closing selected tabs method to handle close activ tab
+// in split tab. We only want to close active tab from split tab.
+#define CloseSelectedTabs(...)    \
+  CloseSelectedTabs(__VA_ARGS__); \
+  virtual void CloseSelectedTabsWithSplitView()
+
 #define DraggingTabsSession DraggingTabsSessionChromium
 #define IsReadLaterSupportedForAny virtual IsReadLaterSupportedForAny
+#define UpdateWebContentsStateAt virtual UpdateWebContentsStateAt
 
-#include "src/chrome/browser/ui/tabs/tab_strip_model.h"  // IWYU pragma: export
+// Moved to public to call from split_tabs::BraveGetIndexOfLastActiveTab().
+#define CanActivateTabAt            \
+  CanActivateTabAt_Unused() {       \
+    return false;                   \
+  }                                 \
+                                    \
+ public:                            \
+  bool CanActivateTabAt(int index); \
+                                    \
+ private:                           \
+  bool Unused
 
+#include <chrome/browser/ui/tabs/tab_strip_model.h>  // IWYU pragma: export
+
+#undef CanActivateTabAt
+#undef UpdateWebContentsStateAt
 #undef IsReadLaterSupportedForAny
 #undef DraggingTabsSession
+#undef CloseSelectedTabs
 #undef SelectRelativeTab
 
 #endif  // BRAVE_CHROMIUM_SRC_CHROME_BROWSER_UI_TABS_TAB_STRIP_MODEL_H_

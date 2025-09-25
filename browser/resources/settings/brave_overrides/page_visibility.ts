@@ -16,19 +16,21 @@ declare module '../page_visibility' {
   export interface PageVisibility {
     braveSync?: boolean
     braveWallet?: boolean
-    braveWeb3?: boolean
     // <if expr="enable_containers">
     containers?: boolean
     // </if>
     content?: boolean
     getStarted?: boolean
     leoAssistant?: boolean
+    leoPersonalization?: boolean
+    leoModels?: boolean
     newTab?: boolean
     playlist?: boolean
     shields?: boolean
     socialBlocking?: boolean
     speedreader?: boolean
     surveyPanelist?: boolean,
+    braveTor?: boolean
   }
 }
 
@@ -47,19 +49,21 @@ function getPageVisibility () {
       ...chromiumPageVisibility,
       braveSync: false,
       braveWallet: false,
-      braveWeb3: false,
       // <if expr="enable_containers">
       containers: false,
       // </if>
       content: false,
       getStarted: false,
       leoAssistant: false,
+      leoPersonalization: false,
+      leoModels: false,
       newTab: false,
       playlist: false,
       shields: true,
       socialBlocking: true,
       speedreader: false,
       surveyPanelist: false,
+      braveTor: false,
     }
   }
   // We need to specify values for every attribute in pageVisibility instead of
@@ -83,14 +87,17 @@ function getPageVisibility () {
     braveSync: !loadTimeData.getBoolean('isSyncDisabled'),
     braveWallet: loadTimeData.getBoolean('isBraveWalletAllowed'),
     leoAssistant: loadTimeData.getBoolean('isLeoAssistantAllowed'),
+    leoPersonalization: loadTimeData.getBoolean('isLeoAssistantAllowed'),
+    leoModels: loadTimeData.getBoolean('isLeoAssistantAllowed'),
     surveyPanelist: loadTimeData.getBoolean('isSurveyPanelistAllowed'),
     // <if expr="enable_containers">
     containers: loadTimeData.getBoolean('isContainersEnabled'),
     // </if>
     content: alwaysTrueProxy,
     playlist: loadTimeData.getBoolean('isPlaylistAllowed'),
-    speedreader: loadTimeData.getBoolean('isSpeedreaderFeatureEnabled') &&
-                 !loadTimeData.getBoolean('isSpeedreaderDisabledByPolicy'),
+    speedreader: loadTimeData.getBoolean('isSpeedreaderAllowed'),
+    braveTor: !loadTimeData.getBoolean('braveTorDisabledByPolicy') ||
+              loadTimeData.getBoolean('shouldExposeElementsForTesting'),
   }
   // Proxy so we can respond to any other property
   return new Proxy(staticProps, {

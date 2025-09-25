@@ -7,25 +7,21 @@
 
 #include <utility>
 
-#include "base/no_destructor.h"
+#include "base/base64.h"
 #include "brave/components/brave_wallet/renderer/js_cardano_wallet_api.h"
+#include "brave/components/brave_wallet/renderer/resource_helper.h"
 #include "brave/components/brave_wallet/renderer/v8_helper.h"
-#include "content/public/common/isolated_world_ids.h"
-#include "content/public/renderer/v8_value_converter.h"
+#include "components/grit/brave_components_resources.h"
 #include "gin/converter.h"
-#include "gin/handle.h"
 #include "gin/object_template_builder.h"
 #include "third_party/blink/public/platform/browser_interface_broker_proxy.h"
 #include "third_party/blink/public/platform/scheduler/web_agent_group_scheduler.h"
-#include "third_party/blink/public/platform/web_string.h"
-#include "third_party/blink/public/web/blink.h"
 #include "third_party/blink/public/web/web_console_message.h"
 #include "third_party/blink/public/web/web_local_frame.h"
-#include "third_party/blink/public/web/web_script_source.h"
-#include "ui/base/resource/resource_bundle.h"
+#include "v8/include/cppgc/allocation.h"
+#include "v8/include/v8-cppgc.h"
 #include "v8/include/v8-microtask-queue.h"
 #include "v8/include/v8-proxy.h"
-#include "v8/include/v8-typed-array.h"
 
 namespace brave_wallet {
 
@@ -35,7 +31,9 @@ constexpr char kBrave[] = "brave";
 }  // namespace
 
 // content::RenderFrameObserver
-void JSCardanoProvider::OnDestruct() {}
+void JSCardanoProvider::OnDestruct() {
+  self_.Clear();
+}
 
 std::vector<std::string> JSCardanoProvider::GetSupportedExtensions() {
   return std::vector<std::string>();
@@ -46,7 +44,12 @@ std::string JSCardanoProvider::GetName() {
 }
 
 std::string JSCardanoProvider::GetIcon() {
-  return "";
+  return "data:image/png;base64," +
+         base::Base64Encode(LoadDataResource(IDR_BRAVE_WALLET_PROVIDER_ICON));
+}
+
+std::string JSCardanoProvider::GetApiVersion() {
+  return "1";
 }
 
 // gin::Wrappable<JSCardanoProvider>
@@ -58,21 +61,16 @@ gin::ObjectTemplateBuilder JSCardanoProvider::GetObjectTemplateBuilder(
       .SetProperty("supportedExtensions",
                    &JSCardanoProvider::GetSupportedExtensions)
       .SetProperty("name", &JSCardanoProvider::GetName)
+      .SetProperty("apiVersion", &JSCardanoProvider::GetApiVersion)
       .SetProperty("icon", &JSCardanoProvider::GetIcon);
 }
-
-const char* JSCardanoProvider::GetTypeName() {
-  return "JSCardanoProvider";
-}
-
-// JSCardanoProvider
-gin::WrapperInfo JSCardanoProvider::kWrapperInfo = {gin::kEmbedderNativeGin};
 
 JSCardanoProvider::~JSCardanoProvider() = default;
 
 JSCardanoProvider::JSCardanoProvider(content::RenderFrame* render_frame)
     : RenderFrameObserver(render_frame) {
   EnsureConnected();
+  self_ = this;
 }
 
 bool JSCardanoProvider::EnsureConnected() {
@@ -104,14 +102,20 @@ v8::Local<v8::Promise> JSCardanoProvider::Enable(v8::Isolate* isolate) {
   auto promise_resolver(
       v8::Global<v8::Promise::Resolver>(isolate, resolver_local));
 
-  cardano_provider_->Enable(base::BindOnce(
-      &JSCardanoProvider::OnEnableResponse, weak_ptr_factory_.GetWeakPtr(),
-      std::move(global_context), std::move(promise_resolver), isolate));
+  mojo::Remote<mojom::CardanoApi> remote;
+  auto pending_receiver = remote.BindNewPipeAndPassReceiver();
+  cardano_provider_->Enable(
+      std::move(pending_receiver),
+      base::BindOnce(&JSCardanoProvider::OnEnableResponse,
+                     weak_ptr_factory_.GetWeakPtr(), std::move(remote),
+                     std::move(global_context), std::move(promise_resolver),
+                     isolate));
 
   return resolver_local->GetPromise();
 }
 
 void JSCardanoProvider::OnEnableResponse(
+    mojo::Remote<mojom::CardanoApi> remote,
     v8::Global<v8::Context> global_context,
     v8::Global<v8::Promise::Resolver> promise_resolver,
     v8::Isolate* isolate,
@@ -127,20 +131,17 @@ void JSCardanoProvider::OnEnableResponse(
 
   v8::Local<v8::Promise::Resolver> resolver = promise_resolver.Get(isolate);
   if (!error) {
-    gin::Handle<JSCardanoWalletApi> wallet_api = gin::CreateHandle(
-        isolate, new JSCardanoWalletApi(base::PassKey<JSCardanoProvider>(),
-                                        global_context.Get(isolate), isolate,
-                                        render_frame()));
-    if (wallet_api.IsEmpty()) {
-      return;
-    }
-    v8::Local<v8::Value> wallet_api_value = wallet_api.ToV8();
-    v8::Local<v8::Object> wallet_api_object;
-    if (!wallet_api_value->ToObject(context).ToLocal(&wallet_api_object)) {
-      return;
-    }
+    JSCardanoWalletApi* wallet_api =
+        cppgc::MakeGarbageCollected<JSCardanoWalletApi>(
+            isolate->GetCppHeap()->GetAllocationHandle(), std::move(remote),
+            base::PassKey<JSCardanoProvider>(), global_context.Get(isolate),
+            isolate, render_frame());
 
-    // Non-function properties are readonly guaranteed by gin::Wrappable
+    v8::Local<v8::Object> wallet_api_object =
+        wallet_api->GetWrapper(isolate).ToLocalChecked();
+
+    // Non-function properties are readonly guaranteed by
+    // gin::Wrappable
     for (const std::string& method :
          {"getNetworkId", "getUsedAddresses", "getUnusedAddresses",
           "getChangeAddress", "getRewardAddresses", "getUtxos", "getBalance",
@@ -198,6 +199,10 @@ void JSCardanoProvider::OnIsEnableResponse(
       resolver->Resolve(context, v8::Boolean::New(isolate, is_enabled));
 }
 
+const gin::WrapperInfo* JSCardanoProvider::wrapper_info() const {
+  return &kWrapperInfo;
+}
+
 // static
 void JSCardanoProvider::Install(content::RenderFrame* render_frame) {
   // TODO(https://github.com/brave/brave-browser/issues/46369): Add proxy object
@@ -230,18 +235,12 @@ void JSCardanoProvider::Install(content::RenderFrame* render_frame) {
                            gin::StringToV8(isolate, kCardano), true);
   }
 
-  gin::Handle<JSCardanoProvider> cardano_brave_provider =
-      gin::CreateHandle(isolate, new JSCardanoProvider(render_frame));
-  if (cardano_brave_provider.IsEmpty()) {
-    return;
-  }
-  v8::Local<v8::Value> cardano_brave_provider_value =
-      cardano_brave_provider.ToV8();
-  v8::Local<v8::Object> cardano_brave_provider_object;
-  if (!cardano_brave_provider_value->ToObject(context).ToLocal(
-          &cardano_brave_provider_object)) {
-    return;
-  }
+  JSCardanoProvider* cardano_brave_provider =
+      cppgc::MakeGarbageCollected<JSCardanoProvider>(
+          isolate->GetCppHeap()->GetAllocationHandle(), render_frame);
+
+  v8::Local<v8::Object> cardano_brave_provider_object =
+      cardano_brave_provider->GetWrapper(isolate).ToLocalChecked();
 
   v8::Local<v8::Object> cardano_root_object;
   if (!cardano_root->ToObject(context).ToLocal(&cardano_root_object)) {

@@ -6,21 +6,13 @@
 #ifndef BRAVE_CHROMIUM_SRC_CHROME_BROWSER_UI_VIEWS_FRAME_MULTI_CONTENTS_VIEW_H_
 #define BRAVE_CHROMIUM_SRC_CHROME_BROWSER_UI_VIEWS_FRAME_MULTI_CONTENTS_VIEW_H_
 
-namespace views {
-class ResizeArea;
-}  // namespace views
+#define UpdateSplitRatio(...)       \
+  UpdateSplitRatio(__VA_ARGS__);    \
+  virtual void ResetResizeArea() {} \
+  friend class BraveMultiContentsView
 
-#define UpdateContentsBorderAndOverlay \
-  UnUsed() {}                          \
-  friend class BraveMultiContentsView; \
-  virtual void UpdateContentsBorderAndOverlay
+#include <chrome/browser/ui/views/frame/multi_contents_view.h>  // IWYU pragma: export
 
-// Changed to base class as we want to point to our views::ResizeArea subclass.
-#define MultiContentsResizeArea views::ResizeArea
-
-#include "src/chrome/browser/ui/views/frame/multi_contents_view.h"  // IWYU pragma: export
-
-#undef MultiContentsResizeArea
-#undef UpdateContentsBorderAndOverlay
+#undef UpdateSplitRatio
 
 #endif  // BRAVE_CHROMIUM_SRC_CHROME_BROWSER_UI_VIEWS_FRAME_MULTI_CONTENTS_VIEW_H_

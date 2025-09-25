@@ -25,6 +25,8 @@ const test = require('../lib/test')
 const gnCheck = require('../lib/gnCheck')
 const genGradle = require('../lib/genGradle')
 const perfTests = require('../lib/perfTests')
+const registerListAffectedTestsCommand = require('./listAffectedTests')
+const registerGenerateCoverageReportCommand = require('./generateCoverageReport')
 
 const collect = (value, accumulator) => {
   accumulator.push(value)
@@ -110,6 +112,8 @@ program
     }
 
     config.update(options)
+    // ignore use_no_gn_gen when updating the symlink
+    delete config.use_no_gn_gen
     const currentLink = options.symlink_dir
     if (
       !path.isAbsolute(currentLink)
@@ -154,6 +158,7 @@ program
     [],
   )
   .option('--ignore_compile_failure', 'Keep compiling regardless of error')
+  .option('--use_clang_coverage', 'enable coverage for brave source code')
   .option('--is_asan', 'is asan enabled')
   .option('--is_ubsan', 'is ubsan enabled')
   .option(
@@ -176,7 +181,6 @@ program
     collect,
     [],
   )
-  .option('--no_gn_gen', 'Build without running gn gen')
   .option('--notarize', 'notarize targets that support it with Apple')
   .option('--offline', 'use offline mode for RBE')
   .option(
@@ -357,7 +361,10 @@ program
   .option('--v [log_level]', 'set log level to [log_level]', parseInteger, '0')
   .option('--vmodule [modules]', 'verbose log from specific modules')
   .option('--filter <filter>', 'set test filter')
-  .option('--no_gn_gen', 'Use args.gn as default values')
+  .option(
+    '--base [targetCommitRef]',
+    'use this commit/branch/tag as reference for change detection',
+  )
   .option(
     '--output_xml',
     'indicates if test results xml output file(s) should be generated. '
@@ -396,6 +403,20 @@ program
     'whether to use RBE for building',
     JSON.parse,
   )
+  .option(
+    '--ios_xcode_build_version <build_version>',
+    'xcode build version for ios',
+  )
+  .option(
+    '--ios_simulator_platform <simulator_platform>',
+    'platform to use for ios simulator',
+    'iPhone 17',
+  )
+  .option(
+    '--ios_simulator_version <simulator_version>',
+    'ios version for simulator',
+    '26.0',
+  ) // should match ios_deployment_target
   .option('--offline', 'use offline mode for RBE')
   .arguments('[build_config]')
   .action(test.bind(null, parsedArgs.unknown))
@@ -436,6 +457,8 @@ program
 
 program
   .command('run_perf_tests [perf_config] [targets]')
+  .option('--target_os <target_os>', 'target OS')
+  .option('--target_arch <target_arch>', 'target architecture')
   .allowUnknownOption(true)
   .description('Call npm run perf_tests -- --more-help for detailed help')
   .action(perfTests.runPerfTests.bind(null, parsedArgs.unknown))
@@ -449,5 +472,8 @@ program
   .action(genGradle.bind(null, parsedArgs.unknown))
 
 program.command('docs').action(util.launchDocs)
+
+registerListAffectedTestsCommand(program)
+registerGenerateCoverageReportCommand(program)
 
 program.parse(process.argv)

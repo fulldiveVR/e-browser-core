@@ -12,9 +12,6 @@
   <message name="IDS_CHAT_UI_ACCEPT_BUTTON_LABEL" desc="Label for button to accept agreement" formatter_data="webui=AiChat">
     I understand
   </message>
-  <message name="IDS_CHAT_UI_SUMMARIZE_BUTTON_LABEL" desc="Label for button to summarize the current page's content" formatter_data="webui=AiChat">
-    Summarize
-  </message>
   <message name="IDS_CHAT_UI_ABOUT_TITLE" desc="A concise title that summarizes the purpose of AIChat" formatter_data="webui=AiChat">
     About Leo
   </message>
@@ -38,6 +35,12 @@
   </message>
   <message name="IDS_CHAT_UI_PLACEHOLDER_LABEL" desc="Placeholder text for an input box allowing users to send messages to the AI service" formatter_data="webui=AiChat">
     Ask follow up
+  </message>
+  <message name="IDS_CHAT_UI_DROP_IMAGES_HERE_LABEL" desc="Text shown when dragging images over the input area" formatter_data="webui=AiChat">
+    Drop files here
+  </message>
+  <message name="IDS_CHAT_UI_DROP_FILES_DESCRIPTION" desc="Descriptive text shown when dragging files over the page" formatter_data="webui=AiChat">
+    Drop any files here to add them to the conversation
   </message>
   <message name="IDS_CHAT_UI_SUGGEST_QUESTIONS_LABEL" desc="Button label to ask the AI Chat to suggest some related questions" formatter_data="webui=AiChat">
     Suggest questions…
@@ -88,25 +91,37 @@
     Model changes dynamically to use the best one for the task.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_BASIC" desc="AI Chat intro message for the basic model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm a fully hosted AI assistant by Brave. I'm powered by Llama 3.1 8B, a model created by Meta to be performant and applicable to many use cases. Llama is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Llama 3.1 8B, a model created by Meta to be performant and applicable to many use cases. Llama is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_QWEN" desc="AI Chat intro message for the qwen model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm a fully hosted AI assistant by Brave. I'm powered by Qwen 14B, a model created by Alibaba Cloud to be performant and applicable to many use cases. Qwen is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Qwen 14B, a model created by Alibaba Cloud to be performant and applicable to many use cases. Qwen is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+  </message>
+  <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_GEMMA" desc="AI Chat intro message for the gemma model" formatter_data="webui=AiChat">
+    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Gemma 3 12B, a model created by Google DeepMind to be performant and applicable to many use cases. Gemma is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_DEEPSEEK_R1" desc="AI Chat intro message for the deepseek-r1 model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm a fully hosted AI assistant by Brave. I'm powered by DeepSeek R1, a model created by DeepSeek to perform deep reasoning tasks. <ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by DeepSeek R1, a model created by DeepSeek to perform deep reasoning tasks. DeepSeek R1 is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_CLAUDE_INSTANT" desc="AI Chat intro message for the Claude Instant model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm proxied by Brave and powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks. Claude Instant is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo.I'm an AI assistant by Brave. I'm powered by Claude Instant, a model created by Anthropic to power conversational and text processing tasks. Claude Instant is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_CLAUDE_HAIKU" desc="AI Chat intro message for the Claude Haiku model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm proxied by Brave and powered by Claude Haiku, a model created by Anthropic to power conversational and text processing tasks. Claude Haiku is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Claude Haiku, a model created by Anthropic to power conversational and text processing tasks. Claude Haiku is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_INTRO_MESSAGE_CHAT_CLAUDE_SONNET" desc="AI Chat intro message for the Claude Sonnet model" formatter_data="webui=AiChat">
-    Hi, I'm Leo. I'm proxied by Brave and powered by Claude Sonnet, a model created by Anthropic to power conversational and text processing tasks. Claude Sonnet is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
+    Hi, I'm Leo. I'm an AI assistant by Brave. I'm powered by Claude Sonnet, a model created by Anthropic to power conversational and text processing tasks. Claude Sonnet is Brave-hosted through our own secure infrastructure.<ph name="LINK_BEFORE">$1</ph>Learn more<ph name="LINK_AFTER">/$1</ph>
   </message>
   <message name="IDS_CHAT_UI_MODEL_PREMIUM_LABEL_NON_PREMIUM" desc="Label indentifying that an AI Chat model is a premium model" formatter_data="webui=AiChat">
     Premium
+  </message>
+  <message name="IDS_CHAT_UI_MODEL_LOCAL_LABEL" desc="Label identifying that an AI Chat model is a local model" formatter_data="webui=AiChat">
+    Local
+  </message>
+  <message name="IDS_CHAT_UI_RECOMMENDED_MODELS_BUTTON" desc="Button label to show recommended models" formatter_data="webui=AiChat">
+    Recommended models
+  </message>
+  <message name="IDS_CHAT_UI_SHOW_ALL_MODELS_BUTTON" desc="Button label to show all models" formatter_data="webui=AiChat">
+    Show all models
   </message>
   <message name="IDS_CHAT_UI_MODEL_CATEGORY_CHAT" desc="Category name for Chat" formatter_data="webui=AiChat">
     Chat
@@ -128,6 +143,9 @@
   </message>
   <message name="IDS_CHAT_UI_MENU_CONVERSATION_HISTORY" desc="Menu item for opening the list of conversations" formatter_data="webui=AiChat">
     Conversation history
+  </message>
+  <message name="IDS_CHAT_UI_MENU_MANAGE_MEMORIES" desc="Menu item for managing AI Chat memories" formatter_data="webui=AiChat">
+    Manage memories
   </message>
   <message name="IDS_CHAT_UI_MENU_SETTINGS" desc="Menu item for Settings" formatter_data="webui=AiChat">
     Advanced Settings
@@ -348,6 +366,9 @@
   <message name="IDS_CHAT_UI_SEND_CHAT_BUTTON_LABEL" desc="A button label for sending a chat message" formatter_data="webui=AiChat">
     Send message to Leo
   </message>
+  <message name="IDS_CHAT_UI_CONTENT_AGENT_PROFILE_BUTTON_LABEL" desc="Tooltip for when the AI content agent is not disableable in the current profile" formatter_data="webui=AiChat">
+    Leo AI Content Agent is always enabled in this profile
+  </message>
   <message name="IDS_CHAT_UI_STOP_GENERATION_BUTTON_LABEL" desc="A button label for stopping generation" formatter_data="webui=AiChat">
     Stop answering
   </message>
@@ -359,6 +380,9 @@
   </message>
   <message name="IDS_CHAT_UI_TRIMMED_TOKENS_WARNING" desc="A warning issued when the user is trying to summarize a long content page" formatter_data="webui=AiChat">
     Some context could be missing from the conversation. Leo was able to retain <ph name="PERCENTAGE">$1<ex>75.5%</ex></ph> of the conversation's associated content.
+  </message>
+  <message name="IDS_CHAT_UI_VISUAL_CONTENT_TOO_MUCH_WARNING" desc="A warning issued when too many images are captured and some had to be discarded due to limits" formatter_data="webui=AiChat">
+    Too many images were captured from the page. Leo was able to use <ph name="PERCENTAGE">$1<ex>75.5%</ex></ph> of the available visual content.
   </message>
   <message name="IDS_CHAT_UI_CONVERSATION_END_ERROR" desc="An error issued when the user cannot continue chatting" formatter_data="webui=AiChat">
     This conversation is too long and cannot continue. There may be other models available with which Leo is capable of maintaining accuracy for longer conversations.
@@ -381,17 +405,23 @@
   <message name="IDS_CHAT_UI_CLOSE_NOTICE" desc="Label for button which closes a notice" formatter_data="webui=AiChat">
     Close this notice
   </message>
-  <message name="IDS_CHAT_UI_ATTACHMENTS_SEARCH_PLACEHOLDER" desc="Placeholder for the attachments search input" formatter_data="webui=AiChat">
+  <message name="IDS_CHAT_UI_ATTACHMENTS_TABS_SEARCH_PLACEHOLDER" desc="Placeholder for the attachments search input" formatter_data="webui=AiChat">
     Search tabs
   </message>
-  <message name="IDS_CHAT_UI_ATTACHMENTS_TITLE" desc="Title for the attachments section" formatter_data="webui=AiChat">
+  <message name="IDS_CHAT_UI_ATTACHMENTS_SEARCH_NO_RESULTS" desc="No results message" formatter_data="webui=AiChat">
+    No results found
+  </message>
+  <message name="IDS_CHAT_UI_ATTACHMENTS_SEARCH_NO_RESULTS_SUGGESTION" desc="Suggestion for getting results" formatter_data="webui=AiChat">
+    Please try a different search
+  </message>
+  <message name="IDS_CHAT_UI_ATTACHMENTS_TABS_TITLE" desc="Title for the attachments section" formatter_data="webui=AiChat">
     Attach content from other tabs
   </message>
-  <message name="IDS_CHAT_UI_ATTACHMENTS_DESCRIPTION" desc="Description for the attachments section" formatter_data="webui=AiChat">
-    Send page content from your browser tabs to give Leo more context for the conversation
+  <message name="IDS_CHAT_UI_ATTACHMENTS_TABS_DESCRIPTION" desc="Description for the attachments section" formatter_data="webui=AiChat">
+    Send page content from your browser tabs to give Leo more context for the conversation.
   </message>
-  <message name="IDS_CHAT_UI_ATTACHMENTS_BROWSER_TABS_TITLE" desc="Title for the browser tabs section" formatter_data="webui=AiChat">
-    Browser tabs
+  <message name="IDS_CHAT_UI_ATTACHMENTS_DESCRIPTION_AFTER" desc="Sentence after the description, shared across different content types" formatter_data="webui=AiChat">
+    Page contents will be sent to Leo along with your messages.
   </message>
   <message name="IDS_CHAT_UI_TABS_MENU_TITLE" desc="Title for the tabs menu" formatter_data="webui=AiChat">
     Add tab contents for context. The contents will be sent to Leo along with your messages.
@@ -415,22 +445,25 @@
     Enable
   </message>
   <message name="IDS_CHAT_UI_CHAT_BASIC_SUBTITLE" desc="A description for default chat model" formatter_data="webui=AiChat">
-    General purpose chat
+    Fast • Search
   </message>
   <message name="IDS_CHAT_UI_CHAT_CLAUDE_INSTANT_SUBTITLE" desc="A description for claude-instant-v1 model" formatter_data="webui=AiChat">
     Conversation and text generation
   </message>
   <message name="IDS_CHAT_UI_CHAT_CLAUDE_HAIKU_SUBTITLE" desc="A description for claude-3-haiku model" formatter_data="webui=AiChat">
-    Lightning fast chat
+    Fast • Search • Tools
   </message>
   <message name="IDS_CHAT_UI_CHAT_CLAUDE_SONNET_SUBTITLE" desc="A description for claude-3-sonnet model" formatter_data="webui=AiChat">
-    Balanced speed and intelligence
+    Search • Vision • Tools
   </message>
   <message name="IDS_CHAT_UI_CHAT_QWEN_SUBTITLE" desc="A description for qwen model" formatter_data="webui=AiChat">
-      General purpose chat, coding, and more
+    Fast • Search
+  </message>
+  <message name="IDS_CHAT_UI_CHAT_GEMMA_SUBTITLE" desc="A description for gemma model" formatter_data="webui=AiChat">
+    Search • Vision
   </message>
   <message name="IDS_CHAT_UI_CHAT_DEEPSEEK_R1_SUBTITLE" desc="A description for deepseek-r1 model" formatter_data="webui=AiChat">
-    Reasoning model
+    Search • Thinking
   </message>
   <message name="IDS_CHAT_UI_CHAT_AUTOMATIC_SUBTITLE" desc="A description for automatic model" formatter_data="webui=AiChat">
     Model changes dynamically to use the best one for the task
@@ -439,25 +472,31 @@
     Leo settings
   </message>
   <message name="IDS_CHAT_UI_WELCOME_GUIDE_TITLE" desc="A title for welcome guide component presented for first time users" formatter_data="webui=AiChat">
-    Hi, I'm Leo!
+    Introducing Leo AI
   </message>
   <message name="IDS_CHAT_UI_WELCOME_GUIDE_SUBTITLE" desc="A subtitle for welcome guide component presented for first time users" formatter_data="webui=AiChat">
-    An AI-powered intelligent assistant, built right into Brave.
+    Your <ph name="TEXT_BEFORE">$1</ph>private<ph name="TEXT_AFTER">/$1</ph> AI assistant, built right into the browser.
   </message>
-  <message name="IDS_CHAT_UI_WELCOME_GUIDE_SITE_HELP_CARD_TITLE" desc="This is the title for a user prompt card designed to offer assistance with website-related tasks." formatter_data="webui=AiChat">
-    Need help with a website?
+  <message name="IDS_CHAT_UI_WELCOME_CARD_TRULY_PRIVATE_TITLE" desc="A title for welcome guide component presented for first time users" formatter_data="webui=AiChat">
+    Truly private AI
   </message>
-  <message name="IDS_CHAT_UI_WELCOME_GUIDE_SITE_HELP_CARD_DESC" desc="This description informs the user that the chatbot is capable of assisting with various website-related tasks such as summarizing articles and elaborating on website content. There is no specific call to action in this message." formatter_data="webui=AiChat">
-    I can help you summarizing articles, expanding on a site's content and much more.
+  <message name="IDS_CHAT_UI_WELCOME_CARD_TRULY_PRIVATE_SUBTITLE" desc="A subtitle for welcome guide component presented for first time users" formatter_data="webui=AiChat">
+    Leo doesn’t retain or share chats, or use them for  model training. No account or login is required. Just open and chat. Privately.
   </message>
-  <message name="IDS_CHAT_UI_WELCOME_GUIDE_SITE_HELP_CARD_WITH_ACTION" desc="This description provides similar information to the previous message but concludes with a specific call to action or suggestion for the user to get started with assistance." formatter_data="webui=AiChat">
-    I can help you summarizing articles, expanding on a site's content and much more. Not sure where to start? Try this:
+  <message name="IDS_CHAT_UI_WELCOME_CARD_TABS_AND_FILES_TITLE" desc="A title for welcome guide component presented for first time users" formatter_data="webui=AiChat">
+    Chat with your tabs and files
   </message>
-  <message name="IDS_CHAT_UI_WELCOME_GUIDE_CHAT_CARD_TITLE" desc="Title for the chat card option." formatter_data="webui=AiChat">
-    Just want to chat?
+  <message name="IDS_CHAT_UI_WELCOME_CARD_TABS_AND_FILES_SUBTITLE" desc="A subtitle for welcome guide component presented for first time users" formatter_data="webui=AiChat">
+    Need to know more about the sites you’re visiting? Just add them to a chat. Attach your tabs and local files for fast, relevant answers.
   </message>
-  <message name="IDS_CHAT_UI_WELCOME_GUIDE_CHAT_CARD_DESC" desc="Description prompting the user to engage in a casual conversation with the chatbot." formatter_data="webui=AiChat">
-    Ask me anything! We can talk about any topic you want. I'm always learning and improving to provide better answers.
+  <message name="IDS_CHAT_UI_WELCOME_CARD_AUTOMATE_WORK_TITLE" desc="A title for welcome guide component presented for first time users" formatter_data="webui=AiChat">
+    Automate the boring work
+  </message>
+  <message name="IDS_CHAT_UI_WELCOME_CARD_AUTOMATE_WORK_SUBTITLE" desc="A subtitle for welcome guide component presented for first time users" formatter_data="webui=AiChat">
+    Let Brave browse with you and interact with everything you do in the browser. Offload the tedious tasks, and save your time for the important stuff.
+  </message>
+  <message name="IDS_CHAT_UI_LEARN_MORE_ABOUT_LEO_AI" desc="A link text to learn more about Leo AI" formatter_data="webui=AiChat">
+    Learn more about Leo AI
   </message>
   <message name="IDS_CHAT_UI_PRIVACY_TITLE" desc="Title for privacy agreement modal." formatter_data="webui=AiChat">
     Chat Privately with Brave Leo
@@ -561,6 +600,9 @@
   <message name="IDS_AI_CHAT_SCREENSHOT_BUTTON_LABEL" desc="The button label for screenshot" formatter_data="webui=AiChat">
     Screenshot
   </message>
+  <message name="IDS_CHAT_UI_FULL_PAGE_SCREENSHOT_TITLE" desc="Title for full page screenshot attachment" formatter_data="webui=AiChat">
+    Full page screenshot
+  </message>
   <message name="IDS_AI_CHAT_CURRENT_TAB_CONTENTS_BUTTON_LABEL" desc="The button label for current tab contents" formatter_data="webui=AiChat">
     Current tab contents
   </message>
@@ -587,5 +629,20 @@
   </message>
   <message name="IDS_AI_CHAT_TEMPORARY_CHAT_DESCRIPTION" desc="Description for temporary chat functionality" formatter_data="webui=AiChat">
     This chat won't be saved into your history or use any of Leo's customization or memories.
+  </message>
+  <message name="IDS_CHAT_UI_MEMORY_UPDATED_WITH_CONTENT_LABEL" desc="Label indicating that memory has been updated with specific content, with placeholder for the memory content" formatter_data="webui=AiChat">
+    Memory updated: <ph name="MEMORY_CONTENT">$1<ex>User prefers dark mode themes</ex></ph>
+  </message>
+  <message name="IDS_CHAT_UI_MEMORY_UNDO_BUTTON_LABEL" desc="Button label to undo a memory update" formatter_data="webui=AiChat">
+    Undo
+  </message>
+  <message name="IDS_CHAT_UI_MEMORY_MANAGE_ALL_BUTTON_LABEL" desc="Button label to manage all memories" formatter_data="webui=AiChat">
+    Manage all
+  </message>
+  <message name="IDS_CHAT_UI_MEMORY_UNDONE_LABEL" desc="Message shown after memory has been undone/removed" formatter_data="webui=AiChat">
+    Ok, I won't remember that
+  </message>
+  <message name="IDS_CHAT_UI_MEMORY_ERROR_LABEL" desc="Message shown when memory storage fails" formatter_data="webui=AiChat">
+    Failed to save memory. Please try again.
   </message>
 </grit-part>

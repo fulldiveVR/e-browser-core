@@ -14,13 +14,16 @@ MockTool::MockTool(std::string_view name,
                    std::string_view type,
                    std::optional<base::Value::Dict> input_properties,
                    std::optional<std::vector<std::string>> required_properties,
-                   std::optional<base::Value::Dict> extra_params)
+                   std::optional<base::Value::Dict> extra_params,
+                   bool requires_user_interaction_before_handling)
     : name_(name),
       description_(description),
       type_(type),
       input_properties_(std::move(input_properties)),
       required_properties_(std::move(required_properties)),
-      extra_params_(std::move(extra_params)) {}
+      extra_params_(std::move(extra_params)),
+      requires_user_interaction_before_handling_(
+          requires_user_interaction_before_handling) {}
 
 MockTool::~MockTool() = default;
 
@@ -52,6 +55,21 @@ std::optional<base::Value::Dict> MockTool::ExtraParams() const {
     return extra_params_->Clone();
   }
   return std::nullopt;
+}
+
+bool MockTool::RequiresUserInteractionBeforeHandling() const {
+  return requires_user_interaction_before_handling_;
+}
+
+bool MockTool::IsSupportedByModel(const mojom::Model& model) const {
+  return is_supported_by_model_;
+}
+
+bool MockTool::SupportsConversation(
+    bool is_temporary,
+    bool has_untrusted_content,
+    mojom::ConversationCapability conversation_capability) const {
+  return supports_conversation_;
 }
 
 }  // namespace ai_chat

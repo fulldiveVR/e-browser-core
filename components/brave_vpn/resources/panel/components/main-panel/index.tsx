@@ -6,8 +6,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import * as S from './style'
+import * as Styles from './style'
 import Icon from '@brave/leo/react/icon'
+import Tooltip from '@brave/leo/react/tooltip'
 import { color, font } from '@brave/leo/tokens/css/variables'
 import { getLocale, formatLocale } from '$web-common/locale'
 import SelectRegionList from '../select-region-list'
@@ -86,14 +87,14 @@ export function PanelHeader(props: {
   settingsOnClick: () => void
 }) {
   return (
-    <S.PanelHeader>
-      <S.VpnLogo name='product-vpn' />
-      <S.PanelTitle>{props.title}</S.PanelTitle>
+    <Styles.PanelHeader>
+      <Styles.VpnLogo name='product-vpn' />
+      <Styles.PanelTitle>{props.title}</Styles.PanelTitle>
       <SettingsButton
         tooltip={props.settingsTooltip}
         onClick={props.settingsOnClick}
       />
-    </S.PanelHeader>
+    </Styles.PanelHeader>
   )
 }
 
@@ -102,13 +103,13 @@ function SettingsButton(props: {
   onClick: () => void
 }) {
   return (
-    <S.SettingsButton
+    <Styles.SettingsButton
       type='button'
       onClick={props.onClick}
       title={props.tooltip}
     >
-      <S.StyledIcon name='settings'></S.StyledIcon>
-    </S.SettingsButton>
+      <Styles.StyledIcon name='settings'></Styles.StyledIcon>
+    </Styles.SettingsButton>
   )
 }
 
@@ -175,45 +176,45 @@ function MainPanel() {
 
   const regionServerLabel =
     currentRegion.regionPrecision === REGION_PRECISION_COUNTRY
-      ? getLocale('braveVpnServerSelectionOptimalLabel')
+      ? getLocale(S.BRAVE_VPN_SERVER_SELECTION_OPTIMAL_LABEL)
       : currentRegion.namePretty
   return (
     <PanelBox>
       <PanelHeader
-        title={getLocale('braveVpn')}
-        settingsTooltip={getLocale('braveVpnSettingsTooltip')}
+        title={getLocale(S.BRAVE_VPN)}
+        settingsTooltip={getLocale(S.BRAVE_VPN_MAIN_PANEL_VPN_SETTINGS_TITLE)}
         settingsOnClick={handleSettingsButtonClick}
       />
-      <S.PanelContent>
+      <Styles.PanelContent>
         <Toggle disabled={expired} />
         {connectionStatus === ConnectionState.CONNECT_NOT_ALLOWED && (
-          <S.StyledAlert
+          <Styles.StyledAlert
             type='warning'
             hideIcon
           >
-            {getLocale('braveVpnConnectNotAllowed')}
-          </S.StyledAlert>
+            {getLocale(S.BRAVE_VPN_CONNECT_NOT_ALLOWED)}
+          </Styles.StyledAlert>
         )}
         {expired && (
-          <S.StyledAlert
+          <Styles.StyledAlert
             type='warning'
             hideIcon
           >
-            <div slot='title'>{getLocale('braveVpnSessionExpiredTitle')}</div>
+            <div slot='title'>{getLocale(S.BRAVE_VPN_MAIN_PANEL_SESSION_EXPIRED_PART_TITLE)}</div>
             <SessionExpiredContent />
-          </S.StyledAlert>
+          </Styles.StyledAlert>
         )}
         {outOfCredentials && (
-          <S.StyledAlert
+          <Styles.StyledAlert
             type='warning'
             hideIcon
           >
-            <div slot='title'>{getLocale('braveVpnOutOfCredentials')}</div>
+            <div slot='title'>{getLocale(S.BRAVE_VPN_MAIN_PANEL_OUT_OF_CREDENTIALS_TITLE)}</div>
             <div>{stateDescription}</div>
-          </S.StyledAlert>
+          </Styles.StyledAlert>
         )}
         {!outOfCredentials && (
-          <S.RegionSelectorButton
+          <Styles.RegionSelectorButton
             type='button'
             onClick={onSelectRegionButtonClick}
           >
@@ -222,16 +223,20 @@ function MainPanel() {
               <RegionLabelBox>
                 <RegionLabel>{getCountryNameForCurrentRegion()}</RegionLabel>
                 {smartProxyRoutingEnabled && currentRegion.smartRoutingProxyState === 'all' && (
-                  <SmartProxyIcon name='smart-proxy-routing' />
-                )
+                  <Tooltip mode='mini'>
+                    <SmartProxyIcon name='smart-proxy-routing' />
+                    <div slot='content'>
+                      {getLocale(S.BRAVE_VPN_SMART_PROXY_ROUTING_ICON_TOOLTIP)}
+                    </div>
+                  </Tooltip>)
                 }
               </RegionLabelBox>
               <RegionServerLabel>{regionServerLabel}</RegionServerLabel>
             </RegionInfo>
-            <S.StyledIcon name='carat-right' />
-          </S.RegionSelectorButton>
+            <Styles.StyledIcon name='carat-right' />
+          </Styles.RegionSelectorButton>
         )}
-      </S.PanelContent>
+      </Styles.PanelContent>
     </PanelBox>
   )
 }

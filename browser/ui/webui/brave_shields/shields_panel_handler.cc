@@ -18,6 +18,7 @@
 #include "chrome/browser/ui/browser_tabstrip.h"
 #include "chrome/browser/ui/webui/top_chrome/top_chrome_web_ui_controller.h"
 #include "chrome/browser/ui/webui/webui_embedding_context.h"
+#include "components/prefs/pref_service.h"
 #include "ui/gfx/geometry/vector2d.h"
 
 ShieldsPanelHandler::ShieldsPanelHandler(
@@ -68,14 +69,14 @@ void ShieldsPanelHandler::GetPosition(GetPositionCallback callback) {
 }
 
 void ShieldsPanelHandler::SetAdvancedViewEnabled(bool is_enabled) {
-  DCHECK(profile_);
+  CHECK(profile_);
 
   profile_->GetPrefs()->SetBoolean(kShieldsAdvancedViewEnabled, is_enabled);
 }
 
 void ShieldsPanelHandler::GetAdvancedViewEnabled(
     GetAdvancedViewEnabledCallback callback) {
-  DCHECK(profile_);
+  CHECK(profile_);
 
   bool is_enabled =
       profile_->GetPrefs()->GetBoolean(kShieldsAdvancedViewEnabled);

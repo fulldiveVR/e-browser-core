@@ -8,7 +8,9 @@
 #include <algorithm>
 #include <utility>
 
+#include "base/byte_count.h"
 #include "base/functional/bind.h"
+#include "base/rand_util.h"
 #include "brave/components/brave_search/browser/backup_results_allowed_urls.h"
 #include "brave/components/brave_search/browser/backup_results_service.h"
 #include "brave/components/brave_search/common/features.h"
@@ -17,6 +19,7 @@
 #include "chrome/browser/content_settings/host_content_settings_map_factory.h"
 #include "chrome/browser/profiles/profile.h"
 #include "content/public/browser/browser_thread.h"
+#include "content/public/browser/navigation_controller.h"
 #include "content/public/browser/navigation_handle.h"
 #include "content/public/browser/storage_partition.h"
 #include "content/public/browser/web_contents.h"
@@ -29,6 +32,10 @@
 #include "services/network/public/mojom/url_response_head.mojom.h"
 #include "third_party/blink/public/common/navigation/navigation_policy.h"
 #include "third_party/blink/public/common/web_preferences/web_preferences.h"
+
+#if BUILDFLAG(IS_ANDROID)
+#include "ui/android/view_android.h"
+#endif
 
 namespace brave_search {
 
@@ -57,7 +64,7 @@ constexpr net::NetworkTrafficAnnotationTag kNetworkTrafficAnnotationTag =
       }
     )");
 
-constexpr size_t kMaxResponseSize = 5 * 1024 * 1024;
+constexpr base::ByteCount kMaxResponseSize = base::MiB(5);
 constexpr base::TimeDelta kTimeout = base::Seconds(5);
 
 class BackupResultsWebContentsObserver
@@ -139,6 +146,16 @@ void BackupResultsServiceImpl::FetchBackupResults(
   if (should_render) {
     auto create_params = content::WebContents::CreateParams(otr_profile);
     web_contents = content::WebContents::Create(create_params);
+
+    int random_width = base::RandInt(800, 1920);
+    int random_height = base::RandInt(600, 1080);
+#if BUILDFLAG(IS_ANDROID)
+    auto* native_view = web_contents->GetNativeView();
+    native_view->OnSizeChanged(random_width, random_height);
+#else
+    web_contents->Resize({random_width, random_height});
+#endif
+
     auto web_preferences = web_contents->GetOrCreateWebPreferences();
     web_preferences.supports_multiple_windows = false;
     web_contents->SetWebPreferences(web_preferences);
@@ -291,7 +308,7 @@ void BackupResultsServiceImpl::MakeSimpleURLLoaderRequest(
       pending_request->shared_url_loader_factory.get(),
       base::BindOnce(&BackupResultsServiceImpl::HandleURLLoaderResponse,
                      base::Unretained(this), pending_request),
-      kMaxResponseSize);
+      kMaxResponseSize.InBytes());
 }
 
 void BackupResultsServiceImpl::HandleURLLoaderResponse(

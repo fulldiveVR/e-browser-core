@@ -196,6 +196,9 @@
 <translation id="5987838417172370108">在 Brave 瀏覽器當機或凍結時自動傳送診斷報告，協助改善 Brave 的產品穩定性。</translation>
 <translation id="7977176350719484850">預估節省\n時間</translation>
 <translation id="9008534313521214777">預估節省\n時間</translation>
+<translation id="8347743943525229984">允許 Brave 調查</translation>
+<translation id="6022939994702081659">允許 Brave 在新分頁中顯示隱私調查的連結。調查有助於我們建立更好的功能，並衡量基於瀏覽器的廣告活動其有效性。</translation>
+<translation id="7746496306508543965">深入了解 Brave 調查</translation>
 <translation id="410351446219883937">自動播放</translation>
 <translation id="7445411102860286510">允許網站自動播放靜音的影片 (建議)</translation>
 <translation id="7837721118676387834">允許特定網站自動播放靜音的影片。</translation>
@@ -418,8 +421,8 @@
 <translation id="8748471354357836070">瞭解更多 / 退出選擇</translation>
 <translation id="3171669670217312786">背景圖片</translation>
 <translation id="8522669544471808198">顯示背景圖片</translation>
-<translation id="3870475560794762985">顯示贊助圖片</translation>
-<translation id="6937724381960478525">進一步了解贊助商圖片</translation>
+<translation id="6258554626602400736">顯示新標籤頁廣告</translation>
+<translation id="9001530744369687550">進一步了解新標籤頁廣告</translation>
 <translation id="8793108040181436796">小工具</translation>
 <translation id="8643377320501056697">顯示頂部網站</translation>
 <translation id="7275773481201277457">顯示 Brave 統計</translation>
@@ -497,6 +500,8 @@
 <translation id="7616645803364270729">電子郵件、Twitter 等</translation>
 <translation id="5299848999918506028">感謝！</translation>
 <translation id="76550953340008122">感謝讓 Brave 開發者知道此網站會壞掉。我們將會盡力修復它。</translation>
+<translation id="3037432377946455872">您看到的主要問題是什麼？</translation>
+<translation id="8731661215617360873">選擇一個選項</translation>
 <translation id="650318023204990401">進階控制</translation>
 <translation id="7205939464631857223">清除所有攔截元件</translation>
 <translation id="5370478469168390143">降低線上使用流量</translation>
@@ -632,7 +637,6 @@
 <translation id="3961126209136843111">匯入現有錢包</translation>
 <translation id="4811736040444856406">顯示備援短語</translation>
 <translation id="4359319875297001084">從舊 Brave 加密幣錢包匯入？</translation>
-<translation id="3157931365184549694">Restore</translation>
 <translation id="5844138175312846408">已有錢包？</translation>
 <translation id="2502258949541727762">開始之前</translation>
 <translation id="4303748097351941030">支援的網路</translation>
@@ -1222,4 +1226,41 @@
 <translation id="2735247450315842119">允許在無痕標籤頁中截圖</translation>
 <translation id="8420414929552321089">如果允許，開啟多個應用程式時，無痕標籤頁也會顯示。</translation>
 <translation id="7956713633345437162">手機書籤</translation>
+<translation id="1943432128510653496">儲存密碼</translation>
+<translation id="2100273922101894616">自動登入</translation>
+<translation id="363596933471559332">自動使用已儲存的憑證登入網站。如果關閉這項功能，每次在您登入網站之前，網站一律會要求驗證。</translation>
+<translation id="8562452229998620586">已儲存的密碼會顯示在這裡。</translation>
+<translation id="1303339473099049190">找不到指定密碼。請檢查你輸入的內容，然後再試一次。</translation>
+<translation id="2259659629660284697">匯出密碼…</translation>
+<translation id="133012818630824069">將使用 Brave 儲存的密碼匯出</translation>
+<translation id="2321086116217818302">正在準備匯出密碼…</translation>
+<translation id="5139940364318403933">瞭解如何使用 Brave 雲端硬碟</translation>
+<translation id="729975465115245577">你的裝置沒有可儲存密碼檔案的應用程式。</translation>
+<translation id="1129510026454351943">詳細資料：<ph name="ERROR_DESCRIPTION"/></translation>
+<translation id="6221633008163990886">解鎖即可匯出你的密碼</translation>
+<translation id="5245792669563792664">密碼</translation>
+<translation id="10614374240317010">一律不儲存</translation>
+<translation id="1571304935088121812">複製使用者名稱</translation>
+<translation id="5005498671520578047">複製密碼</translation>
+<translation id="2435457462613246316">顯示密碼</translation>
+<translation id="1513858653616922153">刪除密碼</translation>
+<translation id="543338862236136125">修改密碼</translation>
+<translation id="4565377596337484307">隱藏密碼</translation>
+<translation id="8523928698583292556">刪除已儲存的密碼</translation>
+<translation id="5433691172869980887">已複製使用者名稱</translation>
+<translation id="2625189173221582860">已複製密碼</translation>
+<translation id="8084114998886531721">已儲存的密碼</translation>
+<translation id="6590680911007613645">請確認你要儲存的密碼與 <ph name="SITE"/> 上的密碼相符</translation>
+<translation id="1492417797159476138">你已在這個網站上儲存此使用者名稱</translation>
+<translation id="5454166040603940656">提供者：<ph name="PROVIDER"/></translation>
+<translation id="686366188661646310">要刪除密碼嗎？</translation>
+<translation id="7808889146555843082">刪除這組密碼並不會刪除你的 <ph name="SITE"/> 帳戶。請變更密碼或刪除你的 <ph name="SITE"/> 帳戶，以避免遭到他人盜用。</translation>
+<translation id="2870560284913253234">網站</translation>
+<translation id="8503813439785031346">使用者名稱</translation>
+<translation id="2278052315791335171">刪除這組密碼並不會刪除你的 <ph name="SITE"/> 帳戶</translation>
+<translation id="6891726759199484455">解鎖即可複製你的密碼</translation>
+<translation id="5515439363601853141">解鎖即可查看你的密碼</translation>
+<translation id="1724977129262658800">解鎖後即可編輯密碼</translation>
+<translation id="5780792035410621042">如要複製密碼，請先在裝置上設定螢幕鎖定功能</translation>
+<translation id="7986497153528221272">如要查看密碼，請先在裝置上設定螢幕鎖定功能</translation>
 </translationbundle>

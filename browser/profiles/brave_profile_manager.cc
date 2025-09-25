@@ -10,6 +10,7 @@
 #include <vector>
 
 #include "base/check.h"
+#include "base/path_service.h"
 #include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/brave_rewards/rewards_service_factory.h"
 #include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
@@ -18,8 +19,11 @@
 #include "brave/browser/profiles/profile_util.h"
 #include "brave/browser/request_otr/request_otr_service_factory.h"
 #include "brave/browser/url_sanitizer/url_sanitizer_service_factory.h"
+#include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
+#include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/brave_shields/content/browser/brave_shields_util.h"
 #include "brave/components/brave_shields/core/browser/brave_shields_p3a.h"
+#include "brave/components/constants/brave_constants.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/content_settings/core/browser/brave_content_settings_pref_provider.h"
 #include "brave/components/ntp_background_images/browser/ntp_p3a_util.h"
@@ -31,6 +35,7 @@
 #include "chrome/browser/profiles/profile_attributes_entry.h"
 #include "chrome/browser/profiles/profile_attributes_storage.h"
 #include "chrome/browser/profiles/profiles_state.h"
+#include "chrome/common/chrome_paths.h"
 #include "chrome/common/pref_names.h"
 #include "components/bookmarks/common/bookmark_pref_names.h"
 #include "components/gcm_driver/gcm_buildflags.h"
@@ -102,8 +107,23 @@ void RecordInitialP3AValues(Profile* profile) {
 }  // namespace
 
 BraveProfileManager::BraveProfileManager(const base::FilePath& user_data_dir)
-    : ProfileManager(user_data_dir) {
-  MigrateProfileNames();
+    : ProfileManager(user_data_dir) {}
+
+size_t BraveProfileManager::GetNumberOfProfiles() {
+  size_t count = ProfileManager::GetNumberOfProfiles();
+#if BUILDFLAG(ENABLE_BRAVE_AI_CHAT_AGENT_PROFILE)
+  if (ai_chat::features::IsAIChatAgentProfileEnabled()) {
+    // Don't include AI Chat agent profile in the count
+    base::FilePath ai_chat_agent_profile_path =
+        user_data_dir_.Append(brave::kAIChatAgentProfileDir);
+    if (count > 0 && GetProfileAttributesStorage().GetProfileAttributesWithPath(
+                         ai_chat_agent_profile_path)) {
+      count--;
+    }
+  }
+#endif
+
+  return count;
 }
 
 void BraveProfileManager::InitProfileUserPrefs(Profile* profile) {
@@ -136,7 +156,7 @@ void BraveProfileManager::InitProfileUserPrefs(Profile* profile) {
   RecordInitialP3AValues(profile);
   brave::SetDefaultSearchVersion(profile, profile->IsNewProfile());
   brave::SetDefaultThirdPartyCookieBlockValue(profile);
-  perf::MaybeEnableBraveFeatureForPerfTesting(profile);
+  perf::MaybeEnableBraveFeaturesPrefsForPerfTesting(profile);
   MigrateHttpsUpgradeSettings(profile);
 }
 
@@ -145,6 +165,7 @@ void BraveProfileManager::DoFinalInitForServices(Profile* profile,
   ProfileManager::DoFinalInitForServices(profile, go_off_the_record);
   if (!do_final_services_init_)
     return;
+  perf::MaybeEnableBraveFeaturesServicesAndComponentsForPerfTesting(profile);
   brave_ads::AdsServiceFactory::GetForProfile(profile);
   brave_rewards::RewardsServiceFactory::GetForProfile(profile);
   brave_wallet::BraveWalletServiceFactory::GetServiceForContext(profile);
@@ -186,6 +207,19 @@ bool BraveProfileManager::LoadProfileByPath(const base::FilePath& profile_path,
                                            std::move(callback));
 }
 
+void BraveProfileManager::SetProfileAsLastUsed(Profile* last_active) {
+  // Prevent AI Chat agent profile from having an active time so that
+  // `ProfilePicker::GetStartupModeReason` doesn't consider it as a
+  // recently-active profile. This change causes it not to be considered
+  // for showing the profile picker on startup.
+#if BUILDFLAG(ENABLE_BRAVE_AI_CHAT_AGENT_PROFILE)
+  if (last_active->IsAIChatAgent()) {
+    return;
+  }
+#endif
+  ProfileManager::SetProfileAsLastUsed(last_active);
+}
+
 // This overridden method doesn't clear |kDefaultSearchProviderDataPrefName|.
 // W/o this, prefs set by TorWindowSearchEngineProviderService is cleared
 // during the initialization.
@@ -194,30 +228,6 @@ void BraveProfileManager::SetNonPersonalProfilePrefs(Profile* profile) {
   prefs->SetBoolean(prefs::kSigninAllowed, false);
   prefs->SetBoolean(bookmarks::prefs::kEditBookmarksEnabled, false);
   prefs->SetBoolean(bookmarks::prefs::kShowBookmarkBar, false);
-}
-
-void BraveProfileManager::MigrateProfileNames() {
-#if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_CHROMEOS)
-  // If any profiles have a default name using an
-  // older version of the default name string format,
-  // then name it with the new default name string format.
-  // e.g. 'Person X' --> 'Profile X'.
-  ProfileAttributesStorage& storage = GetProfileAttributesStorage();
-  std::vector<ProfileAttributesEntry*> entries =
-      storage.GetAllProfilesAttributesSortedByNameWithCheck();
-  // Make sure we keep the numbering the same.
-  for (auto* entry : entries) {
-    // Rename the necessary profiles. Don't check for legacy names as profile
-    // info cache should have migrated them by now.
-    if (entry->IsUsingDefaultName() &&
-        !storage.IsDefaultProfileName(
-            entry->GetName(),
-            /*include_check_for_legacy_profile_name=*/false)) {
-      entry->SetLocalProfileName(storage.ChooseNameForNewProfile(),
-                                 /*is_default_name=*/true);
-    }
-  }
-#endif
 }
 
 BraveProfileManagerWithoutInit::BraveProfileManagerWithoutInit(

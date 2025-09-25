@@ -27,6 +27,7 @@
 #include "brave/components/email_aliases/features.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
+#include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/version_info/version_info.h"
 #include "brave/grit/brave_generated_resources.h"
 #include "brave/grit/brave_generated_resources_webui_strings.h"
@@ -51,12 +52,16 @@
 #include "brave/components/playlist/common/features.h"
 #endif
 
+#if BUILDFLAG(ENABLE_TOR)
+#include "brave/browser/tor/tor_profile_service_factory.h"
+#endif
+
 namespace settings {
 
 namespace {
 
 constexpr char16_t kWebRTCLearnMoreURL[] =
-    u"https://support.brave.com/hc/en-us/articles/"
+    u"https://support.brave.app/hc/en-us/articles/"
     u"360017989132-How-do-I-change-my-Privacy-Settings-#webrtc";
 constexpr char16_t kBraveBuildInstructionsUrl[] =
     u"https://github.com/brave/brave-browser/wiki";
@@ -65,8 +70,7 @@ constexpr char16_t kBraveReleaseTagPrefix[] =
     u"https://github.com/brave/brave-browser/releases/tag/v";
 #if BUILDFLAG(ENABLE_CONTAINERS)
 constexpr char16_t kContainersLearnMoreURL[] =
-    u"https://github.com/brave/brave-browser/wiki/"
-    u"Containers";
+    u"https://support.brave.app/hc/en-us/articles/39077103885325";
 #endif
 constexpr char16_t kGoogleLoginLearnMoreURL[] =
     u"https://github.com/brave/brave-browser/wiki/"
@@ -77,9 +81,9 @@ constexpr char16_t kUnstoppableDomainsLearnMoreURL[] =
 constexpr char16_t kEnsOffchainLookupLearnMoreURL[] =
     u"https://github.com/brave/brave-browser/wiki/ENS-offchain-lookup";
 constexpr char16_t kBraveSyncGuideUrl[] =
-    u"https://support.brave.com/hc/en-us/articles/360047642371-Sync-FAQ";
+    u"https://support.brave.app/hc/en-us/articles/360047642371-Sync-FAQ";
 constexpr char16_t kDeAmpLearnMoreUrl[] =
-    u"https://support.brave.com/hc/en-us/articles/8611298579981";
+    u"https://support.brave.app/hc/en-us/articles/8611298579981";
 constexpr char16_t kDebounceLearnMoreUrl[] =
     u"https://brave.com/privacy-updates/11-debouncing/";
 constexpr char16_t kEnableNftDiscoveryLearnMoreUrl[] =
@@ -89,18 +93,21 @@ constexpr char16_t kBlockAllCookiesLearnMoreUrl[] =
     u"https://github.com/brave/brave-browser/wiki/"
     u"Block-all-cookies-global-Shields-setting";
 constexpr char16_t kLeoCustomModelsLearnMoreURL[] =
-    u"https://support.brave.com/hc/en-us/articles/"
+    u"https://support.brave.app/hc/en-us/articles/"
     u"34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo";
 
 constexpr char16_t kTabOrganizationLearnMoreURL[] =
-    u"https://support.brave.com/hc/en-us/articles/"
+    u"https://support.brave.app/hc/en-us/articles/"
     u"35200007195917-How-to-use-Tab-Focus-Mode";
+
+constexpr char16_t kLeoMemoryLearnMoreURL[] =
+    u"https://support.brave.app/hc/en-us/articles/38441287509261";
 
 constexpr char16_t kLeoPrivacyPolicyURL[] =
     u"https://brave.com/privacy/browser/#brave-leo";
 
 constexpr char16_t kSurveyPanelistLearnMoreURL[] =
-    u"https://support.brave.com/hc/en-us/articles/36550092449165";
+    u"https://support.brave.app/hc/en-us/articles/36550092449165";
 
 constexpr char16_t kExtensionsV2LearnMoreURL[] =
     u"https://brave.com/blog/brave-shields-manifest-v3/";
@@ -194,8 +201,8 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_NEVER_SHOW_BOOKMARK_BAR_DESC},
       {"appearanceSettingsShowAutocompleteInAddressBar",
        IDS_SETTINGS_APPEARANCE_SETTINGS_SHOW_AUTOCOMPLETE_IN_ADDRESS_BAR},
-      {"appearanceSettingsUseTopSuggestions",
-       IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_TOP_SUGGESTIONS},
+      {"appearanceSettingsUseOnDeviceSuggestions",
+       IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_ON_DEVICE},
       {"appearanceSettingsUseHistorySuggestions",
        IDS_SETTINGS_APPEARANCE_SETTINGS_USE_AUTOCOMPLETE_HISTORY},
       {"appearanceSettingsUseBookmarkSuggestions",
@@ -275,8 +282,14 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"autofillInPrivateSettingDesc",
        IDS_SETTINGS_BRAVE_AUTOFILL_PRIVATE_WINDOWS_DESC},
       {"mruCyclingSettingLabel", IDS_SETTINGS_BRAVE_MRU_CYCLING_LABEL},
-      {"speedreaderSettingLabel", IDS_SETTINGS_SPEEDREADER_LABEL},
-      {"speedreaderSettingSubLabel", IDS_SETTINGS_SPEEDREADER_SUB_LABEL},
+      {"speedreaderSettingLabel", IDS_SETTINGS_SPEEDREADER_SETTING_LABEL},
+      {"speedreaderFeatureLabel", IDS_SETTINGS_SPEEDREADER_FEATURE_LABEL},
+      {"speedreaderFeatureSubLabel",
+       IDS_SETTINGS_SPEEDREADER_FEATURE_SUB_LABEL},
+      {"speedreaderEnabledForAllSitesLabel",
+       IDS_SETTINGS_SPEEDREADER_ENABLED_FOR_ALL_SITES_LABEL},
+      {"speedreaderEnabledForAllSitesSubLabel",
+       IDS_SETTINGS_SPEEDREADER_ENABLED_FOR_ALL_SITES_SUB_LABEL},
       {"deAmpSettingLabel", IDS_SETTINGS_DE_AMP_LABEL},
       {"deAmpSettingSubLabel", IDS_SETTINGS_DE_AMP_SUB_LABEL},
       {"debounceSettingLabel", IDS_SETTINGS_DEBOUNCE_LABEL},
@@ -331,6 +344,10 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_SETTINGS_PRIVATE_PROFILE_SEARCH_ENGINE_TITLE},
       {"privateSearchEnginesConfirmationToastLabel",
        IDS_SETTINGS_PRIVATE_PROFILE_SEARCH_ENGINE_CHOICE_SETTINGS_CONFIRMATION_TOAST_LABEL},
+      {"searchEngineListBraveSearchDescription",
+       IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_DESCRIPTION},
+      {"searchEngineListBraveSearchRecommended",
+       IDS_SETTINGS_SEARCH_ENGINE_LIST_BRAVE_SEARCH_RECOMMENDED},
       {"blockAdsTrackersAggressive",
        IDS_SETTINGS_BLOCK_ADS_TRACKERS_AGGRESSIVE},
       {"blockAdsTrackersStandard", IDS_SETTINGS_BLOCK_ADS_TRACKERS_STANDARD},
@@ -493,6 +510,10 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
        IDS_CHAT_UI_MODEL_PREMIUM_LABEL_NON_PREMIUM},
       {"braveLeoAssistantModelSelectionLabel",
        IDS_SETTINGS_LEO_ASSISTANT_MODEL_SELECTION_LABEL},
+      {"braveLeoAssistantPersonalizationLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_PERSONALIZATION_LABEL},
+      {"braveLeoAssistantCustomizationLinkLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_LINK_LABEL},
       {"braveLeoModelSubtitle-chat-basic", IDS_CHAT_UI_CHAT_BASIC_SUBTITLE},
       {"braveLeoModelSubtitle-chat-claude-instant",
        IDS_CHAT_UI_CHAT_CLAUDE_INSTANT_SUBTITLE},
@@ -501,6 +522,7 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"braveLeoModelSubtitle-chat-claude-sonnet",
        IDS_CHAT_UI_CHAT_CLAUDE_SONNET_SUBTITLE},
       {"braveLeoModelSubtitle-chat-qwen", IDS_CHAT_UI_CHAT_QWEN_SUBTITLE},
+      {"braveLeoModelSubtitle-chat-gemma", IDS_CHAT_UI_CHAT_GEMMA_SUBTITLE},
       {"braveLeoModelSubtitle-chat-deepseek-r1",
        IDS_CHAT_UI_CHAT_DEEPSEEK_R1_SUBTITLE},
       {"braveLeoAssistantManageUrlLabel",
@@ -573,6 +595,69 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       {"braveLeoAssistantModelSystemPromptDesc",
        IDS_SETTINGS_LEO_ASSISTANT_MODEL_SYSTEM_PROMPT_DESC},
       {"braveLeoAssistantTokensCount", IDS_SETTINGS_LEO_ASSISTANT_TOKENS_COUNT},
+
+      // Leo Customization
+      {"braveLeoAssistantCustomizationTitle",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_TITLE},
+      {"braveLeoAssistantCustomizationPageTitle",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_PAGE_TITLE},
+      {"braveLeoAssistantCustomizationEnabledLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_ENABLED_LABEL},
+      {"braveLeoAssistantUserMemoryEnabledLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_USER_MEMORY_ENABLED_LABEL},
+      {"braveLeoAssistantCustomizationNameLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_NAME_LABEL},
+      {"braveLeoAssistantCustomizationNamePlaceholder",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_NAME_PLACEHOLDER},
+      {"braveLeoAssistantCustomizationJobLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_JOB_LABEL},
+      {"braveLeoAssistantCustomizationJobPlaceholder",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_JOB_PLACEHOLDER},
+      {"braveLeoAssistantCustomizationToneLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_TONE_LABEL},
+      {"braveLeoAssistantCustomizationTonePlaceholder",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_TONE_PLACEHOLDER},
+      {"braveLeoAssistantCustomizationOtherLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_OTHER_LABEL},
+      {"braveLeoAssistantCustomizationOtherPlaceholder",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_OTHER_PLACEHOLDER},
+      {"braveLeoAssistantCustomizationSaveButton",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_SAVE_BUTTON},
+      {"braveLeoAssistantCustomizationChangesSaved",
+       IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_CHANGES_SAVED},
+      {"braveLeoAssistantInputLengthError",
+       IDS_SETTINGS_LEO_ASSISTANT_INPUT_LENGTH_ERROR},
+
+      // Leo Assistant Memory Section
+      {"braveLeoAssistantYourMemoriesTitle",
+       IDS_SETTINGS_LEO_ASSISTANT_YOUR_MEMORIES_TITLE},
+      {"braveLeoAssistantYourMemoriesDesc",
+       IDS_SETTINGS_LEO_ASSISTANT_YOUR_MEMORIES_DESC},
+      {"braveLeoAssistantMemoryListEmptyTitle",
+       IDS_SETTINGS_LEO_ASSISTANT_MEMORY_LIST_EMPTY_TITLE},
+      {"braveLeoAssistantMemoryListEmptyDescription",
+       IDS_SETTINGS_LEO_ASSISTANT_MEMORY_LIST_EMPTY_DESCRIPTION},
+      {"braveLeoAssistantAddNewMemoryButtonLabel",
+       IDS_SETTINGS_LEO_ASSISTANT_ADD_NEW_MEMORY_BUTTON_LABEL},
+      {"braveLeoAssistantEditMemoryDialogTitle",
+       IDS_SETTINGS_LEO_ASSISTANT_EDIT_MEMORY_DIALOG_TITLE},
+      {"braveLeoAssistantCreateMemoryDialogTitle",
+       IDS_SETTINGS_LEO_ASSISTANT_CREATE_MEMORY_DIALOG_TITLE},
+      {"braveLeoAssistantMemoryInputPlaceholder",
+       IDS_SETTINGS_LEO_ASSISTANT_MEMORY_INPUT_PLACEHOLDER},
+      {"braveLeoAssistantDeleteMemoryConfirmation",
+       IDS_SETTINGS_LEO_ASSISTANT_DELETE_MEMORY_CONFIRMATION},
+      {"braveLeoAssistantDeleteMemoryConfirmationTitle",
+       IDS_SETTINGS_LEO_ASSISTANT_DELETE_MEMORY_CONFIRMATION_TITLE},
+      {"braveLeoAssistantDeleteAllMemoriesConfirmation",
+       IDS_SETTINGS_LEO_ASSISTANT_DELETE_ALL_MEMORIES_CONFIRMATION},
+      {"braveLeoAssistantDeleteAllMemoriesConfirmationTitle",
+       IDS_SETTINGS_LEO_ASSISTANT_DELETE_ALL_MEMORIES_CONFIRMATION_TITLE},
+      {"braveLeoAssistantNoSearchResultsFound",
+       IDS_SETTINGS_LEO_ASSISTANT_NO_SEARCH_RESULTS_FOUND},
+      {"braveLeoAssistantClearSearch", IDS_SETTINGS_LEO_ASSISTANT_CLEAR_SEARCH},
+      {"braveLeoAssistantSearchMemoriesPlaceholder",
+       IDS_SETTINGS_LEO_ASSISTANT_SEARCH_MEMORIES_PLACEHOLDER},
 
       // Survey Panelist Page
       {"surveyPanelist", IDS_SETTINGS_SURVEY_PANELIST},
@@ -975,6 +1060,17 @@ void BraveAddCommonStrings(content::WebUIDataSource* html_source,
       l10n_util::GetStringFUTF16(IDS_SETTINGS_LEO_ASSISTANT_ABOUT_LEO_DESC_2,
                                  kLeoPrivacyPolicyURL));
 
+  html_source->AddString(
+      "braveLeoAssistantCustomizationDescription",
+      l10n_util::GetStringFUTF16(
+          IDS_SETTINGS_LEO_ASSISTANT_CUSTOMIZATION_DESCRIPTION,
+          kLeoMemoryLearnMoreURL));
+
+  html_source->AddString(
+      "braveLeoAssistantYourMemoriesDesc",
+      l10n_util::GetStringFUTF16(IDS_SETTINGS_LEO_ASSISTANT_YOUR_MEMORIES_DESC,
+                                 kLeoMemoryLearnMoreURL));
+
   html_source->AddString("braveSurveyPanelistLearnMoreURL",
                          kSurveyPanelistLearnMoreURL);
 
@@ -1143,18 +1239,13 @@ void BraveAddLocalizedStrings(content::WebUIDataSource* html_source,
       base::FeatureList::IsEnabled(
           brave_shields::features::kBraveShowStrictFingerprintingMode));
 
-  html_source->AddBoolean("braveNewsDisabledByPolicy",
-                          profile->GetPrefs()->GetBoolean(
-                              brave_news::prefs::kBraveNewsDisabledByPolicy));
-
   html_source->AddBoolean(
       "braveTalkDisabledByPolicy",
       profile->GetPrefs()->GetBoolean(kBraveTalkDisabledByPolicy));
 
-#if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
-  html_source->AddBoolean(
-      "braveWaybackMachineDisabledByPolicy",
-      profile->GetPrefs()->GetBoolean(kBraveWaybackMachineDisabledByPolicy));
+#if BUILDFLAG(ENABLE_TOR)
+  html_source->AddBoolean("braveTorDisabledByPolicy",
+                          TorProfileServiceFactory::IsTorDisabled(profile));
 #endif
 
   if (base::FeatureList::IsEnabled(

@@ -5,30 +5,20 @@
 
 #include "brave/browser/ui/views/frame/split_view/brave_multi_contents_view.h"
 
+#include <utility>
+
 #include "base/check.h"
-#include "brave/browser/ui/brave_browser.h"
-#include "brave/browser/ui/color/brave_color_id.h"
 #include "brave/browser/ui/views/frame/brave_browser_view.h"
-#include "brave/browser/ui/views/frame/brave_contents_view_util.h"
-#include "brave/browser/ui/views/split_view/split_view_location_bar.h"
-#include "brave/browser/ui/views/split_view/split_view_separator.h"
+#include "brave/browser/ui/views/frame/split_view/brave_contents_container_view.h"
 #include "chrome/browser/profiles/profile.h"
-#include "chrome/browser/ui/browser_window/public/browser_window_features.h"
-#include "chrome/browser/ui/exclusive_access/exclusive_access_manager.h"
-#include "chrome/browser/ui/exclusive_access/fullscreen_controller.h"
 #include "chrome/browser/ui/views/frame/browser_view.h"
-#include "chrome/browser/ui/views/frame/contents_web_view.h"
 #include "chrome/browser/ui/views/frame/multi_contents_resize_area.h"
 #include "chrome/browser/ui/views/frame/multi_contents_view_delegate.h"
-#include "chrome/browser/ui/views/frame/multi_contents_view_mini_toolbar.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
-#include "ui/color/color_provider.h"
-#include "ui/compositor/layer.h"
-#include "ui/views/border.h"
 #include "ui/views/widget/widget.h"
 
 namespace {
-constexpr auto kSpacingBetweenContentsWebViews = 4;
+constexpr auto kSpacingBetweenContentsContainerViews = 4;
 }  // namespace
 
 // static
@@ -41,131 +31,115 @@ BraveMultiContentsView::BraveMultiContentsView(
     BrowserView* browser_view,
     std::unique_ptr<MultiContentsViewDelegate> delegate)
     : MultiContentsView(browser_view, std::move(delegate)) {
-  // Replace upstream's resize area with ours.
-  // To prevent making |resize_area_| dangling pointer,
-  // reset it after setting null to |resize_area_|.
-  {
-    std::unique_ptr<views::View> resize_area = RemoveChildViewT(resize_area_);
-    resize_area_ = nullptr;
-  }
-  auto* separator = AddChildView(
-      std::make_unique<SplitViewSeparator>(browser_view_->browser()));
-  separator->set_resize_delegate(this);
-  separator->set_separator_delegate(this);
-  separator->SetPreferredSize(gfx::Size(kSpacingBetweenContentsWebViews, 0));
-  resize_area_ = separator;
+  resize_area_->SetPreferredSize(
+      gfx::Size(kSpacingBetweenContentsContainerViews, 0));
+  start_contents_view_inset_ = gfx::Insets();
+  end_contents_view_inset_ = gfx::Insets();
 }
 
 BraveMultiContentsView::~BraveMultiContentsView() = default;
 
-void BraveMultiContentsView::UpdateContentsBorderAndOverlay() {
-  if (!IsInSplitView()) {
-    MultiContentsView::UpdateContentsBorderAndOverlay();
-    return;
-  }
-
-  // Draw active/inactive outlines around the contents areas and updates mini
-  // toolbar visibility.
-  const auto set_contents_border_and_mini_toolbar =
-      [this](ContentsContainerView* contents_container_view) {
-        const bool is_active = contents_container_view->GetContentsView() ==
-                               GetActiveContentsView();
-        const float corner_radius = GetCornerRadius(true);
-        if (is_active) {
-          contents_container_view->SetBorder(views::CreateRoundedRectBorder(
-              kBorderThickness, corner_radius,
-              kColorBraveSplitViewActiveWebViewBorder));
-        } else {
-          contents_container_view->SetBorder(views::CreateBorderPainter(
-              views::Painter::CreateRoundRectWith1PxBorderPainter(
-                  GetColorProvider()->GetColor(
-                      kColorBraveSplitViewInactiveWebViewBorder),
-                  GetColorProvider()->GetColor(kColorToolbar), corner_radius,
-                  SkBlendMode::kSrc,
-                  /*anti_alias*/ true,
-                  /*should_border_scale*/ true),
-              gfx::Insets(kBorderThickness)));
-        }
-        // Chromium's Mini toolbar should be hidden always as we have our own
-        // mini urlbar.
-        contents_container_view->GetMiniToolbar()->SetVisible(false);
-      };
-  for (auto* contents_container_view : contents_container_views_) {
-    set_contents_border_and_mini_toolbar(contents_container_view);
-  }
-}
-
 void BraveMultiContentsView::Layout(PassKey) {
-  // It's similar with upstream layout logic but replaced as we need to apply
-  // different radius on each view.
-  const gfx::Rect available_space(GetContentsBounds());
-  ViewWidths widths = GetViewWidths(available_space);
-  gfx::Rect start_rect(available_space.origin(),
-                       gfx::Size(widths.start_width, available_space.height()));
-  const gfx::Rect resize_rect(
-      start_rect.top_right(),
-      gfx::Size(widths.resize_width, available_space.height()));
-  gfx::Rect end_rect(resize_rect.top_right(),
-                     gfx::Size(widths.end_width, available_space.height()));
-  gfx::RoundedCornersF corners(GetCornerRadius(false));
-  for (auto* contents_container_view : contents_container_views_) {
-    auto* contents_web_view = contents_container_view->GetContentsView();
-    contents_web_view->layer()->SetRoundedCornerRadius(corners);
-    contents_web_view->holder()->SetCornerRadii(corners);
-    contents_web_view->holder()->SetCornerRadii(corners);
-  }
-  CHECK(contents_container_views_.size() == 2);
-  contents_container_views_[0]->SetBoundsRect(start_rect);
-  resize_area_->SetBoundsRect(resize_rect);
-  contents_container_views_[1]->SetBoundsRect(end_rect);
+  LayoutSuperclass<MultiContentsView>(this);
 
   BraveBrowserView::From(browser_view_)->NotifyDialogPositionRequiresUpdate();
 }
 
-float BraveMultiContentsView::GetCornerRadius(bool for_border) const {
-  auto* exclusive_access_manager =
-      browser_view_->browser()->GetFeatures().exclusive_access_manager();
-  if (exclusive_access_manager &&
-      exclusive_access_manager->fullscreen_controller()->IsTabFullscreen()) {
+void BraveMultiContentsView::UseContentsContainerViewForWebPanel() {
+  if (!contents_container_view_for_web_panel_) {
+    contents_container_view_for_web_panel_ = AddChildView(
+        std::make_unique<BraveContentsContainerView>(browser_view_));
+    contents_container_view_for_web_panel_->SetVisible(false);
+  }
+}
+
+void BraveMultiContentsView::SetWebPanelVisible(bool visible) {
+  CHECK(contents_container_view_for_web_panel_);
+  contents_container_view_for_web_panel_->SetVisible(visible);
+  contents_container_view_for_web_panel_->UpdateBorderAndOverlay(true, true,
+                                                                 false);
+}
+
+bool BraveMultiContentsView::IsWebPanelVisible() const {
+  CHECK(contents_container_view_for_web_panel_);
+  return contents_container_view_for_web_panel_->GetVisible();
+}
+
+void BraveMultiContentsView::SetWebPanelWidth(int width) {
+  web_panel_width_ = width;
+  InvalidateLayout();
+}
+
+void BraveMultiContentsView::SetWebPanelOnLeft(bool left) {
+  web_panel_on_left_ = left;
+  InvalidateLayout();
+}
+
+views::ProposedLayout BraveMultiContentsView::CalculateProposedLayout(
+    const views::SizeBounds& size_bounds) const {
+  if (!size_bounds.is_fully_bounded() ||
+      !contents_container_view_for_web_panel_) {
+    return MultiContentsView::CalculateProposedLayout(size_bounds);
+  }
+
+  views::SizeBounds new_size_bounds = size_bounds;
+  const int web_panel_width = GetWebPanelWidth();
+
+  // Negative to shrink to make room for web panel.
+  new_size_bounds.Enlarge(-web_panel_width, 0);
+  views::ProposedLayout layouts =
+      MultiContentsView::CalculateProposedLayout(new_size_bounds);
+
+  if (web_panel_on_left_) {
+    for (auto& layout : layouts.child_layouts) {
+      // Move all other views to right to put web panel on left side.
+      layout.bounds.Offset(web_panel_width, 0);
+    }
+  }
+
+  int host_width = size_bounds.width().value();
+  int host_height = size_bounds.height().value();
+  const int web_panel_x = web_panel_on_left_ ? 0 : host_width - web_panel_width;
+  gfx::Rect web_panel_rect(web_panel_x, 0, web_panel_width, host_height);
+  layouts.child_layouts.emplace_back(
+      contents_container_view_for_web_panel_.get(),
+      contents_container_view_for_web_panel_->GetVisible(), web_panel_rect);
+
+  layouts.host_size = gfx::Size(host_width, host_height);
+  return layouts;
+}
+
+void BraveMultiContentsView::ResetResizeArea() {
+  // Give same width on both contents view.
+  // Pass true to make delegate save ratio in session service like resizing
+  // complete.
+  delegate_->ResizeWebContents(0.5, /*done_resizing=*/true);
+}
+
+int BraveMultiContentsView::GetWebPanelWidth() const {
+  CHECK(contents_container_view_for_web_panel_);
+
+  if (!contents_container_view_for_web_panel_->GetVisible()) {
     return 0;
   }
 
-  return BraveBrowser::ShouldUseBraveWebViewRoundedCorners(
-             browser_view_->browser())
-             ? BraveContentsViewUtil::kBorderRadius +
-                   (for_border ? kBorderThickness : 0)
-             : 0;
+  return web_panel_width_;
 }
 
-void BraveMultiContentsView::OnDoubleClicked() {
-  // Give same width on both contents view.
-  delegate_->ResizeWebContents(0.5);
+void BraveMultiContentsView::UpdateCornerRadius() {
+  UpdateContentsBorderAndOverlay();
 }
 
-void BraveMultiContentsView::UpdateSecondaryLocationBar() {
-  if (!secondary_location_bar_) {
-    secondary_location_bar_ = std::make_unique<SplitViewLocationBar>(
-        browser_view_->browser()->profile()->GetPrefs());
-    secondary_location_bar_widget_ = std::make_unique<views::Widget>();
+BraveContentsContainerView*
+BraveMultiContentsView::GetActiveContentsContainerView() {
+  return BraveContentsContainerView::From(
+      contents_container_views_[active_index_]);
+}
 
-    secondary_location_bar_widget_->Init(
-        SplitViewLocationBar::GetWidgetInitParams(
-            GetWidget()->GetNativeView(), secondary_location_bar_.get()));
-  }
-
-  // Inactive web contents/view should be set to secondary location bar
-  // as it's attached to inactive contents view.
-  int inactive_index = active_index_ == 0 ? 1 : 0;
-  secondary_location_bar_->SetWebContents(
-      GetInactiveContentsView()->web_contents());
-  secondary_location_bar_->SetParentWebView(
-      contents_container_views_[inactive_index]);
-
-  // Set separator's menu widget visibility after setting location bar's to make
-  // separator's menu widget locate above the location bar.
-  auto* separator = static_cast<SplitViewSeparator*>(resize_area_);
-  CHECK(separator);
-  separator->ShowMenuButtonWidget();
+BraveContentsContainerView*
+BraveMultiContentsView::GetInactiveContentsContainerView() {
+  return BraveContentsContainerView::From(
+      contents_container_views_[GetInactiveIndex()]);
 }
 
 BEGIN_METADATA(BraveMultiContentsView)

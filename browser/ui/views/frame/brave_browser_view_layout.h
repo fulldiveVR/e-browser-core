@@ -21,7 +21,7 @@ class BraveBrowserViewLayout : public BrowserViewLayout {
                          WebAppFrameToolbarView* web_app_frame_toolbar,
                          views::Label* web_app_window_title,
                          TabStripRegionView* tab_strip_region_view,
-                         TabStrip* tab_strip,
+                         views::View* vertical_tab_strip_container,
                          views::View* toolbar,
                          InfoBarContainerView* infobar_container,
                          views::View* contents_container,
@@ -30,7 +30,6 @@ class BraveBrowserViewLayout : public BrowserViewLayout {
                          views::View* unified_side_panel,
                          views::View* right_aligned_side_panel_separator,
                          views::View* side_panel_rounded_corner,
-                         ImmersiveModeController* immersive_mode_controller,
                          views::View* contents_separator);
   ~BraveBrowserViewLayout() override;
 
@@ -59,10 +58,10 @@ class BraveBrowserViewLayout : public BrowserViewLayout {
 
   // BrowserViewLayout:
   void Layout(views::View* host) override;
-  int LayoutTabStripRegion(int top) override;
-  int LayoutBookmarkAndInfoBars(int top, int browser_view_y) override;
-  int LayoutInfoBar(int top) override;
-  void LayoutContentsContainerView(int top, int bottom) override;
+  void LayoutTabStripRegion(gfx::Rect& available_bounds) override;
+  void LayoutBookmarkBar(gfx::Rect& available_bounds) override;
+  void LayoutInfoBar(gfx::Rect& available_bounds) override;
+  void LayoutContentsContainerView(const gfx::Rect& available_bounds) override;
 
  private:
   void LayoutVerticalTabs();

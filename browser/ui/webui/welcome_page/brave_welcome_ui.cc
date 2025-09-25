@@ -23,21 +23,27 @@
 #include "brave/components/brave_welcome/resources/grit/brave_welcome_generated_map.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/webui_url_constants.h"
+#include "brave/components/p3a/pref_names.h"
+#include "brave/components/web_discovery/buildflags/buildflags.h"
+#include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/regional_capabilities/regional_capabilities_service_factory.h"
 #include "chrome/browser/ui/browser.h"
 #include "chrome/browser/ui/browser_finder.h"
 #include "chrome/browser/ui/webui/settings/privacy_sandbox_handler.h"
 #include "chrome/browser/ui/webui/settings/settings_default_browser_handler.h"
+#include "chrome/browser/ui/webui/theme_source.h"
 #include "chrome/common/pref_names.h"
 #include "chrome/grit/branded_strings.h"
 #include "components/country_codes/country_codes.h"
 #include "components/grit/brave_components_resources.h"
 #include "components/grit/brave_components_strings.h"
+#include "components/metrics/metrics_pref_names.h"
 #include "components/prefs/pref_service.h"
 #include "components/regional_capabilities/regional_capabilities_prefs.h"
 #include "content/public/browser/gpu_data_manager.h"
 #include "content/public/browser/page_navigator.h"
+#include "content/public/browser/url_data_source.h"
 #include "content/public/browser/web_ui_data_source.h"
 #include "content/public/browser/web_ui_message_handler.h"
 #include "ui/base/l10n/l10n_util.h"
@@ -87,7 +93,7 @@ constexpr webui::LocalizedString kLocalizedStrings[] = {
     {"braveWelcomeHelpWDPReject", IDS_BRAVE_WELCOME_HELP_WDP_REJECT}};
 
 void OpenJapanWelcomePage(Profile* profile) {
-  DCHECK(profile);
+  CHECK(profile);
   Browser* browser = chrome::FindBrowserWithProfile(profile);
   if (browser) {
     content::OpenURLParams open_params(
@@ -121,6 +127,7 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, const std::string& name)
                                                              // browser
 
   Profile* profile = Profile::FromWebUI(web_ui);
+  CHECK(profile);
   // added to allow front end to read/modify default search engine
   web_ui->AddMessageHandler(std::make_unique<
                             settings::BraveSearchEnginesHandler>(
@@ -157,10 +164,28 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, const std::string& name)
       "hardwareAccelerationEnabledAtStartup",
       content::GpuDataManager::GetInstance()->HardwareAccelerationEnabled());
 
+  // Add managed state information for welcome flow logic
+  PrefService* local_state = g_browser_process->local_state();
+  source->AddBoolean(
+      "isWebDiscoveryEnabledManaged",
+#if BUILDFLAG(ENABLE_EXTENSIONS) || BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
+      profile->GetPrefs()->IsManagedPreference(kWebDiscoveryEnabled));
+#else
+      false);
+#endif
+  source->AddBoolean("isMetricsReportingEnabledManaged",
+                     local_state->IsManagedPreference(
+                         metrics::prefs::kMetricsReportingEnabled));
+  source->AddBoolean("isP3AEnabledManaged",
+                     local_state->IsManagedPreference(p3a::kP3AEnabled));
+
   profile->GetPrefs()->SetBoolean(
       brave::welcome_ui::prefs::kHasSeenBraveWelcomePage, true);
 
   AddBackgroundColorToSource(source, web_ui->GetWebContents());
+
+  content::URLDataSource::Add(profile,
+                              std::make_unique<ThemeSource>(profile, true));
 }
 
 BraveWelcomeUI::~BraveWelcomeUI() = default;

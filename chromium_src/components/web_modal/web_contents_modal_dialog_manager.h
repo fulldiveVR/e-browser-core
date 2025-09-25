@@ -6,14 +6,14 @@
 #ifndef BRAVE_CHROMIUM_SRC_COMPONENTS_WEB_MODAL_WEB_CONTENTS_MODAL_DIALOG_MANAGER_H_
 #define BRAVE_CHROMIUM_SRC_COMPONENTS_WEB_MODAL_WEB_CONTENTS_MODAL_DIALOG_MANAGER_H_
 
-class SplitViewWithTabDialogBrowserTest;
+class SplitViewCommonBrowserTest;
 
-#define FocusTopmostDialog                          \
-  OnTabActiveStateChanged();                        \
-  friend class ::SplitViewWithTabDialogBrowserTest; \
+#define FocusTopmostDialog                   \
+  OnTabActiveStateChanged();                 \
+  friend class ::SplitViewCommonBrowserTest; \
   void FocusTopmostDialog
 
-#include "src/components/web_modal/web_contents_modal_dialog_manager.h"  // IWYU pragma: export
+#include <components/web_modal/web_contents_modal_dialog_manager.h>  // IWYU pragma: export
 
 #undef FocusTopmostDialog
 

@@ -49,7 +49,7 @@
     *** mLogoCoordinator;
     *** mInitialTileNum;
     *** mProfile;
-    *** insertSiteSectionView(...);
+    *** initializeSiteSectionView(...);
     *** setSearchProviderTopMargin(...);
     *** setSearchProviderBottomMargin(...);
     *** getLogoMargin(...);
@@ -58,7 +58,6 @@
 -keep class org.chromium.chrome.browser.suggestions.tile.MostVisitedTilesMediator {
     *** mTileGroup;
     public <init>(...);
-    *** updateTilePlaceholderVisibility(...);
 }
 
 -keep class org.chromium.chrome.browser.suggestions.tile.BraveMostVisitedTilesMediator {
@@ -73,7 +72,7 @@
     *** mToolbarSupplier;
     *** mBottomSheetController;
     *** mTabStripHeightSupplier;
-    *** updateSearchProviderHasLogo(...);
+    *** updateSearchProvider(...);
 }
 
 -keep class org.chromium.chrome.browser.ntp.BraveNewTabPage {
@@ -84,11 +83,6 @@
     *** mGoogleActivityControls;
     *** mSyncEncryption;
     *** mSyncEverything;
-}
-
--keep class org.chromium.chrome.browser.password_manager.settings.PasswordAccessReauthenticationHelper {
-    *** mCallback;
-    *** mFragmentManager;
 }
 
 -keep class org.chromium.chrome.browser.search_engines.settings.SearchEngineAdapter {
@@ -116,6 +110,7 @@
     public <init>(...);
     *** getPopupPosition(...);
     *** runMenuItemEnterAnimations(...);
+    *** createAppMenuContentView(...);
 }
 
 -keep class org.chromium.chrome.browser.ui.appmenu.BraveAppMenu {
@@ -190,6 +185,10 @@
 }
 
 -keep class org.chromium.chrome.browser.tabbed_mode.BraveTabbedAppMenuPropertiesDelegate {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.tabmodel.RedirectTabCreator {
     public <init>(...);
 }
 
@@ -300,14 +299,6 @@
     <init>(...);
 }
 
--keep class org.chromium.chrome.browser.password_manager.settings.PasswordSettings {
-    public <init>(...);
-}
-
--keep class org.chromium.chrome.browser.password_manager.settings.BravePasswordSettingsBase {
-    public <init>(...);
-}
-
 -keep class org.chromium.chrome.browser.customtabs.CustomTabAppMenuPropertiesDelegate {
     public <init>(...);
 }
@@ -382,14 +373,6 @@
 }
 
 -keep class org.chromium.chrome.browser.notifications.BraveNotificationManagerProxyImpl {
-    public <init>(...);
-}
-
--keep class org.chromium.chrome.browser.omnibox.status.StatusMediator {
-    public <init>(...);
-}
-
--keep class org.chromium.chrome.browser.omnibox.status.BraveStatusMediator {
     public <init>(...);
 }
 
@@ -502,7 +485,6 @@
 
 -keep class org.chromium.chrome.browser.multiwindow.MultiInstanceManagerApi31 {
     *** mInstanceId;
-    moveTabAction(...);
     handleMenuOrKeyboardAction(...);
     <init>(...);
 }
@@ -587,6 +569,7 @@
 
 -keep class org.chromium.chrome.browser.omnibox.suggestions.DropdownItemViewInfoListBuilder {
     <init>(...);
+    *** createUIContext(...);
 }
 
 -keep class org.chromium.chrome.browser.omnibox.suggestions.BraveDropdownItemViewInfoListBuilder {
@@ -742,6 +725,14 @@
     public <init>(...);
 }
 
+-keep class org.chromium.chrome.browser.settings.BraveFragmentDependencyProvider {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.settings.FragmentDependencyProvider {
+    public <init>(...);
+}
+
 -keep class org.chromium.chrome.browser.firstrun.BraveFreIntentCreator {
     public <init>(...);
 }
@@ -784,6 +775,10 @@
     public <init>(...);
 }
 
+-keep class org.chromium.chrome.browser.password_manager.settings.PasswordsPreference {
+    *** setUpPostDeprecationWarning(...);
+}
+
 -keep class org.chromium.chrome.browser.bookmarks.BookmarkUiPrefs {
     <init>(...);
 }
@@ -819,11 +814,11 @@
     protected <init>(...);
 }
 
--keep class org.chromium.components.signin.SystemAccountManagerDelegate {
+-keep class org.chromium.components.signin.NullAccountManagerDelegate {
     public <init>(...);
 }
 
--keep class org.chromium.components.signin.BraveSystemAccountManagerDelegate {
+-keep class org.chromium.components.signin.BraveNullAccountManagerDelegate {
     public <init>(...);
 }
 
@@ -864,6 +859,11 @@
 
 -keep class org.chromium.chrome.browser.omnibox.styles.OmniboxResourceProvider {
     *** getToolbarSidePaddingForNtp(...);
+}
+
+-keep class org.chromium.chrome.browser.password_manager.PasswordManagerHelper {
+    *** getForProfile(...);
+    *** sProfileMap;
 }
 
 -keep class org.chromium.chrome.browser.notifications.NotificationPlatformBridge {
@@ -911,7 +911,6 @@
     *** mToolbarCoordinator;
     *** mTabController;
     *** mMinimizationManagerHolder;
-    *** mCustomTabFeatureOverridesManager;
     *** getAppHeaderCoordinator(...);
     *** getBrowserServicesThemeColorProvider(...);
     public <init>(...);
@@ -1010,4 +1009,51 @@
 
 -keep class org.chromium.components.minidump_uploader.util.BraveHttpURLConnectionFactoryImpl {
     <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.toolbar.adaptive.AdaptiveToolbarPrefs {
+    *** getCustomizationSetting(...);
+}
+
+-keep class org.chromium.chrome.browser.download.home.search.SearchBarCoordinator {
+    <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.download.home.search.BraveSearchBarCoordinator {
+    <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.ui.AdaptiveToolbarUiCoordinator {
+    <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.ui.BraveAdaptiveToolbarUiCoordinator {
+    <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.toolbar.adaptive.AdaptiveToolbarStatePredictor {
+    *** isValidSegment(...);
+}
+
+-keep class org.chromium.chrome.browser.toolbar.adaptive.settings.RadioButtonGroupAdaptiveToolbarPreference {
+    *** mIsBound;
+    *** mAutoButton;
+    *** mNewTabButton;
+    *** mShareButton;
+}
+
+-keep class org.chromium.chrome.browser.ui.AdaptiveToolbarUiCoordinator {
+    *** mContext;
+    *** mActivityTabProvider;
+    *** mModalDialogManagerSupplier;
+    *** mProfileSupplier;
+    *** mAdaptiveToolbarButtonController;
+}
+
+-keep class org.chromium.chrome.browser.toolbar.adaptive.AdaptiveToolbarStatePredictor {
+    public <init>(...);
+}
+
+-keep class org.chromium.chrome.browser.toolbar.adaptive.BraveAdaptiveToolbarStatePredictor {
+    public <init>(...);
 }

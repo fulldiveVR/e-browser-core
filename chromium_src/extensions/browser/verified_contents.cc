@@ -48,7 +48,7 @@ constexpr uint8_t kBraveVerifiedContentsPublicKey[] = {
     base::span<const uint8_t> public_key,
     std::string_view contents) {
   // Note: VerifiedContents constructor is private.
-  auto verified_contents = base::WrapUnique(new VerifiedContents(public_key));
+  auto verified_contents = std::make_unique<VerifiedContents>(public_key);
   std::string payload;
   if (!verified_contents->GetPayload(contents, &payload))
   ```
@@ -96,6 +96,6 @@ constexpr uint8_t kBraveVerifiedContentsPublicKey[] = {
       VerifiedContents* vc, std::string_view contents) {                   \
     std::unique_ptr<VerifiedContents> verified_contents(vc)
 
-#include "src/extensions/browser/verified_contents.cc"
+#include <extensions/browser/verified_contents.cc>
 
 #undef WrapUnique

@@ -40,9 +40,10 @@ class BraveChromeAutofillClient : public ChromeAutofillClient {
  public:
   using ChromeAutofillClient::ChromeAutofillClient;
 
-  AutofillOptimizationGuide* GetAutofillOptimizationGuide() const override {
+  AutofillOptimizationGuideDecider* GetAutofillOptimizationGuideDecider()
+      const override {
     if (optimization_guide::features::IsOptimizationHintsEnabled()) {
-      return ChromeAutofillClient::GetAutofillOptimizationGuide();
+      return ChromeAutofillClient::GetAutofillOptimizationGuideDecider();
     }
     return nullptr;
   }
@@ -72,13 +73,13 @@ class BraveChromeAutofillClient : public ChromeAutofillClient {
 
 #define WrapUnique WrapUnique(new autofill::BraveChromeAutofillClient(web_contents))); \
   if (0) std::unique_ptr<autofill::ChromeAutofillClient> dummy(
-#include "src/chrome/browser/ui/autofill/chrome_autofill_client.cc"
+#include <chrome/browser/ui/autofill/chrome_autofill_client.cc>
 #undef WrapUnique
 
 namespace autofill {
 
-AutofillOptimizationGuide*
-ChromeAutofillClient::GetAutofillOptimizationGuide_Unused() const {
+AutofillOptimizationGuideDecider*
+ChromeAutofillClient::GetAutofillOptimizationGuideDecider_Unused() const {
   return nullptr;
 }
 
