@@ -1,0 +1,1 @@
+./sign_ebrowser.sh "/Users/managerdark/brave-browser/src/out" Release arm64 true

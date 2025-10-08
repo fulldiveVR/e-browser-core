@@ -19,13 +19,13 @@ const base::FeatureParam<std::string> kAIModelsDefaultKey{
 #if BUILDFLAG(IS_IOS)
     &kAIChat, "default_model", "chat-basic"};
 #else
-    &kAIChat, "default_model", "chat-automatic"};
+    &kAIChat, "default_model", "chat-basic"};
 #endif
 const base::FeatureParam<std::string> kAIModelsPremiumDefaultKey{
 #if BUILDFLAG(IS_IOS)
     &kAIChat, "default_premium_model", kClaudeSonnetModelKey};
 #else
-    &kAIChat, "default_premium_model", "chat-automatic"};
+    &kAIChat, "default_premium_model", "chat-basic"};
 #endif
 const base::FeatureParam<std::string> kAIModelsVisionDefaultKey{
     &kAIChat, "default_vision_model", kClaudeHaikuModelKey};

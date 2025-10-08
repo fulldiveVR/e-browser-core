@@ -9,7 +9,6 @@ import { action } from 'typesafe-actions'
 // Constants
 import { types } from '../constants/new_tab_types'
 import { Stats } from '../api/stats'
-import { NewTabAdsData } from '../api/newTabAdsData'
 import { InitialData } from '../api/initialData'
 import { Background, CustomBackground } from '../api/background'
 
@@ -20,13 +19,7 @@ export const statsUpdated = (stats: Stats) =>
 
 export const init = createAction<void>('page init')
 
-export const newTabAdsDataUpdated = (data: NewTabAdsData) =>
-  action(types.NEW_TAB_ADS_DATA_UPDATED, data)
 
-export const dismissBrandedWallpaperNotification = (isUserAction: boolean) =>
-  action(types.NEW_TAB_DISMISS_BRANDED_WALLPAPER_NOTIFICATION, {
-    isUserAction
-  })
 
 export const preferencesUpdated = (preferences: NewTab.Preferences) =>
   action(types.NEW_TAB_PREFERENCES_UPDATED, preferences)

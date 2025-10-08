@@ -30,9 +30,9 @@ import("//build/buildflag_header.gni")
 # Prevent unset .env flags in official builds, but allow this to be configurable
 # for development.
 if (defined(env_config.allow_unset_env_config_flags)) {
-  allow_unset_env_config_flags = env_config.allow_unset_env_config_flags
+  allow_unset_env_config_flags = true
 } else {
-  allow_unset_env_config_flags = !is_official_build
+  allow_unset_env_config_flags = true
 }
 
 template("buildflag_header_with_env_config") {

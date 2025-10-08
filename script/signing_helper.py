@@ -78,6 +78,50 @@ def BraveModifyPartsForSigning(parts, config):
             verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
         parts['sparkle-framework'].options = full_hardened_runtime_options
 
+    parts['aiwize-darwin'] = CodeSignedProduct(
+        '{0.framework_dir}/Versions/{0.version}/Resources/aiwize-darwin'  # pylint: disable=line-too-long
+        .format(config),
+        'aiwize-darwin',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['aiwize-darwin'].options = (
+        full_hardened_runtime_options
+    )
+    parts['ollama-darwin'] = CodeSignedProduct(
+        '{0.framework_dir}/Versions/{0.version}/Resources/ollama-darwin'  # pylint: disable=line-too-long
+        .format(config),
+        'ollama-darwin',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['ollama-darwin'].options = (
+        full_hardened_runtime_options
+    )
+    parts['ollama_llama_server_darwin'] = CodeSignedProduct(
+        '{0.framework_dir}/Versions/{0.version}/Resources/ollama_llama_server_darwin'  # pylint: disable=line-too-long
+        .format(config),
+        'ollama_llama_server_darwin',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['ollama_llama_server_darwin'].options = (
+        full_hardened_runtime_options
+    )
+
+    parts['browser-api-macos-arm'] = CodeSignedProduct(
+        '{0.framework_dir}/Versions/{0.version}/Resources/browser-api-macos-arm'  # pylint: disable=line-too-long
+        .format(config),
+        'browser-api-macos-arm',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['browser-api-macos-arm'].options = (
+        full_hardened_runtime_options
+    )
+    parts['browser-api-macos-arm'].entitlements = 'helper-plugin-entitlements.plist'
+
+    parts['qdrant-macos'] = CodeSignedProduct(
+        '{0.framework_dir}/Versions/{0.version}/Resources/qdrant-macos'  # pylint: disable=line-too-long
+        .format(config),
+        'qdrant-macos',
+        verify_options=VerifyOptions.DEEP | VerifyOptions.NO_STRICT)
+    parts['qdrant-macos'].options = (
+        full_hardened_runtime_options
+    )
+    parts['qdrant-macos'].entitlements = 'helper-plugin-entitlements.plist'
     # Overwrite to avoid TeamID mismatch with widevine dylib.
     parts['helper-app'].entitlements = 'helper-entitlements.plist'
     parts['helper-app'].options = (CodeSignOptions.RESTRICT
@@ -90,7 +134,7 @@ def BraveModifyPartsForSigning(parts, config):
         # com.brave.Browser.<channel>.UpdaterPrivilegedHelper. This is because
         # our current branding logic treats each channel as a separate product.
         # We should instead use upstream's channel_customize mechanism.
-        # See https://github.com/brave/brave-browser/issues/39347.
+        # See https://github.com/fulldiveVR/e-browser/issues/39347.
         privileged_helper = parts['privileged-helper']
         channel_re = 'com.brave.Browser(.*).UpdaterPrivilegedHelper'
         replacement = 'com.brave.Browser.UpdaterPrivilegedHelper'

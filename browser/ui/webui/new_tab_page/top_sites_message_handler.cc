@@ -93,31 +93,6 @@ void TopSitesMessageHandler::OnURLsAvailable(
   base::Value::List tiles;
   int tile_id = 1;
 
-  // Super Referral feature only present in regular tabs (not private tabs)
-  auto* service = ViewCounterServiceFactory::GetForProfile(profile_);
-  if (service) {
-    for (auto& top_site : service->GetTopSitesData()) {
-      base::Value::Dict tile_value;
-      if (top_site.name.empty()) {
-        tile_value.Set("title", top_site.destination_url);
-        tile_value.Set("title_direction", base::i18n::LEFT_TO_RIGHT);
-      } else {
-        tile_value.Set("title", top_site.name);
-        tile_value.Set("title_direction",
-                       base::i18n::GetFirstStrongCharacterDirection(
-                           base::UTF8ToUTF16(top_site.name)));
-      }
-      tile_value.Set("id", tile_id++);
-      tile_value.Set("url", top_site.destination_url);
-      tile_value.Set("favicon", top_site.image_path);
-      tile_value.Set("defaultSRTopSite", true);
-      tile_value.Set("source",
-                     static_cast<int32_t>(ntp_tiles::TileSource::ALLOWLIST));
-      tile_value.Set("title_source", static_cast<int32_t>(
-                                         ntp_tiles::TileTitleSource::INFERRED));
-      tiles.Append(std::move(tile_value));
-    }
-  }
 
   for (auto& tile : sections.at(ntp_tiles::SectionType::PERSONALIZED)) {
     base::Value::Dict tile_value;

@@ -1,5 +1,5 @@
 diff --git a/chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc b/chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
-index b7052cda697c5c8533d0e94381f7ea6c7192e085..9eacf30b4075bcd1d9781235ebe231bca73daf2e 100644
+index b7052cda697c5c8533d0e94381f7ea6c7192e085..8cb038c97f8d8e33ad1a3129a5c73244bf01ff0d 100644
 --- a/chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
 +++ b/chrome/browser/ui/webui/chrome_web_ui_controller_factory.cc
 @@ -340,6 +340,7 @@ void ChromeWebUIControllerFactory::GetFaviconForURL(
@@ -10,3 +10,21 @@ index b7052cda697c5c8533d0e94381f7ea6c7192e085..9eacf30b4075bcd1d9781235ebe231bc
    static base::NoDestructor<ChromeWebUIControllerFactory> instance;
    return instance.get();
  }
+@@ -347,6 +348,17 @@ ChromeWebUIControllerFactory* ChromeWebUIControllerFactory::GetInstance() {
+ // static
+ bool ChromeWebUIControllerFactory::IsWebUIAllowedToMakeNetworkRequests(
+     const url::Origin& origin) {
++
++
++  if (origin.host() == "ai-combiner-panel" ||
++      origin.host() == "ai-combiner-chat") {
++    return true;
++  }
++
++
++  if (origin.host() == "dashboard") {
++    return true;
++  }
+   // Allowlist to work around exceptional cases.
+   //
+   // If you are adding a new host to this list, please file a corresponding bug

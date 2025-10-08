@@ -17,7 +17,7 @@ import {
   StyledUploadIconContainer,
   StyledUploadLabel
 } from '../../../components/default'
-import braveBackground from './assets/brave-background.png'
+import aiwizeBackground from './assets/wallpaper-image.png'
 import UploadIcon from './assets/upload-icon'
 import Toggle from '@brave/leo/react/toggle'
 
@@ -25,25 +25,20 @@ import { getLocale } from '../../../../common/locale'
 
 import BackgroundChooser from './backgroundChooser'
 import { defaultSolidBackgroundColor, solidColorsForBackground, gradientColorsForBackground, defaultGradientColor } from '../../../data/backgrounds'
-import SponsoredImageToggle from './sponsoredImagesToggle'
 
 import { RANDOM_SOLID_COLOR_VALUE, RANDOM_GRADIENT_COLOR_VALUE, MAX_CUSTOM_IMAGE_BACKGROUNDS } from 'gen/brave/components/brave_new_tab_ui/brave_new_tab_page.mojom.m.js'
 import BackgroundImageTiles from './backgroundImageTiles'
 
 interface Props {
   newTabData: NewTab.State
-  toggleBrandedWallpaperOptIn: () => void
   toggleShowBackgroundImage: () => void
   chooseNewCustomImageBackground: () => void
   setCustomImageBackground: (selectedBackground: string) => void
   removeCustomImageBackground: (background: string) => void
   setBraveBackground: (selectedBackground: string) => void
   setColorBackground: (color: string, useRandomColor: boolean) => void
-  brandedWallpaperOptIn: boolean
   showBackgroundImage: boolean
   featureCustomBackgroundEnabled: boolean
-  onEnableRewards: () => void
-  braveRewardsSupported: boolean
 }
 
 enum Location {
@@ -58,7 +53,7 @@ interface State {
 }
 
 class BackgroundImageSettings extends React.PureComponent<Props, State> {
-  constructor (props: Props) {
+  constructor(props: Props) {
     super(props)
     this.state = {
       location: Location.LIST
@@ -94,12 +89,12 @@ class BackgroundImageSettings extends React.PureComponent<Props, State> {
       <StyledCustomBackgroundOption onClick={onClick}>
         <StyledSelectionBorder selected={checked}>
           <StyledUploadIconContainer selected={checked}>
-            { sampleImages?.length
-              ? <BackgroundImageTiles images={sampleImages}/>
+            {sampleImages?.length
+              ? <BackgroundImageTiles images={sampleImages} />
               : (<>
-                  <UploadIcon />
-                  <StyledUploadLabel> {getLocale('customBackgroundImageOptionUploadLabel')} </StyledUploadLabel>
-                </>)
+                <UploadIcon />
+                <StyledUploadLabel> {getLocale('customBackgroundImageOptionUploadLabel')} </StyledUploadLabel>
+              </>)
             }
           </StyledUploadIconContainer>
         </StyledSelectionBorder>
@@ -112,16 +107,12 @@ class BackgroundImageSettings extends React.PureComponent<Props, State> {
     )
   }
 
-  render () {
+  render() {
     const {
       newTabData,
       toggleShowBackgroundImage,
-      toggleBrandedWallpaperOptIn,
-      brandedWallpaperOptIn,
       showBackgroundImage,
       featureCustomBackgroundEnabled,
-      onEnableRewards,
-      braveRewardsSupported
     } = this.props
 
     const usingCustomImageBackground = newTabData.backgroundWallpaper?.type === 'image'
@@ -147,18 +138,6 @@ class BackgroundImageSettings extends React.PureComponent<Props, State> {
                 size='small'
               />
             </SettingsRow>
-            {braveRewardsSupported && (
-              <SettingsRow>
-                <SponsoredImageToggle
-                  onChange={toggleBrandedWallpaperOptIn}
-                  onEnableRewards={onEnableRewards}
-                  checked={showBackgroundImage && brandedWallpaperOptIn}
-                  disabled={!showBackgroundImage /* This option can only be enabled if users opt in for background images */}
-                  rewardsEnabled={this.props.newTabData.rewardsState.rewardsEnabled}
-                  isExternalWalletConnected={
-                    Boolean(this.props.newTabData.rewardsState.externalWallet)} />
-              </SettingsRow>
-            )}
             {showBackgroundImage && featureCustomBackgroundEnabled && (
               <StyledCustomBackgroundSettings>
                 {this.renderUploadButton(this.onClickCustomBackground, usingCustomImageBackground, /* showTitle= */ true, this.props.newTabData.customImageBackgrounds)}
@@ -166,7 +145,7 @@ class BackgroundImageSettings extends React.PureComponent<Props, State> {
                   onClick={this.onClickBraveBackground}
                 >
                   <StyledSelectionBorder selected={usingBraveBackground}>
-                    <StyledCustomBackgroundOptionImage image={braveBackground} selected={usingBraveBackground}/>
+                    <StyledCustomBackgroundOptionImage image={aiwizeBackground} selected={usingBraveBackground} />
                   </StyledSelectionBorder>
                   <StyledCustomBackgroundOptionLabel>
                     {getLocale('braveBackgroundImageOptionTitle')}
@@ -177,7 +156,7 @@ class BackgroundImageSettings extends React.PureComponent<Props, State> {
                 >
                   <StyledSelectionBorder selected={usingSolidColorBackground}>
                     <StyledCustomBackgroundOptionColor
-                      colorValue={usingSolidColorBackground ? selectedBackgroundColor : defaultSolidBackgroundColor }
+                      colorValue={usingSolidColorBackground ? selectedBackgroundColor : defaultSolidBackgroundColor}
                       selected={usingSolidColorBackground}
                     />
                   </StyledSelectionBorder>
@@ -233,9 +212,9 @@ class BackgroundImageSettings extends React.PureComponent<Props, State> {
             onToggleRandomColor={on => this.props.setCustomImageBackground(on ? '' : this.props.newTabData.customImageBackgrounds[0].wallpaperImageUrl)}
             onSelectValue={this.props.setCustomImageBackground}
             onBack={() => this.setLocation(Location.LIST)}
-            renderExtraButton={ this.props.newTabData.customImageBackgrounds?.length < MAX_CUSTOM_IMAGE_BACKGROUNDS
-                ? () => this.renderUploadButton(this.props.chooseNewCustomImageBackground, /* checked= */false, /* showTitle= */ false)
-                : undefined}
+            renderExtraButton={this.props.newTabData.customImageBackgrounds?.length < MAX_CUSTOM_IMAGE_BACKGROUNDS
+              ? () => this.renderUploadButton(this.props.chooseNewCustomImageBackground, /* checked= */false, /* showTitle= */ false)
+              : undefined}
             onRemoveValue={this.props.removeCustomImageBackground}
           />
         }

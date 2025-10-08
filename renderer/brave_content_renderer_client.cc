@@ -16,18 +16,15 @@
 #include "brave/components/brave_search/renderer/brave_search_render_frame_observer.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/common/features.h"
 #include "brave/components/cosmetic_filters/renderer/cosmetic_filters_js_render_frame_observer.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
 #include "brave/components/safe_builtins/renderer/safe_builtins.h"
 #include "brave/components/script_injector/renderer/script_injector_render_frame_observer.h"
 #include "brave/components/skus/common/features.h"
 #include "brave/components/skus/renderer/skus_render_frame_observer.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "brave/renderer/brave_render_frame_observer.h"
 #include "brave/renderer/brave_render_thread_observer.h"
-#include "brave/renderer/brave_wallet/brave_wallet_render_frame_observer.h"
 #include "chrome/common/chrome_isolated_world_ids.h"
 #include "chrome/renderer/chrome_render_thread_observer.h"
 #include "chrome/renderer/process_state.h"
@@ -47,10 +44,6 @@
 #include "brave/components/ai_rewriter/renderer/ai_rewriter_agent.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/components/speedreader/common/features.h"
-#include "brave/components/speedreader/renderer/speedreader_render_frame_observer.h"
-#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/common/brave_vpn_utils.h"
@@ -162,12 +155,6 @@ void BraveContentRendererClient::RenderFrameCreated(
         render_frame, ISOLATED_WORLD_ID_BRAVE_INTERNAL, dynamic_params_closure);
   }
 
-  if (base::FeatureList::IsEnabled(
-          brave_wallet::features::kNativeBraveWalletFeature)) {
-    new brave_wallet::BraveWalletRenderFrameObserver(
-        render_frame,
-        base::BindRepeating(&BraveRenderThreadObserver::GetDynamicParams));
-  }
 
   new script_injector::ScriptInjectorRenderFrameObserver(render_frame);
 
@@ -189,12 +176,6 @@ void BraveContentRendererClient::RenderFrameCreated(
   }
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  if (base::FeatureList::IsEnabled(speedreader::kSpeedreaderFeature)) {
-    new speedreader::SpeedreaderRenderFrameObserver(
-        render_frame, ISOLATED_WORLD_ID_BRAVE_INTERNAL);
-  }
-#endif
 
 #if BUILDFLAG(ENABLE_PLAYLIST)
   if (base::FeatureList::IsEnabled(playlist::features::kPlaylist) &&

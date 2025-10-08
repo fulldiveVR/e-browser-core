@@ -12,9 +12,6 @@ class BraveVPNController;
 class SplitViewBrowserData;
 class PlaylistSidePanelCoordinator;
 
-namespace brave_rewards {
-class RewardsPanelCoordinator;
-}  // namespace brave_rewards
 
 namespace sidebar {
 class SidebarController;
@@ -40,9 +37,6 @@ class BrowserWindowFeatures : public BrowserWindowFeatures_ChromiumImpl {
   sidebar::SidebarController* sidebar_controller() {
     return sidebar_controller_.get();
   }
-  brave_rewards::RewardsPanelCoordinator* rewards_panel_coordinator() {
-    return rewards_panel_coordinator_.get();
-  }
   BraveVPNController* brave_vpn_controller();
 
   // Checks this is not null before using it always because this is reset
@@ -63,8 +57,6 @@ class BrowserWindowFeatures : public BrowserWindowFeatures_ChromiumImpl {
   std::unique_ptr<sidebar::SidebarController> sidebar_controller_;
   std::unique_ptr<BraveVPNController> brave_vpn_controller_;
   std::unique_ptr<SplitViewBrowserData> split_view_browser_data_;
-  std::unique_ptr<brave_rewards::RewardsPanelCoordinator>
-      rewards_panel_coordinator_;
   std::unique_ptr<PlaylistSidePanelCoordinator>
       playlist_side_panel_coordinator_;
 };

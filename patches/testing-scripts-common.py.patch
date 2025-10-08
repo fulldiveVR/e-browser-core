@@ -1,0 +1,36 @@
+diff --git a/testing/scripts/common.py b/testing/scripts/common.py
+index 208b0d1deffd97dc044c70c0c837f2401b419620..1ce22765dbb90b58a598c172db7a1d733f3769fd 100644
+--- a/testing/scripts/common.py
++++ b/testing/scripts/common.py
+@@ -66,6 +66,7 @@ def set_lpac_acls(acl_dir, is_test_script=False):
+     return
+   try:
+     existing_acls = subprocess.check_output(['icacls', acl_dir],
++                                            encoding='Windows-1251',
+                                             stderr=subprocess.STDOUT,
+                                             universal_newlines=True)
+   except subprocess.CalledProcessError as e:
+@@ -80,6 +81,7 @@ def set_lpac_acls(acl_dir, is_test_script=False):
+     try:
+       existing_acls = subprocess.check_output(
+           ['icacls', acl_dir, '/grant', '*S-1-15-2-2:(OI)(CI)(RX)'],
++          encoding='Windows-1251',
+           stderr=subprocess.STDOUT)
+     except subprocess.CalledProcessError as e:
+       logging.error('Failed to retrieve existing ACLs for directory %s',
+@@ -93,6 +95,7 @@ def set_lpac_acls(acl_dir, is_test_script=False):
+   with temporary_file() as tempfile_path:
+     subprocess.check_output(
+         ['icacls', acl_dir, '/save', tempfile_path, '/t', '/q', '/c'],
++        encoding='Windows-1251',
+         stderr=subprocess.STDOUT)
+     # ACL files look like this, e.g. for c:\a\b\c\d\Release_x64
+     #
+@@ -111,6 +114,7 @@ def set_lpac_acls(acl_dir, is_test_script=False):
+           continue
+         subprocess.check_output(
+             ['icacls', full_filename, '/grant', '*S-1-15-2-2:(RX)'],
++            encoding='Windows-1251',
+             stderr=subprocess.STDOUT)
+ 
+ 

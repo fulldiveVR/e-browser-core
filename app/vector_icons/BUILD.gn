@@ -5,7 +5,6 @@
 
 import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
 import("//brave/components/playlist/common/buildflags/buildflags.gni")
-import("//brave/components/speedreader/common/buildflags/buildflags.gni")
 import("//build/config/ui.gni")
 import("//components/vector_icons/vector_icons.gni")
 
@@ -16,9 +15,6 @@ aggregate_vector_icons("brave_vector_icons") {
   # https://leo.bravesoftware.com/?path=/story/icon--all-icons
   sources = [
     "bat.icon",
-    "brave_ads_close_button.icon",
-    "brave_ads_dark_mode_info_button.icon",
-    "brave_ads_light_mode_info_button.icon",
     "brave_sad.icon",
     "brave_tooltips_stopwatch.icon",
     "download_unlock.icon",
@@ -47,14 +43,6 @@ aggregate_vector_icons("brave_vector_icons") {
     ]
   }
 
-  if (enable_speedreader) {
-    sources += [
-      "brave_speedreader_graphic_book1.icon",
-      "brave_speedreader_graphic_book2.icon",
-      "brave_speedreader_graphic_book3.icon",
-      "brave_speedreader_graphic_lines.icon",
-    ]
-  }
 }
 
 source_set("vector_icons") {

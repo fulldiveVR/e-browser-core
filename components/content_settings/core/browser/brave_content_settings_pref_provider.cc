@@ -173,7 +173,7 @@ void BravePrefProvider::MigrateShieldsSettings(bool incognito) {
   }
 
   // Fix any wildcard entries that could cause issues like
-  // https://github.com/brave/brave-browser/issues/23113
+  // https://github.com/fulldiveVR/e-browser/issues/23113
   constexpr const ContentSettingsType kNoWildcardTypes[] = {
       ContentSettingsType::BRAVE_SHIELDS,
   };
@@ -409,7 +409,7 @@ void BravePrefProvider::MigrateShieldsSettingsV3ToV4(int start_version) {
 
   if (start_version == 3) {
     // Because of
-    // https://github.com/brave/brave-browser/issues/24119 the cookies
+    // https://github.com/fulldiveVR/e-browser/issues/24119 the cookies
     // overwritten by the obsolete cookies. Repeat v2 to v3 migration.
     prefs_->SetInteger(kBraveShieldsSettingsVersion, 2);
     MigrateShieldsSettingsV2ToV3();

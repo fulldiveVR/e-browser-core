@@ -9,7 +9,7 @@
     }
   ],
   "start_url": "/?source=pwa",
-  "id": "chrome://leo-ai/",
+  "id": "chrome://aiwize-chat/",
   "display": "standalone",
-  "scope": "chrome://leo-ai/"
+  "scope": "chrome://aiwize-chat/"
 }

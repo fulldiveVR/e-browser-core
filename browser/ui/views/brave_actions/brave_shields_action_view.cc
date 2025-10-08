@@ -17,7 +17,6 @@
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/url_constants.h"
 #include "brave/components/constants/webui_url_constants.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/layout_constants.h"
 #include "chrome/browser/ui/omnibox/omnibox_theme.h"
@@ -46,9 +45,6 @@
 #include "ui/views/view_class_properties.h"
 #include "url/gurl.h"
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/speedreader/speedreader_tab_helper.h"
-#endif
 
 namespace {
 constexpr SkColor kBadgeBg = SkColorSetRGB(0x63, 0x64, 0x72);
@@ -232,13 +228,6 @@ bool BraveShieldsActionView::IsPageInReaderMode(
   if (!web_contents) {
     return false;
   }
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  if (auto* speedreader_tab_helper =
-          speedreader::SpeedreaderTabHelper::FromWebContents(web_contents)) {
-    return speedreader::DistillStates::IsDistilled(
-        speedreader_tab_helper->PageDistillState());
-  }
-#endif
   return false;
 }
 

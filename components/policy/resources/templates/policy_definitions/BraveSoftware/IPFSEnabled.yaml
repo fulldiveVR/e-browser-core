@@ -9,10 +9,10 @@ features:
   dynamic_refresh: false
   per_profile: true
 owners:
-- clifton@brave.com
-- fmarier@brave.com
-- anthony@brave.com
-- vstruts@brave.com
+- clifton@aiwize.com
+- fmarier@aiwize.com
+- anthony@aiwize.com
+- vstruts@aiwize.com
 schema:
   type: boolean
 supported_on:

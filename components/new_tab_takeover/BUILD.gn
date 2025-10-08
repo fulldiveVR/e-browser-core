@@ -14,7 +14,6 @@ transpile_web_ui("new_tab_takeover_ui") {
         rebase_path("new_tab_takeover.tsx"),
       ] ]
   public_deps = [
-    "//brave/components/brave_ads/core/mojom:mojom_js",
     "//brave/components/new_tab_takeover/mojom:mojom_js",
     "//brave/components/ntp_background_images/browser/mojom:mojom_js",
     "//mojo/public/mojom/base",

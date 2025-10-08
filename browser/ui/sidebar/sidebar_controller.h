@@ -34,7 +34,7 @@ class SidebarModel;
 // This will observe SidebarService to know per-profile sidebar data changing
 // such as adding new item or deleting existing item.
 // Controller will request about add/delete items to SidebarService.
-// TODO(https://github.com/brave/brave-browser/issues/45977): Avoid direct
+// TODO(https://github.com/fulldiveVR/e-browser/issues/45977): Avoid direct
 // Browser dependency. We should pass what we need like TabStripModel.
 class SidebarController : public SidebarService::Observer {
  public:

@@ -12,7 +12,6 @@
 #include "base/logging.h"
 #include "base/metrics/histogram_macros.h"
 #include "base/time/time.h"
-#include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/brave_shields/core/browser/brave_shields_utils.h"
 #include "brave/components/misc_metrics/pref_names.h"
 #include "brave/components/p3a_utils/bucket.h"
@@ -96,14 +95,6 @@ PageMetrics::PageMetrics(PrefService* local_state,
   }
 
   pref_change_registrar_.Init(profile_prefs_);
-  pref_change_registrar_.Add(
-      brave_rewards::prefs::kEnabled,
-      base::BindRepeating(&PageMetrics::ReportPagesLoaded,
-                          base::Unretained(this)));
-  pref_change_registrar_.Add(
-      brave_rewards::prefs::kExternalWalletType,
-      base::BindRepeating(&PageMetrics::ReportPagesLoaded,
-                          base::Unretained(this)));
 }
 
 PageMetrics::~PageMetrics() = default;
@@ -221,17 +212,7 @@ void PageMetrics::ReportPagesLoaded() {
   // Report based on Rewards status
   const char* pages_loaded_histogram_name = nullptr;
 
-  if (profile_prefs_->GetBoolean(brave_rewards::prefs::kEnabled)) {
-    if (profile_prefs_->GetString(brave_rewards::prefs::kExternalWalletType)
-            .empty()) {
-      pages_loaded_histogram_name = kPagesLoadedRewardsHistogramName;
-    } else {
-      pages_loaded_histogram_name = kPagesLoadedRewardsWalletHistogramName;
-    }
-  } else {
-    pages_loaded_histogram_name = kPagesLoadedNonRewardsHistogramName;
-  }
-
+  pages_loaded_histogram_name = kPagesLoadedNonRewardsHistogramName;
   for (const auto* histogram_name : kAllPagesLoadedHistogramNames) {
     if (pages_loaded_histogram_name == histogram_name) {
       p3a_utils::RecordToHistogramBucket(histogram_name, kPagesLoadedBuckets,

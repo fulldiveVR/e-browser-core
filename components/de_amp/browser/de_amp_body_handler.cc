@@ -222,7 +222,7 @@ bool DeAmpBodyHandler::OpenCanonicalURL(const GURL& new_url) {
 
   // If we've already navigated to the canonical URL last time, we
   // should stop De-AMPing. This is done to prevent redirect loops.
-  // https://github.com/brave/brave-browser/issues/22610
+  // https://github.com/fulldiveVR/e-browser/issues/22610
   if (new_url == request_.referrer ||
       FindUrlInNavigationChain(new_url, navigation_chain_) ||
       FindUrlInNavigationChain(request_.referrer, navigation_chain_)) {

@@ -91,7 +91,7 @@ void OpenJapanWelcomePage(Profile* profile) {
   Browser* browser = chrome::FindBrowserWithProfile(profile);
   if (browser) {
     content::OpenURLParams open_params(
-        GURL("https://brave.com/ja/desktop-ntp-tutorial"), content::Referrer(),
+        GURL("https://aiwize.com/ja/desktop-ntp-tutorial"), content::Referrer(),
         WindowOpenDisposition::NEW_BACKGROUND_TAB,
         ui::PAGE_TRANSITION_AUTO_TOPLEVEL, false);
     browser->OpenURL(open_params, /*navigation_handle_callback=*/{});
@@ -149,9 +149,6 @@ BraveWelcomeUI::BraveWelcomeUI(content::WebUI* web_ui, const std::string& name)
 
   // Variables considered when determining which onboarding cards to show
   source->AddString("countryString", country_id.CountryCode());
-  source->AddBoolean(
-      "showRewardsCard",
-      base::FeatureList::IsEnabled(brave_welcome::features::kShowRewardsCard));
 
   source->AddBoolean(
       "hardwareAccelerationEnabledAtStartup",

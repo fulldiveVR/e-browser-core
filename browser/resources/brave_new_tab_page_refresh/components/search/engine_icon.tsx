@@ -28,7 +28,7 @@ function getNamedIcon(engineHost: string) {
       return 'google-color'
     case 'duckduckgo.com':
       return 'duckduckgo-color'
-    case 'search.brave.com':
+    case 'search.aiwize.com':
       return 'social-brave-release-favicon-fullheight-color'
     case 'www.bing.com':
       return 'bing-color'

@@ -10,18 +10,11 @@ source_set("unit_tests") {
     sources = [
       "brave_importer_observer_unittest.cc",
       "brave_site_settings_handler_unittest.cc",
-      "brave_wallet_handler_unittest.cc",
     ]
 
     deps = [
       "//base/test:test_support",
-      "//brave/browser/brave_wallet",
       "//brave/components/brave_shields/core/common",
-      "//brave/components/brave_wallet/browser",
-      "//brave/components/brave_wallet/browser:constants",
-      "//brave/components/brave_wallet/browser:pref_names",
-      "//brave/components/brave_wallet/browser:utils",
-      "//brave/components/brave_wallet/common:test_support",
       "//brave/components/resources:strings_grit",
       "//chrome/browser",
       "//chrome/browser/ui",

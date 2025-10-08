@@ -46,7 +46,7 @@ ServiceRegistrationStatus g_wireguard_service_registered_for_testing;
 // Store the last value passed in. This is useful for the case where the system
 // tray is needing to initiate the connect. As this isn't persisted, it won't
 // survive the owning process being restarted.
-// TODO(https://github.com/brave/brave-browser/issues/47115): remove this value
+// TODO(https://github.com/fulldiveVR/e-browser/issues/47115): remove this value
 // and pass in the real value each time.
 base::NoDestructor<std::string> g_smart_proxy_url("");
 constexpr wchar_t kSystemProxyRegistryKey[] =

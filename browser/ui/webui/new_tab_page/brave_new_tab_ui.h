@@ -26,9 +26,6 @@
 #include "brave/components/brave_vpn/common/mojom/brave_vpn.mojom.h"  // nogncheck
 #endif  // BUILDFLAG(ENABLE_BRAVE_VPN)
 
-namespace brave_ads {
-class AdsService;
-}  // namespace brave_ads
 
 namespace ntp_background_images {
 class NTPSponsoredRichMediaAdEventHandler;
@@ -42,7 +39,6 @@ class BraveNewTabUI : public ui::MojoWebUIController,
  public:
   BraveNewTabUI(content::WebUI* web_ui,
                 const std::string& name,
-                brave_ads::AdsService* ads_service,
                 ntp_background_images::ViewCounterService* view_counter_service,
                 regional_capabilities::RegionalCapabilitiesService*
                     regional_capabilities);
@@ -83,8 +79,6 @@ class BraveNewTabUI : public ui::MojoWebUIController,
   std::unique_ptr<RealboxHandler> realbox_handler_;
   mojo::Receiver<brave_new_tab_page::mojom::PageHandlerFactory>
       page_factory_receiver_;
-  std::unique_ptr<ntp_background_images::NTPSponsoredRichMediaAdEventHandler>
-      rich_media_ad_event_handler_;
   raw_ptr<regional_capabilities::RegionalCapabilitiesService>
       regional_capabilities_ = nullptr;
 

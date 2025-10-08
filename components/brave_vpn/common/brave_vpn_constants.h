@@ -10,15 +10,15 @@
 
 namespace brave_vpn {
 
-inline constexpr char kManageUrlProd[] = "https://account.brave.com/account/";
+inline constexpr char kManageUrlProd[] = "https://account.aiwize.com/account/";
 inline constexpr char kManageUrlStaging[] =
     "https://account.bravesoftware.com/account/";
 inline constexpr char kManageUrlDev[] =
     "https://account.brave.software/account/";
 
 // TODO(simonhong): Update when vpn feedback url is ready.
-inline constexpr char kFeedbackUrl[] = "https://support.brave.com/";
-inline constexpr char kAboutUrl[] = "https://brave.com/firewall-vpn/";
+inline constexpr char kFeedbackUrl[] = "https://support.aiwize.com/";
+inline constexpr char kAboutUrl[] = "https://aiwize.com/firewall-vpn/";
 
 inline constexpr char kRegionNameKey[] = "name";
 inline constexpr char kRegionNamePrettyKey[] = "name-pretty";

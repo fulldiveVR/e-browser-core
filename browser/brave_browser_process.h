@@ -13,10 +13,12 @@
 
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/request_otr/common/buildflags/buildflags.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "extensions/buildflags/buildflags.h"
+
+#include "brave/components/aiwize_llm/aiwize_llm_helper.h"
+
+#include "brave/components/ai_combiner/ai_combiner_helper.h"
 
 namespace brave {
 class BraveReferralsService;
@@ -71,19 +73,7 @@ namespace p3a {
 class P3AService;
 }  // namespace p3a
 
-namespace tor {
-class BraveTorClientUpdater;
-class BraveTorPluggableTransportUpdater;
-}  // namespace tor
 
-namespace speedreader {
-class SpeedreaderRewriterService;
-}
-
-namespace brave_ads {
-class BraveStatsHelper;
-class ResourceComponent;
-}  // namespace brave_ads
 
 class BraveBrowserProcess {
  public:
@@ -105,27 +95,18 @@ class BraveBrowserProcess {
   URLSanitizerComponentInstaller() = 0;
   virtual brave_component_updater::LocalDataFilesService*
   local_data_files_service() = 0;
-#if BUILDFLAG(ENABLE_TOR)
-  virtual tor::BraveTorClientUpdater* tor_client_updater() = 0;
-  virtual tor::BraveTorPluggableTransportUpdater*
-  tor_pluggable_transport_updater() = 0;
-#endif
   virtual p3a::P3AService* p3a_service() = 0;
   virtual brave::BraveReferralsService* brave_referrals_service() = 0;
   virtual brave_stats::BraveStatsUpdater* brave_stats_updater() = 0;
-  virtual brave_ads::BraveStatsHelper* ads_brave_stats_helper() = 0;
   virtual ntp_background_images::NTPBackgroundImagesService*
   ntp_background_images_service() = 0;
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  virtual speedreader::SpeedreaderRewriterService*
-  speedreader_rewriter_service() = 0;
-#endif
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   virtual brave_vpn::BraveVPNConnectionManager*
   brave_vpn_connection_manager() = 0;
 #endif
-  virtual brave_ads::ResourceComponent* resource_component() = 0;
   virtual misc_metrics::ProcessMiscMetrics* process_misc_metrics() = 0;
+  virtual aiwize_llm::AIWizeLLMHelper* aiwize_llm_helper() = 0;
+  virtual ai_combiner::AICombinerHelper* ai_combiner_helper() = 0;
 };
 
 extern BraveBrowserProcess* g_brave_browser_process;

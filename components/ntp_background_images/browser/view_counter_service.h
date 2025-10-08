@@ -18,8 +18,6 @@
 #include "base/scoped_observation.h"
 #include "base/timer/wall_clock_timer.h"
 #include "base/values.h"
-#include "brave/components/brave_ads/core/browser/service/ads_service_observer.h"
-#include "brave/components/brave_ads/core/mojom/brave_ads.mojom-forward.h"
 #include "brave/components/ntp_background_images/browser/ntp_background_images_service.h"
 #include "brave/components/ntp_background_images/browser/view_counter_model.h"
 #include "brave/components/ntp_background_images/buildflags/buildflags.h"
@@ -36,9 +34,6 @@ class Time;
 class TimeDelta;
 }  // namespace base
 
-namespace brave_ads {
-class AdsService;
-}  // namespace brave_ads
 
 namespace content {
 class WebUIDataSource;
@@ -65,13 +60,11 @@ struct TopSite;
 
 class ViewCounterService : public KeyedService,
                            public content_settings::Observer,
-                           public NTPBackgroundImagesService::Observer,
-                           public brave_ads::AdsServiceObserver {
+                           public NTPBackgroundImagesService::Observer {
  public:
   ViewCounterService(HostContentSettingsMap* host_content_settings,
                      NTPBackgroundImagesService* background_images_service,
                      BraveNTPCustomBackgroundService* custom_background_service,
-                     brave_ads::AdsService* ads_service,
                      PrefService* prefs,
                      PrefService* local_state,
                      std::unique_ptr<NTPP3AHelper> ntp_p3a_helper,
@@ -91,11 +84,6 @@ class ViewCounterService : public KeyedService,
                                    const std::string& target_url,
                                    bool should_metrics_fallback_to_p3a);
 
-  void MaybeTriggerNewTabPageAdEvent(
-      const std::string& placement_id,
-      const std::string& creative_instance_id,
-      const bool should_metrics_fallback_to_p3a,
-      brave_ads::mojom::NewTabPageAdEventType mojom_ad_event_type);
 
   std::optional<base::Value::Dict> GetNextWallpaperForDisplay();
   std::optional<base::Value::Dict> GetCurrentWallpaperForDisplay();
@@ -166,7 +154,6 @@ class ViewCounterService : public KeyedService,
   void OnPreferenceChanged(const std::string& pref_name);
 
   // brave_ads::AdsServiceObserver:
-  void OnDidClearAdsServiceData() override;
 
   // content_settings::Observer:
   void OnContentSettingChanged(
@@ -212,7 +199,6 @@ class ViewCounterService : public KeyedService,
 
   const raw_ptr<HostContentSettingsMap> host_content_settings_map_ = nullptr;
   raw_ptr<NTPBackgroundImagesService> background_images_service_ = nullptr;
-  const raw_ptr<brave_ads::AdsService> ads_service_ = nullptr;
   const raw_ptr<PrefService> prefs_ = nullptr;
   const raw_ptr<PrefService> local_state_ = nullptr;
   bool is_supported_locale_ = false;

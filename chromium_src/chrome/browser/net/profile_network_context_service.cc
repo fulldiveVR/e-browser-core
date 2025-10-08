@@ -6,7 +6,7 @@ static const char* kBraveCTExcludedHosts[] = {
     // Critical endpoints that shouldn't require SCTs so they always work
     "updates.bravesoftware.com",
     "updates-cdn.bravesoftware.com",
-    "usage-ping.brave.com",
+    "usage-ping.aiwize.com",
     // Test host for manual testing
     "sct-exempted.bravesoftware.com",
 };

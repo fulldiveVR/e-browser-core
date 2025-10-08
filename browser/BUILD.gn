@@ -32,8 +32,6 @@ source_set("browser_process") {
   deps = [
     "//brave/components/brave_vpn/common/buildflags",
     "//brave/components/request_otr/common/buildflags",
-    "//brave/components/speedreader/common/buildflags",
-    "//brave/components/tor/buildflags",
     "//chrome/browser:browser_process",
     "//extensions/buildflags",
   ]
@@ -43,12 +41,9 @@ group("browser") {
   visibility = [
     "//brave:browser_dependencies",
     "//brave/browser/*",
-    "//brave/components/brave_rewards/core/engine:headers",
     "//brave/test:*",
 
     # these are layering violation and need to be fixed
-    "//brave/components/brave_rewards/content:testutil",
-    "//brave/components/brave_rewards/test:brave_rewards_unit_tests",
   ]
 
   if (enable_sparkle) {

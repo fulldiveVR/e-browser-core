@@ -453,7 +453,7 @@ void BraveVpnService::UpdatePurchasedStateForSessionExpired(
   }
 
   // Expiry is in the past - they ran out of credentials completely.
-  // They'll need to login to account.brave.com again.
+  // They'll need to login to account.aiwize.com again.
   SetPurchasedState(env, PurchasedState::SESSION_EXPIRED);
 }
 
@@ -511,7 +511,7 @@ void BraveVpnService::GetPurchaseToken(GetPurchaseTokenCallback callback) {
   std::string product_id_string = "brave-firewall-vpn-premium";
 
   // Get the Android purchase token (for Google Play Store).
-  // The value for this is validated on the account.brave.com side
+  // The value for this is validated on the account.aiwize.com side
   auto* purchase_token =
       profile_prefs_->FindPreference(prefs::kBraveVPNPurchaseTokenAndroid);
   if (purchase_token && !purchase_token->IsDefaultValue()) {

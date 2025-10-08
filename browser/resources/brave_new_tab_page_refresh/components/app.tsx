@@ -85,7 +85,7 @@ export function App() {
                   </> :
                   <WidgetStack name='left' tabs={['stats', 'news']} />
               }
-              <WidgetStack name='right' tabs={['vpn', 'rewards', 'talk']} />
+              <WidgetStack name='right' tabs={['vpn', 'talk']} />
             </>
           }
         </div>

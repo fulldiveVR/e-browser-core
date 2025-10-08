@@ -300,7 +300,7 @@ def apply():
     """Applies all plaster files to brave.
     """
     with terminal.with_status('Applying plaster files'):
-        # TODO(https://github.com/brave/brave-browser/issues/46880): Add support
+        # TODO(https://github.com/fulldiveVR/e-browser/issues/46880): Add support
         # to call `apply` with a list of plaster files to apply, the same way
         # `check` does.
         plaster_files = PlasterFile.find_all()
@@ -337,7 +337,7 @@ def check(args):
             for p in expected_plaster_files
         }
 
-        # TODO(https://github.com/brave/brave-browser/issues/46880): For now we
+        # TODO(https://github.com/fulldiveVR/e-browser/issues/46880): For now we
         # discard any plaster file passed in that does not exist. At some point
         # we will need a good answer of what to do once a plaster file is
         # deleted, but for now no check is being implemented to not break

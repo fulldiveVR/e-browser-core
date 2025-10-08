@@ -35,7 +35,7 @@ BraveLocationBarModelDelegate::~BraveLocationBarModelDelegate() = default;
 void BraveLocationBarModelDelegate::FormattedStringFromURL(
     const GURL& url,
     std::u16string* new_formatted_url) {
-  // Replace chrome:// with brave://
+  // Replace chrome:// with aiwize://
   brave_utils::ReplaceChromeToBraveScheme(*new_formatted_url);
 }
 

@@ -87,7 +87,7 @@ int OnBeforeURLRequest_LocalhostPermissionWork(
       ctx->resource_type != BraveRequestInfo::kInvalidResourceType;
 
   // Only throttle valid subresource requests + WebSockets.
-  // https://github.com/brave/brave-browser/issues/26302
+  // https://github.com/fulldiveVR/e-browser/issues/26302
   if (!is_web_socket_request && !is_valid_subresource_request) {
     return net::OK;
   }

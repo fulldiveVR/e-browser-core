@@ -28,8 +28,8 @@ export function createTopSitesHandler(
       return [
         {
           title: 'Brave',
-          favicon: 'https://brave.com/favicon.ico',
-          url: `https://brave.com/#${i}`
+          favicon: 'https://aiwize.com/favicon.ico',
+          url: `https://aiwize.com/#${i}`
         },
         {
           title: 'Wikipedia',
@@ -55,7 +55,7 @@ export function createTopSitesHandler(
         return {
           topSites: [
             ...topSites,
-            { url, title, favicon: 'https://brave.com/favicon.ico'}
+            { url, title, favicon: 'https://aiwize.com/favicon.ico'}
           ]
         }
       })

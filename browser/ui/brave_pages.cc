@@ -9,7 +9,6 @@
 #include "base/strings/strcat.h"
 #include "brave/browser/ui/webui/webcompat_reporter/webcompat_reporter_dialog.h"
 #include "brave/components/ai_chat/core/common/features.h"
-#include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/sidebar/browser/constants.h"
 #include "chrome/browser/ui/browser.h"
@@ -21,9 +20,6 @@
 
 namespace brave {
 
-void ShowBraveRewards(Browser* browser) {
-  ShowSingletonTabOverwritingNTP(browser, GURL(kRewardsPageURL));
-}
 
 void ShowBraveAdblock(Browser* browser) {
   ShowSingletonTabOverwritingNTP(browser, GURL(kBraveUIAdblockURL));
@@ -36,16 +32,13 @@ void ShowSync(Browser* browser) {
 
 void ShowBraveNewsConfigure(Browser* browser) {
   ShowSingletonTabOverwritingNTP(
-      browser, GURL("brave://newtab/?openSettings=BraveNews"));
+      browser, GURL("aiwize://newtab/?openSettings=BraveNews"));
 }
 
 void ShowShortcutsPage(Browser* browser) {
   ShowSingletonTabOverwritingNTP(browser, GURL(kShortcutsURL));
 }
 
-void ShowBraveTalk(Browser* browser) {
-  ShowSingletonTabOverwritingNTP(browser, GURL(sidebar::kBraveTalkURL));
-}
 
 void ShowFullpageChat(Browser* browser) {
   if (!ai_chat::features::IsAIChatHistoryEnabled()) {
@@ -65,30 +58,13 @@ void ShowWebcompatReporter(Browser* browser) {
       web_contents, webcompat_reporter::UISource::kAppMenu);
 }
 
-void ShowBraveWallet(Browser* browser) {
-  ShowSingletonTabOverwritingNTP(browser, GURL(kBraveUIWalletURL));
-}
 
-void ShowBraveWalletOnboarding(Browser* browser) {
-  ShowSingletonTabOverwritingNTP(browser, GURL(kBraveUIWalletOnboardingURL));
-}
 
-void ShowBraveWalletAccountCreation(Browser* browser,
-                                    brave_wallet::mojom::CoinType coin_type) {
-  // Only solana is supported.
-  CHECK(coin_type == brave_wallet::mojom::CoinType::SOL);
-  ShowSingletonTabOverwritingNTP(
-      browser,
-      GURL(base::StrCat({kBraveUIWalletAccountCreationURL, "Solana"})));
-}
 
 void ShowExtensionSettings(Browser* browser) {
   ShowSingletonTabOverwritingNTP(browser, GURL(kExtensionSettingsURL));
 }
 
-void ShowWalletSettings(Browser* browser) {
-  ShowSingletonTabOverwritingNTP(browser, GURL(kWalletSettingsURL));
-}
 
 void ShowAppsPage(Browser* browser) {
   ShowSingletonTabOverwritingNTP(browser, GURL(chrome::kChromeUIAppsURL));

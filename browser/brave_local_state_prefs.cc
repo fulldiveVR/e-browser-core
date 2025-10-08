@@ -8,7 +8,6 @@
 #include <string>
 
 #include "base/values.h"
-#include "brave/browser/brave_ads/analytics/p3a/brave_stats_helper.h"
 #include "brave/browser/brave_stats/brave_stats_updater.h"
 #include "brave/browser/metrics/buildflags/buildflags.h"
 #include "brave/browser/metrics/metrics_reporting_util.h"
@@ -26,9 +25,7 @@
 #include "brave/components/brave_shields/content/browser/ad_block_service.h"
 #include "brave/components/brave_shields/core/browser/brave_shields_p3a.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/browser/brave_wallet_prefs.h"
 #include "brave/components/constants/pref_names.h"
-#include "brave/components/decentralized_dns/core/utils.h"
 #include "brave/components/l10n/common/prefs.h"
 #include "brave/components/misc_metrics/general_browser_usage.h"
 #include "brave/components/misc_metrics/page_metrics.h"
@@ -39,8 +36,6 @@
 #include "brave/components/p3a/p3a_service.h"
 #include "brave/components/p3a/rotation_scheduler.h"
 #include "brave/components/skus/browser/skus_utils.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/common/pref_names.h"
@@ -53,9 +48,6 @@
 #include "brave/browser/day_zero_browser_ui_expt/day_zero_browser_ui_expt_manager.h"
 #endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/components/tor/tor_profile_service.h"
-#endif
 
 #include "brave/browser/ui/webui/new_tab_page/brave_new_tab_message_handler.h"
 
@@ -83,9 +75,6 @@
 #include "brave/browser/widevine/widevine_utils.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/components/speedreader/speedreader_service.h"
-#endif
 
 #if BUILDFLAG(IS_WIN)
 #include "brave/components/windows_recall/windows_recall.h"
@@ -104,7 +93,6 @@ void RegisterLocalStatePrefsForMigration(PrefRegistrySimple* registry) {
 #endif
 
   misc_metrics::UptimeMonitorImpl::RegisterPrefsForMigration(registry);
-  brave_wallet::RegisterLocalStatePrefsForMigration(registry);
   brave_search_conversion::p3a::RegisterLocalStatePrefsForMigration(registry);
   brave_stats::RegisterLocalStatePrefsForMigration(registry);
   p3a::MetricLogStore::RegisterLocalStatePrefsForMigration(registry);
@@ -125,9 +113,6 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   // Turn off super annoying 'Hold to quit'
   registry->SetDefaultPrefValue(prefs::kConfirmToQuitEnabled,
                                 base::Value(false));
-#endif
-#if BUILDFLAG(ENABLE_TOR)
-  tor::TorProfileService::RegisterLocalStatePrefs(registry);
 #endif
   registry->SetDefaultPrefValue(
       metrics::prefs::kMetricsReportingEnabled,
@@ -166,7 +151,6 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
   RegisterWidevineLocalstatePrefs(registry);
 #endif
 
-  decentralized_dns::RegisterLocalStatePrefs(registry);
 
   RegisterLocalStatePrefsForMigration(registry);
 
@@ -188,20 +172,15 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
 
   ntp_background_images::NTPP3AHelperImpl::RegisterLocalStatePrefs(registry);
 
-  brave_wallet::RegisterLocalStatePrefs(registry);
 
   misc_metrics::ProcessMiscMetrics::RegisterPrefs(registry);
   misc_metrics::PageMetrics::RegisterPrefs(registry);
   ai_chat::AIChatMetrics::RegisterPrefs(registry);
-  brave_ads::BraveStatsHelper::RegisterLocalStatePrefs(registry);
   misc_metrics::GeneralBrowserUsage::RegisterPrefs(registry);
 
   playlist::PlaylistServiceFactory::RegisterLocalStatePrefs(registry);
 #if BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
   web_discovery::WebDiscoveryService::RegisterLocalStatePrefs(registry);
-#endif
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  speedreader::SpeedreaderService::RegisterLocalStatePrefs(registry);
 #endif
 
   // Enable seeing internal pages by default (without going to chrome-urls page

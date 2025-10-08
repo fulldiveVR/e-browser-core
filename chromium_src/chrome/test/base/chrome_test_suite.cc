@@ -40,7 +40,7 @@ class BraveChromeTestSetupHelper : public testing::EmptyTestEventListener {
   void OnTestStart(const testing::TestInfo& test_info) override {
     static const base::NoDestructor<std::vector<TestAdjustments>>
         kTestAdjustments({
-            // We allow FileSystem API via brave://flags, so enable it here for
+            // We allow FileSystem API via aiwize://flags, so enable it here for
             // upstream tests.
             {
                 .test_patterns =

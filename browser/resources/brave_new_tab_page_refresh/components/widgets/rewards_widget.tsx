@@ -9,16 +9,11 @@ import Icon from '@brave/leo/react/icon'
 import Tooltip from '@brave/leo/react/tooltip'
 
 import { getString } from '../../lib/strings'
-import { useRewardsState } from '../../context/rewards_context'
 import { usePluralString } from '../../lib/plural_string'
 import { Link, openLink } from '../common/link'
-import { WalletProviderIcon } from '../../../../../components/brave_rewards/resources/shared/components/icons/wallet_provider_icon'
-import { getExternalWalletProviderName } from '../../../../../components/brave_rewards/resources/shared/lib/external_wallet'
 import formatMessage from '$web-common/formatMessage'
 
-import * as urls from '../../../../../components/brave_rewards/resources/shared/lib/rewards_urls'
 
-import { style } from './rewards_widget.style'
 
 const batAmountFormatter = new Intl.NumberFormat(undefined, {
   minimumFractionDigits: 2,
@@ -30,9 +25,6 @@ const exchangeAmountFormatter = new Intl.NumberFormat(undefined, {
   maximumFractionDigits: 2
 })
 
-export function RewardsWidget() {
-  const rewardsEnabled = useRewardsState((s) => s.rewardsEnabled)
-  const externalWallet = useRewardsState((s) => s.rewardsExternalWallet)
   const balance = useRewardsState((s) => s.rewardsBalance)
   const exchangeRate = useRewardsState((s) => s.rewardsExchangeRate)
   const adsViewed = useRewardsState((s) => s.rewardsAdsViewed)
@@ -119,7 +111,6 @@ export function RewardsWidget() {
             <div>
               {
                 formatMessage(getString('rewardsLoginText'), [
-                  getExternalWalletProviderName(externalWallet.provider)
                 ])
               }
             </div>

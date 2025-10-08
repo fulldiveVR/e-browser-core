@@ -10,6 +10,7 @@
 
 inline constexpr int kBraveActionLeftMarginExtra = -2;
 
+inline constexpr char aiwize_agent_extension_id[] = "olldnkkkpheaihklceggpohdiemjbnfi";
 inline constexpr char brave_extension_id[] = "mnojpmjdmbbfmejpflffifhffcmidifd";
 inline constexpr char crl_set_extension_id[] =
     "hfnkpimlhhgieaddgfemjhofmfblmnib";

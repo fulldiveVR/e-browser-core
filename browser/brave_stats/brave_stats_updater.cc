@@ -22,10 +22,8 @@
 #include "brave/browser/brave_stats/first_run_util.h"
 #include "brave/browser/brave_stats/switches.h"
 #include "brave/common/brave_channel_info.h"
-#include "brave/components/brave_ads/core/public/prefs/pref_names.h"
 #include "brave/components/brave_referrals/common/pref_names.h"
 #include "brave/components/brave_stats/browser/brave_stats_updater_util.h"
-#include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/constants/network_constants.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/misc_metrics/general_browser_usage.h"
@@ -245,7 +243,7 @@ bool BraveStatsUpdater::IsReferralInitialized() {
 }
 
 bool BraveStatsUpdater::IsAdsEnabled() {
-  return pref_service_->GetBoolean(brave_ads::prefs::kEnabledForLastProfile);
+  return false;
 }
 
 void BraveStatsUpdater::OnProfileAdded(Profile* profile) {
@@ -351,13 +349,12 @@ void BraveStatsUpdater::SendServerPing() {
 ///////////////////////////////////////////////////////////////////////////////
 
 void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
-  registry->RegisterBooleanPref(kFirstCheckMade, false);
-  registry->RegisterBooleanPref(kStatsReportingEnabled, true);
+  registry->RegisterBooleanPref(kFirstCheckMade, true);
+  registry->RegisterBooleanPref(kStatsReportingEnabled, false);
   registry->RegisterIntegerPref(kLastCheckWOY, 0);
   registry->RegisterIntegerPref(kLastCheckMonth, 0);
   registry->RegisterStringPref(kLastCheckYMD, std::string());
   registry->RegisterStringPref(kWeekOfInstallation, std::string());
-  registry->RegisterTimePref(kBraveWalletPingReportedUnlockTime, base::Time());
 }
 
 void RegisterLocalStatePrefsForMigration(PrefRegistrySimple* registry) {

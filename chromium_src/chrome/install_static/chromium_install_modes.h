@@ -44,12 +44,12 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
             L"",  // Empty install_suffix for the primary install mode.
         .logo_suffix = L"",  // No logo suffix for the primary install mode.
         .app_guid = L"{AFE6A462-C574-4B8A-AF43-4CC60DF4563B}",
-        .base_app_name = L"Brave",               // A distinct base_app_name.
-        .base_app_id = L"Brave",                 // A distinct base_app_id.
-        .browser_prog_id_prefix = L"BraveHTML",  // Browser ProgID prefix.
+        .base_app_name = L"AIWIZE",               // A distinct base_app_name.
+        .base_app_id = L"AIWIZE",                 // A distinct base_app_id.
+        .browser_prog_id_prefix = L"AIWIZEHTML",  // Browser ProgID prefix.
         .browser_prog_id_description =
             L"Brave HTML Document",         // Browser ProgID description.
-        .pdf_prog_id_prefix = L"BravePDF",  // PDF ProgID prefix.
+        .pdf_prog_id_prefix = L"AIWIZEPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
             L"Brave PDF Document",  // PDF ProgID description.
         .active_setup_guid =
@@ -83,7 +83,7 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
             L"S-1-15-2-3251537155-1984446955-2931258699-841473695-1938553385-"
             L"934012149-",  // App container sid prefix for sandbox.
     },
-    // A secondary install mode for Brave Beta
+    // A secondary install mode for AIWIZE Beta
     {
         .size = sizeof(InstallConstants),
         .index = BETA_INDEX,  // The mode for the side-by-side beta channel.
@@ -92,14 +92,14 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .logo_suffix = L"Beta",           // Logo suffix.
         .app_guid =
             L"{103BD053-949B-43A8-9120-2E424887DE11}",  // A distinct app GUID.
-        .base_app_name = L"Brave Beta",           // A distinct base_app_name.
-        .base_app_id = L"BraveBeta",              // A distinct base_app_id.
-        .browser_prog_id_prefix = L"BraveBHTML",  // Browser ProgID prefix.
+        .base_app_name = L"AIWIZE Beta",           // A distinct base_app_name.
+        .base_app_id = L"AIWIZEBeta",              // A distinct base_app_id.
+        .browser_prog_id_prefix = L"AIWIZEBHTML",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"Brave Beta HTML Document",     // Browser ProgID description.
-        .pdf_prog_id_prefix = L"BraveBPDF",  // PDF ProgID prefix.
+            L"AIWIZE Beta HTML Document",     // Browser ProgID description.
+        .pdf_prog_id_prefix = L"AIWIZEBPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"Brave Beta PDF Document",  // PDF ProgID description.
+            L"AIWIZE Beta PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{103BD053-949B-43A8-9120-2E424887DE11}",  // Active Setup GUID.
         .legacy_command_execute_clsid = L"",  // CommandExecuteImpl CLSID.
@@ -129,7 +129,7 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
             L"S-1-15-2-3251537155-1984446955-2931258699-841473695-1938553385-"
             L"934012150-",  // App container sid prefix for sandbox.
     },
-    // A secondary install mode for Brave Dev
+    // A secondary install mode for AIWIZE Dev
     {
         .size = sizeof(InstallConstants),
         .index = DEV_INDEX,  // The mode for the side-by-side dev channel.
@@ -138,14 +138,14 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .logo_suffix = L"Dev",           // Logo suffix.
         .app_guid =
             L"{CB2150F2-595F-4633-891A-E39720CE0531}",  // A distinct app GUID.
-        .base_app_name = L"Brave Dev",            // A distinct base_app_name.
-        .base_app_id = L"BraveDev",               // A distinct base_app_id.
-        .browser_prog_id_prefix = L"BraveDHTML",  // Browser ProgID prefix.
+        .base_app_name = L"AIWIZE Dev",            // A distinct base_app_name.
+        .base_app_id = L"AIWIZEDev",               // A distinct base_app_id.
+        .browser_prog_id_prefix = L"AIWIZEDHTML",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"Brave Dev HTML Document",      // Browser ProgID description.
-        .pdf_prog_id_prefix = L"BraveDPDF",  // PDF ProgID prefix.
+            L"AIWIZE Dev HTML Document",      // Browser ProgID description.
+        .pdf_prog_id_prefix = L"AIWIZEDPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"Brave Dev PDF Document",  // PDF ProgID description.
+            L"AIWIZE Dev PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{CB2150F2-595F-4633-891A-E39720CE0531}",  // Active Setup GUID.
         .legacy_command_execute_clsid = L"",  // CommandExecuteImpl CLSID.
@@ -185,14 +185,14 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .logo_suffix = L"Canary",        // Logo suffix.
         .app_guid =
             L"{C6CB981E-DB30-4876-8639-109F8933582C}",  // A distinct app GUID.
-        .base_app_name = L"Brave Nightly",        // A distinct base_app_name.
-        .base_app_id = L"BraveNightly",           // A distinct base_app_id.
-        .browser_prog_id_prefix = L"BraveSSHTM",  // Browser ProgID prefix.
+        .base_app_name = L"AIWIZE Nightly",        // A distinct base_app_name.
+        .base_app_id = L"AIWIZENightly",           // A distinct base_app_id.
+        .browser_prog_id_prefix = L"AIWIZESSHTM",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"Brave Nightly HTML Document",   // Browser ProgID description.
+            L"AIWIZE Nightly HTML Document",   // Browser ProgID description.
         .pdf_prog_id_prefix = L"BraveSSPDF",  // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"Brave Nightly PDF Document",  // PDF ProgID description.
+            L"AIWIZE Nightly PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{C6CB981E-DB30-4876-8639-109F8933582C}",  // Active Setup GUID.
         .legacy_command_execute_clsid =
@@ -238,14 +238,14 @@ inline constexpr auto kInstallModes = std::to_array<InstallConstants>({
         .logo_suffix = L"",  // No logo suffix for the primary install mode.
         .app_guid =
             L"",  // Empty app_guid since no integraion with Brave Update.
-        .base_app_name = L"Brave Development",     // A distinct base_app_name.
-        .base_app_id = L"BraveDevelopment",        // A distinct base_app_id.
-        .browser_prog_id_prefix = L"BraveDevHTM",  // Browser ProgID prefix.
+        .base_app_name = L"AIWIZE Development",     // A distinct base_app_name.
+        .base_app_id = L"AIWIZEDevelopment",        // A distinct base_app_id.
+        .browser_prog_id_prefix = L"AIWIZEDevHTM",  // Browser ProgID prefix.
         .browser_prog_id_description =
-            L"Brave Development HTML Document",  // Browser ProgID description.
-        .pdf_prog_id_prefix = L"BraveDevPDF",    // PDF ProgID prefix.
+            L"AIWIZE Development HTML Document",  // Browser ProgID description.
+        .pdf_prog_id_prefix = L"AIWIZEDevPDF",    // PDF ProgID prefix.
         .pdf_prog_id_description =
-            L"Brave Development PDF Document",  // PDF ProgID description.
+            L"AIWIZE Development PDF Document",  // PDF ProgID description.
         .active_setup_guid =
             L"{D6527C63-5CDD-4EF3-9299-1504E17CBD18}",  // Active Setup GUID.
         .legacy_command_execute_clsid =

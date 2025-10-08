@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grit-part>
+  <include name="IDR_AIWIZE_APPLICATIONS_HTML" file="../aiwize_applications/browser/resources/index.html" type="BINDATA" />
+  <include name="IDR_AIWIZE_APPLICATIONS_JS" file="../aiwize_applications/browser/resources/index.js" type="BINDATA" />
+  <include name="IDR_AIWIZE_APPLICATIONS_CSS" file="../aiwize_applications/browser/resources/index.css" type="BINDATA" />
+  <include name="IDR_AIWIZE_APPLICATIONS_FAVICON" file="../aiwize_applications/browser/resources/favicon.ico" type="BINDATA" />
+  <include name="IDR_AIWIZE_APPLICATIONS_DATA" file="../aiwize_applications/browser/resources/apps.js" type="BINDATA" />
+  <include name="IDR_AIWIZE_APPLICATIONS_FONT1" file="../aiwize_applications/browser/resources/materialdesignicons-webfont.ttf" type="BINDATA" />
+  <include name="IDR_AIWIZE_APPLICATIONS_FONT2" file="../aiwize_applications/browser/resources/materialdesignicons-webfont.eot" type="BINDATA" />
+  <include name="IDR_AIWIZE_APPLICATIONS_FONT3" file="../aiwize_applications/browser/resources/materialdesignicons-webfont.woff2" type="BINDATA" />
+  <include name="IDR_AIWIZE_APPLICATIONS_FONT4" file="../aiwize_applications/browser/resources/materialdesignicons-webfont.woff" type="BINDATA" />
+</grit-part>

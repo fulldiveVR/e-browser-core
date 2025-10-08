@@ -427,24 +427,20 @@ void NewTabPageHandler::GetShieldsStats(GetShieldsStatsCallback callback) {
 }
 
 void NewTabPageHandler::GetShowTalkWidget(GetShowTalkWidgetCallback callback) {
-  std::move(callback).Run(pref_service_->GetBoolean(kNewTabPageShowBraveTalk));
 }
 
 void NewTabPageHandler::SetShowTalkWidget(bool show_talk_widget,
                                           SetShowTalkWidgetCallback callback) {
-  pref_service_->SetBoolean(kNewTabPageShowBraveTalk, show_talk_widget);
   std::move(callback).Run();
 }
 
 void NewTabPageHandler::GetShowRewardsWidget(
     GetShowRewardsWidgetCallback callback) {
-  std::move(callback).Run(pref_service_->GetBoolean(kNewTabPageShowRewards));
 }
 
 void NewTabPageHandler::SetShowRewardsWidget(
     bool show_rewards_widget,
     SetShowRewardsWidgetCallback callback) {
-  pref_service_->SetBoolean(kNewTabPageShowRewards, show_rewards_widget);
   std::move(callback).Run();
 }
 

@@ -8,7 +8,6 @@ import AlertCenter from '@brave/leo/react/alertCenter'
 import Button from '@brave/leo/react/button'
 import Dialog from '@brave/leo/react/dialog'
 import Icon from '@brave/leo/react/icon'
-import { getLocale } from '$web-common/locale'
 import classnames from '$web-common/classnames'
 import * as Mojom from '../../../common/mojom'
 import { useConversation, useIsNewConversation } from '../../state/conversation_context'
@@ -32,7 +31,6 @@ import InputBox from '../input_box'
 import ModelIntro from '../model_intro'
 import OpenExternalLinkModal from '../open_external_link_modal'
 import RateMessagePrivacyModal from '../rate_message_privacy_modal'
-import PremiumSuggestion from '../premium_suggestion'
 import PrivacyMessage from '../privacy_message'
 import { GenerateSuggestionsButton, SuggestedQuestion } from '../suggested_question'
 import ToolsMenu from '../filter_menu/tools_menu'
@@ -62,25 +60,11 @@ function Main() {
   const [isConversationListOpen, setIsConversationsListOpen] = React.useState(false)
   const [isContentReady, setIsContentReady] = React.useState(false)
 
-  const shouldShowPremiumSuggestionForModel =
-    aiChatContext.hasAcceptedAgreement &&
-    !aiChatContext.isPremiumStatusFetching && // Avoid flash of content
-    !aiChatContext.isPremiumUser &&
-    conversationContext.currentModel?.options.leoModelOptions?.access === Mojom.ModelAccess.PREMIUM
 
   const shouldShowStorageNotice = aiChatContext.hasAcceptedAgreement &&
     aiChatContext.isHistoryFeatureEnabled &&
     aiChatContext.isStoragePrefEnabled && !aiChatContext.isStorageNoticeDismissed
 
-  const shouldShowPremiumSuggestionStandalone =
-    aiChatContext.hasAcceptedAgreement &&
-    !aiChatContext.isPremiumStatusFetching && // Avoid flash of content
-    !shouldShowPremiumSuggestionForModel && // Don't show 2 premium prompts
-    !conversationContext.apiHasError && // Don't show premium prompt and errors (rate limit error has its own premium prompt suggestion)
-    !shouldShowStorageNotice && // Don't show premium prompt and storage notice
-    aiChatContext.canShowPremiumPrompt &&
-    conversationContext.associatedContentInfo === null && // AssociatedContent request has finished and this is a standalone conversation
-    !aiChatContext.isPremiumUser
 
   const showAttachments = useIsNewConversation()
     && conversationContext.showAttachments
@@ -281,36 +265,6 @@ function Main() {
             {shouldShowStorageNotice && (
               <div className={styles.promptContainer}>
                 <NoticeConversationStorage />
-              </div>
-            )}
-            {shouldShowPremiumSuggestionForModel && (
-              <div className={styles.promptContainer}>
-                <PremiumSuggestion
-                  title={getLocale(S.CHAT_UI_UNLOCK_PREMIUM_TITLE)}
-                  secondaryActionButton={
-                    <Button
-                      kind='plain-faint'
-                      onClick={() => conversationContext.switchToBasicModel()}
-                    >
-                      {getLocale(S.CHAT_UI_SWITCH_TO_BASIC_MODEL_BUTTON_LABEL)}
-                    </Button>
-                  }
-                />
-              </div>
-            )}
-            {shouldShowPremiumSuggestionStandalone && (
-              <div className={styles.promptContainer}>
-                <PremiumSuggestion
-                  title={getLocale(S.CHAT_UI_UNLOCK_PREMIUM_TITLE)}
-                  secondaryActionButton={
-                    <Button
-                      kind='plain-faint'
-                      onClick={() => aiChatContext.dismissPremiumPrompt()}
-                    >
-                      {getLocale(S.CHAT_UI_DISMISS_BUTTON_LABEL)}
-                    </Button>
-                  }
-                />
               </div>
             )}
             {aiChatContext.isPremiumUserDisconnected && (!conversationContext.currentModel || isLeoModel(conversationContext.currentModel)) && (

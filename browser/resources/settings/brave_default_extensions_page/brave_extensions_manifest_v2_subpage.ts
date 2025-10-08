@@ -58,8 +58,6 @@ class BraveExtensionsV2Subpage extends BraveExtensionsV2SubpageBase {
     }
 
     if (loadTimeData.getBoolean('shouldExposeElementsForTesting')) {
-      window.testing = window.testing || {}
-      window.testing[`extensionsV2Subpage`] = this.shadowRoot
     }
 
     this.addWebUiListener('brave-extension-manifest-v2-changed',

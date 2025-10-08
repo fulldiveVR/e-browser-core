@@ -9,8 +9,6 @@
 
 #include "base/containers/contains.h"
 #include "brave/browser/ai_chat/ai_chat_service_factory.h"
-#include "brave/browser/brave_rewards/rewards_service_factory.h"
-#include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
 #include "brave/components/brave_education/education_urls.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/constants/webui_url_constants.h"
@@ -23,13 +21,11 @@
 namespace {
 
 bool CanShowWalletOnboarding(Profile* profile) {
-  return brave_wallet::BraveWalletServiceFactory::GetServiceForContext(
-             profile) != nullptr;
+  return false;
 }
 
 bool CanShowRewardsOnboarding(Profile* profile) {
-  return brave_rewards::RewardsServiceFactory::GetForProfile(profile) !=
-         nullptr;
+  return false;
 }
 
 bool CanShowVPNBubble(Profile* profile) {
@@ -97,11 +93,8 @@ void BraveBrowserCommandHandler::ExecuteCommand(
 
   switch (command_id) {
     case brave_browser_command::mojom::Command::kOpenWalletOnboarding:
-      delegate_->OpenURL(GURL(kBraveUIWalletURL),
-                         WindowOpenDisposition::NEW_FOREGROUND_TAB);
       break;
     case brave_browser_command::mojom::Command::kOpenRewardsOnboarding:
-      delegate_->OpenRewardsPanel();
       break;
     case brave_browser_command::mojom::Command::kOpenVPNOnboarding:
 #if BUILDFLAG(ENABLE_BRAVE_VPN)

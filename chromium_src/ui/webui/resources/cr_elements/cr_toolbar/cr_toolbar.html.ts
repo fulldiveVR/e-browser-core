@@ -53,22 +53,14 @@ export function getHtml(this: CrToolbarElement) {
         <span class="nav-item-text">${this.downloadsTitle}</span>
       </a>
     </li>
-    ${this.isBraveWalletAllowed_ ? html`<li class="nav-items-list-item" title="${this.walletsTitle}">
-      <a class="nav-item ${this.getNavItemSelectedClassName('wallet')}" href="chrome://wallet">
+    <li class="nav-items-list-item" title="${this.dashboardTitle}">
+      <a class="nav-item ${this.getNavItemSelectedClassName('dashboard')}" href="chrome://dashboard">
         <span class="nav-item-icon">
-          <leo-icon name="product-brave-wallet"></leo-icon>
+          <leo-icon name="dashboard"></leo-icon>
         </span>
-        <span class="nav-item-text">${this.walletsTitle}</span>
+        <span class="nav-item-text">${this.dashboardTitle}</span>
       </a>
-    </li>` : ''}
-    ${this.shouldShowRewardsButton_ ? html`<li class="nav-items-list-item" title="${this.braveRewardsTitle}">
-        <a class="nav-item ${this.getNavItemSelectedClassName('rewards')}" href="chrome://rewards">
-          <span class="nav-item-icon">
-            <leo-icon name="product-bat-outline"></leo-icon>
-          </span>
-          <span class="nav-item-text">${this.braveRewardsTitle}</span>
-        </a>
-      </li>` : ''}
+    </li>
   </ul>
     <br-toolbar-search-field id="search"
       ?narrow="${this.narrow}"

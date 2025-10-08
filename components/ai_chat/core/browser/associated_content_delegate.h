@@ -32,7 +32,7 @@ using GetPageContentCallback = base::OnceCallback<
 using GetStagedEntriesCallback = base::OnceCallback<void(
     const std::optional<std::vector<SearchQuerySummary>>& entries)>;
 
-// TODO(https://github.com/brave/brave-browser/issues/45732): Move this to its
+// TODO(https://github.com/fulldiveVR/e-browser/issues/45732): Move this to its
 // own file and merge with AssociatedContentDriver.
 // Supplements a conversation with associated page content
 class AssociatedContentDelegate {

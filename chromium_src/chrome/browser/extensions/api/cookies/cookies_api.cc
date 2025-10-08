@@ -32,9 +32,6 @@ void OnCookieChangeExposeForTesting::CallOnCookieChangeForOtr(
 }
 
 void CookiesEventRouter::OnOffTheRecordProfileCreated(Profile* off_the_record) {
-  if (off_the_record->IsTor()) {
-    return;
-  }
 
   OnOffTheRecordProfileCreated_ChromiumImpl(off_the_record);
 }

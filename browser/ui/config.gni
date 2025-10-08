@@ -7,7 +7,7 @@ import("//brave/components/containers/buildflags/buildflags.gni")
 import("//build/config/ui.gni")
 
 brave_ui_allow_circular_includes_from =
-    [ "//brave/browser/ui/webui/ads_internals" ]
+    []
 if (!is_android) {
   brave_ui_allow_circular_includes_from += [
     "//brave/browser/ui/browser_window:impl",
@@ -34,3 +34,6 @@ if (toolkit_views) {
     brave_ui_allow_circular_includes_from += [ "//brave/browser/ui/containers" ]
   }
 }
+brave_ui_allow_circular_includes_from += [
+  "//brave/browser/ui/views/split_view2",
+]

@@ -47,7 +47,7 @@ void StaticRedirectHelper(const GURL& request_url, GURL* new_url) {
       URLPattern::SCHEME_HTTPS, kSafeBrowsingCrxListPrefix);
 
   // To-Do (@jumde) - Update the naming for the variables below
-  // https://github.com/brave/brave-browser/issues/10314
+  // https://github.com/fulldiveVR/e-browser/issues/10314
   static base::NoDestructor<URLPattern> crlSet_pattern1(
       URLPattern::SCHEME_HTTP | URLPattern::SCHEME_HTTPS, kCRLSetPrefix1);
   static base::NoDestructor<URLPattern> crlSet_pattern2(
@@ -106,7 +106,7 @@ void StaticRedirectHelper(const GURL& request_url, GURL* new_url) {
 
   if (crxDownload_pattern->MatchesURL(request_url)) {
     replacements.SetSchemeStr("https");
-    replacements.SetHostStr("crxdownload.brave.com");
+    replacements.SetHostStr("crxdownload.aiwize.com");
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
@@ -120,28 +120,28 @@ void StaticRedirectHelper(const GURL& request_url, GURL* new_url) {
 
   if (crlSet_pattern1->MatchesURL(request_url)) {
     replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
+    replacements.SetHostStr("redirector.aiwize.com");
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
 
   if (crlSet_pattern2->MatchesURL(request_url)) {
     replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
+    replacements.SetHostStr("redirector.aiwize.com");
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
 
   if (crlSet_pattern3->MatchesURL(request_url)) {
     replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
+    replacements.SetHostStr("redirector.aiwize.com");
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }
 
   if (crlSet_pattern4->MatchesURL(request_url)) {
     replacements.SetSchemeStr("https");
-    replacements.SetHostStr("redirector.brave.com");
+    replacements.SetHostStr("redirector.aiwize.com");
     *new_url = request_url.ReplaceComponents(replacements);
     return;
   }

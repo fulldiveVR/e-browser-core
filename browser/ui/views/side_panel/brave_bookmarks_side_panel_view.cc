@@ -179,7 +179,7 @@ BraveBookmarksSidePanelView::BraveBookmarksSidePanelView(
   // SidePanelWebUIView(web_view) fetches SidePanelContentProxy from itself to
   // set availability. If we don't use BraveBookmarksSidePanelView, side panel's
   // content view and |web_view| is same. So, there is only one proxy.
-  // TODO(https://github.com/brave/brave-browser/issues/46737): Create and set
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/46737): Create and set
   // header view from SidePanelCoordinator like chromium does. Then, we don't
   // need to handle like this and also can delete this panel view.
   if (web_view->GetVisible()) {

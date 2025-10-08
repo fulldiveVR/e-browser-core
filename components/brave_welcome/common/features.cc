@@ -9,8 +9,5 @@
 
 namespace brave_welcome::features {
 
-BASE_FEATURE(kShowRewardsCard,
-             "ShowRewardsCard",
-             base::FEATURE_DISABLED_BY_DEFAULT);
 
 }  // namespace brave_welcome::features

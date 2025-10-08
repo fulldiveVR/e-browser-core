@@ -8,12 +8,8 @@
 #include "base/command_line.h"
 #include "base/logging.h"
 #include "brave/components/constants/brave_switches.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/ui/startup/startup_browser_creator_impl.h"
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/browser/tor/tor_profile_manager.h"
-#endif
 
 #ifdef LaunchModeRecorder
 static_assert(false,
@@ -62,15 +58,6 @@ void BraveStartupBrowserCreatorImpl::Launch(
     Profile* profile,
     chrome::startup::IsProcessStartup process_startup,
     bool restore_tabbed_browser) {
-#if BUILDFLAG(ENABLE_TOR)
-  if (StartupBrowserCreatorImpl::command_line_->HasSwitch(switches::kTor)) {
-    // Call StartupBrowserCreatorImpl::Launch() with the Tor profile so that if
-    // one runs brave-browser --tor "? search query" the search query is not
-    // passed to the default search engine of the regular profile.
-    LOG(INFO) << "Switching to Tor profile and starting Tor service.";
-    profile = TorProfileManager::GetInstance().GetTorProfile(profile);
-  }
-#endif
 
   StartupBrowserCreatorImpl::Launch(profile, process_startup,
                                     restore_tabbed_browser);

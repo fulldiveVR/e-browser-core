@@ -20,7 +20,7 @@ class BraveAdblockInternalsUIConfig
       : DefaultWebUIConfig(content::kChromeUIScheme, kAdblockInternalsHost) {}
 };
 
-// The WebUI for brave://adblock-internals
+// The WebUI for aiwize://adblock-internals
 class BraveAdblockInternalsUI : public content::WebUIController {
  public:
   explicit BraveAdblockInternalsUI(content::WebUI* web_ui);

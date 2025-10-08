@@ -22,14 +22,13 @@
 bool BravePrivateNewTabUIConfig::IsWebUIEnabled(
     content::BrowserContext* browser_context) {
   Profile* profile = Profile::FromBrowserContext(browser_context);
-  return profile->IsIncognitoProfile() || profile->IsTor() ||
+  return profile->IsIncognitoProfile()  ||
          profile->IsGuestSession();
 }
 
 BravePrivateNewTabUI::BravePrivateNewTabUI(content::WebUI* web_ui)
     : ui::MojoWebUIController(web_ui, false) {
-  Profile* profile = Profile::FromWebUI(web_ui);
-
+  
   web_ui->OverrideTitle(l10n_util::GetStringUTF16(IDS_NEW_INCOGNITO_TAB_TITLE));
 
   content::WebUIDataSource* source = CreateAndAddWebUIDataSource(
@@ -41,7 +40,6 @@ BravePrivateNewTabUI::BravePrivateNewTabUI(content::WebUI* web_ui)
     source->AddString(str.name, l10n_str);
   }
 
-  source->AddBoolean("isWindowTor", profile->IsTor());
 
   AddBackgroundColorToSource(source, web_ui->GetWebContents());
 }

@@ -3,7 +3,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-#include "brave/browser/ui/webui/settings/brave_clear_browsing_data_handler.h"
 #include "brave/browser/ui/webui/settings/brave_import_data_handler.h"
 #include "brave/browser/ui/webui/settings/brave_search_engines_handler.h"
 #include "brave/browser/ui/webui/settings/brave_site_settings_handler.h"
@@ -24,9 +23,7 @@
 #define SearchEnginesHandler BraveSearchEnginesHandler>(profile, regional_capabilities::RegionalCapabilitiesServiceFactory::GetForProfile(profile))); \
   if (false) AddSettingsPageUIHandler(std::make_unique<SearchEnginesHandler
 
-#define ClearBrowsingDataHandler BraveClearBrowsingDataHandler
 #include "src/chrome/browser/ui/webui/settings/settings_ui.cc"
-#undef ClearBrowsingDataHandler
 #undef SearchEnginesHandler
 #undef ImportDataHandler
 #undef SiteSettingsHandler

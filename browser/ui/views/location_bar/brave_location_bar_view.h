@@ -13,7 +13,6 @@
 #include "brave/browser/ui/views/brave_news/brave_news_action_icon_view.h"
 #include "brave/browser/ui/views/playlist/playlist_bubbles_controller.h"
 #include "brave/browser/ui/views/view_shadow.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "chrome/browser/ui/views/location_bar/location_bar_view.h"
 #include "ui/base/metadata/metadata_header_macros.h"
 
@@ -22,12 +21,8 @@ class BraveActionsContainerTest;
 class PromotionButtonController;
 class PromotionButtonView;
 class PlaylistActionIconView;
-class RewardsBrowserTest;
 class SkPath;
 
-#if BUILDFLAG(ENABLE_TOR)
-class OnionLocationView;
-#endif
 
 namespace playlist {
 FORWARD_DECLARE_TEST(PlaylistBrowserTest, AddItemsToList);
@@ -63,9 +58,6 @@ class BraveLocationBarView : public LocationBarView {
   void Update(content::WebContents* contents) override;
   void OnChanged() override;
   BraveActionsContainer* GetBraveActionsContainer() { return brave_actions_; }
-#if BUILDFLAG(ENABLE_TOR)
-  OnionLocationView* GetOnionLocationView() { return onion_location_view_; }
-#endif
 
   // LocationBarView:
   // Views that locates at right side of upstream's trailing views.
@@ -106,11 +98,9 @@ class BraveLocationBarView : public LocationBarView {
   FRIEND_TEST_ALL_PREFIXES(
       playlist::PlaylistBrowserTestWithSitesUsingMediaSource,
       MediaShouldBeExtractedFromBackground_DynamicallyAddedMedia);
-  FRIEND_TEST_ALL_PREFIXES(policy::BraveRewardsPolicyTest, RewardsIconIsHidden);
   FRIEND_TEST_ALL_PREFIXES(BraveLocationBarViewBrowserTest,
                            SearchConversionButtonTest);
   friend class ::BraveActionsContainerTest;
-  friend class ::RewardsBrowserTest;
 
   PlaylistActionIconView* GetPlaylistActionIconView();
   void SetupShadow();
@@ -120,9 +110,6 @@ class BraveLocationBarView : public LocationBarView {
   raw_ptr<BraveNewsActionIconView> brave_news_action_icon_view_ = nullptr;
   std::unique_ptr<PromotionButtonController> promotion_controller_;
   raw_ptr<PromotionButtonView> promotion_button_ = nullptr;
-#if BUILDFLAG(ENABLE_TOR)
-  raw_ptr<OnionLocationView> onion_location_view_ = nullptr;
-#endif
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_LOCATION_BAR_BRAVE_LOCATION_BAR_VIEW_H_

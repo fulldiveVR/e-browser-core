@@ -29,9 +29,6 @@
   case blink::PermissionType::BRAVE_COOKIES:                                  \
     return CreatePermissionDescriptor(                                        \
         blink::mojom::PermissionName::BRAVE_COOKIES);                         \
-  case blink::PermissionType::BRAVE_SPEEDREADER:                              \
-    return CreatePermissionDescriptor(                                        \
-        blink::mojom::PermissionName::BRAVE_SPEEDREADER);                     \
   case blink::PermissionType::BRAVE_ETHEREUM:                                 \
     return CreatePermissionDescriptor(                                        \
         blink::mojom::PermissionName::BRAVE_ETHEREUM);                        \

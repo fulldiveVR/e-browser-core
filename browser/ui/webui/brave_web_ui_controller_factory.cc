@@ -12,23 +12,15 @@
 #include "base/feature_list.h"
 #include "base/memory/ptr_util.h"
 #include "base/no_destructor.h"
-#include "brave/browser/brave_ads/ads_service_factory.h"
 #include "brave/browser/brave_browser_features.h"
 #include "brave/browser/brave_news/brave_news_controller_factory.h"
-#include "brave/browser/brave_rewards/rewards_util.h"
 #include "brave/browser/ntp_background/view_counter_service_factory.h"
-#include "brave/browser/ui/webui/ads_internals/ads_internals_ui.h"
-#include "brave/browser/ui/webui/brave_rewards/rewards_page_ui.h"
-#include "brave/browser/ui/webui/brave_rewards/rewards_web_ui_utils.h"
-#include "brave/browser/ui/webui/brave_rewards_internals_ui.h"
 #include "brave/browser/ui/webui/skus_internals_ui.h"
 #include "brave/components/ai_rewriter/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/common/common_utils.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
 #include "brave/components/skus/common/features.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/profiles/profile.h"
@@ -39,26 +31,22 @@
 #include "content/public/browser/web_contents.h"
 #include "content/public/common/url_utils.h"
 #include "url/gurl.h"
+#include "brave/browser/ui/webui/ai_combiner_panel_page_ui.h"
+#include "brave/browser/ui/webui/ai_combiner_chat_page_ui.h"
+#include "brave/browser/ui/webui/aiwize_dashboard_page_ui.h"
+#include "brave/browser/ui/webui/aiwize_applications_page_ui.h"
 
 #if !BUILDFLAG(IS_ANDROID)
-#include "brave/browser/brave_wallet/brave_wallet_context_utils.h"
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/brave_new_tab_page_ui.h"
 #include "brave/browser/ui/webui/brave_news_internals/brave_news_internals_ui.h"
-#include "brave/browser/ui/webui/brave_wallet/wallet_page_ui.h"
 #include "brave/browser/ui/webui/new_tab_page/brave_new_tab_ui.h"
 #include "brave/browser/ui/webui/welcome_page/brave_welcome_ui.h"
 #include "brave/components/brave_news/common/features.h"
-#include "brave/components/brave_wallet/browser/brave_wallet_utils.h"
-#include "brave/components/brave_wallet/common/brave_wallet.mojom.h"
 #include "brave/components/commands/common/features.h"
 #include "chrome/browser/regional_capabilities/regional_capabilities_service_factory.h"
 #endif
 
 #if BUILDFLAG(IS_ANDROID)
-#include "brave/browser/brave_wallet/brave_wallet_service_factory.h"
-#include "brave/browser/ui/webui/brave_wallet/android/android_wallet_page_ui.h"
-#include "brave/components/brave_wallet/browser/brave_wallet_service.h"
-#include "brave/components/brave_wallet/browser/keyring_service.h"
 #endif
 
 #include "brave/browser/brave_vpn/vpn_utils.h"
@@ -68,9 +56,6 @@
 #include "brave/components/playlist/common/features.h"
 #endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/browser/ui/webui/tor_internals_ui.h"
-#endif
 
 #if BUILDFLAG(ENABLE_AI_REWRITER)
 #include "brave/browser/ui/webui/ai_rewriter/ai_rewriter_ui.h"
@@ -91,36 +76,21 @@ WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
   auto host = url.host_piece();
   Profile* profile = Profile::FromBrowserContext(
       web_ui->GetWebContents()->GetBrowserContext());
-  if (host == kAdsInternalsHost) {
-    return new AdsInternalsUI(
-        web_ui, url.host(),
-        brave_ads::AdsServiceFactory::GetForProfile(profile),
-        *profile->GetPrefs());
+  
+  if (host == kAIWizeApplicationsPageHost) {
+      return new AIWizeApplicationsUI(web_ui);
+  } else
+  if (host == kAIWizeDashboardPageHost) {
+      return new AIWizeDashboardUI(web_ui);
+  } else
+  if (host == kAiCombinerChatPageHost) {
+      return new AICombinerChatUI(web_ui);
+  } else
+  if (host == kAiCombinerPanelPageHost) {
+      return new AICombinerPanelUI(web_ui);
   } else if (host == kSkusInternalsHost) {
     return new SkusInternalsUI(web_ui, url.host());
-#if !BUILDFLAG(IS_ANDROID)
-  } else if (host == kWalletPageHost &&
-             brave_wallet::IsAllowedForContext(profile)) {
-    if (brave_wallet::IsNativeWalletEnabled()) {
-      return new WalletPageUI(web_ui);
-    }
-#endif  // !BUILDFLAG(OS_ANDROID)
-  } else if (host == kRewardsPageHost &&
-             // We don't want to check for supported profile type here because
-             // we want private windows to redirect to the regular profile.
-             // Additionally, if Rewards aren't supported because of the OFAC
-             // sanctions we want to show the page with an appropriate error
-             // message.
-             // Guest session will just show an error page.
-             brave_rewards::IsSupported(
-                 profile->GetPrefs(),
-                 brave_rewards::IsSupportedOptions::kSkipRegionCheck)) {
-    return new brave_rewards::RewardsPageUI(web_ui, url.host());
-  } else if (host == kRewardsInternalsHost &&
-             brave_rewards::IsSupportedForProfile(profile)) {
-    return new BraveRewardsInternalsUI(web_ui, url.host());
-#if !BUILDFLAG(IS_ANDROID)
-  } else if (base::FeatureList::IsEnabled(
+  } else    if (base::FeatureList::IsEnabled(
                  brave_news::features::kBraveNewsFeedUpdate) &&
              host == kBraveNewsInternalsHost) {
     return new BraveNewsInternalsUI(
@@ -132,7 +102,7 @@ WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
     // For private profiles the webui handling kChromeUINewTabHost is configured
     // with RegisterChromeWebUIConfigs, so we should not get called here with a
     // private profile.
-    DCHECK(!profile->IsIncognitoProfile() && !profile->IsTor() &&
+    DCHECK(!profile->IsIncognitoProfile()  &&
            !profile->IsGuestSession());
     // We will need to follow up on transitioning BraveNewTabUI to using
     // WebUIConfig. Currently, we can't add both BravePrivateNewTabUI and
@@ -143,17 +113,10 @@ WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
       return new BraveNewTabPageUI(web_ui);
     }
     return new BraveNewTabUI(
-        web_ui, url.host(),
-        brave_ads::AdsServiceFactory::GetForProfile(profile),
-        ntp_background_images::ViewCounterServiceFactory::GetForProfile(
+        web_ui, url.host(),        ntp_background_images::ViewCounterServiceFactory::GetForProfile(
             profile),
         regional_capabilities::RegionalCapabilitiesServiceFactory::
             GetForProfile(profile));
-#endif  // !BUILDFLAG(IS_ANDROID)
-#if BUILDFLAG(ENABLE_TOR)
-  } else if (host == kTorInternalsHost) {
-    return new TorInternalsUI(web_ui, url.host());
-#endif
 #if BUILDFLAG(IS_ANDROID)
   } else if (url.is_valid() && url.host() == kWalletPageHost) {
     return new AndroidWalletPageUI(web_ui, url);
@@ -192,24 +155,21 @@ WebUIFactoryFunction GetWebUIFactoryFunction(WebUI* web_ui,
       (base::FeatureList::IsEnabled(
            brave_news::features::kBraveNewsFeedUpdate) &&
        url.host_piece() == kBraveNewsInternalsHost) ||
-      (url.host_piece() == kWalletPageHost &&
-       brave_wallet::IsAllowedForContext(profile)) ||
       // On Android New Tab is a native page implemented in Java, so no need
       // in WebUI.
+      url.host_piece() == kAIWizeApplicationsPageHost ||
+      url.host_piece() == kAIWizeDashboardPageHost ||
+      url.host_piece() == kAiCombinerChatPageHost ||
+      url.host_piece() == kAiCombinerPanelPageHost ||
       url.host_piece() == chrome::kChromeUINewTabHost ||
       url.host_piece() == chrome::kChromeUISettingsHost ||
       ((url.host_piece() == kWelcomeHost || url.host_piece() == kWelcomeURL) &&
        !profile->IsGuestSession()) ||
 #endif  // BUILDFLAG(IS_ANDROID)
-#if BUILDFLAG(ENABLE_TOR)
-      url.host_piece() == kTorInternalsHost ||
-#endif
 #if BUILDFLAG(ENABLE_AI_REWRITER)
       (url.host_piece() == kRewriterUIHost &&
        ai_rewriter::features::IsAIRewriterEnabled()) ||
 #endif
-      url.host_piece() == kRewardsPageHost ||
-      url.host_piece() == kRewardsInternalsHost ||
       (url.host_piece() == kAdsInternalsHost &&
        !profile->IsIncognitoProfile())) {
     return &NewWebUI;
@@ -228,8 +188,6 @@ bool ShouldBlockWalletWebUI(content::BrowserContext* browser_context,
   if (!profile) {
     return false;
   }
-  auto* brave_wallet_service =
-      brave_wallet::BraveWalletServiceFactory::GetServiceForContext(profile);
   if (!brave_wallet_service) {
     return true;
   }
@@ -244,9 +202,6 @@ bool ShouldBlockWalletWebUI(content::BrowserContext* browser_context,
 WebUI::TypeID BraveWebUIControllerFactory::GetWebUIType(
     content::BrowserContext* browser_context,
     const GURL& url) {
-  if (brave_rewards::ShouldBlockRewardsWebUI(browser_context, url)) {
-    return WebUI::kNoWebUI;
-  }
 #if BUILDFLAG(IS_ANDROID)
   if (ShouldBlockWalletWebUI(browser_context, url)) {
     return WebUI::kNoWebUI;

@@ -15,6 +15,12 @@
 #include "components/user_prefs/user_prefs.h"
 #include "ui/base/metadata/metadata_impl_macros.h"
 #include "ui/views/widget/widget.h"
+#include "brave/browser/ui/webui/ai_combiner_panel_page_ui.h"
+#include "brave/components/constants/webui_url_constants.h"
+
+using SidePanelWebUIViewT_AICombinerPanel = SidePanelWebUIViewT<AICombinerPanelUI>;
+BEGIN_TEMPLATE_METADATA(SidePanelWebUIViewT_AICombinerPanel, SidePanelWebUIViewT)
+END_METADATA
 
 using SidePanelWebUIViewT_AIChatUI = SidePanelWebUIViewT<AIChatUI>;
 BEGIN_TEMPLATE_METADATA(SidePanelWebUIViewT_AIChatUI, SidePanelWebUIViewT)

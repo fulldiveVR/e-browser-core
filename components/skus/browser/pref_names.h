@@ -9,7 +9,7 @@
 namespace skus {
 namespace prefs {
 
-// Dictionary storage for the SKU SDK. For example, account.brave.com
+// Dictionary storage for the SKU SDK. For example, account.aiwize.com
 // stores SKU key/value pairs in local storage.
 inline constexpr char kSkusState[] = "skus.state";
 inline constexpr char kSkusStateMigratedToLocalState[] =

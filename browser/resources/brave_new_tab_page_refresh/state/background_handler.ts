@@ -4,7 +4,6 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import { loadTimeData } from '$web-common/loadTimeData'
-import { SponsoredRichMediaAdEventHandler } from 'gen/brave/components/ntp_background_images/browser/mojom/ntp_background_images.mojom.m.js'
 import { NewTabPageProxy } from './new_tab_page_proxy'
 import { Store } from '../lib/store'
 import { debounce } from '$web-common/debounce'
@@ -15,8 +14,6 @@ export function createBackgroundHandler(
 ): BackgroundActions {
   const newTabProxy = NewTabPageProxy.getInstance()
   const { handler } = newTabProxy
-  const sponsoredRichMediaAdEventHandler =
-      SponsoredRichMediaAdEventHandler.getRemote()
 
   store.update({
     backgroundRandomValue: Math.random(),
@@ -126,18 +123,6 @@ export function createBackgroundHandler(
           sponsoredImageBackground.wallpaperId,
           sponsoredImageBackground.shouldMetricsFallbackToP3a);
       }
-    },
-
-    notifySponsoredRichMediaEvent(type) {
-      const { sponsoredImageBackground } = store.getState()
-      if (!sponsoredImageBackground) {
-        return
-      }
-      sponsoredRichMediaAdEventHandler.maybeReportRichMediaAdEvent(
-        sponsoredImageBackground.wallpaperId,
-        sponsoredImageBackground.creativeInstanceId,
-        sponsoredImageBackground.shouldMetricsFallbackToP3a,
-        type);
     }
   }
 }

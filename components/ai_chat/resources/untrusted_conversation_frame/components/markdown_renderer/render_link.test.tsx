@@ -24,7 +24,7 @@ test('Test RenderLink component with disallowed links.', async () => {
   render(
     <RenderLink
       a={{ href: 'https://example.com', children: 'Test Link' }}
-      allowedLinks={['https://brave.com']}
+      allowedLinks={['https://aiwize.com']}
     />
   )
   expect(screen.getByText('Test Link')).toBeInTheDocument()
@@ -35,8 +35,8 @@ test('Test RenderLink component with disallowed links.', async () => {
 test('Test RenderLink component with citations.', async () => {
   render(
     <RenderLink
-      a={{ href: 'https://brave.com', children: '1' }}
-      allowedLinks={['https://brave.com']}
+      a={{ href: 'https://aiwize.com', children: '1' }}
+      allowedLinks={['https://aiwize.com']}
     />
   )
 

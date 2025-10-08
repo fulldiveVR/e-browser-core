@@ -8,21 +8,16 @@
 #include "brave/browser/ui/tabs/brave_tab_prefs.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
 #include "brave/components/brave_news/common/pref_names.h"
-#include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/brave_shields/core/common/pref_names.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/de_amp/common/pref_names.h"
 #include "brave/components/debounce/core/common/pref_names.h"
-#include "brave/components/decentralized_dns/core/pref_names.h"
 #include "brave/components/ntp_background_images/common/pref_names.h"
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
 #include "brave/components/playlist/common/buildflags/buildflags.h"
 #include "brave/components/request_otr/common/pref_names.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "brave/components/webcompat_reporter/common/pref_names.h"
 #include "chrome/browser/extensions/api/settings_private/prefs_util.h"
@@ -42,13 +37,7 @@
 #include "brave/components/sidebar/browser/pref_names.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/components/speedreader/speedreader_pref_names.h"
-#endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/components/tor/pref_names.h"
-#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/common/pref_names.h"
@@ -112,10 +101,6 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
       settings_api::PrefType::kBoolean;
 
   // Rewards/Ads prefs
-  (*s_brave_allowlist)[brave_rewards::prefs::kEnabled] =
-      settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[brave_rewards::prefs::kShowLocationBarButton] =
-      settings_api::PrefType::kBoolean;
 
   // Search engine prefs
   (*s_brave_allowlist)[prefs::kAddOpenSearchEngines] =
@@ -142,8 +127,6 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[omnibox::kCommanderSuggestionsEnabled] =
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[kAskEnableWidvine] = settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[kNewTabPageSuperReferralThemesOption] =
-      settings_api::PrefType::kNumber;
   (*s_brave_allowlist)[kTabsSearchShow] = settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[brave_tabs::kTabHoverMode] =
       settings_api::PrefType::kNumber;
@@ -165,10 +148,6 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   (*s_brave_allowlist)[sidebar::kSidebarShowOption] =
       settings_api::PrefType::kNumber;
 #endif
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  (*s_brave_allowlist)[speedreader::kSpeedreaderPrefEnabled] =
-      settings_api::PrefType::kBoolean;
-#endif
   // De-AMP feature
   (*s_brave_allowlist)[de_amp::kDeAmpPrefEnabled] =
       settings_api::PrefType::kBoolean;
@@ -180,12 +159,9 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[kNewTabPageShowBackgroundImage] =
       settings_api::PrefType::kBoolean;
+  (*s_brave_allowlist)[kSplitView2Visible] = settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[kNewTabPageShowClock] = settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[kNewTabPageShowStats] = settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[kNewTabPageShowRewards] =
-      settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[kNewTabPageShowBraveTalk] =
-      settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[kNewTabPageShowBraveVPN] =
       settings_api::PrefType::kBoolean;
   (*s_brave_allowlist)[kNewTabPageShowsOptions] =
@@ -232,25 +208,6 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
       settings_api::PrefType::kBoolean;
 
   // Brave Wallet pref
-  (*s_brave_allowlist)[kBraveWalletSelectedNetworks] =
-      settings_api::PrefType::kDictionary;
-  (*s_brave_allowlist)[kDefaultEthereumWallet] =
-      settings_api::PrefType::kNumber;
-  (*s_brave_allowlist)[kDefaultSolanaWallet] = settings_api::PrefType::kNumber;
-  (*s_brave_allowlist)[kDefaultCardanoWallet] = settings_api::PrefType::kNumber;
-  (*s_brave_allowlist)[kDefaultBaseCurrency] = settings_api::PrefType::kString;
-  (*s_brave_allowlist)[kDefaultBaseCryptocurrency] =
-      settings_api::PrefType::kString;
-  (*s_brave_allowlist)[kShowWalletIconOnToolbar] =
-      settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[kBraveWalletAutoLockMinutes] =
-      settings_api::PrefType::kNumber;
-  (*s_brave_allowlist)[kBraveWalletTransactionSimulationOptInStatus] =
-      settings_api::PrefType::kNumber;
-  (*s_brave_allowlist)[kBraveWalletNftDiscoveryEnabled] =
-      settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[kBraveWalletPrivateWindowsEnabled] =
-      settings_api::PrefType::kBoolean;
 
   // Leo Assistant pref
   (*s_brave_allowlist)[ai_chat::prefs::kBraveChatStorageEnabled] =
@@ -277,26 +234,12 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetAllowlistedKeys() {
   // Omnibox pref
   (*s_brave_allowlist)[omnibox::kPreventUrlElisionsInOmnibox] =
       settings_api::PrefType::kBoolean;
-#if BUILDFLAG(ENABLE_TOR)
-  (*s_brave_allowlist)[tor::prefs::kOnionOnlyInTorWindows] =
-      settings_api::PrefType::kBoolean;
-  (*s_brave_allowlist)[tor::prefs::kBridgesConfig] =
-      settings_api::PrefType::kDictionary;
-#endif
   (*s_brave_allowlist)[prefs::kWebRTCIPHandlingPolicy] =
       settings_api::PrefType::kString;
   // Request OTR feature
   (*s_brave_allowlist)[request_otr::kRequestOTRActionOption] =
       settings_api::PrefType::kNumber;
 
-  (*s_brave_allowlist)[decentralized_dns::kUnstoppableDomainsResolveMethod] =
-      settings_api::PrefType::kNumber;
-  (*s_brave_allowlist)[decentralized_dns::kENSResolveMethod] =
-      settings_api::PrefType::kNumber;
-  (*s_brave_allowlist)[decentralized_dns::kEnsOffchainResolveMethod] =
-      settings_api::PrefType::kNumber;
-  (*s_brave_allowlist)[decentralized_dns::kSnsResolveMethod] =
-      settings_api::PrefType::kNumber;
 
   // Media router pref
   (*s_brave_allowlist)[kEnableMediaRouterOnRestart] =

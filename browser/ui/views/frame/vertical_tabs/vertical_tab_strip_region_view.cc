@@ -111,7 +111,7 @@ class ToggleButton : public ToolbarButton {
     if (GetState() == views::Button::STATE_NORMAL) {
       // Double check highlight state after changing state to normal. Dragging
       // the button can make the highlight effect hidden.
-      // https://github.com/brave/brave-browser/issues/31421
+      // https://github.com/fulldiveVR/e-browser/issues/31421
       SetHighlighted(region_view_->state() ==
                      VerticalTabStripRegionView::State::kExpanded);
     }
@@ -977,7 +977,7 @@ void VerticalTabStripRegionView::OnBoundsChanged(
       // During/After the drag and drop session, tab strip container might have
       // ignored Layout() request. As the container bounds changed, we should
       // force it to layout.
-      // https://github.com/brave/brave-browser/issues/29941
+      // https://github.com/fulldiveVR/e-browser/issues/29941
       tab_strip()->tab_container_->InvalidateIdealBounds();
       tab_strip()->tab_container_->CompleteAnimationAndLayout();
     }

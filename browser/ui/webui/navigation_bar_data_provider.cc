@@ -5,8 +5,6 @@
 
 #include "brave/browser/ui/webui/navigation_bar_data_provider.h"
 
-#include "brave/browser/brave_rewards/rewards_util.h"
-#include "brave/browser/brave_wallet/brave_wallet_context_utils.h"
 #include "brave/grit/brave_generated_resources.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/grit/generated_resources.h"
@@ -22,14 +20,8 @@ void NavigationBarDataProvider::Initialize(content::WebUIDataSource* source,
                              IDS_BOOKMARK_MANAGER_TITLE);
   source->AddLocalizedString("brToolbarDownloadsTitle", IDS_DOWNLOADS_TITLE);
   source->AddLocalizedString("brToolbarHistoryTitle", IDS_HISTORY_TITLE);
-  source->AddLocalizedString("brToolbarRewardsTitle",
-                             IDS_BRAVE_UI_BRAVE_REWARDS_TOOLBAR);
-  source->AddLocalizedString("brToolbarWalletsTitle", IDS_WALLETS_TITLE);
 
-  source->AddBoolean(
-      "brToolbarShowRewardsButton",
-      brave_rewards::IsSupportedForProfile(
-          profile, brave_rewards::IsSupportedOptions::kSkipRegionCheck));
-  source->AddBoolean("isBraveWalletAllowed",
-                     brave_wallet::IsAllowedForContext(profile));
+
+
+  source->AddLocalizedString("brToolbarDashboardTitle", IDS_SETTINGS_DASHBOARD_TITLE);
 }

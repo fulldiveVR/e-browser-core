@@ -9,8 +9,6 @@ describe('new tab storage', () => {
     it('adds back widgets that should be showing in the stack', () => {
       const initialState = {
         ...defaultState,
-        showRewards: true,
-        braveRewardsSupported: true,
         widgetStackOrder: []
       }
       const expectedState = {

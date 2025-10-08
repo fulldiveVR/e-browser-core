@@ -9,7 +9,6 @@
 #include "base/containers/fixed_flat_map.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/browser/pref_names.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/vector_icons/vector_icons.h"
 #include "chrome/browser/ui/webui/side_panel/customize_chrome/customize_toolbar/customize_toolbar.mojom.h"
@@ -44,13 +43,6 @@ inline constexpr BraveAction kShowSidePanelAction = {
     .pref_name = kShowSidePanelButton,
     .icon = kLeoBrowserSidebarRightIcon};
 
-inline constexpr BraveAction kShowWalletAction = {
-    .id = side_panel::customize_chrome::mojom::ActionId::kShowWallet,
-    .display_name_resource_id = IDS_CUSTOMIZE_TOOLBAR_TOGGLE_WALLET,
-    .anchor = side_panel::customize_chrome::mojom::ActionId::kTabSearch,
-    .category = side_panel::customize_chrome::mojom::CategoryId::kNavigation,
-    .pref_name = kShowWalletIconOnToolbar,
-    .icon = kLeoProductBraveWalletIcon};
 
 inline constexpr BraveAction kShowAIChatAction = {
     .id = side_panel::customize_chrome::mojom::ActionId::kShowAIChat,
@@ -74,7 +66,6 @@ inline constexpr auto kBraveActions =
     base::MakeFixedFlatMap<side_panel::customize_chrome::mojom::ActionId,
                            const BraveAction*>({
         {kShowSidePanelAction.id, &kShowSidePanelAction},
-        {kShowWalletAction.id, &kShowWalletAction},
         {kShowAIChatAction.id, &kShowAIChatAction},
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
         {kShowVPNAction.id, &kShowVPNAction},

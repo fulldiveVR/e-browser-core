@@ -16,9 +16,6 @@
 #include "ui/gfx/geometry/point.h"
 #include "url/gurl.h"
 
-namespace brave_ads {
-struct NewTabPageAdInfo;
-}  // namespace brave_ads
 
 namespace ntp_background_images {
 
@@ -146,8 +143,6 @@ struct NTPSponsoredImagesData {
   std::optional<base::Value::Dict> MaybeGetBackgroundAt(
       size_t campaign_index,
       size_t creative_index) const;
-  std::optional<base::Value::Dict> MaybeGetBackground(
-      const brave_ads::NewTabPageAdInfo& ad);
 
   bool IsSuperReferral() const;
 

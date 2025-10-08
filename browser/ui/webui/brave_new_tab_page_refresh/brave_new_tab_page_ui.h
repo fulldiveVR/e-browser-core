@@ -10,7 +10,6 @@
 
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/brave_new_tab_page.mojom.h"
 #include "brave/components/brave_news/common/brave_news.mojom-forward.h"
-#include "brave/components/brave_rewards/core/mojom/rewards_page.mojom.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "brave/components/ntp_background_images/browser/mojom/ntp_background_images.mojom.h"
 #include "mojo/public/cpp/bindings/pending_receiver.h"
@@ -25,9 +24,6 @@ namespace ntp_background_images {
 class NTPSponsoredRichMediaAdEventHandler;
 }
 
-namespace brave_rewards {
-class RewardsPageHandler;
-}
 
 class RealboxHandler;
 
@@ -49,8 +45,7 @@ class BraveNewTabPageUI : public ui::MojoWebUIController {
   void BindInterface(
       mojo::PendingReceiver<searchbox::mojom::PageHandler> receiver);
 
-  void BindInterface(
-      mojo::PendingReceiver<brave_rewards::mojom::RewardsPageHandler> receiver);
+
 
   void BindInterface(
       mojo::PendingReceiver<brave_news::mojom::BraveNewsController> receiver);
@@ -63,10 +58,7 @@ class BraveNewTabPageUI : public ui::MojoWebUIController {
  private:
   std::unique_ptr<brave_new_tab_page_refresh::mojom::NewTabPageHandler>
       page_handler_;
-  std::unique_ptr<ntp_background_images::NTPSponsoredRichMediaAdEventHandler>
-      rich_media_ad_event_handler_;
   std::unique_ptr<RealboxHandler> realbox_handler_;
-  std::unique_ptr<brave_rewards::RewardsPageHandler> rewards_page_handler_;
 
   WEB_UI_CONTROLLER_TYPE_DECL();
 };

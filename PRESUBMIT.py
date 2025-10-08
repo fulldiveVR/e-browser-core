@@ -559,7 +559,7 @@ def CheckTodoBugReferences(_original_check, input_api, output_api):
     for f in input_api.AffectedSourceFiles(_FilterFile):
         for line_number, line in f.ChangedContents():
             match = pattern.match(line)
-            if match and 'https://github.com/brave/brave-browser/issues' not in match.group(
+            if match and 'https://github.com/fulldiveVR/e-browser/issues' not in match.group(
                     0):
                 problems.append(f"{f.LocalPath()}: {line_number}\n    {line}")
 
@@ -567,7 +567,7 @@ def CheckTodoBugReferences(_original_check, input_api, output_api):
         return [
             output_api.PresubmitPromptWarning(
                 'TODO comments must be accompanied with a valid brave-browser '
-                'issue. https://github.com/brave/brave-browser/issues',
+                'issue. https://github.com/fulldiveVR/e-browser/issues',
                 problems)
         ]
     return []

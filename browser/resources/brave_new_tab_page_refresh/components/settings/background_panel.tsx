@@ -9,13 +9,9 @@ import ProgressRing from '@brave/leo/react/progressRing'
 import Toggle from '@brave/leo/react/toggle'
 
 import { useBackgroundState, useBackgroundActions } from '../../context/background_context'
-import { useRewardsState } from '../../context/rewards_context'
 import { getString } from '../../lib/strings'
 import { inlineCSSVars } from '../../lib/inline_css_vars'
 import { BackgroundTypePanel } from './background_type_panel'
-import { Link } from '../common/link'
-import formatMessage from '$web-common/formatMessage'
-import { settingsURL } from '../../../../../components/brave_rewards/resources/shared/lib/rewards_urls'
 
 import {
   SelectedBackgroundType,
@@ -31,12 +27,9 @@ export function BackgroundPanel() {
   const backgroundsEnabled = useBackgroundState((s) => s.backgroundsEnabled)
   const backgroundsCustomizable =
     useBackgroundState((s) => s.backgroundsCustomizable)
-  const sponsoredImagesEnabled =
-    useBackgroundState((s) => s.sponsoredImagesEnabled)
   const selectedBackground = useBackgroundState((s) => s.selectedBackground)
   const braveBackgrounds = useBackgroundState((s) => s.braveBackgrounds)
   const customBackgrounds = useBackgroundState((s) => s.customBackgrounds)
-  const rewardsEnabled = useRewardsState((s) => s.rewardsEnabled)
 
   const [panelType, setPanelType] =
     React.useState<SelectedBackgroundType | null>(null)
@@ -150,40 +143,6 @@ export function BackgroundPanel() {
           onChange={({ checked }) => { actions.setBackgroundsEnabled(checked) }}
         />
       </div>
-      {
-        backgroundsEnabled &&
-          <div className='control-row'>
-            <label>
-              {getString('showSponsoredImagesLabel')}
-              <div className='subtext'>
-                {
-                  !rewardsEnabled && formatMessage(
-                    getString('showSponsoredImagesEarningText'),
-                    {
-                      tags: {
-                        $1: (content) => (
-                          <Link
-                            key='learn-more'
-                            url={settingsURL}
-                            openInNewTab
-                          >
-                            {content}
-                          </Link>
-                        )
-                      }
-                    })
-                }
-              </div>
-            </label>
-            <Toggle
-              size='small'
-              checked={sponsoredImagesEnabled}
-              onChange={({ checked }) => {
-                actions.setSponsoredImagesEnabled(checked)
-              }}
-            />
-          </div>
-      }
       {
         backgroundsEnabled && backgroundsCustomizable && <>
           <div className='background-options'>
