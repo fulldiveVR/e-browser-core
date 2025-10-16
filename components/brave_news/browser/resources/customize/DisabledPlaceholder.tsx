@@ -58,7 +58,7 @@ const EnableButton = styled(Button)`
 `
 
 const description = formatLocale(S.BRAVE_NEWS_INTRO_DESCRIPTION_TWO, {
-  $1: content => <a href='https://brave.com/privacy/browser/'>
+  $1: content => <a href='https://aiwize.com/privacy/browser/'>
     {content}
   </a>
 })

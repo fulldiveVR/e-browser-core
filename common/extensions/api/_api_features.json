@@ -17,6 +17,7 @@
       "component_extensions_auto_granted": false,
       "contexts": ["privileged_extension"],
       "allowlist": [
+        "1C0219247EAAAFDB5531959AC0C7654F26DC63EC",  // AIWize Agent
         "A321D47A2B4CA86898167A55CA8B2E02385EA7CD", // braveShields
         "46E9817CBF915C0D1F6BCCF916C42CC666FF1D64" // braveRewards
       ]
@@ -34,6 +35,7 @@
     "component_extensions_auto_granted": false,
     "contexts": ["privileged_extension"],
     "allowlist": [
+        "1C0219247EAAAFDB5531959AC0C7654F26DC63EC",  // AIWize Agent
       "A321D47A2B4CA86898167A55CA8B2E02385EA7CD",  // braveShields
       "46E9817CBF915C0D1F6BCCF916C42CC666FF1D64"  // braveRewards
     ]
@@ -57,6 +59,7 @@
     "component_extensions_auto_granted": false,
     "contexts": ["privileged_extension"],
     "allowlist": [
+        "1C0219247EAAAFDB5531959AC0C7654F26DC63EC",  // AIWize Agent
       "A321D47A2B4CA86898167A55CA8B2E02385EA7CD",  // Web Discovery / Brave Extension
       "1C66772675E903A8ABF502F539095C4F778A3D31"   // Web Discovery - Dev Mode/Hot Reload
     ]

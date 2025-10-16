@@ -6,7 +6,6 @@
 #include "brave/browser/ui/webui/brave_education/brave_education_page_delegate_desktop.h"
 
 #include "base/check.h"
-#include "brave/browser/ui/brave_rewards/rewards_panel_coordinator.h"
 #include "brave/browser/ui/brave_vpn/brave_vpn_controller.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
 #include "chrome/browser/ui/browser_window/public/browser_window_features.h"
@@ -29,13 +28,6 @@ void BraveEducationPageDelegateDesktop::OpenURL(
   window_interface_->OpenGURL(url, disposition);
 }
 
-void BraveEducationPageDelegateDesktop::OpenRewardsPanel() {
-  auto* panel_coordinator =
-      window_interface_->GetFeatures().rewards_panel_coordinator();
-  if (panel_coordinator) {
-    panel_coordinator->OpenRewardsPanel();
-  }
-}
 
 void BraveEducationPageDelegateDesktop::OpenVPNPanel() {
 #if BUILDFLAG(ENABLE_BRAVE_VPN)

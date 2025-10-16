@@ -128,34 +128,14 @@ void BraveAppMenuModel::Build() {
 }
 
 void BraveAppMenuModel::BuildTabsAndWindowsSection() {
-  if (IsCommandIdEnabled(IDC_NEW_TOR_CONNECTION_FOR_SITE)) {
-    InsertItemWithStringIdAt(GetIndexOfCommandId(IDC_NEW_WINDOW).value(),
-                             IDC_NEW_TOR_CONNECTION_FOR_SITE,
-                             IDS_NEW_TOR_CONNECTION_FOR_SITE);
-  }
 
-  if (IsCommandIdEnabled(IDC_NEW_OFFTHERECORD_WINDOW_TOR)) {
-    InsertItemWithStringIdAt(
-        GetIndexOfCommandId(IDC_NEW_INCOGNITO_WINDOW).value() + 1,
-        IDC_NEW_OFFTHERECORD_WINDOW_TOR, IDS_NEW_OFFTHERECORD_WINDOW_TOR);
-  }
 }
 
 void BraveAppMenuModel::BuildBraveProductsSection() {
   // Needs to add separator as this section is brave specific section.
   bool need_separator = false;
 
-  if (IsCommandIdEnabled(IDC_TOGGLE_AI_CHAT)) {
-    InsertItemWithStringIdAt(GetNextIndexOfBraveProductsSection(),
-                             IDC_TOGGLE_AI_CHAT, IDS_TOGGLE_AI_CHAT);
-    need_separator = true;
-  }
 
-  if (IsCommandIdEnabled(IDC_SHOW_BRAVE_WALLET)) {
-    InsertItemWithStringIdAt(GetNextIndexOfBraveProductsSection(),
-                             IDC_SHOW_BRAVE_WALLET, IDS_SHOW_BRAVE_WALLET);
-    need_separator = true;
-  }
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   if (IsCommandIdEnabled(IDC_BRAVE_VPN_MENU)) {
@@ -419,9 +399,7 @@ bool BraveAppMenuModel::IsCommandIdEnabled(int id) const {
 size_t BraveAppMenuModel::GetNextIndexOfBraveProductsSection() const {
   std::vector<int> commands_to_check = {IDC_SHOW_BRAVE_VPN_PANEL,
                                         IDC_BRAVE_VPN_MENU,
-                                        IDC_SHOW_BRAVE_WALLET,
                                         IDC_TOGGLE_AI_CHAT,
-                                        IDC_NEW_OFFTHERECORD_WINDOW_TOR,
                                         IDC_NEW_INCOGNITO_WINDOW,
                                         IDC_NEW_WINDOW};
   const auto last_index_of_second_section =
@@ -431,8 +409,7 @@ size_t BraveAppMenuModel::GetNextIndexOfBraveProductsSection() const {
 
   // If |last_cmd_id_of_second_section| is from new tab & windows section,
   // no item is added to second section yet.
-  if (last_cmd_id_of_second_section == IDC_NEW_OFFTHERECORD_WINDOW_TOR ||
-      last_cmd_id_of_second_section == IDC_NEW_INCOGNITO_WINDOW ||
+  if (      last_cmd_id_of_second_section == IDC_NEW_INCOGNITO_WINDOW ||
       last_cmd_id_of_second_section == IDC_NEW_WINDOW) {
     // Used additional "+1" to skip separator.
     DCHECK_EQ(ui::MenuModel::TYPE_SEPARATOR,

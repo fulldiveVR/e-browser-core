@@ -122,7 +122,7 @@ ConversationHandler::ConversationHandler(
       feedback_api_(feedback_api),
       url_loader_factory_(url_loader_factory) {
   // Set conversation capability based on profile-global state.
-  // TODO(https://github.com/brave/brave-browser/issues/49261): This is
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/49261): This is
   // temporary whilst content agent conversations are
   // 1) not toggleable by the user and
   // 2) only for specific profiles.
@@ -1050,7 +1050,7 @@ void ConversationHandler::AddToConversationHistory(
 }
 
 void ConversationHandler::InitToolsForNewGenerationLoop() {
-  // TODO(https://github.com/brave/brave-browser/issues/48535): This is the
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/48535): This is the
   // main place to create stateful tools that this Conversation creates.
 
   // We can also reset any already-created tools that don't want state to

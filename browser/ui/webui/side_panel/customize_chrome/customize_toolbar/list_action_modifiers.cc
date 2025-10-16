@@ -12,11 +12,9 @@
 #include "base/containers/contains.h"
 #include "base/containers/fixed_flat_set.h"
 #include "base/strings/utf_string_conversions.h"
-#include "brave/browser/brave_rewards/rewards_util.h"
 #include "brave/browser/ui/webui/side_panel/customize_chrome/customize_toolbar/brave_action.h"
 #include "brave/components/ai_chat/core/browser/utils.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/common/common_utils.h"
 #include "chrome/browser/profiles/profile.h"
 #include "chrome/browser/ui/webui/util/image_util.h"
 #include "components/prefs/pref_service.h"
@@ -38,9 +36,6 @@ namespace {
 
 void AddActionsForAddressBarCategory(Profile* profile,
                                      std::vector<BraveAction>& brave_actions) {
-  if (brave_rewards::IsSupportedForProfile(profile)) {
-    brave_actions.push_back(kShowReward);
-  }
 
   if (!profile->GetPrefs()->GetBoolean(
           brave_news::prefs::kBraveNewsDisabledByPolicy)) {
@@ -182,9 +177,6 @@ std::vector<ActionPtr> ApplyBraveSpecificModifications(
     brave_actions.push_back(kShowAIChatAction);
   }
 
-  if (brave_wallet::IsNativeWalletEnabled()) {
-    brave_actions.push_back(kShowWalletAction);
-  }
 
   AddActionsForAddressBarCategory(
       Profile::FromBrowserContext(web_contents.GetBrowserContext()),

@@ -13,12 +13,10 @@
 #include "base/functional/bind.h"
 #include "base/path_service.h"
 #include "base/task/thread_pool.h"
-#include "brave/browser/brave_ads/analytics/p3a/brave_stats_helper.h"
 #include "brave/browser/brave_referrals/referrals_service_delegate.h"
 #include "brave/browser/brave_shields/ad_block_subscription_download_manager_getter.h"
 #include "brave/browser/brave_stats/brave_stats_updater.h"
 #include "brave/browser/brave_stats/first_run_util.h"
-#include "brave/browser/brave_wallet/wallet_data_files_installer_delegate_impl.h"
 #include "brave/browser/component_updater/brave_component_updater_configurator.h"
 #include "brave/browser/misc_metrics/process_misc_metrics.h"
 #include "brave/browser/net/brave_system_request_handler.h"
@@ -27,7 +25,6 @@
 #include "brave/common/brave_channel_info.h"
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/ai_chat/core/common/features.h"
-#include "brave/components/brave_ads/browser/component_updater/resource_component.h"
 #include "brave/components/brave_component_updater/browser/brave_component_updater_delegate.h"
 #include "brave/components/brave_component_updater/browser/local_data_files_service.h"
 #include "brave/components/brave_origin/brave_origin_policy_manager.h"
@@ -36,7 +33,6 @@
 #include "brave/components/brave_shields/content/browser/ad_block_subscription_service_manager.h"
 #include "brave/components/brave_shields/core/common/features.h"
 #include "brave/components/brave_sync/network_time_helper.h"
-#include "brave/components/brave_wallet/browser/wallet_data_files_installer.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/debounce/core/browser/debounce_component_installer.h"
 #include "brave/components/debounce/core/common/features.h"
@@ -68,15 +64,7 @@
 #include "brave/browser/ai_chat/ai_chat_agent_profile_manager.h"
 #endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/components/tor/brave_tor_client_updater.h"
-#include "brave/components/tor/brave_tor_pluggable_transport_updater.h"
-#include "brave/components/tor/pref_names.h"
-#endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/components/speedreader/speedreader_rewriter_service.h"
-#endif
 
 #if BUILDFLAG(IS_ANDROID)
 #include "chrome/browser/flags/android/chrome_feature_list.h"
@@ -141,13 +129,12 @@ BraveBrowserProcessImpl::BraveBrowserProcessImpl(StartupData* startup_data)
   histogram_braveizer_ = p3a::HistogramsBraveizer::Create();
 
   // initialize ads stats helper
-  ads_brave_stats_helper();
-
   // early initialize brave stats
   brave_stats_updater();
 
   // early initialize misc metrics
   process_misc_metrics();
+  ai_combiner_helper();
 }
 
 void BraveBrowserProcessImpl::Init() {
@@ -159,12 +146,6 @@ void BraveBrowserProcessImpl::Init() {
       base::BindRepeating(&BraveBrowserProcessImpl::OnBraveDarkModeChanged,
                           base::Unretained(this)));
 
-#if BUILDFLAG(ENABLE_TOR)
-  pref_change_registrar_.Add(
-      tor::prefs::kTorDisabled,
-      base::BindRepeating(&BraveBrowserProcessImpl::OnTorEnabledChanged,
-                          base::Unretained(this)));
-#endif
 
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID)
   day_zero_browser_ui_expt_manager_ =
@@ -207,7 +188,6 @@ void BraveBrowserProcessImpl::PreMainMessageLoopRun() {
 
 #if !BUILDFLAG(IS_ANDROID)
 void BraveBrowserProcessImpl::StartTearDown() {
-  brave_stats_helper_.reset();
   brave_stats_updater_.reset();
   brave_referrals_service_.reset();
   if (ntp_background_images_service_) {
@@ -223,6 +203,7 @@ void BraveBrowserProcessImpl::StartTearDown() {
   brave_origin::BraveOriginPolicyManager::GetInstance()->Shutdown();
   brave_sync::NetworkTimeHelper::GetInstance()->Shutdown();
   BrowserProcessImpl::StartTearDown();
+  ai_combiner_helper()->StopService();
 }
 
 void BraveBrowserProcessImpl::PostDestroyThreads() {
@@ -253,7 +234,6 @@ ProfileManager* BraveBrowserProcessImpl::profile_manager() {
 void BraveBrowserProcessImpl::StartBraveServices() {
   DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
 
-  resource_component();
 
   if (base::FeatureList::IsEnabled(net::features::kBraveHttpsByDefault)) {
     https_upgrade_exceptions_service();
@@ -274,15 +254,11 @@ void BraveBrowserProcessImpl::StartBraveServices() {
 #if BUILDFLAG(ENABLE_REQUEST_OTR)
   request_otr_component_installer();
 #endif
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  speedreader_rewriter_service();
-#endif
   URLSanitizerComponentInstaller();
   // Now start the local data files service, which calls all observers.
   local_data_files_service()->Start();
 
-  brave_wallet::WalletDataFilesInstaller::GetInstance().SetDelegate(
-      std::make_unique<brave_wallet::WalletDataFilesInstallerDelegateImpl>());
+  ai_combiner_helper()->StartService();
 }
 
 brave_shields::AdBlockService* BraveBrowserProcessImpl::ad_block_service() {
@@ -404,42 +380,6 @@ void BraveBrowserProcessImpl::CreateAIChatAgentProfileManager() {
 }
 #endif
 
-#if BUILDFLAG(ENABLE_TOR)
-tor::BraveTorClientUpdater* BraveBrowserProcessImpl::tor_client_updater() {
-  if (tor_client_updater_) {
-    return tor_client_updater_.get();
-  }
-
-  base::FilePath user_data_dir;
-  base::PathService::Get(chrome::DIR_USER_DATA, &user_data_dir);
-
-  tor_client_updater_ = std::make_unique<tor::BraveTorClientUpdater>(
-      brave_component_updater_delegate(), local_state(), user_data_dir);
-  return tor_client_updater_.get();
-}
-
-tor::BraveTorPluggableTransportUpdater*
-BraveBrowserProcessImpl::tor_pluggable_transport_updater() {
-  if (!tor_pluggable_transport_updater_) {
-    base::FilePath user_data_dir;
-    base::PathService::Get(chrome::DIR_USER_DATA, &user_data_dir);
-
-    tor_pluggable_transport_updater_ =
-        std::make_unique<tor::BraveTorPluggableTransportUpdater>(
-            brave_component_updater_delegate(), local_state(), user_data_dir);
-  }
-  return tor_pluggable_transport_updater_.get();
-}
-
-void BraveBrowserProcessImpl::OnTorEnabledChanged() {
-  // Update all browsers' tor command status.
-  for (Browser* browser : *BrowserList::GetInstance()) {
-    static_cast<chrome::BraveBrowserCommandController*>(
-        browser->command_controller())
-        ->UpdateCommandForTor();
-  }
-}
-#endif
 
 p3a::P3AService* BraveBrowserProcessImpl::p3a_service() {
   if (p3a_service_) {
@@ -474,21 +414,7 @@ brave_stats::BraveStatsUpdater* BraveBrowserProcessImpl::brave_stats_updater() {
   return brave_stats_updater_.get();
 }
 
-brave_ads::BraveStatsHelper* BraveBrowserProcessImpl::ads_brave_stats_helper() {
-  if (!brave_stats_helper_) {
-    brave_stats_helper_ = std::make_unique<brave_ads::BraveStatsHelper>(
-        local_state(), profile_manager());
-  }
-  return brave_stats_helper_.get();
-}
 
-brave_ads::ResourceComponent* BraveBrowserProcessImpl::resource_component() {
-  if (!resource_component_) {
-    resource_component_ = std::make_unique<brave_ads::ResourceComponent>(
-        brave_component_updater_delegate());
-  }
-  return resource_component_.get();
-}
 
 void BraveBrowserProcessImpl::CreateProfileManager() {
   DCHECK(!created_profile_manager_ && !profile_manager_);
@@ -504,16 +430,6 @@ BraveBrowserProcessImpl::notification_platform_bridge() {
   return BrowserProcessImpl::notification_platform_bridge();
 }
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-speedreader::SpeedreaderRewriterService*
-BraveBrowserProcessImpl::speedreader_rewriter_service() {
-  if (!speedreader_rewriter_service_) {
-    speedreader_rewriter_service_ =
-        std::make_unique<speedreader::SpeedreaderRewriterService>();
-  }
-  return speedreader_rewriter_service_.get();
-}
-#endif  // BUILDFLAG(ENABLE_SPEEDREADER)
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 brave_vpn::BraveVPNConnectionManager*
@@ -535,4 +451,8 @@ BraveBrowserProcessImpl::process_misc_metrics() {
         std::make_unique<misc_metrics::ProcessMiscMetrics>(local_state());
   }
   return process_misc_metrics_.get();
+}
+
+ai_combiner::AICombinerHelper* BraveBrowserProcessImpl::ai_combiner_helper() {
+  return ai_combiner::AICombinerHelper::GetInstance();
 }

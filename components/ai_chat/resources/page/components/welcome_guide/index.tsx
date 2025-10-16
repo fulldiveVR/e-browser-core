@@ -49,7 +49,7 @@ function WelcomeGuide() {
   // Methods
   const handleLearnMoreClicked = React.useCallback(() => {
     const mojomUrl = new Url()
-    mojomUrl.url = 'https://brave.com/leo/'
+    mojomUrl.url = 'https://aiwize.com/leo/'
 
     aiChatContext.uiHandler?.openURL(mojomUrl)
   }, [aiChatContext.uiHandler])

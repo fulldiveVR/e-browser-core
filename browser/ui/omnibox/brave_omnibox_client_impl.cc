@@ -14,7 +14,6 @@
 #include "brave/browser/misc_metrics/profile_misc_metrics_service_factory.h"
 #include "brave/browser/search_engines/search_engine_tracker.h"
 #include "brave/components/ai_chat/core/browser/ai_chat_metrics.h"
-#include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/brave_search_conversion/p3a.h"
 #include "brave/components/brave_search_conversion/utils.h"
 #include "brave/components/omnibox/browser/brave_omnibox_prefs.h"
@@ -87,14 +86,6 @@ BraveOmniboxClientImpl::BraveOmniboxClientImpl(LocationBar* location_bar,
   }
 
   pref_change_registrar_.Init(profile_->GetPrefs());
-  pref_change_registrar_.Add(
-      brave_rewards::prefs::kEnabled,
-      base::BindRepeating(&BraveOmniboxClientImpl::RecordSearchEventP3A,
-                          base::Unretained(this)));
-  pref_change_registrar_.Add(
-      brave_rewards::prefs::kExternalWalletType,
-      base::BindRepeating(&BraveOmniboxClientImpl::RecordSearchEventP3A,
-                          base::Unretained(this)));
 }
 
 BraveOmniboxClientImpl::~BraveOmniboxClientImpl() = default;
@@ -154,18 +145,7 @@ void BraveOmniboxClientImpl::RecordSearchEventP3A() {
   const char* report_histogram_name = nullptr;
   auto number_of_searches = search_storage_.GetWeeklySum();
 
-  if (profile_->GetPrefs()->GetBoolean(brave_rewards::prefs::kEnabled)) {
-    const std::string wallet_type = profile_->GetPrefs()->GetString(
-        brave_rewards::prefs::kExternalWalletType);
-    if (wallet_type.empty()) {
-      report_histogram_name = kSearchCountRewardsHistogramName;
-    } else {
-      report_histogram_name = kSearchCountRewardsWalletHistogramName;
-    }
-  } else {
-    report_histogram_name = kSearchCountNonRewardsHistogramName;
-  }
-
+  report_histogram_name = kSearchCountNonRewardsHistogramName;
   for (const auto* histogram_name : kAllSearchCountHistogramNames) {
     if (report_histogram_name == histogram_name) {
       p3a_utils::RecordToHistogramBucket(histogram_name, kSearchCountBuckets,

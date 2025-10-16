@@ -53,7 +53,7 @@ KeychainPassword::KeychainNameType& GetBraveServiceName() {
     return *kOperaServiceName;
   } else {
     static KeychainNameContainerType kBraveDefaultServiceName(
-        "Brave Safe Storage");
+        "AIWIZE Safe Storage");
     return *kBraveDefaultServiceName;
   }
 }
@@ -83,7 +83,7 @@ KeychainPassword::KeychainNameType& GetBraveAccountName() {
     static KeychainNameContainerType kOperaAccountName("Opera");
     return *kOperaAccountName;
   } else {
-    static KeychainNameContainerType kBraveDefaultAccountName("Brave");
+    static KeychainNameContainerType kBraveDefaultAccountName("AIWIZE");
     return *kBraveDefaultAccountName;
   }
 }

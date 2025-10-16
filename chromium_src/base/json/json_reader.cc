@@ -10,7 +10,7 @@
 
 namespace serde_json_lenient {
 
-// TODO(https://github.com/brave/brave-browser/issues/47120): These methods are
+// TODO(https://github.com/fulldiveVR/e-browser/issues/47120): These methods are
 // not implemented for now, but their purpose is to eventually hook up the
 // the `serde_json_lenient` to `base::Value`, and let us store binary blobs
 // whenever dealing with 64bit integers that cannot be represented in

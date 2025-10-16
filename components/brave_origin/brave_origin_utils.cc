@@ -14,7 +14,7 @@
 namespace brave_origin {
 
 bool IsBraveOriginEnabled() {
-  // TODO(https://github.com/brave/brave-browser/issues/47463)
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/47463)
   // Get the actual purchase state from SKU service.
   return base::FeatureList::IsEnabled(features::kBraveOrigin);
 }

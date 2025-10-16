@@ -22,7 +22,6 @@ export function createNewTabHandler(
       bandwidthSavedBytes: 1024 * 1024
     },
     showTalkWidget: true,
-    talkFeatureEnabled: true,
     newsFeatureEnabled: false
   })
 

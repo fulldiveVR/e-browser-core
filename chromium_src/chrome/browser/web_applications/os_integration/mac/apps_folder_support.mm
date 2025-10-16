@@ -21,14 +21,14 @@ base::FilePath GetLocalizableBraveAppShortcutsSubdirName();
 
 namespace {
 constexpr char kBraveBrowserDevelopmentAppDirName[] =
-    "Brave Browser Development Apps.localized";
-constexpr char kBraveBrowserAppDirName[] = "Brave Browser Apps.localized";
+    "AIWIZE Browser Development Apps.localized";
+constexpr char kBraveBrowserAppDirName[] = "AIWIZE Browser Apps.localized";
 constexpr char kBraveBrowserBetaAppDirName[] =
-    "Brave Browser Beta Apps.localized";
+    "AIWIZE Browser Beta Apps.localized";
 constexpr char kBraveBrowserDevAppDirName[] =
-    "Brave Browser Dev Apps.localized";
+    "AIWIZE Browser Dev Apps.localized";
 constexpr char kBraveBrowserNightlyAppDirName[] =
-    "Brave Browser Nightly Apps.localized";
+    "AIWIZE Browser Nightly Apps.localized";
 
 base::FilePath GetLocalizableBraveAppShortcutsSubdirName() {
   switch (chrome::GetChannel()) {

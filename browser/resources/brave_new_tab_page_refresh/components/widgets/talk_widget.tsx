@@ -39,11 +39,11 @@ export function TalkWidget() {
         <div className='actions'>
           <Button
             size='small'
-            onClick={() => openLink('https://talk.brave.com/widget')}
+            onClick={() => openLink('https://talk.aiwize.com/widget')}
           >
             {getString('talkStartCallLabel')}
           </Button>
-          <Link url='https://brave.com/privacy/browser/#brave-talk-learn'>
+          <Link url='https://aiwize.com/privacy/browser/#brave-talk-learn'>
             {getString('talkAboutDataLink')}
           </Link>
         </div>

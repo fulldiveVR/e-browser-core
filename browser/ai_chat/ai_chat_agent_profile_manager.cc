@@ -65,7 +65,7 @@ void AIChatAgentProfileManager::OnProfileAdded(Profile* profile) {
 
     // Set profile name so that the user can identify the profile
     // in the various profile list UIs.
-    // TODO(https://github.com/brave/brave-browser/issues/48164): set an avatar
+    // TODO(https://github.com/fulldiveVR/e-browser/issues/48164): set an avatar
     profile_manager_->GetProfileAttributesStorage()
         .GetProfileAttributesWithPath(profile->GetPath())
         ->SetLocalProfileName(kAIChatAgentProfileName, false);

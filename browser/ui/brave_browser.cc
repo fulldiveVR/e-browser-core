@@ -70,7 +70,7 @@ bool BraveBrowser::ShouldUseBraveWebViewRoundedCorners(Browser* browser) {
 
 BraveBrowser::BraveBrowser(const CreateParams& params) : Browser(params) {
   if (auto* sidebar_controller = GetFeatures().sidebar_controller()) {
-    // TODO(https://github.com/brave/brave-browser/issues/45633): Cleanup this.
+    // TODO(https://github.com/fulldiveVR/e-browser/issues/45633): Cleanup this.
     // Below call order is important.
     // When reaches here, Sidebar UI is setup in BraveBrowserView but
     // not initialized. It's just empty because sidebar controller/model is not

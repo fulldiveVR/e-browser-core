@@ -61,14 +61,6 @@ BraveContentsContainerView* BraveContentsContainerView::From(
 BraveContentsContainerView::BraveContentsContainerView(
     BrowserView* browser_view)
     : ContentsContainerView(browser_view), browser_view_(*browser_view) {
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  auto* browser = browser_view_->browser();
-  const bool use_rounded_corners =
-      BraveBrowser::ShouldUseBraveWebViewRoundedCorners(browser);
-  reader_mode_toolbar_ = AddChildView(std::make_unique<ReaderModeToolbarView>(
-      browser->profile(), use_rounded_corners));
-  reader_mode_toolbar_->SetDelegate(this);
-#endif
 
   if (base::FeatureList::IsEnabled(features::kSideBySide)) {
     // To prevent |mini_toolbar_| becomes dangling pointer.
@@ -144,24 +136,6 @@ views::ProposedLayout BraveContentsContainerView::CalculateProposedLayout(
 
   layouts = ContentsContainerView::CalculateProposedLayout(size_bounds);
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  auto* contents_layout = layouts.GetLayoutFor(contents_view_);
-  if (reader_mode_toolbar_->GetVisible()) {
-    gfx::Rect toolbar_bounds = contents_layout->bounds;
-    toolbar_bounds.set_height(
-        reader_mode_toolbar_->GetPreferredSize().height());
-    contents_layout->bounds.Inset(
-        gfx::Insets::TLBR(toolbar_bounds.height(), 0, 0, 0));
-
-    layouts.child_layouts.emplace_back(
-        reader_mode_toolbar_.get(), /*visible=*/true,
-        GetMirroredRect(toolbar_bounds), views::SizeBounds(layouts.host_size));
-  } else {
-    layouts.child_layouts.emplace_back(
-        reader_mode_toolbar_.get(), /*visible=*/false,
-        GetMirroredRect(gfx::Rect()), views::SizeBounds(layouts.host_size));
-  }
-#endif
 
   return layouts;
 }
@@ -171,15 +145,6 @@ void BraveContentsContainerView::ChildVisibilityChanged(views::View* child) {
   InvalidateLayout();
 }
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-void BraveContentsContainerView::OnReaderModeToolbarActivate(
-    ReaderModeToolbarView* toolbar) {
-  CHECK_EQ(reader_mode_toolbar_, toolbar);
-  auto* web_contents = contents_view_->web_contents();
-  CHECK(web_contents && web_contents->GetDelegate());
-  web_contents->GetDelegate()->ActivateContents(web_contents);
-}
-#endif
 
 float BraveContentsContainerView::GetCornerRadius(bool for_border) const {
   auto* exclusive_access_manager =

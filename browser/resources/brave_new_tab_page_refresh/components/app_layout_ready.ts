@@ -7,7 +7,6 @@ import { useBraveNews } from '../../../../components/brave_news/browser/resource
 
 import { useNewTabState } from '../context/new_tab_context'
 import { useTopSitesState } from '../context/top_sites_context'
-import { useRewardsState } from '../context/rewards_context'
 import { useVpnState } from '../context/vpn_context'
 
 
@@ -22,12 +21,11 @@ export function useSearchLayoutReady() {
 // based on application initialization status.
 export function useWidgetLayoutReady() {
   const newTabInitialized = useNewTabState((s) => s.initialized)
-  const rewardsInitialized = useRewardsState((s) => s.initialized)
   const vpnInitialized = useVpnState((s) => s.initialized)
   const newsInitialized = useBraveNewsInitialized()
 
   return (
-    newTabInitialized && rewardsInitialized && vpnInitialized && newsInitialized
+    newTabInitialized && vpnInitialized && newsInitialized
   )
 }
 

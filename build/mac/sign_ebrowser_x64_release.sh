@@ -1,0 +1,1 @@
+./sign_ebrowser.sh "/Volumes/AData/edu-browser/src/out" Release x64 true

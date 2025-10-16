@@ -25,9 +25,6 @@ RegisterPolymerPrototypeModification({
       views.splice(1, 0, 'dataCollection');
 
       // Add tor view if it should be shown.
-      if (pageVisibility.braveTor) {
-        views.splice(1, 0, 'tor');
-      }
 
       return views;
     }

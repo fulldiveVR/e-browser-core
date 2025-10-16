@@ -126,7 +126,7 @@ function AssistantEvent(
     return (
       <div className={styles.actionInProgress}>
         <ProgressRing />
-        Improving answer with Brave Search…
+        Improving answer with AIWIZE Search…
       </div>
     )
   }

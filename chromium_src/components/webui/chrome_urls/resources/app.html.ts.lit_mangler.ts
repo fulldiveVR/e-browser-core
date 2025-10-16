@@ -14,7 +14,7 @@ mangle((element) => {
   h2.textContent = 'List of Brave URLs'
 })
 
-// Rewrite chrome://chrome-urls -> brave://chrome-urls
+// Rewrite chrome://chrome-urls -> aiwize://chrome-urls
 mangle((element) => {
   const anchor = element.querySelector('a')
   if (!anchor) {
@@ -23,7 +23,7 @@ mangle((element) => {
   if (anchor.textContent !== 'chrome://chrome-urls') {
     throw new Error('[chrome_urls override] Unexpected anchor textContent')
   }
-  anchor.textContent = 'brave://chrome-urls'
+  anchor.textContent = 'aiwize://chrome-urls'
 }, x => x.text.includes('href="#"'))
 
 // Rewrite standard chrome URLs to use brave: scheme (these appear under the

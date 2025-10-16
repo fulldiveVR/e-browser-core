@@ -1,4 +1,4 @@
-// Copyright (c) 2025 The Brave Authors. All rights reserved.
+// Copyright (c) 2025 The AIWIZE Authors. All rights reserved.
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -13,8 +13,8 @@
 // indexing into arrays too.
 #define POLICY_SOURCE_COUNT POLICY_SOURCE_BRAVE, POLICY_SOURCE_COUNT
 
-// Define a new kBravePriority to be used as the new lowest priority
-#define kEnterpriseDefault kBravePriority, kEnterpriseDefault
+// Define a new kAIWIZEPriority to be used as the new lowest priority
+#define kEnterpriseDefault kAIWIZEPriority, kEnterpriseDefault
 
 #include <components/policy/core/common/policy_types.h>  // IWYU pragma: export
 

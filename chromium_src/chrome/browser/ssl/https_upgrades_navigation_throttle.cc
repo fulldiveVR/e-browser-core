@@ -13,20 +13,10 @@
 namespace {
 
 // Tor is slow and needs a longer fallback delay
-constexpr base::TimeDelta kTorFallbackDelay = base::Seconds(20);
 
-bool IsTor(content::NavigationHandle* handle) {
-  auto* context = handle->GetWebContents()->GetBrowserContext();
-  Profile* profile = Profile::FromBrowserContext(context);
-  return profile->IsTor();
-}
 
 }  // namespace
 
-#define SetNavigationTimeout(DEFAULT_TIMEOUT)                         \
-  SetNavigationTimeout(IsTor(navigation_handle()) ? kTorFallbackDelay \
-                                                  : DEFAULT_TIMEOUT)
 
 #include <chrome/browser/ssl/https_upgrades_navigation_throttle.cc>
 
-#undef SetNavigationTimeout

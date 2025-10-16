@@ -8,7 +8,6 @@
 #include <string_view>
 #include <vector>
 
-#include "brave/browser/brave_wallet/brave_wallet_context_utils.h"
 #include "brave/components/brave_shields/core/common/brave_shield_constants.h"
 #include "brave/components/content_settings/core/browser/brave_content_settings_pref_provider.h"
 #include "components/content_settings/core/common/content_settings_pattern.h"
@@ -27,7 +26,6 @@
   {ContentSettingsType::BRAVE_SHIELDS, brave_shields::kBraveShields}, \
   {ContentSettingsType::BRAVE_REFERRERS, nullptr},                    \
   {ContentSettingsType::BRAVE_COOKIES, nullptr},                      \
-  {ContentSettingsType::BRAVE_SPEEDREADER, nullptr},                  \
   {ContentSettingsType::BRAVE_ETHEREUM, "ethereum"},                  \
   {ContentSettingsType::BRAVE_SOLANA, "solana"},                      \
   {ContentSettingsType::BRAVE_GOOGLE_SIGN_IN, "googleSignIn"},        \
@@ -145,11 +143,6 @@ std::vector<ContentSettingsType> GetVisiblePermissionCategories(
   types.push_back(ContentSettingsType::BRAVE_OPEN_AI_CHAT);
 
   // Only add Web3-related content settings if wallet is allowed
-  if (brave_wallet::IsAllowedForContext(profile)) {
-    types.push_back(ContentSettingsType::BRAVE_ETHEREUM);
-    types.push_back(ContentSettingsType::BRAVE_SOLANA);
-    types.push_back(ContentSettingsType::BRAVE_CARDANO);
-  }
 
   return types;
 }

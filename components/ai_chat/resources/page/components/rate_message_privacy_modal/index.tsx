@@ -12,7 +12,7 @@ import { useAIChat } from '../../state/ai_chat_context'
 import { useConversation } from '../../state/conversation_context'
 import styles from './style.module.scss'
 
-const LEARN_MORE_URL = 'https://brave.com/privacy/browser/#your-feedback'
+const LEARN_MORE_URL = 'https://aiwize.com/privacy/browser/#your-feedback'
 
 export default function RateMessagePrivacyModal() {
   // Context

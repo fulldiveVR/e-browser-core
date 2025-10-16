@@ -31,18 +31,18 @@ const mockEmailAliasesService: EmailAliasesServiceInterface = {
 }
 
 describe('AliasList', () => {
-  const mockAuthEmail = 'test@brave.com'
+  const mockAuthEmail = 'test@aiwize.com'
 
   const mockAliases: Alias[] = [
     {
-      email: 'test1@brave.com',
+      email: 'test1@aiwize.com',
       note: 'Test Alias 1',
-      domains: ['brave.com']
+      domains: ['aiwize.com']
     },
     {
-      email: 'test2@brave.com',
+      email: 'test2@aiwize.com',
       note: 'Test Alias 2',
-      domains: ['brave.com']
+      domains: ['aiwize.com']
     }
   ]
 

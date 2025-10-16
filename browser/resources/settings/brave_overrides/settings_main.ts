@@ -13,7 +13,6 @@ import { loadTimeData } from '../i18n_setup.js'
 import '../brave_content_page/content_page_index.js'
 import '../getting_started_page/getting_started_page_index.js'
 import '../default_brave_shields_page/shields_page_index.js'
-import '../brave_wallet_page/wallet_page_index.js'
 import '../brave_leo_assistant_page/brave_leo_assistant_page_index.js'
 import '../brave_default_extensions_page/brave_extensions_page_index.js'
 import '../brave_sync_page/brave_sync_page_index.js'
@@ -99,23 +98,6 @@ RegisterPolymerTemplateModifications({
       `)
 
     // Insert the web3 page into the view manager
-    const isBraveWalletAllowed = loadTimeData.getBoolean('isBraveWalletAllowed')
-    if (isBraveWalletAllowed) {
-      switcher.appendChild(
-        html`
-          <template is="dom-if" if="[[showPage_(pageVisibility_.braveWallet)]]">
-            <div slot="view" id="web3">
-              <template is="dom-if" if="[[renderPlugin_(
-          routes_.BRAVE_WEB3, lastRoute_, inSearchMode_)]]">
-                <settings-wallet-page-index
-                  prefs="{{prefs}}"
-                  in-search-mode="[[inSearchMode_]]">
-                </settings-wallet-page-index>
-              </template>
-            </div>
-          </template>
-        `)
-    }
 
     // Insert the leo page into the view manager
     switcher.appendChild(

@@ -84,7 +84,7 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
   const states = React.useMemo(() => {
     const isWebDiscoveryEnabledManaged = loadTimeData.getBoolean('isWebDiscoveryEnabledManaged')
     // Skip HelpWDP if web discovery is managed
-    const nextAfterImport = isWebDiscoveryEnabledManaged ? ViewType.HelpImprove : ViewType.HelpWDP
+    const nextAfterImport = isWebDiscoveryEnabledManaged ? ViewType.HelpImprove : ViewType.HelpImprove
 
     return {
       [ViewType.DefaultBrowser]: {  // The initial state view
@@ -111,9 +111,6 @@ export function useViewTypeTransition(currentViewType: ViewType | undefined) : V
       },
       [ViewType.ImportFailed]: {
         forward: nextAfterImport
-      },
-      [ViewType.HelpWDP]: {
-        forward: ViewType.HelpImprove
       },
       [ViewType.HelpImprove]: {
         forward: ViewType.HelpImprove   // The end state view

@@ -5,8 +5,6 @@
 
 import("//brave/components/brave_vpn/common/buildflags/buildflags.gni")
 import("//brave/components/brave_wayback_machine/buildflags/buildflags.gni")
-import("//brave/components/speedreader/common/buildflags/buildflags.gni")
-import("//brave/components/tor/buildflags/buildflags.gni")
 
 source_set("unit_tests") {
   testonly = true
@@ -18,13 +16,10 @@ source_set("unit_tests") {
     "//brave/app:generate_command_metadata",
     "//brave/components/ai_chat/core/common",
     "//brave/components/brave_news/common",
-    "//brave/components/brave_rewards/core",
     "//brave/components/brave_vpn/common/buildflags",
-    "//brave/components/brave_wallet/common:pref_names",
     "//brave/components/brave_wayback_machine/buildflags",
     "//brave/components/commands/browser",
     "//brave/components/constants",
-    "//brave/components/speedreader/common/buildflags",
     "//chrome/app:command_ids",
     "//chrome/browser/ui",
     "//chrome/test:test_support",
@@ -37,13 +32,7 @@ source_set("unit_tests") {
     deps += [ "//brave/components/brave_vpn/common" ]
   }
 
-  if (enable_tor) {
-    deps += [ "//brave/components/tor:pref_names" ]
-  }
 
-  if (enable_speedreader) {
-    deps += [ "//brave/components/speedreader" ]
-  }
 
   if (enable_brave_wayback_machine) {
     deps += [ "//brave/components/brave_wayback_machine" ]

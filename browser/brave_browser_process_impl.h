@@ -13,13 +13,12 @@
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/brave_component_updater/browser/brave_component.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
-#include "brave/components/tor/brave_tor_pluggable_transport_updater.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "brave/components/url_sanitizer/browser/url_sanitizer_component_installer.h"
 #include "build/build_config.h"
 #include "chrome/browser/browser_process_impl.h"
 #include "extensions/buildflags/buildflags.h"
+
+#include "brave/components/ai_combiner/ai_combiner_helper.h"
 
 namespace brave {
 class BraveReferralsService;
@@ -68,19 +67,7 @@ class HistogramsBraveizer;
 class P3AService;
 }  // namespace p3a
 
-namespace tor {
-class BraveTorClientUpdater;
-class BraveTorPluggableTransportUpdater;
-}  // namespace tor
 
-namespace speedreader {
-class SpeedreaderRewriterService;
-}
-
-namespace brave_ads {
-class BraveStatsHelper;
-class ResourceComponent;
-}  // namespace brave_ads
 
 namespace ai_chat {
 #if BUILDFLAG(ENABLE_BRAVE_AI_CHAT_AGENT_PROFILE)
@@ -107,6 +94,8 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
 
   // BraveBrowserProcess implementation.
 
+  ai_combiner::AICombinerHelper* ai_combiner_helper() override;
+
   void StartBraveServices() override;
   brave_shields::AdBlockService* ad_block_service() override;
   https_upgrade_exceptions::HttpsUpgradeExceptionsService*
@@ -122,22 +111,11 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
       override;
   brave_component_updater::LocalDataFilesService* local_data_files_service()
       override;
-#if BUILDFLAG(ENABLE_TOR)
-  tor::BraveTorClientUpdater* tor_client_updater() override;
-  tor::BraveTorPluggableTransportUpdater* tor_pluggable_transport_updater()
-      override;
-#endif
   p3a::P3AService* p3a_service() override;
   brave::BraveReferralsService* brave_referrals_service() override;
   brave_stats::BraveStatsUpdater* brave_stats_updater() override;
-  brave_ads::BraveStatsHelper* ads_brave_stats_helper() override;
   ntp_background_images::NTPBackgroundImagesService*
   ntp_background_images_service() override;
-  brave_ads::ResourceComponent* resource_component() override;
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  speedreader::SpeedreaderRewriterService* speedreader_rewriter_service()
-      override;
-#endif
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   brave_vpn::BraveVPNConnectionManager* brave_vpn_connection_manager() override;
 #endif
@@ -154,9 +132,6 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
 
   void CreateProfileManager();
 
-#if BUILDFLAG(ENABLE_TOR)
-  void OnTorEnabledChanged();
-#endif
 
   void UpdateBraveDarkMode();
   void OnBraveDarkModeChanged();
@@ -195,21 +170,11 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
       url_sanitizer_component_installer_;
   std::unique_ptr<brave_stats::BraveStatsUpdater> brave_stats_updater_;
   std::unique_ptr<brave::BraveReferralsService> brave_referrals_service_;
-#if BUILDFLAG(ENABLE_TOR)
-  std::unique_ptr<tor::BraveTorClientUpdater> tor_client_updater_;
-  std::unique_ptr<tor::BraveTorPluggableTransportUpdater>
-      tor_pluggable_transport_updater_;
-#endif
   scoped_refptr<p3a::P3AService> p3a_service_;
   scoped_refptr<p3a::HistogramsBraveizer> histogram_braveizer_;
   std::unique_ptr<ntp_background_images::NTPBackgroundImagesService>
       ntp_background_images_service_;
-  std::unique_ptr<brave_ads::ResourceComponent> resource_component_;
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  std::unique_ptr<speedreader::SpeedreaderRewriterService>
-      speedreader_rewriter_service_;
-#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
   std::unique_ptr<brave_vpn::BraveVPNConnectionManager>
@@ -217,7 +182,6 @@ class BraveBrowserProcessImpl : public BraveBrowserProcess,
 #endif
 
   std::unique_ptr<misc_metrics::ProcessMiscMetrics> process_misc_metrics_;
-  std::unique_ptr<brave_ads::BraveStatsHelper> brave_stats_helper_;
 
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_ANDROID)
   std::unique_ptr<DayZeroBrowserUIExptManager>

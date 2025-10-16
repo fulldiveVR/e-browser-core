@@ -29,14 +29,14 @@ inline constexpr auto kPrintPreviewRetrievalHosts =
     });
 
 inline constexpr char kLeoModelSupportUrl[] =
-    "https://support.brave.app/hc/en-us/articles/26727364100493-"
+    "https://support.aiwize.com/hc/en-us/articles/26727364100493-"
     "What-are-the-differences-between-Leo-s-AI-Models";
 
 inline constexpr char kLeoGoPremiumUrl[] =
-    "https://account.brave.com/account/?intent=checkout&product=leo";
+    "https://account.aiwize.com/account/?intent=checkout&product=leo";
 
 inline constexpr char kBraveAIChatCustomizationSubPage[] =
-    "leo-ai/customization";
+    "aiwize-chat/customization";
 
 // Upon registering a custom model, users have the ability to explicitly
 // provide a context size (in tokens). When present, we'll use this value to

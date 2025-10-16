@@ -25,7 +25,7 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
     }
     // We re-section people page into getStarted section (see people_page Brave
     // override), so we need to adjust the route accordingly in order for the
-    // direct navigation to brave://settings/importData to work.
+    // direct navigation to aiwize://settings/importData to work.
     if (!r.IMPORT_DATA) {
       r.IMPORT_DATA = r.GET_STARTED.createChild('/importData')
       r.IMPORT_DATA.isNavigableDialog = true
@@ -59,22 +59,15 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
     r.BRAVE_SYNC_SETUP = r.BRAVE_SYNC.createChild('/braveSync/setup')
     r.BRAVE_SYNC_SETUP.hasMigratedToPlugin = true
   }
-  if (pageVisibility.braveWallet) {
-    r.BRAVE_WEB3 = r.BASIC.createSection('/web3', 'web3')
-    r.BRAVE_WEB3.hasMigratedToPlugin = true
-
-    r.BRAVE_WALLET_NETWORKS = r.BRAVE_WEB3.createChild('/wallet/networks')
-    r.BRAVE_WALLET_NETWORKS.hasMigratedToPlugin = true
-  }
   r.BRAVE_NEW_TAB = r.BASIC.createSection('/newTab', 'newTab')
 
   if (pageVisibility.leoAssistant) {
     r.BRAVE_LEO_ASSISTANT =
-      r.BASIC.createSection('/leo-ai', 'leoAssistant')
+      r.BASIC.createSection('/aiwize-chat', 'leoAssistant')
     r.BRAVE_LEO_ASSISTANT.hasMigratedToPlugin = true
 
     r.BRAVE_LEO_CUSTOMIZATION = r.BRAVE_LEO_ASSISTANT
-      .createChild('/leo-ai/customization')
+      .createChild('/aiwize-chat/customization')
     r.BRAVE_LEO_CUSTOMIZATION.hasMigratedToPlugin = true
   }
   if (pageVisibility.content) {
@@ -118,18 +111,6 @@ export default function addBraveRoutes(r: Partial<SettingsRoutes>) {
     if (isOpenAIChatFromBraveSearchEnabled) {
       r.SITE_SETTINGS_BRAVE_OPEN_AI_CHAT =
         r.SITE_SETTINGS.createChild('braveOpenAIChat')
-    }
-    const isNativeBraveWalletFeatureEnabled =
-      loadTimeData.getBoolean('isNativeBraveWalletFeatureEnabled')
-    const isCardanoDappSupportFeatureEnabled =
-      loadTimeData.getBoolean('isCardanoDappSupportFeatureEnabled')
-    const isBraveWalletAllowed = loadTimeData.getBoolean('isBraveWalletAllowed')
-    if (isNativeBraveWalletFeatureEnabled && isBraveWalletAllowed) {
-      r.SITE_SETTINGS_ETHEREUM = r.SITE_SETTINGS.createChild('ethereum')
-      r.SITE_SETTINGS_SOLANA = r.SITE_SETTINGS.createChild('solana')
-      if (isCardanoDappSupportFeatureEnabled) {
-        r.SITE_SETTINGS_CARDANO = r.SITE_SETTINGS.createChild('cardano')
-      }
     }
     r.SITE_SETTINGS_SHIELDS_STATUS = r.SITE_SETTINGS.createChild('braveShields')
     if (r.SITE_SETTINGS_ADS) {

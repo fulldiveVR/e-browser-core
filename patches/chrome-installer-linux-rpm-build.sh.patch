@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/linux/rpm/build.sh b/chrome/installer/linux/rpm/build.sh
-index 19535b9df7cc6395dce890379c83360644c6df1d..994f786c6326b34502c06804e52f0df4171c0c28 100755
+index 19535b9df7cc6395dce890379c83360644c6df1d..b9ce952ab82b59d18f85a6b78a798f4fc0d0ca5f 100755
 --- a/chrome/installer/linux/rpm/build.sh
 +++ b/chrome/installer/linux/rpm/build.sh
 @@ -15,8 +15,9 @@ gen_spec() {
@@ -13,16 +13,16 @@ index 19535b9df7cc6395dce890379c83360644c6df1d..994f786c6326b34502c06804e52f0df4
      local INSTALLDIR="${INSTALLDIR}-${CHANNEL}"
      local PACKAGE="${PACKAGE}-${CHANNEL}"
      local MENUNAME="${MENUNAME} (${CHANNEL})"
-@@ -87,6 +88,8 @@ do_package() {
+@@ -87,7 +88,7 @@ do_package() {
    PROVIDES="${PACKAGE}"
    RPM_COMMON_DEPS="${OUTPUTDIR}/rpm_common.deps"
    DEPENDS=$(cat "${RPM_COMMON_DEPS}" | tr '\n' ',')
-+  # Ensure that our signing key is up-to-date (brave/brave-browser#4205).
-+  DEPENDS="brave-keyring >= 1.11-1, ${DEPENDS}"
-   gen_spec
+-  gen_spec
++    gen_spec
  
    # Reproducible builds: fix both payload and header timestamps.
-@@ -116,7 +119,10 @@ do_package() {
+   export SOURCE_DATE_EPOCH="$BUILD_TIMESTAMP"
+@@ -116,7 +117,10 @@ do_package() {
      --define "use_source_date_epoch_as_buildtime 1" \
      --define "_buildhost reproducible" \
      "${SPEC}"
@@ -34,7 +34,7 @@ index 19535b9df7cc6395dce890379c83360644c6df1d..994f786c6326b34502c06804e52f0df4
    mv "$RPMBUILD_DIR/RPMS/$ARCHITECTURE/${PKGNAME}.${ARCHITECTURE}.rpm" \
       "${OUTPUTDIR}"
    # Make sure the package is world-readable, otherwise it causes problems when
-@@ -153,7 +159,10 @@ verify_channel() {
+@@ -153,7 +157,10 @@ verify_channel() {
        CHANNEL=stable
        ;;
      unstable|dev|alpha )

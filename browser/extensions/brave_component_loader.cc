@@ -17,6 +17,7 @@
 #include "brave/components/brave_extension/grit/brave_extension.h"
 #include "brave/components/constants/brave_switches.h"
 #include "brave/components/constants/pref_names.h"
+#include "brave/components/aiwize_agent/grit/aiwize_agent.h"
 #include "brave/components/web_discovery/buildflags/buildflags.h"
 #include "chrome/browser/extensions/extension_service.h"
 #include "chrome/browser/profiles/profile.h"
@@ -50,6 +51,7 @@ void BraveComponentLoader::AddDefaultComponentExtensions(
     bool skip_session_components) {
   ComponentLoader::AddDefaultComponentExtensions(skip_session_components);
   UpdateBraveExtension();
+  AddAIWizeAgentExtension();
 }
 
 bool BraveComponentLoader::UseBraveExtensionBackgroundPage() {
@@ -59,6 +61,23 @@ bool BraveComponentLoader::UseBraveExtensionBackgroundPage() {
       web_discovery::features::kBraveWebDiscoveryNative);
 #endif
   return !native_enabled && profile_prefs_->GetBoolean(kWebDiscoveryEnabled);
+}
+
+void BraveComponentLoader::AddAIWizeAgentExtension() {
+  extensions::ExtensionRegistry* registry =
+      extensions::ExtensionRegistry::Get(profile_);
+  const Extension* current_extension =
+      registry->GetInstalledExtension(aiwize_agent_extension_id);
+
+  if (current_extension == nullptr) {
+    base::FilePath aiwize_agent_path(FILE_PATH_LITERAL(""));
+    aiwize_agent_path =
+        aiwize_agent_path.Append(FILE_PATH_LITERAL("aiwize_agent"));
+
+    const auto id = Add(IDR_AIWIZE_AGENT, aiwize_agent_path);
+    LOG(ERROR) << "AIWize agent installed";
+    CHECK_EQ(id, aiwize_agent_extension_id);
+  }
 }
 
 void BraveComponentLoader::UpdateBraveExtension() {

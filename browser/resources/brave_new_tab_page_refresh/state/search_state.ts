@@ -5,7 +5,7 @@
 
 import * as mojom from 'gen/components/omnibox/browser/searchbox.mojom.m'
 
-export const braveSearchHost = 'search.brave.com'
+export const braveSearchHost = 'search.aiwize.com'
 
 export interface SearchEngineInfo {
   prepopulateId: bigint

@@ -123,7 +123,7 @@ BraveConfirmInfoBar::BraveConfirmInfoBar(
   // between both. It guarantees that close button is always the last
   // children. However, we just add children directly instead of
   // that container.
-  // TODO(https://github.com/brave/brave-browser/issues/48822): Add our children
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/48822): Add our children
   // into content container.
   if (close_button_) {
     ReorderChildView(close_button_, children().size());

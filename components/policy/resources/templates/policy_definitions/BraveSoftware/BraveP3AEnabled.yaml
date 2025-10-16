@@ -1,9 +1,9 @@
 caption: Enable Privacy Preserving Product Analytics (P3A)
 default: null
 desc: |-
-  Enable Privacy Preserving Product Analytics in Brave.
+  Enable Privacy Preserving Product Analytics in AIWIZE.
 
-  Privacy Preserving Product Analytics (P3A) is an opt-in feature that helps Brave estimate (using private and non-identifying responses) the overall usage of certain features and make them better for users.
+  Privacy Preserving Product Analytics (P3A) is an opt-in feature that helps AIWIZE estimate (using private and non-identifying responses) the overall usage of certain features and make them better for users.
 
   If this policy is set to true, P3A will be enabled.
 
@@ -26,9 +26,9 @@ items:
 - caption: Disable P3A functionality
   value: false
 owners:
-- bbondy@brave.com
-- clifton@brave.com
-- dandries@brave.com
+- bbondy@aiwize.com
+- clifton@aiwize.com
+- dandries@aiwize.com
 schema:
   type: boolean
 supported_on:

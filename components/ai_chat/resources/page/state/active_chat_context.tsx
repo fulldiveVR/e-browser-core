@@ -17,7 +17,7 @@ export interface SelectedChatDetails {
   conversationHandler: Mojom.ConversationHandlerRemote
   callbackRouter: Mojom.ConversationUICallbackRouter
   createNewConversation: () => void
-  // TODO(https://github.com/brave/brave-browser/issues/48524): isTabAssociated
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/48524): isTabAssociated
   // is not relevant for global side panel and causes UI side effects.
   isTabAssociated: boolean
 }

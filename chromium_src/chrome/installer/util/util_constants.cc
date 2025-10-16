@@ -11,6 +11,6 @@
 
 namespace installer {
 
-const wchar_t kChromeExe[] = L"brave.exe";
+const wchar_t kChromeExe[] = L"aiwize.exe";
 
 }  // namespace installer

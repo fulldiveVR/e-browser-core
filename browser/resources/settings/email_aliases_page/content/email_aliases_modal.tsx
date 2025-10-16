@@ -224,7 +224,7 @@ export const EmailAliasModal = (
     try {
       // We have to do a cast because the mojom generated code produces the
       // wrong type in its JSDoc.
-      // TODO(https://github.com/brave/brave-browser/issues/48960): fix the
+      // TODO(https://github.com/fulldiveVR/e-browser/issues/48960): fix the
       // JSDoc generation issue so that this cast is not needed.
       const proposedEmail =
         (await emailAliasesService.generateAlias()) as unknown as string

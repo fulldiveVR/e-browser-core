@@ -33,7 +33,7 @@ namespace playlist {
 // (injected at document end), `PlaylistBackgroundWebContentsHelper` needs the
 // MediaSource API suppressor (injected at document start), too.
 // Currently, Android injects into main (see
-// https://github.com/brave/brave-browser/issues/36443), whereas desktop into
+// https://github.com/fulldiveVR/e-browser/issues/36443), whereas desktop into
 // `isolated_world_id_` (`ISOLATED_WORLD_ID_BRAVE_INTERNAL`).
 class PlaylistRenderFrameObserver final
     : public content::RenderFrameObserver,

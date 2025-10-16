@@ -83,7 +83,7 @@ double GetVisitWeighting(
     // many of them are missing bits and pieces. This is a simple middle ground
     // while we wait for them to be fixed.
     // Relevant issues: https://github.com/brave/news-aggregator/issues/58 and
-    // https://github.com/brave/brave-browser/issues/26092
+    // https://github.com/fulldiveVR/e-browser/issues/26092
     if (!host_name.starts_with("www.")) {
       weight = base::FindOrNull(visit_weightings, "www." + host_name);
     }

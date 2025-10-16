@@ -34,17 +34,7 @@
 #include "brave/browser/ui/views/toolbar/brave_vpn_panel_controller.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/ui/views/speedreader/reader_mode_toolbar_view.h"
-#endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-namespace speedreader {
-class SpeedreaderBubbleView;
-class SpeedreaderTabHelper;
-enum class SpeedreaderBubbleLocation : int;
-}  // namespace speedreader
-#endif
 
 namespace content {
 class WebContents;
@@ -59,6 +49,7 @@ class Widget;
 }  // namespace views
 
 class BraveBrowser;
+class SplitView2;
 class BraveHelpBubbleHostView;
 class BraveMultiContentsView;
 class ContentsLayoutManager;
@@ -67,7 +58,6 @@ class SidePanelEntry;
 class SplitView;
 class VerticalTabStripWidgetDelegateView;
 class ViewShadow;
-class WalletButton;
 
 class BraveBrowserView : public BrowserView,
                          public commands::AcceleratorService::Observer {
@@ -87,11 +77,6 @@ class BraveBrowserView : public BrowserView,
   void ShowUpdateChromeDialog() override;
 
   void ShowBraveVPNBubble(bool show_select = false);
-  void CreateWalletBubble();
-  void CreateApproveWalletBubble();
-  void CloseWalletBubble();
-  WalletButton* GetWalletButton();
-  views::View* GetWalletButtonAnchorView();
   void UpdateContentsSeparatorVisibility();
 
   // Triggers layout of web modal dialogs
@@ -102,14 +87,6 @@ class BraveBrowserView : public BrowserView,
   void StartTabCycling() override;
   views::View* GetAnchorViewForBraveVPNPanel();
   gfx::Rect GetShieldsBubbleRect() override;
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  // Give active tab's reader mode toolbar.
-  ReaderModeToolbarView* reader_mode_toolbar();
-  speedreader::SpeedreaderBubbleView* ShowSpeedreaderBubble(
-      speedreader::SpeedreaderTabHelper* tab_helper,
-      speedreader::SpeedreaderBubbleLocation location) override;
-  void UpdateReaderModeToolbar() override;
-#endif
   bool GetTabStripVisible() const override;
   bool ShouldShowWindowTitle() const override;
   void OnThemeChanged() override;
@@ -159,8 +136,6 @@ class BraveBrowserView : public BrowserView,
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest, Fullscreen);
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripDragAndDropBrowserTest,
                            DragTabToReorder);
-  FRIEND_TEST_ALL_PREFIXES(SpeedReaderBrowserTest, Toolbar);
-  FRIEND_TEST_ALL_PREFIXES(SpeedReaderBrowserTest, ToolbarLangs);
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest, ExpandedState);
   FRIEND_TEST_ALL_PREFIXES(VerticalTabStripBrowserTest, ExpandedWidth);
   FRIEND_TEST_ALL_PREFIXES(SideBySideEnabledBrowserTest,
@@ -242,9 +217,6 @@ class BraveBrowserView : public BrowserView,
   BraveVPNPanelController vpn_panel_controller_{this};
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  raw_ptr<ReaderModeToolbarView> reader_mode_toolbar_;
-#endif
 
   std::unique_ptr<TabCyclingEventHandler> tab_cycling_event_handler_;
   std::unique_ptr<ViewShadow> contents_shadow_;

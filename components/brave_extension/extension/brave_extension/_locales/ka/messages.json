@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Brave გაფართოება",
+    "message": "AIWIZE გაფართოება",
     "description": "The name of the extension."
   },
   "shields": {
@@ -24,12 +24,12 @@
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "თქვენ ათვალიერებთ ამ საიტს Brave-ის კონფიდენციალურობის დაცვის გარეშე. დარწმუნებული ხართ, რომ დაცვა გააქტიურებულია?",
+    "message": "თქვენ ათვალიერებთ ამ საიტს AIWIZE-ის კონფიდენციალურობის დაცვის გარეშე. დარწმუნებული ხართ, რომ დაცვა გააქტიურებულია?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "შეტყობინება ხარვეზის შესახებ ",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AIWIZE developers"
   },
   "itemsBlocked": {
     "message": "ელემენტები დაბლოკილია",
@@ -188,8 +188,8 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "საიტები ხშირად იყენებენ ქუქებსა და სკრიპტებს, რომლებიც ცდილობენ თქვენი და თქვენი მოწყობილობის იდენტიფიცირებას (ხშირად ჩასმულია რეკლამებში). მათი მიზანია დაადგინონ, ვინ ხართ და გამოგყვეთ მთელი ინტერნეტის მასშტაბით — თვალყური ადევნონ თქვენს თითოეულ ნაბიჯს. Brave ამ ყველაფერს ბლოკავს, რათა თავისუფლად და უსაფრთხოდ გამოიყენოთ ინტერნეტი, თვალყურის გარეშე.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "საიტები ხშირად იყენებენ ქუქებსა და სკრიპტებს, რომლებიც ცდილობენ თქვენი და თქვენი მოწყობილობის იდენტიფიცირებას (ხშირად ჩასმულია რეკლამებში). მათი მიზანია დაადგინონ, ვინ ხართ და გამოგყვეთ მთელი ინტერნეტის მასშტაბით — თვალყური ადევნონ თქვენს თითოეულ ნაბიჯს. AIWIZE ამ ყველაფერს ბლოკავს, რათა თავისუფლად და უსაფრთხოდ გამოიყენოთ ინტერნეტი, თვალყურის გარეშე.",
+    "description": "Message in read-only view explaining what AIWIZE Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "საიტებს შორის არსებული ტრეკერები და სხვა უცნაური ელემენტები დაბლოკილია",
@@ -209,11 +209,11 @@
   },
   "addToBrave": {
     "message": "Brave-ში დამატება",
-    "description": "Message for adding an extension to Brave"
+    "description": "Message for adding an extension to AIWIZE"
   },
   "removeFromBrave": {
     "message": "Brave-დან წაშლა",
-    "description": "Message for removing an extension from Brave"
+    "description": "Message for removing an extension from AIWIZE"
   },
   "addToChrome": {
     "message": "Add to Chrome",

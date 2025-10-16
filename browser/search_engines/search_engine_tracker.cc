@@ -12,7 +12,6 @@
 #include "base/metrics/histogram_macros.h"
 #include "base/no_destructor.h"
 #include "base/strings/string_util.h"
-#include "brave/components/brave_ads/core/public/prefs/pref_names.h"
 #include "brave/components/brave_search_conversion/features.h"
 #include "brave/components/brave_search_conversion/p3a.h"
 #include "brave/components/brave_search_conversion/utils.h"
@@ -182,18 +181,6 @@ SearchEngineTracker::SearchEngineTracker(
     }
   }
 
-#if BUILDFLAG(ENABLE_EXTENSIONS) || BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
-  RecordWebDiscoveryEnabledP3A();
-  pref_change_registrar_.Init(profile_prefs);
-  pref_change_registrar_.Add(
-      kWebDiscoveryEnabled,
-      base::BindRepeating(&SearchEngineTracker::RecordWebDiscoveryEnabledP3A,
-                          base::Unretained(this)));
-  pref_change_registrar_.Add(
-      brave_ads::prefs::kOptedInToNotificationAds,
-      base::BindRepeating(&SearchEngineTracker::RecordWebDiscoveryEnabledP3A,
-                          base::Unretained(this)));
-#endif
 }
 
 SearchEngineTracker::~SearchEngineTracker() = default;
@@ -226,33 +213,11 @@ void SearchEngineTracker::OnTemplateURLServiceChanged() {
         brave_search_conversion::p3a::RecordDefaultEngineChurn(local_state_);
       }
 
-#if BUILDFLAG(ENABLE_EXTENSIONS) || BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
-      // Update web discovery default engine metric when search engine changes
-      RecordWebDiscoveryEnabledP3A();
-#endif
     }
     RecordSwitchP3A(url);
   }
 }
 
-#if BUILDFLAG(ENABLE_EXTENSIONS) || BUILDFLAG(ENABLE_WEB_DISCOVERY_NATIVE)
-void SearchEngineTracker::RecordWebDiscoveryEnabledP3A() {
-  bool enabled = profile_prefs_->GetBoolean(kWebDiscoveryEnabled);
-  UMA_HISTOGRAM_BOOLEAN(kWebDiscoveryEnabledMetric, enabled);
-  UMA_HISTOGRAM_BOOLEAN(
-      kWebDiscoveryAndAdsMetric,
-      enabled && profile_prefs_->GetBoolean(
-                     brave_ads::prefs::kOptedInToNotificationAds));
-
-  // Record web discovery default engine metric
-  int answer = INT_MAX - 1;
-  if (enabled) {
-    answer = static_cast<int>(current_default_engine_);
-  }
-  UMA_HISTOGRAM_EXACT_LINEAR(kWebDiscoveryDefaultEngineMetric, answer,
-                             static_cast<int>(SearchEngineP3A::kMaxValue) + 1);
-}
-#endif
 
 void SearchEngineTracker::RecordSwitchP3A(const GURL& url) {
   // Default to the last recorded switch so when we're called

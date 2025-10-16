@@ -18,7 +18,7 @@ function delay(ms: number) {
 }
 
 const sampleBackground =
-    'https://brave.com/static-assets/images/coding-background-texture.jpg'
+    'https://aiwize.com/static-assets/images/coding-background-texture.jpg'
 
 const sponsoredBackgrounds: Record<string, SponsoredImageBackground | null> = {
   image: {
@@ -29,7 +29,7 @@ const sponsoredBackgrounds: Record<string, SponsoredImageBackground | null> = {
     wallpaperId: '',
     logo: {
       alt: 'Be Brave!',
-      destinationUrl: 'https://brave.com',
+      destinationUrl: 'https://aiwize.com',
       imageUrl: sampleBackground
     },
     shouldMetricsFallbackToP3a: false
@@ -43,7 +43,7 @@ const sponsoredBackgrounds: Record<string, SponsoredImageBackground | null> = {
     wallpaperId: '',
     logo: {
       alt: 'Be Brave!',
-      destinationUrl: 'https://brave.com',
+      destinationUrl: 'https://aiwize.com',
       imageUrl: ''
     },
     shouldMetricsFallbackToP3a: false
@@ -61,7 +61,7 @@ export function createBackgroundHandler(
       {
         author: 'John Doe',
         imageUrl: sampleBackground,
-        link: 'https://brave.com'
+        link: 'https://aiwize.com'
       }
     ],
     backgroundRandomValue: Math.random(),
@@ -69,7 +69,7 @@ export function createBackgroundHandler(
   })
 
   store.update({
-    sponsoredRichMediaBaseUrl: 'https://brave.com'
+    sponsoredRichMediaBaseUrl: 'https://aiwize.com'
   })
 
   return {
@@ -112,8 +112,6 @@ export function createBackgroundHandler(
 
     notifySponsoredImageLoadError() {},
 
-    notifySponsoredImageLogoClicked() {},
-
-    notifySponsoredRichMediaEvent(type) {}
+    notifySponsoredImageLogoClicked() {}
   }
 }

@@ -276,7 +276,7 @@ class PlaylistService : public KeyedService,
   void OnGetOrphanedPaths(const std::vector<base::FilePath>& paths);
 
   // TODO(sko) Remove this version
-  // https://github.com/brave/brave-browser/issues/30735
+  // https://github.com/fulldiveVR/e-browser/issues/30735
   void NotifyPlaylistChanged(mojom::PlaylistEvent playlist_event,
                              const std::string& playlist_id);
 

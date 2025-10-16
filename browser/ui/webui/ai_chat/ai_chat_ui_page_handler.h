@@ -109,7 +109,7 @@ class AIChatUIPageHandler : public mojom::AIChatUIHandler,
   void OnFilesSelected() override;
 
   raw_ptr<AIChatTabHelper> active_chat_tab_helper_ = nullptr;
-  // TODO(https://github.com/brave/brave-browser/issues/48524): We probably
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/48524): We probably
   // want to reference the TabStripModel so that we can offer the user to
   // attach the current active tab or start a new conversation on active tab
   // change or navigation.

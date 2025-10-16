@@ -62,7 +62,7 @@ void BraveProfilePolicyProvider::OnBraveOriginPoliciesReady() {
 policy::PolicyBundle BraveProfilePolicyProvider::LoadPolicies() {
   policy::PolicyBundle bundle;
 
-  // TODO(https://github.com/brave/brave-browser/issues/47463)
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/47463)
   // Get the actual purchase state from SKU service.
 #if DCHECK_IS_ON()  // Debug builds only
   if (brave_origin::IsBraveOriginEnabled()) {

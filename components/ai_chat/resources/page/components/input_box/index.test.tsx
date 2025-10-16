@@ -224,7 +224,7 @@ describe('input box', () => {
       )
 
       const contentAgentLaunchButton = screen.queryByTitle(
-        'Open Leo AI Content Agent Window',
+        'Open AIWIZE Chat Content Agent Window',
       )
       const contentAgentTooltip = screen.queryByTestId('agent-profile-tooltip')
 

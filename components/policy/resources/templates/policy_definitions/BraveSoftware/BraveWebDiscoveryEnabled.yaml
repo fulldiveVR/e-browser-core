@@ -1,9 +1,9 @@
 caption: Enable Web Discovery
 default: null
 desc: |-
-  Enable Web Discovery in Brave.
+  Enable Web Discovery in AIWIZE.
 
-  Web Discovery is an opt-in feature that helps improve Brave's search index in a privacy-preserving way.
+  Web Discovery is an opt-in feature that helps improve AIWIZE's search index in a privacy-preserving way.
 
   If this policy is set to true, Web Discovery will always be enabled.
 
@@ -26,9 +26,9 @@ items:
 - caption: Allow the user to decide (disabled by default)
   value: null
 owners:
-- bbondy@brave.com
-- clifton@brave.com
-- dandries@brave.com
+- bbondy@aiwize.com
+- clifton@aiwize.com
+- dandries@aiwize.com
 schema:
   type: boolean
 supported_on:

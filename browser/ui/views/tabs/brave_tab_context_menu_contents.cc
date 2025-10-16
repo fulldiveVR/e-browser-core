@@ -162,7 +162,7 @@ void BraveTabContextMenuContents::OnContainerSelected(
     const containers::mojom::ContainerPtr& container) {
   // Should open selected tabs in the specified container.
 
-  // TODO(https://github.com/brave/brave-browser/issues/46352) Uncomment this
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/46352) Uncomment this
   // when the containers feature is ready.
   // auto* tab_strip_model =
   //     static_cast<BraveTabStripModel*>(controller_->model());
@@ -176,7 +176,7 @@ void BraveTabContextMenuContents::OnContainerSelected(
 
 base::flat_set<std::string>
 BraveTabContextMenuContents::GetCurrentContainerIds() {
-  // TODO(https://github.com/brave/brave-browser/issues/46352) Fill the set with
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/46352) Fill the set with
   // container ids of tabs selected.
   NOTIMPLEMENTED();
   return {};

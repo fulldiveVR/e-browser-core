@@ -12,7 +12,7 @@ namespace skus {
 namespace features {
 
 // If enabled, this will expose JavaScript methods to domains to pages in a
-// Brave curated allow-list. The first use-case is on `account.brave.com`
+// Brave curated allow-list. The first use-case is on `account.aiwize.com`
 // where the browser can participate in the credentialing process. When the
 // page calls the methods (from JavaScript), it'll invoke the browser's
 // implementation which allows for safe credential interception.

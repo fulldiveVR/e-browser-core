@@ -34,8 +34,8 @@ const buildBraveVersionLink = (braveVersion: string, build: string) => {
   wrapper.setAttribute('id', 'release-notes')
   wrapper.setAttribute('target', '_blank')
   wrapper.setAttribute('rel', 'noopener noreferrer')
-  wrapper.setAttribute('href', 'https://brave.com/latest/')
-  wrapper.textContent = `Brave ${braveVersion} ${build}`
+  wrapper.setAttribute('href', 'https://aiwize.com/latest/')
+  wrapper.textContent = `AIWIZE ${braveVersion} ${build}`
 
   return wrapper
 }
@@ -65,7 +65,7 @@ RegisterPolymerTemplateModifications({
       wrapper.setAttribute('id', 'release-notes')
       wrapper.setAttribute('target', '_blank')
       wrapper.setAttribute('rel', 'noopener noreferrer')
-      wrapper.setAttribute('href', 'https://brave.com/latest/')
+      wrapper.setAttribute('href', 'https://aiwize.com/latest/')
 
       const parent = version.parentNode
       parent?.replaceChild(wrapper, version)
@@ -85,12 +85,12 @@ RegisterPolymerTemplateModifications({
     if (updateStatusMessageLink) {
       // <if expr="is_win">
       updateStatusMessageLink.href =
-        'https://support.brave.app/hc/en-us/articles/360042816611-Why-isn-t-Brave-updating-automatically-on-Windows-'
+        'https://support.aiwize.com/hc/en-us/articles/360042816611-Why-isn-t-Brave-updating-automatically-on-Windows-'
       // </if>
 
       // <if expr="not is_win">
         updateStatusMessageLink.href =
-          'https://community.brave.app?p=update_error'
+          'https://community.aiwize.com?p=update_error'
       // </if>
     }
   }

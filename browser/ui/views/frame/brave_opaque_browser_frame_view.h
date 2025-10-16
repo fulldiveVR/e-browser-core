@@ -35,7 +35,6 @@ class BraveOpaqueBrowserFrameView : public OpaqueBrowserFrameView {
 
  private:
   bool ShouldShowVerticalTabs() const;
-  std::unique_ptr<BraveWindowFrameGraphic> frame_graphic_;
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_FRAME_BRAVE_OPAQUE_BROWSER_FRAME_VIEW_H_

@@ -60,7 +60,7 @@ const Container = styled.div`
 
 const description = formatLocale(S.BRAVE_NEWS_INTRO_DESCRIPTION_TWO, {
   $1: (content) => (
-    <SecureLink href='https://brave.com/privacy/browser/'>{content}</SecureLink>
+    <SecureLink href='https://aiwize.com/privacy/browser/'>{content}</SecureLink>
   )
 })
 

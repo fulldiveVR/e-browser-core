@@ -32,8 +32,6 @@ component("browser") {
     "//brave/browser/farbling:browser_tests",
     "//brave/browser/net:unit_tests",
     "//brave/browser/permissions:browser_tests",
-    "//brave/browser/tor/test:browser_tests",
-    "//brave/components/brave_ads/browser",
     "//brave/components/brave_component_updater/browser:test_support",
     "//brave/components/brave_shields/content/browser",
     "//brave/components/brave_shields/content/test:test_support",

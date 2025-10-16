@@ -44,7 +44,7 @@ using mojom::CardType;
 // This controls the order to display "card" and content types on every
 // platform. Each "page" of content is a repeat of
 // `page_content_order + random_content_order`
-// TODO(https://github.com/brave/brave-browser/issues/48713): This is a case of
+// TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case of
 // `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has been
 // added in the meantime to fix the build error. Remove this attribute and
 // provide a proper fix.
@@ -58,7 +58,7 @@ using mojom::CardType;
     CardType::PUBLISHER_GROUP, CardType::HEADLINE_PAIRED,
     CardType::HEADLINE,        CardType::DEALS};
 
-// TODO(https://github.com/brave/brave-browser/issues/48713): This is a case of
+// TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case of
 // `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has been
 // added in the meantime to fix the build error. Remove this attribute and
 // provide a proper fix.

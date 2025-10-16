@@ -23,17 +23,9 @@
 #include "chrome/browser/profiles/profile_selections.h"
 
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-#include "brave/components/brave_rewards/core/pref_names.h"
-#include "brave/components/brave_wallet/common/pref_names.h"
 #endif
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/components/tor/pref_names.h"
-#endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/components/speedreader/speedreader_pref_names.h"
-#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/common/pref_names.h"
@@ -56,13 +48,6 @@ constexpr auto kBraveOriginBrowserMetadata =
     base::MakeFixedFlatMap<std::string_view,
                            BraveOriginServiceFactory::BraveOriginPrefMetadata>({
 
-#if BUILDFLAG(ENABLE_TOR)
-        // Tor preferences
-        {tor::prefs::kTorDisabled,
-         BraveOriginServiceFactory::BraveOriginPrefMetadata(
-             true,
-             /*user_settable=*/false)},
-#endif
 
         // Stats reporting
         {kStatsReportingEnabled,
@@ -89,16 +74,8 @@ constexpr auto kBraveOriginProfileMetadata =
 
 #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
         // Brave Rewards preferences
-        {brave_rewards::prefs::kDisabledByPolicy,
-         BraveOriginServiceFactory::BraveOriginPrefMetadata(
-             true,
-             /*user_settable=*/false)},
 
         // Brave Wallet preferences
-        {brave_wallet::prefs::kDisabledByPolicy,
-         BraveOriginServiceFactory::BraveOriginPrefMetadata(
-             true,
-             /*user_settable=*/false)},
 #endif
 
         // AI Chat preferences
@@ -107,13 +84,6 @@ constexpr auto kBraveOriginProfileMetadata =
              false,
              /*user_settable=*/false)},
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-        // Speedreader preferences
-        {speedreader::kSpeedreaderPrefFeatureEnabled,
-         BraveOriginServiceFactory::BraveOriginPrefMetadata(
-             false,
-             /*user_settable=*/true)},
-#endif
 
         // Brave News preferences
         {brave_news::prefs::kBraveNewsDisabledByPolicy,
@@ -128,12 +98,6 @@ constexpr auto kBraveOriginProfileMetadata =
              true,
              /*user_settable=*/false)},
 #endif
-
-        // Brave Talk preferences
-        {kBraveTalkDisabledByPolicy,
-         BraveOriginServiceFactory::BraveOriginPrefMetadata(
-             true,
-             /*user_settable=*/false)},
     });
 
 }  // namespace

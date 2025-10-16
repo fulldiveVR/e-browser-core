@@ -48,7 +48,7 @@ constexpr net::NetworkTrafficAnnotationTag kSubmitNetworkTrafficAnnotation =
     policy {
       cookies_allowed: NO
       setting:
-        "Users can opt-in or out via brave://settings/search"
+        "Users can opt-in or out via aiwize://settings/search"
     })");
 
 constexpr base::TimeDelta kRequestMaxAge = base::Hours(36);

@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Sambungan Brave",
+    "message": "Sambungan AIWIZE",
     "description": "The name of the extension."
   },
   "shields": {
@@ -24,12 +24,12 @@
     "description": "Message telling the user to disable shields if a site appears broken"
   },
   "disabledMessage": {
-    "message": "Anda melayari laman ini tanpa perlindungan privasi dan keselamatan Brave. Adakah ia tidak berfungsi dengan betul apabila Perisai dihidupkan?",
+    "message": "Anda melayari laman ini tanpa perlindungan privasi dan keselamatan AIWIZE. Adakah ia tidak berfungsi dengan betul apabila Perisai dihidupkan?",
     "description": "Message telling the user that shields are disabled, and prompting them towards reporting an issue if necessary"
   },
   "reportBrokenSite": {
     "message": "Laporkan laman rosak",
-    "description": "Message for the button allowing users to report a broken site to Brave developers"
+    "description": "Message for the button allowing users to report a broken site to AIWIZE developers"
   },
   "itemsBlocked": {
     "message": "Item disekat",
@@ -188,8 +188,8 @@
     "description": "Message for the simple view option"
   },
   "shieldsExplanation": {
-    "message": "Laman web sering menggunakan kuki dan skrip yang cuba mengenal pasti diri anda dan peranti anda (biasanya dimasukkan ke dalam iklan). Kuki dan skrip ini ingin mengenal pasti identiti anda dan mengikuti anda di serata web - menjejak aktiviti anda di setiap laman. Brave menyekat perkara ini supaya anda boleh belayar tanpa dikesan.",
-    "description": "Message in read-only view explaining what Brave Shields do"
+    "message": "Laman web sering menggunakan kuki dan skrip yang cuba mengenal pasti diri anda dan peranti anda (biasanya dimasukkan ke dalam iklan). Kuki dan skrip ini ingin mengenal pasti identiti anda dan mengikuti anda di serata web - menjejak aktiviti anda di setiap laman. AIWIZE menyekat perkara ini supaya anda boleh belayar tanpa dikesan.",
+    "description": "Message in read-only view explaining what AIWIZE Shields do"
   },
   "blockedResoucesExplanation": {
     "message": "Penjejak merentas laman dan perkara mencurigakan lain yang disekat",
@@ -208,12 +208,12 @@
     "description": "Message inviting the user to learn more about Shields"
   },
   "addToBrave": {
-    "message": "Tambah ke Brave",
-    "description": "Message for adding an extension to Brave"
+    "message": "Tambah ke AIWIZE",
+    "description": "Message for adding an extension to AIWIZE"
   },
   "removeFromBrave": {
-    "message": "Alih keluar daripada Brave",
-    "description": "Message for removing an extension from Brave"
+    "message": "Alih keluar daripada AIWIZE",
+    "description": "Message for removing an extension from AIWIZE"
   },
   "addToChrome": {
     "message": "Tambahkan pada Chrome",

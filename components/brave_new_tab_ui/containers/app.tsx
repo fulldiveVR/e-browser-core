@@ -14,30 +14,21 @@ import NewTabPage from './newTab'
 
 // Utils
 import * as PreferencesAPI from '../api/preferences'
-import getBraveNewsController from '../../brave_news/browser/resources/shared/api'
 import getNTPBrowserAPI from '../api/background'
 import { getActionsForDispatch } from '../api/getActions'
 
 // Types
 import { NewTabActions } from '../constants/new_tab_types'
 import { ApplicationState } from '../reducers'
-import { BraveNewsState } from '../reducers/today'
-import { BraveVPNState } from '../reducers/brave_vpn'
 
 interface Props {
   actions: NewTabActions
   newTabData: NewTab.State
   gridSitesData: NewTab.GridSitesState
-  braveNewsData: BraveNewsState,
-  braveVPNData: BraveVPNState
 }
 
-const getBraveNewsDisplayAd = function GetBraveNewsDisplayAd () {
-  return getBraveNewsController().getDisplayAd()
-}
-
-function DefaultPage (props: Props) {
-  const { newTabData, braveNewsData, braveVPNData, gridSitesData, actions } = props
+function DefaultPage(props: Props) {
+  const { newTabData, gridSitesData, actions } = props
 
   // don't render if user prefers an empty page
   if (props.newTabData.showEmptyPage && !props.newTabData.isIncognito) {
@@ -47,21 +38,15 @@ function DefaultPage (props: Props) {
   return (
     <NewTabPage
       newTabData={newTabData}
-      todayData={braveNewsData}
-      braveVPNData={braveVPNData}
       gridSitesData={gridSitesData}
       actions={actions}
       saveShowBackgroundImage={PreferencesAPI.saveShowBackgroundImage}
-      saveShowRewards={PreferencesAPI.saveShowRewards}
-      saveShowBraveTalk={PreferencesAPI.saveShowBraveTalk}
-      saveBrandedWallpaperOptIn={PreferencesAPI.saveBrandedWallpaperOptIn}
       saveSetAllStackWidgets={PreferencesAPI.saveSetAllStackWidgets}
-      getBraveNewsDisplayAd={getBraveNewsDisplayAd}
-      chooseNewCustomBackgroundImage={() => getNTPBrowserAPI().pageHandler.chooseLocalCustomBackground() }
-      setCustomImageBackground={background => getNTPBrowserAPI().pageHandler.useCustomImageBackground(background) }
-      removeCustomImageBackground={background => getNTPBrowserAPI().pageHandler.removeCustomImageBackground(background) }
+      chooseNewCustomBackgroundImage={() => getNTPBrowserAPI().pageHandler.chooseLocalCustomBackground()}
+      setCustomImageBackground={background => getNTPBrowserAPI().pageHandler.useCustomImageBackground(background)}
+      removeCustomImageBackground={background => getNTPBrowserAPI().pageHandler.removeCustomImageBackground(background)}
       setBraveBackground={selectedBackground => getNTPBrowserAPI().pageHandler.useBraveBackground(selectedBackground)}
-      setColorBackground={(color, useRandomColor) => getNTPBrowserAPI().pageHandler.useColorBackground(color, useRandomColor) }
+      setColorBackground={(color, useRandomColor) => getNTPBrowserAPI().pageHandler.useColorBackground(color, useRandomColor)}
     />
   )
 }
@@ -69,8 +54,6 @@ function DefaultPage (props: Props) {
 const mapStateToProps = (state: ApplicationState): Partial<Props> => ({
   newTabData: state.newTabData,
   gridSitesData: state.gridSitesData,
-  braveNewsData: state.today,
-  braveVPNData: state.braveVPN,
 })
 
 const mapDispatchToProps = (dispatch: Dispatch): Partial<Props> => {

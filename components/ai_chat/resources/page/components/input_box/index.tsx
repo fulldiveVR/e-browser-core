@@ -315,7 +315,7 @@ function InputBox(props: InputBoxProps) {
                 fab
                 kind='plain-faint'
                 onClick={handleContentAgentToggle}
-                title={'Open Leo AI Content Agent Window'}
+                title={'Open AIWIZE Chat Content Agent Window'}
               >
                 <Icon name='leo-cursor' />
               </Button>

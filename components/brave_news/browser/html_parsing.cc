@@ -50,7 +50,7 @@ std::vector<GURL> GetFeedURLsFromHTMLDocument(const std::string& charset,
   VLOG(1) << "GetFeedURLsFromHTMLDocument";
   std::vector<GURL> results;
   // Find most `<link` elements from most types of html documents
-  // TODO(https://github.com/brave/brave-browser/issues/48713): This is a case
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case
   // of `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has been
   // added in the meantime to fix the build error. Remove this attribute and
   // provide a proper fix.
@@ -61,7 +61,7 @@ std::vector<GURL> GetFeedURLsFromHTMLDocument(const std::string& charset,
   while (re2::RE2::FindAndConsume(&input, link_pattern, &link_text)) {
     VLOG(1) << "Found link: " << link_text;
     // Extract rel
-    // TODO(https://github.com/brave/brave-browser/issues/48713): This is a case
+    // TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case
     // of `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has
     // been added in the meantime to fix the build error. Remove this attribute
     // and provide a proper fix.
@@ -78,7 +78,7 @@ std::vector<GURL> GetFeedURLsFromHTMLDocument(const std::string& charset,
       continue;
     }
     // Extract type attribute
-    // TODO(https://github.com/brave/brave-browser/issues/48713): This is a case
+    // TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case
     // of `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has
     // been added in the meantime to fix the build error. Remove this attribute
     // and provide a proper fix.
@@ -96,7 +96,7 @@ std::vector<GURL> GetFeedURLsFromHTMLDocument(const std::string& charset,
       continue;
     }
     // Extract href attribute
-    // TODO(https://github.com/brave/brave-browser/issues/48713): This is a case
+    // TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case
     // of `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has
     // been added in the meantime to fix the build error. Remove this attribute
     // and provide a proper fix.

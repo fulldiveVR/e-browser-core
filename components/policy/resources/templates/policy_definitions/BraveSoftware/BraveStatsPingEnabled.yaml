@@ -1,9 +1,9 @@
 caption: Enable Stats Usage Ping
 default: null
 desc: |-
-  Enable anonymous stats usage ping in Brave.
+  Enable anonymous stats usage ping in AIWIZE.
 
-  The anonymous stats usage ping is an opt-in feature that helps Brave estimate active user totals.
+  The anonymous stats usage ping is an opt-in feature that helps AIWIZE estimate active user totals.
 
   If this policy is set to true, the usage ping will be enabled.
 
@@ -26,9 +26,9 @@ items:
 - caption: Disable usage ping functionality
   value: false
 owners:
-- bbondy@brave.com
-- clifton@brave.com
-- dandries@brave.com
+- bbondy@aiwize.com
+- clifton@aiwize.com
+- dandries@aiwize.com
 schema:
   type: boolean
 supported_on:

@@ -271,31 +271,14 @@ RegisterPolymerTemplateModifications({
     }
 
     // Add web3 item
-    const isBraveWalletAllowed = loadTimeData.getBoolean('isBraveWalletAllowed')
     let web3El: HTMLElement | null = null
-    if (isBraveWalletAllowed) {
-      web3El = createMenuElement(
-        loadTimeData.getString('braveWeb3'),
-        '/web3',
-        'product-brave-wallet',
-        'braveWallet',
-      )
-      if (privacyEl && web3El) {
-        privacyEl.insertAdjacentElement('afterend', web3El)
-      }
-    }
 
     // Add leo item
-    const leoAssistantEl = createMenuElement(
-      loadTimeData.getString('leoAssistant'),
-      '/leo-ai',
-      'product-brave-leo',
-      'leoAssistant',
-    )
+    let leoAssistantEl: Element = shieldsEl
     if (web3El) {
-      web3El.insertAdjacentElement('afterend', leoAssistantEl)
+      leoAssistantEl = web3El;
     } else if (privacyEl) {
-      privacyEl.insertAdjacentElement('afterend', leoAssistantEl)
+      leoAssistantEl = privacyEl;
     }
 
     // Add Sync item

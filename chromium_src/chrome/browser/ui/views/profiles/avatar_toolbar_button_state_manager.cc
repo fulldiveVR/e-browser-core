@@ -64,7 +64,7 @@ class BraveTorStateProvider : public PrivateBaseStateProvider {
   }
 
   std::u16string GetText() const override {
-    return l10n_util::GetStringUTF16(IDS_TOR_AVATAR_BUTTON_TOOLTIP_TEXT);
+    return l10n_util::GetStringUTF16(IDS_AVATAR_BUTTON_INCOGNITO_TOOLTIP);
   }
 };
 
@@ -105,9 +105,6 @@ class BraveGuestStateProvider : public GuestStateProvider {
 std::unique_ptr<StateProvider> CreateBraveStateProvider(
     Profile* profile,
     StateObserver* state_observer) {
-  if (profile->IsTor()) {
-    return std::make_unique<BraveTorStateProvider>(profile, state_observer);
-  }
   if (profile->IsIncognitoProfile()) {
     return std::make_unique<BraveIncognitoStateProvider>(profile,
                                                          state_observer);

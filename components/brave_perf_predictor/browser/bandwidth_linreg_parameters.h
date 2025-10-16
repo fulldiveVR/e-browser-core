@@ -257,7 +257,7 @@ inline constexpr std::array<double, standardise_feat_count>
         129287.31378334873, 52.84516132149959,  2258334.3952942668,
         57.77650764802925,  3333644.900695055};
 
-// TODO(https://github.com/brave/brave-browser/issues/48713): This is a case of
+// TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case of
 // `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has been
 // added in the meantime to fix the build error. Remove this attribute and
 // provide a proper fix.
@@ -478,7 +478,7 @@ inline constexpr std::array<double, standardise_feat_count>
         "thirdParties.Yandex APIs.blocked",
     };
 
-// TODO(https://github.com/brave/brave-browser/issues/48713): This is a case of
+// TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case of
 // `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has been
 // added in the meantime to fix the build error. Remove this attribute and
 // provide a proper fix.
@@ -675,7 +675,7 @@ inline constexpr std::array<double, standardise_feat_count>
     "Yandex APIs",
 };
 
-// TODO(https://github.com/brave/brave-browser/issues/48713): This is a case of
+// TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case of
 // `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has been
 // added in the meantime to fix the build error. Remove this attribute and
 // provide a proper fix.
@@ -687,7 +687,7 @@ struct stdfactor {
   double mean, scale;
 };
 
-// TODO(https://github.com/brave/brave-browser/issues/48713): This is a case of
+// TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case of
 // `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has been
 // added in the meantime to fix the build error. Remove this attribute and
 // provide a proper fix.

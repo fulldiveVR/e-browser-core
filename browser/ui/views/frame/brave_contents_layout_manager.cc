@@ -23,7 +23,6 @@ BraveContentsLayoutManager::BraveContentsLayoutManager(
       contents_view_(contents_view),
       reader_mode_toolbar_(reader_mode_toolbar),
       scrim_view_(scrim_view) {
-  CHECK(reader_mode_toolbar_);
 }
 
 BraveContentsLayoutManager::~BraveContentsLayoutManager() = default;
@@ -38,45 +37,5 @@ views::ProposedLayout BraveContentsLayoutManager::CalculateProposedLayout(
     const views::SizeBounds& size_bounds) const {
   views::ProposedLayout layouts =
       ContentsLayoutManager::CalculateProposedLayout(size_bounds);
-
-  auto* contents_layout = layouts.GetLayoutFor(contents_view_);
-  if (!contents_layout) {
-    return layouts;
-  }
-
-  contents_layout->bounds.Inset(border_insets_);
-
-  if (reader_mode_toolbar_->GetVisible()) {
-    gfx::Rect toolbar_bounds = contents_layout->bounds;
-    toolbar_bounds.set_height(
-        reader_mode_toolbar_->GetPreferredSize().height());
-    contents_layout->bounds.Inset(
-        gfx::Insets::TLBR(toolbar_bounds.height(), 0, 0, 0));
-
-    layouts.child_layouts.emplace_back(
-        reader_mode_toolbar_.get(), /*visible=*/true,
-        host_view()->GetMirroredRect(toolbar_bounds),
-        views::SizeBounds(layouts.host_size));
-  } else {
-    layouts.child_layouts.emplace_back(
-        reader_mode_toolbar_.get(), /*visible=*/false,
-        host_view()->GetMirroredRect(gfx::Rect()),
-        views::SizeBounds(layouts.host_size));
-  }
-
-  if (scrim_view_) {
-    if (scrim_view_->GetVisible()) {
-      layouts.child_layouts.emplace_back(
-          scrim_view_.get(), /*visible=*/true,
-          host_view()->GetMirroredRect(contents_layout->bounds),
-          views::SizeBounds(layouts.host_size));
-    } else {
-      layouts.child_layouts.emplace_back(
-          scrim_view_.get(), /*visible=*/false,
-          host_view()->GetMirroredRect(gfx::Rect()),
-          views::SizeBounds(layouts.host_size));
-    }
-  }
-
   return layouts;
 }

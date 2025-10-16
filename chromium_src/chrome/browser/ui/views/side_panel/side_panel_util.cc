@@ -28,7 +28,7 @@ void SidePanelUtil::PopulateGlobalEntries(Browser* browser,
 
   // AI Chat side panel as a global panel and not tab-specific is conditional
   // for now.
-  // TODO(https://github.com/brave/brave-browser/issues/48526): Remove the
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/48526): Remove the
   // condition when the feature flag is removed.
   if (ai_chat::AIChatServiceFactory::GetForBrowserContext(browser->profile()) &&
       ai_chat::ShouldSidePanelBeGlobal(browser->profile())) {

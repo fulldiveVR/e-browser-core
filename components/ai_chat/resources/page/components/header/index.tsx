@@ -24,7 +24,7 @@ import {
 const Logo = ({ isPremium }: { isPremium: boolean }) => (
   <div className={styles.logo}>
     <Icon name='product-brave-leo' />
-    <div className={styles.logoTitle}>Leo AI</div>
+    <div className={styles.logoTitle}>AIWIZE Chat</div>
     {isPremium && <div className={styles.badgePremium}>PREMIUM</div>}
   </div>
 )

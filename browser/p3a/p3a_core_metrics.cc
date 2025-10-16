@@ -42,8 +42,7 @@ enum class WindowUsageStats {
 };
 
 const char* GetPrefNameForProfile(Profile* profile) {
-  if (profile->IsIncognitoProfile() &&
-      !profile->IsTor()) {
+  if (profile->IsIncognitoProfile() ) {
     return kLastTimeIncognitoUsed;
   }
   return nullptr;
@@ -78,10 +77,6 @@ void BraveWindowTracker::RegisterPrefs(PrefRegistrySimple* registry) {
 }
 
 void BraveWindowTracker::OnBrowserAdded(Browser* browser) {
-  if (browser->profile()->IsTor()) {
-    local_state_->SetBoolean(kTorUsed, true);
-    return;
-  }
   const char* pref = GetPrefNameForProfile(browser->profile());
   if (pref) {
     local_state_->SetTime(pref, base::Time::Now());

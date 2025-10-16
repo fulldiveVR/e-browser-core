@@ -1,0 +1,18 @@
+# Copyright (c) 2025 AI Wize Authors. All rights reserved.
+
+static_library("ai_combiner") {
+  sources = [
+    "ai_combiner_constants.h",
+    "ai_combiner_helper.h",
+    "ai_combiner_helper.cc"
+  ]
+
+  deps = [
+    "//brave/base",
+    "//build:buildflag_header_h",
+    "//components/pref_registry",
+    "//components/prefs",
+    "//components/version_info",
+    "//net",
+  ]
+}

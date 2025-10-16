@@ -51,7 +51,6 @@ void MakeActiveTabReloadOnlyForSplitTab(
 
 }  // namespace
 
-#define ReloadBypassingCache ReloadBypassingCache_ChromiumImpl
 #define GetReadingListModel GetReadingListModel_ChromiumImpl
 #define kChromeUISplitViewNewTabPageURL kChromeUINewTabURL
 #define CloseSelectedTabs CloseSelectedTabsWithSplitView
@@ -66,21 +65,10 @@ void MakeActiveTabReloadOnlyForSplitTab(
 #undef CloseSelectedTabs
 #undef BRAVE_RELOAD_INTERNAL
 #undef kChromeUISplitViewNewTabPageURL
-#undef ReloadBypassingCache
 #undef GetReadingListModel
 
 namespace chrome {
 
-void ReloadBypassingCache(Browser* browser, WindowOpenDisposition disposition) {
-  Profile* profile = browser->profile();
-  DCHECK(profile);
-  // NewTorConnectionForSite will do hard reload after obtaining new identity
-  if (profile->IsTor()) {
-    brave::NewTorConnectionForSite(browser);
-  } else {
-    ReloadBypassingCache_ChromiumImpl(browser, disposition);
-  }
-}
 
 ReadingListModel* GetReadingListModel(Browser* browser) {
   return nullptr;

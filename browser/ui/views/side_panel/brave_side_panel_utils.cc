@@ -18,7 +18,7 @@ void RegisterContextualSidePanel(SidePanelRegistry* registry,
                                  content::WebContents* web_contents) {
   content::BrowserContext* context = web_contents->GetBrowserContext();
   // Disable tab-scoped panel for content agent profiles.
-  // TODO(https://github.com/brave/brave-browser/issues/48526): Remove
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/48526): Remove
   // this when the feature flag is removed.
   if (ai_chat::AIChatServiceFactory::GetForBrowserContext(context) &&
       !ai_chat::ShouldSidePanelBeGlobal(Profile::FromBrowserContext(context))) {

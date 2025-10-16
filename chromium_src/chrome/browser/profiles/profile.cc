@@ -9,11 +9,10 @@
 #include "brave/components/ai_chat/core/common/buildflags/buildflags.h"
 #include "brave/components/ai_chat/core/common/features.h"
 #include "brave/components/constants/brave_constants.h"
-#include "brave/components/tor/tor_constants.h"
 #include "chrome/browser/policy/profile_policy_connector.h"
 #include "components/search_engines/search_engine_choice/search_engine_choice_utils.h"
 
-#define BRAVE_ALLOWS_BROWSER_WINDOWS *this == TorID() ||
+#define BRAVE_ALLOWS_BROWSER_WINDOWS
 
 #define IsIncognitoProfile IsIncognitoProfile_ChromiumImpl
 #define IsPrimaryOTRProfile IsPrimaryOTRProfile_ChromiumImpl
@@ -28,12 +27,9 @@ const char kSearchBackupResultsOTRProfileIDPrefix[] =
 }  // namespace
 
 // static
-const Profile::OTRProfileID Profile::OTRProfileID::TorID() {
-  return OTRProfileID(tor::kTorProfileID);
-}
 
 bool Profile::IsTor() const {
-  return IsOffTheRecord() && GetOTRProfileID() == OTRProfileID::TorID();
+  return false;
 }
 
 bool Profile::IsAIChatAgent() const {

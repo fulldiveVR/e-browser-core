@@ -88,7 +88,7 @@ void ClearRedirectChain(NavigationHandle* navigation_handle) {
 void DebounceNavigationThrottle::MaybeCreateAndAdd(
     content::NavigationThrottleRegistry& registry,
     DebounceService* debounce_service) {
-  // If debouncing is disabled in brave://flags, debounce service will
+  // If debouncing is disabled in aiwize://flags, debounce service will
   // never be created (will be null) so we won't create the throttle
   // either. Caller must nullcheck this.
   if (!debounce_service) {

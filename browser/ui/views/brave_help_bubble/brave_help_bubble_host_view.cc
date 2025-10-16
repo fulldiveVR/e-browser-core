@@ -42,7 +42,7 @@ constexpr SkColor4f kColors[] = {{0.65f, 0.54f, 1, 1},
 // These are positions for each element in kColors
 constexpr SkScalar kPositions[] = {0.0, 0.43, 0.93};
 
-// TODO(https://github.com/brave/brave-browser/issues/48713): This is a case of
+// TODO(https://github.com/fulldiveVR/e-browser/issues/48713): This is a case of
 // `-Wexit-time-destructors` violation and `[[clang::no_destroy]]` has been
 // added in the meantime to fix the build error. Remove this attribute and
 // provide a proper fix.

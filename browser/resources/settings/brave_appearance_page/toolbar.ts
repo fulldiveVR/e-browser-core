@@ -8,7 +8,6 @@ import { I18nMixin, I18nMixinInterface } from 'chrome://resources/cr_elements/i1
 import { PrefsMixin, PrefsMixinInterface } from '/shared/settings/prefs/prefs_mixin.js'
 import { loadTimeData } from "../i18n_setup.js"
 import { getTemplate } from './toolbar.html.js'
-import { BraveWalletBrowserProxy, BraveWalletBrowserProxyImpl } from '../brave_wallet_page/brave_wallet_browser_proxy.js';
 import {Route, RouteObserverMixin, Router} from '../router.js';
 import {routes} from '../route.js';
 
@@ -36,23 +35,9 @@ class SettingsBraveAppearanceToolbarElement extends SettingsBraveAppearanceToolb
 
   static get properties() {
     return {
-      isNativeWalletEnabled_: {
-        type: Boolean,
-        value: false,
-      }
     }
   }
 
-  private declare isNativeWalletEnabled_: boolean
-  private walletBrowserProxy_: BraveWalletBrowserProxy = BraveWalletBrowserProxyImpl.getInstance()
-
-  override ready() {
-    super.ready()
-
-    this.walletBrowserProxy_.isNativeWalletEnabled().then(val => {
-      this.isNativeWalletEnabled_ = val
-    });
-  }
 
   /**
    * RouteObserverMixin
@@ -90,9 +75,6 @@ class SettingsBraveAppearanceToolbarElement extends SettingsBraveAppearanceToolb
     return homepageValue || this.i18n('customWebAddress');
   }
 
-  private isBraveRewardsSupported_() {
-    return loadTimeData.getBoolean('isBraveRewardsSupported')
-  }
 
   private showBraveVPNOption_() {
     return loadTimeData.getBoolean('isBraveVPNEnabled')

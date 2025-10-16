@@ -5,7 +5,7 @@
 
 #include "chrome/browser/ui/safety_hub/password_status_check_service.h"
 
-// We hide the password card in brave://settings/safetyCheck, so we don't want
+// We hide the password card in aiwize://settings/safetyCheck, so we don't want
 // to return recommendations that involve that card
 #define BRAVE_PASSWORD_STATUS_CHECK_SERVICE_GET_PASSWORD_CARD_DATA   \
   base::Value::Dict dict;                                            \

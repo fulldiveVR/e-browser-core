@@ -76,7 +76,7 @@ void OpenBrowserWindowForAIChatAgentProfileWithCallback(
 
   // We don't provide a profile-init callback because we want to ensure
   // the prefs are up to date each time.
-  // TODO(https://github.com/brave/brave-browser/issues/48188): Don't use
+  // TODO(https://github.com/fulldiveVR/e-browser/issues/48188): Don't use
   // a harcoded path for the profile, use an attribute instead.
   base::FilePath profile_path =
       base::PathService::CheckedGet(chrome::DIR_USER_DATA);

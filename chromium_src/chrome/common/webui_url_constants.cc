@@ -8,8 +8,8 @@
 
 #define kChromeUIAttributionInternalsHost                                     \
   kChromeUIAttributionInternalsHost, kAdblockHost, kAdblockInternalsHost,     \
-      kRewardsPageHost, kRewardsInternalsHost, kWelcomeHost, kWalletPageHost, \
-      kTorInternalsHost, kSkusInternalsHost, kAdsInternalsHost,               \
+        kWelcomeHost,  \
+       kAIWizeApplicationsPageHost, kAiCombinerPanelPageHost,  kAiCombinerChatPageHost, kSkusInternalsHost,               \
       kNewTabTakeoverHost
 
 #include <chrome/common/webui_url_constants.cc>

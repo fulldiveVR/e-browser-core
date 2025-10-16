@@ -7,8 +7,10 @@
 
 #include "brave/components/brave_extension/grit/brave_extension_generated_map.h"
 #include "brave/components/brave_extension/grit/brave_extension_resources_map.h"
+#include "brave/components/aiwize_agent/grit/aiwize_agent_resources_map.h"
 
 #define BRAVE_CHROME_COMPONENT_EXTENSION_RESOURCE_MANAGER_DATA_DATA \
+  AddComponentResourceEntries(kAiwizeAgent);                        \
   AddComponentResourceEntries(kBraveExtension);                     \
   AddComponentResourceEntries(kBraveExtensionGenerated);
 

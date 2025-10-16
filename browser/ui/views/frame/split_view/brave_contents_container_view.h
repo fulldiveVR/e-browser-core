@@ -9,18 +9,11 @@
 #include "base/gtest_prod_util.h"
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "chrome/browser/ui/views/frame/contents_container_view.h"
 #include "ui/base/metadata/metadata_header_macros.h"
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/ui/views/speedreader/reader_mode_toolbar_view.h"
-#endif
 
 class BraveContentsContainerView :
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-    public ReaderModeToolbarView::Delegate,
-#endif
     public ContentsContainerView {
   METADATA_HEADER(BraveContentsContainerView, ContentsContainerView)
  public:
@@ -40,12 +33,6 @@ class BraveContentsContainerView :
       const views::SizeBounds& size_bounds) const override;
   void ChildVisibilityChanged(views::View* child) override;
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  // ReaderModeToolbarView::Delegate:
-  void OnReaderModeToolbarActivate(ReaderModeToolbarView* toolbar) override;
-
-  ReaderModeToolbarView* reader_mode_toolbar() { return reader_mode_toolbar_; }
-#endif
 
  private:
   FRIEND_TEST_ALL_PREFIXES(SideBySideEnabledBrowserTest,
@@ -55,9 +42,6 @@ class BraveContentsContainerView :
 
   raw_ref<BrowserView> browser_view_;
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  raw_ptr<ReaderModeToolbarView> reader_mode_toolbar_ = nullptr;
-#endif
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_FRAME_SPLIT_VIEW_BRAVE_CONTENTS_CONTAINER_VIEW_H_

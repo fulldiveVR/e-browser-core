@@ -26,11 +26,11 @@ const mockEmailAliasesService: EmailAliasesServiceInterface = {
 
 describe('EmailAliasModal', () => {
   const mockOnReturnToMain = jest.fn()
-  const mockEmail = 'test@brave.com'
+  const mockEmail = 'test@aiwize.com'
   const mockAlias: Alias = {
-    email: 'existing@brave.com',
+    email: 'existing@aiwize.com',
     note: 'Existing Alias',
-    domains: ['brave.com']
+    domains: ['aiwize.com']
   }
 
   beforeEach(() => {
@@ -43,7 +43,7 @@ describe('EmailAliasModal', () => {
         return emptyResultPromise
       })
     mockEmailAliasesService.generateAlias = jest.fn()
-      .mockResolvedValue('generated@brave.com')
+      .mockResolvedValue('generated@aiwize.com')
   })
 
   it('renders create mode correctly', async () => {
@@ -69,9 +69,9 @@ describe('EmailAliasModal', () => {
 
   it('renders edit mode correctly', () => {
     const mockEditAlias: Alias = {
-      email: 'existing@brave.com',
+      email: 'existing@aiwize.com',
       note: 'Existing Alias',
-      domains: ['brave.com']
+      domains: ['aiwize.com']
     }
 
     render(
@@ -98,9 +98,9 @@ describe('EmailAliasModal', () => {
   it('renders delete mode correctly and calls deleteAlias when delete button ' +
     'is clicked', async () => {
     const mockAlias: Alias = {
-      email: 'existing@brave.com',
+      email: 'existing@aiwize.com',
       note: 'Existing Alias',
-      domains: ['brave.com']
+      domains: ['aiwize.com']
     }
     render(
       <DeleteAliasModal
@@ -154,7 +154,7 @@ describe('EmailAliasModal', () => {
         .toBeInTheDocument()
       expect(screen.queryByTestId('loading-icon')).not.toBeInTheDocument()
       const generatedEmailContainer = screen.getByTestId('generated-email')
-      expect(generatedEmailContainer).toHaveTextContent('generated@brave.com')
+      expect(generatedEmailContainer).toHaveTextContent('generated@aiwize.com')
     })
 
     // Ensure the save button is enabled
@@ -219,7 +219,7 @@ describe('EmailAliasModal', () => {
   })
 
   it('shows loading state while generating alias', async () => {
-    const aliasEmail = 'new@brave.com'
+    const aliasEmail = 'new@aiwize.com'
     mockEmailAliasesService.generateAlias = jest.fn().mockImplementation(
       () => Promise.resolve(aliasEmail))
 
@@ -285,9 +285,9 @@ describe('EmailAliasModal', () => {
 
   it('handles alias updates', async () => {
     const mockEditAlias: Alias = {
-      email: 'existing@brave.com',
+      email: 'existing@aiwize.com',
       note: 'Existing Alias',
-      domains: ['brave.com']
+      domains: ['aiwize.com']
     }
 
     render(
@@ -320,7 +320,7 @@ describe('EmailAliasModal', () => {
     // Check that updateAlias was called
     await waitFor(() => {
       expect(mockEmailAliasesService.updateAlias).toHaveBeenCalledWith(
-        'existing@brave.com',
+        'existing@aiwize.com',
         'Existing Alias'
       )
       expect(mockOnReturnToMain).toHaveBeenCalled()
@@ -329,13 +329,13 @@ describe('EmailAliasModal', () => {
 
   const aliases: Alias[] = [
     {
-      email: 'new@brave.com',
+      email: 'new@aiwize.com',
       note: 'New Alias',
       domains: undefined
     }, {
-      email: 'existing@brave.com',
+      email: 'existing@aiwize.com',
       note: 'Existing Alias',
-      domains: ['brave.com']
+      domains: ['aiwize.com']
     }
   ]
 
@@ -346,7 +346,7 @@ describe('EmailAliasModal', () => {
 
       render(
         <EmailAliasModal
-          editing={alias.email === 'existing@brave.com'}
+          editing={alias.email === 'existing@aiwize.com'}
           editAlias={alias}
           mainEmail={mockEmail}
           aliasCount={0}

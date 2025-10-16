@@ -19,17 +19,13 @@
 #include "brave/app/command_utils.h"
 #include "brave/components/ai_chat/core/common/pref_names.h"
 #include "brave/components/brave_news/common/pref_names.h"
-#include "brave/components/brave_rewards/core/pref_names.h"
 #include "brave/components/brave_vpn/common/buildflags/buildflags.h"
-#include "brave/components/brave_wallet/common/pref_names.h"
 #include "brave/components/brave_wayback_machine/buildflags/buildflags.h"
 #include "brave/components/commands/browser/accelerator_pref_manager.h"
 #include "brave/components/commands/common/accelerator_parsing.h"
 #include "brave/components/commands/common/commands.mojom-forward.h"
 #include "brave/components/commands/common/commands.mojom.h"
 #include "brave/components/constants/pref_names.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
-#include "brave/components/tor/buildflags/buildflags.h"
 #include "build/build_config.h"
 #include "chrome/app/chrome_command_ids.h"
 #include "chrome/browser/browser_process.h"
@@ -37,17 +33,11 @@
 #include "mojo/public/cpp/bindings/pending_remote.h"
 #include "ui/base/accelerators/accelerator.h"
 
-#if BUILDFLAG(ENABLE_TOR)
-#include "brave/components/tor/pref_names.h"
-#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
 #include "brave/components/brave_vpn/common/pref_names.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/components/speedreader/speedreader_pref_names.h"
-#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
 #include "brave/components/brave_wayback_machine/pref_names.h"
@@ -395,8 +385,6 @@ bool AcceleratorService::IsCommandDisabledByPolicy(int command_id) const {
     case IDC_CONFIGURE_BRAVE_NEWS:
       return pref_service_->GetBoolean(
           brave_news::prefs::kBraveNewsDisabledByPolicy);
-    case IDC_SHOW_BRAVE_TALK:
-      return pref_service_->GetBoolean(kBraveTalkDisabledByPolicy);
     case IDC_SHOW_BRAVE_VPN_PANEL:
     case IDC_TOGGLE_BRAVE_VPN_TOOLBAR_BUTTON:
     case IDC_TOGGLE_BRAVE_VPN_TRAY_ICON:
@@ -410,31 +398,11 @@ bool AcceleratorService::IsCommandDisabledByPolicy(int command_id) const {
 #else
       return true;  // VPN not compiled in, always disabled
 #endif
-    case IDC_SHOW_BRAVE_WALLET:
-    case IDC_SHOW_BRAVE_WALLET_PANEL:
-    case IDC_CLOSE_BRAVE_WALLET_PANEL:
-      return pref_service_->GetBoolean(brave_wallet::prefs::kDisabledByPolicy);
-    case IDC_SHOW_BRAVE_REWARDS:
-    case IDC_OFFERS_AND_REWARDS_FOR_PAGE:
-      return pref_service_->GetBoolean(brave_rewards::prefs::kDisabledByPolicy);
     case IDC_TOGGLE_AI_CHAT:
     case IDC_OPEN_FULL_PAGE_CHAT:
       return !pref_service_->GetBoolean(ai_chat::prefs::kEnabledByPolicy);
-    case IDC_NEW_OFFTHERECORD_WINDOW_TOR:
-    case IDC_NEW_TOR_CONNECTION_FOR_SITE:
-#if BUILDFLAG(ENABLE_TOR)
-      return g_browser_process->local_state()->GetBoolean(
-          tor::prefs::kTorDisabled);
-#else
-      return true;  // Tor not compiled in, always disabled
-#endif
     case IDC_SPEEDREADER_ICON_ONCLICK:
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-      return !pref_service_->GetBoolean(
-          speedreader::kSpeedreaderPrefFeatureEnabled);
-#else
       return true;  // Speedreader not compiled in, always disabled
-#endif
     case IDC_SHOW_WAYBACK_MACHINE_BUBBLE:
 #if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
       return !pref_service_->GetBoolean(kBraveWaybackMachineEnabled);

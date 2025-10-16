@@ -12,11 +12,11 @@
 #include "base/memory/raw_ptr.h"
 #include "base/memory/raw_ref.h"
 #include "base/types/pass_key.h"
+#include "base/scoped_observation.h"
 #include "brave/browser/ui/tabs/split_view_browser_data.h"
 #include "brave/browser/ui/tabs/split_view_browser_data_observer.h"
 #include "brave/browser/ui/views/frame/split_view/brave_contents_container_view.h"
 #include "brave/browser/ui/views/split_view/split_view_layout_manager.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "chrome/browser/ui/exclusive_access/fullscreen_observer.h"
 #include "chrome/browser/ui/views/frame/scrim_view.h"
 #include "ui/base/metadata/metadata_header_macros.h"
@@ -25,9 +25,6 @@
 #include "ui/views/view_observer.h"
 #include "ui/views/widget/widget_observer.h"
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/ui/views/speedreader/reader_mode_toolbar_view.h"
-#endif
 
 namespace content {
 class WebContents;
@@ -52,9 +49,6 @@ class SplitViewSeparator;
 
 // Contains a pair of contents container view.
 class SplitView : public views::View,
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-                  public ReaderModeToolbarView::Delegate,
-#endif
                   public views::WidgetObserver,
                   public FullscreenObserver,
                   public SplitViewBrowserDataObserver {
@@ -106,14 +100,6 @@ class SplitView : public views::View,
     return secondary_contents_container_view_;
   }
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  ReaderModeToolbarView* secondary_reader_mode_toolbar() {
-    return secondary_contents_container_view_->reader_mode_toolbar();
-  }
-  void OnReaderModeToolbarActivate(ReaderModeToolbarView* toolbar) override;
-  void UpdateSecondaryReaderModeToolbarVisibility();
-  void UpdateSecondaryReaderModeToolbar();
-#endif
 
   void UpdateCornerRadius(const gfx::RoundedCornersF& corners);
 

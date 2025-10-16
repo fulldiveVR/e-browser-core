@@ -44,12 +44,10 @@
 #include "brave/browser/ui/views/tabs/vertical_tab_utils.h"
 #include "brave/browser/ui/views/toolbar/bookmark_button.h"
 #include "brave/browser/ui/views/toolbar/brave_toolbar_view.h"
-#include "brave/browser/ui/views/toolbar/wallet_button.h"
 #include "brave/browser/ui/views/window_closing_confirm_dialog_view.h"
 #include "brave/components/commands/common/features.h"
 #include "brave/components/constants/pref_names.h"
 #include "brave/components/sidebar/common/features.h"
-#include "brave/components/speedreader/common/buildflags/buildflags.h"
 #include "brave/ui/color/nala/nala_color_id.h"
 #include "chrome/app/chrome_command_ids.h"
 #include "chrome/browser/app_mode/app_mode_utils.h"
@@ -107,11 +105,6 @@
 #include "brave/browser/ui/views/update_recommended_message_box_mac.h"
 #endif
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-#include "brave/browser/ui/speedreader/speedreader_tab_helper.h"
-#include "brave/browser/ui/views/speedreader/reader_mode_bubble.h"
-#include "brave/browser/ui/views/speedreader/reader_mode_toolbar_view.h"
-#endif
 
 #if BUILDFLAG(ENABLE_BRAVE_WAYBACK_MACHINE)
 #include "brave/browser/ui/views/wayback_machine_bubble_view.h"
@@ -240,19 +233,6 @@ BraveBrowserView::BraveBrowserView(std::unique_ptr<Browser> browser)
     : BrowserView(std::move(browser)) {
   const bool use_rounded_corners =
       BraveBrowser::ShouldUseBraveWebViewRoundedCorners(browser_.get());
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  // When SideBySide is enabled, each ContentsContainerView in MultiContentsView
-  // own ReaderModeToolbarView.
-  if (!base::FeatureList::IsEnabled(features::kSideBySide)) {
-    reader_mode_toolbar_ = contents_container_->AddChildView(
-        std::make_unique<ReaderModeToolbarView>(browser_->profile(),
-                                                use_rounded_corners));
-    contents_container_->SetLayoutManager(
-        std::make_unique<BraveContentsLayoutManager>(
-            contents_container_view_, lens_overlay_view_, reader_mode_toolbar_,
-            /*scrim_view=*/nullptr));
-  }
-#endif
 
   if (use_rounded_corners) {
     // Collapse the separator line between the toolbar or bookmark bar and the
@@ -461,66 +441,6 @@ void BraveBrowserView::SetStarredState(bool is_starred) {
   }
 }
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-ReaderModeToolbarView* BraveBrowserView::reader_mode_toolbar() {
-  if (base::FeatureList::IsEnabled(features::kSideBySide)) {
-    return GetBraveMultiContentsView()
-        ->GetActiveContentsContainerView()
-        ->reader_mode_toolbar();
-  }
-
-  return reader_mode_toolbar_;
-}
-
-speedreader::SpeedreaderBubbleView* BraveBrowserView::ShowSpeedreaderBubble(
-    speedreader::SpeedreaderTabHelper* tab_helper,
-    speedreader::SpeedreaderBubbleLocation location) {
-  views::View* anchor = nullptr;
-  views::BubbleBorder::Arrow arrow = views::BubbleBorder::NONE;
-  switch (location) {
-    case speedreader::SpeedreaderBubbleLocation::kLocationBar:
-      anchor = GetLocationBarView();
-      arrow = views::BubbleBorder::TOP_RIGHT;
-      break;
-    case speedreader::SpeedreaderBubbleLocation::kToolbar:
-      anchor = reader_mode_toolbar()->toolbar();
-      arrow = views::BubbleBorder::TOP_LEFT;
-      break;
-  }
-
-  auto* reader_mode_bubble =
-      new speedreader::ReaderModeBubble(anchor, tab_helper);
-  views::BubbleDialogDelegateView::CreateBubble(reader_mode_bubble);
-  reader_mode_bubble->SetArrow(arrow);
-  reader_mode_bubble->Show();
-  return reader_mode_bubble;
-}
-
-void BraveBrowserView::UpdateReaderModeToolbar() {
-  auto is_distilled = [](content::WebContents* web_contents) {
-    if (!web_contents) {
-      return false;
-    }
-    if (auto* th =
-            speedreader::SpeedreaderTabHelper::FromWebContents(web_contents)) {
-      return speedreader::DistillStates::IsDistilled(th->PageDistillState());
-    }
-    return false;
-  };
-  reader_mode_toolbar()->SetVisible(
-      is_distilled(browser()->tab_strip_model()->GetActiveWebContents()));
-
-  if (base::FeatureList::IsEnabled(features::kSideBySide)) {
-    // Need to update inactive split tabs' reader mode toolbar because
-    // it's also visible.
-    auto* contents_container =
-        GetBraveMultiContentsView()->GetInactiveContentsContainerView();
-    auto* reader_mode_toolbar = contents_container->reader_mode_toolbar();
-    reader_mode_toolbar->SetVisible(
-        is_distilled(contents_container->contents_view()->web_contents()));
-  }
-}
-#endif  // BUILDFLAG(ENABLE_SPEEDREADER)
 
 void BraveBrowserView::ShowUpdateChromeDialog() {
 #if BUILDFLAG(ENABLE_SPARKLE)
@@ -570,19 +490,11 @@ void BraveBrowserView::ShowWaybackMachineBubble() {
 }
 #endif
 
-WalletButton* BraveBrowserView::GetWalletButton() {
-  return static_cast<BraveToolbarView*>(toolbar())->wallet_button();
-}
 
 void BraveBrowserView::NotifyDialogPositionRequiresUpdate() {
   GetBrowserViewLayout()->NotifyDialogPositionRequiresUpdate();
 }
 
-views::View* BraveBrowserView::GetWalletButtonAnchorView() {
-  return static_cast<BraveToolbarView*>(toolbar())
-      ->wallet_button()
-      ->GetAsAnchorView();
-}
 
 void BraveBrowserView::OnAcceleratorsChanged(
     const commands::Accelerators& changed) {
@@ -626,21 +538,8 @@ void BraveBrowserView::OnAcceleratorsChanged(
   }
 }
 
-void BraveBrowserView::CreateWalletBubble() {
-  DCHECK(GetWalletButton());
-  GetWalletButton()->ShowWalletBubble();
-}
 
-void BraveBrowserView::CreateApproveWalletBubble() {
-  DCHECK(GetWalletButton());
-  GetWalletButton()->ShowApproveWalletBubble();
-}
 
-void BraveBrowserView::CloseWalletBubble() {
-  if (GetWalletButton()) {
-    GetWalletButton()->CloseWalletBubble();
-  }
-}
 
 void BraveBrowserView::AddedToWidget() {
   BrowserView::AddedToWidget();
@@ -932,17 +831,10 @@ void BraveBrowserView::OnActiveTabChanged(content::WebContents* old_contents,
 
   UpdateContentsShadowVisibility();
 
-#if BUILDFLAG(ENABLE_SPEEDREADER)
-  UpdateReaderModeToolbar();
-#endif
 
   // Some managers need to consider tab's active state with web content's
   // visibility.
   if (old_contents) {
-    auto* permission_manager =
-        permissions::PermissionRequestManager::FromWebContents(old_contents);
-    CHECK(permission_manager);
-    permission_manager->OnTabActiveStateChanged(false);
 
     // web/tab modal dialog manger can get tab activation state fromm their
     // delegates.
@@ -959,10 +851,6 @@ void BraveBrowserView::OnActiveTabChanged(content::WebContents* old_contents,
   }
 
   if (new_contents) {
-    auto* permission_manager =
-        permissions::PermissionRequestManager::FromWebContents(new_contents);
-    CHECK(permission_manager);
-    permission_manager->OnTabActiveStateChanged(true);
 
     auto* web_modal_dialog_manager =
         web_modal::WebContentsModalDialogManager::FromWebContents(new_contents);

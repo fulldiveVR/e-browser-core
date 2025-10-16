@@ -23,8 +23,6 @@ class BraveExtensionManagement : public ExtensionManagement,
   ~BraveExtensionManagement() override;
 
  private:
-  void OnTorDisabledChanged();
-  void OnTorPluggableTransportChanged();
   void Cleanup(content::BrowserContext* browser_context);
 
   PrefChangeRegistrar local_state_pref_change_registrar_;

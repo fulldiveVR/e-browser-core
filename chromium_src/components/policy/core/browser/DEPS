@@ -1,4 +1,4 @@
-from brave_chromium_utils import inline_file
+from aiwize_chromium_utils import inline_file
 inline_file("//components/policy/core/browser/DEPS", globals(), locals())
 
 include_rules = [

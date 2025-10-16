@@ -16,7 +16,7 @@ OVERRIDE_FEATURE_DEFAULT_STATES({{
     {kTFLiteLanguageDetectionEnabled, base::FEATURE_DISABLED_BY_DEFAULT},
 }});
 
-// Redirect native translate requests to the translate.brave.com (expect the
+// Redirect native translate requests to the translate.aiwize.com (expect the
 // script request).
 GURL GetTranslateSecurityOrigin() {
   std::string security_origin(kBraveTranslateOrigin);

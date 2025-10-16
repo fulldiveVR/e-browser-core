@@ -8,18 +8,15 @@ import Icon from '@brave/leo/react/icon'
 
 import { useBraveNews } from '../../../../../components/brave_news/browser/resources/shared/Context'
 import { useNewTabState } from '../../context/new_tab_context'
-import { useRewardsState } from '../../context/rewards_context'
 import { useVpnState } from '../../context/vpn_context'
 import { NtpWidget } from './ntp_widget'
-import { RewardsWidget } from './rewards_widget'
-import { TalkWidget } from './talk_widget'
 import { VpnWidget } from './vpn_widget'
 import { StatsWidget } from './stats_widget'
 import { NewsWidget } from './news_widget'
 
 import { style } from './widget_stack.style'
 
-type TabName = 'rewards' | 'talk' | 'vpn' | 'stats' | 'news'
+type TabName = 'vpn' | 'stats' | 'news'
 
 interface Props {
   name: string
@@ -27,11 +24,7 @@ interface Props {
 }
 
 export function WidgetStack(props: Props) {
-  const showTalkWidget = useNewTabState((s) => s.showTalkWidget)
-  const talkFeatureEnabled = useNewTabState((s) => s.talkFeatureEnabled)
   const showShieldsStats = useNewTabState((s) => s.showShieldsStats)
-  const showRewardsWidget = useRewardsState((s) => s.showRewardsWidget)
-  const rewardsFeatureEnabled = useRewardsState((s) => s.rewardsFeatureEnabled)
   const vpnFeatureEnabled = useVpnState((s) => s.vpnFeatureEnabled)
   const showVpnWidget = useVpnState((s) => s.showVpnWidget)
   const showNews = useBraveNews().isShowOnNTPPrefEnabled
@@ -42,8 +35,6 @@ export function WidgetStack(props: Props) {
   const visibleTabs = React.useMemo(() => {
     return props.tabs.filter((tab) => {
       switch (tab) {
-        case 'rewards': return rewardsFeatureEnabled && showRewardsWidget
-        case 'talk': return talkFeatureEnabled && showTalkWidget
         case 'vpn': return vpnFeatureEnabled && showVpnWidget
         case 'stats': return showShieldsStats
         case 'news': return newsFeatureEnabled && showNews
@@ -51,9 +42,6 @@ export function WidgetStack(props: Props) {
     })
   }, [
     props.tabs,
-    showTalkWidget,
-    rewardsFeatureEnabled,
-    showRewardsWidget,
     vpnFeatureEnabled,
     showVpnWidget,
     showShieldsStats,
@@ -77,8 +65,6 @@ export function WidgetStack(props: Props) {
 
   function renderProductIcon(tab: TabName) {
     switch (tab) {
-      case 'rewards': return <Icon name='product-bat-outline' />
-      case 'talk': return <Icon name='product-brave-talk' />
       case 'vpn': return <Icon name='product-vpn' />
       case 'stats': return <Icon name='bar-chart' />
       case 'news': return <Icon name='product-brave-news' />
@@ -87,8 +73,6 @@ export function WidgetStack(props: Props) {
 
   function renderWidget() {
     switch (activeTab) {
-      case 'rewards': return <RewardsWidget />
-      case 'talk': return <TalkWidget />
       case 'vpn': return <VpnWidget />
       case 'stats': return <StatsWidget />
       case 'news': return <NewsWidget />
@@ -127,8 +111,6 @@ function loadCurrentTab(stackName: string): TabName | null {
 function tabNameIdentity(tabName: TabName): TabName {
   switch (tabName) {
     case 'vpn':
-    case 'rewards':
-    case 'talk':
     case 'stats':
     case 'news':
       return tabName

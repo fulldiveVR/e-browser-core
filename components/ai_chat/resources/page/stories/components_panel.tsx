@@ -50,7 +50,7 @@ import Attachments from '../components/attachments'
 import { createTextContentBlock } from '../../common/content_block'
 import ToolEvent from '../../untrusted_conversation_frame/components/assistant_response/tool_event'
 
-// TODO(https://github.com/brave/brave-browser/issues/47810): Attempt to split this file up
+// TODO(https://github.com/fulldiveVR/e-browser/issues/47810): Attempt to split this file up
 
 const eventTemplate: Mojom.ConversationEntryEvent = {
   completionEvent: undefined,
@@ -460,7 +460,7 @@ const HISTORY: Mojom.ConversationTurn[] = [
       getSearchStatusEvent(),
       getSearchEvent(['pointer compression', 'c++ language specification']),
       getCompletionEvent(
-        '[1]:https://www.example.com\n[2]:https://lttstore.com\n[3]:https://www.tesla.com/modely\n[Pointer compression](https://www.example.com) is a [memory](https://brave.com/wont-show-as-link) optimization technique.[1][3]',
+        '[1]:https://www.example.com\n[2]:https://lttstore.com\n[3]:https://www.tesla.com/modely\n[Pointer compression](https://www.example.com) is a [memory](https://aiwize.com/wont-show-as-link) optimization technique.[1][3]',
       ),
       getWebSourcesEvent([
         {
@@ -1062,14 +1062,14 @@ function StoryContext(
       {
         id: 3,
         contentId: 3,
-        url: { url: 'https://brave.com' },
+        url: { url: 'https://aiwize.com' },
         title: 'Brave',
       },
       {
         id: 4,
         contentId: 4,
-        url: { url: 'https://search.brave.com' },
-        title: 'Brave Search',
+        url: { url: 'https://search.aiwize.com' },
+        title: 'AIWIZE Search',
       },
     ],
     getPluralString: () => Promise.resolve(''),

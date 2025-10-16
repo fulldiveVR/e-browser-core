@@ -9,18 +9,13 @@ import Icon from '@brave/leo/react/icon'
 import Tooltip from '@brave/leo/react/tooltip'
 
 import { getString } from '../../lib/strings'
-import { useRewardsState, useRewardsActions } from '../../context/rewards_context'
 import { usePluralString } from '../../lib/plural_string'
 import { WidgetMenu } from './widget_menu'
 import { Link, openLink } from '../common/link'
-import { WalletProviderIcon } from '../../../../../components/brave_rewards/resources/shared/components/icons/wallet_provider_icon'
-import { getExternalWalletProviderName } from '../../../../../components/brave_rewards/resources/shared/lib/external_wallet'
 import { getProviderPayoutStatus } from '../../../../../components/brave_rewards/resources/shared/lib/provider_payout_status'
 import formatMessage from '$web-common/formatMessage'
 
-import * as urls from '../../../../../components/brave_rewards/resources/shared/lib/rewards_urls'
 
-import { style } from './rewards_widget.style'
 
 const batAmountFormatter = new Intl.NumberFormat(undefined, {
   minimumFractionDigits: 2,
@@ -42,9 +37,6 @@ function getPayoutMonth() {
   return monthNameFormatter.format(lastMonth)
 }
 
-export function RewardsWidget() {
-  const rewardsEnabled = useRewardsState((s) => s.rewardsEnabled)
-  const externalWallet = useRewardsState((s) => s.rewardsExternalWallet)
   const balance = useRewardsState((s) => s.rewardsBalance)
   const exchangeRate = useRewardsState((s) => s.rewardsExchangeRate)
   const payoutStatus = useRewardsState((s) => s.payoutStatus)
@@ -134,7 +126,6 @@ export function RewardsWidget() {
             <div>
               {
                 formatMessage(getString('rewardsLoginText'), [
-                  getExternalWalletProviderName(externalWallet.provider)
                 ])
               }
             </div>
@@ -302,8 +293,7 @@ interface ContainerProps {
 }
 
 function RewardsWidgetContainer(props: ContainerProps) {
-  const actions = useRewardsActions()
-  return (
+  const actions =  return (
     <div data-css-scope={style.scope} className={props.className}>
       <WidgetMenu>
         <leo-menu-item onClick={() => actions.setShowRewardsWidget(false)}>
