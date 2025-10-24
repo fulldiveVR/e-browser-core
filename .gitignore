@@ -85,11 +85,11 @@ xcuserdata
 # Claude LLM settings
 .claude
 
-browser-api
-browser-api-macos-arm
-aiwize-darwin
-aiwize-linux-amd64
-ollama_llama_server_darwin
-ollama-darwin
+browser-api*
+browser-api-macos-arm*
+aiwize-darwin*
+aiwize-linux-amd64*
+ollama_llama_server_darwin*
+ollama-darwin*
 qdrant-*
-node-macos
+node-macos*
