@@ -12,10 +12,8 @@ namespace brave {
 
 bool UpdateEnabled() {
 #if defined(OFFICIAL_BUILD)
-  const base::CommandLine* cmdline = base::CommandLine::ForCurrentProcess();
-  return !cmdline->HasSwitch(switches::kDisableBraveUpdate) &&
-         // Don't check for updates in browser tests.
-         !cmdline->HasSwitch(switches::kTestType);
+  return !base::CommandLine::ForCurrentProcess()->HasSwitch(
+      switches::kDisableBraveUpdate);
 #else
   return false;
 #endif
