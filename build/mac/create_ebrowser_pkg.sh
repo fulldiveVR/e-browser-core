@@ -1,6 +1,6 @@
 HOME_PATH="/Users/managerdark"
 APP_NAME="AIWIZE Browser"
-APP_VERSION="1.84.1"
+APP_VERSION="1.84.3"
 SIGNATURE="Developer ID Installer: FullDive Corp. (7B7J6CN346)"
 KEYCHAIN="$HOME_PATH/Library/Keychains/login.keychain-db"
 BUILD_PATH="/Volumes/AData/edu-browser/src/out/Release_arm64"

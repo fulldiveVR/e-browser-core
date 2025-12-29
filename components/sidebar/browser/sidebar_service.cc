@@ -61,9 +61,6 @@ SidebarItem::BuiltInItemType GetBuiltInItemTypeForLegacyURL(
     return SidebarItem::BuiltInItemType::kHistory;
   }
 
-  if (url == "chrome://applications/")
-    return SidebarItem::BuiltInItemType::kAiWizeApps;
-
   NOTREACHED() << url;
 }
 
@@ -437,9 +434,9 @@ std::optional<SidebarItem> SidebarService::GetDefaultPanelItem() const {
   // Use this order for picking active panel when panel is opened as
   // we don't cache previous active panel.
   constexpr SidebarItem::BuiltInItemType kPreferredPanelOrder[] = {
+      SidebarItem::BuiltInItemType::kAiWizeAgent,
       SidebarItem::BuiltInItemType::kChatUI,
       SidebarItem::BuiltInItemType::kReadingList,
-      SidebarItem::BuiltInItemType::kAiWizeApps,
       SidebarItem::BuiltInItemType::kBookmarks,
       SidebarItem::BuiltInItemType::kPlaylist};
 
@@ -587,12 +584,12 @@ std::vector<SidebarItem> SidebarService::GetDefaultSidebarItems() const {
 SidebarItem SidebarService::GetBuiltInItemForType(
     SidebarItem::BuiltInItemType type) const {
   switch (type) {
-    case SidebarItem::BuiltInItemType::kAiWizeApps: {
-      return SidebarItem::Create(GURL("chrome://applications"),
-                                 u"AIWIZE Applications",
-                                 SidebarItem::Type::kTypeBuiltIn,
-                                 SidebarItem::BuiltInItemType::kAiWizeApps,
-                                 /* open_in_panel = */ false);
+    case SidebarItem::BuiltInItemType::kAiWizeAgent: {
+      return SidebarItem::Create(
+            l10n_util::GetStringUTF16(IDS_AIWIZE_AGENT_UI_TITLE),
+            SidebarItem::Type::kTypeBuiltIn,
+            SidebarItem::BuiltInItemType::kAiWizeAgent,
+            /* open_in_panel = */ true);
     }
     case SidebarItem::BuiltInItemType::kBookmarks:
       return SidebarItem::Create(

@@ -11,30 +11,23 @@
   <release seq="1">
     <includes>
       <include name="IDR_AIWIZE_AGENT" file="aiwize_agent/manifest.json" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_ASSETS_0" file="aiwize_agent/assets/blocked.gif" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_ASSETS_1" file="aiwize_agent/assets/blocked_low.gif" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_ASSETS_2" file="aiwize_agent/assets/collecting.gif" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_ASSETS_3" file="aiwize_agent/assets/icon128.png" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_ASSETS_4" file="aiwize_agent/assets/icon16.png" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_ASSETS_5" file="aiwize_agent/assets/icon32.png" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_ASSETS_6" file="aiwize_agent/assets/icon48.png" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_ASSETS_7" file="aiwize_agent/assets/still.gif" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_ASSETS_8" file="aiwize_agent/assets/still.png" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_00" file="aiwize_agent/background.js" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_01" file="aiwize_agent/background.js.LICENSE.txt" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_02" file="aiwize_agent/block.css" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_03" file="aiwize_agent/block.html" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_04" file="aiwize_agent/block.js" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_05" file="aiwize_agent/block.js.LICENSE.txt" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_06" file="aiwize_agent/content.css" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_07" file="aiwize_agent/content.js" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_08" file="aiwize_agent/content.js.LICENSE.txt" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_09" file="aiwize_agent/sidepanel.css" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_10" file="aiwize_agent/sidepanel.html" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_11" file="aiwize_agent/sidepanel.js" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_12" file="aiwize_agent/unpaired.html" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_13" file="aiwize_agent/vendors.js" type="BINDATA" />
-      <include name="IDR_AIWIZE_AGENT_14" file="aiwize_agent/vendors.js.LICENSE.txt" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_ICON16" file="aiwize_agent/icons/icon16.png" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_ICON48" file="aiwize_agent/icons/icon48.png" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_ICON128" file="aiwize_agent/icons/icon128.png" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_IMAGE_BLOCKED" file="aiwize_agent/images/blocked.gif" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_IMAGE_COLLECTING" file="aiwize_agent/images/collecting.gif" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_IMAGE_READY" file="aiwize_agent/images/ready.gif" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_IMAGE_STILL" file="aiwize_agent/images/still.png" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_IMAGE_BACKGROUND" file="aiwize_agent/images/background@2x.webp" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_IMAGE_WIZE_LOGO" file="aiwize_agent/images/wize-logo.svg" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_01" file="aiwize_agent/aiwize-browser-extension.html" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_02" file="aiwize_agent/aiwize-browser-extension.js" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_03" file="aiwize_agent/background.js" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_04" file="aiwize_agent/content.js" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_05" file="aiwize_agent/blocking.html" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_06" file="aiwize_agent/blocking.js" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_07" file="aiwize_agent/sidepanel.html" type="BINDATA" />
+      <include name="IDR_AIWIZE_AGENT_08" file="aiwize_agent/sidepanel.js" type="BINDATA" />
     </includes>
   </release>
 </grit>

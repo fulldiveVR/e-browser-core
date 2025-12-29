@@ -31,7 +31,6 @@
 #include "content/public/browser/web_contents.h"
 #include "content/public/common/url_utils.h"
 #include "url/gurl.h"
-#include "brave/browser/ui/webui/aiwize_applications_page_ui.h"
 
 #if !BUILDFLAG(IS_ANDROID)
 #include "brave/browser/ui/webui/brave_new_tab_page_refresh/brave_new_tab_page_ui.h"
@@ -75,9 +74,7 @@ WebUIController* NewWebUI(WebUI* web_ui, const GURL& url) {
       web_ui->GetWebContents()->GetBrowserContext());
   CHECK(profile);
   
-  if (host == kAIWizeApplicationsPageHost) {
-      return new AIWizeApplicationsUI(web_ui);
-  } else if (host == kSkusInternalsHost) {
+  if (host == kSkusInternalsHost) {
     return new SkusInternalsUI(web_ui, url.host());
   } else   if (base::FeatureList::IsEnabled(
                  brave_news::features::kBraveNewsFeedUpdate) &&

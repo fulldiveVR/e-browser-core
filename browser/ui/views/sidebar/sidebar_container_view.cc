@@ -66,6 +66,13 @@
 #include "ui/views/view_class_properties.h"
 #include "ui/views/view_utils.h"
 #include "ui/views/widget/widget.h"
+#include "chrome/browser/extensions/api/side_panel/side_panel_service.h"
+#include "chrome/browser/extensions/extension_tab_util.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_coordinator.h"
+#include "chrome/browser/ui/views/side_panel/side_panel_ui.h"
+#include "extensions/browser/extension_registry.h"
+#include "extensions/common/extension.h"
+#include "ui/views/view.h"
 
 namespace {
 
@@ -836,6 +843,63 @@ void SidebarContainerView::OnTabStripModelChanged(
     TabStripModel* tab_strip_model,
     const TabStripModelChange& change,
     const TabStripSelectionChange& selection) {
+  SidePanelEntryKey aiwize_key(SidePanelEntryId::kAiWizeAgent);
+
+  if (browser_) {
+    // В 2025 году статический метод Get(Browser*) возвращает реестр окна.
+    // Если он недоступен, попробуйте GetDeprecated(browser_)
+
+    auto* side_panel_coordinator =
+        browser_->GetFeatures().side_panel_coordinator();
+
+    if (side_panel_coordinator) {
+      // Получаем именно глобальный реестр окна
+      SidePanelRegistry* window_registry =
+          side_panel_coordinator->GetWindowRegistry();
+      if (window_registry) {
+
+        if (!window_registry->GetEntryForKey(aiwize_key)) {
+          window_registry->Register(std::make_unique<SidePanelEntry>(
+              aiwize_key,
+              base::BindRepeating(
+                  [](SidebarContainerView* view,
+                     const std::string& extension_id,
+                     SidePanelEntryScope& scope) {
+                    Browser* browser = view->browser_;
+                    if (browser && browser->profile()) {
+                      auto* service =
+                          extensions::SidePanelService::Get(browser->profile());
+                      const extensions::Extension* extension =
+                          extensions::ExtensionRegistry::Get(browser->profile())
+                              ->enabled_extensions()
+                              .GetByID(extension_id);
+
+                      if (service && extension) {
+                        content::WebContents* active_contents =
+                            browser->tab_strip_model()->GetActiveWebContents();
+                        if (active_contents) {
+                          int tab_id = extensions::ExtensionTabUtil::GetTabId(
+                              active_contents);
+                          // Вызываем открытие расширения
+                          auto result = service->OpenSidePanelForTab(
+                              *extension, browser->profile(), tab_id,
+                              std::nullopt, true);
+                          if (!result.has_value()) {
+                            LOG(WARNING) << "Failed to open side panel: "
+                                         << result.error();
+                          }
+                        }
+                      }
+                    }
+                    return std::make_unique<views::View>();
+                  },
+                  base::Unretained(this), aiwize_agent_extension_id),
+              base::BindRepeating([]() { return 350; })));
+        }
+      }
+    }
+  }
+
   if ((change.type() == TabStripModelChange::kReplaced)) {
     // Pre-cr129's change
     // https://chromium.googlesource.com/chromium/src/+/2fd6b53ce, we would

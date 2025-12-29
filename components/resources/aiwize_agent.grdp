@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grit-part>
+  <message name="IDS_AIWIZE_AGENT_UI_TITLE" translateable="false">
+    AI Wize Agent
+  </message>
+</grit-part>

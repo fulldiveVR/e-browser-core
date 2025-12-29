@@ -623,6 +623,7 @@
       </if>
       <part file="../brave_account/resources/brave_account_strings.grdp" />
       <part file="ai_combiner.grdp" />
+      <part file="aiwize_agent.grdp" />
     </messages>
   </release>
 </grit>

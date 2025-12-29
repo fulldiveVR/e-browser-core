@@ -11,7 +11,14 @@
 namespace brave {
 
 bool UpdateEnabled() {
+#if defined(OFFICIAL_BUILD)
+  const base::CommandLine* cmdline = base::CommandLine::ForCurrentProcess();
+  return !cmdline->HasSwitch(switches::kDisableBraveUpdate) &&
+         // Don't check for updates in browser tests.
+         !cmdline->HasSwitch(switches::kTestType);
+#else
   return false;
+#endif
 }
 
 }  // namespace brave

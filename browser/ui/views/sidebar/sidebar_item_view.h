@@ -22,6 +22,7 @@ class SidebarItemView : public SidebarButtonView {
   void SetActiveState(bool active);
 
   void DrawHorizontalBorder(bool top);
+  void DrawHorizontalBorderBottom(bool value);
   void ClearHorizontalBorder();
 
   // SidebarButtonView overrides:
@@ -29,11 +30,13 @@ class SidebarItemView : public SidebarButtonView {
   bool IsTriggerableEvent(const ui::Event& e) override;
   void StateChanged(ButtonState old_state) override;
   void OnThemeChanged() override;
+  gfx::Size CalculatePreferredSize(const views::SizeBounds& available_size) const override;
 
  private:
   bool active_ = false;
   bool draw_horizontal_border_ = false;
   bool draw_horizontal_border_top_ = false;
+  bool draw_horizontal_border_bottom_ = false;
 };
 
 #endif  // BRAVE_BROWSER_UI_VIEWS_SIDEBAR_SIDEBAR_ITEM_VIEW_H_

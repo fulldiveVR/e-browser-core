@@ -133,13 +133,13 @@ SidePanelEntryId SidePanelIdFromSideBarItemType(BuiltInItemType type) {
       return SidePanelEntryId::kReadingList;
     case BuiltInItemType::kBookmarks:
       return SidePanelEntryId::kBookmarks;
+    case BuiltInItemType::kAiWizeAgent:
+      return SidePanelEntryId::kAiWizeAgent;
     case BuiltInItemType::kPlaylist:
       return SidePanelEntryId::kPlaylist;
     case BuiltInItemType::kChatUI:
       return SidePanelEntryId::kChatUI;
     case BuiltInItemType::kHistory:
-      [[fallthrough]];
-    case BuiltInItemType::kAiWizeApps:
       [[fallthrough]];
     case BuiltInItemType::kNone:
       break;
@@ -156,6 +156,8 @@ std::optional<BuiltInItemType> BuiltInItemTypeFromSidePanelId(
       return BuiltInItemType::kReadingList;
     case SidePanelEntryId::kBookmarks:
       return BuiltInItemType::kBookmarks;
+    case SidePanelEntryId::kAiWizeAgent:
+      return BuiltInItemType::kAiWizeAgent;
     case SidePanelEntryId::kPlaylist:
       return BuiltInItemType::kPlaylist;
     case SidePanelEntryId::kChatUI:
@@ -201,6 +203,9 @@ void SetLastUsedSidePanel(PrefService* prefs,
         break;
       case SidePanelEntryId::kBookmarks:
         type = BuiltInItemType::kBookmarks;
+        break;
+      case SidePanelEntryId::kAiWizeAgent:
+        type = BuiltInItemType::kAiWizeAgent;
         break;
       case SidePanelEntryId::kPlaylist:
         type = BuiltInItemType::kPlaylist;

@@ -284,6 +284,10 @@ void SidebarItemsContentsView::AddItemView(const sidebar::SidebarItem& item,
       base::BindRepeating(&SidebarItemsContentsView::OnItemPressed,
                           base::Unretained(this), item_view));
   item_view->set_drag_controller(drag_controller_);
+  if(sidebar_model_->GetAllSidebarItems()[index].built_in_item_type ==
+     sidebar::SidebarItem::BuiltInItemType::kReadingList) {
+    item_view->DrawHorizontalBorderBottom(true);
+  }
 
   if (item.is_web_type()) {
     SetDefaultImageFor(item);
@@ -557,8 +561,8 @@ ui::ImageModel SidebarItemsContentsView::GetImageForBuiltInItems(
       return get_image_model(kLeoProductBookmarksIcon, state);
     case sidebar::SidebarItem::BuiltInItemType::kReadingList:
       return get_image_model(kLeoReadingListIcon, state);
-    case sidebar::SidebarItem::BuiltInItemType::kAiWizeApps:
-      return get_image_model(kLeoAiwizeAppsIcon, state);
+    case sidebar::SidebarItem::BuiltInItemType::kAiWizeAgent:
+      return get_image_model(kLeoAiwizeAgentIcon, state);
     case sidebar::SidebarItem::BuiltInItemType::kHistory:
       return get_image_model(kLeoHistoryIcon, state);
     case sidebar::SidebarItem::BuiltInItemType::kPlaylist:

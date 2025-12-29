@@ -45,10 +45,35 @@ void SidebarItemView::ClearHorizontalBorder() {
   SchedulePaint();
 }
 
+void SidebarItemView::DrawHorizontalBorderBottom(bool value) {
+  draw_horizontal_border_bottom_ = value;
+  SchedulePaint();
+}
+
+gfx::Size SidebarItemView::CalculatePreferredSize(
+    const views::SizeBounds& available_size) const {
+  int space = 0;
+  if (draw_horizontal_border_bottom_) {
+    space += 4; // height of bottom border
+  }
+  return {kSidebarButtonSize + kMargin * 2 + space, kSidebarButtonSize};
+}
 void SidebarItemView::OnPaintBorder(gfx::Canvas* canvas) {
   ImageButton::OnPaintBorder(canvas);
 
   const ui::ColorProvider* color_provider = GetColorProvider();
+  if (draw_horizontal_border_bottom_ && color_provider) {
+    constexpr float kHorizontalBorderWidth = 2;
+    gfx::Rect border_rect(GetLocalBounds());
+
+    border_rect.set_y(border_rect.bottom() - kHorizontalBorderWidth);      
+    border_rect.set_height(kHorizontalBorderWidth);
+
+    canvas->FillRect(border_rect,
+                    color_provider->GetColor(kColorSidebarSeparator));
+  }
+
+
   if (draw_horizontal_border_ && color_provider) {
     constexpr float kHorizontalBorderWidth = 2;
     gfx::Rect border_rect(GetLocalBounds());
