@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/mini_installer/BUILD.gn b/chrome/installer/mini_installer/BUILD.gn
-index a427371dbe18bcb259a5d0954cee4a084ef453ee..6483be11fb3f254047e3628dedf73257a6d12ce3 100644
+index a427371dbe18bcb259a5d0954cee4a084ef453ee..8066b90e543083307827640f723edd12ba10cb72 100644
 --- a/chrome/installer/mini_installer/BUILD.gn
 +++ b/chrome/installer/mini_installer/BUILD.gn
 @@ -137,7 +137,7 @@ if (enable_uncompressed_archive) {
@@ -11,24 +11,26 @@ index a427371dbe18bcb259a5d0954cee4a084ef453ee..6483be11fb3f254047e3628dedf73257
    script = "//chrome/tools/build/win/create_installer_archive.py"
  
    release_file = "chrome.release"
-@@ -148,6 +148,8 @@ action("mini_installer_archive") {
+@@ -148,6 +148,9 @@ action("mini_installer_archive") {
      "$root_out_dir/chrome.exe",
      "$root_out_dir/locales/en-US.pak",
      "$root_out_dir/setup.exe",
 +    "$root_out_dir/browser-api.exe",
 +    "$root_out_dir/qdrant-win.exe",
++    "$root_out_dir/aiwize-windows-amd64.exe",
      "//chrome/tools/build/win/makecab.py",
      release_file,
    ]
-@@ -196,6 +198,7 @@ action("mini_installer_archive") {
+@@ -196,6 +199,8 @@ action("mini_installer_archive") {
      "//chrome/chrome_elf",
      "//chrome/common/win:eventlog_provider",
      "//chrome/installer/setup",
 +    "//brave:fetch_aicombiner",
++    "//brave:fetch_aiwize_llm",
      "//third_party/icu:icudata",
    ]
  
-@@ -317,6 +320,7 @@ template("generate_mini_installer") {
+@@ -317,6 +322,7 @@ template("generate_mini_installer") {
        no_default_deps = true
        ldflags += [ "/ENTRY:MainEntryPoint" ]
      }

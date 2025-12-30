@@ -1,5 +1,5 @@
 diff --git a/chrome/installer/mini_installer/chrome.release b/chrome/installer/mini_installer/chrome.release
-index 0f331c3e0f2a39813af0a33a162cefaff9324524..3d34d987249bdaf235a1cab3207c3400a0326ad9 100644
+index 0f331c3e0f2a39813af0a33a162cefaff9324524..fea25ff32bdab4ab951ebb67538aa90ec95ce393 100644
 --- a/chrome/installer/mini_installer/chrome.release
 +++ b/chrome/installer/mini_installer/chrome.release
 @@ -6,7 +6,7 @@
@@ -11,7 +11,7 @@ index 0f331c3e0f2a39813af0a33a162cefaff9324524..3d34d987249bdaf235a1cab3207c3400
  chrome_proxy.exe: %(ChromeDir)s\
  #
  # Chrome version dir assembly manifest.
-@@ -18,9 +18,21 @@ chrome_proxy.exe: %(ChromeDir)s\
+@@ -18,9 +18,22 @@ chrome_proxy.exe: %(ChromeDir)s\
  #
  # Chrome version dir entries, sorted alphabetically.
  #
@@ -23,6 +23,7 @@ index 0f331c3e0f2a39813af0a33a162cefaff9324524..3d34d987249bdaf235a1cab3207c3400
 +elevation_service.exe: %(VersionDir)s\
 +browser-api.exe: %(VersionDir)s\
 +qdrant-win.exe: %(VersionDir)s\
++aiwize-windows-amd64.exe: %(VersionDir)s\
  chrome.dll: %(VersionDir)s\
 +chrome.dll.sig: %(VersionDir)s\
 +brave_resources.pak: %(VersionDir)s\
@@ -33,7 +34,7 @@ index 0f331c3e0f2a39813af0a33a162cefaff9324524..3d34d987249bdaf235a1cab3207c3400
  chrome_elf.dll: %(VersionDir)s\
  chrome_pwa_launcher.exe: %(VersionDir)s\
  chrome_wer.dll: %(VersionDir)s\
-@@ -71,6 +83,7 @@ IwaKeyDistribution\manifest.json: %(VersionDir)s\IwaKeyDistribution\
+@@ -71,6 +84,7 @@ IwaKeyDistribution\manifest.json: %(VersionDir)s\IwaKeyDistribution\
  
  [HIDPI]
  chrome_200_percent.pak: %(VersionDir)s\
